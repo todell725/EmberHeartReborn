@@ -1,0 +1,5839 @@
+[
+    {
+        "title": "Abi-Dalzim\u2019s Horrid Wilting",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Abi-Dalzim\u2019s Horrid Wilting.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Necromancy",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Absorb Elements",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Absorb Elements.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Artificer",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Acid Splash](https://www.dndbeyond.com/spells/2618844-acid-splash)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Acid Splash.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Aganazzar\u2019s Scorcher",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Aganazzar\u2019s Scorcher.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Aid](https://www.dndbeyond.com/spells/2618845-aid)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Aid.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Alarm](https://www.dndbeyond.com/spells/2619222-alarm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Alarm.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Ranger",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Alter Self](https://www.dndbeyond.com/spells/2618846-alter-self)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Alter Self.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Animal Friendship](https://www.dndbeyond.com/spells/2618847-animal-friendship)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Animal Friendship.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Animal Messenger](https://www.dndbeyond.com/spells/2618850-animal-messenger)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Animal Messenger.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Bard",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Animal Shapes](https://www.dndbeyond.com/spells/2618851-animal-shapes)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Animal Shapes.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Transmutation",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Animate Dead](https://www.dndbeyond.com/spells/2618853-animate-dead)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Animate Dead.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Animate Objects](https://www.dndbeyond.com/spells/2618855-animate-objects)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Animate Objects.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Antagonize",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Antagonize.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Antilife Shell](https://www.dndbeyond.com/spells/2618856-antilife-shell)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Antilife Shell.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Abjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Antimagic Field](https://www.dndbeyond.com/spells/2618860-antimagic-field)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Antimagic Field.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Abjuration",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Antipathy/Sympathy](https://www.dndbeyond.com/spells/2618862-antipathy-sympathy)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Antipathy Sympathy.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Enchantment",
+            "Bard",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Arcane Eye](https://www.dndbeyond.com/spells/2618863-arcane-eye)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Arcane Eye.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Divination",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Arcane Gate](https://www.dndbeyond.com/spells/2618865-arcane-gate)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Arcane Gate.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Arcane Lock](https://www.dndbeyond.com/spells/2618868-arcane-lock)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Arcane Lock.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Abjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Arcane Propulsion Arm](https://www.dndbeyond.com/magic-items/976932-arcane-propulsion-arm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Arcane Propulsion Arm.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Arcane Vigor](https://www.dndbeyond.com/spells/2618831-arcane-vigor)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Arcane Vigor.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Abjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Armblade](https://www.dndbeyond.com/magic-items/215692-armblade)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Armblade.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Armor of Agathys](https://www.dndbeyond.com/spells/2618870-armor-of-agathys)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Armor of Agathys.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "[Arms of Hadar](https://www.dndbeyond.com/spells/2618871-arms-of-hadar)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Arms of Hadar.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "Ashardalon's Stride",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Ashardalon's Stride.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Artificer",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Astral Projection](https://www.dndbeyond.com/spells/2618878-astral-projection)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Astral Projection.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Necromancy",
+            "Cleric",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Augury](https://www.dndbeyond.com/spells/2618882-augury)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Augury.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Cleric",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Aura of Life](https://www.dndbeyond.com/spells/2618884-aura-of-life)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Aura of Life.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Abjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Aura of Purity](https://www.dndbeyond.com/spells/2618888-aura-of-purity)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Aura of Purity.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Abjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Aura of Vitality](https://www.dndbeyond.com/spells/2618891-aura-of-vitality)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Aura of Vitality.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Cleric",
+            "Druid",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Awaken](https://www.dndbeyond.com/spells/2618897-awaken)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\A\\Awaken.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Bard",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Bane](https://www.dndbeyond.com/spells/2618900-bane)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Bane (spell).md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard",
+            "Cleric",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "[Banishing Smite](https://www.dndbeyond.com/spells/2618904-banishing-smite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Banishing Smite.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Banishment](https://www.dndbeyond.com/spells/2618906-banishment)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Banishment.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Abjuration",
+            "Cleric",
+            "Paladin",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Barkskin](https://www.dndbeyond.com/spells/2618907-barkskin)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Barkskin.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Beacon of Hope](https://www.dndbeyond.com/spells/2618911-beacon-of-hope)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Beacon of Hope.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Beast Bond",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Beast Bond.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Beast Sense](https://www.dndbeyond.com/spells/2618914-beast-sense)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Beast Sense.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Befuddlement](https://www.dndbeyond.com/spells/2618832-befuddlement)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Befuddlement.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Enchantment",
+            "Bard",
+            "Druid",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Belashyrra\u2019s Beholder Crown](https://www.dndbeyond.com/magic-items/984096-belashyrras-beholder-crown)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Belshyrra's Beholder Crown.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Bestow Curse](https://www.dndbeyond.com/spells/2618923-bestow-curse)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Bestow Curse.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Bard",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Bigby\u2019s Hand](https://www.dndbeyond.com/spells/2618928-bigbys-hand)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Bigby's Hand.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Blade Barrier](https://www.dndbeyond.com/spells/2618929-blade-barrier)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Blade Barrier.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Evocation",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Blade of Disaster",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Blade of Disaster.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Conjuration",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Blade Ward](https://www.dndbeyond.com/spells/2618931-blade-ward)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Blade Ward.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Bless](https://www.dndbeyond.com/spells/2618933-bless)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Bless.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Blight](https://www.dndbeyond.com/spells/2618934-blight)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Blight.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Necromancy",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Blinding Smite](https://www.dndbeyond.com/spells/2618936-blinding-smite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Blinding Smite.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Blindness/Deafness](https://www.dndbeyond.com/spells/2618938-blindness-deafness)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Blindness Deafness.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Bard",
+            "Cleric",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Blink](https://www.dndbeyond.com/spells/2618939-blink)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Blink.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Blur](https://www.dndbeyond.com/spells/2618945-blur)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Blur.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Bones of the Earth",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Bones of the Earth.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Druid"
+        ]
+    },
+    {
+        "title": "Booming Blade",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Booming Blade.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Borrowed Knowledge",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Borrowed Knowledge.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Burning Hands](https://www.dndbeyond.com/spells/2618946-burning-hands)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\B\\Burning Hands.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Call Lightning](https://www.dndbeyond.com/spells/2618949-call-lightning)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Call Lightning.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Calm Emotions](https://www.dndbeyond.com/spells/2618959-calm-emotions)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Calm Emotions.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Bard",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Catapult",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Catapult.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Artificer",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Catnap",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Catnap.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Enchantment",
+            "Artificer",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Cause Fear",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Cause Fear.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Necromancy",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Ceremony",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Ceremony.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Chain Lightning](https://www.dndbeyond.com/spells/2618960-chain-lightning)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Chain Lightning.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Chaos Bolt",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Chaos Bolt.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Sorcerer"
+        ]
+    },
+    {
+        "title": "[Charm Monster](https://www.dndbeyond.com/spells/2618963-charm-monster)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Charm Monster.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Enchantment",
+            "Bard",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Charm Person](https://www.dndbeyond.com/spells/2618964-charm-person)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Charm Person.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Chill Touch](https://www.dndbeyond.com/spells/2618965-chill-touch)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Chill Touch.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Chromatic Orb](https://www.dndbeyond.com/spells/2618966-chromatic-orb)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Chromatic Orb.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Circle of Death](https://www.dndbeyond.com/spells/2618969-circle-of-death)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Circle of Death.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Necromancy",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Circle of Power](https://www.dndbeyond.com/spells/2618970-circle-of-power)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Circle of Power.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Abjuration",
+            "Cleric",
+            "Paladin",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Clairvoyance](https://www.dndbeyond.com/spells/2618972-clairvoyance)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Clairvoyance.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Cleansing Stone](https://www.dndbeyond.com/magic-items/215548-cleansing-stone)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Cleansing Stone.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Clone](https://www.dndbeyond.com/spells/2618973-clone)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Clone.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Necromancy",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Cloud of Daggers](https://www.dndbeyond.com/spells/2618974-cloud-of-daggers)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Cloud of Daggers.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Cloudkill](https://www.dndbeyond.com/spells/2618976-cloudkill)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Cloudkill.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Color Spray](https://www.dndbeyond.com/spells/2618978-color-spray)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Color Spray.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Command](https://www.dndbeyond.com/spells/2618985-command)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Command.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Commune with Nature](https://www.dndbeyond.com/spells/2618989-commune-with-nature)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Commune with Nature.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Divination",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Commune](https://www.dndbeyond.com/spells/2618987-commune)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Commune.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Divination",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Compelled Duel](https://www.dndbeyond.com/spells/2618990-compelled-duel)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Compelled Duel.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Comprehend Languages](https://www.dndbeyond.com/spells/2618993-comprehend-languages)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Comprehend Languages.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Compulsion](https://www.dndbeyond.com/spells/2619041-compulsion)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Compulsion.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Enchantment",
+            "Bard"
+        ]
+    },
+    {
+        "title": "[Cone of Cold](https://www.dndbeyond.com/spells/2619042-cone-of-cold)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Cone of Cold.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Conjure Animals](https://www.dndbeyond.com/spells/2619044-conjure-animals)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Confusion.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Conjure Barrage](https://www.dndbeyond.com/spells/2619045-conjure-barrage)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Conjure Barrage.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Conjure Celestial](https://www.dndbeyond.com/spells/2619046-conjure-celestial)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Conjure Celestial.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Conjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Conjure Elemental](https://www.dndbeyond.com/spells/2619047-conjure-elemental)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Conjure Elemental.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Conjure Fey](https://www.dndbeyond.com/spells/2619048-conjure-fey)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Conjure Fey.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Conjure Minor Elementals](https://www.dndbeyond.com/spells/2619049-conjure-minor-elementals)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Conjure Minor Elementals.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Conjure Volley](https://www.dndbeyond.com/spells/2619050-conjure-volley)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Conjure Volley.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Conjure Woodland Beings](https://www.dndbeyond.com/spells/2619051-conjure-woodland-beings)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Conjure Woodland Beings.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Contact Other Plane](https://www.dndbeyond.com/spells/2619052-contact-other-plane)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Contact Other Plane.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Divination",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Contagion](https://www.dndbeyond.com/spells/2619063-contagion)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Contagion.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Necromancy",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Contingency](https://www.dndbeyond.com/spells/2619053-contingency)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Contingency.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Abjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Continual Flame](https://www.dndbeyond.com/spells/2619065-continual-flame)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Continual Flame.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Cleric",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Control Flames",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Control Flames.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Control Water](https://www.dndbeyond.com/spells/2619070-control-water)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Control Water.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Transmutation",
+            "Cleric",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Control Weather](https://www.dndbeyond.com/spells/2619054-control-weather)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Control Weather.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Transmutation",
+            "Cleric",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Control Winds",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Control Winds.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Cordon of Arrows](https://www.dndbeyond.com/spells/2619055-cordon-of-arrows)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Cordon of Arrows.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Counterspell](https://www.dndbeyond.com/spells/2619072-counterspell)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Counterspell.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Create Food and Water](https://www.dndbeyond.com/spells/2619073-create-food-and-water)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Create Food and Water.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "Create Homunculus",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Create Homunculus.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Create Magen",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Create Magen.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Create or Destroy Water](https://www.dndbeyond.com/spells/2619074-create-or-destroy-water)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Create or Destroy Water.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Create Undead](https://www.dndbeyond.com/spells/2619076-create-undead)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Create Undead.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Necromancy",
+            "Cleric",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Creation](https://www.dndbeyond.com/spells/2619077-creation)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Creation.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Illusion",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Crown of Madness](https://www.dndbeyond.com/spells/2619056-crown-of-madness)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Crown of Madness.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Crown of Stars",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Crown of Stars.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Evocation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Crusader\u2019s Mantle](https://www.dndbeyond.com/spells/2619057-crusaders-mantle)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Crusader's Mantle.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Cure Wounds](https://www.dndbeyond.com/spells/2619079-cure-wounds)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\C\\Cure Wounds.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Dancing Lights](https://www.dndbeyond.com/spells/2619058-dancing-lights)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dancing Lights.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Danse Macabre",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Danse Macabre.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Necromancy",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Dark Star",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dark Star.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Darkness](https://www.dndbeyond.com/spells/2619080-darkness)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Darkness.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Darkvision](https://www.dndbeyond.com/spells/2619082-darkvision)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Darkvision.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Dawn",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dawn.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Daylight](https://www.dndbeyond.com/spells/2619083-daylight)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Daylight.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger",
+            "Sorcerer"
+        ]
+    },
+    {
+        "title": "[Death Ward](https://www.dndbeyond.com/spells/2619085-death-ward)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Death Ward.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Abjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Delayed Blast Fireball](https://www.dndbeyond.com/spells/2619086-delayed-blast-fireball)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Delayed Blast Fireball.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Demiplane](https://www.dndbeyond.com/spells/2619088-demiplane)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Demiplane.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Conjuration",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Destructive Wave](https://www.dndbeyond.com/spells/2619089-destructive-wave)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Destructive Wave.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Detect Evil and Good](https://www.dndbeyond.com/spells/2619090-detect-evil-and-good)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Detect Evil and Good.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Detect Magic](https://www.dndbeyond.com/spells/2619097-detect-magic)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Detect Magic.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Detect Poison and Disease](https://www.dndbeyond.com/spells/2619093-detect-poison-and-disease)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Detect Poison and Disease.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Detect Thoughts](https://www.dndbeyond.com/spells/2619099-detect-thoughts)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Detect Thoughts.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Dimension Door](https://www.dndbeyond.com/spells/2619100-dimension-door)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dimension Door.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Disguise Self](https://www.dndbeyond.com/spells/2619102-disguise-self)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Disguise Self.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Divine Favor](https://www.dndbeyond.com/spells/2619142-divine-favor)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Disintegrate.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Dispel Evil and Good](https://www.dndbeyond.com/spells/2619096-dispel-evil-and-good)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dispel Evil and Good.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Abjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Dispel Magic](https://www.dndbeyond.com/spells/2619103-dispel-magic)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dispel Magic.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Dissonant Whispers](https://www.dndbeyond.com/spells/2619104-dissonant-whispers)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dissonant Whispers.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard"
+        ]
+    },
+    {
+        "title": "Distort Value",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Distort Value.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Divination](https://www.dndbeyond.com/spells/2619140-divination)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Divination.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Divination",
+            "Cleric",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Divine Smite](https://www.dndbeyond.com/spells/2618833-divine-smite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Divine Smite.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Divine Word](https://www.dndbeyond.com/spells/2619144-divine-word)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Divine Word.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Evocation",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Docent](https://www.dndbeyond.com/magic-items/215652-docent)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Docent.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Dominate Beast](https://www.dndbeyond.com/spells/2619146-dominate-beast)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dominate Beast.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Enchantment",
+            "Druid",
+            "Ranger",
+            "Sorcerer"
+        ]
+    },
+    {
+        "title": "[Dominate Monster](https://www.dndbeyond.com/spells/2619147-dominate-monster)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dominate Monster.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Dominate Person](https://www.dndbeyond.com/spells/2619148-dominate-person)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dominate Person.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Draconic Transformation",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Draconic Transformation.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Dragon\u2019s Breath](https://www.dndbeyond.com/spells/2619150-dragons-breath)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dragon's Breath.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Drawmij\u2019s Instant Summons](https://www.dndbeyond.com/spells/2619154-drawmijs-instant-summons)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Drawmij's Instant Summons.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Dream of the Blue Veil",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dream of the Blue Veil.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Conjuration",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Dream](https://www.dndbeyond.com/spells/2619156-dream)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dream.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Illusion",
+            "Bard",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Druid Grove",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Druid Grove.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Abjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Druidcraft](https://www.dndbeyond.com/spells/2619158-#Druidcraft)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Druidcraft.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Dust Devil",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dust Devil.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Dyrrn\u2019s Tentacle Whip](https://www.dndbeyond.com/magic-items/1000370-dyrrns-tentacle-whip)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\D\\Dyrrnn's Tentacle Whip.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Earth Tremor",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Earth Tremor.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Bard",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Earthbind",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Earthbind.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Earthquake](https://www.dndbeyond.com/spells/2619160-earthquake)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Earthquake.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Transmutation",
+            "Cleric",
+            "Druid",
+            "Sorcerer"
+        ]
+    },
+    {
+        "title": "[Earworm](https://www.dndbeyond.com/magic-items/1000466-earworm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Earworm.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Eldritch Blast](https://www.dndbeyond.com/spells/2619161-eldritch-blast)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Eldritch Blast.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Elemental Bane",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Elemental Bane.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Transmutation",
+            "Druid",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Elemental Weapon](https://www.dndbeyond.com/spells/2619164-elemental-weapon)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Elemental Weapon.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Druid",
+            "Paladin",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Elementalism](https://www.dndbeyond.com/spells/2618834-elementalism)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Elementalism.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Encode Thoughts",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Encode Thoughts.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Enemies Abound",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Enemies Abound.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Enervation",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Enervation.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Necromancy",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Enhance Ability](https://www.dndbeyond.com/spells/2619165-enhance-ability)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Enhance Ability.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Enlarge/Reduce](https://www.dndbeyond.com/spells/2619170-enlarge-reduce)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Enlarge Reduce.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Bard",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Ensnaring Strike](https://www.dndbeyond.com/spells/2619172-ensnaring-strike)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Ensnaring Strike.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Entangle](https://www.dndbeyond.com/spells/2619186-entangle)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Entangle.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Enthrall](https://www.dndbeyond.com/spells/2619192-enthrall)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Enthrall.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Bard",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "Erupting Earth",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Erupting Earth.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Etherealness](https://www.dndbeyond.com/spells/2619193-etherealness)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Etherealness.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Conjuration",
+            "Bard",
+            "Cleric",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Evard\u2019s Black Tentacles](https://www.dndbeyond.com/spells/2619187-evards-black-tentacles)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Evard's Black Tentacles.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Everbright Lantern](https://www.dndbeyond.com/magic-items/215549-everbright-lantern)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Everbright Lantern.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Expeditious Retreat](https://www.dndbeyond.com/spells/2619189-expeditious-retreat)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Expeditious Retreat.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Eyebite](https://www.dndbeyond.com/spells/2619191-eyebite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\E\\Eyebite.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Necromancy",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Fabricate](https://www.dndbeyond.com/spells/2618848-fabricate)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fabricate.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Faerie Fire](https://www.dndbeyond.com/spells/2618858-faerie-fire)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Faerie Fire.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Bard",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[False Life](https://www.dndbeyond.com/spells/2618866-false-life)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\False Life.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Necromancy",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Far Step",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Far Step.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Fast Friends",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fast Friends.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Enchantment",
+            "Bard",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Fear](https://www.dndbeyond.com/spells/2618872-fear)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fear.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Feather Fall](https://www.dndbeyond.com/spells/2618874-feather-fall)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Feather Fall.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Feather Token](https://www.dndbeyond.com/magic-items/215554-feather-token-feather-fall)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Feather Token.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Feign Death](https://www.dndbeyond.com/spells/2618873-feign-death)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Feign Death.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Find Familiar](https://www.dndbeyond.com/spells/2618877-find-familiar)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Find Familiar.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Find Greater Steed",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Find Greater Steed.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Find Steed](https://www.dndbeyond.com/spells/2618879-find-steed)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Find Steed.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Find the Path](https://www.dndbeyond.com/spells/2618881-find-the-path)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Find the Path.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Find Traps](https://www.dndbeyond.com/spells/2618883-find-traps)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Find Traps.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Cleric",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Finder\u2019s Goggles](https://www.dndbeyond.com/magic-items/977633-finders-goggles)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Finder's Goggles.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Finger of Death](https://www.dndbeyond.com/spells/2618885-finger-of-death)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Finger of Death.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Necromancy",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Fire Bolt](https://www.dndbeyond.com/spells/2618890-fire-bolt)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fire Bolt.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Fire Shield](https://www.dndbeyond.com/spells/2618894-fire-shield)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fire Shield.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Evocation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Fire Storm](https://www.dndbeyond.com/spells/2618896-fire-storm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fire Storm.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Evocation",
+            "Cleric",
+            "Druid",
+            "Sorcerer"
+        ]
+    },
+    {
+        "title": "[Fireball](https://www.dndbeyond.com/spells/2618887-fireball)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fireball.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Fizban's Platinum Shield",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fizban's Platinum Shield.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Abjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Flame Arrows",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Flame Arrows.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Flaming Sphere](https://www.dndbeyond.com/spells/2618919-flaming-sphere)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Flame Blade.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Flame Strike](https://www.dndbeyond.com/spells/2618920-flame-strike)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Flame Strike.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Flesh to Stone](https://www.dndbeyond.com/spells/2618905-flesh-to-stone)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Flesh to Stone.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Fly](https://www.dndbeyond.com/spells/2618909-fly)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fly.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Fog Cloud](https://www.dndbeyond.com/spells/2618910-fog-cloud)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fog Cloud.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Forbiddance](https://www.dndbeyond.com/spells/2618913-forbiddance)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Forbiddance.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Abjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Forcecage](https://www.dndbeyond.com/spells/2618916-forcecage)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Forcecage.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Evocation",
+            "Bard",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Foresight](https://www.dndbeyond.com/spells/2618918-foresight)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Foresight.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Divination",
+            "Bard",
+            "Druid",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Fortune's Favor",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fortune's Favor.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Fount of Moonlight](https://www.dndbeyond.com/spells/2618835-fount-of-moonlight)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Fount of Moonlight.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Evocation",
+            "Bard",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Freedom of Movement](https://www.dndbeyond.com/spells/2618921-freedom-of-movement)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Freedom of Movement.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Friends](https://www.dndbeyond.com/spells/2618924-friends)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Friends.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Frost Fingers",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Frost Fingers.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Frostbite",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\F\\Frostbite.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Gaseous Form](https://www.dndbeyond.com/spells/2618927-gaseous-form)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gaseous Form.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Gate](https://www.dndbeyond.com/spells/2618932-gate)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gate.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Conjuration",
+            "Cleric",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Geas](https://www.dndbeyond.com/spells/2618940-geas)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Geas.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Enchantment",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Gentle Repose](https://www.dndbeyond.com/spells/2618942-gentle-repose)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gentle Repose.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Necromancy",
+            "Cleric",
+            "Paladin",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Giant Insect](https://www.dndbeyond.com/spells/2618944-giant-insect)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Giant Insect.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "Gift of Alacrity",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gift of Alacrity.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Gift of Gab",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gift of Gab.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Glamerweave](https://www.dndbeyond.com/magic-items/215556-glamerweave)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Glamerweave.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Glibness](https://www.dndbeyond.com/spells/2618948-glibness)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Glibness.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Enchantment",
+            "Bard",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "[Globe of Invulnerability](https://www.dndbeyond.com/spells/2618950-globe-of-invulnerability)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Globe of Invulnerability.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Abjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Glyph of Warding](https://www.dndbeyond.com/spells/2618951-glyph-of-warding)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Glyph of Warding.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Goodberry](https://www.dndbeyond.com/spells/2618952-goodberry)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Goodberry.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "Grasping Vine",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Grasping Vine.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Transmutation",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "Gravity Fissure",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gravity Fissure.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Gravity Sinkhole",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gravity Sinkhole.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Grease](https://www.dndbeyond.com/spells/2618957-grease)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Grease.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Greater Invisibility](https://www.dndbeyond.com/spells/2618958-greater-invisibility)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Greater Invisibility.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Grasping Vine](https://www.dndbeyond.com/spells/2618955-grasping-vine)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Greater Restoration.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "Green-Flame Blade",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Green-Flame Blade.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Guardian of Faith](https://www.dndbeyond.com/spells/2619135-guardian-of-faith)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Guardian of Faith.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Guardian of Nature",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Guardian of Nature.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Transmutation",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Guards and Wards](https://www.dndbeyond.com/spells/2618968-guards-and-wards)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Guards and Wards.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Abjuration",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Guidance](https://www.dndbeyond.com/spells/2618971-guidance)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Guidance.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Guiding Bolt](https://www.dndbeyond.com/spells/2619136-guiding-bolt)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Guiding Bolt.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Gust of Wind](https://www.dndbeyond.com/spells/2619137-gust-of-wind)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gust of Wind.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Gust",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\G\\Gust.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Hail of Thorns](https://www.dndbeyond.com/spells/2618975-hail-of-thorns)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hail of Thorns.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Hallow](https://www.dndbeyond.com/spells/2619138-hallow)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hallow.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Abjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Hallucinatory Terrain](https://www.dndbeyond.com/spells/2619139-hallucinatory-terrain)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hallucinatory Terrain.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Illusion",
+            "Bard",
+            "Druid",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Harm](https://www.dndbeyond.com/spells/2618977-harm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Harm.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Necromancy",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Haste](https://www.dndbeyond.com/spells/2619141-haste)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Haste.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Heal](https://www.dndbeyond.com/spells/2618979-heal)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Heal.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Abjuration",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "Healing Spirit",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Healing Spirit.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Healing Word](https://www.dndbeyond.com/spells/2619143-healing-word)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Healing Word.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Heat Metal](https://www.dndbeyond.com/spells/2619145-heat-metal)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Heat Metal.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Bard",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Hellish Rebuke](https://www.dndbeyond.com/spells/2619149-hellish-rebuke)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hellish Rebuke.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "[Heroes\u2019 Feast](https://www.dndbeyond.com/spells/2618983-heroes-feast)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Heroes' Feast.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Bard",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Heroism](https://www.dndbeyond.com/spells/2619151-heroism)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Heroism.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Hex](https://www.dndbeyond.com/spells/2618988-hex)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hex.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "[Hold Monster](https://www.dndbeyond.com/spells/2619152-hold-monster)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hold Monster.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Hold Person](https://www.dndbeyond.com/spells/2619153-hold-person)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hold Person.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Holy Aura](https://www.dndbeyond.com/spells/2619155-holy-aura)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Holy Aura.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Abjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Holy Weapon",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Holy Weapon.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Hunger of Hadar](https://www.dndbeyond.com/spells/2619162-hunger-of-hadar)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hunger of Hadar.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "[Hunter\u2019s Mark](https://www.dndbeyond.com/spells/2619166-hunters-mark)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hunter's Mark.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Hypnotic Pattern](https://www.dndbeyond.com/spells/2619168-hypnotic-pattern)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\H\\Hypnotic Pattern.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Ice Knife](https://www.dndbeyond.com/spells/2619171-ice-knife)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Ice Knife.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Ice Storm](https://www.dndbeyond.com/spells/2619178-ice-storm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Ice Storm.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Evocation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Identify](https://www.dndbeyond.com/spells/2619180-identify)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Identify.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Illusory Dragon",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Illusory Dragon.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Illusion",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Illusory Script](https://www.dndbeyond.com/spells/2619173-illusory-script)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Illusory Script.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Illusion",
+            "Bard",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Imbued Wood Focus](https://www.dndbeyond.com/magic-items/215726-imbued-wood-focus)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Imbued Wood Focus.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Immolation",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Immolation.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Immovable Object",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Immovable Object.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Imprisonment](https://www.dndbeyond.com/spells/2619175-imprisonment)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Imprisonment.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Abjuration",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Incendiary Cloud](https://www.dndbeyond.com/spells/2619177-incendiary-cloud)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Incendiary Cloud.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Conjuration",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Infernal Calling",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Infernal Calling.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Infestation",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Infestation.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Inflict Wounds](https://www.dndbeyond.com/spells/2619181-inflict-wounds)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Inflict Wounds.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Necromancy",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Insect Plague](https://www.dndbeyond.com/spells/2619183-insect-plague)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Insect Plague.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Cleric",
+            "Druid",
+            "Sorcerer"
+        ]
+    },
+    {
+        "title": "Intellect Fortress",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Intellect Fortress.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Artificer",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Investiture of Flame",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Investiture of Flame.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Title",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Investiture of Ice.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Investiture of Stone",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Investiture of Stone.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Investiture of Wind",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Investiture of Wind.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Invisibility](https://www.dndbeyond.com/spells/2619116-invisibility)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Invisibility.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Invulnerability",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\I\\Invulnerability.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Abjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Jallarzi\u2019s Storm of Radiance](https://www.dndbeyond.com/spells/2618836-jallarzis-storm-of-radiance)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\J\\Jallarzi's Storm of Radiance.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Jump](https://www.dndbeyond.com/spells/2618991-jump)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\J\\Jump.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Keycharm](https://www.dndbeyond.com/magic-items/215717-keycharm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\K\\Keycharm.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Kinetic Jaunt",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\K\\Kinetic Jaunt.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Artificer",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Knock](https://www.dndbeyond.com/spells/2618992-knock)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\K\\Knock.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Kyrzin\u2019s Ooze](https://www.dndbeyond.com/magic-items/977672-kyrzins-ooze)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\K\\Kyrzin's Ooze.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Legend Lore](https://www.dndbeyond.com/spells/2619010-legend-lore)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Legend Lore.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Leomund\u2019s Secret Chest](https://www.dndbeyond.com/spells/2619012-leomunds-secret-chest)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Leomund's Secret Chest.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Leomund\u2019s Tiny Hut](https://www.dndbeyond.com/spells/2619013-leomunds-tiny-hut)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Leomund's Tiny Hut.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Lesser Restoration](https://www.dndbeyond.com/spells/2619016-lesser-restoration)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Lesser Restoration.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Levitate](https://www.dndbeyond.com/spells/2618994-levitate)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Levitate.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Life Transference",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Life Transference.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Light](https://www.dndbeyond.com/spells/2618996-light)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Light.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Lightning Arrow](https://www.dndbeyond.com/spells/2618997-lightning-arrow)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Lightning Arrow.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Lightning Bolt](https://www.dndbeyond.com/spells/2618999-lightning-bolt)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Lightning Bolt.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Lightning Lure",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Lightning Lure.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Living Armor](https://www.dndbeyond.com/magic-items/982693-living-armor)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Living Armor.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Living Gloves](https://www.dndbeyond.com/magic-items/1085653-living-gloves)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Living Gloves.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Locate Animals or Plants](https://www.dndbeyond.com/spells/2619000-locate-animals-or-plants)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Locate Animals or Plants.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Bard",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Locate Creature](https://www.dndbeyond.com/spells/2619001-locate-creature)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Locate Creature.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Locate Object](https://www.dndbeyond.com/spells/2619002-locate-object)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Locate Object.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Longstrider](https://www.dndbeyond.com/spells/2619004-longstrider)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\L\\Longstrider.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Bard",
+            "Druid",
+            "Ranger",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Maddening Darkness",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Maddening Darkness.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Evocation",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Maelstrom",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Maelstorm.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Mage Armor](https://www.dndbeyond.com/spells/2619006-mage-armor)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mage Armor.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mage Hand](https://www.dndbeyond.com/spells/2619008-mage-hand)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mage Hand.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Magic Circle](https://www.dndbeyond.com/spells/2619018-magic-circle)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Magic Circle.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Cleric",
+            "Paladin",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Magic Jar](https://www.dndbeyond.com/spells/2619021-magic-jar)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Magic Jar.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Necromancy",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Magic Missile](https://www.dndbeyond.com/spells/2619022-magic-missile)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Magic Missile.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Magic Mouth](https://www.dndbeyond.com/spells/2619023-magic-mouth)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Magic Mouth.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Magic Stone",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Magic Stone.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Magic Weapon](https://www.dndbeyond.com/spells/2619024-magic-weapon)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Magic Weapon.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Paladin",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Magnify Gravity",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Magnify Gravity.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Major Image](https://www.dndbeyond.com/spells/2619025-major-image)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Major Image.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mass Cure Wounds](https://www.dndbeyond.com/spells/2619026-mass-cure-wounds)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mass Cure Wounds.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Mass Heal](https://www.dndbeyond.com/spells/2619027-mass-heal)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mass Heal.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Abjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Mass Healing Word](https://www.dndbeyond.com/spells/2619028-mass-healing-word)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mass Healing Word.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Bard",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Mass Polymorph",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mass Polymorph.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Transmutation",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mass Suggestion](https://www.dndbeyond.com/spells/2619029-mass-suggestion)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mass Suggestion.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Maximilian's Earthen Grasp",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Maximilian's Earthen Grasp.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Maze](https://www.dndbeyond.com/spells/2619030-maze)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Maze.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Meld into Stone](https://www.dndbeyond.com/spells/2619031-meld-into-stone)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Meld Into Stone.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Cleric",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Melf\u2019s Acid Arrow](https://www.dndbeyond.com/spells/2619032-melfs-acid-arrow)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Melf's Acid Arrow.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Melf's Minute Meteors",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Melf's Minute Meteors.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mending](https://www.dndbeyond.com/spells/2619033-mending)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mending.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Mental Prison",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mental Prison.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Illusion",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Message](https://www.dndbeyond.com/spells/2619034-message)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Message.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Meteor Swarm](https://www.dndbeyond.com/spells/2619035-meteor-swarm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Meteor Swarm.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Mighty Fortress",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mighty Fortress.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mind Blank](https://www.dndbeyond.com/spells/2619036-mind-blank)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mind Blank.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Abjuration",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mind Sliver](https://www.dndbeyond.com/spells/2619037-mind-sliver)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mind Sliver.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Mind Spike](https://www.dndbeyond.com/spells/2619038-mind-spike)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mind Spike.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Minor Illusion](https://www.dndbeyond.com/spells/2619039-minor-illusion)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Minor Illusion.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Mirage Arcane](https://www.dndbeyond.com/spells/2619040-mirage-arcane)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mirage Arcane.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Illusion",
+            "Bard",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mirror Image](https://www.dndbeyond.com/spells/2619060-mirror-image)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mirror Image.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mislead](https://www.dndbeyond.com/spells/2619131-mislead)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mislead.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Illusion",
+            "Bard",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Misty Step](https://www.dndbeyond.com/spells/2619133-misty-step)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Misty Step.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Modify Memory](https://www.dndbeyond.com/spells/2619109-modify-memory)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Modify Memory.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Enchantment",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Mold Earth",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mold Earth.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Moonbeam](https://www.dndbeyond.com/spells/2619134-moonbeam)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Moonbeam.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Mordenkainen\u2019s Faithful Hound](https://www.dndbeyond.com/spells/2619110-mordenkainens-faithful-hound)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mordenkainen's Faithful Hound.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mordenkainen\u2019s Magnificent Mansion](https://www.dndbeyond.com/spells/2619112-mordenkainens-magnificent-mansion)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mordenkainen's Magnificent Mansion.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Conjuration",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mordenkainen\u2019s Private Sanctum](https://www.dndbeyond.com/spells/2619114-mordenkainens-private-sanctum)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mordenkainen's Private Sanctum.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Abjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Mordenkainen\u2019s Sword](https://www.dndbeyond.com/spells/2619118-mordenkainens-sword)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Mordenkainen's Sword.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Evocation",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Move Earth](https://www.dndbeyond.com/spells/2619120-move-earth)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\M\\Move Earth.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Nathair's Mischief",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\N\\Nathair's Mischief.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Negative Energy Flood",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\N\\Negative Energy Flood.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Necromancy",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Nondetection](https://www.dndbeyond.com/spells/2619122-nondetection)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\N\\Nondetection.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Bard",
+            "Ranger",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Nystul\u2019s Magic Aura](https://www.dndbeyond.com/spells/2619124-nystuls-magic-aura)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\N\\Nystul's Magic Aura.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Orb of Shielding](https://www.dndbeyond.com/magic-items/215743-orb-of-shielding)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\O\\Orb of Shielding.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Otiluke\u2019s Freezing Sphere](https://www.dndbeyond.com/spells/2619126-otilukes-freezing-sphere)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\O\\Otiluke's Freezing Sphere.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Otiluke\u2019s Resilient Sphere](https://www.dndbeyond.com/spells/2619128-otilukes-resilient-sphere)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\O\\Otiluke's Resilient Sphere.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Abjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Otto\u2019s Irresistible Dance](https://www.dndbeyond.com/spells/2619130-ottos-irresistible-dance)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\O\\Otto's Irresistible Dance.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Enchantment",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Pass without Trace](https://www.dndbeyond.com/spells/2618849-pass-without-trace)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Pass Without Trace.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Abjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Passwall](https://www.dndbeyond.com/spells/2618852-passwall)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Passwall.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Phantasmal Force](https://www.dndbeyond.com/spells/2618854-phantasmal-force)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Phantasmal Force.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Phantasmal Killer](https://www.dndbeyond.com/spells/2618857-phantasmal-killer)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Phantasmal Killer.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Illusion",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Phantom Steed](https://www.dndbeyond.com/spells/2618859-phantom-steed)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Phantom Steed.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Illusion",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Planar Ally](https://www.dndbeyond.com/spells/2618861-planar-ally)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Planar Ally.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Planar Binding](https://www.dndbeyond.com/spells/2618864-planar-binding)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Planar Binding.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Plane Shift](https://www.dndbeyond.com/spells/2618867-plane-shift)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Plane Shift.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Conjuration",
+            "Cleric",
+            "Druid",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Plant Growth](https://www.dndbeyond.com/spells/2618869-plant-growth)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Plant Growth.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Bard",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Poison Spray](https://www.dndbeyond.com/spells/2618875-poison-spray)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Poison Spray.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Polymorph](https://www.dndbeyond.com/spells/2618876-polymorph)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Polymorph.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Transmutation",
+            "Bard",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Power Word Fortify](https://www.dndbeyond.com/spells/2618837-power-word-fortify)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Power Word Fortify.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Enchantment",
+            "Bard",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Power Word Heal](https://www.dndbeyond.com/spells/2618880-power-word-heal)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Power Word Heal.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Enchantment",
+            "Bard",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Power Word Kill](https://www.dndbeyond.com/spells/2618886-power-word-kill)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Power Word Kill.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Power Word Pain",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Power Word Pain.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Enchantment",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Power Word Stun](https://www.dndbeyond.com/spells/2618889-power-word-stun)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Power Word Stun.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Prayer of Healing](https://www.dndbeyond.com/spells/2618892-prayer-of-healing)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Prayer of Healing.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Abjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "Prestidigitation",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Prestidigitation.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Primal Savagery",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Primal Savagery.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Primordial Ward",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Primordial Ward.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Abjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Prismatic Spray](https://www.dndbeyond.com/spells/2618895-prismatic-spray)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Prismatic Spray.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Evocation",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Prismatic Wall](https://www.dndbeyond.com/spells/2618898-prismatic-wall)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Prismatic Wall.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Abjuration",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Produce Flame](https://www.dndbeyond.com/spells/2618901-produce-flame)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Produce Flame.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Programmed Illusion](https://www.dndbeyond.com/spells/2618902-programmed-illusion)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Programmed Illusion.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Illusion",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Project Image](https://www.dndbeyond.com/spells/2618903-project-image)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Project Image.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Illusion",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Protection from Energy](https://www.dndbeyond.com/spells/2618908-protection-from-energy)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Protection from Energy.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Cleric",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Protection from Evil and Good](https://www.dndbeyond.com/spells/2618912-protection-from-evil-and-good)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Protection from Evil and Good.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Protection from Poison](https://www.dndbeyond.com/spells/2618915-protection-from-poison)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Protection from Poison.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Abjuration",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "Psychic Scream",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Psychic Scream.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Pulse Wave",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Pulse Wave.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Purify Food and Drink](https://www.dndbeyond.com/spells/2618917-purify-food-and-drink)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Purify Food and Drink.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Cleric",
+            "Druid",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "Pyrotechnics",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\P\\Pyrotechnics.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Artificer",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Raise Dead](https://www.dndbeyond.com/spells/2618922-raise-dead)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Raise Dead.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Necromancy",
+            "Bard",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Rary\u2019s Telepathic Bond](https://www.dndbeyond.com/spells/2618925-rarys-telepathic-bond)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Rary's Telepathic Bond.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Divination",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Raulothim's Psychic Lance",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Raulothim's Psychic Lance.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Ravenous Void",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Ravenous Void.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Ray of Enfeeblement](https://www.dndbeyond.com/spells/2618926-ray-of-enfeeblement)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Ray of Enfeeblement.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Necromancy",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Ray of Frost](https://www.dndbeyond.com/spells/2618930-ray-of-frost)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Ray of Frost.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Ray of Sickness](https://www.dndbeyond.com/spells/2618935-ray-of-sickness)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Ray of Sickness.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Necromancy",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Reality Break",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Reality Break.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Regenerate](https://www.dndbeyond.com/spells/2618937-regenerate)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Regenerate.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Transmutation",
+            "Bard",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Reincarnate](https://www.dndbeyond.com/spells/2618941-reincarnate)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Reincarnate.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Necromancy",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Remove Curse](https://www.dndbeyond.com/spells/2618943-remove-curse)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Remove Curse.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Abjuration",
+            "Cleric",
+            "Paladin",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Resistance](https://www.dndbeyond.com/spells/2618947-resistance)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Resistance.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Resurrection](https://www.dndbeyond.com/spells/2618953-resurrection)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Resurrection.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Necromancy",
+            "Bard",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "[Reverse Gravity](https://www.dndbeyond.com/spells/2618954-reverse-gravity)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Reverse Gravity.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Transmutation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Revivify](https://www.dndbeyond.com/spells/2618956-revivify)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Revivify.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Cleric",
+            "Druid",
+            "Paladin",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "Rime's Binding Ice",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Rime's Binding Ice.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Rope Trick](https://www.dndbeyond.com/spells/2618962-rope-trick)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\R\\Rope Trick.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Sacred Flame](https://www.dndbeyond.com/spells/2618967-sacred-flame)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sacred Flame.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Sanctuary](https://www.dndbeyond.com/spells/2619003-sanctuary)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sanctuary.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Sapping Sting",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sapping Sting.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Scatter",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Scatter.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Scorching Ray](https://www.dndbeyond.com/spells/2619005-scorching-ray)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Scorching Ray.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Scribe\u2019s Pen](https://www.dndbeyond.com/magic-items/215719-scribes-pen)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Scribe's Pen.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Scrying](https://www.dndbeyond.com/spells/2619007-scrying)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Scrying.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Searing Smite](https://www.dndbeyond.com/spells/2619009-searing-smite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Searing Smite.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[See Invisibility](https://www.dndbeyond.com/spells/2619011-see-invisibility)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\See Invisibility.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Divination",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Seeming](https://www.dndbeyond.com/spells/2619014-seeming)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Seeming.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Sending](https://www.dndbeyond.com/spells/2619015-sending)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sending.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Sequester](https://www.dndbeyond.com/spells/2618980-sequester)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sequester.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Shadow Blade",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shadow Blade.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Shadow of Moil",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shadow of Moil.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Necromancy",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "Shape Water",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shape Water.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Shapechange](https://www.dndbeyond.com/spells/2618982-shapechange)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shapechange.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Transmutation",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Shatter](https://www.dndbeyond.com/spells/2619017-shatter)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shatter.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Shield of Faith](https://www.dndbeyond.com/spells/2619020-shield-of-faith)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shield of Faith.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Shield](https://www.dndbeyond.com/spells/2619019-shield)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shield.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Shiftweave](https://www.dndbeyond.com/magic-items/215557-shiftweave)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shiftweave.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Shillelagh](https://www.dndbeyond.com/spells/2618984-shillelagh)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shillelagh.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Shining Smite](https://www.dndbeyond.com/spells/2618838-shining-smite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shining Smite.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Shocking Grasp](https://www.dndbeyond.com/spells/2618986-shocking-grasp)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Shocking Grasp.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Sickening Radiance",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sickening Radiance.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Evocation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Silence](https://www.dndbeyond.com/spells/2619061-silence)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Silence.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Illusion",
+            "Bard",
+            "Cleric",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Silent Image](https://www.dndbeyond.com/spells/2619062-silent-image)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Silent Image.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Illusion",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Silvery Barbs",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Silvery Barbs.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Simulacrum](https://www.dndbeyond.com/spells/2618995-simulacrum)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Simulacrum.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Illusion",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Skill Empowerment",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Skill Empowerment.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Artificer",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Skywrite",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Skywrite.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Artificer",
+            "Bard",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Sleep](https://www.dndbeyond.com/spells/2619064-sleep)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sleep.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Sleet Storm](https://www.dndbeyond.com/spells/2618998-sleet-storm)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sleet Storm.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Slow](https://www.dndbeyond.com/spells/2619066-slow)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Slow.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Snare",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Snare.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Abjuration",
+            "Druid",
+            "Ranger",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Snilloc's Snowball Swarm",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Snilloc's Snowball Swarm.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Sorcerous Burst](https://www.dndbeyond.com/spells/2618839-sorcerous-burst)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sorcerous Burst.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Soul Cage",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Soul Cage.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Necromancy",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Spare the Dying](https://www.dndbeyond.com/spells/2619067-spare-the-dying)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Spare the Dying.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Speak with Animals](https://www.dndbeyond.com/spells/2619059-speak-with-animals)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Speak with Animals.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Divination",
+            "Bard",
+            "Druid",
+            "Ranger",
+            "Warlock"
+        ]
+    },
+    {
+        "title": "[Speak with Dead](https://www.dndbeyond.com/spells/2619068-speak-with-dead)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Speak with Dead.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Bard",
+            "Cleric",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Speak with Plants](https://www.dndbeyond.com/spells/2619069-speak-with-plants)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Speak with Plants.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Bard",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Spider Climb](https://www.dndbeyond.com/spells/2619071-spider-climb)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Spider Climb.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Spike Growth](https://www.dndbeyond.com/spells/2619075-spike-growth)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Spike Growth.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Transmutation",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Spirit Guardians](https://www.dndbeyond.com/spells/2619078-spirit-guardians)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Spirit Guardians.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Spirit of Death",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Spirit of Death.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Necromancy",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Spirit Shroud",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Spirit Shroud.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Cleric",
+            "Paladin",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Spiritual Weapon](https://www.dndbeyond.com/spells/2619081-spiritual-weapon)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Spiritual Weapon.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Spray of Cards",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Spray of Cards.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Staggering Smite](https://www.dndbeyond.com/spells/2619084-staggering-smite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Staggering Smite.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Enchantment",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Starry Wisp](https://www.dndbeyond.com/spells/2618840-starry-wisp)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Starry Wisp.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Steel Wind Strike](https://www.dndbeyond.com/spells/2619087-steel-wind-strike)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Steel Wind Strike.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Ranger",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Stinking Cloud](https://www.dndbeyond.com/spells/2619091-stinking-cloud)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Stinking Cloud.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Stone Shape](https://www.dndbeyond.com/spells/2619092-stone-shape)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Stone Shape.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Transmutation",
+            "Cleric",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Stoneskin](https://www.dndbeyond.com/spells/2619095-stoneskin)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Stoneskin.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Transmutation",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Storm of Vengeance](https://www.dndbeyond.com/spells/2619098-storm-of-vengeance)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Storm of Vengeance.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Conjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "Storm Sphere",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Storm Sphere.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Evocation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Suggestion](https://www.dndbeyond.com/spells/2619101-suggestion)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Suggestion.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Summon Aberration](https://www.dndbeyond.com/spells/2619105-summon-aberration)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Aberration.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Summon Beast](https://www.dndbeyond.com/spells/2619106-summon-beast)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Beast.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Summon Celestial](https://www.dndbeyond.com/spells/2619108-summon-celestial)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Celestial.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Summon Construct](https://www.dndbeyond.com/spells/2619111-summon-construct)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Construct.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Summon Dragon](https://www.dndbeyond.com/spells/2618843-summon-dragon)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Dragon.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Summon Elemental](https://www.dndbeyond.com/spells/2619113-summon-elemental)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Elemental.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Druid",
+            "Ranger",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Summon Fey](https://www.dndbeyond.com/spells/2619115-summon-fey)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Fey.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Druid",
+            "Ranger",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Summon Fiend](https://www.dndbeyond.com/spells/2619117-summon-fiend)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Fiend.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Summon Greater Demon",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Greater Demon.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Summon Lesser Demon",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Lesser Demon.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Summon Shadows",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Shadows.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Summon Undead](https://www.dndbeyond.com/spells/2619119-summon-undead)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Summon Undead.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Sunbeam](https://www.dndbeyond.com/spells/2619121-sunbeam)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sunbeam.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Evocation",
+            "Cleric",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Sunburst](https://www.dndbeyond.com/spells/2619123-sunburst)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sunburst.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Evocation",
+            "Cleric",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Swift Quiver](https://www.dndbeyond.com/spells/2619125-swift-quiver)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Swift Quiver.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "Sword Burst",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Sword Burst.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Symbol](https://www.dndbeyond.com/spells/2619127-symbol)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Symbol.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Abjuration",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Synaptic Static](https://www.dndbeyond.com/spells/2619129-synaptic-static)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\S\\Synaptic Static.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Enchantment",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Tasha\u2019s Bubbling Cauldron](https://www.dndbeyond.com/spells/2618841-tashas-bubbling-cauldron)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tasha's Bubbling Cauldron.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Tasha's Caustic Brew",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tasha's Caustic Brew.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Artificer",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Tasha\u2019s Hideous Laughter](https://www.dndbeyond.com/spells/2619132-tashas-hideous-laughter)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tasha's Hideous Laughter.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Enchantment",
+            "Bard",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Tasha's Mind Whip",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tasha's Mind Whip.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Tasha's Otherworldly Guise",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tasha's Otherworldly Guise.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Telekinesis](https://www.dndbeyond.com/spells/2619157-telekinesis)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Telekinesis.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Telepathy](https://www.dndbeyond.com/spells/2619159-telepathy)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Telepathy.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Divination",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Teleport](https://www.dndbeyond.com/spells/2619163-teleport)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Teleport.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Conjuration",
+            "Bard",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Teleportation Circle](https://www.dndbeyond.com/spells/2619167-teleportation-circle)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Teleportation Circle.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Bard",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Temple of the Gods",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Temple of the Gods.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Conjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Temporal Shunt",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Temporal Shunt.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Tenser\u2019s Floating Disk](https://www.dndbeyond.com/spells/2619169-tensers-floating-disk)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tenser's Floating Disk.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Tenser's Transformation",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tenser's Transformation.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Tether Essence",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tether Essence.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Necromancy",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Thaumaturgy](https://www.dndbeyond.com/spells/2619174-thaumaturgy)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Thaumaturgy.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Thorn Whip](https://www.dndbeyond.com/spells/2619176-thorn-whip)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Thorn Whip.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Thunder Step",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Thunder Step.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Thunderclap](https://www.dndbeyond.com/spells/2619179-thunderclap)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Thunderclap.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Thunderous Smite](https://www.dndbeyond.com/spells/2619182-thunderous-smite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Thunderous Smite.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "[Thunderwave](https://www.dndbeyond.com/spells/2619184-thunderwave)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Thunderwave.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Bard",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Tidal Wave",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tidal Wave.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Conjuration",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Time Ravage",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Time Ravage.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Necromancy",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Time Stop](https://www.dndbeyond.com/spells/2619185-time-stop)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Time Stop.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Transmutation",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Tiny Servant",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tiny Servant.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Artificer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Toll the Dead](https://www.dndbeyond.com/spells/2619188-toll-the-dead)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Toll the Dead.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Tongues](https://www.dndbeyond.com/spells/2619190-tongues)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tongues.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Transmute Rock",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Transmute Rock.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Transmutation",
+            "Artificer",
+            "Druid",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Transport via Plants](https://www.dndbeyond.com/spells/2619196-transport-via-plants)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Transport via Plants.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Tree Stride](https://www.dndbeyond.com/spells/2619197-tree-stride)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tree Stride.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Conjuration",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[True Polymorph](https://www.dndbeyond.com/spells/2619198-true-polymorph)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\True Polymorph.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Transmutation",
+            "Bard",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[True Resurrection](https://www.dndbeyond.com/spells/2619199-true-resurrection)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\True Resurrection.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Necromancy",
+            "Cleric",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[True Seeing](https://www.dndbeyond.com/spells/2619201-true-seeing)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\True Seeing.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Divination",
+            "Bard",
+            "Cleric",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[True Strike](https://www.dndbeyond.com/spells/2619204-true-strike)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\True Strike.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Tsunami](https://www.dndbeyond.com/spells/2619206-tsunami)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\T\\Tsunami.md",
+        "category": "Spell",
+        "tags": [
+            "Level8",
+            "Conjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Unseen Servant](https://www.dndbeyond.com/spells/2619209-unseen-servant)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\U\\Unseen Servant.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Conjuration",
+            "Bard",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Vampiric Touch](https://www.dndbeyond.com/spells/2619214-vampiric-touch)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\V\\Vampiric Touch.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Ventilating Lungs](https://www.dndbeyond.com/magic-items/1091623-ventilating-lungs)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\V\\Ventilating Lungs.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Vicious Mockery](https://www.dndbeyond.com/spells/2619216-vicious-mockery)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\V\\Vicious Mockery.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Vampiric Touch](https://www.dndbeyond.com/spells/2619214-vampiric-touch)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\V\\Vitriolic Sphere.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Necromancy",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Vortex Warp",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\V\\Vortex Warp.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Artificer",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Wall of Fire](https://www.dndbeyond.com/spells/2619107-wall-of-fire)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wall of Fire.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Evocation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Wall of Force](https://www.dndbeyond.com/spells/2619194-wall-of-force)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wall of Force.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Wall of Ice](https://www.dndbeyond.com/spells/2619195-wall-of-ice)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wall of Ice.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Wall of Light",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wall of Light.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Wall of Sand",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wall of Sand.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Wall of Stone](https://www.dndbeyond.com/spells/2619200-wall-of-stone)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wall of Stone.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Wall of Thorns](https://www.dndbeyond.com/spells/2619202-wall-of-thorns)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wall of Thorns.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Druid"
+        ]
+    },
+    {
+        "title": "Wall of Water",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wall of Water.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Wand Sheath](https://www.dndbeyond.com/magic-items/215700-wand-sheath)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wand Sheath.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Warding Bond](https://www.dndbeyond.com/spells/2619203-warding-bond)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Warding Bond.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Abjuration",
+            "Cleric",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "Warding Wind",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Warding Wind.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Evocation",
+            "Bard",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Water Breathing](https://www.dndbeyond.com/spells/2619205-water-breathing)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Water Breathing.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Druid",
+            "Ranger",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Water Walk](https://www.dndbeyond.com/spells/2619207-water-walk)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Water Walk.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Transmutation",
+            "Cleric",
+            "Druid",
+            "Ranger",
+            "Sorcerer"
+        ]
+    },
+    {
+        "title": "Watery Sphere",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Watery Sphere.md",
+        "category": "Spell",
+        "tags": [
+            "Level4",
+            "Conjuration",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Web](https://www.dndbeyond.com/spells/2619208-web)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Web.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Weird](https://www.dndbeyond.com/spells/2619210-weird)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Weird.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Illusion",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Wheel of Wind and Water](https://www.dndbeyond.com/magic-items/215721-wheel-of-wind-and-water)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wheel of Wind and Water.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "Whirlwind",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Whirlwind.md",
+        "category": "Spell",
+        "tags": [
+            "Level7",
+            "Evocation",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Wind Walk](https://www.dndbeyond.com/spells/2619211-wind-walk)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wind Walk.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Transmutation",
+            "Druid"
+        ]
+    },
+    {
+        "title": "[Wind Wall](https://www.dndbeyond.com/spells/2619212-wind-wall)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wind Wall.md",
+        "category": "Spell",
+        "tags": [
+            "Level3",
+            "Evocation",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Wish](https://www.dndbeyond.com/spells/2619213-wish)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wish.md",
+        "category": "Spell",
+        "tags": [
+            "Level9",
+            "Conjuration",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Witch Bolt](https://www.dndbeyond.com/spells/2619215-witch-bolt)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Witch Bolt.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Evocation",
+            "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Wither and Bloom",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wither and Bloom.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Necromancy",
+            "Druid",
+            "Sorcerer",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Word of Radiance](https://www.dndbeyond.com/spells/2619217-word-of-radiance)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Word of Radiance.md",
+        "category": "Spell",
+        "tags": []
+    },
+    {
+        "title": "[Word of Recall](https://www.dndbeyond.com/spells/2619218-word-of-recall)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Word of Recall.md",
+        "category": "Spell",
+        "tags": [
+            "Level6",
+            "Conjuration",
+            "Cleric"
+        ]
+    },
+    {
+        "title": "Wrath of Nature",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wrath of Nature.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Evocation",
+            "Druid",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Wrathful Smite](https://www.dndbeyond.com/spells/2619220-wrathful-smite)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wrathful Smite.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Necromancy",
+            "Paladin"
+        ]
+    },
+    {
+        "title": "Wristpocket",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\W\\Wristpocket.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Conjuration",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "[Yolande\u2019s Regal Presence](https://www.dndbeyond.com/spells/2618842-yolandes-regal-presence)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\Y\\Yolande's Regal Presence.md",
+        "category": "Spell",
+        "tags": [
+            "Level5",
+            "Enchantment",
+            "Bard",
+            "Wizard"
+        ]
+    },
+    {
+        "title": "Zephyr Strike",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\Z\\Zephyr Strike.md",
+        "category": "Spell",
+        "tags": [
+            "Level1",
+            "Transmutation",
+            "Ranger"
+        ]
+    },
+    {
+        "title": "[Zone of Truth](https://www.dndbeyond.com/spells/2619221-zone-of-truth)",
+        "path": "EmberHeart\\docs\\reference\\RAW_DND\\Spells\\Z\\Zone of Truth.md",
+        "category": "Spell",
+        "tags": [
+            "Level2",
+            "Enchantment",
+            "Bard",
+            "Cleric",
+            "Paladin"
+        ]
+    }
+]

@@ -1,0 +1,77 @@
+{
+    "version": "1.0",
+    "catalog_name": "Emberheart Production Blueprints",
+    "notes": "All build times assume standard labor allocation. High-Priority allocation reduces time by 50%.",
+    "blueprints": {
+        "ships": [
+            {
+                "class": "Spark-Class Frigate",
+                "role": "Patrol / Escort",
+                "cost_ou": 5000,
+                "cost_m2u": 2000,
+                "build_time_days": 14,
+                "special": "Equipped with Spark-Lance"
+            },
+            {
+                "class": "Sovereign Corvette (Stealth)",
+                "role": "Infiltration / Spec-Ops",
+                "cost_ou": 8000,
+                "cost_m2u": 4000,
+                "build_time_days": 21,
+                "special": "Ghost-Grid Compatible"
+            },
+            {
+                "class": "Hyper-Dreadnought",
+                "role": "Interstellar Offensive / Sector Command",
+                "cost_ou": 50000,
+                "cost_m2u": 25000,
+                "build_time_days": 180,
+                "special": "Hyper-Standard (Spark-Amplifier + Ghost-Grid + Aegis Prime)"
+            },
+            {
+                "class": "Aurora-Class Colony Ship",
+                "role": "Expansion / Transport",
+                "cost_ou": 100000,
+                "cost_m2u": 60000,
+                "build_time_days": 90,
+                "special": "Capacity: 5000 Colonists"
+            }
+        ],
+        "sentinels": [
+            {
+                "unit": "Ember-Warden (Standard)",
+                "role": "City Guard",
+                "cost_ou": 50,
+                "cost_m2u": 50,
+                "build_time_days": 0.1,
+                "batch_size": 10
+            },
+            {
+                "unit": "Iron-Warden (Heavy)",
+                "role": "Ship Marine / Heavy Enforcer",
+                "cost_ou": 150,
+                "cost_m2u": 150,
+                "build_time_days": 0.5,
+                "batch_size": 5,
+                "special": "Void-Sealed Plating"
+            }
+        ],
+        "infrastructure": [
+            {
+                "type": "Spark-Warp Gate (Anchor)",
+                "role": "Teleportation Node",
+                "cost_ou": 200000,
+                "cost_m2u": 0,
+                "build_time_days": 30,
+                "special": "Requires Vaelis/Elara Calibration"
+            },
+            {
+                "type": "Planetary Shield Emitter",
+                "role": "Aegis Network Node",
+                "cost_ou": 10000,
+                "cost_m2u": 5000,
+                "build_time_days": 7
+            }
+        ]
+    }
+}

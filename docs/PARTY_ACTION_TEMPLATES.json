@@ -1,0 +1,413 @@
+{
+    "version": "1.0",
+    "schema": "PARTY_ACTION_TEMPLATES.json",
+    "notes": [
+        "Templates are mission blueprints used by Athena to prompt the user for choices.",
+        "Each template defines: triggers, required indices, time cost, risks, and deterministic outputs.",
+        "Legitimacy gains are BASE values; apply multipliers per PARTY_MECHANICS.md."
+    ],
+    "templates": [
+        {
+            "template_id": "PA-001",
+            "name": "Inspect Shaft 2 Instability",
+            "type": "Investigation",
+            "trigger_tags": [
+                "open_call_arrival",
+                "mine_incident_recent",
+                "tremor_threat>=3"
+            ],
+            "time_cost_days": 2,
+            "risk_tier": 2,
+            "indices_used": [
+                "skill_index",
+                "combat_index"
+            ],
+            "primary_sites": [
+                "EH-MINE-02"
+            ],
+            "skill_weights": {
+                "survival": 0.35,
+                "stonecraft": 0.35,
+                "mining": 0.30
+            },
+            "success": {
+                "legitimacy_base": 5,
+                "effects": [
+                    {
+                        "set_flag": {
+                            "mine02_mapped": true
+                        }
+                    },
+                    {
+                        "delta_state": {
+                            "tremor_threat": -1
+                        }
+                    },
+                    {
+                        "delta_stockpile": {
+                            "stone_stock_su": 8
+                        }
+                    }
+                ]
+            },
+            "partial_success": {
+                "legitimacy_base": 2,
+                "effects": [
+                    {
+                        "set_flag": {
+                            "mine02_mapped": true
+                        }
+                    },
+                    {
+                        "delta_state": {
+                            "tremor_threat": 0
+                        }
+                    }
+                ],
+                "costs": [
+                    {
+                        "fatigue": 1
+                    }
+                ]
+            },
+            "failure": {
+                "legitimacy_base": 0,
+                "effects": [
+                    {
+                        "delta_state": {
+                            "tremor_threat": 1
+                        }
+                    }
+                ],
+                "costs": [
+                    {
+                        "injury_check": true
+                    },
+                    {
+                        "fatigue": 2
+                    }
+                ]
+            }
+        },
+        {
+            "template_id": "PA-002",
+            "name": "Stabilize Frightened Workers",
+            "type": "Diplomacy",
+            "trigger_tags": [
+                "morale<=0",
+                "mine_incident_recent"
+            ],
+            "time_cost_days": 1,
+            "risk_tier": 1,
+            "indices_used": [
+                "social_index"
+            ],
+            "primary_sites": [
+                "EH-MINE-01",
+                "EH-MINE-02"
+            ],
+            "skill_weights": {
+                "influence": 0.70,
+                "tradecraft": 0.30
+            },
+            "success": {
+                "legitimacy_base": 2,
+                "effects": [
+                    {
+                        "delta_state": {
+                            "morale": 1
+                        }
+                    },
+                    {
+                        "delta_state": {
+                            "council_unity": 1
+                        }
+                    }
+                ]
+            },
+            "partial_success": {
+                "legitimacy_base": 1,
+                "effects": [
+                    {
+                        "delta_state": {
+                            "morale": 0
+                        }
+                    }
+                ]
+            },
+            "failure": {
+                "legitimacy_base": 0,
+                "effects": [
+                    {
+                        "delta_state": {
+                            "morale": -1
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "template_id": "PA-003",
+            "name": "Timber Run Escort",
+            "type": "Threat Elimination",
+            "trigger_tags": [
+                "timber_stock_tb<25",
+                "winter_approaching",
+                "cult_activity>=3"
+            ],
+            "time_cost_days": 2,
+            "risk_tier": 2,
+            "indices_used": [
+                "combat_index",
+                "skill_index"
+            ],
+            "primary_sites": [
+                "EH-TIMBER-01"
+            ],
+            "skill_weights": {
+                "survival": 0.60,
+                "timbercraft": 0.40
+            },
+            "success": {
+                "legitimacy_base": 5,
+                "effects": [
+                    {
+                        "delta_stockpile": {
+                            "timber_stock_tb": 10
+                        }
+                    },
+                    {
+                        "delta_state": {
+                            "morale": 1
+                        }
+                    }
+                ]
+            },
+            "partial_success": {
+                "legitimacy_base": 2,
+                "effects": [
+                    {
+                        "delta_stockpile": {
+                            "timber_stock_tb": 5
+                        }
+                    }
+                ],
+                "costs": [
+                    {
+                        "fatigue": 1
+                    }
+                ]
+            },
+            "failure": {
+                "legitimacy_base": 0,
+                "effects": [
+                    {
+                        "delta_stockpile": {
+                            "timber_stock_tb": 0
+                        }
+                    }
+                ],
+                "costs": [
+                    {
+                        "injury_check": true
+                    },
+                    {
+                        "fatigue": 2
+                    }
+                ]
+            }
+        },
+        {
+            "template_id": "PA-004",
+            "name": "Hunting Grounds Sweep",
+            "type": "Resource Stabilization",
+            "trigger_tags": [
+                "food_status=LOW",
+                "caravan_due_in_weeks<=2"
+            ],
+            "time_cost_days": 2,
+            "risk_tier": 2,
+            "indices_used": [
+                "combat_index",
+                "skill_index"
+            ],
+            "primary_sites": [
+                "EH-HUNT-01"
+            ],
+            "skill_weights": {
+                "survival": 0.75,
+                "influence": 0.25
+            },
+            "success": {
+                "legitimacy_base": 5,
+                "effects": [
+                    {
+                        "delta_stockpile": {
+                            "food_stock_fu": 60
+                        }
+                    }
+                ]
+            },
+            "partial_success": {
+                "legitimacy_base": 2,
+                "effects": [
+                    {
+                        "delta_stockpile": {
+                            "food_stock_fu": 30
+                        }
+                    }
+                ],
+                "costs": [
+                    {
+                        "fatigue": 1
+                    }
+                ]
+            },
+            "failure": {
+                "legitimacy_base": 0,
+                "effects": [
+                    {
+                        "delta_stockpile": {
+                            "food_stock_fu": 0
+                        }
+                    }
+                ],
+                "costs": [
+                    {
+                        "injury_check": true
+                    },
+                    {
+                        "fatigue": 2
+                    }
+                ]
+            }
+        },
+        {
+            "template_id": "PA-005",
+            "name": "Forge Output Surge Week",
+            "type": "Structural Repair",
+            "trigger_tags": [
+                "tools_stock_tu<=3",
+                "tool_wear>=50"
+            ],
+            "time_cost_days": 7,
+            "risk_tier": 1,
+            "indices_used": [
+                "skill_index"
+            ],
+            "primary_sites": [
+                "EH-FORGE-01"
+            ],
+            "skill_weights": {
+                "smithing": 0.70,
+                "stonecraft": 0.30
+            },
+            "success": {
+                "legitimacy_base": 2,
+                "effects": [
+                    {
+                        "delta_stockpile": {
+                            "tools_stock_tu": 2
+                        }
+                    },
+                    {
+                        "delta_stockpile": {
+                            "metal_stock_m2u": 4
+                        }
+                    },
+                    {
+                        "delta_state": {
+                            "tool_wear": -10
+                        }
+                    }
+                ]
+            },
+            "partial_success": {
+                "legitimacy_base": 1,
+                "effects": [
+                    {
+                        "delta_stockpile": {
+                            "tools_stock_tu": 1
+                        }
+                    }
+                ]
+            },
+            "failure": {
+                "legitimacy_base": 0,
+                "effects": [
+                    {
+                        "delta_state": {
+                            "tool_wear": 5
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "template_id": "PA-006",
+            "name": "Suspected Cult Symptom Interview",
+            "type": "Investigation",
+            "trigger_tags": [
+                "corruption_index>=3",
+                "detection_score>=corruption_index"
+            ],
+            "time_cost_days": 1,
+            "risk_tier": 2,
+            "indices_used": [
+                "social_index",
+                "skill_index"
+            ],
+            "primary_sites": [],
+            "skill_weights": {
+                "influence": 0.60,
+                "survival": 0.20,
+                "herbalism": 0.20
+            },
+            "success": {
+                "legitimacy_base": 2,
+                "effects": [
+                    {
+                        "delta_state": {
+                            "corruption_index": -1
+                        }
+                    },
+                    {
+                        "reveal": {
+                            "npc_latent_symptom": true
+                        }
+                    }
+                ]
+            },
+            "partial_success": {
+                "legitimacy_base": 1,
+                "effects": [
+                    {
+                        "reveal": {
+                            "npc_latent_symptom": "uncertain"
+                        }
+                    }
+                ],
+                "costs": [
+                    {
+                        "fatigue": 1
+                    }
+                ]
+            },
+            "failure": {
+                "legitimacy_base": 0,
+                "effects": [
+                    {
+                        "delta_state": {
+                            "deep_cult_activity": 1
+                        }
+                    }
+                ],
+                "costs": [
+                    {
+                        "fatigue": 2
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "version": "1.4",
+    "settlement": {
+        "name": "Emberheart",
+        "status": "INTERGALACTIC_STEWARDS (ELEVENTH AGE)",
+        "ruler": "Kaelrath Emberhide, The Sacred Gardner of Stars",
+        "government": "Dual-Galaxy Sovereignty",
+        "population": {
+            "total": 18000,
+            "refugees": 0,
+            "integrated_citizens": 18000,
+            "specialists": 2500
+        },
+        "labor_allocation": {
+            "voluntary_creative_guilds": 15000,
+            "seed_fleet_maintenance": 2000,
+            "inter_galactic_diplomacy": 1000
+        },
+        "production_queue": {
+            "seed_sonde_fleet_gamma": {
+                "target": 12,
+                "completed": 0,
+                "daily_rate": 1
+            }
+        },
+        "stockpiles": {
+            "food_stock_fu": "INFINITE",
+            "water_stock_wu": "INFINITE",
+            "fuel_stock_hu": "INFINITE",
+            "ore_stock_ou": 5000000,
+            "metal_stock_m2u": 2500000
+        },
+        "core_status": {
+            "morale": 5,
+            "legitimacy": 1000,
+            "tremor_threat": 0,
+            "corruption_index": 0,
+            "deep_cult_activity": 0,
+            "weekly_income_gold": 1000000,
+            "labor_status": "POST_SCARCITY_DIVINE"
+        },
+        "calendar": {
+            "season": "The Sowing",
+            "week_index": 1,
+            "day": "The First Day of the Eleventh Age"
+        },
+        "active_buffs": [
+            "The World-Spark (Resonating across Galaxies)",
+            "The Eternal Glow (Global Morale +50%)",
+            "Legacy of the Shard (Inter-Galactic Travel)",
+            "Universal welfare Prime (Transcendent Standard)",
+            "The Global Feast (Infinite Light-Wheat Abundance)"
+        ],
+        "inventory": [
+            "The World-Spark (The Planetary Core Heart)",
+            "The High-Orbit Garden (The Second Moon)",
+            "The Solar Eye (Strategic Command Hub)",
+            "The Treaty of the Spark (Global Unification Document)",
+            "75x Ember-Wardens (Celestial Guard)",
+            "Sovereign Light-Wheat Granary (Zero-Failure Insurance)",
+            "SEE: FLEET_REGISTRY.json (For Ship Details)",
+            "SEE: NEIGHBOR_SYSTEM_STATE.json (For External Relations)"
+        ]
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "version": "1.0",
+    "fleet_name": "The Sovereign Fleet of the Eighth Age",
+    "commander": "High-Sovereign Kaelrath / King Malakor (Admiral of the Red)",
+    "total_tonnage": "Classification: SECTOR_DOMINANT",
+    "capital_ships": [
+        {
+            "name": "The Accordance",
+            "class": "Hyper-Dreadnought (Refitted)",
+            "status": "ENGAGING / SCORCHED_SPACE",
+            "captain": "Grand Marshal Malakor",
+            "upgrades": [
+                "Spark-Core Drive Mark II",
+                "Aegis Prime Shielding",
+                "Spark-Amplifier (Hyper-Frequency)",
+                "Ghost-Grid (Mark II)"
+            ],
+            "location": "Concordia Sector Perimeter",
+            "mission": "Operation: Rain Hell. Intercepting the Scourge Source."
+        },
+        {
+            "name": "The Sanctity",
+            "class": "Hyper-Dreadnought (Refitted)",
+            "status": "ENGAGING / SCORCHED_SPACE",
+            "captain": "Captain Aurelius",
+            "upgrades": [
+                "Spark-Core Drive Mark II",
+                "Aegis Prime Shielding",
+                "Spark-Amplifier (Hyper-Frequency)",
+                "Ghost-Grid (Mark II)"
+            ],
+            "location": "Concordia Sector Perimeter"
+        },
+        {
+            "name": "Deliverance",
+            "class": "Hyper-Dreadnought",
+            "status": "ENGAGING / SCORCHED_SPACE",
+            "captain": "Commander Vex (Dual-Command/Resonance)",
+            "upgrades": [
+                "Hyper-Standard loadout",
+                "Point-Defense Dissonance Arrays"
+            ],
+            "location": "Concordia Sector Perimeter"
+        },
+        {
+            "name": "Sovereignty",
+            "class": "Hyper-Dreadnought",
+            "status": "ENGAGING / SCORCHED_SPACE",
+            "captain": "High-Warden Krix",
+            "upgrades": [
+                "Hyper-Standard loadout",
+                "Fleet Coordination Logic"
+            ],
+            "location": "Concordia Sector Perimeter"
+        },
+        {
+            "name": "Vengeance",
+            "class": "Hyper-Dreadnought",
+            "status": "ENGAGING / SCORCHED_SPACE",
+            "captain": "Champion Valerius (Black-Box Survivor Elite)",
+            "upgrades": [
+                "Hyper-Standard loadout",
+                "Overclocked Spark-Amplifier"
+            ],
+            "location": "Concordia Sector Perimeter"
+        },
+        {
+            "name": "Zenith",
+            "class": "Hyper-Dreadnought",
+            "status": "LOGISTICS / GATE ANCHOR",
+            "captain": "Automated Sovereign-Logic",
+            "upgrades": [
+                "Hyper-Standard loadout",
+                "Mobile Warp-Gate Anchor"
+            ],
+            "location": "Concordia Prime Perimeter",
+            "mission": "Maintaining instant-link for reinforcements."
+        }
+    ],
+    "corvette_squadron": [
+        {
+            "name": "Resonance",
+            "class": "Sovereign Corvette (Stealth)",
+            "status": "DIPLOMATIC ESCORT",
+            "pilot": "Commander Vex",
+            "loadout": [
+                "Spark-Lance Array",
+                "Ghost-Grid Cloak",
+                "Aegis-Burst Generator"
+            ],
+            "notes": "Escorting the 'Seekers of the Silent Echo' to the Trade Hub. High-Prestige escort duty."
+        },
+        {
+            "name": "Silence",
+            "class": "Sovereign Corvette",
+            "status": "ON_MISSION (Silent Watch)",
+            "notes": "Deployed to Iron Outpost (2.5 LY). Passive monitoring."
+        }
+    ],
+    "auxiliary_fleet": [
+        {
+            "name": "Hope's Anchor",
+            "class": "Mining Freighter (Refitted)",
+            "status": "ON_MISSION (Mercy Run)",
+            "role": "Diplomatic Envoy / Supply Transport",
+            "cargo": "50,000 Units Spark-Bread",
+            "defense": "Mini-Cloak Generator"
+        },
+        {
+            "name": "Ghost-Ship 05",
+            "class": "Silent Consulate Drone-Ship",
+            "status": "ON_MISSION (Void-Rescue)",
+            "mission": "Investigating Unknown Signal Alpha (1.2 LY)."
+        },
+        {
+            "name": "Shadow-Step 01",
+            "class": "Black-Box Stealth Infiltrator (Unmarked)",
+            "status": "ACTIVE / INFILTRATING",
+            "mission": "Deep-Space Recon: Concordia Prime (High Spires)",
+            "features": [
+                "Ghost-Grid Mark III (Passive only)",
+                "Organic-Hull Camouflage",
+                "Self-Destruct Failsafe (Anti-Reverse Engineering)",
+                "No Sovereign/Ridge Identification"
+            ],
+            "intel": {
+                "stealth_roll": 29,
+                "military": "3,000 Frigates detected. 50 Capital Hulls. Neural AI Docking.",
+                "social": "Zero individual comms. Population is 100% harmonized ('The Grand Choir').",
+                "structural": "Motherwell powered by 'Shattered Sun' Magnetic Cage. Vulnerable to Dissonance.",
+                "sabotage_point": "Magnetic Containment Unit 04 (Main Central Pillar)."
+            }
+        },
+        {
+            "name": "Mercy-Sonde 01",
+            "class": "Deep-Space Autonomous Humanitarian Scout",
+            "status": "LAUNCHED / EN-ROUTE",
+            "mission": "Expedition: The Source (Dying Galaxy)",
+            "features": [
+                "Advanced Spark-Scanner Array",
+                "Non-Biological Intelligence Hub",
+                "Self-Replication Nanites (Maintenance only)",
+                "Zero-Risk Humanitarian Payload"
+            ],
+            "notes": "Sent to investigate the cause of the crystal migration and find survivors in the Dying Galaxy."
+        },
+        {
+            "name": "Seed-Sonde 01",
+            "class": "Celestial Reliquary Probe",
+            "status": "SUCCESS / TRANSFIGURED",
+            "mission": "Operation: Rebirth (Carry the Shard)",
+            "features": [
+                "Anti-Gravitic Hull Coating",
+                "Spark-Stabilization Chamber",
+                "Automated Sacrifice Protocol",
+                "Light-Wheat Charitable Payload"
+            ],
+            "notes": "Payload: 15% Shard of the World-Spark. Successfully inverted the Source Singularity."
+        },
+        {
+            "name": "Ghost-Ship 01-04",
+            "class": "Silent Consulate Drone-Ships",
+            "status": "DEPLOYED",
+            "mission": "Passive Beacon Planting"
+        }
+    ],
+    "production_pipeline": {
+        "spark_class_frigates": {
+            "in_production": 5,
+            "completion_est": "2 Weeks"
+        },
+        "iron_warden_sentinels": {
+            "in_production": 100,
+            "role": "Marine Boarding / Ship Defense"
+        }
+    }
+}

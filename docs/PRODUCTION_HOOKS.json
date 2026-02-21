@@ -1,0 +1,11 @@
+{
+    "hooks": [
+        {
+            "id": 1,
+            "title": "Clear the Whispering Spire",
+            "description": "Shadows have been seen moving in the old Spire. Clear them out before they reach the settlement.",
+            "status": "Active",
+            "reward": "100 Gold, 1 Resource Unit"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "version": "1.1",
+    "sector_name": "The Ashen Rim / The Beacon Sector",
+    "systems": [
+        {
+            "id": "SYS-001-EMBER",
+            "name": "Emberheart System",
+            "status": "SOVEREIGN_CAPITAL",
+            "notes": "Home of the World-Spark."
+        },
+        {
+            "id": "SYS-002-COBALT",
+            "name": "The Cobalt Cradle",
+            "status": "VASSAL_INTEGRATED",
+            "distance": "0.4 Light Years",
+            "population_est": 250,
+            "resources": [
+                "Cobalt",
+                "Frozen Water",
+                "Loyal Labor"
+            ],
+            "notes": "Annexed via Diplomatic Mercy (Roll: 22)."
+        },
+        {
+            "id": "SYS-003-VOID",
+            "name": "Unknown Signal Source Alpha (Debris Field)",
+            "status": "RESOLVED (Survivor Secured)",
+            "distance": "1.2 Light Years",
+            "notes": "Ghost-Ship 05 rescued 1 Survivor and a Concordat Black-Box. The ship ('Star-Shrike') was fleeing the Iron Outpost."
+        },
+        {
+            "id": "SYS-004-IRON",
+            "name": "Iron Concordat Outpost (Dead Station)",
+            "status": "CRYSTAL_GRAVEYARD (Threat Level: High)",
+            "distance": "2.5 Light Years",
+            "notes": "Probe (Roll 19) confirms the station was consumed from the inside out by purple, geometric crystals. Possible Weaver connection?"
+        }
+    ]
+}
