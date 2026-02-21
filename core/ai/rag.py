@@ -25,7 +25,7 @@ class WorldContextManager:
                     char_id = d.name.split("_")[0]
                     self.char_map[char_id] = d / "profile.json"
         
-        self.world_keys = ["stats", "kingdom", "settlement", "morale", "food", "quest", "deeds", "accomplishments"]
+        self.world_keys = ["stats", "state", "affairs", "situation", "kingdom", "settlement", "morale", "food", "quest", "deeds", "accomplishments"]
         self.party_keys = ["party", "inventory", "gear", "health", "hp", "worn"]
         # Reference Index
         self.ref_index = self._load_json(self.docs_dir / "DND_REFERENCE_INDEX.json")
@@ -128,8 +128,9 @@ class WorldContextManager:
 
         # 3. Check for World/Settlement Stats
         if any(k in message_low for k in self.world_keys):
-            core = self.settlement_data.get("core_status", {})
-            context_snippets.append(f"REALM STATUS: Morale: {core.get('morale')}, Food: {core.get('food_status')}, Threat: {core.get('tremor_threat')}")
+            s_root = self.settlement_data.get("settlement", {})
+            core = s_root.get("core_status", {})
+            context_snippets.append(f"REALM STATUS: Morale: {core.get('morale', 'Stable')}, Food: {core.get('food_status', 'Adequate')}, Threat: {core.get('tremor_threat', 'Low')}")
 
         # 4. Check for Party
         if any(k in message_low for k in self.party_keys):
