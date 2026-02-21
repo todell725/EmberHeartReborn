@@ -1,0 +1,154 @@
+{
+    "id": "SQ-019",
+    "title": "The Ghost-Train's Echo",
+    "xp_reward": 850,
+    "prerequisites": "None",
+    "description": "The old 'Coal-Track' is vibrating with the sound of a steam engine that was scrapped decades ago. Something is trying to complete the 'Final Run'.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The rusted tracks of the Coal-Track stretch into the permanent indigo fog of the 'South-Pass'. You hear a rhythmic, heavy thumping from the distance\u2014CHUG-CHUG-CHUG\u2014accompanied by the whistle of a spirit made of steam.",
+            "choice_a": "Lay your ear to the rail (Perc DC 12)",
+            "consequence_a": "Success: You hear the voices of the passengers, frozen in a loop of their final conversation. (+1 Lore)",
+            "choice_b": "Block the track with an iron-beam (Str DC 13)",
+            "consequence_b": "Success: The vibration increases as the 'Echo' hits the obstacle. (+1 Progress)",
+            "convergence": "A 'Ghost-Engine'\u2014a locomotive made of translucent, blue-white smoke\u2014thunders toward you out of the fog."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Ghost-Engine is cold, draining the heat from the air. It isn't a solid object, but its passage is enough to crush the tracks beneath it.",
+            "choice_a": "Jump onto the moving train (Athletics DC 14)",
+            "consequence_a": "Success: You grab a smoke-handle and pull yourself into the cab. (+1 Progress)",
+            "choice_b": "Redirect the rails (Tech DC 13)",
+            "consequence_b": "Success: You force the Echo toward a 'Dead-End' siding. (+1 Progress)",
+            "convergence": "The Ghost-Engineer\u2014a skeletal figure in a scorched uniform\u2014is pulling the throttle with a frantic energy."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Engineer's eyes are glowing blue flames. He's shouting about a 'Bridge that isn't there'. You see the end of the track approaching\u2014a thousand-foot drop into the 'Mana-Abyss'.",
+            "choice_a": "Communicate with the Engineer (Insight DC 14)",
+            "consequence_a": "Success: He reveals the 'Final Run' was a delivery of 'Hope' that never arrived. (+1 Lore)",
+            "choice_b": "Wrestle the throttle (Str DC 15)",
+            "consequence_b": "Success: You fight the phantom-power to slow the train. (+1 Progress)",
+            "convergence": "The train is accelerating. The sound of the wind is a chorus of a thousand lost souls."
+        },
+        {
+            "turn": 4,
+            "narrative": "A 'Vapor-Gosh'\u2014a bird-construct made of steam\u2014is trying to peck through the cab's glass. It's a guardian of the 'Final Run'.",
+            "choice_a": "Swat it away with a fire-poker",
+            "consequence_a": "Success: You drive the bird back into the fog. (+100 XP)",
+            "choice_b": "Befriend the construct (Nature DC 14)",
+            "consequence_b": "Success: It lands on your shoulder, its body warm and comforting. (+1 Gear)",
+            "convergence": "The 'Bridge-Gap' is now visible. It's a literal wound in reality, bleeding violet light."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Engineer is praying. He hands you a 'Silver-Coal'\u2014the train's last fuel-source. 'Feed the light!' he commands.",
+            "choice_a": "Toss the coal into the firebox",
+            "consequence_a": "Success: The train glows golden, and a bridge of light forms across the abyss. (+1 Progress)",
+            "choice_b": "Keep the Silver-Coal for yourself",
+            "consequence_b": "Success: The train plunges, but you jump to safety with a valuable artifact. (+1 Loot)",
+            "convergence": "The train crosses the abyss, landing in the 'Old-World' station, which is now a ruin of bone and clockwork."
+        },
+        {
+            "turn": 6,
+            "narrative": "The station is inhabited by 'Passenger-Shadows'\u2014entities that represent the regret of those who never arrived. They want your 'Life-Heat'.",
+            "choice_a": "Banish them with the Star-Glass Prism (if you have it) (Arcana DC 14)",
+            "consequence_a": "Success: The shadows are pacified by the logical light. (+1 Progress)",
+            "choice_b": "Share your warmth (Con DC 15)",
+            "consequence_b": "Success: They fade peacefully, leaving behind 'Shadow-Tokens'. (+1 Loot)",
+            "convergence": "The Ghost-Engine is slowing down. Its smoke-form is becoming solid iron as it reaches its final destination."
+        },
+        {
+            "turn": 7,
+            "narrative": "The stationmaster's office contains the 'Lost-Cargo'\u2014a crate of 'Void-Seeds' that was meant to rebuild the world.",
+            "choice_a": "Open the crate (Dex DC 14)",
+            "consequence_a": "Success: You find a 'Void-Apple'\u2014a fruit that tastes like the sun. (+1 Secret)",
+            "choice_b": "Guard the cargo for the Council (Endurance DC 15)",
+            "consequence_b": "Success: You stand watch until the retrieval team arrives. (+5 Reputation)",
+            "convergence": "The Ghost-Engineer salutes you and dissolves into a cloud of peaceful, white steam."
+        },
+        {
+            "turn": 8,
+            "narrative": "You're in the Old-World ruin. Your gear is covered in 'Ghost-Dust', which makes you slightly invisible in the dark.",
+            "choice_a": "Explore the ruins (Perc DC 14)",
+            "consequence_a": "Success: You find a 'Ghost-TICKET' that can open any lock on the Coal-Track. (+1 Gear)",
+            "choice_b": "Scavenge the locomotive",
+            "consequence_b": "Success: You find 'Spectral-Bolts' (Value: 400g). (+1 Loot)",
+            "convergence": "A 'Scourge-Vulture'\u2014a massive, rotting bird\u2014is circling the station roof."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Vulture lunges, its talons made of rusted scrap-metal. It wants the cargo you've uncovered.",
+            "choice_a": "Lure it into the steam-vents",
+            "consequence_a": "Success: You scald the bird until it flees. (+1 Progress)",
+            "choice_b": "Fell it with a 'Harpoon-Bolt' (Atk DC 14)",
+            "consequence_b": "Success: The predator is no more. (+100 XP)",
+            "convergence": "The retrieval team from the city arrives, led by the Master of Trains."
+        },
+        {
+            "turn": 10,
+            "narrative": "The Master of Trains is weeping. He was a boy when this train went missing. He offers you a 'Golden-Ticket' as thanks.",
+            "choice_a": "Accept the Ticket",
+            "consequence_a": "Success: You can travel anywhere on the settlement's infrastructure for free. (+1 Gear)",
+            "choice_b": "Ask for the Silver-Coal",
+            "consequence_b": "Success: You have a source of eternal heat. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Ghost-Train's Echo has been laid to rest. The 'Void-Seeds' are back in the Council's hands, and the Master of Trains can finally move on.",
+    "loot_table": [
+        "Silver-Coal",
+        "Ghost-TICKET",
+        "Golden-Ticket",
+        "850 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Train crashes. -10 Morale and the Coal-Track is permanently disabled.",
+        "failure_penalty": {
+            "xp_loss": 10
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 5,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Coal-Track rails begin vibrating at midnight",
+        "flags": [
+            "ghost_train_heard"
+        ]
+    },
+    "location": "The Coal-Track \u2014 South-Pass",
+    "district": "Transit Corridor",
+    "thread": "Scourge",
+    "estimated_duration": "3\u20134 hours",
+    "key_npcs": [
+        "Ghost-Engineer (spirit)",
+        "Master of Trains Aldor"
+    ],
+    "mechanics_featured": [
+        "Athletics (train boarding)",
+        "Insight (spirit comm)",
+        "Strength (throttle)",
+        "Combat (vulture)"
+    ],
+    "permanent_effects": {
+        "settlement": "Void-Seeds returned to Council; Coal-Track spiritually cleared",
+        "world": "Old-World station discovered as ruin"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Toss Silver-Coal",
+            "result": "Bridge of light manifests; full run completed"
+        },
+        {
+            "path": "Keep Silver-Coal",
+            "result": "Train crashes; player escapes with artifact"
+        }
+    ]
+}

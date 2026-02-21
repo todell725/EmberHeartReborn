@@ -1,0 +1,155 @@
+{
+    "id": "SQ-171",
+    "title": "Shadow-Hole Cartography",
+    "difficulty": "Easy",
+    "xp_reward": 475,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "City surveyor reports reality-tears appearing in geometric pattern across Lower Ward"
+    },
+    "location": "Lower Ward - streets, alleys, and sub-levels",
+    "district": "Lower Ward",
+    "thread": "Vermin",
+    "estimated_duration": "50 minutes",
+    "key_npcs": [
+        "Surveyor Mott (Lower Ward city surveyor, quest-giver)",
+        "Shadow-Rats (enemies)",
+        "Gella the Fence (Lower Ward information broker, optional contact)"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Cartography/puzzle-solving",
+        "Stealth",
+        "Combat (Shadow-Rats)",
+        "Geometry puzzle (summoning circle recognition)"
+    ],
+    "permanent_effects": [
+        "Shadow-rift map obtained (reveals summoning circle pattern)",
+        "Player learns Shadow-Rats are actively constructing something"
+    ],
+    "branching_outcomes": {
+        "collapse_circle": {
+            "description": "Physically damage the rift-anchors to collapse the summoning circle",
+            "effects": {
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "ambient_hazard": "Shadow-Rats triple their activity in Lower Ward for 2 sessions before new pattern emerges"
+            }
+        },
+        "report_to_guild": {
+            "description": "Deliver the completed summoning circle map to the Mage Guild",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Mage Guild identifies circle as Concordat-designed probability siphon: drains luck from geographic area"
+            }
+        }
+    },
+    "description": "Surveyor Mott has discovered fourteen 'shadow-holes'\u2014unnerving tears in the visual spectrum occurring near the Lower Ward's foundational walls. Adjacent to these tears are tiny footprints that are not quite rat and not quite mechanical. The tears form a deliberate polygon, suggesting an organized pattern of observation or intrusion. The party must investigate Mott's map, identify what the augmented vermin are searching for, and collapse the localized stealth fields before whatever is being tracked escapes containment.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Surveyor Mott quickly spreads his heavy, damp charts across an overturned barrel top in the relentless rain. He is a precise, wildly anxious man, and his scarred hands aggressively shake as he traces the reported 'shadow-holes' tightly with a thick grease pencil. 'Fourteen confirmed visual tears in the Lower Ward,' he mutters rapidly, 'each appearing over the past six weeks, each one growing slightly larger than the last.' Near each localized optical tear, he notes tiny, disturbingly deep footprints in the mud\u2014too heavy for rats, the completely wrong shape for mice. 'I properly mapped them,' he says, his voice breaking. 'Look. Look at the precise shape.' The marks form a massive, frighteningly perfect geometric polygon spanning three city blocks. He cannot yet tell what polygon it is, but it is undeniably engineered.",
+            "choice_a": "Take Mott's chart and survey the nearest three tears directly (Investigation DC 11)",
+            "consequence_a": "You meticulously connect his trembling lines, calculating the exact geographic center of the massive geometric shape. The intersection perfectly pinpoints the heavily guarded, completely restricted main access point of the Ward's primary water filtration plant.",
+            "choice_b": "Ask Gella the Fence about unusual shadow activity in her territory (Persuasion DC 12)",
+            "consequence_b": "You absolutely ignore the complex map entirely, relying purely on raw tracking skills. You flawlessly follow the strangely heavy, perfectly spaced metallic footprints leading directly away from the most recently reported optical anomaly into a darkened alleyway.",
+            "convergence": "Following the unnervingly perfect trail, you suddenly realize the thick shadows around you are visually bending and violently warping. A small pack of stealth-augmented, biomechanical rats drops aggressively from the corroded rooftops."
+        },
+        {
+            "turn": 2,
+            "narrative": "The second shadow-hole is in an alley between a tanner's shop and a canal wall. It exists as a shimmer in the air, knee-height, roughly the size of a dinner plate\u2014and from it spills not cold or heat, just wrongness. Standing near it makes you feel like the next moment is slightly less certain than it should be. A copper on the ground near the hole is tails. You flip it repeatedly. It is always tails. Twelve times. Possibility is draining. This is what the Shadow-Rats create: probability voids.",
+            "choice_a": "Study the tear's edge structure for engineering clues (Arcana DC 13)",
+            "consequence_a": "Success: The tear has an anchor\u2014a tiny copper spike driven into the cobblestone, barely visible. Concordat manufacture mark visible under magnifying glass. The rats are placing anchors, then vibrating the tears open. (+1 Lore, anchor spike obtained)",
+            "choice_b": "Attempt to close the tear by removing the anchor spike (Athletics DC 11)",
+            "consequence_b": "Success: The tear collapses with a sound like a snapped string. The wrongness drains. Your next coin flip: heads. Making it 50/50 again. (+1 Progress). But: three Shadow-Rats emerge from the wall and screech at the disturbance.",
+            "convergence": "Whether you closed the tear or not, you have an anchor spike. Every tear has one. There are at least 12 total. The pattern continues to resolve."
+        },
+        {
+            "turn": 3,
+            "narrative": "You track a Shadow-Rat placing an anchor. They are not like normal rats: their fur is the exact color of the space between objects, making them nearly invisible unless moving. They move with precision\u2014measuring distances with their own body lengths, placing the spike with their forepaws at a very specific angle, then vibrating at a subsonic frequency until the reality-fold opens. It takes about 90 seconds. They do not look like animals behaving instinctively. They look like workers on a job.",
+            "choice_a": "Catch a Shadow-Rat mid-placement (Dexterity DC 13)",
+            "consequence_a": "Success: The rat shrieks. Its fur cycles rapidly through colors\u2014it doesn't know how to be caught. Under examination: body temperature 10 degrees below ambient, no heartbeat, but alive. A bio-mechanical that runs cold. (+1 Lore)",
+            "choice_b": "Follow this Shadow-Rat to its origin point without being detected (Stealth DC 14)",
+            "consequence_b": "Success: It leads you to a drain junction beneath the Lower Ward that connects to a Concordat-era maintenance tunnel. Fresh footprints of dozens of Shadow-Rats. A headquarters. (+1 Progress, tunnel located)",
+            "convergence": "Mott's map now has 9 confirmed tear-locations. The 12-sided polygon is nearly complete. He has tried to calculate the center point on his own. He calls you, pale: 'The center of the pattern is the Lower Ward Orphanage.'"
+        },
+        {
+            "turn": 4,
+            "narrative": "The Concordat maintenance tunnel is dry, precisely engineered, and very old. Every 10 feet, a copper marker is embedded in the wall\u2014research station numbers, running from 1 to 40. The last 15 stations are dark. The first 25 glow faintly, powered by mana-wiring still intact from before the Scourge. At Station 12, you find a wall chart\u2014still legible, protected behind glass\u2014that shows a circle. Twelve points. A 12-sided geometric figure with annotations in old Concordat script that Mott, squinting over your shoulder, slowly translates.",
+            "choice_a": "Have Mott translate the annotation fully (takes 20 minutes, full discovery route)",
+            "consequence_a": "Success: 'Probability Siphon, Implementation Stage 3 of 5. Upon completion of the 12-node ring, the enclosed area will experience sustained luck-deficit: 40% reduction in positive probability outcomes across all citizens within boundary.' It drains fortune from living beings. (+2 Lore)",
+            "choice_b": "Photograph/copy the chart and bring it to the Mage Guild immediately (faster, partial discovery)",
+            "consequence_b": "The Guild's senior archivist blanches: 'This is Concordat Division Four work\u2014Psychological Applications. The siphon doesn't just drain luck. It causes despair. It was used to soften civilian populations before occupation.' (+1 Lore, Guild alarmed)",
+            "convergence": "Three more Shadow-Rats are in the tunnel. They see you. They do not run. They stand in a perfect equilateral triangle and begin vibrating together. The tunnel walls shimmer. They are attempting to open a tear here, in the tunnel, around you."
+        },
+        {
+            "turn": 5,
+            "narrative": "The tunnel-tear is larger than the street tears\u2014these three rats working together can generate a fold three times the size of a single-rat anchor. Inside the forming tear, you glimpse something: a space that is not space, dark the way deep water is dark, with shapes moving in it that are the size of horses. You have two minutes before the tear is stable enough to let something through. The Shadow-Rats do not stop vibrating when you attack them. Pain response: negligible. They are on task.",
+            "choice_a": "Destroy all three anchor spikes simultaneously, collapsing the tear (Dexterity + Athletics DC 15, group effort)",
+            "consequence_a": "Success: You and Mott both dive for spikes. A three-way collapse sounds like three snapped strings at once. The tear implodes. The shapes beyond it are gone. The Shadow-Rats crumple\u2014their task-purpose severed, they go inert. (+1 Progress)",
+            "choice_b": "Fight the three Shadow-Rats to break their triangle formation (Combat DC 13)",
+            "consequence_b": "Success: Breaking the formation interrupts the resonance frequency. The tear collapses on its own. Shadow-Rats scatter. One is stunned\u2014you can examine it. (+1 Combat Progress, bioplate obtained)",
+            "convergence": "The tunnel is quiet. The Concordat map is in your hands. You have everything you need to complete the cartography of the outer ring and locate all 12 anchor points. Now: what do you do with that information?"
+        },
+        {
+            "turn": 6,
+            "narrative": "With Mott's fieldwork and your anchor-spike data, the map is complete. Twelve nodes, twelve tears, forming a 12-sided ring around the Lower Ward Orphanage at its center. The final three tears haven't been placed yet\u2014the Shadow-Rats are still working toward completion. You have perhaps four nights before the ring closes. Mott stands at the map table, a ruler in his hand, and measures the exact center. 'The orphanage has 34 children in residence,' he says quietly.",
+            "choice_a": "Move to collapse all existing 9 anchor nodes tonight, disrupting the incomplete circle (Action-oriented)",
+            "consequence_a": "You spend the night pulling spikes and collapsing tears. By dawn, 9 tears are destroyed. Shadow-Rat activity spikes\u2014they screech through the Lower Ward all night. But the ring is broken. (+1 Progress, +2 Settlement Morale from protective action)",
+            "choice_b": "Bring the completed map to City Watch and Mage Guild, requesting a coordinated response (Strategic)",
+            "consequence_b": "The Watch captain stares at the map for a long time. 'Every single Watch officer in Lower Ward, tonight. Every mage we can borrow. We close all 12 simultaneously before they add the last three.' (+1 Progress, Watch fully engaged)",
+            "convergence": "Either way, the Shadow-Rats respond. They accelerate. Three new tears appear by morning\u2014they have somehow already placed the next anchors, anticipating interference. They are adapting. The circle is at 10 of 12 nodes."
+        },
+        {
+            "turn": 7,
+            "narrative": "The remaining two Shadow-Rat anchor placements are happening simultaneously at opposite ends of the Ward\u2014a two-front problem. One near the tanner's canal. One in the back cellar of a pastry shop, where a family of eight lives above. Your time is almost gone.",
+            "choice_a": "Split your party: you take the cellar, Mott and a Watch officer take the canal (Leadership DC 13)",
+            "consequence_a": "Success: Both teams reach their targets within 30 seconds of each other. Both anchors seized before vibration can begin. The pastry-shop family never knows how close it was. (+1 Progress, clean resolution)",
+            "choice_b": "Prioritize the cellar anchor (civilians at risk) and sprint back (Athletics DC 14)",
+            "consequence_b": "Success: You secure the cellar anchor. The canal anchor is placed\u2014tear #11 appears\u2014but without #12, the circle cannot close. You still have time. (+1 Progress, partial success)",
+            "convergence": "Eleven nodes. One remains. The Shadow-Rats have gone silent. Somewhere in the Lower Ward, the last team of them is waiting for a moment you won't see coming. They are patient. They have been patient for 200 years."
+        },
+        {
+            "turn": 8,
+            "narrative": "The twelfth node: the Shadow-Rats chose the orphanage itself. While you were dealing with the outer ring, a single Shadow-Rat slipped inside\u2014through a child's bedroom window, through a gap in the foundation\u2014and placed the final anchor beneath the orphanage hearth. You find it because one of the children, a girl named Renna, heard 'a funny vibrating in the floor' and went to Matron Hale. The tear is forming slowly, the rat still vibrating in the cellar below.",
+            "choice_a": "Enter the cellar and end the rat before the tear fully forms (Stealth + Combat DC 11, no time for finesse)",
+            "consequence_a": "Success: It is a single rat, alone, determined. You kill it quickly. The tear collapses mid-formation. The orphanage is clean. (+1 Progress, children safe)",
+            "choice_b": "Evacuate the orphanage first, then deal with the tear (prioritize civilian safety)",
+            "consequence_b": "Success: 34 children and Matron Hale are in the street within 4 minutes. The tear opens fully in the empty orphanage\u2014but without 34 luck-sources inside, the siphon is dormant. It can be safely collapsed at leisure. (+1 Reputation, +2 Settlement Morale)",
+            "convergence": "The 12th anchor is destroyed. The circle is broken. Every existing tear deflates simultaneously with a sound like a city exhaling. Shadow-Rat behavior across Lower Ward: total cessation, as if a power source was cut. Mott rolls his map up slowly. 'They'll start again,' he says. 'Somewhere else.' He is right."
+        },
+        {
+            "turn": 9,
+            "narrative": "You file your report with the Watch: 12 Shadow-Rat tears, a Concordat probability-siphon summoning circle, and evidence of organized, task-directed rat behavior. The Watch Captain reads everything twice and says: 'What is a probability siphon?' You explain. He reads the Concordat Station 12 annotation again. Then he says, 'Who built these rats?' And neither of you has an answer.",
+            "choice_a": "Submit full report including the tunnel location and Station 12 chart to the Mage Guild",
+            "consequence_a": "The Mage Guild seals the tunnel with containment glyphs and assigns two scholars to translation work. Two weeks later: partial translation confirms the Concordat had 40 research stations under the city. Most are still active. (+2 Lore, Concordat tunnel network flagged for future investigation)",
+            "choice_b": "Keep the tunnel location private and return alone for further investigation (Investigation DC 14)",
+            "consequence_b": "You explore 8 more stations before encountering evidence of recent occupation\u2014fresh rat-prints, a fresh anchor spike left mid-construction. The Shadow-Rats use the tunnels for transit. The network below the city is theirs. (+2 Lore, tunnel transit routes mapped)",
+            "convergence": "Quest Complete. The summoning circle has been disrupted. The Lower Ward probability field stabilizes over the next week\u2014citizens report feeling 'luckier,' though none know why. In Station 12, the Concordat chart still hangs. On it, in handwriting added more recently than the original, someone has penciled in a note in modern script: 'Phase 4 when ready. -V'"
+        }
+    ],
+    "conclusion": "The interconnected shadow-holes are forcibly closed, disrupting the coordinated surveillance pattern. Mott's map reveals that the augmented rats were perfectly tracing the buried fault lines of an ancient Concordat transit hub, searching for a specific point of entry that the city authorities never knew existed.",
+    "loot_table": [
+        "Concordat Anchor Spikes x12 (tech components, can be repurposed as mana-flux anchors)",
+        "Shadow-Rat Bioplate x3 (crafting material, near-invisible light armor)",
+        "Station 12 Concordat Chart (rare lore document, partial Concordat tunnel map)",
+        "Surveyor Mott's Commission (payment for service): 275 Gold",
+        "Mage Guild Finder's Fee: 125 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Probability siphon completes. Lower Ward Orphanage citizens suffer persistent despair. -5 Settlement Morale, -2 Lower Ward Stability for remainder of campaign.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

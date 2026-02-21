@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_412",
+    "title": "The Vacant Stare",
+    "difficulty": "Easy",
+    "xp_reward": 410,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Lower Ward -> The Labourer's Row",
+    "district": "Lower Ward",
+    "thread": "Void-Wine",
+    "description": "Three dock workers on Labourer's Row have been found catatonic \u2014 sitting rigid, eyes open but unseeing. Their neighbour suspects they've been drinking cheap 'Void-Brew' sold in unlabelled bottles from a street cart. You are asked to find the source.",
+    "key_npcs": [
+        "Neighbour Cass",
+        "Street Vendor Pip",
+        "Alchemist Rynn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The three men are propped against the wall of their shared room like mannequins. Their eyes track movement faintly but they cannot speak. Neighbour Cass found them this morning clutching small unlabelled green bottles.",
+            "choice_a": "Bring the bottles to Alchemist Rynn for analysis",
+            "consequence_a": "Rynn confirms the bottles contain heavily unrefined Void-Wine \u2014 so raw the neurological impact is severe. The catatonia should fade in 24 hours.",
+            "choice_b": "Go immediately to the street carts on Labourer's Row to find the vendor",
+            "consequence_b": "You find Pip pushing a small cart of identical green bottles. He bolts when he sees your expression."
+        },
+        {
+            "turn": 2,
+            "narrative": "Pip, when caught, is genuinely terrified. He was given three crates of the bottles by a man named Doss and told to sell them as 'cheap relaxant.' He had no idea they were dangerous.",
+            "choice_a": "Use Pip as a lead to find Doss immediately",
+            "consequence_a": "Pip reluctantly points you toward a Scourge-Fringe building where Doss operates.",
+            "choice_b": "Confiscate Pip's remaining stock and let him go with a warning",
+            "consequence_b": "Pip surrenders nineteen bottles and disappears from the Row. No more victims follow."
+        },
+        {
+            "turn": 3,
+            "narrative": "Regardless of how you handle Pip, the catatonic workers need medical care beyond waiting it out.",
+            "choice_a": "Bring Rynn's analysis to the Medical Quarter for proper antidote development",
+            "consequence_a": "A partial antidote is developed. The workers recover in six hours instead of twenty-four.",
+            "choice_b": "Ensure the workers drink water and are monitored \u2014 let the effect fade naturally",
+            "consequence_b": "The workers recover the next morning. They are shaken but unharmed."
+        }
+    ],
+    "branching_outcomes": {
+        "antidote_developed": {
+            "description": "Workers treated with antidote. Partial formulary developed.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Void Antidote Vial",
+                "reputation_change": {
+                    "Lower Ward": 14
+                }
+            }
+        },
+        "workers_recovered": {
+            "description": "Workers recovered naturally under monitoring.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 8
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Void Antidote Vial",
+        "Unrefined Void-Brew Sample",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Workers treated with antidote. Partial formulary developed."
+}

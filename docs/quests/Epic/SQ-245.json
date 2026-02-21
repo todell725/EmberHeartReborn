@@ -1,0 +1,75 @@
+{
+    "id": "SQ-245",
+    "title": "The Star-Metal Core",
+    "difficulty": "Epic",
+    "xp_reward": 1800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-244"
+        ]
+    },
+    "location": "Expedition -> The Glowing Center",
+    "district": "Expedition",
+    "thread": "Expedition (Beyond City)",
+    "description": "At the bottom of the crater, you find the colossal chunk of Star-Metal that caused the apocalypse. It is highly radioactive with pure Scourge magic.",
+    "key_npcs": [
+        "The Final Anomaly"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The core is surrounded by an impenetrable anomaly field. You must use the data-slate to calibrate your weapons to the correct frequency to pierce it.",
+            "choice_a": "Calibrate perfectly (Intelligence)",
+            "consequence_a": "Your weapon slices through the field like paper.",
+            "choice_b": "Brute-force the field with raw magical power",
+            "consequence_b": "The field shatters, but the backlash destroys whatever magical focus you were using."
+        },
+        {
+            "turn": 2,
+            "narrative": "With the field down, you can chisel a fragment of the Star-Metal off before the radiation kills you.",
+            "choice_a": "Chisel a small, safe piece",
+            "consequence_a": "You secure a perfect, fist-sized chunk of Star-Metal without taking radiation damage.",
+            "choice_b": "Get greedy and pry off a massive slab",
+            "consequence_b": "You get a huge piece, but the radiation causes a massive permanent debuff to your max HP until healed by a high priest."
+        }
+    ],
+    "branching_outcomes": {
+        "safe_harvest": {
+            "description": "You safely harvested the foundational metal of the Scourge.",
+            "unlocks": [
+                "SQ-ELITE-EXPEDITION"
+            ],
+            "consequences": {
+                "item_reward": "Star-Metal Fragment",
+                "reputation_change": {
+                    "All Districts": 20
+                }
+            }
+        },
+        "greedy_harvest": {
+            "description": "You harvested a massive, incredibly toxic slab of Star-Metal.",
+            "unlocks": [
+                "SQ-ELITE-EXPEDITION"
+            ],
+            "consequences": {
+                "item_reward": "Massive Star-Metal Slab",
+                "reputation_change": {
+                    "Expedition": 50
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Star-Metal Fragment",
+        "Massive Star-Metal Slab",
+        "1000x Gold Coins"
+    ],
+    "conclusion": "You safely harvested the foundational metal of the Scourge.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

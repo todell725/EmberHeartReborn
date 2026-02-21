@@ -1,0 +1,76 @@
+{
+    "id": "SQ-257",
+    "title": "The Chemical Pact",
+    "difficulty": "Epic",
+    "xp_reward": 1500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-240"
+        ]
+    },
+    "location": "Sovereignty & Order -> The Concordat Embassy",
+    "district": "Laundry Ward",
+    "thread": "Concordat/Vermin/Chronos/Static (Convergence)",
+    "description": "After sealing the chemical vats in the Laundry Ward, you discover the chemicals were being supplied by the religious Concordat. You must confront the Archbishop about arming assassins.",
+    "key_npcs": [
+        "Archbishop Valerius",
+        "Concordat Paladins"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You breach the secret Embassy hidden under the Laundry Ward. Fanatical Paladins block the Archbishop's door.",
+            "choice_a": "Present the 'Master's Ledger Key' as proof of their crimes",
+            "consequence_a": "The Paladins are shocked. Several lower their weapons, refusing to defend a traitor to the faith.",
+            "choice_b": "Attack the fanatics immediately",
+            "consequence_b": "A grueling fight against heavy armor and healing magic. You win, but are exhausted."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Archbishop reveals he armed the assassins to cull the 'unworthy' poor of Emberheart before the 'Great Cleanse'.",
+            "choice_a": "Arrest him and drag him before the High Steward",
+            "consequence_a": "He goes quietly, knowing his zealots will riot to free him later.",
+            "choice_b": "Execute him on the spot for treason",
+            "consequence_b": "You cut him down. The remaining Paladins swear a blood-oath against you."
+        }
+    ],
+    "branching_outcomes": {
+        "archbishop_arrested": {
+            "description": "You arrested the Archbishop, sparking a political crisis.",
+            "unlocks": [
+                "SQ-261"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Core District": 20,
+                    "Temple District": -50
+                }
+            }
+        },
+        "archbishop_executed": {
+            "description": "You executed the Archbishop, making an enemy of the Concordat.",
+            "unlocks": [
+                "SQ-261"
+            ],
+            "consequences": {
+                "item_reward": "Archbishop's Crozier",
+                "reputation_change": {
+                    "Temple District": -100
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Archbishop's Crozier",
+        "Concordat Seal",
+        "500x Gold Coins"
+    ],
+    "conclusion": "You arrested the Archbishop, sparking a political crisis.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

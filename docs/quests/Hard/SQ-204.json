@@ -1,0 +1,74 @@
+{
+    "id": "SQ-204",
+    "title": "The Silken Hand",
+    "difficulty": "Hard",
+    "xp_reward": 700,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-203"
+        ]
+    },
+    "location": "Undercity -> Aqueduct Control Point",
+    "district": "Undercity",
+    "thread": "Political Intrigue",
+    "description": "Whether the Hand has the documents or you do, they are making a move on the aqueducts. You must descend into the Undercity to stop them from poisoning the water supply.",
+    "key_npcs": [
+        "Silken Hand Operatives",
+        "Water-Baron Silas"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Undercity aqueducts roar with rushing water. The control room is heavily guarded by Silken Hand mercenaries attempting to breach the main reservoir tank.",
+            "choice_a": "Launch a frontal assault (Combat)",
+            "consequence_a": "You engage in a brutal fight on slippery catwalks. You defeat them, but the noise alerts the rest of the facility.",
+            "choice_b": "Sabotage the catwalk supports",
+            "consequence_b": "The mercs plummet into the dark waters below. Silent and deadly, but you lose their loot."
+        },
+        {
+            "turn": 2,
+            "narrative": "Inside the main control room, you find barrels of 'Liquid Scourge'. They are rigging it to the primary flow valves.",
+            "choice_a": "Attack the riggers directly",
+            "consequence_a": "During the fight, one barrel is punctured, severely poisoning the room. You take heavy poison damage but stop the rigging.",
+            "choice_b": "Use the facility controls to flush the valves",
+            "consequence_b": "The sudden pressure spike blasts the riggers away, safely sealing the system, but breaking the main valve in the process."
+        }
+    ],
+    "branching_outcomes": {
+        "water_saved_intact": {
+            "description": "The water supply is safe and the infrastructure is intact.",
+            "unlocks": [
+                "SQ-205"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "All Districts": 15
+                }
+            }
+        },
+        "water_saved_broken": {
+            "description": "The water is safe, but the broken valve means rationing for the Lower Ward.",
+            "unlocks": [
+                "SQ-205"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": -10,
+                    "High Ward": 5
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Vial of Liquid Scourge",
+        "Mercenary Plate Armor"
+    ],
+    "conclusion": "The water supply is safe and the infrastructure is intact.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

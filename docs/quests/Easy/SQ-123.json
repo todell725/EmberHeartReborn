@@ -1,0 +1,151 @@
+{
+    "id": "SQ-123",
+    "title": "The Rusty Hinge",
+    "difficulty": "Easy",
+    "xp_reward": 160,
+    "prerequisites": "None",
+    "description": "A screaming gate at the cemetery is calling to something in the dark...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The gate to the 'Old-Cemetery' has started to 'Scream' every time the wind blows. It's a sound like a human lung being squeezed.",
+            "choice_a": "Listen to the 'Scream'",
+            "consequence_a": "Success.",
+            "choice_b": "Apply lubricant (Dex DC 11)",
+            "consequence_b": "Success.",
+            "convergence": "The scream isn't from the iron; it's from the 'Spirits-of-Rust' trapped in the hinges. They smell of blood and old iron."
+        },
+        {
+            "turn": 2,
+            "narrative": "The 'Rust-Spirits' are small, orange mites that eat metal and 'Bleed' sound. They are crawling from the gate to the nearby guard-post.",
+            "choice_a": "Catch a mite",
+            "consequence_a": "Success.",
+            "choice_b": "Burn the hinges",
+            "consequence_b": "Success.",
+            "convergence": "The chittering sound is a sequence of 'Warning-Signals' about something rising from the graves."
+        },
+        {
+            "turn": 3,
+            "narrative": "A 'Grave-Sentry'\u2014a skeleton made of rusted scrap-metal\u2014unfolds from a pile of old shovels, its shield a rusted manhole cover.",
+            "choice_a": "Battle the Sentry",
+            "consequence_a": "Success.",
+            "choice_b": "Reason with the spirit (Logic DC 14)",
+            "consequence_b": "Success.",
+            "convergence": "The Sentry is a 'Guardian' whose mission is to 'Keep the Silence'. He is attacking the source of the sound."
+        },
+        {
+            "turn": 4,
+            "narrative": "The scream is coming from a 'Void-Whistle' buried beneath the gate's foundation. It\u2019s pulling 'Grave-Gases' into the ward.",
+            "choice_a": "Dig up the whistle",
+            "consequence_a": "Success.",
+            "choice_b": "Pour lead over the hinge",
+            "consequence_b": "Success.",
+            "convergence": "The whistle is a jagged, purple pipe that tastes like lightning and ozone. It\u2019s 'Screaming' for its master."
+        },
+        {
+            "turn": 5,
+            "narrative": "A 'Whistle-Master'\u2014a figure in a tattered cloak made of sheet-metal\u2014appears, wielding a tuning fork made of bone.",
+            "choice_a": "Strike the tuning fork",
+            "consequence_a": "Success.",
+            "choice_b": "Dodge the sonic wave",
+            "consequence_b": "Success.",
+            "convergence": "The wave makes your ears bleed and your vision blur into a series of 'Static-Frames'."
+        },
+        {
+            "turn": 6,
+            "narrative": "You must 'Silence' the master by 'Tuning' him to the earth's own frequency. The air smells of wet dirt and copper.",
+            "choice_a": "Ground the Master with a copper rod",
+            "consequence_a": "Success.",
+            "choice_b": "Sing a 'Song of Dirt'",
+            "consequence_b": "Success.",
+            "convergence": "The Master dissolves into a pile of scrap metal, and the 'Scream' turns into a low, peaceful hum."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Grave-Sentry tips its rusted hat and returns to his pile of shovels. He gives you a 'Rust-Shard' (+1 vs Constructs).",
+            "choice_a": "Accept the shard",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Void-Whistle",
+            "consequence_b": "Success.",
+            "convergence": "The shard is jagged and glows with a faint, orange heat. It\u2019s part of a 'Guardian-Armor'."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Cemetery gate is quiet, the hinges now oiled with 'Spirit-Oil'. The local mortician gives you a 'Heirloom-Ring' (+1 Rep).",
+            "choice_a": "Accept the ring",
+            "consequence_a": "Success.",
+            "choice_b": "Decline reward",
+            "consequence_b": "Success.",
+            "convergence": "The sun sets behind the tombs, casting long, peaceful shadows over the Ridge."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, you notice the Graves are silent once more. The sound of the wind is just the wind again.",
+            "choice_a": "Log it in the 'Dead-Registry'",
+            "consequence_a": "Success.",
+            "choice_b": "Go home",
+            "consequence_b": "Success.",
+            "convergence": "The night is cool and smells of pine. You feel a sense of 'Grave-Peace' (+1 Luck)."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Cemetery. The 'Rusty Hinge' is a silent gate tonight.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "End",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Rusty Hinge' is complete. Quest Complete.",
+    "loot_table": [
+        "Rust-Shard",
+        "Heirloom-Ring"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The scream shatters your sanity and you join the choir of mites. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Screaming gate reported at cemetery; guards refuse patrol",
+        "flags": []
+    },
+    "location": "Old Cemetery \u2014 East Ridge",
+    "district": "Lower Ward",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Grave-Sentry (construct spirit)",
+        "Whistle-Master (antagonist)",
+        "Mortician Helva"
+    ],
+    "mechanics_featured": [
+        "Perception (signal decoding)",
+        "Combat (sentry + master)",
+        "Logic DC",
+        "Grounding mechanics"
+    ],
+    "permanent_effects": {
+        "settlement": "Cemetery gate pacified; Void-Whistle catalogued",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Rust-Shard",
+            "result": "+1 vs Constructs weapon enhancement"
+        },
+        {
+            "path": "Take Void-Whistle",
+            "result": "+1 Secret (calls master's kin)"
+        }
+    ]
+}

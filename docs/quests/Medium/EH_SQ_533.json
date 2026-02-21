@@ -1,0 +1,162 @@
+{
+    "id": "EH_SQ_533",
+    "title": "The Temple Schism",
+    "difficulty": "Medium",
+    "xp_reward": 950,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_449",
+            "EH_SQ_450"
+        ],
+        "items_required": []
+    },
+    "location": "Temple District -> High Ward -> Lower Ward",
+    "district": "Temple District",
+    "thread": "Religion/Concordat/Void (Convergence)",
+    "description": "The Temple District's religious community has fractured. A doctrinal dispute \u2014 seemingly academic \u2014 has escalated into a genuine schism between the Orthodox Concordat-Remnant faction and the Reformation Faction, who believe the Scourge revealed that the old Concordat theology was incomplete. The dispute has three flashpoints: the city's memorial prayer schedule, access to the Archive of Lost Voices, and the legitimacy of the Violet Shepherd's congregation. What began as theological argument is now affecting district politics, community cohesion, and \u2014 most urgently \u2014 a dispute over which faction controls the largest food distribution charity in the Temple District.",
+    "key_npcs": [
+        "Warden Gais",
+        "Orthodox Elder Noss",
+        "Reformation Leader Sister Vael",
+        "The Violet Shepherd Cord",
+        "Archive Keeper Winn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Warden Gais presents you with a situation summary that she describes as 'a fire I do not want to breathe on.' The orthodox faction, led by Elder Noss, has formally contested the Reformation faction's management of the Temple District Relief Charity \u2014 the body that distributes food and medicine to 800 low-income Temple and Lower Ward residents each week. Noss argues that the Reformation faction's doctrinal heterodoxy disqualifies them from managing a Concordat-heritage charitable institution. Sister Vael argues that Noss is using theological grounds to execute a resource-control grab disguised as principle.",
+            "choice_a": "Request a joint meeting with Noss and Vael before doing anything else",
+            "consequence_a": "Both agree \u2014 cautiously. In the same room, the mutual resentment is palpable but both are clearly intelligent, serious people with genuine beliefs.",
+            "choice_b": "Review the Relief Charity's governing documents first to understand the legal question before the theological one",
+            "consequence_b": "The Charity's founding documents, written forty years ago, specify that management must hold 'Concordat-aligned faith' \u2014 a phrase never formally defined. The ambiguity is the legal engine of the dispute."
+        },
+        {
+            "turn": 2,
+            "narrative": "Sister Vael's Reformation theology is not radical \u2014 it argues that the Scourge was a consequence of the Concordat's institutional failures, that the city survived because community resilience rather than institutional faith sustained people, and that any post-Scourge theology must centre community experience alongside doctrinal heritage. Elder Noss's orthodox position is that the Concordat's doctrines are a recorded inheritance from people wiser than current survivors, and that the Reformation faction's experiential theology is individualism disguised as revelation. Both positions are sincere. Both have genuine merit.",
+            "choice_a": "Engage both leaders in separate deep conversations about their actual theological concerns",
+            "consequence_a": "Noss reveals that his deepest concern is continuity \u2014 fear that abandoning Concordat doctrine abandons the people who built it and died maintaining it. Vael reveals hers is authenticity \u2014 people who survived the Scourge cannot be asked to follow theology that didn't acknowledge it.",
+            "choice_b": "Focus pragmatically on the Charity governance question and keep theological arguments out of the mediation",
+            "consequence_b": "Both agree to separate the Charity governance from the theological dispute. A joint management committee is proposed as a temporary measure."
+        },
+        {
+            "turn": 3,
+            "narrative": "Archive Keeper Winn enters the dispute with an unexpected contribution. The Archive of Lost Voices contains pre-Scourge Concordat documents that neither faction has fully reviewed. Winn believes one of them \u2014 a document from the Concordat's own internal theological review committee, written three years before the Scourge \u2014 contains language directly relevant to the question of doctrinal evolution. Winn has not publicised this because both factions have been too adversarial to receive information objectively.",
+            "choice_a": "Work with Winn to bring the document forward in a controlled way that both factions can engage with",
+            "consequence_a": "Winn presents the document at a joint session. It is a Concordat theological committee paper acknowledging that 'Concordat doctrine must evolve with lived experience or it becomes monument rather than living faith.' Written by a Concordat senior elder three years before the Scourge.",
+            "choice_b": "Review the document privately first and decide how to deploy its content strategically",
+            "consequence_b": "The document is extraordinary: it is essentially the Reformation theology, written by an orthodox Concordat authority. Strategic deployment at the right moment could end the dispute entirely."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Violet Shepherd's congregation has become a specific flashpoint. Noss formally petitions Warden Gais to revoke the congregation's registered status on the grounds that it practices Void-adjacent sacrament, which he argues is incompatible with any Concordat-heritage designation. Vael publicly defends the congregation. Warden Gais, caught in the middle, asks for your assessment \u2014 she will act on your recommendation.",
+            "choice_a": "Recommend maintaining the congregation's status \u2014 its harm reduction record and Medical Quarter oversight justify it",
+            "consequence_a": "Gais issues a formal finding maintaining the congregation's registered status. The Shepherd Cord publicly thanks both Vael's faction and the investigative process.",
+            "choice_b": "Recommend renegotiating the congregation's designation to remove the Concordat-heritage framing, reducing the theological flashpoint",
+            "consequence_b": "The congregation is redesignated as a 'Registered Community Therapeutic Practice' \u2014 removing it from the theological contest entirely while preserving its operational status."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Relief Charity's management dispute has created a one-week paralysis in food distribution. 800 residents are receiving reduced service. Three charitable volunteers have quit in frustration at being caught between the factions. A group of long-term charity volunteers \u2014 independent of both factions \u2014 have asked to meet you. They propose that an independent charter governing the Charity, with elected volunteers as the management body rather than faction appointment, would remove the charity from doctrinal politics entirely.",
+            "choice_a": "Support the independent volunteer charter proposal and help the volunteers draft it",
+            "consequence_a": "A Charity Governance Reform package is drafted in four days. Noss objects. Vael supports. Gais endorses. The Ward Council approves independent governance.",
+            "choice_b": "Negotiate a power-sharing arrangement between the two factions instead of governance reform",
+            "consequence_b": "A three-year power-sharing arrangement is agreed with a formal sunset review. Not ideal but immediately operational."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Concordat theological committee document, when presented or deployed strategically, transforms the debate. Elder Noss reads it three times in silence. He then asks Winn for the document's provenance details \u2014 the specific author's identity, their role, their death record from the Scourge. When confirmed, he says: 'If Elder Carras wrote this with his authority, I cannot in good conscience dismiss it as heterodoxy.' The theological underpinning of his opposition to the Reformation faction has been removed by an authority he respects.",
+            "choice_a": "Facilitate a joint theological reading session between Noss and Vael using the document as a starting point",
+            "consequence_a": "The session lasts four hours. When it ends, Noss and Vael have not resolved all differences, but they have found a shared foundation they did not previously know existed.",
+            "choice_b": "Let Noss process the document privately \u2014 pushing for immediate reconciliation before he has absorbed it would be counterproductive",
+            "consequence_b": "Three days later, Noss requests a private meeting with Vael. Gais notes that what emerges from it is the beginning of a genuine theological dialogue rather than a debate."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Schism has defined the dispute as being about the memorial prayer schedule \u2014 who controls when and how the city's communal grief rituals are conducted. The orthodox faction controls the 6am prayers and the annual Scourge memorial. The Reformation faction has been conducting parallel community memorials in the Lower Ward with significantly higher attendance. The dispute is partly about doctrine, partly about who speaks for the city's collective experience of loss.",
+            "choice_a": "Propose a unified memorial framework with both factions co-officiating \u2014 shared ritual, different voices",
+            "consequence_a": "The proposal is radical enough that both factions need a week to consider it. Noss accepts first, to Vael's visible surprise. She accepts the next day.",
+            "choice_b": "Recommend the City Council formally designate the Scourge Memorial as a secular civic occasion with optional religious content from any registered faith body",
+            "consequence_b": "The secular designation removes the dispute trigger. Both factions can participate on equal footing. Neither controls the other's access."
+        },
+        {
+            "turn": 8,
+            "narrative": "The combined effect of the Charity governance reform, the document's revelation, and the memorial approach has shifted the schism from active conflict to uncomfortable adjacency. Neither faction has dissolved. The theological differences are real and will persist. But the practical flashpoints have been resolved. Gais calls it 'the best outcome available.' Winn calls it 'a beginning.' Noss calls it 'a long conversation.' Vael says: 'At least we stopped fighting over the soup kitchen.'",
+            "choice_a": "Recommend a permanent inter-factional dialogue body \u2014 a formal space for theological exchange",
+            "consequence_a": "A Temple District Theological Dialogue Council is constituted with Winn as independent chair.",
+            "choice_b": "Recommend no formal structure \u2014 organic relationship development will be more authentic",
+            "consequence_b": "The informal relationship between Noss and Vael develops at its own pace. Two years later it produces an unexpected joint publication."
+        },
+        {
+            "turn": 9,
+            "narrative": "Sister Vael announces a new project: a community-driven documentation of Scourge survival stories from every district, intended as a living body of testimony that complements the formal Archive. She calls it 'The Living Record' and is positioning it as the Reformation faction's contribution to shared heritage. Noss, to general surprise, offers to contribute orthodox community memories to the project.",
+            "choice_a": "Help facilitate 'The Living Record' as a cross-factional heritage project",
+            "consequence_a": "The Living Record becomes the Schism's most positive legacy \u2014 a documentation effort that involves both factions, Archive Keeper Winn, and community members from six districts.",
+            "choice_b": "Support the project by connecting Vael with appropriate institutions without direct involvement",
+            "consequence_b": "The Medical Quarter, Academic Quarter, and Ward Council each contribute resources. The project scales beyond what Vael initially imagined."
+        },
+        {
+            "turn": 10,
+            "narrative": "The final unresolved flashpoint is the archive access dispute. Both factions want researchers aligned with their theology to have priority access to Concordat documents. Winn has managed this by simply refusing priority access to anyone \u2014 equal access for all, no priority designations. Both factions are unsatisfied. A practical resolution requires a formal access policy.",
+            "choice_a": "Help Winn design a formal Archive access policy with equal-access provisions and independent oversight",
+            "consequence_a": "A Policy Committee including one representative from each faction, Winn, and an independent academic is constituted. The access policy is produced within three weeks.",
+            "choice_b": "Recommend Winn's current ad hoc approach be formally codified as the access policy \u2014 it already works",
+            "consequence_b": "Winn's existing practice is formalised into an access charter. Simple, effective, already proven."
+        },
+        {
+            "turn": 11,
+            "narrative": "The Living Record's first community session in the Lower Ward draws 140 attendees \u2014 an extraordinary number for a documentary heritage project. People who rarely engage with formal religious institutions come specifically because this is not that: it is a listening session for anyone who survived the Scourge to speak their experience. Sister Vael facilitates. Noss attends as an observer and, halfway through the session, is asked by a young man if he has a memory to share. He does. The room is quiet for seven minutes while he speaks about what he saw at the Scourge's first day.",
+            "choice_a": "Observe the session and record notes on what arises for the Archive",
+            "consequence_a": "Noss's account becomes one of the Archive's most significant oral history documents.",
+            "choice_b": "Let the session exist without official documentation \u2014 some moments are more whole if they just happened",
+            "consequence_b": "Winn respects the choice. The community remembers the session without it needing to be filed."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Temple Schism has not ended. Theological differences between the Orthodox and Reformation factions remain and will remain \u2014 they represent genuinely different responses to the same catastrophe. What has ended is the weaponisation of those differences against the city's shared institutions. The Relief Charity feeds 800 people weekly under independent governance. The Archive is accessible to all. The Living Record is growing. The congregation conducts its work without threat. In the Temple District's central plaza, a notice board has appeared that lists both factions' upcoming community events side by side. Nobody organised it. It just appeared.",
+            "choice_a": "Note the notice board to Gais as a genuinely positive sign",
+            "consequence_a": "Gais photographs it and puts the photograph in her office. 'This is what resolution looks like when nobody is looking.'",
+            "choice_b": "Leave it unacknowledged \u2014 it speaks for itself",
+            "consequence_b": "It does. That is enough."
+        }
+    ],
+    "branching_outcomes": {
+        "schism_mediated": {
+            "description": "Charity reformed. Memorial unified. Living Record project launched. Theological dialogue ongoing.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 35,
+                    "Lower Ward": 20
+                },
+                "item_reward": "Concordat Theological Committee Document"
+            }
+        },
+        "schism_managed": {
+            "description": "Charity power-shared. Congregation redesignated. Access policy formalised.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 25
+                },
+                "item_reward": "Temple District Relief Charity Independent Charter"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 200,
+            "reputation_change": {
+                "Temple District": -25
+            }
+        },
+        "critical_failure": "The Charity collapses. 800 residents receive no service for three weeks."
+    },
+    "loot_table": [
+        "Concordat Theological Committee Document",
+        "Temple District Relief Charity Independent Charter",
+        "The Living Record Project Charter",
+        "Winn's Archive Access Policy",
+        "950x Gold Coins"
+    ],
+    "conclusion": "Charity reformed. Memorial unified. Living Record project launched. Theological dialogue ongoing."
+}

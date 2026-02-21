@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_403",
+    "title": "The Flour Wars",
+    "difficulty": "Easy",
+    "xp_reward": 410,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Miller's Quarter",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "Rival millers Hask and Doreth have been sabotaging each other's deliveries. A third bakery received flour mixed with plaster dust. You are asked to mediate.",
+    "key_npcs": [
+        "Miller Hask",
+        "Miller Doreth",
+        "Baker Yena"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Baker Yena shows you the ruined plaster-flour. She nearly lost two teeth. Both Hask and Doreth deny responsibility with equal ferocity.",
+            "choice_a": "Examine each miller's operation separately",
+            "consequence_a": "At Hask's mill you find a recently emptied plaster bucket. At Doreth's you find mud matching Hask's storage path.",
+            "choice_b": "Arrange a sit-down and read the room",
+            "consequence_b": "Doreth's body language reveals guilt \u2014 pressed, he admits paying a courier to switch Hask's labels."
+        },
+        {
+            "turn": 2,
+            "narrative": "Doreth is identified as the saboteur but claims Hask started it by bribing his workers.",
+            "choice_a": "Verify Hask's bribery claim before ruling",
+            "consequence_a": "One of Doreth's workers confirms the bribery, making both men share responsibility.",
+            "choice_b": "Rule against Doreth alone and demand restitution to Yena",
+            "consequence_b": "Doreth seethes but pays Yena for ruined flour and her damaged tooth."
+        },
+        {
+            "turn": 3,
+            "narrative": "You propose a permanent resolution to end the Flour Wars.",
+            "choice_a": "Have both millers sign a non-sabotage contract before the Ward Warden",
+            "consequence_a": "The Warden witnesses the agreement.",
+            "choice_b": "Negotiate supply territories \u2014 Hask takes north, Doreth south",
+            "consequence_b": "Yena finally gets reliable flour from both."
+        }
+    ],
+    "branching_outcomes": {
+        "contract_signed": {
+            "description": "Both millers signed a formal agreement.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 10
+                }
+            }
+        },
+        "territory_split": {
+            "description": "Supply territories negotiated.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Miller's Territory Map",
+                "reputation_change": {
+                    "Market Ward": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Miller's Territory Map",
+        "Pure Grain Sample",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Both millers signed a formal agreement."
+}

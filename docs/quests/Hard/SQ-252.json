@@ -1,0 +1,75 @@
+{
+    "id": "SQ-252",
+    "title": "Hoarder's Tax",
+    "difficulty": "Hard",
+    "xp_reward": 750,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-251"
+        ]
+    },
+    "location": "Market Ward -> The Velvet Syndicate Warehouse",
+    "district": "Market Ward",
+    "thread": "Community & Survival",
+    "description": "Silas discovered the water thief: The Velvet Syndicate. They are hoarding fresh water and grain to artificially inflate prices, starving the Lower Wards.",
+    "key_npcs": [
+        "Syndicate Enforcers",
+        "The Quartermaster"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Syndicate warehouse is heavily guarded by hired mercenaries wielding Repeating Crossbows.",
+            "choice_a": "Bribe the guards (Costs 300 Gold)",
+            "consequence_a": "They take the gold and happily look the other way while you enter.",
+            "choice_b": "Assault the warehouse through the skylight",
+            "consequence_b": "You drop in silently, assassinating two guards instantly."
+        },
+        {
+            "turn": 2,
+            "narrative": "Inside, massive vats of water and grain are locked behind a magically sealed vault. The Syndicate Quartermaster refuses to open it.",
+            "choice_a": "Torture him for the password (Intimidation)",
+            "consequence_a": "He breaks quickly, whispering the password. You feel morally compromised, but the vault opens.",
+            "choice_b": "Break his arms and hack the vault yourself (Thieves Tools)",
+            "consequence_b": "It takes agonizing hours of lockpicking while he screams. You finally crack it, securing the horde."
+        }
+    ],
+    "branching_outcomes": {
+        "vault_passworded": {
+            "description": "You coerced the password and opened the vault.",
+            "unlocks": [
+                "SQ-253"
+            ],
+            "consequences": {
+                "item_reward": "Syndicate Vault Key",
+                "reputation_change": {
+                    "Market Ward": -20
+                }
+            }
+        },
+        "vault_picked": {
+            "description": "You broke the vault manually, ignoring the Quartermaster.",
+            "unlocks": [
+                "SQ-253"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Green Quarter": 30
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Syndicate Vault Key",
+        "Hoarded Grain Sack",
+        "300x Gold Coins"
+    ],
+    "conclusion": "You coerced the password and opened the vault.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

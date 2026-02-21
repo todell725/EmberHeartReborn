@@ -1,0 +1,72 @@
+{
+    "id": "SQ-267",
+    "title": "The Final Key",
+    "difficulty": "Epic",
+    "xp_reward": 2500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-266"
+        ]
+    },
+    "location": "Deep Archive -> The Restricted Bestiary",
+    "district": "Deep Archive",
+    "thread": "ULTIMATE CONSPIRACY",
+    "description": "With two seals broken, the beast is hours from breaching Emberheart. You must storm the Restricted Bestiary to seize the 'Depth-Bane Harpoon', the only weapon capable of killing the Leviathan.",
+    "key_npcs": [
+        "Archive Construct Guards",
+        "The Harpoon"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Bestiary is guarded by towering Bronze Minotaurs built to protect dangerous artifacts.",
+            "choice_a": "Use lightning magic to overload their bronze chassis",
+            "consequence_a": "Extremely effective. They lock up, unable to move while you walk past them.",
+            "choice_b": "Use heavy crushing weapons to shatter their joints",
+            "consequence_b": "A brutally tough physical fight. You exhaust yourself significantly dismantling them."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Depth-Bane Harpoon is encased in a stasis field. The control panel requires a complex arcane cypher.",
+            "choice_a": "Hack the cipher perfectly using raw Intelligence",
+            "consequence_a": "The stasis fades safely. You secure the legendary weapon.",
+            "choice_b": "Smash the stasis projector with raw Strength",
+            "consequence_b": "The field violently implodes, severely burning you with arcane energy before dropping the Harpoon."
+        }
+    ],
+    "branching_outcomes": {
+        "harpoon_secured_clean": {
+            "description": "You flawlessly secured the Depth-Bane Harpoon without taking damage.",
+            "unlocks": [
+                "SQ-ELITE-LEVIATHAN"
+            ],
+            "consequences": {
+                "item_reward": "Depth-Bane Harpoon",
+                "reputation_change": {
+                    "Academic Quarter": 40
+                }
+            }
+        },
+        "harpoon_secured_burned": {
+            "description": "You secured the Harpoon, but suffered severe arcane burns.",
+            "unlocks": [
+                "SQ-ELITE-LEVIATHAN"
+            ],
+            "consequences": {
+                "item_reward": "Depth-Bane Harpoon"
+            }
+        }
+    },
+    "loot_table": [
+        "Bronze Minotaur Gear",
+        "1200x Gold Coins"
+    ],
+    "conclusion": "You flawlessly secured the Depth-Bane Harpoon without taking damage.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "id": "SQ-235",
+    "title": "The Vanguard's Fall",
+    "difficulty": "Epic",
+    "xp_reward": 3000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-234"
+        ]
+    },
+    "location": "Lower Ward -> The Grand Plaza",
+    "district": "Lower Ward",
+    "thread": "Sovereignty & Order",
+    "description": "With Gore-Maw dead and the vanguard scattered, Emberheart celebrates a massive victory. But the Warden Council knows this was only the probing force. The true Siege is imminent.",
+    "key_npcs": [
+        "High Steward Mira",
+        "The Victorious Wardens"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You return to the Grand Plaza. Thousands of citizens are cheering, showering you and the Wardens with flower petals. High Steward Mira waits to pin the Star of Emberheart on your chest.",
+            "choice_a": "Accept the medal humbly (High Charisma)",
+            "consequence_a": "The crowd loves your humility. Your legend as a selfless protector is cemented.",
+            "choice_b": "Raise your weapon and yell a war cry",
+            "consequence_b": "The crowd goes wild, their blood pumped for the coming war. Morale is at an all-time high."
+        },
+        {
+            "turn": 2,
+            "narrative": "In private, Mira hands you a sealed missive. 'The four armies are combining. The Siege of Warden-Keep will begin in three days.'",
+            "choice_a": "Demand command of the defenses",
+            "consequence_a": "She grants you absolute authority over the city's militia for the coming siege.",
+            "choice_b": "Ask to operate as an independent strike force",
+            "consequence_b": "She agrees, granting you free reign to target enemy commanders during the impending attack."
+        }
+    ],
+    "branching_outcomes": {
+        "commander_role": {
+            "description": "You have been given complete command of the city's defenses.",
+            "unlocks": [
+                "SQ-ELITE-SIEGE"
+            ],
+            "consequences": {
+                "item_reward": "Star of Emberheart",
+                "reputation_change": {
+                    "Warden Council": 100
+                }
+            }
+        },
+        "strike_role": {
+            "description": "You chose to operate as an independent assassin for the coming siege.",
+            "unlocks": [
+                "SQ-ELITE-SIEGE"
+            ],
+            "consequences": {
+                "item_reward": "Shadow-Warden Signet",
+                "reputation_change": {
+                    "Sovereignty & Order": 80
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Star of Emberheart",
+        "Shadow-Warden Signet",
+        "3000x Gold Coins"
+    ],
+    "conclusion": "You have been given complete command of the city's defenses.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

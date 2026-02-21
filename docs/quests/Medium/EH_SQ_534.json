@@ -1,0 +1,165 @@
+{
+    "id": "EH_SQ_534",
+    "title": "The Industrial Poison",
+    "difficulty": "Medium",
+    "xp_reward": 1000,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_457",
+            "EH_SQ_455"
+        ],
+        "items_required": []
+    },
+    "location": "Industrial Quarter -> Green Quarter -> Medical Quarter",
+    "district": "Industrial Quarter",
+    "thread": "Community & Survival",
+    "description": "Green Quarter biomonitors have detected an elevated concentration of industrial byproducts in the Quarter's soil and groundwater \u2014 compounds consistent with heavy Foundry smelting processes. Three Green Quarter community gardens are showing crop failure. Two children in the Lower Ward adjacency have presented at the Medical Quarter with symptoms consistent with heavy metal exposure. The Industrial Quarter's Foundry and three adjacent processing facilities were all recently upgraded, including the drainage modifications documented during the Foundry settlement. Someone's drainage work has gone wrong \u2014 or was never meant to go right.",
+    "key_npcs": [
+        "Foundry Director Vane",
+        "Green Quarter Biomonitor Sera",
+        "Dr. Vel",
+        "Industrial Quarter Processing Manager Ott",
+        "Renia"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Biomonitor Sera's data is alarming but not yet conclusive about source. The compounds detected \u2014 primarily industrial smelting flux residue and heat-treatment cooling runoff \u2014 are consistent with four potential sources in the Industrial Quarter. Three are the newly upgraded processing facilities. One is the Foundry's drainage modification completed two months ago. The Green Quarter's affected zone downslope of all four sources tells you the contamination arrived via groundwater movement \u2014 but not which facility discharged it.",
+            "choice_a": "Commission immediate flow tracing from the Green Quarter contamination zone back to source",
+            "consequence_a": "Sera uses dye tracing in three groundwater channels. The primary contamination flow traces to discharge point 6 \u2014 a processing facility drain managed by Ott's company.",
+            "choice_b": "Collect soil and water samples from each of the four potential source facilities simultaneously",
+            "consequence_b": "Sample analysis takes 48 hours. Facility 3 \u2014 one of Ott's processing units \u2014 shows compound concentrations 400% above legal limits in its drainage output."
+        },
+        {
+            "turn": 2,
+            "narrative": "Processing Manager Ott's facility is the primary source. Ott's initial response is denial: his drainage modification was approved by the Ward technical review team and he has documentation to prove compliance. He is partially correct \u2014 the modification was approved. But the approval was for a theoretical flow rate that turned out to be significantly exceeded when the facility ran at peak capacity. The drainage design was flawed: it worked at test output but fails under real operational load.",
+            "choice_a": "Focus on the immediate containment of the ongoing discharge rather than the blame question",
+            "consequence_a": "Ott is persuaded to immediately reduce facility output to below the design threshold. Discharge levels drop to legal limits within six hours. Contamination stops at source.",
+            "choice_b": "Determine whether the flawed approval was due to negligent review or deliberate under-reporting of anticipated output levels",
+            "consequence_b": "The Ward technical review records show the output level Ott's facility submitted was 40% below the actual expected operational output \u2014 a representation that made the drainage appear compliant when it was not."
+        },
+        {
+            "turn": 3,
+            "narrative": "Two children's symptoms at the Medical Quarter drive urgency beyond the regulatory investigation. Dr. Vel has confirmed heavy metal exposure consistent with the detected compounds. She also identifies that eight adult Green Quarter residents have subclinical levels \u2014 below immediate crisis but requiring monitoring and intervention. The Green Quarter community is frightened and furious. Renia attends a community meeting that becomes extremely heated.",
+            "choice_a": "Attend the community meeting and take direct accountability for coordinating the response",
+            "consequence_a": "Your presence at the meeting \u2014 and direct, honest answers about what is known and what is being done \u2014 significantly reduces the anger. Three specific demands are made that are all reasonable.",
+            "choice_b": "Have Vane and Ott attend the community meeting to face their community directly",
+            "consequence_b": "Vane attends willingly and is received with mixed anger and respect. Ott sends a legal representative, which incenses the community further."
+        },
+        {
+            "turn": 4,
+            "narrative": "The contamination's source is stopped. Now begins remediation: the three affected community gardens need soil assessment and potentially replacement. The groundwater pathway needs flushing. And ten affected individuals need ongoing Medical Quarter support. Remediation costs are significant. Ott argues his facility's design was approved and Ward liability shares the cost. Vane offers Foundry resources for remediation given the shared drainage infrastructure. The community wants Ott to shoulder the full cost.",
+            "choice_a": "Build a remediation framework that assigns costs proportional to demonstrable responsibility",
+            "consequence_a": "Legal assessment determines Ott bears 70% responsibility (output misrepresentation), Ward technical review bears 20% (inadequate verification), and a 10% is funded by Foundry community goodwill contribution.",
+            "choice_b": "Push for full Ott responsibility \u2014 the output misrepresentation was deliberate and the Ward should not absorb costs for industrial fraud",
+            "consequence_b": "A formal negligence proceeding determines Ott bears 85% responsibility. Ward review failure is documented but not financially assessed."
+        },
+        {
+            "turn": 5,
+            "narrative": "Community garden remediation begins. Sera manages soil replacement at Garden 2 and 4 \u2014 the most affected. Garden 1 requires only flushing and recovery time. Sera's soil assessment reveals something not directly related to the contamination: Garden 3's adjacent plot has trace evidence of Pre-Scourge industrial use \u2014 an old manufacturing site that left residual compounds in the soil decades ago. This pre-existing contamination is below harmful levels but interacted with the new discharge to compound the effect.",
+            "choice_a": "Commission a full Green Quarter pre-existing soil contamination audit to identify any other historical sites",
+            "consequence_a": "Three additional pre-existing industrial sites are identified beneath different Green Quarter sections. None are currently harmful but all are documented for future monitoring.",
+            "choice_b": "Address the specific Pre-Scourge site as a contained historical remediation and move on",
+            "consequence_b": "The specific site is documented and flagged in the Archive. Winn is consulted about the manufacturing history."
+        },
+        {
+            "turn": 6,
+            "narrative": "Dr. Vel's medical monitoring of the ten affected residents runs for three months. At the six-week mark, she reports that all ten are responding well to treatment and both children have fully cleared their elevated levels. The community relief is significant. But Vel notes that her monitoring also identified that two Green Quarter residents had pre-existing subclinical levels from chronic ambient industrial exposure \u2014 before this incident \u2014 suggesting a longer-term issue with the Industrial Quarter's proximity.",
+            "choice_a": "Request Sera initiate continuous ambient monitoring of the Industrial Quarter / Green Quarter boundary",
+            "consequence_a": "A permanent monitoring array is installed. Four boundary points receive continuous biomarker tracking feeding into Ward health data.",
+            "choice_b": "Recommend the Ward Council review the Industrial Quarter's proximity zoning relative to residential Green Quarter areas",
+            "consequence_b": "A zoning review is commissioned. It will take eighteen months to complete but begins the process of addressing a structural planning issue."
+        },
+        {
+            "turn": 7,
+            "narrative": "Ott's processing facility is operating under a modified licence with strict discharge reporting requirements. But a Ward inspection finds that the drainage report for the first post-incident month was filed with figures that appear to have been rounded down. The difference is small. It may be computational error. It may be the beginning of a repeat pattern.",
+            "choice_a": "Treat it as potential fraud and escalate to a formal audit of all reporting",
+            "consequence_a": "A full historical audit finds three additional instances of under-reporting spanning eighteen months \u2014 none above crisis level but all systematically minimised. A pattern is established.",
+            "choice_b": "Issue a formal warning and require independent third-party discharge verification going forward",
+            "consequence_b": "Independent verification is implemented immediately. Ott's next three months of reports are accurate to four decimal places under independent audit."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Green Quarter community's three demands from the community meeting have been addressed: remediation funded, ongoing monitoring established, and Ott's facility under scrutiny. The fourth, unspoken demand \u2014 that this never happens again to anyone in the city \u2014 is harder. Vane proposes a city-wide Industrial Discharge Standards reform package, noting that current standards were written before modern processing technologies and have significant gaps.",
+            "choice_a": "Support Vane's reform proposal and help drive it through the Ward Council",
+            "consequence_a": "Renia's political connections and Vane's technical authority combine to push the reform through. New standards are in force within four months.",
+            "choice_b": "Recommend the reform be led by Sera and the biomonitoring scientific community rather than industry",
+            "consequence_b": "Sera chairs the reform process. Standards are more rigorous than Vane's proposal and pass with significant community support."
+        },
+        {
+            "turn": 9,
+            "narrative": "Three months after the gardens were remediated, Garden 2 holds its first post-incident harvest. A small gathering of Green Quarter residents, some Medical Quarter staff, Renia, and Sera stand in the garden as the first yield is brought in. It is modest \u2014 the soil recovery is still early. But it is healthy. The two children who were treated at the Medical Quarter attend with their families. One of them plants a seedling while her parent holds it straight.",
+            "choice_a": "Mark the occasion formally \u2014 write a brief summary of the whole incident in the Ward public health record",
+            "consequence_a": "The public health record entry becomes reference material for industrial contamination response. Vel uses it in training.",
+            "choice_b": "Let the harvest speak for itself \u2014 no formal marking necessary",
+            "consequence_b": "The moment is its own memorial."
+        },
+        {
+            "turn": 10,
+            "narrative": "Ward Councillor Dain now wants to present the Industrial Poison case to the inter-district Ward Council as a model environmental response. He is not wrong \u2014 the response was effective. But his framing removes the community anger, the medical crisis, and the ongoing zoning concern from the narrative, presenting it as a smooth institutional success. Renia objects strongly to this sanitised version. [KEY DECISION \u2014 how the city's institutional narrative of the incident is shaped]",
+            "choice_a": "Insist on an honest account that includes the community anger, the children's medical crisis, and the unresolved zoning question",
+            "consequence_a": "Dain accepts reluctantly. The Council presentation is honest. Several Councillors are uncomfortable. The zoning review is accelerated.",
+            "choice_b": "Let Dain's version stand institutionally while ensuring the full account is documented in the Ward public health record",
+            "consequence_b": "The official narrative is compressed. The full account exists in the health record for those who look. Renia files her own written objection to the sanitised version with the Council clerk."
+        },
+        {
+            "turn": 11,
+            "narrative": "The broader Industrial Quarter Discharge Standards reform is producing unexpected findings during its review process: at least two other Industrial Quarter facilities have drainage designs that under-perform at peak output \u2014 the same fundamental flaw that caused Ott's incident. Neither has yet produced harmful discharge levels but both are operating in the risk zone. Proactive action can prevent the next incident. Reactive action waits for it to happen.",
+            "choice_a": "Recommend immediate proactive remediation requirements for both flagged facilities",
+            "consequence_a": "Both facilities are required to implement drainage upgrades within sixty days. There is no next incident.",
+            "choice_b": "Recommend enhanced monitoring and mandatory quarterly reporting with automatic escalation triggers",
+            "consequence_b": "Enhanced monitoring is implemented. Both facilities remain within limits throughout the reporting period."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Green Quarter's community gardens are producing again. Sera's monitoring array gives the community real-time data visible on a public display board at the Garden 1 entrance. Ambient levels are below baseline. The two children are healthy. Ott's facility is operating under rigorous independent monitoring. The Industrial Discharge Standards reform is in draft. Two other facilities' risks have been proactively addressed. Vane is quoted in a Ward bulletin: 'Reactive cleanup costs ten times what proactive monitoring costs. We should have known this already.' Green Quarter Biomonitor Sera is promoted to Ward Environmental Health Coordinator. It is a new position created specifically because of this incident. She fills it immediately.",
+            "choice_a": "Formally recommend the Ward Council create a permanent Environmental Health function",
+            "consequence_a": "The Council creates the Environmental Health Division. Sera is its founding director.",
+            "choice_b": "Let Sera's appointment stand as its own institutionalisation \u2014 she will build the function from within",
+            "consequence_b": "Sera builds her division incrementally and practically. In three years it is the most comprehensive environmental monitoring system the city has had."
+        }
+    ],
+    "branching_outcomes": {
+        "reform_passed": {
+            "description": "Contamination remediated. Children recovered. Industrial standards reformed. Environmental Health Division created.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Industrial Quarter": 20,
+                    "Green Quarter": 40,
+                    "Medical Quarter": 15
+                },
+                "item_reward": "Industrial Discharge Standards Reform Document"
+            }
+        },
+        "monitoring_enhanced": {
+            "description": "Contamination remediated. Children recovered. Enhanced monitoring in place. Zoning review commissioned.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Industrial Quarter": 15,
+                    "Green Quarter": 35
+                },
+                "item_reward": "Sera's Environmental Monitoring Plan"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 220,
+            "reputation_change": {
+                "Industrial Quarter": -15,
+                "Green Quarter": -30
+            }
+        },
+        "critical_failure": "Contamination is not identified at source. Six additional children present at Medical Quarter. Political firestorm."
+    },
+    "loot_table": [
+        "Industrial Discharge Standards Reform Document",
+        "Sera's Environmental Monitoring Plan",
+        "Contamination Remediation Report",
+        "Foundry Community Goodwill Agreement",
+        "1000x Gold Coins"
+    ],
+    "conclusion": "Contamination remediated. Children recovered. Industrial standards reformed. Environmental Health Division created."
+}

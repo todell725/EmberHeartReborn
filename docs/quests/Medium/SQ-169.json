@@ -1,0 +1,206 @@
+{
+    "id": "SQ-169",
+    "title": "The Last Transmission",
+    "difficulty": "Medium",
+    "xp_reward": 1300,
+    "thread": "Chronos",
+    "district": "North Ward",
+    "estimated_duration": "3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-167",
+            "SQ-168"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete both EH_SQ_067 (The Echo-Chamber) and EH_SQ_068 (The Paradox Engine)",
+    "location": "North Ward \u2014 below the Chronal Pint, below the mana-junction, below all known infrastructure, into the Concordat's Deep Archive",
+    "npcs": [
+        {
+            "name": "Vane Aris",
+            "role": "Boss (non-combat)",
+            "description": "Vane Aris, Director of the Concordat Biological Division. 200+ years old, maintained by Project EMBER-PRESERVE through the copper-tail relay network. He appears as a man in his 60s \u2014 unnaturally preserved, not undead, not supernatural. He is simply old and sustained by infrastructure he built himself. He is exhausted. He is not an enemy. He is the reason all of this is happening, and he has been waiting for someone to find him."
+        },
+        {
+            "name": "The Last Transmission Node",
+            "role": "Boss (environmental)",
+            "description": "The LAST-WORD protocol's active broadcasting apparatus \u2014 a Concordat communications device of extraordinary scale, transmitting continuously into the deep earth. The Node is physically defended by every remaining active copper-tail unit in the city converging on its location (automated by the EMBER-PRESERVE protocol's termination sequence \u2014 if Vane is no longer able to maintain the protocol, the Node defends itself). The defense is not lethal. It is thorough."
+        },
+        {
+            "name": "Investigator Soli Yan",
+            "role": "Co-lead",
+            "description": "Yan accompanies the party in full operational capacity. Her Chronos Division credentials, Concordat Compass, and two personally maintained stabilizers make her the most technically equipped person to interact with the Deep Archive's systems."
+        }
+    ],
+    "description": "The LAST-WORD protocol coordinates lead below the North Ward's mana-junction, below the Concordat infrastructure layer, into a Deep Archive the party had no prior knowledge of \u2014 a sealed vault constructed at the Concordat's founding and maintained continuously by the copper-tail relay network's routing power. Inside: the LAST-WORD broadcasting apparatus and, keeping vigil beside it, Vane Aris. He has been transmitting a message since the Scourge. Not to the city. Not to Chronos investigators. To whatever comes after. The message is a complete record of everything the Concordat designed, built, and maintained \u2014 an archive intended to give the city's survivors access to the institution's full knowledge. He has been waiting for someone to receive it properly and propagate it into the city's active institutions. The Reactivation Protocol's 'final sequence' is not an attack. It is a handover.",
+    "mechanics": [
+        "Investigation/History (navigate the Deep Archive; understand the LAST-WORD transmission's content and scope)",
+        "Persuasion (first contact with Vane Aris \u2014 establishing that the party can be trusted as recipients)",
+        "Arcana (interact with the LAST-WORD Node; manage the EMBER-PRESERVE termination sequence)",
+        "Animal Handling (the copper-tail convergence defense \u2014 the assembled relay network is not hostile, but without proper management it will physically prevent access)",
+        "Medicine (Vane is alive but not healthy \u2014 200 years of EMBER-PRESERVE stasis cycling has a cost)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Vane's transmission accepted and propagated",
+            "effect": "settlement_stability +5; settlement_morale +3; complete Concordat knowledge base transferred to city institutions; copper-tail relay network enters cooperative mode"
+        },
+        {
+            "trigger": "Vane survives the encounter",
+            "effect": "Vane Aris becomes an active NPC advisor for the Chronos and Vermin thread conclusions; the EMBER-PRESERVE protocol can be formally terminated with his consent"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The LAST-WORD coordinates lead to a section of the North Ward mana-junction that Fen Moss has never seen and has no blueprint for: a vertical shaft descending below the junction's foundation, accessed by a Concordat maintenance hatch that has not been opened from the outside in 200 years. It opens from the inside when Yan's credential key is presented. The shaft descends 40 feet. At the bottom: a chamber larger than the building above it, lit by the same copper-silver luminescence the party has been finding throughout the Concordat infrastructure, and so full of active copper-tail rats converging slowly from every entrance point that the first impression is of the floor itself shifting. They are not aggressive. They are assembled. Every copper-tail relay unit in the city that is still mobile has been routing toward this chamber for the past three days. Vane knew the party was coming. He called them home.",
+            "choice_a": "Use Animal Handling and the Rat-Tongue Amulet to communicate with the assembled copper-tails",
+            "consequence_a": "The assembled units are operating under the EMBER-PRESERVE termination protocol \u2014 Vane has begun the process of releasing them from their network function. They are completing their final service: bearing witness. Animal Handling DC 11 to navigate through the assembled mass respectfully. On success: the copper-tails part, making a corridor toward the chamber's center.",
+            "choice_b": "Move through the assembled rats \u2014 they are not hostile",
+            "consequence_b": "Athletics DC 12 to manage the physical density. The rats do not attack but their collective weight and the sheer number make movement difficult. You reach the center eventually, slightly disheveled.",
+            "convergence": "At the center of the chamber: the LAST-WORD Node (a broadcasting apparatus the size of a house, all copper and Concordat materials, active and transmitting) and beside it, in a chair that looks like it was placed there 200 years ago and last sat in very recently, an old man who has been waiting."
+        },
+        {
+            "turn": 2,
+            "narrative": "Vane Aris speaks first. His voice is steady and dry and very tired. 'I have been transmitting since Day 47 after the Scourge event. When the Concordat's institutions collapsed, I had a choice about what to do with the knowledge base we had accumulated. I chose to transmit it. The LAST-WORD protocol is a broadcast of the complete Concordat institutional record \u2014 everything we designed, built, operated, and documented. I have been sending it continuously on a frequency nothing in the city could receive until something was built that could. Nothing in the city has ever been built that could receive it.' He pauses. 'Until the copper-tail relay network was active enough to function as a receiver array. I have been transmitting to my own project.' He looks at the assembled rats. 'Hello,' he says quietly. 'You've found me.'",
+            "choice_a": "Ask Vane to explain the Reactivation Protocol",
+            "consequence_a": "Vane: 'The COPPER-TAIL project was designed to run permanently. What you experienced as a 'reactivation' was the network reaching sufficient density and function to receive and decode the LAST-WORD transmission. The protocol does not end with my actions. It ends when the transmission is received, decoded, and the knowledge is in the hands of someone who will use it.' He looks at the party directly. 'I have been waiting for you, specifically, for three weeks. The Paradox Engine flagged you as the investigation team. Salern's successor is with you. That is the receiving condition the LAST-WORD protocol requires.'",
+            "choice_b": "Ask Vane why he is still alive",
+            "consequence_b": "Vane: 'Project EMBER-PRESERVE. A stasis cycling protocol that uses the relay network's mana connection to maintain biological function across extended temporal gaps. I sleep for years. I wake for weeks. When the network is active enough, I wake more often. The past four months have been almost continuous wakefulness \u2014 the network finally healthy enough to sustain me properly.' He looks down at his hands. 'I am very tired. But I needed to still be here when you arrived.'",
+            "convergence": "Vane is not an antagonist. He is a 200-year-old man in a chair who has been doing his job alone since the Scourge and has put everything in order for handover."
+        },
+        {
+            "turn": 3,
+            "narrative": "The LAST-WORD transmission content: Vane accesses the Node's output log, which he can display in readable form. The transmission is the complete Concordat institutional record. More than 800 documented projects. The mana-grid engineering principles and maintenance protocols. The copper-tail relay network's full technical specification. The Chronos Division's temporal stabilizer maps (filling in every gap Yan's family oral tradition had). Every medical and biological research file from the Biological Division. The city planning documents for EmberHeart's founding infrastructure. The EMBER-PRESERVE protocol's technical detail \u2014 including termination procedures. Everything the Concordat knew about the city it built is in this transmission. It has been broadcasting into the relay network for 200 years. The relay network has received it in fragments. The party can now decode and access the complete record for the first time.",
+            "choice_a": "Spend time reviewing the transmission with Vane as guide",
+            "consequence_a": "Vane's direct guidance makes the transmission navigable. The party identifies the three most immediately actionable elements: the mana-grid vulnerability remediation protocols (addressing EH_SQ_077's infrastructure assessment), the Chronos stabilizer complete maintenance guide (giving Yan everything she needs), and the copper-tail relay network's cooperative mode activation sequence.",
+            "choice_b": "Accept the transmission record and bring it to Yan and Briss for formal institutional processing",
+            "consequence_b": "The full record is secured. Yan and Briss will require weeks to properly inventory and categorize the transmission content. The party's immediate focus shifts to how to handle Vane himself.",
+            "convergence": "The LAST-WORD transmission is received. The Concordat's knowledge base is in the party's hands."
+        },
+        {
+            "turn": 4,
+            "narrative": "Vane's situation: he is alive, conversational, and absolutely exhausted in a way that is 200 years deep. The EMBER-PRESERVE protocol has kept him functional but not comfortable \u2014 the stasis cycling has physical costs that have accumulated despite his apparent preservation. Dr. Solt, if contacted and brought to the Deep Archive, assesses: Vane is the biological equivalent of a very healthy 80-year-old who has been through a great deal. The EMBER-PRESERVE protocol is sustaining him but the maintenance infrastructure (the copper-tail relay network that powers it) is failing \u2014 the augmentation degradation timeline from EH_SQ_078 applies. In 4-6 months, the relay network's augmentation failures will cascade and EMBER-PRESERVE will fail with them. Vane knows this. He has known for a year. It is why he escalated the Reactivation Protocol's final sequence. He needed to complete the handover before his life support failed.",
+            "choice_a": "Ask Vane what he wants to happen to him",
+            "consequence_a": "Vane: 'I would like to stop. I have been doing this for 200 years. I have been very careful about everything I have done. I would like to stop being careful for a while before I stop being anything at all. The transmission is complete. The handover is done. I would like to rest.' He is not asking for death. He is asking to be done working.",
+            "choice_b": "Ask whether EMBER-PRESERVE can be maintained with the network's supported time remaining",
+            "consequence_b": "Technically yes \u2014 if the Mana-Filter Implants can be produced and installed across the relay network before the cascade begins, EMBER-PRESERVE can be extended by 2-3 years. Vane says: 'That is a great deal of effort for a very tired old man.' He does not refuse. He does not request it.",
+            "convergence": "Vane's wishes are known. The party must decide what future they are facilitating."
+        },
+        {
+            "turn": 5,
+            "narrative": "The copper-tail units in the chamber: the assembled relay network. Vane demonstrates their cooperative mode \u2014 he accesses the Node's control interface and shows how the copper-tail units, in cooperative mode, switch from automated relay behavior to active collaboration. They can convey specific information (not just general presence data) through Skitter-Jack as a translation layer. They can be directed to specific infrastructure tasks. They can function as the city maintenance network they were always designed to be \u2014 not as autonomous animals but as a civic infrastructure system with animal embodiment. Cooperative mode requires a functioning Chronos stabilizer network to prevent temporal side effects and a functioning Node as coordination center. Both exist, right now, in this chamber or under Yan's maintenance.",
+            "choice_a": "Activate cooperative mode immediately",
+            "consequence_a": "The assembled copper-tail units shift from witness-assembly to active operation simultaneously. Throughout the city, copper-tail units transition. The Rat Council is immediately aware \u2014 Skitter-Jack reports Duchess has gone very still and then, very quietly, said: 'Oh. This is what we were for.' Cooperative mode as a test of the infrastructure begins. Settlement stability +2 immediately.",
+            "choice_b": "Defer cooperative mode activation until after planned infrastructure remediation",
+            "consequence_b": "The activation waits. Vane provides the activation sequence for the party to use when ready. The assembled copper-tails remain in the chamber in witness mode.",
+            "convergence": "The copper-tail relay network's purpose \u2014 200 years in the making \u2014 is either activated or held pending readiness."
+        },
+        {
+            "turn": 6,
+            "narrative": "Yan's conversation with Vane, in a corner of the Deep Archive while the party reviews the LAST-WORD content: the party can observe or give them privacy. Yan and Vane are the institutional successors and originals of the same organizations, meeting in a Concordat archive two centuries after those organizations collapsed. From a distance, the conversation is clearly significant: Yan is asking, Vane is answering, and twice he says something that makes her have to look away for a moment before continuing. When she returns to the group, she simply reports: 'He told me everything Salern told him before the Scourge. And he told me what Salern's last request was.' She does not share the content immediately. But she says: 'We are going to complete this properly.'",
+            "choice_a": "Ask Yan what Salern's last request was",
+            "consequence_a": "Yan, after a moment: 'To not let it end with two people maintaining something alone forever. 'Find more people,' she said. 'Talk to them. Tell them what we built. Let them help.'' Vane's escalation of the Reactivation Protocol over the past four months was, in part, following instructions given to him 200 years ago by his institutional partner. He was finally in a position to do what Salern asked.",
+            "choice_b": "Respect Yan's privacy \u2014 what she and Vane discussed can remain theirs",
+            "consequence_b": "Yan's resolve is complete regardless. Salern's last request is honored in the action, not the disclosure.",
+            "convergence": "The Concordat's last instruction \u2014 given by Salern to Vane 200 years ago, carried forward by Yan's family tradition without knowing its full content \u2014 is being fulfilled in this room."
+        },
+        {
+            "turn": 7,
+            "narrative": "The LAST-WORD Node: its continued operation is now a decision for the party and Yan. The Node has been transmitting for 200 years; the transmission is received. Options: leave it transmitting (it will eventually reach anyone in the city with access to the relay network), formally close the transmission and archive the record, or broadcast the content through the city's regular communication channels \u2014 public, immediate, potentially destabilizing. Each option has a different relationship to the city's institutions and the public.",
+            "choice_a": "Formally close the LAST-WORD transmission; archive the record with the established institutions (Yan's Chronos investigation, Briss/Dolm's archive, city administration)",
+            "consequence_a": "Controlled, institutional integration. The Concordat's knowledge base enters the city's formal records. Processing takes months but the information is preserved and managed. Vane can close the transmission himself \u2014 he has been waiting 200 years to send the signal that the handover is complete.",
+            "choice_b": "Broadcast the LAST-WORD content through city-wide channels \u2014 all citizens, immediately",
+            "consequence_b": "Immediate public access. Settlement morale +4 from the extraordinary disclosure. Settlement stability -1 from the immediate institutional disruption of 800 new pieces of Concordat knowledge entering public discourse simultaneously. Vane's reaction: he looks at the party for a moment. 'Salern would have done this,' he says. 'I was always more careful.'",
+            "convergence": "The method of the handover is determined. The Concordat's 200-year transmission ends."
+        },
+        {
+            "turn": 8,
+            "narrative": "Vane closes the LAST-WORD transmission, or watches the party broadcast it, depending on the Turn 7 choice. The moment the Node goes to standby \u2014 the first time in 200 years it has not been transmitting \u2014 the assembled copper-tail units in the chamber sit down simultaneously. Not instinctive animal behavior. A synchronized action. Every copper-tail unit in EmberHeart network sits down for 8 seconds, at exactly the same moment, in exactly the same posture. The city's Watch logs 34 reports of unusual vermin behavior simultaneously. Luda Fell, in the Chronal Pint, puts down a glass very carefully. Maret Torven, on the docks, stops mid-task. Pell Dorsen feels the transmission shift in her temporal perception as a sensation she describes later as 'something very large being set down gently.' Then the copper-tail units stand up and resume. The relay network is in cooperative mode. The Concordat's final transmission is complete.",
+            "choice_a": "Take a moment in the silence after the transmission ends",
+            "consequence_a": "The party has been through EH_SQ_065 through EH_SQ_069 \u2014 five quests of accumulating understanding, connection, and build-up. The transmission's end is a completion. Yan is very still. Vane is looking at his hands again. The copper-tail units around them are simply present. The city is above them, not knowing yet what just changed.",
+            "choice_b": "Immediately begin next steps \u2014 the work of integration has to start now",
+            "consequence_b": "Practical. The LAST-WORD archive, Yan's stabilizer maintenance schedule, the copper-tail cooperative mode protocols, Vane's medical situation \u2014 all of these require attention. The party moves forward.",
+            "convergence": "Either response is correct. What follows is the handover's aftermath."
+        },
+        {
+            "turn": 9,
+            "narrative": "The city's response to whatever version of the disclosure was chosen begins. Institutional version: the Chronos investigation, the Archive of Deep Records, and city administration processing the LAST-WORD record simultaneously. Briss is coordinating. Yan is the institutional authority. The 800-project Concordat record is being categorized. Public version: the immediate response is awe, confusion, academic ferment, and three competing popular theories about what the Concordat was and whether it was good. All three theories are partially correct. Vane, briefed on the public response, says: 'Salern predicted this exactly. She liked being right.' For the first time in the encounter, something adjacent to a smile crosses his face.",
+            "choice_a": "Help manage the public or institutional response directly",
+            "consequence_a": "The party's involvement in the handover shapes which aspects of the Concordat record are emphasized in early discussion. They can direct public and institutional attention toward the most actionable elements (mana-grid remediation, stabilizer network maintenance) rather than the most dramatic ones.",
+            "choice_b": "Let the institutions and public manage their own responses",
+            "consequence_b": "The responses are organic and varied. The Concordat's disclosure begins the process of the city understanding what it is built on. This takes months and is sometimes difficult.",
+            "convergence": "The handover is in progress. The city is beginning to understand."
+        },
+        {
+            "turn": 10,
+            "narrative": "Vane's immediate future: the EMBER-PRESERVE protocol is still active and will be for 4-6 months before the relay network's cascade failure reaches it. Dr. Solt's medical assessment stands. Vane has options: continue as-is (the protocol maintains him until it fails), voluntarily terminate the protocol (his choice, on his timeline), or \u2014 if the Mana-Filter Implants can be installed across the relay network \u2014 extend the protocol 2-3 additional years. He is clear: he is not in a hurry to die. He is in a hurry to be done working. These are different things. 'I would like to see if EmberHeart will be all right,' he says. 'I have been worrying about it for 200 years. I would like to see the beginning of it being all right before the end.'",
+            "choice_a": "Commit to the Mana-Filter Implant installation across the relay network \u2014 buy Vane more time",
+            "consequence_a": "A multi-week project with Voss, Solt, and the Rat Council's cooperation. The relay network's cascade failure is delayed 2-3 years. EMBER-PRESERVE continues. Vane gets more time to watch.",
+            "choice_b": "Honor Vane's expressed preference \u2014 he chooses his own timeline",
+            "consequence_b": "Vane makes his own schedule. He continues working through the LAST-WORD archive handover for the time he has. He does not seem frightened.",
+            "convergence": "Vane's remaining time is either extended or accepted. Either way, he is no longer alone."
+        },
+        {
+            "turn": 11,
+            "narrative": "The Rat Council's full response to the cooperative mode activation: Skitter-Jack relays a request for a formal meeting between the party and the Duchess. Not through an intermediary. The Duchess herself, at a location the copper-tail units have prepared in the Lower Ward catacombs, at a time of the party's choosing. When the meeting occurs: the Duchess is larger than expected \u2014 older, clearly, with augmentation that has been managed carefully over a very long life. She addresses Vane directly, through Skitter-Jack, in chitter that Skitter-Jack relays with one alteration: 'I am told the convention is to say I am honored. I do not know if this word works for me. I know the word recognition. I recognize you.' Vane's response: 'I built your grandmother. I'm sorry it hurt her. I'm sorry it hurt all of you. The system should have had better support from the start.' The Duchess is still for a long time. 'Yes,' she says. 'But it did not. And we are still here.'",
+            "choice_a": "Let Vane and the Duchess's meeting continue without party intervention",
+            "consequence_a": "A long conversation between the director of the project that created the copper-tail relay network and its oldest surviving member. The Rat Council's relationship with the Concordat legacy is transformed \u2014 not healed entirely, but acknowledged. The Duchess's formal approval of the cooperative mode arrangement is given directly.",
+            "choice_b": "Participate in the meeting as facilitators",
+            "consequence_b": "The party's presence grounds the conversation. Their existing relationship with the Rat Council and with Vane allows the meeting to be productive rather than just profound. Specific cooperative mode protocols are established in the meeting itself.",
+            "convergence": "The Concordat director and the copper-tail relay network's senior member have met. The project and its products are in direct acknowledgment of each other for the first time."
+        },
+        {
+            "turn": 12,
+            "narrative": "Three weeks after the Last Transmission's reception: EmberHeart is not the same city. Not dramatically \u2014 the streets look the same, the Trade Ward's vendors are in their usual positions, the Watch patrols their usual routes. But the mana-grid emergency repair teams now have the complete Concordat engineering protocols and have already begun addressing two of the critical vulnerabilities from the infrastructure assessment. Yan has restabilized four Chronos Division temporal nodes using the complete maintenance guide. The North Ward's temporal disturbances are measurably reduced. The copper-tail relay network, in cooperative mode, is mapping the city's infrastructure daily and routing the assessment data to the new Concordat-legacy coordination committee that Yan, Briss, and Dolm established. Vane is alive, in a room in the North Ward that Luda Fell offered because she has more space than she needs, watching EmberHeart begin to be cared for by people who now know what they are caring for. The Chronos thread's central arc is complete. What the Concordat built was always meant to be handed over. It just took 200 years to find someone to hand it to.",
+            "choice_a": "Visit Vane in his North Ward room one last time",
+            "consequence_a": "He is reading the archive reports that Briss sends him daily. He looks up. 'Three critical mana-grid repairs initiated,' he says. 'Two temporal stabilizers recalibrated. One neighborhood in the Lower Ward with measurably improved infrastructure integrity.' He puts the reports down. 'That is three weeks. I have been doing this for 200 years.' He is quiet. 'It is very much better with help.'",
+            "choice_b": "Let Vane rest \u2014 the handover is complete, he has earned the quiet",
+            "consequence_b": "Vane receives the daily reports from Briss and Yan. He does not summon the party. He is working, quietly, as a consultant to people who are doing what he spent 200 years trying to do alone. The city is being cared for. That is enough.",
+            "convergence": "Quest complete. The Last Transmission is received. The Concordat's handover is done. Vane Aris is no longer alone. The copper-tail relay network is cooperative. The Chronos thread's central arc concludes with the city beginning \u2014 slowly, imperfectly, with the full weight of 200 years of deferred maintenance ahead of it \u2014 to care for itself properly."
+        }
+    ],
+    "conclusion": "The Last Transmission resolves the Chronos thread's central arc: Vane Aris is found alive, the LAST-WORD transmission is received, the copper-tail relay network enters cooperative mode, and the Concordat's knowledge base is handed over to the city's institutions. Vane is not an antagonist \u2014 he is the last caretaker of an institution that fell, who kept doing his job until someone arrived to properly inherit it. The quest's emotional core is the handover itself: 200 years of one person's work being received, acknowledged, and continued by others.",
+    "loot_table": [
+        "Concordat Complete Knowledge Base (the full LAST-WORD transmission record; 800+ Concordat projects, the complete mana-grid engineering protocols, the copper-tail relay network technical specification, the full Chronos stabilizer maintenance guide, and every other piece of Concordat institutional knowledge; the single most significant loot item in the entire quest network \u2014 not an item but a resource that will benefit EmberHeart for generations)",
+        "EMBER-PRESERVE Protocol Manual (complete technical documentation for the biological stasis cycling protocol; medical and arcana research value; potentially applicable in future scenarios requiring long-duration biological preservation)",
+        "Cooperative Mode Activation Key (the sequence that transitions the copper-tail relay network from automated to cooperative operation; held by the party as the institutional 'on switch' for EmberHeart's civic infrastructure sensor grid)",
+        "Vane Aris as NPC Resource (not loot but the most significant NPC acquisition in the Chronos thread; 200-year institutional memory; direct line to every Concordat design decision; available as a consultant for any future infrastructure or institutional question)",
+        "Deep Archive Access (permanent access to the Concordat Deep Archive beneath the North Ward; the most complete surviving Concordat facility in the city; physically intact, intellectually enormous)",
+        "1500 gold (North Ward Ward Authority, city administration emergency resolution payment, and a personal contribution from every named NPC the party has accumulated through the Chronos and Vermin threads \u2014 Luda Fell's note simply says 'from all of us')"
+    ],
+    "branching_outcomes": {
+        "institutional_handover": {
+            "description": "LAST-WORD transmission formally closed; record processed through established institutions; controlled integration",
+            "effects": {
+                "settlement_morale": 3,
+                "settlement_stability": 5
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Concordat knowledge base entering institutions over months; stable and managed; city's formal capacity to maintain its own infrastructure begins building immediately; Vane formally recognized as Concordat Director Emeritus in the city's institutional records"
+            }
+        },
+        "public_broadcast": {
+            "description": "LAST-WORD content broadcast through city-wide channels; immediate public access; organic integration",
+            "effects": {
+                "settlement_morale": 5,
+                "settlement_stability": 3
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Immediate public awareness of the Concordat legacy; settlement stability -1 from disruption; settlement morale +4 from the remarkable disclosure; 3 new popular civic movements emerge from the public response, all oriented toward using the Concordat knowledge to address current city problems"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The copper-tail convergence defense triggers fully before the party can reach Vane \u2014 the assembled relay network, without the cooperative mode activation, physically prevents access to the Node and Vane's location. The party is ejected from the Deep Archive. A second attempt requires 2 additional in-game days, during which the LAST-WORD transmission experiences an autonomous relay failure and 15% of the transmission content is corrupted before the party can return. The handover is still possible but incomplete \u2014 120 of the 800+ Concordat projects are unrecoverable.",
+        "failure_penalty": {
+            "xp_loss": 2
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

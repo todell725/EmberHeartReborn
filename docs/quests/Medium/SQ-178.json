@@ -1,0 +1,205 @@
+{
+    "id": "SQ-178",
+    "title": "The Copper-Virus Outbreak",
+    "difficulty": "Medium",
+    "xp_reward": 1150,
+    "thread": "Vermin",
+    "district": "Market Ward",
+    "estimated_duration": "2-3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-028"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete SQ-28 (The Copper-Tail Nest)",
+    "location": "Market Ward commercial district and the mana-grid tunnels beneath it",
+    "npcs": [
+        {
+            "name": "Dr. Mira Solt",
+            "role": "City physician ally",
+            "description": "District physician for the Market Ward who identified the illness cluster and summoned the party. Calm, overworked, unwilling to panic in front of patients. Privately terrified. Has the medical expertise to synthesize the antidote if the party provides the biological source material."
+        },
+        {
+            "name": "The Virus-Carrier Alpha",
+            "role": "Boss",
+            "description": "A large male copper-tail rat whose augmentation has been corrupted by the mana-virus it carries. Hyper-aggressive, with copper wiring visible at the skin surface and erratic movement. The virus has overloaded its neural-lattice components. The Alpha is not malicious \u2014 it is in pain \u2014 but it is extremely dangerous."
+        },
+        {
+            "name": "Grid-Technician Fen Moss",
+            "role": "Infrastructure guide",
+            "description": "One of the Market Ward's mana-grid maintenance team. Knows the tunnel system and can guide the party to the viral contamination source. Does not know why any of this is happening and is deeply unhappy about being involved."
+        }
+    ],
+    "description": "Dr. Solt reports a deeply disturbing localized medical anomaly: 23 patients suffering from a copper-tinged visual field, mild mana-sensitivity, and terrifyingly involuntary behavioral mirroring of nearby vermin. Tracing the infection back to the deeply buried mana-grid junction B-7, she fears stage three neural disruption within 36 hours. The party must descend into the highly toxic, deeply infected grid tunnels, isolate the heavily augmented vermin acting as the transmission vector, and secure completely untainted biological samples for Dr. Solt.",
+    "mechanics": [
+        "Investigation (trace illness clusters to grid-tunnel sections)",
+        "Medicine (understand the virus mechanism and support Dr. Solt's synthesis work)",
+        "Engineering (navigate and operate the mana-grid tunnel system safely)",
+        "Combat (Virus-Carrier Alpha \u2014 Medium encounter, aberrant copper-tail)",
+        "Arcana (identify the mana-contamination signature and locate the primary source)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Antidote synthesized and distributed",
+            "effect": "settlement_morale +2; 23 affected citizens recover; Dr. Solt becomes a recurring medical resource"
+        },
+        {
+            "trigger": "Grid purged instead of antidote",
+            "effect": "settlement_morale +1; settlement_stability -1 (48-hour Market Ward power outage); affected citizens recover but antidote is lost"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Dr. Solt's incredibly urgent, highly classified message is chillingly clinician-precise: exactly 23 patients actively presenting with an incredibly identical, terrifying symptom cluster over precisely 4 days\u2014a sickly copper-tinged visual field, an intensely strange mild mana-sensitivity in their hands and feet, and highly involuntary, deeply terrifying behavioral mirroring of the movements of entirely nearby rats. Three critically advanced patients aggressively progressed to stage two overnight: violent, incredibly dangerous electrical arcing violently erupting directly from their fingertips, aggressively triggered by close physical proximity to heavily powered equipment. Solt desperately does not want to alarm the Ward Council, has explicitly not reported this to the primary administration yet, and has approximately 36 desperate hours before the first three patients either miraculously stabilize or fatally decline to stage three, which her terrifying working diagnostic model suggests aggressively involves complete, permanent neural pathway disruption. She has brilliantly traced the infection's absolute origin to four adjacent, highly populated city blocks. All four perfectly intersect directly over the deeply buried, heavily restricted mana-grid junction B-7. She absolutely needs someone highly capable to go violently into the deeply infected grid tunnels and find exactly what horrifying thing is down there.",
+            "choice_a": "Go immediately with Grid-Technician Fen Moss as guide",
+            "consequence_a": "You brilliantly wrap a heavily insulated, chemically treated cloth securely over your face to completely avoid localized spore inhalation. You flawlessly extract a violently pulsing, completely infected copper-tail corpse cleanly from the primary junction box completely intact for critical medical study.",
+            "choice_b": "Gather information about the specific illness mechanism from Solt before going in",
+            "consequence_b": "You violently channel extremely focused, incredibly intense magical fire perfectly into the deeply corrupted, slime-coated primary air vents. The horrific, intensely glowing biological corruption is violently incinerated into harmless gray ash, absolutely perfectly sterilizing the entire heavily compromised area completely.",
+            "convergence": "With the deeply infected source beautifully isolated or violently purged, the highly erratic, violently unstable mana-flow immediately abruptly stabilizes perfectly, abruptly plunging the heavily scorched junction completely into pitch-black, deeply silent darkness."
+        },
+        {
+            "turn": 2,
+            "narrative": "The B-7 mana-grid tunnels run at a depth of three meters below the Market Ward surface. The infrastructure here is a patchwork: modern conduit housing wrapped around Concordat-era ceramic channels that were too integral to remove during the last grid upgrade. The Concordat ceramic is warm in a way modern conduit isn't \u2014 not dangerously, but perceptibly. Fen identifies the feeling as 'normal for old grid sections.' Three minutes into the tunnel, normal stops: the ceramic channels in this section have a visible discoloration, a faintly blue-green tinge that Arcana identifies as biological material in the conductivity medium. The mana-grid is not just carrying power \u2014 it is carrying something biological. And in this section, that biological material is dense.",
+            "choice_a": "Sample the discoloration from the conduit wall for Dr. Solt to analyze",
+            "consequence_a": "Medicine DC 12 to collect a viable sample without contaminating yourself. Success: Dr. Solt has source material for antidote synthesis. Failure: sample is contaminated; another will be needed from nearer the Alpha's location.",
+            "choice_b": "Trace the contamination gradient towards its highest density \u2014 find the source directly",
+            "consequence_b": "Arcana DC 13 to track the gradient. Success: you navigate to the Alpha's location without needing to backtrack. Failure: you take a wrong branch and waste 20 minutes.",
+            "convergence": "The contamination grows denser as you move northeast along the B-7 corridor. Something is sitting at the center of the gradient."
+        },
+        {
+            "turn": 3,
+            "narrative": "The B-7 junction chamber: a round room at the intersection of four conduit corridors, with a central mana-transfer housing that looks designed to route power in four directions simultaneously. The transfer housing is currently offline \u2014 the circuit breaker has tripped, probably from the biological contamination interfering with conductivity. Against the northwest wall, partially wedged between the housing base and the stone: the Virus-Carrier Alpha. It is the largest copper-tail rat the party has encountered. Its augmentation is visibly wrong: copper wiring emerges from sub-skin tissue at too many points, the neural-lattice components visible through worn sections giving off erratic pulses of light. It is not asleep \u2014 it is in acute distress. Its breathing is labored. It is shed-contaminating the entire section with every exhale.",
+            "choice_a": "Attempt to approach carefully \u2014 the Alpha may not be immediately aggressive if it is in distress",
+            "consequence_a": "Animal Handling DC 15 (DC 11 with Rat-Tongue Amulet). Success: the Alpha registers you as non-threat and allows approach. You can examine its augmentation failure up close \u2014 and potentially extract biological source material for the antidote without combat. On failure: the Alpha's pain response triggers aggression.",
+            "choice_b": "Clear the room of contamination first by tripping the emergency mana-flush valve on the transfer housing, then deal with the Alpha",
+            "consequence_b": "The mana-flush clears the immediate contamination in this section but drives the Alpha into the secondary corridors, and you must pursue it. The flush also cuts power to the junction chamber.",
+            "convergence": "The Virus-Carrier Alpha is the primary source. The decision about how to handle it shapes the rest of the quest."
+        },
+        {
+            "turn": 4,
+            "narrative": "If combat: the Virus-Carrier Alpha is a Medium encounter with unusual properties. It takes its action each round but also performs a contamination shed (15-foot radius, DC 13 Constitution save or mana-sensitivity begins triggering; advantage on this save with mana-insulated equipment). Its attacks deal standard piercing damage plus 1d4 lightning. It is fast and erratic but not tactical \u2014 its pain is driving its behavior, not intelligence. At 20 HP or below, it stops attacking and retreats to the wall. It does not flee. It is too exhausted to flee. Medical observation of the Alpha at 20 HP or below grants advantage on the Medicine check to synthesize the antidote.",
+            "choice_a": "Subdue the Alpha without killing it \u2014 restrain and extract the source material",
+            "consequence_a": "Athletics or Medicine check (DC 14 combined) to restrain a debilitated but panicking large rat. On success: the Alpha is restrained, source material extracted, Alpha can be treated (not cured, but its immediate distress reduced). Dr. Solt may be able to help it further.",
+            "choice_b": "Kill the Alpha \u2014 fastest resolution and safest for the party",
+            "consequence_b": "Alpha is killed. Source material is easier to extract from a non-moving subject. Rat Council informed later registering as 'necessary but noted.' The Alpha was a known member of a copper-tail colony the Duchess tracked.",
+            "convergence": "Biological source material for the antidote is secured. The contamination in B-7 section will clear naturally over 48 hours without the Alpha shedding."
+        },
+        {
+            "turn": 5,
+            "narrative": "With source material secured, the choice: synthesize antidote or purge the grid. Antidote synthesis requires Dr. Solt's lab, the source material, and approximately 8 hours of work. Mana-grid purge requires accessing the ward's primary mana-junction (B-1, three sections away) and activating the emergency flush protocol \u2014 kills the biological contamination in the entire grid but powers down the Market Ward for 48 hours. Fen Moss's reaction to the purge option: 'The Market Ward runs on that grid. Open-air refrigeration units, medical equipment at the ward clinic, the water pumps for the north quarter. Forty-eight hours of outage in winter.' He is not exaggerating. The antidote path costs 8 hours. The purge path costs 48 hours of civic disruption.",
+            "choice_a": "Take the source material to Dr. Solt; synthesize the antidote",
+            "consequence_a": "8 hours of clinic work. The antidote can be produced in sufficient quantity for all 23 current patients in one synthesis run. If the viral contamination is spreading, new cases may develop during those 8 hours.",
+            "choice_b": "Activate the mana-grid purge",
+            "consequence_b": "Immediate contamination clearance. All 23 patients stop worsening immediately (their bodies will clear the existing mana-compound naturally over 48 hours). But 48 hours of Market Ward power outage causes secondary harm to the population dependent on grid-powered infrastructure.",
+            "convergence": "The chosen resolution path begins. Fen Moss handles whatever grid work is needed \u2014 he knows the tunnels."
+        },
+        {
+            "turn": 6,
+            "narrative": "Dr. Solt's synthesis workroom is a converted closet in the back of her clinic, equipped with precision instruments that look like they belong somewhere with a larger budget. She works quickly once she has the source material, narrating as she goes with the efficiency of someone who talks to keep her hands steady. The mana-virus is not a natural pathogen. It is an engineered biological interface compound \u2014 designed, she determines, to create a temporary sensory bridge between human nervous systems and the copper-tail neural-lattice network at low concentration. At the concentration the Beta-7 section was producing due to the Alpha's augmentation failure, it is causing harm. But at the designed concentration, this compound is what would allow a human to interface with the relay network. Someone built a protocol for humans to tap into the copper-tail sensor grid. Using a biological vector.",
+            "choice_a": "Ask Solt if a controlled dose of the compound would produce the intended effect without harm",
+            "consequence_a": "Solt: 'In theory? At 5% of the concentration in the tunnel section, maybe thirty minutes of low-fidelity sensory access to whatever the relay network is currently processing. I could titrate it. I am very much not recommending this, but I could titrate it.' The option exists.",
+            "choice_b": "Focus on the antidote synthesis; the compound's interface properties are a secondary concern",
+            "consequence_b": "Solt completes the antidote efficiently. Full cure for all 23 patients. The interface compound's intended purpose is documented in her notes but not pursued.",
+            "convergence": "The antidote is synthesized. Distribution to the 23 patients begins."
+        },
+        {
+            "turn": 7,
+            "narrative": "Antidote distribution: a house-call circuit through Market Ward's affected households, conducted with Solt and two clinic assistants. The treatments work: within three hours, copper-tinged vision clears, sensitivity normalizes, the behavioral mirroring stops. Fourteen patients are ambulatory and bewildered. Six are bedbound but recovering. Three had reached stage two \u2014 the electrical arcing \u2014 and their recovery is slower but stable. Solt is meticulously recording every detail. The 23 patients share one distinct characteristic she notes with growing interest: every one of them has spent significant time in the Market Ward's sub-basement sections directly above the B-7 corridor in the past 30 days. She thinks this is exposure correlation. It is also, with Arcana or History, recognizable as a pattern: the people most exposed to the relay network signal are the ones who crossed the contamination threshold. Someone who spends time near mana-grid section B-7 regularly could interface with the copper-tail network by design.",
+            "choice_a": "Tell Solt what you know about the intended purpose of the interface compound",
+            "consequence_a": "Solt processes this with visible effort. 'Someone designed a city infrastructure sensor grid and then built a way for people to tap into it. Two hundred years ago. And then left.'She pauses. 'What a lonely system to leave behind.'",
+            "choice_b": "Keep the Concordat background from Solt; her role is medical, not intelligence",
+            "consequence_b": "Solt's notes document the compound's effects and the exposure pattern without context. She will eventually figure out the connection independently if she continues this work.",
+            "convergence": "All 23 patients are treated. The outbreak is resolved. The compound source is neutralized. The interface capability \u2014 if anyone wants to use it \u2014 has been documented."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Alpha's fate: if subdued alive, it is currently restrained in B-7. The Rat Council, through Skitter-Jack, sends a message when they learn: the Alpha is a member of a High Ward copper-tail colony, designation 'Hammer-Nail' in chitter. He was augmented involuntarily approximately five months ago. His augmentation failure began three months ago. He has been in increasing pain throughout. The Council's formal request: if the party is able to do anything for him, they would view it as a significant reciprocal action. If the party cannot, they ask that it be clean.",
+            "choice_a": "Bring the Alpha to Dr. Solt and request she attempt to stabilize or remove the failing augmentation",
+            "consequence_a": "Medicine DC 16 and Engineering DC 14 (surgery to remove neural-lattice components without killing the animal). On success: the Alpha survives with non-functional augmentation; restored to wild-rat status. The Rat Council's gratitude is substantial. On failure: the Alpha does not survive the procedure. The Council's recognition deepens for the attempt.",
+            "choice_b": "Honor the Council's request for a clean end",
+            "consequence_b": "The Alpha is humanely euthanized. The Rat Council's grief is noted. Their trust in the party's word deepens because you fulfilled a request they did not want to make.",
+            "convergence": "The Alpha's fate is resolved. The Rat Council's relationship with the party shifts depending on the outcome \u2014 either deepened gratitude or deepened respect."
+        },
+        {
+            "turn": 9,
+            "narrative": "Fen Moss, in the days after the resolution, submits a quiet report to the Ward Grid Authority about section B-7's biological contamination event. His report is accurate but strips all Concordat context: contaminated grid section, source identified and removed, section cleared. He does not mention copper-tail rats specifically. When asked why not, he tells the party privately: 'I've been maintaining these tunnels for twelve years. I know there are things down there the city would rather not have official reports about. I'm not covering anything up. I'm just not making it harder than it needs to be.' His report is filed. No institutional follow-up is generated.",
+            "choice_a": "Thank Fen and ask if he's seen other anomalies in the grid tunnels over twelve years",
+            "consequence_a": "He has a list. Not written down, in his memory. Sections that run warmer than they should. Sections where his instruments read interference patterns that don't match any known mana-source. Two sections where the Concordat ceramic is significantly more active than adjacent sections. He'll share coordinates if the party wants them.",
+            "choice_b": "Let Fen's report stand as filed; his discretion is valuable",
+            "consequence_b": "Fen nods. 'Same thing.' Future Vermin or Concordat-infrastructure investigation checks in the Market Ward grid tunnels have advantage due to the working relationship established.",
+            "convergence": "Fen Moss becomes a secondary recurring resource \u2014 not as prominent as Ossa Veld but useful for grid-tunnel knowledge."
+        },
+        {
+            "turn": 10,
+            "narrative": "The Mana-Filter Implant, recovered from the Alpha's augmentation components, is examined by both Voss (if the party has the relationship) and Solt. Their combined assessment: it is a filtration device designed to be surgically implanted at the primary mana-intake point of a copper-tail augmented rat, preventing the neural-lattice from overloading when exposed to high-density mana-flux. The Alpha didn't have one. That's why his augmentation failed. Every other copper-tail unit in the city's relay network either has a functional filtration device or is in the early stages of the same failure the Alpha experienced. Voss's calculations: without the Forgeline producing replacement units, the existing copper-tail relay network will begin experiencing mass augmentation failure within four to six months. The rats' upgrades will burn out. The sensor grid will collapse. The Reactivation Protocol, whatever stage it is at, will have a hard deadline.",
+            "choice_a": "Share this timeline with the City Watch and administration",
+            "consequence_a": "The 4-6 month deadline creates institutional urgency. The Concordat Infrastructure Working Committee, if it exists, accelerates. If it doesn't exist, Solt's report creates one.",
+            "choice_b": "Keep the timeline as intelligence controlled within the party",
+            "consequence_b": "The party knows Vane has 4-6 months before his relay network collapses. His urgency and theirs are now synchronized.",
+            "convergence": "A 4-6 month internal deadline established. The Vermin thread has a ticking clock."
+        },
+        {
+            "turn": 11,
+            "narrative": "Solt files a full medical report on the outbreak, citing 'novel mana-biological vector, source neutralized, antidote developed, all patients recovered.' She attributes the compound's development ambiguously as 'pre-modern engineering, origin under investigation.' Her report is read by the City Physician-General, who contacts her immediately. There are two prior incidents in clinic records \u2014 one eleven years ago (3 cases, dismissed as mana-sensitivity disorder), one four years ago (7 cases, attributed to grid contamination incident). The same symptom cluster. Both times spontaneously resolved without treatment. Both times the resolution correlated with a copper-tail rat death in section B-7 vicinity. The compound has been released before. This is not the first Virus-Carrier Alpha. Vane has been attempting the human-copper-tail interface before.",
+            "choice_a": "Request the full records from both prior incidents",
+            "consequence_a": "The records contain names. Five of the eleven-year-ago patients and two of the four-year-ago patients are still living in the Market Ward. Some of them might remember the experience \u2014 what it felt like to briefly interface with the relay network.",
+            "choice_b": "Note the prior incidents but don't pursue patient interviews",
+            "consequence_b": "The pattern is documented. Prior attempts are noted. The historical record of Vane's work extends further back than the party realized.",
+            "convergence": "The Copper-Virus outbreak is fully resolved. Its implications extend the Vermin thread's timeline and confirm Vane has been actively working on the interface protocol repeatedly over at least eleven years."
+        },
+        {
+            "turn": 12,
+            "narrative": "Two weeks after the outbreak's resolution, the Market Ward has returned to normal by visible metrics. The grid is running. The clinic's special ward has been discharged. Solt sends a final case note with a personal addition: 'One patient \u2014 the stage-two case who had the most severe arcing \u2014 reported that during the worst of the mana-sensitivity episodes, she could distinctly feel where every rat in the Market Ward was. Not see. Feel. She said it was like being very briefly part of something that extended in all directions and processed everything at once. She said it was the most alone she had ever felt while feeling the most connected.' A pause in the handwriting. Solt has added: 'I don't know what to do with that, professionally. But I thought you should know.'",
+            "choice_a": "Interview the patient directly",
+            "consequence_a": "She remembers the experience in detail. Her description of the relay network in operation is consistent with Voss's technical model \u2014 but described from the inside. She wants to know if it can happen again without the harm.",
+            "choice_b": "File the anecdote in the research notes and move forward",
+            "consequence_b": "The anecdotal evidence is documented. Future understanding of the interface compound's intended experience is informed by this.",
+            "convergence": "Quest complete. The outbreak is resolved, the Alpha's fate determined, and a 4-6 month internal deadline for the copper-tail relay network's collapse established. Vane's interface protocol has been tried before and will be tried again. The city's rats are running out of time."
+        }
+    ],
+    "conclusion": "The heavily augmented transmission vectors are aggressively isolated and violently eliminated within junction B-7, securing the crucial, uncorrupted biological samples for Dr. Solt. The terrifying discovery of a virus entirely capable of aggressively bridging the neurological gap between augmented vermin and humans narrowly averts a massive, completely devastating city-wide pandemic.",
+    "loot_table": [
+        "Mana-Filter Implant (Concordat-era surgical component; protects against mana-overload when interfacing with high-density mana-flux; prevents augmentation-failure in copper-tail units if installed correctly; research value with Voss and Solt for understanding the relay network's failure cascade)",
+        "Antiviral Serum (Dr. Solt's synthesis; 4 doses; cures mana-biological contamination illness; neutralizes copper-tail interface compound exposure; medical value beyond this quest)",
+        "Virus-Carrier Alpha's Augmentation Core (partially intact; research component; Concordat neural-lattice design with failure-mode documentation; technical insight into augmentation degradation)",
+        "Fen Moss's Grid Coordinates (informal list of twelve anomalous tunnel sections from 12 years of observation; future Vermin or Concordat-infrastructure investigation advantage)",
+        "Dr. Solt's Outbreak Documentation (complete medical case notes; prior incident records from 11 and 4 years ago; patient anecdotal descriptions of relay-network experience)",
+        "950 gold (City Physician-General's emergency resolution payment for the outbreak response)"
+    ],
+    "branching_outcomes": {
+        "antidote_synthesized": {
+            "description": "Source material extracted, antidote produced and distributed, 23 patients cured",
+            "effects": {
+                "settlement_morale": 2,
+                "settlement_stability": 0
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Dr. Solt becomes an active medical resource; interface compound documented; 48-hour outage avoided"
+            }
+        },
+        "grid_purged": {
+            "description": "Mana-grid emergency purge activated, contamination cleared, 48-hour power outage",
+            "effects": {
+                "settlement_morale": 1,
+                "settlement_stability": -1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Immediate halt to contamination spread; secondary harm from 48-hour Market Ward power outage; no antidote produced for future exposures"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Three stage-two patients advance to stage three (neural pathway disruption). Their symptoms become permanent unless a different antidote can be found later. The contamination continues spreading through the grid for additional 48 hours, producing 7-12 new cases.",
+        "failure_penalty": {
+            "xp_loss": 48
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

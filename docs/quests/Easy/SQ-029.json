@@ -1,0 +1,154 @@
+{
+    "id": "SQ-029",
+    "title": "The Weeping Wall",
+    "xp_reward": 700,
+    "prerequisites": "None",
+    "description": "The 'Shield-Wall' in the North Ward is weeping a black, oily liquid. It's weakening the stone and smells of decay.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The wall is cold, despite the sun. Large, dark streaks run down the mortar like tears. The oil feels warm to the touch and stains your skin purple.",
+            "choice_a": "Taste the oil (Con Save DC 13)",
+            "consequence_a": "Success: You recognize the flavor of 'Void-Gall'. (+1 Lore)",
+            "choice_b": "Scrape the wall (Str DC 12)",
+            "consequence_b": "Success: You pull away a layer of blackened, porous stone. (+1 Progress)",
+            "convergence": "A low moan vibrates through the foundation of the wall."
+        },
+        {
+            "turn": 2,
+            "narrative": "The moaning is coming from inside the wall. Someone\u2014or something\u2014is trapped within the stonework.",
+            "choice_a": "Press your ear to the stone (Perc DC 12)",
+            "consequence_a": "Success: You hear a muffled plea for help in an ancient tongue. (+1 Lore)",
+            "choice_b": "Hammer at the weak point",
+            "consequence_b": "Success: You crack the outer shell, revealing a hollow cavity. (+1 Progress)",
+            "convergence": "The oil begins to flow faster, turning into a torrent that threatens to wash you off the ledge."
+        },
+        {
+            "turn": 3,
+            "narrative": "The torrent is slippery and freezing. You see a pair of pale, translucent hands reaching out from the crack.",
+            "choice_a": "Grab the hands (Str DC 14)",
+            "consequence_a": "Success: You pull at the weight, feeling a sudden resistance. (+1 Progress)",
+            "choice_b": "Pour holy-water into the crack",
+            "consequence_b": "Success: The oil recoils, allowing you to see inside. (+100 XP)",
+            "convergence": "You've uncovered a 'Wall-Steward'\u2014an entity formed of stone and spirit, now corrupted by the rot."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Steward is half-merged with the granite. Its eyes are spheres of black oil. It begs for the 'Song of Silence'.",
+            "choice_a": "Chant a cleansing prayer (Religo DC 14)",
+            "consequence_a": "Success: You soothe the spirit's pain. (+100 XP)",
+            "choice_b": "End its misery to free the wall",
+            "consequence_b": "Success: You strike the core, releasing the spirit. (+1 Progress)",
+            "convergence": "The stone around the breach begins to crumble. A section of the wall is about to collapse."
+        },
+        {
+            "turn": 5,
+            "narrative": "Blocks of granite are sliding out of place. The oil is acting as a lubricant, making the structure unstable.",
+            "choice_a": "Shore up the wall with wooden beams (Repair DC 14)",
+            "consequence_a": "Success: You provide temporary stability. (+1 Progress)",
+            "choice_b": "Freeze the oil into a solid binding",
+            "consequence_b": "Success: You use the rot against itself to hold the blocks. (+1 Progress)",
+            "convergence": "A 'Grave-Slug'\u2014a massive, oily invertebrate\u2014crawls out from the foundation."
+        },
+        {
+            "turn": 6,
+            "narrative": "The slug is the source of the Gall. It's the size of a wagon and leaves a trail of boiling sludge.",
+            "choice_a": "Lure it into the sunlight",
+            "consequence_a": "Success: The slug sizzles and shrinks. (+1 Progress)",
+            "choice_b": "Apply heavy-salt to its skin",
+            "consequence_b": "Success: The creature dissolves into a puddle of brine. (+1 Progress)",
+            "convergence": "The wall stops moaning. The oil begins to dry into a brittle, black crust."
+        },
+        {
+            "turn": 7,
+            "narrative": "The structural integrity is still compromised. You need to perform a permanent fix before the next storm.",
+            "choice_a": "Mix a 'Mana-Mortar' (Int DC 13)",
+            "consequence_a": "Success: You bind the stones back together. (+1 Rep with Masons)",
+            "choice_b": "Reinforce with iron braces",
+            "consequence_b": "Success: The wall is stronger than before. (+1 Progress)",
+            "convergence": "The Steward from the North Ward arrives, looking at the damage with a grim expression."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Steward recognizes the Grave-Slug as a 'Sleeper Agent'\u2014something planted decades ago.",
+            "choice_a": "Ask for more history (Lore DC 14)",
+            "consequence_a": "Success: You learn about the 'Era of the Gall-Wars'. (+1 Lore)",
+            "choice_b": "Check other sections of the wall",
+            "consequence_b": "Success: You find no other infestations. (+100 XP)",
+            "convergence": "Work crews arrive to finish the masonry. You are free to go."
+        },
+        {
+            "turn": 9,
+            "narrative": "Your gear is ruined by the oil. The Steward offers to have it cleaned or replaced.",
+            "choice_a": "Ask for 'Steward's Mail' as a replacement",
+            "consequence_a": "Success: You receive a rare piece of stone-bonded armor. (+1 Gear)",
+            "choice_b": "Ask for gold",
+            "consequence_b": "Success: You are paid handsomely. (+700 Gold)",
+            "convergence": "The North Ward is safe for now."
+        },
+        {
+            "turn": 10,
+            "narrative": "The wall is dry, the black streaks now looking like ancient, honorable scars. You sit by the battlements as the first rain begins to fall.",
+            "choice_a": "Watch the wall hold",
+            "consequence_a": "Success: You feel a profound sense of accomplishment. (+20 Morale)",
+            "choice_b": "Go sleep for twelve hours",
+            "consequence_b": "Success: You are fully refreshed. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Weeping Wall was a ticking time bomb of Void-Gall. The spirit of the wall is freed, and the stones are silent once more.",
+    "loot_table": [
+        "Lump of Solidified Gall",
+        "Steward's Masonry Tool",
+        "700 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Wall breach. -2 Settlement Defense and a sector of the town is evacuated.",
+        "failure_penalty": {
+            "xp_loss": 2
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 5,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "North-Ward Steward reports structural anomaly on Shield-Wall",
+        "flags": [
+            "wall_weeping"
+        ]
+    },
+    "location": "Shield-Wall \u2014 North Ward",
+    "district": "North Ward",
+    "thread": "Sovereignty & Order",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "North-Ward Steward Gavin",
+        "Wall-Steward (spirit)",
+        "Grave-Slug (creature)"
+    ],
+    "mechanics_featured": [
+        "Religion (cleansing)",
+        "Str checks (structural support)",
+        "Social (Steward history)",
+        "Combat (slug)"
+    ],
+    "permanent_effects": {
+        "settlement": "Wall integrity restored; +1 Defense",
+        "world": "Gall-Wars era lore unlocked"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Steward's Mail",
+            "result": "Stone-bonded armor (rare gear) gained"
+        },
+        {
+            "path": "Ask for gold",
+            "result": "+700 Gold"
+        }
+    ]
+}

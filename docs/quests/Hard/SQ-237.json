@@ -1,0 +1,73 @@
+{
+    "id": "SQ-237",
+    "title": "Sour Dough",
+    "difficulty": "Hard",
+    "xp_reward": 700,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-236"
+        ]
+    },
+    "location": "Market Ward -> The Under-Cellars",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "Thade confessed his supplier was operating out of the Market Ward's under-cellars. You must shut down the distribution ring tying the Bakery to the Void-Wine cartel.",
+    "key_npcs": [
+        "Cartel Enforcers",
+        "The Dough-Master"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The cellars are heavily guarded by cartel thugs. They are loading crates of glowing blue flour.",
+            "choice_a": "Use fire magic to ignite the flour dust in the air",
+            "consequence_a": "A massive thermobaric explosion wipes out the guards, but collapses half the cellar.",
+            "choice_b": "Assassinate them one by one from the shadows",
+            "consequence_b": "You clear the room surgically. The flour and the ledgers remain intact."
+        },
+        {
+            "turn": 2,
+            "narrative": "The 'Dough-Master', a heavily mutated rogue alchemist, emerges from his lab.",
+            "choice_a": "Duel him in close quarters",
+            "consequence_a": "He breathes toxic dough-spores at close range. You kill him but take heavy poison damage.",
+            "choice_b": "Kite him around the cellar using ranged attacks",
+            "consequence_b": "A slow but safe victory. You pepper him with arrows until he collapses."
+        }
+    ],
+    "branching_outcomes": {
+        "cellar_exploded": {
+            "description": "You blew up the cellar, ending the cartel's operation violently.",
+            "unlocks": [
+                "SQ-256"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": -10,
+                    "Sovereignty & Order": 15
+                }
+            }
+        },
+        "cellar_intact": {
+            "description": "You cleared the cellar and recovered the cartel's ledgers.",
+            "unlocks": [
+                "SQ-256"
+            ],
+            "consequences": {
+                "item_reward": "Cartel Ledger"
+            }
+        }
+    },
+    "loot_table": [
+        "Cartel Ledger",
+        "Alchemist's Goggles",
+        "200x Gold Coins"
+    ],
+    "conclusion": "You blew up the cellar, ending the cartel's operation violently.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

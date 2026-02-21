@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_402",
+    "title": "The Laughing Loaf",
+    "difficulty": "Easy",
+    "xp_reward": 480,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> Gorm's Bread House",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "Customers eating morning rolls from Gorm's bakery spend an entire afternoon laughing uncontrollably. Inspector Hewen wants the bakery closed. Alchemist Rynn suspects Mirthbloom spores from an Undercity vent.",
+    "key_npcs": [
+        "Gorm the Baker",
+        "Inspector Hewen",
+        "Alchemist Rynn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "A giggling crowd surrounds the bakery. Inspector Hewen arrives to shut it down. None of the customers appear harmed \u2014 they are simply laughing at their own shoes.",
+            "choice_a": "Defend Gorm and buy time to investigate",
+            "consequence_a": "Hewen gives you three hours before issuing a closure notice.",
+            "choice_b": "Side with the Inspector and ask Gorm to close voluntarily",
+            "consequence_b": "Gorm cooperates. Hewen shares city health records of similar incidents."
+        },
+        {
+            "turn": 2,
+            "narrative": "Alchemist Rynn identifies Mirthbloom pollen \u2014 airborne spores from purple flowers that only bloom near Undercity vents. Gorm's ovens must be venting through a bloom pocket.",
+            "choice_a": "Investigate the oven vents below the bakery immediately",
+            "consequence_a": "In the cellar a crack in the stone leads to a purple Mirthbloom pocket puffing spores with every heat cycle.",
+            "choice_b": "Ask Rynn to synthesise a neutraliser before going below",
+            "consequence_b": "Rynn mixes vinegar-ash paste. You don't succumb to laughter when you go below."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Mirthbloom pocket can be sealed or harvested \u2014 the flowers have genuine alchemical value.",
+            "choice_a": "Seal the crack with mortar",
+            "consequence_a": "Problem solved. Gorm is cleared.",
+            "choice_b": "Harvest the blooms for Rynn and then seal the crack",
+            "consequence_b": "You retrieve six full blooms. Rynn pays you generously."
+        }
+    ],
+    "branching_outcomes": {
+        "crack_sealed": {
+            "description": "Vent sealed, incidents ended.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 8
+                }
+            }
+        },
+        "mirthbloom_harvested": {
+            "description": "Blooms harvested and vent sealed.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Bundle of Mirthbloom",
+                "reputation_change": {
+                    "Market Ward": 14
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Bundle of Mirthbloom",
+        "Mirthbloom Paste",
+        "220x Gold Coins"
+    ],
+    "conclusion": "Vent sealed, incidents ended."
+}

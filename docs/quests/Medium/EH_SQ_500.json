@@ -1,0 +1,178 @@
+{
+    "id": "EH_SQ_500",
+    "title": "The Bread Cartel",
+    "difficulty": "Medium",
+    "xp_reward": 950,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_403",
+            "EH_SQ_406"
+        ],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Merchant Guild Hall / Multiple Bakeries",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "Following the Flour Wars and the bread riot investigation, you've been asked by Ward Warden Astrid to look deeper. Three separate bakery incidents in the past month weren't coincidences \u2014 they were orchestrated. A criminal cartel has been systematically seizing control of Market Ward's bread supply by pressuring owners into protection arrangements. Two bakers who refused have had their shops 'accidentally' destroyed by fire.",
+    "key_npcs": [
+        "Warden Astrid",
+        "Protected Baker Mira",
+        "Cartel Enforcer Donn",
+        "Merchant Guild Rep Tolver",
+        "Cartel Boss (Hidden)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Warden Astrid spreads a map of the Market Ward across her desk and circles seventeen bakeries in red. In the past three months, fourteen of them have begun paying weekly 'security fees' to a man known only as Donn. Two who refused had their properties destroyed in fires that the Fire Watch ruled accidental. The seventeenth \u2014 Baker Mira \u2014 is still refusing and is terrified. Astrid cannot move formally without evidence tying the fires to Donn \u2014 he is careful and well-connected. She needs someone who can work outside the official investigation, building a case brick by brick before Donn's boss learns they're being watched. You accept.",
+            "choice_a": "Start with Baker Mira \u2014 she is the active target and may have direct evidence",
+            "consequence_a": "Mira is expecting you. She speaks quickly, one eye on the door. She has received three visits from Donn in a week, each time escalating from polite suggestion to barely-veiled threat. She kept a handwritten note he left her: 'Join the family before the family joins you.' She hands it over with shaking hands.",
+            "choice_b": "Start by surveilling Donn's known collection point \u2014 the Weigh-In Warehouse on Canal Street",
+            "consequence_b": "You watch the warehouse for six hours. Donn collects envelopes from merchants personally, always with a second man watching the street. You note the collection times, the faces, the schedule. You have a pattern but no direct evidence yet."
+        },
+        {
+            "turn": 2,
+            "narrative": "The handwritten note or the surveillance pattern both point to the same conclusion: Donn operates with an almost bureaucratic precision that suggests he is not the architect but an executor \u2014 someone above him designed this system. The Merchant Guild's name appears twice in your investigation so far: once in the arson report as a witness statement provider, and once in Mira's account of who told her the 'security system was industry standard.' You need to know if the Guild is complicit, captured, or oblivious.",
+            "choice_a": "Attend the next Merchant Guild open session as a concerned trader and listen carefully",
+            "consequence_a": "Guild Rep Tolver runs the session with oiled efficiency. At one point he references a 'Market Safety Collective' that all licenced traders are encouraged to join \u2014 framed as voluntary, but the phrasing is unmistakably familiar from Mira's account.",
+            "choice_b": "Find the fire investigation file and look for anomalies in the witness statements",
+            "consequence_b": "Two witness statements were provided by people who, when you track them down, have no memory of giving any statement. The signatures are forgeries \u2014 and the reports were filed by a junior clerk whose supervisor was Tolver's aide."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Merchant Guild may be the cartel's legitimate face \u2014 its institutional cover. Tolver may be knowingly involved or he may be an unwitting vessel. Either way, the 'Market Safety Collective' is the cartel's public name and the Guild Hall is its operational base of legitimacy. You need to get inside the Collective's records without alerting anyone that the investigation exists.",
+            "choice_a": "Approach Tolver directly and test whether he will crack under pressure, implying you already know everything",
+            "consequence_a": "Tolver sweats visibly. He offers to cooperate but asks for a day to prepare \u2014 a classic stall. You grant it conditionally, watching him carefully as he leaves the room.",
+            "choice_b": "Break into the Guild Hall's administrative annex at night to copy the Collective's membership and payment ledgers",
+            "consequence_b": "A tense hour of lockpicking and careful document-copying. You leave no trace. The membership list has forty-seven names and the payment column totals over 8,000 gold per month \u2014 far beyond simple protection."
+        },
+        {
+            "turn": 4,
+            "narrative": "Whether through Tolver's cooperation or the ledger copy, you now have the scale of the operation: forty-seven businesses paying into the Collective, the money flowing through three shell accounts, and a quarterly transfer to an account in the High Ward. The cartel's real boss is someone with High Ward financial infrastructure \u2014 almost certainly a noble or senior commercial family using the cartel as a revenue stream. Baker Mira receives another visit from Donn this evening, and word reaches you that she has until tomorrow night to join or face consequences.",
+            "choice_a": "Arrange for Mira to publicly appear to join while secretly wiring her shop with evidence-gathering tools",
+            "consequence_a": "Mira agrees, terrified but trusting you. Donn returns the next morning and his conversation \u2014 caught on a wax impression device borrowed from Astrid's office \u2014 is a masterclass in coercive language.",
+            "choice_b": "Have Ward Guard protection placed on Mira's shop openly, forcing Donn's hand",
+            "consequence_b": "Donn immediately escalates. He makes contact with someone above him. You track the messenger and identify a High Ward courier route."
+        },
+        {
+            "turn": 5,
+            "narrative": "The High Ward courier trail leads to the estate of a man named Merchant-Lord Serren, a well-regarded import trader known for grain and textiles. His public persona is impeccable. But his estate's account activity, cross-referenced against the Collective's shell records, shows monthly reconciliation transfers on the same day each month. Serren is the cartel's financier and almost certainly its architect. You now have the top of the pyramid \u2014 but no confession and insufficient evidence for prosecution. You need Donn to give Serren up.",
+            "choice_a": "Arrest Donn with the evidence you have and interrogate him under formal Ward custody",
+            "consequence_a": "Donn is tough but rattled. When you lay out the ledgers and the wax recording, his lawyer-instinct kicks in \u2014 he asks what deal is on the table.",
+            "choice_b": "Feed Donn false information that makes him believe Serren has already betrayed him",
+            "consequence_b": "Donn's paranoia ignites immediately. He makes a reckless contact with Serren demanding clarification \u2014 and the meeting is monitored by Astrid's team."
+        },
+        {
+            "turn": 6,
+            "narrative": "With Donn either in custody or panicking, the window to act is narrow. Serren will know the investigation is closing. He has the resources to destroy records, relocate funds, and vanish behind layers of legal protection within forty-eight hours if he suspects exposure. You and Astrid have one window: act simultaneously on Donn and Serren before either can warn the other. The cartel's forty-seven protected businesses need to know they are safe to withdraw before they tip off anyone in the network.",
+            "choice_a": "Coordinate a simultaneous arrest \u2014 Astrid takes Serren, you handle Donn",
+            "consequence_a": "Donn folds immediately when you appear with full Ward authority backing. He names Serren and provides the safe house locations where evidence is stored.",
+            "choice_b": "Get two of the protected businesses to publicly withdraw from the Collective first, forcing a crisis that exposes Serren's network",
+            "consequence_b": "Two bakers \u2014 Petra and Gorm, who trust you \u2014 simultaneously withdraw publicly. The Collective's network panics. Serren makes an operational mistake, contacting Donn directly via a traceable channel."
+        },
+        {
+            "turn": 7,
+            "narrative": "Serren's safe house raid yields extraordinary evidence: a complete operational record, a list of all shell accounts, and \u2014 most damning \u2014 personal correspondence with a Ward Councillor who provided regulatory cover for the Collective for two years. The investigation has scaled far beyond a bakery protection racket. Astrid stands in the safe house staring at the documents. 'This goes to the Council,' she says quietly. 'And then the Council member is going to come for us.' You need to decide how much political exposure you want to take.",
+            "choice_a": "Full disclosure to the Ward Council immediately, accepting the political firestorm",
+            "consequence_a": "The Councillor is suspended pending investigation. Two other Council members begin making public statements distancing themselves. The press gets hold of the story within a day.",
+            "choice_b": "Quietly secure the Councillor's cooperation through private confrontation before anything goes public",
+            "consequence_b": "The Councillor resigns citing 'personal reasons' and the Collective's records are transferred to Astrid's sealed archive. A cleaner resolution \u2014 but the Councillor faces no public consequence."
+        },
+        {
+            "turn": 8,
+            "narrative": "With Serren's arrest and the Collective's financial network dismantled, the forty-seven protected businesses are notified of their freedom. Many are too frightened to react openly at first \u2014 years of coercion have trained them to be cautious. But one by one, over the following two days, they begin reopening their books, repairing relationships with suppliers they'd been forced to cut, and cautiously celebrating. Baker Mira bakes you a loaf and leaves it at Astrid's office with a note. The bakery district is breathing again. But Donn, now in custody, says something that stops your celebrations cold: 'Serren wasn't the top. He answered to someone too.'",
+            "choice_a": "Push Donn for the identity of Serren's superior immediately",
+            "consequence_a": "Donn is genuinely afraid to say the name. He whispers it: 'Vethaan.' A name that appears nowhere in any Ward registry. The investigation may have a second layer.",
+            "choice_b": "Don't push \u2014 close the active case and file Donn's claim as an unverified lead",
+            "consequence_b": "You close the active investigation. Donn's claim sits in Astrid's files as an open thread. The name 'Vethaan' is recorded but unverified."
+        },
+        {
+            "turn": 9,
+            "narrative": "Serren's trial date is set. His defence team immediately files motions to suppress the safe house evidence as unlawfully obtained. A Ward judge will rule in three days. You are called as the primary witness for the prosecution. The Councillor's lawyer \u2014 the same firm that represented Serren \u2014 pays you an unofficial visit and suggests that your testimony could be 'simplified' for the court's benefit, implying cooperation would be in your interest. The implied threat is clear.",
+            "choice_a": "Report the lawyer's visit to Astrid immediately as witness intimidation",
+            "consequence_a": "Astrid is furious and charges the lawyer with contempt. The firm is suddenly very cooperative.",
+            "choice_b": "Play along with the lawyer just long enough to gather evidence of the intimidation attempt",
+            "consequence_b": "You record the conversation using the wax device again. The lawyer walks into a trap."
+        },
+        {
+            "turn": 10,
+            "narrative": "The suppression motion is denied. Trial begins the following week. On the morning of the third day, Serren's cartel remnants make a desperate move. Donn, being transferred between facilities, is broken out by a four-man enforcement team \u2014 former city guard, well-armed and tactically coordinated. You receive the alert and are the closest responding agent. The breakout is happening on Canal Street, one block from Baker Mira's shop. [COMBAT ENCOUNTER \u2014 4 cartel enforcers, leather armour, short blades and clubs]",
+            "choice_a": "Intercept the breakout team directly and prevent Donn from escaping",
+            "consequence_a": "A fierce running fight through the Market Ward's narrow alleys. Two enforcers are taken down. Donn is re-secured. The other two escape. Ward Guard arrives three minutes later.",
+            "choice_b": "Focus on securing Donn and let the enforcers go",
+            "consequence_b": "Donn is kept. None of the enforcers are taken. Their escape provides Astrid with intelligence about a secondary Cartel safe house they route through."
+        },
+        {
+            "turn": 11,
+            "narrative": "With the breakout failed and Donn back in custody, Serren's legal strategy collapses. His defence team negotiates a plea \u2014 full cooperation in exchange for reduced sentence and asset forfeiture. Serren names twelve additional operators across the city and provides the complete account structure. The name 'Vethaan' comes up again \u2014 this time Serren winces when you say it aloud. He says only: 'Vethaan doesn't exist in any record. That is the point.' The trial ends in conviction. The Market Ward is free. A second, deeper operation remains open.",
+            "choice_a": "File a formal case opening on the Vethaan lead and begin deeper intelligence collection",
+            "consequence_a": "Astrid creates a sealed investigation file: OPERATION VETHAAN. It sits in her office waiting. The thread is alive.",
+            "choice_b": "Consider the Vethaan information disinformation designed to sow chaos \u2014 close the thread",
+            "consequence_b": "The Vethaan thread is formally closed. The name appears once more \u2014 in a completely different context \u2014 six months later."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Market Ward's Bakery District holds an informal celebration on the evening of Serren's conviction. Mira has organised a street table with contributions from all forty-seven freed bakeries. Warden Astrid raises a cup of tea and looks at you across the table. 'That was four months of work compressed into a week,' she says. 'I don't know whether to thank you or be frightened by how quickly this moved.' The Bread Cartel is dismantled. The forty-seven bakeries are free. Two fires remain unsolved but their perpetrators are in custody. The Ward breathes easier. The name Vethaan waits in a sealed file.",
+            "choice_a": "Accept recognition publicly at the celebration \u2014 your name becomes publicly linked to the Cartel's downfall",
+            "consequence_a": "You are publicly celebrated. Market Ward reputation soars. You also become a visible target for any Cartel remnants.",
+            "choice_b": "Decline recognition \u2014 remain in the background and protect your operational value for future work",
+            "consequence_b": "The credit goes to Warden Astrid officially. You remain anonymous. Future investigations are easier to run covertly."
+        }
+    ],
+    "branching_outcomes": {
+        "public_hero": {
+            "description": "You accepted public recognition. Cartel dismantled. Vethaan thread opened.",
+            "unlocks": [
+                "EH_SQ_501"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 40,
+                    "High Ward": -10
+                },
+                "item_reward": "Cartel Ledger Copy"
+            }
+        },
+        "shadow_operator": {
+            "description": "You declined recognition. Cartel dismantled. Vethaan thread opened.",
+            "unlocks": [
+                "EH_SQ_501"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 25
+                },
+                "item_reward": "Sealed Operation Vethaan Dossier"
+            }
+        },
+        "partial_resolution": {
+            "description": "The Cartel ledger was dismantled but the Vethaan thread was closed.",
+            "unlocks": [
+                "EH_SQ_501"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 30
+                },
+                "item_reward": "Cartel Shell Account Records"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 200,
+            "reputation_change": {
+                "Market Ward": -25
+            }
+        },
+        "critical_failure": "Donn escapes the trial entirely. Serren is acquitted. The Collective reforms under new leadership."
+    },
+    "loot_table": [
+        "Cartel Ledger Copy",
+        "Sealed Operation Vethaan Dossier",
+        "Cartel Shell Account Records",
+        "Warden Astrid's Formal Commendation",
+        "950x Gold Coins"
+    ],
+    "conclusion": "You accepted public recognition. Cartel dismantled. Vethaan thread opened."
+}

@@ -1,0 +1,151 @@
+{
+    "id": "SQ-127",
+    "title": "The Static Blanket",
+    "difficulty": "Easy",
+    "xp_reward": 160,
+    "prerequisites": "None",
+    "description": "A static-electric storm is wreaking havoc in the laundry ward...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The laundry ward is experiencing a 'Static-Storm'. The blankets are floating and snapping with blue arcs of lightning.",
+            "choice_a": "Catch a floating towel",
+            "consequence_a": "Success.",
+            "choice_b": "Sense the energy",
+            "consequence_b": "Success.",
+            "convergence": "The air smells of ozone and fresh linen. It feels like every hair on your body is being pulled by invisible fingers."
+        },
+        {
+            "turn": 2,
+            "narrative": "A 'Static-Weaver'\u2014a tiny spider made of blue silk and sparks\u2014is 'Knitting' the laundry into a giant, electric web.",
+            "choice_a": "Wipe out the web",
+            "consequence_a": "Success.",
+            "choice_b": "Befriend the spider with mana",
+            "consequence_b": "Success.",
+            "convergence": "The spider gives you a 'Blue-Silk-Scrap'\u2014it can hold a charge of 50 volts."
+        },
+        {
+            "turn": 3,
+            "narrative": "The 'Laundry-Master' is trapped under a 'Heated-Quilt' that is trying to 'Cook' him with mana-heat.",
+            "choice_a": "Douse the quilt with water",
+            "consequence_a": "Success.",
+            "choice_b": "Reverse the quilt's polarity (Tech DC 13)",
+            "consequence_b": "Success.",
+            "convergence": "The quilt becomes a 'Cooling-Cape'. The air in the ward drops twenty degrees in a second."
+        },
+        {
+            "turn": 4,
+            "narrative": "You find a 'Logic-Fault' in the laundry's 'Steam-Press'\u2014it\u2019s been feeding on 'Warp-Static' from the atmosphere.",
+            "choice_a": "Fix the Press (Tech DC 14)",
+            "consequence_a": "Success.",
+            "choice_b": "Dismantle the Press",
+            "consequence_b": "Success.",
+            "convergence": "The machine chitters and reveals it was 'Upgraded' by an unknown agent. (+1 Secret)"
+        },
+        {
+            "turn": 5,
+            "narrative": "A 'Static-Wraith'\u2014a creature of blue sparks and white fabric\u2014lunges from the dryer, its touch a painful electric shock.",
+            "choice_a": "Slash the fabric",
+            "consequence_a": "Success.",
+            "choice_b": "Ground the wraith with a copper-wire",
+            "consequence_b": "Success.",
+            "convergence": "The wraith dissolves into a pile of 'Clean-Linen'. The air feels remarkably fresh and clear. (+100 XP)"
+        },
+        {
+            "turn": 6,
+            "narrative": "The Laundry-Master gives you a 'Safety-Pin of Grounding'\u2014it makes you immune to basic electric shocks.",
+            "choice_a": "Accept the pin",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Blue-Silk",
+            "consequence_b": "Success.",
+            "convergence": "The pin is made of brass and glows when near high-voltage."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Static-Storm is over. The blankets are back on the racks, their scent a peaceful mix of pine and ozone.",
+            "choice_a": "Check the dryer-vents",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The sun rises over the ward, drying the last of the damp cloth in a golden, safe warmth."
+        },
+        {
+            "turn": 8,
+            "narrative": "As you leave, you feel 'Charged' with energy. You can light a small candle with just a touch of your finger.",
+            "choice_a": "Light a candle",
+            "consequence_a": "Success.",
+            "choice_b": "Log the anomaly",
+            "consequence_b": "Success.",
+            "convergence": "The sensation is temporary, but it grants you a +1 to 'Tech-Save' for 24 hours."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Laundry-Master promises to 'Ground' all future loads. He offers you a 'Master's Apron' (+1 Defense).",
+            "choice_a": "Accept the apron",
+            "consequence_a": "Success.",
+            "choice_b": "Decline reward",
+            "consequence_b": "Success.",
+            "convergence": "The Ridge-air feels cool and steady. No hair-raising feelings tonight."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Laundry. The 'Static Blanket' is a warm cover tonight.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Done",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Static Blanket' is complete. Quest Complete.",
+    "loot_table": [
+        "Safety-Pin of Grounding",
+        "Master's Apron"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are flash-fried by a giant electric towel. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Laundry-ward reports blankets floating and sparking",
+        "flags": []
+    },
+    "location": "Settlement Laundry Ward",
+    "district": "Service District",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Laundry-Master Trinn",
+        "Static-Weaver Spider (creature)",
+        "Unknown Agent (saboteur, unseen)"
+    ],
+    "mechanics_featured": [
+        "Tech (steam-press repair)",
+        "Combat (static wraith)",
+        "Dex (web clearance)",
+        "Investigation (upgrade trace)"
+    ],
+    "permanent_effects": {
+        "settlement": "Laundry ward operational; steam-press anomaly logged",
+        "world": "Unknown agent tampering flagged as conspiracy clue"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Fix the Press",
+            "result": "+1 Rep with engineers; Press restored"
+        },
+        {
+            "path": "Dismantle Press",
+            "result": "Sabotage evidence removed but power lost"
+        }
+    ]
+}

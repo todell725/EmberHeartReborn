@@ -1,0 +1,166 @@
+{
+    "id": "EH_SQ_535",
+    "title": "The Medical Conspiracy",
+    "difficulty": "Medium",
+    "xp_reward": 1100,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_452",
+            "EH_SQ_453"
+        ],
+        "items_required": []
+    },
+    "location": "Medical Quarter -> High Ward -> Lower Ward -> Service District",
+    "district": "Medical Quarter",
+    "thread": "Standalone",
+    "description": "A Medical Quarter nursing aide comes to you in private. She has found systematic discrepancies across six doctors who collectively manage the Medical Quarter's patient transfer system: patients assessed as 'critical' are being transferred to private High Ward care at rates four times higher than any clinical guideline justifies, while Low Ward patients with equivalent conditions are marked 'stable' and placed in waiting patterns. The aide believes some doctors are receiving payments to preferentially transfer High Ward patients to premium beds. Dr. Vel is not among the suspect doctors \u2014 but two of them report to her division.",
+    "key_npcs": [
+        "Dr. Vel",
+        "Nursing Aide Calla",
+        "Warden Astrid",
+        "Medical Quarter Director Sela",
+        "High Ward Private Care Administrator"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Calla has been documenting discrepancies for four months before coming to you. She is precise and frightened \u2014 she works with two of the six suspect doctors. Her documentation: 84 patient transfer records spanning six months, cross-referenced against clinical assessment notes, showing a statistical pattern that would require deliberate intervention to produce. The probability of this occurring by coincidence alone is, per her calculation, less than 0.3%. She is not wrong. You review her work. She is methodical and has been careful not to make accusations beyond what the data shows.",
+            "choice_a": "Bring Calla's documentation directly to Dr. Vel and ask for her assessment",
+            "consequence_a": "Vel studies the data for two hours in silence. When she looks up, she says: 'If this is accurate and I didn't catch it, I failed my patients. If it is accurate and someone in my division did catch it and stayed quiet, it is something worse.'",
+            "choice_b": "Bring the documentation to Warden Astrid before going to any Medical Quarter authority \u2014 the Ward investigation should precede internal review",
+            "consequence_b": "Astrid assigns you as lead investigator immediately and requests Medical Quarter Director Sela be notified in parallel \u2014 a co-investigation approach that prevents internal suppression."
+        },
+        {
+            "turn": 2,
+            "narrative": "The six suspect doctors are: two senior physicians in Vel's division, three in the patient-flow management section, and one in the critical care rapid assessment unit. The critical care physician \u2014 Dr. Lorn \u2014 has the highest rate of anomalous assessments. He is also the Medical Quarter's most publicly decorated doctor, with three Ward Civic Recognition commendations. His reputation is impeccable. Which means either he is innocent and his data is being misread, or someone very careful has been operating behind an excellent reputation.",
+            "choice_a": "Begin with the two doctors in Vel's division \u2014 closest to trustworthy oversight, easiest to investigate closely",
+            "consequence_a": "Both are found to have financial relationships with the High Ward private care facility's parent company \u2014 disclosed as investments, potentially not conflicts of interest but definitely not disclosed to patients.",
+            "choice_b": "Begin with Dr. Lorn \u2014 the highest anomaly rate is the most important data point",
+            "consequence_b": "Lorn's patient files for the past two years are reviewed by an independent clinical panel. Forty-three assessments are flagged as potentially inconsistent with standard clinical criteria."
+        },
+        {
+            "turn": 3,
+            "narrative": "The High Ward private care facility receives a significant number of the anomalous transfers. It is owned by the Morren Family \u2014 a High Ward trading family whose name you have seen in previous investigations, most recently in a property record connected to an estate that received Void-Wine supplier payments. The Morren Family's private care facility appears to be the financial engine: they pay referral fees to doctors who transfer appropriate (wealthy) patients to their private beds.",
+            "choice_a": "Obtain the private care facility's financial records through a Ward Trade Authority request",
+            "consequence_a": "Six months of external transfer payment records show forty-two payments to Medical Quarter doctors totalling 3,200 gold. Seven payees are identifiable.",
+            "choice_b": "Commission an undercover visit to the High Ward private care facility posing as a wealthy patient's representative",
+            "consequence_b": "A facility administrator makes reference to a 'referral network' of trusted Medical Quarter doctors, offering a 'priority placement arrangement' for appropriate patients."
+        },
+        {
+            "turn": 4,
+            "narrative": "The financial records or the undercover evidence confirm the conspiracy's structure: a referral fee system connecting six Medical Quarter doctors to the Morren Family's private facility. Lower Ward patients with equivalent clinical status are being held in the public system \u2014 sometimes deteriorating while they wait \u2014 to preserve premium beds for fee-paying referrals. Three specific cases show patients whose delayed access to appropriate care resulted in worsened outcomes. One patient died. Their family does not know.",
+            "choice_a": "Notify the affected families immediately \u2014 they deserve to know before any formal proceeding happens",
+            "consequence_a": "The deceased patient's family is notified by Vel personally. The response is grief and fury \u2014 but the family participates constructively in the subsequent investigation once they understand it is serious.",
+            "choice_b": "Secure all evidence and proceed to formal prosecution before notification \u2014 premature disclosure could compromise the case",
+            "consequence_b": "Director Sela agrees with this approach reluctantly. Formal proceedings are initiated. Notification is scheduled for the first day of formal charges."
+        },
+        {
+            "turn": 5,
+            "narrative": "Director Sela implements an immediate internal suspension of all six suspect doctors pending investigation \u2014 a significant administrative action. This creates an immediate staffing crisis in the Medical Quarter: six doctors covering critical patient populations are suddenly unavailable. Emergency cover protocols are activated. Dr. Vel takes on additional oversight responsibility. The conspiracy is exposed but its immediate consequence is a healthcare capacity crisis.",
+            "choice_a": "Work with Vel and Sela to coordinate emergency staffing coverage from the Academic Quarter's medical training programme",
+            "consequence_a": "Twelve senior medical students are authorised for supervised emergency practice. Staffing reaches 85% of normal capacity within two days.",
+            "choice_b": "Recommend only the three doctors with confirmed financial evidence be suspended \u2014 maintain staffing stability during the investigation",
+            "consequence_b": "The three confirmed doctors are suspended. Three others remain on closely supervised duty until evidence conclusively includes them."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Morren Family's legal team intervenes immediately. They argue the referral fees are standard private care business practice, not illegal inducements, and that proving the link to clinical decision-making requires establishing intent \u2014 a high legal bar. They are correct that this is a complex evidentiary question. But Dr. Lorn, under formal interview with his legal representative, makes a significant mistake: he references 'patient suitability assessment criteria' that do not exist in any Medical Quarter document. He has fabricated an official-sounding justification.",
+            "choice_a": "Press Lorn on the fabricated criteria immediately \u2014 this is a material misrepresentation in a formal interview",
+            "consequence_a": "Lorn's legal representative requests an immediate recess. When the interview resumes, Lorn provides a partial account that confirms the referral fee arrangement.",
+            "choice_b": "Document the fabricated criteria reference and present it to the prosecutorial team as evidence of knowing misrepresentation",
+            "consequence_b": "The fabricated criteria become the prosecution's clearest evidence of deliberate intent \u2014 Lorn would only fabricate justification documents if he knew he needed to explain away his conduct."
+        },
+        {
+            "turn": 7,
+            "narrative": "The independent clinical panel's review of Lorn's forty-three flagged assessments is complete. The findings: sixteen assessments were clinically defensible, albeit at the conservative end of standard practice. Twenty-seven were not clinically defensible by any standard interpretation. Those twenty-seven represent the clearest evidence of deliberate under-assessment of public system patients to protect private bed availability. The panel report is unusually direct for academic medicine: it states that the deviation from clinical standard 'cannot be attributed to clinical judgment variance.'",
+            "choice_a": "Present the panel's report to Director Sela with a recommendation for Lorn's permanent licence revocation",
+            "consequence_a": "Sela endorses the recommendation. Lorn's licence is formally suspended pending full hearing. He will not practice again.",
+            "choice_b": "Present the panel's report to the prosecution team and let the criminal and licence proceedings run simultaneously",
+            "consequence_b": "Dual track proceedings are complex but comprehensive. Lorn faces both criminal charges and licence revocation simultaneously."
+        },
+        {
+            "turn": 8,
+            "narrative": "Calla watches the development of the case she initiated with what can only be described as careful relief. She is aware that she will be identified as the originating source when formal proceedings become public \u2014 an inevitability that frightens her. Three other Medical Quarter staff have privately come forward with corroborating information since the investigation became known internally. Calla has effectively created a whistleblower network without intending to.",
+            "choice_a": "Ensure Calla has formal whistleblower protection and legal support before proceedings become public",
+            "consequence_a": "Ward whistleblower protection is invoked. Calla is given legal representation at Ward expense. Her identity is shielded for the maximum permitted period.",
+            "choice_b": "Recommend Calla be formally commended in the investigation record \u2014 her courage initiated a prosecution that will change the Medical Quarter",
+            "consequence_b": "A formal commendation is filed. Director Sela adds a specific Medical Quarter recognition. Calla receives this quietly, asking that the ceremony be private."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Morren Family's private care facility faces parallel regulatory action. The Ward Trade Authority is investigating the referral fee system as unlicensed commercial inducement \u2014 potentially fraudulent if the fees were intended to influence clinical decisions. The Morren Family's legal defence is sophisticated and their connections in the High Ward are extensive. But the forty-two payment records and the undercover account create a strong evidentiary base.",
+            "choice_a": "Actively support the Trade Authority's investigation with your own investigation's evidence sharing",
+            "consequence_a": "The combination of evidence is overwhelming. The Morren Family settles \u2014 significant financial penalty, mandatory compliance reform, and referral fee system permanently discontinued.",
+            "choice_b": "Focus on the doctors' prosecution and let the Trade Authority handle the Morren Family independently",
+            "consequence_b": "Both prosecutions proceed independently. Medical conspiracy charges are pursued against the doctors. The Morren Family faces a separate regulatory action six weeks later."
+        },
+        {
+            "turn": 10,
+            "narrative": "The deceased patient's family has been notified and, devastated but engaged, is participating in the investigation. They want a formal public inquiry into how a decade of systematic under-assessment of Lower Ward patients was invisible to the Medical Quarter's oversight system. Dr. Vel has requested to chair such an inquiry herself \u2014 acknowledging that something in her division's culture allowed this to persist. [SIGNIFICANT DECISION \u2014 the shape of the public inquiry determines what systemic change actually happens]",
+            "choice_a": "Support Vel's self-driven inquiry \u2014 her willingness to investigate her own division's failure is exactly the right instinct",
+            "consequence_a": "Vel's inquiry is the most comprehensive internal review the Medical Quarter has ever conducted. It produces fifteen structural reforms in patient assessment oversight.",
+            "choice_b": "Recommend the inquiry be externally chaired \u2014 Vel's involvement as chair creates an actual or apparent conflict",
+            "consequence_b": "An external chair \u2014 a retired Ward Justice \u2014 leads the inquiry with Vel as a key but non-chairing participant. The independence strengthens the final recommendations."
+        },
+        {
+            "turn": 11,
+            "narrative": "The six doctors' cases are resolved over four months. Three \u2014 including Lorn \u2014 face criminal charges for endangerment and fraud. Three receive civil proceedings and permanent licence conditions. The Morren Family's facility is fined and reformed. The Medical Quarter implements seven immediate patient assessment reforms. Calla is promoted to supervisory role in patient advocacy \u2014 a new function created by Director Sela explicitly because the conspiracy was identified by someone in that informal role. Systemic change from individual courage.",
+            "choice_a": "Attend the formal conclusion ceremony where Sela announces the Medical Quarter reforms",
+            "consequence_a": "Sela names Calla publicly as the person who initiated the investigation. The room's response is quiet and genuine.",
+            "choice_b": "Let Calla have her moment without your presence \u2014 the story is hers, not yours",
+            "consequence_b": "You hear about the ceremony from Dr. Vel the next day. Vel says Calla received a standing ovation."
+        },
+        {
+            "turn": 12,
+            "narrative": "Sitting in Vel's office six months after Calla first walked in with a folder of patient transfer records, you review the Medical Quarter's first post-reform patient assessment audit. The anomaly rate \u2014 the deviation from clinical standard in assessment decisions \u2014 has fallen by 67%. The private care facility's referral system is discontinued. Lower Ward patients' access to appropriate critical care has improved measurably. Three families have received formal apologies. One family chose not to accept the apology but sent a letter to Director Sela that said: 'We don't want apologies. We want it fixed. It has been fixed.' Vel puts the letter down and says: 'That's enough.' She means it.",
+            "choice_a": "Formally document the conspiracy and its resolution as a Medical Quarter institutional learning document",
+            "consequence_a": "The case becomes a Ward-wide training reference for clinical integrity oversight. Calla co-authors the document.",
+            "choice_b": "Submit your investigation report and step back \u2014 the Medical Quarter's recovery is theirs now",
+            "consequence_b": "The report is complete. The Medical Quarter is in good hands. The next problem is already waiting."
+        }
+    ],
+    "branching_outcomes": {
+        "full_prosecution": {
+            "description": "Six doctors prosecuted. Morren Family settled. Fifteen structural reforms. Patient advocacy function created.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Medical Quarter": 45,
+                    "Lower Ward": 30,
+                    "High Ward": -20
+                },
+                "item_reward": "Calla's Patient Transfer Evidence Dossier"
+            }
+        },
+        "reform_inquiry": {
+            "description": "Three doctors criminally charged. External inquiry produced twelve reforms. Morren Family fined.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Medical Quarter": 38,
+                    "Lower Ward": 25
+                },
+                "item_reward": "Medical Quarter Reform Package"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 250,
+            "reputation_change": {
+                "Medical Quarter": -30,
+                "Lower Ward": -20
+            }
+        },
+        "critical_failure": "Calla's identity is exposed before protection is invoked. She loses her position. The case does not proceed."
+    },
+    "loot_table": [
+        "Calla's Patient Transfer Evidence Dossier",
+        "Medical Quarter Reform Package",
+        "Clinical Panel Report",
+        "Patient Advocacy Charter",
+        "Morren Referral Fee Records",
+        "1100x Gold Coins"
+    ],
+    "conclusion": "Six doctors prosecuted. Morren Family settled. Fifteen structural reforms. Patient advocacy function created."
+}

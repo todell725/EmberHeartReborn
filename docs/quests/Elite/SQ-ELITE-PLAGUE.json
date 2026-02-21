@@ -1,0 +1,184 @@
+{
+    "id": "SQ-ELITE-PLAGUE",
+    "title": "The Crimson Rot Outbreak",
+    "difficulty": "Elite",
+    "xp_reward": 4700,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-004",
+            "SQ-008",
+            "SQ-012"
+        ],
+        "district_reputation": {
+            "Lower Ward": 40,
+            "Market Ward": 40
+        },
+        "settlement_health": 40
+    },
+    "location": "Lower Ward -> Market Ward -> High Ward (quarantine zones)",
+    "thread": "Settlement Crisis",
+    "estimated_duration": "4 hours",
+    "mechanics_featured": [
+        "Infection Management System",
+        "District Quarantine Logic",
+        "Timed Cure Research",
+        "20-Turn Progression"
+    ],
+    "branching_outcomes": {
+        "cure_found": {
+            "description": "Developed and distributed the cure in time.",
+            "effects": {
+                "settlement_health": 100,
+                "settlement_morale": 50
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Emberheart becomes immune to Scourge-based diseases.",
+                "item_reward": "Panacea Vial (Artifact)"
+            }
+        },
+        "purge_infected": {
+            "description": "Failed to find cure. Purged the infected districts with fire.",
+            "effects": {
+                "settlement_health": 50,
+                "settlement_morale": -80,
+                "settlement_population": -30
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Lower Ward destroyed by fire. Survivors hate the government.",
+                "item_reward": "Purifier's Flamethrower"
+            }
+        },
+        "let_it_burn_out": {
+            "description": "Quarantined the city and let the rot run its course.",
+            "effects": {
+                "settlement_health": -50,
+                "settlement_population": -50
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Half the city's population dies. Massive economic collapse.",
+                "item_reward": "None"
+            }
+        }
+    },
+    "loot_table": [
+        "Panacea Vial (Artifact - cures any status effect endlessly)",
+        "Plague-Doctor's Mask (Legendary helmet - immune to airborne toxins)",
+        "The Rot-Whip (Legendary weapon - inflicts disease)",
+        "Experimental Stimulants (Artifact - permanently increase max AP)",
+        "4000 Gold"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: Patient Zero",
+            "narrative": "A beggar collapses in the Market Ward square, coughing up blood that smokes when it hits the cobblestones. Within minutes, five others nearby collapse with the same symptoms. The air smells sharply of ozone and rotting fruit. The Crimson Rot has breached Emberheart."
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: Patient Zero",
+            "narrative": "The Warden Council summons you. The city's medical supplies are completely ineffective against Scourge-mutated pathology. The Rot spreads through the air and via physical contact. The rate of infection is geometric. You must take control of the quarantine efforts."
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: Patient Zero",
+            "narrative": "You deploy guards to lock down the Market Ward. A panic ensues. Citizens riot against the barricades. You must use intimidation or diplomacy to hold the line, while physically carrying the most infectious victims to the makeshift isolation hospital."
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: Patient Zero",
+            "narrative": "Doctor Vane (or his successor) identifies the vector: a shipment of tainted grain from the Fringe. The grain is already dispersed throughout the Lower Ward bakeries. The incubation period is hours, not days. The clock is ticking."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 2: The Search for a Cure",
+            "narrative": "You must lead an expedition into the quarantined Lower Ward to find the original tainted grain sacks. The streets are a nightmare. The infected have mutated into 'Rot-Walkers,' aggressive husks seeking to spread the disease through biting."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 2: The Search for a Cure",
+            "narrative": "BOSS 1: The Plague-Host. The baker who first touched the grain has warped into a massive, spore-spewing horror. You must defeat it while wearing heavy bio-hazard masks that restrict your vision and stamina."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 2: The Search for a Cure",
+            "narrative": "With the Host dead, you secure the original grain sample. You rush it back to the Citadel laboratory. The research mini-game begins: you must allocate doctors and resources to different research paths (Antibodies, Scourge-neutralization, or Magic)."
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: The Search for a Cure",
+            "narrative": "The infection counter ticks up. 10% of the city. The hospitals are overflowing. The High Ward nobles demand the bridges to the lower districts be destroyed. You must use political influence to stall them."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: The Search for a Cure",
+            "narrative": "The research hits a wall. The cure requires a stabilizing agent: pure essence of an intact Scourge-Stalker brain gland. The only known nest is in the deep sewers beneath the city, directly below the quarantine zone."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 3: The Deep Sewers",
+            "narrative": "You descend into the sewers with your elite squad. To conserve oxygen filters, you must move quickly. The environment is heavily irradiated with Scourge-energy, making the Rot-Walkers down here faster and deadlier."
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 3: The Deep Sewers",
+            "narrative": "You find the nest. It's an entire hive structure built from bone and bio-resin. You must stealthily extract the brain gland from a sleeping Stalker, or go in loud and risk destroying the gland in the crossfire."
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 3: The Deep Sewers",
+            "narrative": "BOSS 2: The Broodmother Stalker. It awakens as you extract the gland from a drone. A brutal fight in knee-deep toxic water. The Broodmother can summon swarms of infected vermin. You use fire to keep the swarms back while focusing on her."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 3: The Deep Sewers",
+            "narrative": "You secure the gland and race back to the surface. The infection is now at 40%. The riots have broken through the Market Ward barricades. The healthy and infected are mixing. Total collapse is imminent."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 3: The Deep Sewers",
+            "narrative": "You deliver the gland to the lab. The alchemists begin synthesizing the cure. It takes 3 turns to brew. During this time, you must defend the laboratory from a massive mob of panicked citizens demanding the cure before it's ready."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 4: Distribution or Destruction",
+            "narrative": "The mob breaches the outer courtyard. BOSS 3: The Panicked Horde. A non-lethal defense encounter. You must use stun magic, riot shields, and barricades to hold off the desperate citizens without slaughtering them."
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 4: Distribution or Destruction",
+            "narrative": "The cure is finished. A single, glowing vial. But it cannot be mass-produced in time. It must be aerosolized using the central steam-vents of the city, which are currently controlled by a cult that believes the Rot is a 'cleansing fire.'"
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 4: Distribution or Destruction",
+            "narrative": "You storm the central steam-works. The cultists have rigged the pressure valves to blow the facility if approached. You must navigate a complex trap maze while rushing the vial to the central intake."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 4: Distribution or Destruction",
+            "narrative": "BOSS 4: The Cult Leader of the Rot. He has willingly infected himself and commands powerful rot-magic. He guards the intake valve. You must break his magical wards while his followers try to tackle you into the steam vents."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 4: Distribution or Destruction",
+            "narrative": "You defeat the Cult Leader. You stand at the intake valve. You have the cure. However, the High Council sends a final message: 'The Lower Ward is lost (80% infected). Burn it. Do not risk the rest of the city with an untested aerosol.' You must decide."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 4: Distribution or Destruction",
+            "narrative": "You enact your choice (Distribute Cure / Purge / Let it Burn). If you distribute the cure, the blue anti-spores flood the city, curing the sick instantly. If you purge the ward, the sky turns black with ash. The crisis is over, but Emberheart is changed forever."
+        }
+    ],
+    "description": "The Crimson Rot, a rapidly spreading Scourge-mutated pathology, has breached the city. You must manage quarantines, research a cure, and deal with mass panic.",
+    "conclusion": "Developed and distributed the cure in time.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

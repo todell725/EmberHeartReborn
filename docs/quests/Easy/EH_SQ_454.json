@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_454",
+    "title": "The Doctor Who Wasn't There",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Medical Quarter -> The Research Clinic",
+    "district": "Medical Quarter",
+    "thread": "Standalone",
+    "description": "Lead researcher Dr. Vel has not reported to the Research Clinic in four days. She lives alone, had no scheduled leave, and her current research on Scourge-wound treatment regeneration is at a critical stage. Director Sela wants her found discreetly before her absence creates panic in the department.",
+    "key_npcs": [
+        "Director Sela",
+        "Missing Dr. Vel",
+        "Lab Assistant Finn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Dr. Vel's home in the Academic Quarter is locked. Her lab notes are still at the clinic \u2014 suggesting she did not plan to leave. Lab assistant Finn says she was excited about a breakthrough on day three and then simply did not come in on day four. No signs of struggle anywhere in the clinic.",
+            "choice_a": "Check Dr. Vel's personal calendar and correspondence for any planned meetings",
+            "consequence_a": "Her calendar shows a private notation: 'Follow-up: Fringe Sample Site, morning.' She went to the Scourge Fringe alone.",
+            "choice_b": "Ask Finn if Vel said anything unusual on day three",
+            "consequence_b": "Finn recalls Vel saying she needed to verify something 'in the field' about a specific type of Scourge-tissue she had been studying."
+        },
+        {
+            "turn": 2,
+            "narrative": "Vel went to the Scourge Fringe alone to collect a follow-up tissue sample. This is against protocol. You need to find her before nightfall when the Fringe becomes genuinely dangerous.",
+            "choice_a": "Head to the Fringe immediately following her likely route from her calendar notation",
+            "consequence_a": "You find Vel two kilometres into the Fringe, entirely absorbed in scraping samples from a section of Scourge-growth. She hadn't realised how long she'd been there.",
+            "choice_b": "Inform a Fringe patrol to search the eastern Fringe sector while you search the west",
+            "consequence_b": "The patrol finds Vel an hour later but you coordinate the recovery. She is safe and mildly embarrassed."
+        },
+        {
+            "turn": 3,
+            "narrative": "Vel is safe and her samples are extraordinary. But she broke two serious protocols.",
+            "choice_a": "Support Vel's formal apology to Director Sela and ask for leniency given the significance of the samples",
+            "consequence_a": "Sela accepts the apology. Vel's results are so promising that the incident is closed with a written warning.",
+            "choice_b": "Recommend Director Sela update field research protocols to prevent solo Fringe excursions",
+            "consequence_b": "Sela implements a mandatory buddy-system for all field research. Vel endorses the change."
+        }
+    ],
+    "branching_outcomes": {
+        "vel_leniency": {
+            "description": "Vel given written warning. Breakthrough samples secured.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Scourge Tissue Sample",
+                "reputation_change": {
+                    "Medical Quarter": 14
+                }
+            }
+        },
+        "protocol_updated": {
+            "description": "Field research buddy-system mandatory. Vel endorses it.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Research Clinic Access Badge",
+                "reputation_change": {
+                    "Medical Quarter": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Scourge Tissue Sample",
+        "Research Clinic Access Badge",
+        "170x Gold Coins"
+    ],
+    "conclusion": "Vel given written warning. Breakthrough samples secured."
+}

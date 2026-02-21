@@ -1,0 +1,205 @@
+{
+    "id": "SQ-165",
+    "title": "The Frozen Moment",
+    "difficulty": "Medium",
+    "xp_reward": 1150,
+    "thread": "Chronos",
+    "district": "North Ward",
+    "estimated_duration": "2-3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-116"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete EH_SQ_016 (Chronos thread entry quest)",
+    "location": "North Ward \u2014 'The Chronal Pint' tavern and its extended temporal field",
+    "npcs": [
+        {
+            "name": "Barkeep Luda Fell",
+            "role": "Victim (looped)",
+            "description": "The Chronal Pint's proprietor, caught mid-pour at the start of the loop, aware of the loop (she has experienced it approximately 4,000 times), exhausted in a way that transcends physical tiredness. She can communicate between iterations but cannot act outside a 3-second window."
+        },
+        {
+            "name": "The Loop Echo",
+            "role": "Boss",
+            "description": "A temporal duplicate of one party member \u2014 specifically the one who has most recently touched the Liquid Chronos sample, or failing that, the one with the highest Arcana score. The Echo is not malicious; it is a causal artifact of the loop's repeated exposure to the same person's decision moment. It defends the loop's integrity because that is what causal loops do."
+        },
+        {
+            "name": "Investigator Soli Yan",
+            "role": "External contact",
+            "description": "Chronos-thread investigator who has been monitoring the Chronal Pint since the loop began 9 days ago. She has tried and failed to enter the loop field three times \u2014 it ejects entities that haven't been inside when the loop folded. She briefs the party outside and will debrief afterward."
+        }
+    ],
+    "description": "The Chronal Pint tavern in the North Ward has been stuck in a 3-second loop for nine days. From outside: the tavern's windows show the same moment of activity repeating endlessly \u2014 patrons frozen at the exact position they occupied when the loop folded. From inside (Investigator Yan's one successful entry, two years before the loop began, allows her to confirm): the people inside are conscious, aware, and experiencing subjective time \u2014 each 3-second loop passes as a full subjective second for them, meaning the loop's nineteen affected patrons have experienced approximately 140 subjective hours of conscious existence in the same 3-second moment. They are exhausted, frightened, and Barkeep Luda Fell has been counting loops: she is at approximately 4,200 and stopping. The party must enter the loop, find the causal artifact that created it (an old Concordat chronal instrument dropped during the original 3 seconds), and break the cycle \u2014 while surviving the Loop Echo's defense of the timeline.",
+    "mechanics": [
+        "Arcana (identify the loop's causal mechanism; locate the chronal instrument; interact with Loop Echo)",
+        "Investigation (search the frozen tavern for the causal artifact)",
+        "Persuasion (communicate with Luda Fell across loop iterations; potentially negotiate with the Loop Echo)",
+        "Insight (understand the Loop Echo's defensive logic \u2014 it can be reasoned with if the party understands what it is protecting)",
+        "Combat (Loop Echo \u2014 Medium encounter; has mirror copies of the party member's abilities at 75% effectiveness)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Loop broken",
+            "effect": "settlement_morale +2; 19 patrons released from 140+ subjective hours of temporal imprisonment; Chronal Pint reopens"
+        },
+        {
+            "trigger": "Chronal instrument recovered",
+            "effect": "Key Chronos thread artifact added to party inventory"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Investigator Soli Yan meets the party at the north entrance to the Chronal Pint's street. The tavern looks normal except for its absolute stillness \u2014 no smoke from the chimney, no sound, a quality of frozen presence that is immediately unsettling to anyone with Arcana. She has been monitoring it for nine days on Chronos thread assignment. What she knows: the loop began at 8:14 PM nine days ago during a normal evening service. Nineteen people inside. The loop is 3.2 seconds of objective temporal duration, repeating continuously. Inside the loop, subjective time passes differently \u2014 she estimates the occupants are experiencing approximately one subjective second per objective loop cycle. That means they have experienced approximately 140 hours of conscious awareness within the same 3.2-second window. She has tried to enter three times. Each attempt ejects her at the loop boundary. She believes the loop will accept people who weren't there when it formed, under one condition: they must cross the threshold during the 0.4-second window at the loop's peak resonance point.",
+            "choice_a": "Ask Yan for everything she knows before entering",
+            "consequence_a": "She provides: loop peak resonance occurs every 40 seconds (precisely timed by her watch). The tavern's interior geometry will be frozen at loop-moment state. The Concordat chronal instrument she suspects as the cause is a handheld calibration device \u2014 roughly book-sized, copper-silver casing \u2014 that was being examined by a patron at the bar when the loop folded. She doesn't know where it landed.",
+            "choice_b": "Enter immediately on the next resonance peak",
+            "consequence_b": "You cross the threshold. The loop interior snaps around you. The 3.2-second cycle begins \u2014 you have approximately 3 seconds of objective time per cycle, with the subjective experience of those 3 seconds stretching as you acclimate.",
+            "convergence": "The party crosses the loop threshold during the resonance peak. The Chronal Pint's interior is visible \u2014 frozen mid-motion, patrons caught in every position of an ordinary evening."
+        },
+        {
+            "turn": 2,
+            "narrative": "Inside the loop, physics is almost normal but not quite. The 3.2-second cycle resets the physical state of everything that was in the original moment \u2014 objects return to their loop-start position, spilled drinks un-spill, a chair mid-fall rights itself. But the party, as entities that entered after the loop formed, are exo-loop. They do not reset. They accumulate: each cycle they retain memory and physical state while everything else returns to start. The 19 patrons are aware and unresetting too \u2014 they're also exo-loop by virtue of long-term exposure. Luda Fell is behind the bar, mid-pour, glass tilted. Each cycle she is returned to that position \u2014 but her eyes are alert and exhausted. She is watching you come in. When the cycle resets and you appear again in her field of view, she mouthing something toward you. It takes three cycles to parse: 'It's under the third booth.'",
+            "choice_a": "Go immediately to the third booth",
+            "consequence_a": "Investigation check DC 11 (low, because you know where to look). Under the booth's table: a copper-silver device, handbook-sized, wedged against the wall where it slid when dropped. Active \u2014 faintly luminescent, radiating the loop's causal field.",
+            "choice_b": "Communicate with Luda Fell more fully before moving",
+            "consequence_b": "Over 8-10 cycles you piece together: the device was brought in by a patron (now caught mid-reach at booth three), was being examined, was dropped when someone jostled the table. Luda knew what it was \u2014 she has seen Chronos instruments before. She saw it activate when it hit the floor. She says: 'Don't touch it directly. Use something non-conductive.'",
+            "convergence": "The Concordat chronal instrument's location is confirmed. Approaching it reveals the challenge: the Loop Echo is already aware of your approach."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Loop Echo materializes between the party and the third booth on the cycle after you identify the device's location. It is a perfect duplicate of one party member \u2014 rendered in slightly translucent blue-copper tones, moving with mirror-image precision of the original. It does not speak. It places itself between you and the device and adopts a defensive position. Arcana DC 13 identifies what this is: a causal feedback construct \u2014 the loop has been processing the same decision-moment for 9 days using the temporal energy of the instrument. The Echo is the loop's 'correct decision' outcome given physical form \u2014 it represents what would have happened in the timeline the loop is trying to preserve. It defends the device because the loop's integrity requires the device to remain active. If the device is deactivated, the Echo ceases to exist. This is not malice \u2014 it is the logical behavior of a causal artifact.",
+            "choice_a": "Attempt to communicate with the Echo \u2014 it shares the party member's reasoning, so it may be persuadable",
+            "consequence_a": "The Echo understands language. Insight DC 14 to find the right framing: 'The loop's preservation is causing harm to nineteen people who have experienced 140 hours of imprisonment. Dissolution of the loop is the correct causal outcome.' The Echo is still for two cycles. Then it shifts \u2014 not attacking, not defending, waiting. The argument has registered.",
+            "choice_b": "Engage the Echo in combat to clear the path to the device",
+            "consequence_b": "Combat begins. The Echo has the originating party member's ability scores at 75% effectiveness and copies their combat style. It cannot be damaged by the originating party member (causal duplication protection) \u2014 other party members must deal damage. At 0 HP, the Echo dissipates into the loop field.",
+            "convergence": "The Echo is either reasoned with or defeated. The path to the chronal instrument is open."
+        },
+        {
+            "turn": 4,
+            "narrative": "If the Echo was persuaded: it does something unusual. It picks up an object from the bar \u2014 a simple cloth \u2014 and holds it out toward the party. Luda Fell's earlier instruction: 'Don't touch it directly. Use something non-conductive.' The Echo is providing the implementation detail for its own dissolution. It understands what the correct outcome is and is cooperating with it. When the cloth is accepted, the Echo fades to near-invisible \u2014 still present but no longer defensive. This is one of the more strange moments in the Chronos thread: a temporal artifact helping to end itself because the logic of doing so is correct. Arcana DC 15 to operate the chronal device using the cloth as insulation \u2014 preventing the loop field from using the party as additional causal anchors.",
+            "choice_a": "Deactivate the device carefully, following the Echo's implicit guidance",
+            "consequence_a": "Arcana DC 15. On success: the device deactivates cleanly. The loop field collapses. The 3.2-second moment completes and allows time to resume. The Echo dissipates with what Insight DC 12 identifies as something functionally equivalent to relief.",
+            "choice_b": "Attempt to extract the device active and intact \u2014 study it before deactivating",
+            "consequence_b": "Arcana DC 17 to extract without triggering a loop-collapse event. On success: device preserved active (extremely valuable research artifact). On failure: the loop collapses uncontrolled \u2014 a rough exit that deals 2d8 temporal recoil damage to all exo-loop entities.",
+            "convergence": "The chronal instrument's fate is determined. Deactivation or extraction \u2014 either ends the loop."
+        },
+        {
+            "turn": 5,
+            "narrative": "Loop collapse: time resumes in the Chronal Pint with a sound like a held breath releasing. The 19 patrons \u2014 who have been experiencing conscious awareness for 140 subjective hours within 3.2 seconds \u2014 complete their original motions. Several stumble. One sits down on the floor and does not get up immediately. Luda Fell completes her pour; the glass fills; she sets it down with the careful deliberateness of someone doing it for the 4,200th and last time. She looks at the party without theatrical expression. She has been waiting to look at a face that wasn't looped for nine objective days and 140 subjective hours. She says, very quietly: 'I knew the loop count. Four thousand two hundred and thirty-seven. I kept counting so I'd have something to do.' A pause. 'Would someone like to order a drink?'",
+            "choice_a": "Stay and help the patrons recover; some are in significant distress",
+            "consequence_a": "Medicine and Persuasion checks over the following 2 hours assist the most affected patrons. Two of the nineteen need additional medical support. Dr. Solt (if she is a contact) can be summoned. The party's presence during the recovery is noted by all nineteen survivors.",
+            "choice_b": "Exit and debrief with Investigator Yan immediately \u2014 the causal mechanism needs to be understood",
+            "consequence_b": "Yan gets immediate access to the party's first-hand account. Her analysis of the instrument and their description of the Echo is extremely valuable for the Chronos thread investigation. She is composed and grateful at the same time.",
+            "convergence": "Investigator Yan meets the party at the door. She has been watching the external manifestation of the collapse from the street. She says: 'Nine days. I was outside for nine days.' She doesn't say more for a moment."
+        },
+        {
+            "turn": 6,
+            "narrative": "Investigator Yan's debrief: the chronal instrument the party recovered is identifiable from Chronos Division records she has compiled. It is a Concordat temporal calibration device \u2014 used by the Chronos Division to synchronize localized time fields during infrastructure construction. There were several dozen produced. All were supposed to be decommissioned at the end of the Reconstruction Era. This one wasn't. She traces its provenance from existing records: it was last logged in a Chronos Division archive 190 years ago, then disappeared from records. It appeared in this tavern in the hands of a patron who bought it from a used-goods dealer in the Academic Quarter three weeks ago. The dealer doesn't have records of where they acquired it. But Yan's timeline of 'appeared in circulation 3 weeks ago' aligns with the Squeaker-Box reactivation event from EH_SQ_072: approximately the same period that Vane began interacting with active Concordat systems.",
+            "choice_a": "Provide Yan with everything the party knows about Vane and the Concordat system reactivation timeline",
+            "consequence_a": "Yan processes this rapidly. She connects Vane's mana-grid relay booster (from EH_SQ_077 if the party found it) to the Chronal Pint's location directly above the booster's signal origin. The temporal loop was not a accident from the instrument \u2014 the instrument was activated by the booster signal. Vane's transmissions through the North Ward mana-junction have been causing temporal disturbances as a side effect.",
+            "choice_b": "Share partial information \u2014 let Yan develop her analysis from the instrument alone",
+            "consequence_b": "Yan's analysis reaches the instrument-as-active-artifact conclusion but without the Vane connection. She will develop it independently within 2 weeks. The party leads the investigation by that margin.",
+            "convergence": "The Chronal Pint's loop is understood: Vane's mana-grid transmissions are causing temporal side effects in the North Ward. The mana-junction beneath the Chronal Pint is directly linked."
+        },
+        {
+            "turn": 7,
+            "narrative": "Luda Fell's testimony, taken formally over the following day: she recognized the instrument when the patron brought it in to show at the bar. She has seen one before. Her grandmother \u2014 a North Ward resident in the previous generation \u2014 had a similar device. 'She used to say it was a legacy piece. From the family that used to work the North Ward infrastructure.' Luda's family name is Fell. The Concordat Chronos Division, according to Yan's records, had a roster of maintenance technicians. The records are partial, but one name appears repeatedly in North Ward infrastructure logs: a senior technician named Arda Fell. Luda Fell is the descendant of a Concordat Chronos Division technician. The instrument that caused the loop may have passed through her family for 200 years before someone sold it.",
+            "choice_a": "Tell Luda who her grandmother's family was",
+            "consequence_a": "Luda is quiet for a long time. 'So the thing that trapped me in a 3-second loop for nine days was my own family's equipment.' She considers this. 'That is extremely my family.' She becomes a willing source of any other family-legacy items she knows of. There are two more, kept in storage.",
+            "choice_b": "Keep the family connection as intelligence for the Chronos thread investigation",
+            "consequence_b": "The Fell family connection is documented but not disclosed to Luda. The two additional stored items are not immediately surfaced.",
+            "convergence": "The Fell family legacy represents an unexpected human thread through the Concordat infrastructure story."
+        },
+        {
+            "turn": 8,
+            "narrative": "The mana-junction beneath the Chronal Pint \u2014 flagged in both the EH_SQ_077 infrastructure assessment and Yan's independent analysis \u2014 requires direct examination. With Fen Moss's cooperation (if available) or by identifying the access point independently, the party descends into the North Ward mana-junction. It is older than the Market Ward B-7 tunnels: deeper, cooler, with Concordat ceramic channels that are much more active \u2014 the warmth Fen described as 'normal for old sections' is much more pronounced here. The signal relay booster (if not already disabled in EH_SQ_077) is present: a Concordat-era device installed in the Chronos Division's original infrastructure, recently serviced, transmitting on the V.A. protocol header. The Concordat temporal calibration device (if active) resonates with the booster signal. They were designed to work together.",
+            "choice_a": "Disable the relay booster \u2014 stop Vane's transmissions at this junction",
+            "consequence_a": "The North Ward temporal disturbances stop. No more items like the Chronal Pint instrument will be accidentally activated by the booster signal. Vane loses the North Ward mana-junction relay. He is aware within 24 hours that the junction has been taken offline.",
+            "choice_b": "Leave the booster active and monitored",
+            "consequence_b": "Intelligence collection asset. Arcana DC 18 over multiple sessions can trace transmission direction. Risk: future temporal disturbances in the North Ward until Vane changes routing.",
+            "convergence": "The mana-junction's role in the Vane-timeline is either cut or preserved as a monitoring point."
+        },
+        {
+            "turn": 9,
+            "narrative": "The chronal instrument \u2014 now recovered and either active or deactivated \u2014 is examined fully by Yan with Arcana support from the party. It is a temporal field calibrator: designed to create small, stable localized time-rate adjustments for infrastructure construction purposes. Not a loop creator \u2014 the loop was a malfunction caused by the device being dropped and activated simultaneously by the booster signal, creating an unintended causal resonance. The instrument itself, properly calibrated and used, can create a 15-minute localized temporal field: slowing time 10% in a 10-foot radius. Which, as Yan notes with a rare half-smile, is 'not a weapon, not a medical device, not a narrative device \u2014 it's a construction tool that happens to have limited utility if you want time to pass slightly slower near you for about a quarter hour.' Still, extraordinary. Still, 200 years old and functional.",
+            "choice_a": "Keep the instrument for party use",
+            "consequence_a": "The Loop-Breaker Pendant (reshaped from the device into a wearable form that prevents accidental activation) is added to party loot. Usable 1/day for a 15-minute 10% time-rate reduction field in 10-foot radius.",
+            "choice_b": "Turn the instrument over to Yan for Chronos thread research",
+            "consequence_b": "Yan can use it to better understand the temporal disturbance signature patterns, giving the Chronos thread investigation advantage on all future checks related to Concordat temporal side effects. Party receives 1000 gold as research compensation.",
+            "convergence": "The instrument's disposition is resolved. The Chronos thread now has a clear line between Vane's signal transmissions and North Ward temporal anomalies."
+        },
+        {
+            "turn": 10,
+            "narrative": "The 19 Chronal Pint patrons \u2014 in the days after the loop break \u2014 display an unexpected phenomenon: three of them have developed a minor persistent ability to detect temporal field boundaries, a vestigial effect of 140 subjective hours of existence within an active causal loop. It is not reliable, not controllable, and for two of them, manifests only as mild nausea near active Concordat temporal equipment. For the third \u2014 a young woman named Pell Dorsen who was at the bar reading \u2014 it manifests as a consistent ability to accurately estimate time durations within 5 seconds, even without checking a clock. She reports it 'feels like I'm still inside the loop, a little bit. Like time is something I can see from slightly outside it now.' Dr. Solt documents this as 'Temporal Imprint Syndrome \u2014 benign, indefinite, under observation.'",
+            "choice_a": "Recruit Pell Dorsen as a Chronos thread contact \u2014 her temporal perception may be useful",
+            "consequence_a": "Pell agrees. She has also, in her post-loop experience, noticed that the temporal disturbances in the North Ward happen on a schedule \u2014 every 23 minutes, a slight shift. That matches Vane's transmission schedule exactly. She's been feeling his transmissions without knowing what they were.",
+            "choice_b": "Document the phenomenon but don't pursue Pell",
+            "consequence_b": "The temporal imprint phenomenon is documented for Yan's research. Three data points established for future study.",
+            "convergence": "The loop's aftermath has produced unexpected new information about Vane's transmission schedule through human perception."
+        },
+        {
+            "turn": 11,
+            "narrative": "Luda Fell's two stored family legacy items: a compass that always points toward the nearest active Concordat temporal field (an original Chronos Division navigation tool) and a sealed letter, sealed with the same geometric lock pattern from the Concordat maintenance hatches, addressed in pre-Scourge Common to 'Whoever finds this after enough time has passed.' Luda has had the letter for twenty years and never been able to open it. The geometric lock is now recognizable \u2014 the party opens it. The letter is from Arda Fell, Concordat Chronos Division, dated from before the Scourge. It is addressed to their descendants. It explains, in personal terms, what the Chronos Division was doing \u2014 managing and stabilizing the temporal side effects of the copper-tail relay network's mana-grid interactions. The copper-tail sensor network and the Chronos infrastructure were always linked, maintained together, by different divisions of the same institution.",
+            "choice_a": "Share the letter with Investigator Yan",
+            "consequence_a": "Yan reads it with the expression of someone receiving confirmation of what they suspected but couldn't prove. 'So the Chronos Division and the Biological Division were counterparts. One built the sensor network. The other managed what it did to time.' She pauses. 'That means there should be more temporal stabilizers like the one under the Chronal Pint, throughout the city, wherever the relay network is active.'",
+            "choice_b": "Keep the letter \u2014 it is a family document belonging to Luda",
+            "consequence_b": "Luda decides what to share with Yan after reading it herself. She shares it, because she believes her grandmother would have wanted the information to reach people who could use it.",
+            "convergence": "The Fell letter establishes that the temporal disturbances throughout the North Ward are not accidents \u2014 they are the predictable result of the copper-tail relay network operating without its paired Chronos Division stabilization infrastructure."
+        },
+        {
+            "turn": 12,
+            "narrative": "Three weeks after the Chronal Pint reopens, Luda Fell reports she's had the best two weeks of trade since she opened the tavern. Curious citizens, temporal scholars, and Chronos-thread associated individuals have all been stopping by, ordering drinks, and asking her what it felt like. She answers honestly every time: 'Like being very present in a very small forever.' The North Ward's ambient temporal field is slightly more stable since the loop break \u2014 Yan's monitoring shows a 12% reduction in micro-temporal variance in the block surrounding the Chronal Pint. The mana-junction booster's status (cut or monitored) determines whether Vane's transmissions continue to generate that variance elsewhere in the ward. The Chronal Pint becomes an informal meeting point for Chronos-thread investigation participants. Luda starts keeping a record book: people who come in, dates and times, and whether they notice anything unusual. She has been counting since the loop. It turns out she likes counting things.",
+            "choice_a": "Make the Chronal Pint the Chronos thread investigation's informal base",
+            "consequence_a": "Luda becomes a recurring NPC intelligence hub. Her record book eventually contains something important. Investigators, the party, and Pell Dorsen all use the tavern as a meeting point.",
+            "choice_b": "Let the Chronal Pint return to being a normal tavern",
+            "consequence_b": "The tavern normalizes. Luda is grateful but not a recurring resource. The party's investigation uses other meeting points.",
+            "convergence": "Quest complete. The loop is broken. The Fell family legacy has contributed three Concordat items and a family history to the Chronos thread. Vane's transmission schedule is known. The temporal stabilizer map \u2014 implied by the letter \u2014 is the next major Chronos thread investigative goal."
+        }
+    ],
+    "conclusion": "The Frozen Moment breaks the nine-day loop, releases 19 imprisoned residents, recovers three Concordat Chronos Division artifacts from the Fell family, and establishes the critical link between Vane's mana-grid transmissions and the North Ward temporal disturbances. Investigator Yan and Luda Fell become recurring Chronos thread NPCs. The Fell letter reveals the Chronos Division and Biological Division were always paired infrastructure \u2014 setting up EH_SQ_066 through EH_SQ_069.",
+    "loot_table": [
+        "Loop-Breaker Pendant (Concordat temporal calibration device reshaped into wearable form; 1/day creates a 10-foot radius 15-minute field of 10% time-rate reduction; prevents the wearer from being anchored in causal loops without consent)",
+        "Concordat Chronos Compass (always points toward the nearest active Concordat temporal field; critical navigation tool for locating the temporal stabilizer network; from Luda Fell's family storage)",
+        "Arda Fell's Letter (pre-Scourge document from a Chronos Division technician; establishes that Chronos and Biological Divisions always maintained paired infrastructure; implies temporal stabilizers exist throughout the city near relay network nodes)",
+        "Temporal Imprint Data (Yan's documentation of three Chronal Pint patrons showing vestigial temporal perception after loop exposure; Pell Dorsen's transmission-schedule perception data; Arcana research value)",
+        "1000 gold (emergency resolution payment from the North Ward Ward Authority for the Chronal Pint incident response)",
+        "Liquid Chronos sample"
+    ],
+    "branching_outcomes": {
+        "loop_echo_persuaded": {
+            "description": "Loop Echo reasoned with; cooperated in its own dissolution; deactivation clean",
+            "effects": {
+                "settlement_morale": 2,
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "No temporal recoil damage; Echo dissipates with recorded 'resolution' state; future causal loops in the area have a lower difficulty threshold due to established precedent in the local temporal field"
+            }
+        },
+        "loop_echo_defeated": {
+            "description": "Loop Echo defeated in combat; loop ended by force",
+            "effects": {
+                "settlement_morale": 2,
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Temporal recoil 1d8 to all exo-loop entities; loop ends; Echo logged as combat encounter rather than resolved causal construct"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Uncontrolled loop collapse: 2d8 temporal recoil damage to all party members; the chronal instrument is destroyed in the collapse; the loop breaks but the temporal field damage to the North Ward mana-junction worsens, accelerating the temporal disturbance pattern by 30%",
+        "failure_penalty": {
+            "xp_loss": 2
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "id": "EH_SQ_520",
+    "title": "The Deep-Mine Incident",
+    "difficulty": "Medium",
+    "xp_reward": 970,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_423",
+            "EH_SQ_424"
+        ],
+        "items_required": []
+    },
+    "location": "Ridge -> Mine Section 9 / Pre-Scourge Concordat Facility",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "A mining crew in Section 9 of the Ridge deep mine has broken through into a sealed Pre-Scourge chamber \u2014 but this is not an artefact cache or survey workshop. The space beyond is intact, operational, and apparently powered: lights are on, mechanisms are turning, and a low hum of active machinery fills the newly opened gap. Three miners have already entered and cannot be reached by voice. The Ridge Authority has suspended all drilling within 200 metres and requested immediate assistance from whoever recovered the Resonant Crystal and Artificer Ollen's journal.",
+    "key_npcs": [
+        "Ridge Authority Overseer Kell",
+        "Mining Foreman Ness",
+        "Concordat Engineer Senna (if found in EH_SQ_433)",
+        "The Three Missing Miners"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The breach point is a ragged hole in a basalt wall revealing a smooth-cut corridor beyond, lit by amber lights that pulse softly in a rhythm matching Resonant Crystal energy signatures. Mining Foreman Ness grips the edge of the breach and calls names into the corridor. Silence \u2014 then a faint sound, rhythmic and mechanical, that is definitely not human. Overseer Kell stands behind you. 'Three men are in there,' she says. 'The machinery is active. Tell me what I'm dealing with.'",
+            "choice_a": "Enter the corridor immediately to find the three miners",
+            "consequence_a": "The corridor extends forty metres before opening into a circular chamber where three miners stand completely motionless, staring upward at a central structure of rotating amber crystal rings suspended from the ceiling. They are conscious but unresponsive to your presence.",
+            "choice_b": "Examine the corridor from the breach point before entering \u2014 assess what you're walking into",
+            "consequence_b": "The amber lighting pulses in a pattern matching the 'Request Contact' signal from the machine in EH_SQ_458. This facility is the source of that signal \u2014 and it has been broadcasting for decades."
+        },
+        {
+            "turn": 2,
+            "narrative": "The three miners are in a Resonant Crystal trance \u2014 the same crystal-based cognitive connection phenomenon that Ollen's journal described as 'deep resonance contact.' They are not harmed but are receiving a continuous audio-visual signal from the crystal array above them. Their eyes are tracking moving patterns only they can see. Similar to Void-Wine visions but structured, architectural, deliberate.",
+            "choice_a": "Attempt to physically interrupt the crystal trance by separating the miners from the array's direct signal",
+            "consequence_a": "Moving one miner out of the circular chamber's signal zone causes him to blink and return to full awareness, shaken but unharmed. The crystal arrays dim when he exits.",
+            "choice_b": "Try to receive the signal yourself to understand what the miners are experiencing before breaking the trance",
+            "consequence_b": "Standing beneath the crystal arrays, you experience ten seconds of structured architectural vision \u2014 a complete three-dimensional model of something vast underground before you step back deliberately."
+        },
+        {
+            "turn": 3,
+            "narrative": "The three miners are recovered. Two are shaken. One \u2014 a man named Dorr \u2014 is profoundly moved and refuses to discuss what he saw except to say it was 'a gift.' The facility itself demands attention. This is clearly a Concordat communication and mapping station \u2014 designed to broadcast Resonant Crystal signals across deep terrain. The clockwork assembly machine (EH_SQ_458) has been receiving this signal. This station is its intended correspondent.",
+            "choice_a": "Document the facility thoroughly before anything is touched or activated further",
+            "consequence_a": "Six hours of careful documentation. The station contains four additional chambers \u2014 a control room, a signal records archive, a maintenance bay, and a sealed room with no visible door mechanism.",
+            "choice_b": "Attempt to communicate with the facility's systems using the Concordat Resonance Relay recovered in EH_SQ_458",
+            "consequence_b": "The Relay responds. A cascading activation sequence runs through the station \u2014 systems that have been in standby for decades beginning proper operation cycles."
+        },
+        {
+            "turn": 4,
+            "narrative": "The sealed room's door opens automatically when the signal exchange is initiated, revealing an operations centre with stone-carved displays showing city maps \u2014 deep-layer maps of Emberheart's underground structure. The maps show features that do not match any current survey: passages, chambers, resource deposits, and three locations marked with the Concordat's highest security designation. One marked location is directly below the Scourge Fringe's most active zone.",
+            "choice_a": "Copy the deep-layer maps immediately \u2014 this is intelligence that could reshape the city's understanding of what lies beneath it",
+            "consequence_a": "Copying takes most of a day. The maps show seventeen unknown major underground structures beneath the city.",
+            "choice_b": "Secure the operations centre and brief only Overseer Kell and Astrid on what the maps show",
+            "consequence_b": "A controlled briefing is arranged. The maps' existence is classified at your recommendation pending security assessment of the three high-designation locations."
+        },
+        {
+            "turn": 5,
+            "narrative": "The three high-designation locations represent a genuine dilemma. One is apparently a Concordat emergency resource cache \u2014 food, tools, and preserved infrastructure components stored before the Scourge in case of catastrophic surface damage. One appears to be an energy generation station still possibly operational. The third is labelled only 'CONTAINMENT' in Pre-Scourge script, with a designation that Concordat survivor Senna (if found in EH_SQ_433) identifies as their highest emergency risk classification.",
+            "choice_a": "Investigate the resource cache location first \u2014 the practical benefit is immediate and risk is low",
+            "consequence_a": "A careful descent to the resource cache finds it intact: preserved materials worth enormous practical value to city reconstruction, plus documentation dating from two weeks before the Scourge began.",
+            "choice_b": "Consult Senna (or the Archive's Concordat records) about the CONTAINMENT designation before going near any of the three",
+            "consequence_b": "CONTAINMENT in Concordat protocol means a sealed biological or energy hazard that was considered too dangerous to destroy and too dangerous to leave accessible. The Concordat's emergency standard was to seal it and pray."
+        },
+        {
+            "turn": 6,
+            "narrative": "Whether you investigated the cache or consulted the records, the CONTAINMENT location now looms as the defining question of what this station revealed. Kell wants it investigated. Astrid wants it left alone. Dr. Vel has been contacted and is urgently requesting access. The miners who experienced the crystal trance \u2014 especially Dorr \u2014 are asking questions about what the station is. The ridge community is starting to hear rumours.",
+            "choice_a": "Recommend an authorised joint-institution survey of the CONTAINMENT location with full safety protocols",
+            "consequence_a": "A committee is formed: Medical Quarter, Academic Quarter, Ridge Authority. A careful approach is planned with three weeks of preparation.",
+            "choice_b": "Recommend all three locations be sealed under Ward emergency protocol until proper expertise can be assembled",
+            "consequence_b": "Emergency seals are applied to all three locations. No action until the committee the survey team formally constitutes."
+        },
+        {
+            "turn": 7,
+            "narrative": "The communication station itself needs to be integrated into the city's infrastructure or closed. The clockwork assembly machine's operator (from EH_SQ_458) arrives at the Ridge, visibly excited, with Engineer Pyra (from EH_SQ_426). Together they believe the station can serve as a deep-city communication relay \u2014 providing a Concordat-era communication infrastructure for the Ridge, Undercity operations, and Fringe expeditions. The practical value is enormous. The energy system that powers it is still active and has been running for over a century.",
+            "choice_a": "Support integrating the station as a Ridge communication hub",
+            "consequence_a": "A working group is established. Within six weeks, the station is providing reliable deep-Ridge communication for the first time since the Scourge.",
+            "choice_b": "Recommend the station be fully studied before any new use is added \u2014 it has been running for a century without human management",
+            "consequence_b": "A six-month study period is authorised. The station continues its existing broadcast patterns undisturbed."
+        },
+        {
+            "turn": 8,
+            "narrative": "Dorr, the miner who refused to discuss his trance experience, approaches you privately. He has been drawing what he saw during his ten minutes beneath the crystal array \u2014 detailed architectural drawings of spaces he had never seen, filled with devices he cannot name. His drawings match three of the seventeen underground structures on the deep-layer maps with extraordinary accuracy. The crystal array showed him real places. He wants to know if you can find a way to get him back in \u2014 controlled, with understanding of what is happening.",
+            "choice_a": "Work with Rynn and the Academic Quarter to design a safe supervised trance session for Dorr",
+            "consequence_a": "A controlled session yields twelve additional architectural drawings of extreme detail. Dorr emerges moved, productive, and fully intact.",
+            "choice_b": "Counsel Dorr that the trance was a one-time experience and re-entry cannot be guaranteed safe",
+            "consequence_b": "Dorr accepts this but continues drawing from memory. His sketches become part of the deep-map archaeological record."
+        },
+        {
+            "turn": 9,
+            "narrative": "The energy generation station \u2014 the second of the three high-designation locations \u2014 is assessed by the joint committee. It is a geothermal-to-Resonant-Crystal energy conversion system, using the same heat sources that the modern Ridge vent arrays tap for heating. It has been running continuously for over a century, maintenance-free, at approximately 40% of its original capacity. If restored to full capacity it could double the Ridge's usable energy output.",
+            "choice_a": "Recommend a restoration programme for the energy station",
+            "consequence_a": "Concordat-era engineering documentation found in the station's archive guides a careful restoration. Within three months, Ridge energy output increases by 65%.",
+            "choice_b": "Recommend leaving it at current capacity \u2014 a system running for a century should not be disrupted without fully understanding it first",
+            "consequence_b": "The station continues at 40% capacity. Its documentation is studied by the Academic Quarter for two years before any modification is recommended."
+        },
+        {
+            "turn": 10,
+            "narrative": "The CONTAINMENT location is the final question. With the resource cache secured, the energy station addressed, and the communication station integrated, the committee turns to the third designee. Their report arrives: the CONTAINMENT location is a sealed chamber approximately 200 metres below the active Scourge Fringe. The seal is Concordat-grade and shows no integrity failure after a century. What is inside is not documented \u2014 only the classification level. A decision must be made. [HIGH-STAKES CHOICE \u2014 one of this questline's most significant decisions]",
+            "choice_a": "Open the CONTAINMENT seal using the Resonant Relay and the station's access protocols",
+            "consequence_a": "A team descends. The seal opens. The chamber within is not empty: a perfectly preserved Concordat-era entity \u2014 not human, not Scourge-touched \u2014 is suspended in a crystal matrix, apparently dormant. It is alive. Barely. Breathing cycles once per three minutes.",
+            "choice_b": "Leave the CONTAINMENT sealed and formally classify it as a Ward-level restricted site",
+            "consequence_b": "A Ward restricted-site designation is applied. The location receives permanent monitoring by the Ridge Authority. The sealed entity, whatever it is, remains undisturbed."
+        },
+        {
+            "turn": 11,
+            "narrative": "Whether you opened the CONTAINMENT or sealed it formally, the immediate mine incident is resolved. The three miners are fully recovered. The station is integrated or under study. The maps are documented and partially acted on. The Ridge community is processing the reality that there is an entire Pre-Scourge infrastructure layer beneath them that has been running autonomously for a century. Foreman Ness looks at the breach point, now properly reinforced with a door installed, and says: 'The miners are asking if there are other stations.'",
+            "choice_a": "Commission a systematic deep-mine survey to identify other Concordat stations using the maps",
+            "consequence_a": "A survey programme is launched. Four more potential sites are identified within the first month.",
+            "choice_b": "Use the maps to identify the three most strategically important sites and assess those first",
+            "consequence_b": "Three priority sites are assessed over the following six weeks. One is another communication station. One is a secondary resource cache. One appears to be a manufacturing facility."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Deep-Mine Incident has transformed the Ridge from a geothermal energy district into something much more: the entry point to a century of hidden Concordat infrastructure that has been keeping itself alive beneath the city's feet. Kell stands at the communication station's signal display \u2014 a wall of animated deep-maps \u2014 and says: 'The Concordat didn't die. They just went underground.' The mining crew who broke through the wall have been given formal engineering commendations. Dorr has been offered a position as the Deep Survey's primary cognitive cartographer. The resource cache has fed two thousand people for a month. The sealed entity breathes once per three minutes in the dark.",
+            "choice_a": "Formally request a senior institutional appointment to oversee the Concordat infrastructure integration programme",
+            "consequence_a": "Kell appoints you as liaison between the Ridge Authority and the multi-institutional Concordat Infrastructure Committee.",
+            "choice_b": "Step back from formal involvement and let the institutions manage what has been found",
+            "consequence_b": "The institutions are capable. The discovery runs its own course. You remain available for specific consultations."
+        }
+    ],
+    "branching_outcomes": {
+        "containment_opened": {
+            "description": "Entity discovered in CONTAINMENT. Station integrated as communication hub. Resource cache secured.",
+            "unlocks": [
+                "EH_SQ_521"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 40,
+                    "Academic Quarter": 20
+                },
+                "item_reward": "Concordat Deep Station Map"
+            }
+        },
+        "containment_sealed": {
+            "description": "CONTAINMENT classified. Station under study. Resource cache secured.",
+            "unlocks": [
+                "EH_SQ_521"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 30
+                },
+                "item_reward": "Dorr's Crystal Trance Drawings"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 220,
+            "reputation_change": {
+                "Ridge": -25
+            }
+        },
+        "critical_failure": "A miner triggers the station's defensive systems. Two are severely injured."
+    },
+    "loot_table": [
+        "Concordat Deep Station Map",
+        "Dorr's Crystal Trance Drawings",
+        "Resource Cache Inventory",
+        "Concordat Energy Station Plans",
+        "970x Gold Coins"
+    ],
+    "conclusion": "Entity discovered in CONTAINMENT. Station integrated as communication hub. Resource cache secured."
+}

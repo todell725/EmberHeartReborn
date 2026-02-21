@@ -1,0 +1,74 @@
+{
+    "id": "SQ-251",
+    "title": "The Drying Well",
+    "difficulty": "Medium",
+    "xp_reward": 500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-018"
+        ]
+    },
+    "location": "Green Quarter -> The Communal Cistern",
+    "district": "Green Quarter",
+    "thread": "Community & Survival",
+    "description": "The Green Quarter, source of Emberheart's meager fresh produce, is facing a drought. The communal cistern is inexplicably drying up despite recent rains. You must find the source of the blockage.",
+    "key_npcs": [
+        "Quarter-Master Silas",
+        "Desperate Farmers"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You enter the aqueduct tunnels feeding the cistern. You find a massive, localized cave-in that seems intentionally explosive-driven.",
+            "choice_a": "Clear the rubble manually with a pickaxe",
+            "consequence_a": "A grueling three hours of physical labor. You exhaust your stamina but clear the stones without causing further collapse.",
+            "choice_b": "Use an earth-shaping spell to move the rock",
+            "consequence_b": "The spell moves the rock instantly, but the sudden rush of pent-up water sweeps you off your feet, causing bruising damage."
+        },
+        {
+            "turn": 2,
+            "narrative": "Behind the rubble, you find a newly constructed diversion pipe siphoning the water toward the Market Ward.",
+            "choice_a": "Smash the pipe open",
+            "consequence_a": "Water floods back into the Green Quarter aqueduct perfectly.",
+            "choice_b": "Attempt to sabotage the pipe quietly so the Market Ward assumes it broke naturally",
+            "consequence_b": "You cap it cleanly. Silas gets his water back, and no immediate gang war starts."
+        }
+    ],
+    "branching_outcomes": {
+        "pipe_smashed": {
+            "description": "You smashed the diversion pipe, loudly declaring your allegiance to the Green Quarter.",
+            "unlocks": [
+                "SQ-252"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Green Quarter": 20,
+                    "Market Ward": -10
+                }
+            }
+        },
+        "pipe_capped": {
+            "description": "You capped the pipe silently, maintaining the peace while restoring the water.",
+            "unlocks": [
+                "SQ-252"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Green Quarter": 15
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Saboteur's Wrench",
+        "100x Gold Coins"
+    ],
+    "conclusion": "You smashed the diversion pipe, loudly declaring your allegiance to the Green Quarter.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

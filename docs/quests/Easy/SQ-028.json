@@ -1,0 +1,153 @@
+{
+    "id": "SQ-028",
+    "title": "The Copper-Tail Nest",
+    "xp_reward": 550,
+    "prerequisites": "None",
+    "description": "Reports of power fluctuations in the High Ward have been traced to the auxiliary generator room, which is deeply infested by rodents possessing metallic, copper-woven fur\u2014the 'Copper-Tails.' These augmented vermin are not merely chewing the wiring; they are deliberately eating the insulation to splice into the grid, leaking raw mana into the environment. The party must clear the nest, repair the generator, and deal with the King Copper-Tail that guards its high-voltage hoard.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The High Ward's auxiliary generator room is a sweltering maze of heavy brass pipes, hissing steam vents, and dangerously exposed conduits. Small, disturbingly metallic shadows dart fluidly between the shadows, their stiff, wire-like copper tails throwing bright blue sparks whenever they drag against the iron floor grating.",
+            "choice_a": "Set non-lethal traps (Int DC 12)",
+            "consequence_a": "You quickly fashion a series of non-conductive snare traps. You manage to catch several of the erratic rodents cleanly, entirely avoiding any collateral damage to the fragile, highly sensitive surrounding equipment.",
+            "choice_b": "Use a magnetic sweep (Dex DC 13)",
+            "consequence_b": "You activate a localized magnetic pulse-rod and sweep the machinery. You successfully rip several metallic rodents right out of the gears, slamming them violently against the heavy iron bulkheads.",
+            "convergence": "Above your head, the room's main high-voltage cables are buzzing with a deeply irregular, incredibly dangerous surge of volatile energy."
+        },
+        {
+            "turn": 2,
+            "narrative": "A particularly large Copper-Tail is aggressively chewing completely through the insulation of a main power-line. Showers of bright blue sparks are flying everywhere, and the thick, toxic smell of burning rubber and melting copper is quickly filling the enclosed space.",
+            "choice_a": "Cut the power (Repair DC 12)",
+            "consequence_a": "You sprint to the main breaker and forcefully throw the heavy switch. You safely disable the line mere seconds before a massive, catastrophic electrical fire can ignite the room.",
+            "choice_b": "Scare it away with a loud noise",
+            "consequence_b": "You slam a heavy iron wrench against the nearest brass pipe. The loud ring causes the startled rodent to flee instantly, but the exposed, frayed cable is left sparking dangerously.",
+            "convergence": "Suddenly, the primary generator\u2019s massive cooling fan begins to slow down dramatically, emitting an ominous, bone-rattling metallic grinding sound."
+        },
+        {
+            "turn": 3,
+            "narrative": "The ambient temperature in the room is rising at an extremely alarming rate. Tucked precariously between the main heat-exchangers, you spot the source: a massive nest constructed entirely from shredded, stolen circuit boards and thickly braided copper wire.",
+            "choice_a": "Remove the nest (Athletics DC 13)",
+            "consequence_a": "You grab a heavy insulated hook and violently yank the entire metallic nest from the heat-exchangers. You successfully clear the massive fire hazard before the rising heat can ignite it.",
+            "choice_b": "Examine the nest contents (Perc DC 12)",
+            "consequence_b": "You carefully sift through the razor-sharp metallic debris. Deep inside, intentionally woven into the center, you find a heavy, pre-Scourge 'Concordat ID Ring' that should definitely not be down here.",
+            "convergence": "A deafening screech echoes through the chamber. A 'King Copper-Tail'\u2014a monstrosity easily triple the size of the others\u2014emerges and stands aggressively atop the main generator array."
+        },
+        {
+            "turn": 4,
+            "narrative": "The King Copper-Tail is horrifying. Its skin is almost completely replaced by thick, fused brass plating, and complex wiring weaves directly into its exposed muscular tissue. It roars loudly, generating a sound exactly like a heavy grinding file dragging across sheet steel.",
+            "choice_a": "Wrestle it (Str DC 14)",
+            "consequence_a": "You bypass your weapons and lunge forward, grappling the heavy, metallic beast directly. Utilizing pure, overwhelming physical strength, you manage to pin the violently thrashing creature firmly to the iron floor.",
+            "choice_b": "Lure it with a high-mana crystal",
+            "consequence_b": "You quickly toss a brightly glowing, high-density mana crystal across the room. The King's engineered addiction to raw energy overrides its aggression, fully distracting it as it pounces on the crystal.",
+            "convergence": "Without warning, the increasing pressure causes a major cooling pipe to burst nearby, instantly flooding the floor with a thick cloud of dangerously scalding steam."
+        },
+        {
+            "turn": 5,
+            "narrative": "You can barely see anything through the blinding, white-hot fog of the ruptured steam pipe. The lesser rats, perfectly adapted to the hazard, are using the total visual confusion to aggressively swarm your legs.",
+            "choice_a": "Blast them back with a wave of force",
+            "consequence_a": "You violently unleash a massive, omnidirectional arcane force-wave. The sudden concussion brutally scatters the attacking swarm, throwing them hard against the walls and neutralizing the immediate threat.",
+            "choice_b": "Climb for high ground (Dex DC 13)",
+            "consequence_b": "You absolutely leap onto the nearest brass conduit, climbing rapidly. You successfully avoid their snapping metallic teeth, securing a safe vantage point above the scalding steam.",
+            "convergence": "Peering through the clearing steam, you see that the generator's exposed core housing is now glowing a bright, deeply dangerous and angry cherry-red."
+        },
+        {
+            "turn": 6,
+            "narrative": "A bloated 'Mana-Lech'\u2014a massive, slug-like magical parasite deliberately attracted to the chaos created by the nesting rats\u2014has firmly attached its thick, rubbery body directly to the main high-capacity capacitor, rapidly draining the system.",
+            "choice_a": "Pry it off (Str DC 14)",
+            "consequence_a": "You wedge a heavy pry-bar perfectly under its thick hide. With a monumental heave, you violently remove the parasite, causing a massive, foul-smelling tearing sound as it detaches.",
+            "choice_b": "Divert the surge (Int DC 14)",
+            "consequence_b": "You quickly access the tertiary control panel and aggressively reroute raw system power directly into the capacitor. You intentionally overload the greedy parasite until it literally pops in a burst of arcane slime.",
+            "convergence": "With the massive drain finally removed, the massive generator loudly begins to spin back up, quickly stabilizing to its proper, required frequency."
+        },
+        {
+            "turn": 7,
+            "narrative": "Enraged by the restoration of the power flow, the heavily armored King Copper-Tail leaps from its perch, making a final, completely desperate and lightning-fast charge directly at your chest.",
+            "choice_a": "Parry and riposte (Atk DC 14)",
+            "consequence_a": "You read its predictable trajectory perfectly. You smoothly deflect its heavy, metallic claws and drive your weapon cleanly through an unarmored gap in its chest plates, instantly felling the leader.",
+            "choice_b": "Channel the generator\u2019s spark into it",
+            "consequence_b": "You grab a cleanly severed live cable and jam it directly against the King's brass plating. The creature is instantly subjected to a massive thermal overload, effectively vaporizing it.",
+            "convergence": "The violently chaotic room finally falls entirely silent, heavily replaced by the extremely steady, deep, and comforting thrum of the massive machine operating normally."
+        },
+        {
+            "turn": 8,
+            "narrative": "The surviving lesser rats immediately break formation and comprehensively flee deep into the unreachable ventilation ducts. You have a few quiet minutes to thoroughly survey the extensive damage to the critical infrastructure.",
+            "choice_a": "Perform emergency repairs (Repair DC 14)",
+            "consequence_a": "You quickly splice cables and cleanly bypass the blown relays. Your rapid, expert work successfully restores the generator to a stable 80% power efficiency, earning deep respect from the engineering guild.",
+            "choice_b": "Loot the rodent's caches",
+            "consequence_b": "You completely ignore the damaged machinery, instead prying open the rodent's hidden hoarding spots. You successfully uncover a massive stash of highly valuable, perfectly salvaged 'Copper-Plates.'",
+            "convergence": "The heavy iron door swings open, and the Maintenance Chief rapidly enters. His grim face is completely streaked with heavy black oil, and his eyes show immense relief."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Chief aggressively wipes his brow, offering you a luxuriously cold drink and a thick stack of authorized trade vouchers. Pausing to look at the massive scorch marks, he asks directly exactly how you handled the metallic King.",
+            "choice_a": "Exaggerate the fight (Deception DC 13)",
+            "consequence_a": "You wildly spin a brilliant, highly dramatic tale of a brutal, epic duel against a monstrous machine-beast. Your impressive local legend grows significantly, buying you substantial future favors.",
+            "choice_b": "Be honest about the mess",
+            "consequence_b": "You give him a stark, clean, tactical breakdown of the brutal encounter. He deeply appreciates your lack of theatrics and profound professionalism, cementing a solid working relationship.",
+            "convergence": "Regardless, you quietly reach into your pocket and firmly hand him the mysterious Concordat ID Ring you uncovered in the nest."
+        },
+        {
+            "turn": 10,
+            "narrative": "The auxiliary power flow is fully back up. Overhead, the heavy, frosted lights in the High Ward flicker brightly once and then engage completely, staying intensely bright. The critical infrastructure has been flawlessly rescued.",
+            "choice_a": "Accept your payment",
+            "consequence_a": "You gladly accept the heavy pouch. You are cleanly paid in solid gold coin and several pounds of highly refined, incredibly useful scrap metal. The job is definitively resolved.",
+            "choice_b": "Donate the scrap to the Forge",
+            "consequence_b": "You take the coin but generously donate the massive pile of heavy copper scrap directly to the poor local blacksmith. He firmly promises you a massive, permanent discount on all future Forge work.",
+            "convergence": "Leaving the generator room echoing with steady power, you step out into the well-lit High Ward. Quest Complete."
+        }
+    ],
+    "conclusion": "The High Ward's auxiliary power is restored, and the immediate Copper-Tail threat is violently neutralized. However, discovering a Concordat ID Ring deep inside their meticulously constructed nest confirms this infestation was deliberately staged, planting the seed of a much larger conspiracy.",
+    "loot_table": [
+        "Heavy Copper-Plate",
+        "Concordat ID Ring",
+        "550 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Power failure. -1 Settlement Defense and -2 Morale.",
+        "failure_penalty": {
+            "xp_loss": 1
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Power fluctuations in High-Ward traced to auxiliary generator",
+        "flags": [
+            "power_fluctuation"
+        ]
+    },
+    "location": "Auxiliary Generator Room \u2014 High-Ward Underbelly",
+    "district": "High Ward",
+    "thread": "Vermin",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Maintenance Chief Halver",
+        "King Copper-Tail (creature boss)"
+    ],
+    "mechanics_featured": [
+        "Trap-setting (Int)",
+        "Magnetic sweep (Dex)",
+        "Combat (rodents)",
+        "Repair"
+    ],
+    "permanent_effects": {
+        "settlement": "Power restored; Concordat ID Ring flagged as clue",
+        "world": "Deliberate infestation conspiracy hinted"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Emergency repairs",
+            "result": "+1 Rep with Engineers, +80% power"
+        },
+        {
+            "path": "Loot rodent caches",
+            "result": "Copper-Plates gained (crafting resource)"
+        }
+    ]
+}

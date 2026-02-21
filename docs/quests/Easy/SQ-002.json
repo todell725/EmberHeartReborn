@@ -1,0 +1,153 @@
+{
+    "id": "SQ-002",
+    "title": "The Overgrown Silo",
+    "xp_reward": 600,
+    "prerequisites": "None",
+    "description": "Grain Silo 4 in the Lower Ward's agricultural perimeter has been overtaken overnight by a rapidly growing, parasitic synthetic ivy that emits a faint, sickening lavender glow. The local rats are not fleeing the infestation; they are cultivating it. The silo's contents are at risk of being consumed, and the party must eradicate the synthetic growth, stop the augmented vermin orchestrating its spread, and uncover the source of this accelerated biological hazard.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Under the pale night sky, Silo 4 resembles a gargantuan tumor of vine and leaf rather than an agricultural storage unit. The ivy doesn't merely grow; it writhes with an unnatural, synthetic elasticity, the sound of its rubbing leaves mimicking a dry, collective whisper. A sickly lavender glow pulses through the thickest veins of the plant, illuminating the rusted maintenance door.",
+            "choice_a": "Auscultate the vines (Nature DC 12)",
+            "consequence_a": "Pressing your ear to the cold steel beneath the vines, you hear the unnatural sap-flow. It's perfectly synchronized with the local mana-grid's rhythmic thrum, revealing that this plant is feeding directly off the ward's power infrastructure.",
+            "choice_b": "Prune a path with a silvered blade (Athletics DC 13)",
+            "consequence_b": "You hack furiously at the thick, rubbery vines. They bleed a viscous, glowing violet sap that smells sharply of ozone and rotting fruit, but you manage to carve a bloody path directly to the sealed maintenance door.",
+            "convergence": "With the exterior vines temporarily pushed back or understood, you stand before the maintenance door. It groans under the immense pressure of the growth within, ready to give way."
+        },
+        {
+            "turn": 2,
+            "narrative": "The violet sap has filled the keyhole and fused the heavy iron hinges tight. The smell in the immediate vicinity is sweet, almost intoxicating, attempting to lull your survival instincts into a state of lethargic compliance. Beyond the steel, you can hear the frantic, organized scratching of dozens of tiny claws.",
+            "choice_a": "Sledgehammer the hinges (Strength DC 15)",
+            "consequence_a": "You swing with brutal, focused force. The warped metal screams and finally gives way, blowing the door inward and showering you in a burst of cold, bioluminescent nectar that sticks to your armor like glue.",
+            "choice_b": "Burn the sap with a controlled torch",
+            "consequence_b": "You carefully apply heat. The synthetic sap flares an aggressive blue and vaporizes instantly, leaving behind a charred, brittle residue that allows the door to be kicked open. The heat slightly damages the internal locking mechanism.",
+            "convergence": "You step inside the cavernous silo. The air is instantly thick with floating, glowing spores that shimmer like radioactive snowfall, coating everything in a faint purple dust."
+        },
+        {
+            "turn": 3,
+            "narrative": "The internal humidity is near absolute saturation. Your breath comes in ragged, wet gasps as the spore-fog attempts to coat the lining of your lungs. Every step you take on the dense pile of ruined grain feels spongy, like walking across a shallow grave. Movement stirs in the shadows above.",
+            "choice_a": "Steady your breathing (Con Save DC 12)",
+            "consequence_a": "You force your heart rate down, taking shallow, disciplined breaths. The spores fail to take root in your respiratory tract, allowing you to maintain your focus and visual acuity in the dim, shifting light.",
+            "choice_b": "Improvise a filter mask from salt-cloth",
+            "consequence_b": "You quickly tie a salt-soaked cloth tightly over your mouth and nose. The acrid bite of the salt immediately neutralizes the cloying sweetness of the spores, granting you a safe, if uncomfortable, breathing environment.",
+            "convergence": "At the very center of the ruined grain-pile, a massive, bulbous 'Star-Heart' root pulses with a rhythmic, sickly light, acting as the central nexus for the entire infestation."
+        },
+        {
+            "turn": 4,
+            "narrative": "The pulsing bulb is the source of the synthetic ivy\u2014fed by a sprawling network of thick root-ropes that have violently pierced the grain sacks, draining them of all nutritional value. The roots flex and tighten like muscle tissue, pumping captured mana into the central node.",
+            "choice_a": "LANCE the bulb's core (Attack AC 10)",
+            "consequence_a": "You drive your weapon deep into the fleshy center of the pulsing bulb. A high-pressure spray of noxious violet gas erupts as the core violently shrivels, instantly killing the immediate network of vines.",
+            "choice_b": "Salt the root-vines (Herbalism DC 14)",
+            "consequence_b": "You strategically apply a heavy desiccant salt mixture to the primary arterial roots. The vines immediately turn a sickly black and become brittle, severing the bulb's connection to the silo's stolen nutrients.",
+            "convergence": "As the central bulb dies, a furious, synchronized screech echoes from the rusted catwalks above. The cultivators of this toxic harvest are exceptionally unhappy."
+        },
+        {
+            "turn": 5,
+            "narrative": "Dozens of rats, their natural fur replaced by highly organized rows of tiny, glowing synthetic sprouts, scurry down the rusted pipes in precise, military formation. Their eyes are frantic, violent pinpricks in the dark, and they move with absolute, coordinated intent to defend their dying crop.",
+            "choice_a": "Ignite a 'Sun-Flare' (Spell/Cantrip)",
+            "consequence_a": "You detonate a blinding flash of pure, concentrated light. The heavily adapted rats, accustomed to the dim violet glow, are instantly blinded, tumbling helplessly from the high catwalks to the silo floor below.",
+            "choice_b": "Trust your ears (Survival DC 12)",
+            "consequence_b": "You close your eyes and listen past the echoes. You hear the metallic scrape of claws on iron and dive aside perfectly, dodging a coordinated ambush from three rats that drop from the ceiling.",
+            "convergence": "The surviving mutated rats land heavily in the grain surrounding you, baring sharpened teeth that glow like hot coals, completely unbothered by the loss of their kin."
+        },
+        {
+            "turn": 6,
+            "narrative": "You realize with sudden horror that the rats are physically connected by thin, glowing threads of the synthetic ivy interwoven into their nervous systems. They move with terrifyingly singular purpose, attacking not as individuals, but as a single, multi-bodied organism defending its territory.",
+            "choice_a": "Sever the connecting ivy (Dex DC 14)",
+            "consequence_a": "You strike with surgical precision, slicing the glowing threads that link the creatures together. Without their hive-mind coordination, the rats immediately fall into chaos, snapping wildly at each other in sudden confusion.",
+            "choice_b": "Intimidate the swarm (Intimidation DC 14)",
+            "consequence_b": "You let out a terrifying roar, hoping to break their morale. The rats do not even flinch. Connected by the synthetic mind of the ivy, they feel absolutely no fear, only an all-consuming hunger.",
+            "convergence": "The largest of the connected rats\u2014a swollen monstrosity acting as the local control node\u2014lunges directly for your unprotected throat."
+        },
+        {
+            "turn": 7,
+            "narrative": "Combat in the silo becomes a visceral blur of bloody fur and snapping fangs, illuminated only by the dying violet light of the torn ivy. The rats fight with suicidal ferocity, completely ignoring their own grievous wounds to ensure their fangs find your flesh.",
+            "choice_a": "Sweeping Area Attack",
+            "consequence_a": "You swing your weapon in a massive, continuous arc, clearing a wide circle of absolute safety around you. You sever multiple controlling vines and crush the vanguard of the rat swarm simultaneously.",
+            "choice_b": "Target the alpha rat (Attack AC 12)",
+            "consequence_b": "You bypass the swarm and drive your weapon directly through the skull of the swollen control node. Without its central command, the remaining rats break their formation and flee rapidly back into the darkest shadows.",
+            "convergence": "The surviving rats yield the floor, vanishing into the grating. The silo finally falls into a heavy, sap-scented silence, the immediate threat neutralized."
+        },
+        {
+            "turn": 8,
+            "narrative": "In the darkest corner of the newly abandoned rat-nest, you spot the dull glint of tarnished metal. Approaching, you realize it belongs to the skeletal remnants of the silo maintenance worker who went missing last month, his bones completely picked clean and wrapped in dead ivy.",
+            "choice_a": "Sift through the nest",
+            "consequence_a": "You carefully dig through the foul-smelling debris of the nest and recover a heavy 'Ridge-Walker's Signet' ring, alongside a small leather pouch containing a handful of uncorroded silver coins.",
+            "choice_b": "Burn the infestation with oil",
+            "consequence_b": "You douse the entire nesting area in heavy lamp oil and set it ablaze. You ensure that the synthetic ivy and the corrupted rodents have absolutely no refuge to return to once you leave.",
+            "convergence": "With the interior secured, you climb the rusted iron ladder to the upper ventilation grates to assess the exterior perimeter and prevent any immediate re-emergence."
+        },
+        {
+            "turn": 9,
+            "narrative": "The moon is setting, casting long, bruised shadows across the agricultural sector. To ensure this infestation is truly eradicated, you must treat the soil surrounding the silo's foundation, neutralizing the latent synthetic spores before they can germinate at dawn.",
+            "choice_a": "Spread quick-lime around the silo foundation",
+            "consequence_a": "You heavily distribute caustic quick-lime across the damp earth. The violent chemical pH shift instantly kills the remaining subterranean root-nodes, leaving a dead, barren ring of absolute safety around the silo.",
+            "choice_b": "Install 'Glow-Warding' lamps on the exterior",
+            "consequence_b": "You mount high-intensity mana-lamps around the perimeter. The piercing light acts as a modern repellant against the nocturnal blight, though the constant drain severely depletes your portable battery reserves.",
+            "convergence": "As the perimeter is secured, the local farm-foreman, a ragged man named Harlen, approaches cautiously with a flickering lantern and a look of desperate, terrified hope."
+        },
+        {
+            "turn": 10,
+            "narrative": "Harlen stares at the smoking, ruined ivy and back to you. He hands you a small, heavy pouch of silver, his hands shaking noticeably. He knows better than anyone that these silos are the settlement's lifeblood, and you have just pulled them back from the brink of total starvation.",
+            "choice_a": "Accept the coin (50 Gold)",
+            "consequence_a": "You take the heavy pouch without hesitation. You performed dangerous, highly specialized labor, and the transaction is cleanly concluded. The gold is a necessary buffer against the harsh realities of the ward.",
+            "choice_b": "Decline the coin but take the 'Star-Ivy' samples",
+            "consequence_b": "You refuse his silver, instead securely packing several viable samples of the synthetic ivy into your kit. Your reputation for selfless effectiveness grows significantly, and you secure a rare, highly potent alchemical ingredient.",
+            "convergence": "With the grain secured and the immediate threat burned to ash, you leave the foreman to survey his surviving crop. Quest Complete."
+        }
+    ],
+    "conclusion": "The synthetic ivy infestation is burned out, and the grain supply is secured. The discovery that the rats were deliberately cultivating the hazard hints at an organizing intelligence behind the ward's vermin, elevating them from pests to an active, engineered threat.",
+    "loot_table": [
+        "Star-Heart Bulb",
+        "Ridge-Walker Signet Ring",
+        "Glow-Rat Pelt",
+        "100 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Crop failure spreads. -2 Settlement Food stocks and -1 Health for the Refugee camp.",
+        "failure_penalty": {
+            "xp_loss": 2
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Scourge-fog event active",
+        "flags": [
+            "fog_warning_issued"
+        ]
+    },
+    "location": "The Ember-Wreck Wastes \u2014 South of Settlement",
+    "district": "Ridge",
+    "thread": "Vermin",
+    "estimated_duration": "3\u20134 hours",
+    "key_npcs": [
+        "Pathfinder Sable",
+        "Echo-Ghoul Alpha"
+    ],
+    "mechanics_featured": [
+        "Survival checks",
+        "Combat (undead)",
+        "Navigation in low visibility"
+    ],
+    "permanent_effects": {
+        "settlement": "+1 Lore to archives",
+        "world": "Echo-Ghouls flagged in bestiary"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Rescue and Research",
+            "result": "+5 Lore, survivor becomes informant"
+        },
+        {
+            "path": "Combat Only",
+            "result": "+2 XP, no Lore gained"
+        }
+    ]
+}

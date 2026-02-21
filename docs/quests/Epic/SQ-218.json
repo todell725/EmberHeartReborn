@@ -1,0 +1,77 @@
+{
+    "id": "SQ-218",
+    "title": "Heart of Static",
+    "difficulty": "Epic",
+    "xp_reward": 1500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-217"
+        ]
+    },
+    "location": "Undercity -> The Bedrock Deep",
+    "district": "Undercity",
+    "thread": "Static",
+    "description": "You have located the true 'Harbinger' mass deep within the bedrock. It is a terrifying amalgamation of ancient supercomputers fused perfectly with Scourge bio-matter.",
+    "key_npcs": [
+        "The Harbinger Prime (Boss)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Harbinger is a city-block-sized brain suspended by carbon-fiber cables. It speaks directly into your mind via extreme static noise.",
+            "choice_a": "Resist the psychic intrusion with sheer willpower",
+            "consequence_a": "You brace yourself. You succeed, avoiding massive psychic damage, but slow your attacks.",
+            "choice_b": "Embrace the static to understand its weakness",
+            "consequence_b": "You take extreme psychic damage, but learn that severing the server cables will cripple its processing power."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Harbinger summons avatars of your previously defeated foes, built from static and flesh. They rush you simultaneously.",
+            "choice_a": "Use massive area-of-effect magic/explosives",
+            "consequence_a": "You clear the clones, but damage the cavern supports. The room begins to collapse.",
+            "choice_b": "Duel them individually using precise strikes",
+            "consequence_b": "You spend enormous stamina but clear them cleanly, keeping the cavern stable."
+        },
+        {
+            "turn": 3,
+            "narrative": "The core is exposed. You dive in for the killing blow.",
+            "choice_a": "Drive your weapon into its biological brain",
+            "consequence_a": "The Harbinger shrieks as its organic half dies, but the machine half attempts a desperate final upload.",
+            "choice_b": "Smash the quantum processors at its base",
+            "consequence_b": "The machine dies permanently, but the massive brain continues to spasm and leak toxins."
+        }
+    ],
+    "branching_outcomes": {
+        "brain_killed": {
+            "description": "You destroyed its organic core. The machine survived briefly but was neutralized.",
+            "unlocks": [
+                "SQ-219"
+            ],
+            "consequences": {
+                "item_reward": "Harbinger Synapse Link"
+            }
+        },
+        "processor_smashed": {
+            "description": "You smashed its quantum processors. The organic mass is left rotting.",
+            "unlocks": [
+                "SQ-219"
+            ],
+            "consequences": {
+                "item_reward": "Quantum Processing Core"
+            }
+        }
+    },
+    "loot_table": [
+        "Harbinger Synapse Link",
+        "Quantum Processing Core",
+        "1000x Gold Coins"
+    ],
+    "conclusion": "You destroyed its organic core. The machine survived briefly but was neutralized.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

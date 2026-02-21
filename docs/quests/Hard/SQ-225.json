@@ -1,0 +1,73 @@
+{
+    "id": "SQ-225",
+    "title": "The Broken Shield",
+    "difficulty": "Hard",
+    "xp_reward": 700,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-224"
+        ]
+    },
+    "location": "Scourge-Fringe -> The Western Barricade",
+    "district": "Scourge-Fringe",
+    "thread": "Sovereignty & Order",
+    "description": "Kael's horde has arrived. The Western Barricade is buckling under the weight of thousands of minor Scourge thralls. You must reinforce the line.",
+    "key_npcs": [
+        "Warden Line-Breaker (Boss)",
+        "Tired Militia"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The timber barricades are splintering. The militia is out of arrows and running low on morale.",
+            "choice_a": "Use your own resources to repair the barricade (Spend materials)",
+            "consequence_a": "You fortify the wood with steel plating. The barricade holds, buying the archers time.",
+            "choice_b": "Charge over the barricade into the horde",
+            "consequence_b": "A suicidal but inspiring move. You draw aggro, but take immense damage before managing to climb back over."
+        },
+        {
+            "turn": 2,
+            "narrative": "A massive, corrupted Warden Line-Breaker smashes through the reinforced gate. It wields a siege-hammer and ignores arrows.",
+            "choice_a": "Aim for its unarmored joints",
+            "consequence_a": "You cripple its legs, bringing it down to your level for the final blows.",
+            "choice_b": "Meet its hammer blows with your own shield",
+            "consequence_b": "Your shield shatters under the impact, but you create a massive opening for the militia to spear it to death."
+        }
+    ],
+    "branching_outcomes": {
+        "barricade_held_smart": {
+            "description": "You defeated the Line-Breaker efficiently, saving the militia.",
+            "unlocks": [
+                "SQ-226"
+            ],
+            "consequences": {
+                "item_reward": "Line-Breaker's Hammer"
+            }
+        },
+        "barricade_held_brute": {
+            "description": "You defeated the Line-Breaker, but your gear took a heavy beating.",
+            "unlocks": [
+                "SQ-226"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 25
+                },
+                "item_reward": "Militia Commendation"
+            }
+        }
+    },
+    "loot_table": [
+        "Line-Breaker's Hammer",
+        "Militia Commendation",
+        "200x Gold Coins"
+    ],
+    "conclusion": "You defeated the Line-Breaker efficiently, saving the militia.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

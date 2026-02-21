@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_406",
+    "title": "No Bread, No Peace",
+    "difficulty": "Easy",
+    "xp_reward": 460,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Lower Ward -> The Bread Riot Square",
+    "district": "Lower Ward",
+    "thread": "Bakery",
+    "description": "A three-day grain shipment delay has emptied Lower Ward shelves. A crowd gathers threatening to storm the Market Ward depot. A corrupt Ward official is deliberately withholding grain to resell it. You must defuse the situation.",
+    "key_npcs": [
+        "Ward Rep Elsin",
+        "Speaker Torben",
+        "Depot Manager Caris"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "About sixty people stand in the square, many with hollow-cheeked children. Ex-dockworker Torben speaks eloquently about injustice. Three nervous guards stand at the depot entrance.",
+            "choice_a": "Approach Torben respectfully and speak privately",
+            "consequence_a": "Torben is surprised by the respectful tone. He is genuinely passionate, not a criminal, and agrees to wait while you investigate.",
+            "choice_b": "Address the whole crowd openly",
+            "consequence_b": "You acknowledge their hunger publicly and promise to investigate. This earns the crowd's conditional trust."
+        },
+        {
+            "turn": 2,
+            "narrative": "You discover Depot Manager Caris is deliberately holding grain shipments on instructions from a corrupt Ward official who plans to resell it at premium prices.",
+            "choice_a": "Expose Caris publicly in the square",
+            "consequence_a": "The crowd's rage shifts from general anger to focused outrage at a specific corrupt official.",
+            "choice_b": "Secure written evidence and report to Ward Representative Elsin",
+            "consequence_b": "Elsin is appalled. She orders the depot opened immediately and the official suspended."
+        },
+        {
+            "turn": 3,
+            "narrative": "The grain is released. You help Torben channel his energy productively.",
+            "choice_a": "Recommend Torben be appointed a community grain monitor",
+            "consequence_a": "Torben accepts. He prevents two future shortages over the next month.",
+            "choice_b": "Simply thank Torben and let events take their course",
+            "consequence_b": "Torben is satisfied justice was done and disperses the crowd peacefully."
+        }
+    ],
+    "branching_outcomes": {
+        "torben_appointed": {
+            "description": "Torben given a formal community role.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 20,
+                    "Market Ward": 8
+                }
+            }
+        },
+        "crowd_dispersed": {
+            "description": "Crowd dispersed peacefully, grain distributed.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 12
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Depot Access Ledger",
+        "Community Grain Voucher",
+        "190x Gold Coins"
+    ],
+    "conclusion": "Torben given a formal community role."
+}

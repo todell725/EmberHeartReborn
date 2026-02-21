@@ -1,0 +1,163 @@
+{
+    "id": "SQ-007",
+    "title": "The Poisoned Well",
+    "xp_reward": 700,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-126"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": [
+            "Purple Tongue"
+        ]
+    },
+    "description": "The 'Deep-Well' of the Lower Ward has been tainted with a slow-acting paralysis toxin. Panic is rising.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Lower Ward is a chaotic mess of coughing citizens and frantic water-bearers. The well itself is surrounded by City Watch, their iron-shod boots splashing in the spilled, oily water.",
+            "choice_a": "Taste the water (Con Save DC 14)",
+            "consequence_a": "Success: Your iron stomach identifies the toxin: 'Spider-Root Pulp'. (+1 Clue)",
+            "choice_b": "Inspect the bucket mechanism (Investigation DC 12)",
+            "consequence_b": "Success: You find a small, deliberately placed pouch of roots tied to the rope. (+1 Clue)",
+            "convergence": "Someone wanted the Lower Ward immobile, not dead."
+        },
+        {
+            "turn": 2,
+            "narrative": "Spider-Root grows only in the 'Sunless Alcoves'\u2014the territory of the 'Silk-Hand' gang.",
+            "choice_a": "Interrogate the local water-merchant (Intimidation DC 13)",
+            "consequence_a": "Success: He admits he was paid to 'look away' for five minutes last night. (+1 Intel)",
+            "choice_b": "Follow the trail of wet footprints (Survival DC 12)",
+            "consequence_b": "Success: The prints lead into the cellar of the 'Rusty Spoke' tavern. (+1 Progress)",
+            "convergence": "The Rusty Spoke is a known Silk-Hand safehouse."
+        },
+        {
+            "turn": 3,
+            "narrative": "The tavern is quiet\u2014too quiet. The patrons are all Silk-Hand enforcers, their hands hidden beneath the tables.",
+            "choice_a": "Order a drink and listen (Insight DC 13)",
+            "consequence_a": "Success: You overhear plans for a 'Grand Heist' while the guards are sick. (+1 Intel)",
+            "choice_b": "Intimidate the bartender (Str DC 14)",
+            "consequence_b": "Success: He coughs up the key to the back room. (+1 Progress)",
+            "convergence": "A massive enforcer named 'The Bruiser' stands up, blocking the exit."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Bruiser cracks his knuckles. He carries a club wrapped in barbed wire.",
+            "choice_a": "Sweeping Kick (Dex vs DC 13)",
+            "consequence_a": "Success: He falls like a felled oak, his head hitting the floor with a satisfying thud. (+100 XP)",
+            "choice_b": "Brawl him (Str vs DC 15)",
+            "consequence_b": "Success: You trade blows, eventually overwhelming him with sheer grit.",
+            "convergence": "With the Bruiser down, the rest of the gang flees through the windows."
+        },
+        {
+            "turn": 5,
+            "narrative": "In the back room, you find several crates of 'Spider-Root' and a map of the Royal Bank\u2019s ventilation system.",
+            "choice_a": "Seize the map and evidence",
+            "consequence_a": "Success: You have proof of the Silk-Hand\u2019s plan. (+1 Lore)",
+            "choice_b": "Set fire to the stock of roots",
+            "consequence_b": "Success: You prevent any future poisoning, but the smoke alerts the rest of the ward. (+1 Morale)",
+            "convergence": "A hidden door in the floor reveals the gang leader, 'Silk-Eyes' Sarah."
+        },
+        {
+            "turn": 6,
+            "narrative": "Sarah is armed with hand-crossbows tipped with the same poison. She isn\u2019t interested in talking.",
+            "choice_a": "Disarm with a well-aimed throw (Dex DC 14)",
+            "consequence_a": "Success: You knock the crossbow from her hand. (+1 Tactical Adv)",
+            "choice_b": "Hide behind a heavy table for cover",
+            "consequence_b": "Success: The bolts thud into the wood. You close the distance. (+1 Progress)",
+            "convergence": "Sarah retreats into the sewers beneath the tavern."
+        },
+        {
+            "turn": 7,
+            "narrative": "The sewers are a labyrinth. Sarah is faster here, using the pipes like a jungle gym.",
+            "choice_a": "Predict her path (Insight DC 13)",
+            "consequence_a": "Success: You cut her off at the primary junction. (+100 XP)",
+            "choice_b": "Light a flare to flush her out",
+            "consequence_b": "Success: She screams as the bright light ruins her 'Silk-Eyes' night vision.",
+            "convergence": "Sarah is cornered. She offers the 'Antidote' in exchange for her freedom."
+        },
+        {
+            "turn": 8,
+            "narrative": "The antidote is a blue vial. The poisoning is progressing; dozens of children in the Ward will be paralyzed for life without it.",
+            "choice_a": "Agree to the deal",
+            "consequence_a": "Success: You take the antidote, and Sarah vanishes. (+1 Item, -2 Reputation)",
+            "choice_b": "Snatch the vial and arrest her (Sleight of Hand DC 14)",
+            "consequence_b": "Success: You have both the criminal and the cure. (+5 Influence, +1 Item)",
+            "convergence": "You race back to the well as the sun begins to set."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Ward Physician is losing hope. You arrive with the blue vial just in time.",
+            "choice_a": "Distribute the cure personally",
+            "consequence_a": "Success: The grateful families cheer your name. (+5 Morale, +3 Reputation)",
+            "choice_b": "Hand the cure to the Physician and leave",
+            "consequence_b": "Success: You prefer to work in the shadows. (+1 Influence)",
+            "convergence": "The poisoning event is over, but the Silk-Hand gang is now your sworn enemy."
+        },
+        {
+            "turn": 10,
+            "narrative": "The well is scrubbed and purified. The Lower Ward returns to its busy, noisy self.",
+            "choice_a": "Demand the City Watch increase patrols",
+            "consequence_a": "Success: Security increases. (+1 Security)",
+            "choice_b": "Interview Silk-Eyes Sarah in her cell",
+            "consequence_b": "Success: She reveals the bank heist wasn't for gold, but for 'The Warden\u2019s Ledger'. (+1 Lore)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Deep-Well is safe. The Silk-Hand's plot was thwarted, but the revelation of the 'Warden\u2019s Ledger' suggests a traitor high in the Council.",
+    "loot_table": [
+        "Silk-Eyes Crossbow",
+        "Leftover Spider-Root Extract",
+        "140 Gold",
+        "Lower Ward Commendation"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Mass paralysis. -4 Settlement Labor and -2 Settlement Health for two weeks.",
+        "failure_penalty": {
+            "xp_loss": 4
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 5,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Refugee camp reports sickness outbreak",
+        "flags": [
+            "plague_flag"
+        ],
+        "event_trigger": "Player has consumed Void-Wine and witnessed its effects"
+    },
+    "location": "The Refugee Encampment \u2014 South Gate",
+    "district": "Lower Ward",
+    "thread": "Void-Wine",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "Camp Medic Nura",
+        "Patient Zero (NPC)"
+    ],
+    "mechanics_featured": [
+        "Medicine checks",
+        "Constitution saves",
+        "Deduction/Alchemy"
+    ],
+    "permanent_effects": {
+        "settlement": "-5 die-off if cured in time; +1 Population",
+        "world": "Disease catalogued"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Cure and contain",
+            "result": "+10 Morale, +5 Reputation"
+        },
+        {
+            "path": "Quarantine only",
+            "result": "Outbreak slows but recurs in 2 weeks"
+        }
+    ]
+}

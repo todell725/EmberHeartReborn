@@ -1,0 +1,154 @@
+{
+    "id": "SQ-008",
+    "title": "The Lost Expedition",
+    "xp_reward": 1000,
+    "prerequisites": "None",
+    "description": "A group of 'Ley-Line Seekers' has vanished in the 'Singing Gorges'. They were carrying a portable World-Spark tuner.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The 'Singing Gorges' hum with a dissonant, bone-vibrating sound. The air is thick with a yellow haze that tastes of sulfur and ancient dust.",
+            "choice_a": "Listen for the dissonance (Insight DC 13)",
+            "consequence_a": "Success: You isolate a human scream hidden within the gorge's song. (+1 Clue)",
+            "choice_b": "Use a 'Frequency-Tuner' (Item)",
+            "consequence_b": "Success: The needle points toward a cave mouth higher up the cliff. (+1 Progress)",
+            "convergence": "You find the remains of their basecamp\u2014tents shredded from the inside out."
+        },
+        {
+            "turn": 2,
+            "narrative": "The camp is covered in Frost-Burned markings. These aren't animal tracks; they are glyph-prints left by 'Echo-Ghouls'.",
+            "choice_a": "Identify the glyphs (Arcana DC 14)",
+            "consequence_a": "Success: These ghouls feed on the memories of those who die in the gorge. (+1 Lore)",
+            "choice_b": "Search the shredded tents (Investigation DC 12)",
+            "consequence_b": "Success: You find a journal detailing a 'Massive Frequency Spike' from the cave. (+1 Clue)",
+            "convergence": "A voice calls out from the dark of the cave\u2014familiar, yet hollow."
+        },
+        {
+            "turn": 3,
+            "narrative": "It is the voice of Elara, the expedition leader. She stands at the cave's edge, but her movements are jerky, like a marionette.",
+            "choice_a": "Approach with your 'Holy-Light' or torch",
+            "consequence_a": "Success: The light reveals three Echo-Ghouls clinging to her back. (+1 Tactical Adv)",
+            "choice_b": "Call out to her (Persuasion DC 13)",
+            "consequence_b": "Failure: The Ghouls sense your empathy and lunge.",
+            "convergence": "The Ghouls are translucent, flickering in and out of phase with reality."
+        },
+        {
+            "turn": 4,
+            "narrative": "Echo-Ghouls are immune to normal steel while phased out. You must strike when they solidify to feed.",
+            "choice_a": "Wait for the 'Feeding Phase' (Perception DC 14)",
+            "consequence_a": "Success: You time your strike perfectly, cleaving a Ghoul in two. (+100 XP)",
+            "choice_b": "Imbue your blade with magic/spirit",
+            "consequence_b": "Success: Your weapon glows, tearing through the ethereal forms. (+1 Progress)",
+            "convergence": "The Ghouls shriek in a frequency that hurts your ears, fleeing back into the cave."
+        },
+        {
+            "turn": 5,
+            "narrative": "Elara is comatose, but her 'World-Spark Tuner' is still active, pulsing with a dangerous violet energy.",
+            "choice_a": "Calibrate the Tuner (Intelligence DC 15)",
+            "consequence_a": "Success: The tuner stabilizes, acting as a beacon for other survivors. (+1 Item)",
+            "choice_b": "Drag Elara to safety (Strength DC 13)",
+            "consequence_b": "Success: You carry her out just as the cave ceiling begins to vibrate violently. (+1 Morale)",
+            "convergence": "Deep in the cave, a 'Frequency-Abomination'\u2014a mass of sound and shadow\u2014begins to emerge."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Abomination is the source of the Singing Gorges' power. It radiates a 'Sorrow-Aura' that triggers your worst memories.",
+            "choice_a": "Focus on your duty (Wis Save DC 14)",
+            "consequence_a": "Success: You push through the mental noise, your resolve hardening. (+100 XP)",
+            "choice_b": "Attack the Abomination's core",
+            "consequence_b": "Failure: Your blade passes through the sound, dealing no damage.",
+            "convergence": "The Tuner in your hand begins to glow. It can be used to 'shatter' the sound-beast."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Abomination lunges, its mass vibrating so fast it looks like a blur of gray static.",
+            "choice_a": "Overload the Tuner (Dex DC 14)",
+            "consequence_a": "Success: A blast of pure, white frequency shatters the Abomination into harmless echoes. (+500 XP)",
+            "choice_b": "Lead it toward the cave exit",
+            "consequence_b": "Success: The natural sunlight weakens the creature, allowing a final strike. (+1 Progress)",
+            "convergence": "The Gorge falls silent for the first time in centuries."
+        },
+        {
+            "turn": 8,
+            "narrative": "You find the rest of the Seekers trapped in a webbing of crystallized sound. They are weak, but alive.",
+            "choice_a": "Free them with the Tuner",
+            "consequence_a": "Success: You rescue the entire team. They offer you their 'Seeker\u2019s Compass'. (+1 Item)",
+            "choice_b": "Harvest the 'Sound-Crystals'",
+            "consequence_b": "Success: They can be used as high-energy batteries. (+3 Resources)",
+            "convergence": "Elara wakes up, her eyes clear. She remembers a 'Hidden Gate' deeper in the Gorge."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Hidden Gate is sealed with a frequency-lock that requires the Tuner. Elara asks if you want to open it.",
+            "choice_a": "Open the Gate (DC 15)",
+            "consequence_a": "Success: You discover a vault containing 'Pre-Scourge Knowledge'. (+5 Lore)",
+            "choice_b": "Leave it sealed for the Council to decide",
+            "consequence_b": "Success: You choose caution. (+2 Reputation)",
+            "convergence": "The expedition returns to Warden-Keep as heroes."
+        },
+        {
+            "turn": 10,
+            "narrative": "Back at the settlement, the Council is split on what to do with the Frequency-Abomination's remains.",
+            "choice_a": "Recommend weaponizing the tech",
+            "consequence_a": "Success: Settlement military increases, but at a cost to morale. (+5 Defense, -2 Morale)",
+            "choice_b": "Recommend destroying the tech",
+            "consequence_b": "Success: Morale rises as the threat is truly gone. (+5 Morale)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Ley-Line Seekers are safe, and the Singing Gorges have become the 'Silent Gorges'. The discovery of the pre-Scourge vault has changed everything.",
+    "loot_table": [
+        "Seeker's Compass (Adv on Survival)",
+        "Stable World-Spark Tuner",
+        "Crystallized Sound Core",
+        "300 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Expedition lost. -100 Reputation and -2 Settlement Lore progress.",
+        "failure_penalty": {
+            "xp_loss": 100
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 10,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Ley-Line Seekers send distress signal",
+        "flags": [
+            "seeker_distress"
+        ]
+    },
+    "location": "The Singing Gorges \u2014 Far Eastern Frontier",
+    "district": "Scourge-Fringe",
+    "thread": "Scourge",
+    "estimated_duration": "4\u20135 hours",
+    "key_npcs": [
+        "Expedition Leader Elara",
+        "Frequency-Abomination (boss)"
+    ],
+    "mechanics_featured": [
+        "Wis saves",
+        "Perception (frequency)",
+        "Intelligence-based puzzle",
+        "Boss encounter"
+    ],
+    "permanent_effects": {
+        "settlement": "+5 Lore (Seeker archives)",
+        "world": "Silent Gorges unlocked as waypoint"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Open the Gate",
+            "result": "+5 Lore, Pre-Scourge knowledge unlocked"
+        },
+        {
+            "path": "Leave it sealed",
+            "result": "+2 Reputation, +2 Stability"
+        }
+    ]
+}

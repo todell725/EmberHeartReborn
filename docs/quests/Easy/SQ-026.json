@@ -1,0 +1,153 @@
+{
+    "id": "SQ-026",
+    "title": "The Rust-Glow Leak",
+    "xp_reward": 500,
+    "prerequisites": "None",
+    "description": "A thick, phosphorescent sludge is backing up in the lower-district plumbing system. The smell is of wet copper and ancient earth.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The maintenance tunnels are slick with a viscous, orange film that hums with a faint, low-frequency vibration. Your lantern light reflects off the sludge in greasy rainbows.",
+            "choice_a": "Sample the sludge (Alchemist DC 12)",
+            "consequence_a": "Success: You isolate a rare trace of 'Living Iron'. (+1 Lore)",
+            "choice_b": "Probe the leak with a tool (Dex DC 11)",
+            "consequence_b": "Success: You find the sludge is moving against the gravity of the pipes. (+1 Progress)",
+            "convergence": "The sludge begins to pool around your boots, thickening with every second."
+        },
+        {
+            "turn": 2,
+            "narrative": "The orange glow intensifies. Above, a main conduit is weeping large, heavy droplets that sizzle when they hit your cloak.",
+            "choice_a": "Patch the weep (Repair DC 13)",
+            "consequence_a": "Success: The pressure stabilizes momentarily. (+1 Progress)",
+            "choice_b": "Divert the flow (Str DC 14)",
+            "consequence_b": "Success: You force the sludge into a secondary containment unit. (+1 Progress)",
+            "convergence": "A rhythmic thumping starts from deeper within the pipe\u2014something is pulsing inside."
+        },
+        {
+            "turn": 3,
+            "narrative": "The 'thumping' is heavy, like a heartbeat. The pipe walls are swelling and contracting as if they were made of muscle, not brass.",
+            "choice_a": "Apply frost-paste (Int DC 12)",
+            "consequence_a": "Success: The biological growth slows down. (+100 XP)",
+            "choice_b": "Cut into the swelling (Atk Roll DC 13)",
+            "consequence_b": "Success: You drain a pocket of mana-rich ichor. (+1 Progress)",
+            "convergence": "The sludge forms a semi-solid pseudopod and lashes out toward your face."
+        },
+        {
+            "turn": 4,
+            "narrative": "The pseudopod smells of ozone. It's trying to 'sense' your heat, its surface shimmering with a collective, alien intelligence.",
+            "choice_a": "Blind it with your lantern (Dex DC 12)",
+            "consequence_a": "Success: The mass recoils into the shadows. (+100 XP)",
+            "choice_b": "Freeze it in place",
+            "consequence_b": "Success: You solidify the immediate threat. (+1 Progress)",
+            "convergence": "The main block is up ahead\u2014a massive iron valve completely encased in orange bio-crystal."
+        },
+        {
+            "turn": 5,
+            "narrative": "The crystal is translucent. Inside, you can see the valve stem being slowly dissolved by a swarm of microscopic 'Rust-Spiders'.",
+            "choice_a": "Crush the spiders (Str DC 13)",
+            "consequence_a": "Success: You clear the mechanism. (+1 Progress)",
+            "choice_b": "Use a chemical neutralizer (Int DC 14)",
+            "consequence_b": "Success: The crystal dissolves harmlessly. (+100 XP)",
+            "convergence": "The valve is free, but the pressure in the system is reaching a critical 'Red-Line'."
+        },
+        {
+            "turn": 6,
+            "narrative": "Steam whistles through the cracks in the pipes. The orange sludge is boiling now, releasing a gas that makes your eyes water.",
+            "choice_a": "Don a respirator (Con DC 12)",
+            "consequence_a": "Success: You breathe through the toxins. (+100 XP)",
+            "choice_b": "Vent the gas into the sump",
+            "consequence_b": "Success: The air clears, revealing the source of the pressure. (+1 Progress)",
+            "convergence": "A 'Rust-Mother'\u2014a basketball-sized sphere of teeth and copper wire\u2014is blocking the main drain."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Rust-Mother hums at a pitch that threatens to shatter your lantern glass. It begins to pull metal from your own gear.",
+            "choice_a": "Hold your weapons tight (Str DC 14)",
+            "consequence_a": "Success: You resist the magnetic pull. (+1 Progress)",
+            "choice_b": "Smash its core (Atk DC 15)",
+            "consequence_b": "Success: The sphere shatters into harmless scraps. (+1 Progress)",
+            "convergence": "The pressure drops instantly. The orange glow fades to a dim, dying ember."
+        },
+        {
+            "turn": 8,
+            "narrative": "The drain opens with a mournful groan. The sludge is sucked away, leaving the pipes stained but silent.",
+            "choice_a": "Scrub the pipes (Endurance DC 12)",
+            "consequence_a": "Success: You prevent a secondary outbreak. (+1 Morale)",
+            "choice_b": "Search the sediment",
+            "consequence_b": "Success: You find a cluster of 'Rust-Pearls'. (+1 Loot)",
+            "convergence": "The system is quiet. The low-district will have water tonight."
+        },
+        {
+            "turn": 9,
+            "narrative": "You pack your tools, your boots caked in the orange residue. The Steward\u2019s voice crackles over the local intercom, asking for a status report.",
+            "choice_a": "Report 'All Clear'",
+            "consequence_a": "Success: Your reliability with Maintenance increases. (+1 Rep)",
+            "choice_b": "Keep it quiet (Secret DC 14)",
+            "consequence_b": "Success: You hide the samples for your own study. (+1 Secret)",
+            "convergence": "You climb the ladder back to the surface level."
+        },
+        {
+            "turn": 10,
+            "narrative": "The cold night air of the Ridge is a relief after the humid, ozone-heavy tunnels. The water begins to flow through the pumps behind you.",
+            "choice_a": "Inform the settlers",
+            "consequence_a": "Success: The relief in the Lower Ward is palpable. (+5 Morale)",
+            "choice_b": "Rest at the Tavern",
+            "consequence_b": "Success: You recover your strength. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Rust-Glow Leak was more than just plumbing issues; it was a localized birth of Living Iron. The plumbing is restored, for now.",
+    "loot_table": [
+        "Rust-Pearl Clutch",
+        "Copper-Wire Coil",
+        "500 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Leads to a 'Rust-Bloom' outbreak. -2 Settlement Health and water rationing.",
+        "failure_penalty": {
+            "xp_loss": 2
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Maintenance crew reports glowing sludge in Lower Ward pipes",
+        "flags": [
+            "rust_glow_report"
+        ]
+    },
+    "location": "Lower-District Maintenance Tunnels",
+    "district": "Lower Ward",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "District Steward Vos",
+        "Rust-Mother (creature)"
+    ],
+    "mechanics_featured": [
+        "Repair",
+        "Alchemy (sample)",
+        "Combat (pseudopod/mother)",
+        "Endurance"
+    ],
+    "permanent_effects": {
+        "settlement": "Plumbing restored; Living Iron sample archived",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Report 'All Clear'",
+            "result": "+1 Reputation with Maintenance"
+        },
+        {
+            "path": "Keep samples",
+            "result": "+1 Secret (Living Iron research)"
+        }
+    ]
+}

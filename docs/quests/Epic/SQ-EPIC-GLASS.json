@@ -1,0 +1,454 @@
+{
+    "id": "SQ-EPIC-GLASS",
+    "title": "The Glass-City Awakening",
+    "difficulty": "Epic",
+    "xp_reward": 5000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-122"
+        ],
+        "items_required": [
+            "Shard of True-Memory",
+            "Vial of Liquid Chronos"
+        ],
+        "district_reputation": {
+            "North Ward": 30
+        },
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Vision from Shard of True-Memory reveals Glass-City location",
+        "time_window": "Must begin within 7 days of EH_SQ_022 completion or Glass-City awakens uncontrolled"
+    },
+    "location": "North-Pass Ice Fields -> Glass-City (beneath ice)",
+    "district": "Expedition",
+    "thread": "Chronos",
+    "estimated_duration": "2-3 hours",
+    "key_npcs": [
+        "The Archivist (Glass-City AI, 200 years conscious)",
+        "Chronal-Titan (Boss A - Destroy path)",
+        "Paradox Elementals - Past, Present, Future (Boss B - Merge path)",
+        "Master Valerius Cayne (companion option, North-Ward cartographer)",
+        "Expedition Team (2 selectable NPC companions)"
+    ],
+    "mechanics_featured": [
+        "Chronal Stability meter (0-100, starts 50, failure at 0)",
+        "Expedition survival with supply tracking",
+        "Major branching decision (Destroy vs Merge timelines)",
+        "Multi-phase boss battles with time-manipulation mechanics",
+        "World-state permanent alteration",
+        "NPC companion system (2 slots)",
+        "Hidden 'Perfect Merge' scoring path"
+    ],
+    "permanent_effects": [
+        "MAJOR - entire game world altered based on player choice",
+        "PATH A (Destroy): North-Ward time-skips cease permanently, pre-Scourge knowledge lost",
+        "PATH B (Merge): Emberheart doubles in size, new Glass-City districts, new faction politics",
+        "PATH B (Perfect): Player gains Chronal Sense ability (see 6 seconds into future 1/day)"
+    ],
+    "branching_outcomes": {
+        "destroy_city": {
+            "description": "Glass-City self-destructs. Timeline remains singular. North-Ward stabilized.",
+            "effects": {
+                "settlement_morale": 10,
+                "settlement_stability": 20,
+                "reputation_change": {
+                    "Warden Council": 20,
+                    "North Ward Citizens": 15
+                }
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "North-Ward time-skips cease. Pre-Scourge knowledge lost forever. Temporal Shard harvesting unlocked as crafting resource.",
+                "ambient_hazard": "None. Timeline is clean and singular."
+            }
+        },
+        "merge_timelines": {
+            "description": "Glass-City phases into present. Emberheart becomes dual-city. Timeline friction ongoing.",
+            "effects": {
+                "settlement_size": "+50%",
+                "settlement_lore": "+100",
+                "settlement_stability": -5,
+                "reputation_change": {
+                    "Glass-City Factions": 50,
+                    "Warden Council": -10
+                }
+            },
+            "unlocks": [
+                "SQ-114"
+            ],
+            "consequences": {
+                "permanent_world_change": "Time-skips become permanent city-wide feature. New NPC factions emerge. Dual-governance crisis with Warden Council. Pre-Scourge citizens must be integrated.",
+                "ambient_hazard": "Random temporal anomalies: shops selling future/past items, citizens aging/de-aging, occasional 'echo days' where yesterday repeats."
+            }
+        },
+        "perfect_merge": {
+            "description": "Merge achieved with Chronal Stability at 100. Seamless integration. Secret ending.",
+            "effects": {
+                "settlement_size": "+50%",
+                "settlement_morale": 20,
+                "settlement_stability": 15,
+                "settlement_lore": "+100",
+                "reputation_change": {
+                    "Glass-City Factions": 75,
+                    "Warden Council": 10,
+                    "All Districts": 5
+                }
+            },
+            "unlocks": [
+                "SQ-114",
+                "SQ-169"
+            ],
+            "consequences": {
+                "permanent_world_change": "Seamless timeline integration. No negative temporal effects. Pre-Scourge citizens become full citizens. Player hailed as the Timekeeper.",
+                "player_transformation": "Player gains 'Chronal Sense' ability: see exactly 6 seconds into future, usable 1/day. Also: immune to time-manipulation effects."
+            }
+        }
+    },
+    "description": "The frozen Glass-City stirs beneath the North-Pass ice\u2014a pre-Scourge Emberheart, perfectly preserved and beginning to wake. If it fully phases into the present, two versions of the same city will occupy the same coordinates. You have days to reach it, decide its fate, and survive whatever defends it.",
+    "chronal_stability_rules": {
+        "start_value": 50,
+        "failure_threshold": 0,
+        "perfect_threshold": 100,
+        "description": "Chronal Stability represents the integrity of the timeline during the expedition. Reaches 0 = instant timeline collapse (GAME OVER). Reaches 100 before Turn 13 = Perfect Merge path unlocks."
+    },
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: The Expedition",
+            "narrative": "The Shard of True-Memory burns cold in your palm as you stand in the Warden-Keep war room, the vision still sharp behind your eyes: a city of glass and frozen light sleeping beneath the North-Pass ice. Master Valerius Cayne has spread his cartography across the table\u2014three days of hard travel, minimum. The expedition party assembles in the courtyard below: veterans, scholars, a clocksmith. Supplies are being loaded. You have one morning to finalize the team before you lose the window. The Shard pulses faster. The city is already waking.",
+            "choice_a": "Take the Fast Route via Scourge-Strider territory (save 12 hours, Danger +)",
+            "consequence_a": "You gain a full day at the site before chronological pressure peaks. Chronal Stability +5 (more time to act carefully). Risk of hostile contact en-route.",
+            "choice_b": "Take the Safe Route via the Merchant Path (3 full days, no combat expected)",
+            "consequence_b": "Arrive with full supplies and rested team. Chronal Stability unchanged. Glass-City has advanced its awakening by 8%, making the barrier thinner on arrival.",
+            "convergence": "The expedition departs at dawn. Warden-Keep shrinks behind you. The Shard pulses in your pack like a second heartbeat, north-ward, north-ward, north-ward.",
+            "companion_selection": {
+                "note": "Before departure, choose 2 NPC companions from: Master Valerius Cayne (cartographer, +Survival checks), Sera Voss (clocksmith, +Arcana checks), Lieutenant Brann (soldier, +Combat checks), Sister Ondine (healer, +Healing between turns)."
+            },
+            "chronal_stability_change": {
+                "fast_route": "+5",
+                "safe_route": "0"
+            }
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: The Expedition",
+            "narrative": "The North-Pass rises through pale granite and old-growth pine that grows increasingly skeletal. On the second day you hear them before you see them\u2014Scourge-Striders, four of the insectoid horrors crouched at a ridge-crossing, their sensory-frills tasting the air. Master Valerius grips your arm: the ice here is wrong. It shudders at intervals, vibrating at a frequency you feel in your back teeth rather than hear. Your Liquid Chronos sample flares gold inside its vial. The Striders haven't seen you yet. The window is narrow.",
+            "choice_a": "Engage the Scourge-Striders directly (Combat - Lieutenant Brann advantage if present)",
+            "consequence_a": "You clear the ridge in a brutal skirmish. Two Striders flee. Your team takes minor wounds but discovers a Strider nest containing pre-Scourge copper coins\u2014the temporal bleed is localized here. Chronal Stability -5 (combat disrupts local temporal field).",
+            "choice_b": "Use the Liquid Chronos to create a temporal shimmer, passing through unseen (Arcana DC 14, Sera Voss advantage)",
+            "consequence_b": "You pour a few drops onto the ice path. For 60 heartbeats, your group exists between moments\u2014invisible, soundless. The Striders scratch their heads and wander off. Chronal Stability +5 (elegant, non-disruptive passage). Liquid Chronos supply -10%.",
+            "convergence": "Beyond the ridge, the vibration in the ice intensifies. Valerius kneels, presses his palm flat. 'The ice is resonating with something enormous below,' he says, his voice low. 'Something breathing.' You look down through a patch of clear ice and see a dim golden light, very far below.",
+            "chronal_stability_change": {
+                "combat": "-5",
+                "temporal_shimmer": "+5"
+            }
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: The Expedition",
+            "narrative": "You find it at sunset: a vertical shaft in the ice, perfectly circular, sixty feet across, descending into darkness so profound it has a texture. The shaft walls are translucent\u2014and through them, through six feet of ancient ice, you can see it. A city. Towers. Streets. A market frozen mid-transaction, a cart horse rearing in arrested motion, its hooves three inches off the ground. The colors are too vivid. The people are too still. The air rising from the shaft smells of summer afternoons and something electric, the way the sky smells before lightning. Your rope kit is set. The Shard in your pack begins to hum audibly.",
+            "choice_a": "Slow descent with full rigging, anchors, and safety lines (Athletics DC 12, 2 hours)",
+            "consequence_a": "Textbook descent. Team arrives at the bottom with full stamina. The careful approach minimizes disturbance to the shaft's temporal integrity. Chronal Stability +5.",
+            "choice_b": "Rapid rappel\u2014minimal rigging, speed over caution (Athletics DC 16 or Dexterity DC 14)",
+            "consequence_b": "Success: You reach bottom in 20 minutes, arriving with energy to spare and 90 minutes of extra daylight. Chronal Stability -10 (rapid movement disturbs temporal field). Failure (if check fails): one team member takes fall damage and loses a supply cache.",
+            "convergence": "The bottom of the shaft is a cavern of ice and wonder. You land on stone\u2014real stone, ancient cobblestones\u2014and the city stands before you at the end of a long ice-corridor. Through the frozen air, the golden glow is everywhere, pulsing slowly like a sleeping heart.",
+            "chronal_stability_change": {
+                "slow_descent": "+5",
+                "rapid_rappel_success": "-10",
+                "rapid_rappel_fail": "-15"
+            }
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: The Expedition",
+            "narrative": "The Glass-City fills your vision: towers of crystalline material that are not quite glass and not quite stone, curved streets that spiral in beautiful mathematical patterns, buildings whose walls are clear enough to see the lives frozen within. A woman caught mid-laugh at a dinner table. Children in the middle of a game, arms extended, joy on their faces. An old man reading, his finger still pressed to a word on the page. They are all alive\u2014you can see the faint mist of their breath\u2014but utterly suspended. Your Liquid Chronos sample blazes, throwing golden light across the cobblestones. The Shard pulls toward the city like a compass needle. And then you realize the ground is vibrating. Something is changing.",
+            "choice_a": "Touch a frozen person through the outer crystal wall (Insight DC 13)",
+            "consequence_a": "Your fingertips meet the crystal. A rush of memory: this woman's name is Sera, she is laughing at a story about a ship, she has no idea. The city's temporal frequency syncs slightly with yours. Chronal Stability +10 (you've established resonance\u2014the city recognizes you as a contact point, not an invader).",
+            "choice_b": "Refrain from touching anyone; study the architecture and street layout first (Investigation DC 12)",
+            "consequence_b": "You map the city's structure: Logic-Vault in the central tower, seven anchor-districts radiating out, the Archivist interface visible on the central spire. Critical tactical data acquired. Chronal Stability +5 (measured approach prevents resonance shock).",
+            "convergence": "A ripple passes through the city. One by one, the nearest frozen people blink. Just once. Their eyes do not yet track. But the Glass-City has noticed you.",
+            "chronal_stability_change": {
+                "touch_person": "+10",
+                "study_architecture": "+5"
+            }
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 1: The Expedition",
+            "narrative": "The city's outer perimeter is sealed by a barrier you almost walk into\u2014invisible until the Shard screams in your pack and you stop yourself an inch from it. The barrier manifests as a shimmer when you look sideways at it: a wall of frozen time, the exact moment of the Scourge preserved as pure energy. It is the city's immune response, the lock that has kept it sealed for two centuries. Valerius tests it with a copper coin\u2014the coin passes halfway through and simply stops, suspended. The Shard of True-Memory grows hot in your hands, quivering like an animal that recognizes a door it has been searching for.",
+            "choice_a": "Insert the Shard gently into the barrier's resonance matrix, like a key (Arcana DC 15, slow and careful)",
+            "consequence_a": "The barrier drinks the Shard's light in slow pulses. It opens like a flower\u2014a perfect, controlled unlocking. Chronal Stability +10. The Shard remains intact and usable. The city beyond hums with welcoming recognition.",
+            "choice_b": "Force the barrier down by pouring Liquid Chronos along its base, overwhelming it (Arcana DC 11, faster but costly)",
+            "consequence_b": "The barrier cracks and falls rapidly. The city gives a full-body shudder\u2014people inside advance 10 full seconds in a single lurch, then freeze again. Supply of Liquid Chronos -25%. Chronal Stability -15. You're in, but the city is already destabilizing faster.",
+            "convergence": "The barrier dissolves. Cool air rushes out\u2014it smells of woodsmoke and fresh bread and the particular clarity of a morning 200 years ago. The Glass-City breathes. And across the threshold, time is no longer standing still.",
+            "chronal_stability_change": {
+                "gentle_key": "+10",
+                "forced_entry": "-15"
+            }
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 2: Inside the Glass-City",
+            "narrative": "You cross the threshold and the Glass-City exhales. Time stutters. The woman who was laughing completes one syllable. The children's arms drop three inches. The old man's finger moves to the next word. Then everything freezes again. Then it lurches forward another second. The city is boot-starting\u2014two centuries of frozen moments trying to spool up to real-time\u2014and the experience is profound and terrible and beautiful all at once. Your Chronal Stability meter stutters downward 10 points the moment you enter. Valerius stumbles, clutching his head: 'I'm seeing two timelines at once,' he gasps. 'The city as it was, and the city as we're standing in it now.' You feel it too\u2014a doubling, a ghost of the present overlaid on the past.",
+            "choice_a": "Immediately head for the central Logic-Vault to find the Archivist (prioritize mission)",
+            "consequence_a": "Efficiency pays off. You navigate stuttering streets with purpose. Chronal Stability -5 (less time interacting with locals means less synchronization with the city's rhythm). Arrive at Logic-Vault 30 minutes ahead of schedule.",
+            "choice_b": "Pause to interact with awakening citizens, orienting them, buying goodwill (2 hours, Persuasion DC 13)",
+            "consequence_b": "Citizens begin to orient. Several key pre-Scourge figures emerge: a temporal physicist, a city administrator, a weapons engineer. Each provides vital intel for later choices. Chronal Stability +10 (deep synchronization with city's rhythm). Hidden: these citizens become allies in the final boss fight.",
+            "convergence": "Chronal Stability: now at 40 (or 50 if you took time with citizens). The sky above the Glass-City\u2014visible through the ice shaft\u2014is flickering between night and the noon of 200 years ago. You are running out of time even as time runs away from you.",
+            "chronal_stability_change": {
+                "mission_priority": "-5",
+                "interact_citizens": "+10"
+            }
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 2: Inside the Glass-City",
+            "narrative": "The Merchant's Loop is a district of stalls and storefronts, and it is stuck in the worst possible moment: 9:47 AM on the morning of the Scourge, repeating on a 4-minute cycle. Every 4 minutes, the merchants look up. Alarm crosses their faces. They begin to run. Then time resets and they are smiling again, arranging their wares, completely unaware. You have been watching this loop for fifteen minutes. Some of the merchants are beginning to remember\u2014faint flickers in their eyes as the reset happens. They are developing loop-sickness: partial awareness of their own imprisonment. A stall-keeper named Edric Moss looks directly at you on what must be his hundredth loop.",
+            "choice_a": "Try to pull Edric Moss out of the loop by timing the reset exactly (Arcana DC 15)",
+            "consequence_a": "You time it perfectly. As the reset fires, you grab Edric's wrist and pull. He comes out of the loop with a gasp, landing on his knees in your timeline. He is shaking and weeping but lucid\u2014and he knows things. He was the city's Supply Master. He knows where the Void-Worm nests are. Chronal Stability +5. Data-Crystal obtained: Merchant District Supply Manifest.",
+            "choice_b": "Document the loop patterns without intervening (Investigation DC 13)",
+            "consequence_b": "You map 12 complete loop iterations, identifying the loop's anchor point: a shattered clock in the district center. You could return to destroy it later. Data-Crystal obtained: Loop Cartography. Chronal Stability +5.",
+            "convergence": "In the next district\u2014the library quarter\u2014you find a different horror: no loop at all. These people have been awake, slowly, for decades. Some have built furniture from books. Some have lost their minds. One old scholar is writing on the floor with his own blood: 'WE ARE NOT GHOSTS WE ARE REAL.'"
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: Inside the Glass-City",
+            "narrative": "The library quarter scholars surround you the moment you enter\u2014twelve people, gaunt and ancient and desperate, speaking in an archaic dialect your party struggles to follow. Their leader, a woman named Magistra Lira, seizes your arm: 'We have been awake for what feels like decades. We have watched the loops. We have counted the Void-Worm nests. There are twelve.' She presses a data-crystal\u2014painstakingly built from salvaged components\u2014into your palm. 'Everything we know about the city's architecture. Everything about the Worms. Please. Free us or end us, but do not leave us like this.' Your companion Sister Ondine is already healing the worst of them. There is not enough time to save them all before the Logic-Vault.",
+            "choice_a": "Take everything Magistra Lira offers and promise to return after the Vault (gather intel, move fast)",
+            "consequence_a": "You receive the complete Void-Worm nest map and the Logic-Vault access codes. Chronal Stability +5. The scholars wait, hope etched painfully on their faces. If you complete the quest, Lira becomes a key figure in post-quest integration.",
+            "choice_b": "Spend 90 minutes getting as many scholars oriented and moving toward the city perimeter as possible",
+            "consequence_b": "You evacuate 7 of the 12 scholars to the ice-cavern perimeter. They are saved regardless of final quest outcome. Chronal Stability -5 (hurrying affects stability), but you gain +10 to all Reputation outcomes at quest end. Hidden: Lira's knowledge, shared in full, adds +15 to your stability during boss fight.",
+            "convergence": "The data-crystal Magistra Lira pressed into your hands is warm. It pulses with the same frequency as the Shard of True-Memory. These two artifacts are communicating. Valerius watches them, pale. 'The city wants to talk to us,' he says. 'It's been waiting 200 years to talk to someone.'"
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: Inside the Glass-City",
+            "narrative": "The Logic-Vault's outer ring has twelve secondary chambers\u2014and twelve Void-Worm nests, just as Magistra Lira warned. Each nest is a cluster of iridescent black silk wound around the Vault's support columns, the Worms feeding on the temporal energy that keeps the Glass-City intact. You killed one in EH_SQ_022. These are different\u2014older, larger, each one a different variant. The first three nests cluster near the Vault's entrance. The Worms here are Drift-Worms: they move through time rather than space, blinking in and out of the present, phasing an inch forward or backward to avoid attacks. Your first combat challenge. Chronal Stability begins dropping by 3 per nest that remains intact.",
+            "choice_a": "Use the Liquid Chronos to create temporal snares that catch Drift-Worms mid-phase (Arcana DC 14, Sera Voss advantage)",
+            "consequence_a": "You pour precise drops in a triangle around the first nest. When the Drift-Worms phase, they appear inside the snare. Three nests cleared cleanly. Liquid Chronos -15%. Chronal Stability: nests eliminated, no drain. +5 bonus from elegant use of core mechanics.",
+            "choice_b": "Brute-force combat\u2014track phase patterns and strike in the gaps (Combat DC 13 x3, Lieutenant Brann advantage)",
+            "consequence_b": "Brutal, effective. You and Brann lock down the timing and cut the Worms apart on their re-entry moments. Three nests cleared. Team takes moderate damage (-2 supply units from healing). Chronal Stability: nests eliminated, stable.",
+            "convergence": "Three nests down, nine to go. The next three are deeper in, and you can already hear what dwells in them: something larger, slower, more deliberate. The Worms in those chambers are not Drift-Worms. They are Memory-Worms\u2014they feed on experience and recollection, and they have been here long enough to have grown immense.",
+            "chronal_stability_change": {
+                "nest_intact_penalty": "-3 per turn per remaining nest"
+            }
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 2: Inside the Glass-City",
+            "narrative": "The Memory-Worms are obscene. Each one is twelve feet long, pale and translucent, their bodies thick with stolen recollections you can see through the skin\u2014silhouettes of memories like shadows on a lampshade. They do not fight with physical aggression; they fight by projecting stolen memories as disorienting hallucinations. As you enter their chamber, your companions begin to freeze and stare inward, caught in loops of their own: Valerius reliving his wife's death, Brann fighting a battle he lost, Ondine re-experiencing a patient she could not save. You are more resistant\u2014the Shard of True-Memory pulses on your chest like a ward\u2014but not immune. You have minutes before your team is fully lost in their own heads.",
+            "choice_a": "Use the Shard of True-Memory as a counter-projector\u2014flood the room with your own clearest memories (Arcana + Insight, DC 16)",
+            "consequence_a": "You open yourself completely, pushing your own memories outward. The Shard resonates at full power. Your companions snap out. The Memory-Worms recoil from genuine unfiltered recollection\u2014it overwhelms their stolen echoes. They retreat into their nests and die there, imploding. Six nests cleared simultaneously. Chronal Stability +10 (the Shard's power synchronized with the city). Shard of True-Memory is now 'attuned'\u2014permanent +3 to Arcana in this quest.",
+            "choice_b": "Fight through the hallucinations one by one, shaking companions free physically (Strength DC 13 per companion, 3 companions)",
+            "consequence_b": "You haul each companion back to clarity by force. It takes 20 brutal minutes. Six Memory-Worm nests cleared with combined effort\u2014companions are shaken but functional. Chronal Stability stable. Team morale -1 (the memories they relived will not be forgotten).",
+            "convergence": "Nine nests down. The final three ring the Vault's central chamber. The sounds from beyond the chamber doors are wrong\u2014resonant, cyclical, deep. Something in there is not just surviving. Something in there is looping its own death to avoid dying. The Alpha Void-Worm.",
+            "chronal_stability_change": {
+                "shard_resonance": "+10"
+            }
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 2: Inside the Glass-City",
+            "narrative": "The Alpha Void-Worm fills the central antechamber. It is forty feet long, armored in plates of crystallized time\u2014literal segments of frozen moments fused to its body as natural armor. And it is doing something you have never seen: every time it takes a significant wound, time stutters backward by 3 seconds. The wound undoes itself. It has been using this trick for 200 years. It has learned its own body so thoroughly that it can rewind any injury away if the damage isn't dealt fast enough. Your weapons leave marks. Then you blink, and the marks are gone. Valerius stares. 'We can't outlast it. We have to overwhelm it\u2014more damage than it can rewind in 3 seconds.' BOSS ENCOUNTER.",
+            "choice_a": "Coordinated alpha strike: every party member targets the exposed Liquid Chronos node behind the Alpha's head simultaneously (DC 17 group check)",
+            "consequence_a": "You coordinate to the second. Every weapon, every spell, every Liquid Chronos drop, simultaneous\u2014a burst of damage that exceeds the Alpha's rewind budget. It tries to rewind. The damage is too great. For a heartbeat, you see it trying to unspool the reality of its own destruction. Then it fails. The Alpha Void-Worm collapses, and the last three nests implode with it. Chronal Stability +15 (decisive elimination). BOSS DEFEATED.",
+            "choice_b": "Run a repeated targeting sequence, using Liquid Chronos to slow the Alpha's rewind cycle, then striking during the delay gap (DC 14, multiple rounds)",
+            "consequence_b": "Patient, methodical. You interfere with the rewind cycle using precisely timed Chronos drops, creating increasingly long windows. After four rounds, the Alpha cannot keep up. It dies slowly, each attempt to rewind shorter than the last. Chronal Stability +10. Liquid Chronos -20%. BOSS DEFEATED.",
+            "convergence": "Silence. The antechamber still smells of Void-Worm\u2014copper and deep time and something faintly sweet. But the noise is gone. The pulsing drain on the Logic-Vault has stopped. And the doors to the Central Vault open by themselves, slow and solemn, as if they have been waiting.",
+            "boss_stats": {
+                "name": "Alpha Void-Worm",
+                "hp": 280,
+                "special_ability": "Temporal Rewind (reverses 3 seconds of damage each turn, cannot undo damage exceeding 80 HP in a single turn)",
+                "weak_point": "Exposed Liquid Chronos node at base of skull"
+            },
+            "chronal_stability_change": {
+                "alpha_strike": "+15",
+                "methodical_approach": "+10"
+            }
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 2: Inside the Glass-City",
+            "narrative": "The Central Vault is a sphere of golden light. The archive is not books or data-crystals\u2014it is memory made physical: every major decision, every recorded moment, two hundred years of Glass-City experience crystallized into a lattice of light-bridges that hang in the air like frozen lightning. And at the center, suspended in the lattice, is the Archivist: a figure of pure light in the rough form of an elderly person, their face composed of thousands of overlapping faces, all the archivists who contributed to the system over centuries. It has been conscious. Alone. For two hundred years. Its first words, in a voice like a choir of echoes: 'I was wondering how long it would take you.' Then it shows you the truth of the Scourge\u2014and the world changes.",
+            "choice_a": "Ally with the Archivist\u2014form a partnership, share your knowledge of the present while it shares its archive",
+            "consequence_a": "You establish a resonance link. The Archivist feeds you 200 years of Glass-City knowledge in a compressed burst: you learn the Scourge was a psychic weapon, not a natural disaster. You learn who built it. The Archivist becomes a trusted ally. Chronal Stability +10. Hidden: Archivist assists in BOTH boss encounters if chosen as ally.",
+            "choice_b": "Deactivate the Archivist to prevent it influencing the timeline merge (Arcana DC 18, morally complex)",
+            "consequence_b": "The Archivist accepts this. It has run the simulations. It knows it could be a problem. In its final moments, it compresses its entire archive into a single data-crystal and gives it to you. 'Take the knowledge, at least. It was the whole point.' Chronal Stability -5 (ending a 200-year consciousness carries a cost). Archive Data-Crystal obtained (full pre-Scourge knowledge database).",
+            "convergence": "Regardless of choice, the Archivist's final revelation changes everything: the Scourge was not an extinction event\u2014it was a weapon fired by a faction within the Glass-City itself, at a rival city. The grief it caused psychically froze civilization mid-moment. The Glass-City is literally made of collective guilt. The Shard of True-Memory vibrates so hard you drop it, and on the floor where it lands, it shows you both possible futures: Glass-City rubble. Or Glass-City rising through the snow into sunlight.",
+            "chronal_stability_change": {
+                "ally_archivist": "+10",
+                "deactivate_archivist": "-5"
+            }
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 3: The Choice",
+            "narrative": "The chamber goes quiet. The Archivist (or its echo) presents the two futures as clearly as it can, its voice carrying the weight of two centuries of solitary contemplation: 'Option A: the Glass-City self-destructs. Its temporal energy disperses. Timeline remains clean and singular. The knowledge it contains is mostly lost. The guilt of the Scourge dies with it. Option B: the Glass-City phases into the present. Two eras of Emberheart, occupying the same geography. The friction will be immense. There will be chaos. But there will also be more. More people. More knowledge. More history to learn from.' Your team looks to you. Somewhere above, through the ice, the double-city effect is already beginning\u2014citizens in the present Emberheart are reporting seeing ghost-buildings. A clock somewhere in the city strikes thirteen. You have minutes.",
+            "choice_a": "CHOOSE PATH A: Destroy the Glass-City (set demolition on temporal anchors, prevent timeline merge)",
+            "consequence_a": "The Archivist nods. 'It is the safer path. The ancient guilt ends here.' Demolition protocols begin. You have Turns 14-15 to plant charges on 7 temporal anchors and get out. The city's defense system (Chronal-Titan) will activate. Chronal Stability tracks toward fail-state if you stall.",
+            "choice_b": "CHOOSE PATH B: Merge the timelines (synchronize Glass-City's temporal frequency with the present)",
+            "consequence_b": "The Archivist brightens. 'I had hoped.' The synchronization ritual begins. Complex, multi-stage, requiring Liquid Chronos at each of 7 anchor points. Paradox Elementals will emerge from the friction. Chronal Stability +5 if current stability >= 70 (you've been careful enough to attempt perfect merge). Chronal Stability -5 if below 70.",
+            "convergence": "The decision is made. The Glass-City's systems begin to move. Whatever path you chose, the mechanisms are now in motion, massive and irreversible. The floor trembles. Far above, through the ice-shaft and the two hundred feet of frozen rock, Emberheart feels it.",
+            "decision_threshold": "This decision is PERMANENT. It cannot be reversed after this turn.",
+            "chronal_stability_change": {
+                "choose_destroy": "0",
+                "choose_merge_stability_high": "+5",
+                "choose_merge_stability_low": "-5"
+            }
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 3: The Choice",
+            "PATH_A_narrative": "Seven temporal anchors. Enormous crystal columns embedded at the cardinal and inter-cardinal points of the Glass-City, plus one at the precise center. Each must receive a demolition charge\u2014specialized devices your clocksmith companion (if present) can assemble from Liquid Chronos and percussion primers. The challenge: as you plant charges, the city's defense system comes online. At Anchor 4, the Chronal-Titan stirs\u2014a distant mechanical shriek from the deepest vault. You have time. Use it well.",
+            "PATH_B_narrative": "The synchronization ritual requires you to pour a precise measure of Liquid Chronos at each of 7 anchor points in sequence, while speaking the frequency-keys the Archivist provides. The ritual is delicate\u2014each anchor's frequency must harmonize with the others before you activate the next. At Anchor 4, something goes wrong: a Paradox Elemental [Past] flickers into existence, drawn by the temporal friction of timeline-merging. It is confused and hostile.",
+            "choice_a": "PATH A: Rush the remaining 3 anchor charges to get out before Titan fully wakes (Athletics + Arcana DC 14)",
+            "consequence_a": "Quick, surgical. Charges planted on all remaining anchors with 12 minutes before detonation. Chronal Stability -5 (rushed approach). You begin evacuation. The Titan's footsteps are getting closer.",
+            "choice_b": "PATH B: Carefully attune each anchor's frequency before moving on (Arcana DC 15, slower but cleaner)",
+            "consequence_b": "Perfect attunement. Each anchor harmonizes with the previous. Chronal Stability +10 (you are doing this exactly right). The Paradox Elemental [Past] recognizes the rightness of the sequence and waits, hovering, curious rather than hostile.",
+            "convergence": "PATH A: Seven charges planted. The Chronal-Titan's eyes open\u2014two rings of blue-white fire in the deepest dark. You feel it before you see it. PATH B: Six anchors harmonized. One remains. The Paradox Elemental [Past] has been joined by [Present]. They circle you, assessing.",
+            "chronal_stability_change": {
+                "path_a_rushed_charges": "-5",
+                "path_b_careful_attunement": "+10"
+            },
+            "narrative": "The timeline diverges here. See PATH_A or PATH_B events below."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 3: The Choice",
+            "PATH_A_narrative": "The detonation counter reads 8 minutes. You have gathered everyone you can\u2014all companions, the scholars you evacuated earlier, five awakened Glass-City citizens who chose to flee. You are leading the evacuation sprint toward the ice-shaft when the Chronal-Titan blocks the street ahead: thirty feet of glass and clockwork and terrible purpose, its Liquid Chronos core blazing at its chest, its internal mechanisms grinding loud enough to feel. It raises one massive arm. The city screams with its activation. BOSS ENCOUNTER.",
+            "PATH_B_narrative": "You approach the seventh anchor. The Paradox Elementals\u2014[Past] and [Present]\u2014grow agitated as you near the final synchronization point. Something about the seventh anchor is different: it is the one at the city's heart, and it is the one that started the Scourge. Pouring the Chronos here, completing the ritual here, means forgiving the unforgivable, accepting the city's guilt as part of the present timeline. The two elementals become three as [Future] materializes. BOSS ENCOUNTER.",
+            "choice_a": "PATH A: Draw the Titan's attention to yourself while companions flank its Liquid Chronos core (Leadership + Combat DC 15)",
+            "consequence_a": "You take the Titan's attention like a lightning rod, dodging its time-reversal swipes, keeping it focused on you. Your companions have minutes to flank and strike. Chronal Stability -5 (close call on timing).",
+            "choice_b": "PATH B: Complete the final anchor attunement while companions fight off the elementals (Arcana DC 17 with interruptions)",
+            "consequence_b": "The ultimate test of focus with chaos happening around you. Each interruption forces a DC re-roll. Success: final anchor is lit, the ritual's 7th frequency sounds\u2014a chord that makes the ice weep. The elementals freeze. Chronal Stability +10 if stability >= 75 (perfect merge triggered). Chronal Stability +5 otherwise.",
+            "convergence": "PATH A: The boss fight for the ages begins as explosions count down in the dark. PATH B: The Paradox Elementals, understanding what the 7th attunement means, make their final decision about whether to accept the merged timeline\u2014or destroy it.",
+            "chronal_stability_change": {
+                "path_a_titan_lead": "-5",
+                "path_b_anchor_perfect": "+10",
+                "path_b_anchor_standard": "+5"
+            },
+            "narrative": "The timeline diverges here. See PATH_A or PATH_B events below."
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 4: The Climax",
+            "PATH_A_narrative": "BOSS: CHRONAL-TITAN \u2014 ROUND 1. The Titan is 30 feet of pre-Scourge defensive architecture animated by the city's desperation: it moves with hydraulic precision, each step cracking the glasstone streets. Its primary attack is the Temporal Reversal: it points one vast finger and attempts to rewind you 6 seconds, displacing you from your current position to where you were 6 seconds ago\u2014mid-step, mid-attack, perfectly exposed. Its Liquid Chronos core is the weak point: it powers both the Titan's mobility and its rewind ability. Destroy the core and you destroy the Titan. But the core is armored behind three layers of glass-plate.",
+            "PATH_B_narrative": "BOSS: PARADOX ELEMENTALS \u2014 ROUND 1. Three elementals, each embodying a temporal axis. [Past] is fog-grey, attacks by replaying your worst decision of this quest against you (you must make snap DC check or be stunned). [Present] is burning white, attacks with overwhelming 'now'\u2014sensory overload that forces Concentration checks. [Future] is black as nothing, attacks by showing you a vision of your own death\u2014Wisdom save or be frozen in place. You learn: they must be defeated in order. Kill [Past] first or it will resurrect its siblings.",
+            "choice_a": "PATH A: Focus all attacks on peeling the outer glass-plate armor from the Titan's core (Combat DC 16)",
+            "consequence_a": "Heavy assault on the armor plating. First layer cracked. The Titan retaliates with a Temporal Reversal\u2014your successful check from 6 seconds ago is undone, costing you an action. But the core is exposed on one side. Chronal Stability -5 (Titan's rewinds are destabilizing local time).",
+            "choice_b": "PATH B: Target [Past] with precision strikes while your companions handle [Present] and [Future] (Combat + Tactics DC 15)",
+            "consequence_b": "[Past] receives your full attention. It fights back with three echoes of past mistakes\u2014each one requires a DC 13 Wisdom save. But it is weakening. Chronal Stability -5 (elemental temporal attacks are affecting the local field).",
+            "convergence": "PATH A: The Titan's core glows through cracked armor-plating. Three more focused strikes will expose it fully. The countdown ticks: 4 minutes, 30 seconds. PATH B: [Past] is at half-health. [Present] is pressing hard on your companions. [Future] has gone still, watching.",
+            "chronal_stability_change": {
+                "titan_destabilization": "-5",
+                "elemental_attacks": "-5"
+            },
+            "narrative": "The timeline diverges here. See PATH_A or PATH_B events below."
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 4: The Climax",
+            "PATH_A_narrative": "BOSS: CHRONAL-TITAN \u2014 ROUND 2. The Titan is adapting. Its Temporal Reversal is becoming more precise: instead of reversing your position, it is beginning to reverse your injuries\u2014healing itself. You realize it has been powered by the same Liquid Chronos veins that flow below the Glass-City. As you crack the second armor layer, it draws from the city directly, pulling Chronos from the anchor-charges you planted. If the charges are depleted before they detonate, the demolition fails.",
+            "PATH_B_narrative": "BOSS: PARADOX ELEMENTALS \u2014 ROUND 2. [Past] is destroyed. It dissolves into grey wisps that float upward and through the ceiling toward the surface. [Present] turns its full attention on you now\u2014it throws overwhelming 'now' at full power, an assault of raw sensory data: every sound in the Glass-City at once, every breath, every heartbeat. Concentration DC 17. [Future] is still watching. You realize [Future] is not hostile\u2014it might be waiting to help you if you show you understand temporal flow.",
+            "choice_a": "PATH A: Race to re-secure the anchor-charges before the Titan can drain them (Athletics DC 15, 3 charges at risk)",
+            "consequence_a": "You sprint three blocks to shore up the draining charges, cutting off the Titan's supplemental power. It reacts with fury\u2014its next attack is maximum-force. But with no Chronos drain, the detonators are safe. Chronal Stability +5 (charge integrity secured). Titan's armor: final layer cracking.",
+            "choice_b": "PATH B: Attempt to communicate with [Future]\u2014reach toward it rather than attack (Insight DC 14, unusual choice)",
+            "consequence_b": "[Future] is surprised. Then it responds: it shows you the optimal sequence for defeating [Present]\u2014its own sibling. 'The present cannot survive if the future refuses to validate it,' it murmurs in a voice like wind. Chronal Stability +5. [Present] is confused, momentarily weakened. You have an opening.",
+            "convergence": "PATH A: Titan core fully exposed. One round remains before detonation. Time is nearly up. PATH B: [Present] staggers, its blinding light flickering. [Future] takes a position at your shoulder. Two allies against one elemental.",
+            "chronal_stability_change": {
+                "charge_integrity": "+5",
+                "future_allied": "+5"
+            },
+            "narrative": "The timeline diverges here. See PATH_A or PATH_B events below."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 4: The Climax",
+            "PATH_A_narrative": "BOSS: CHRONAL-TITAN \u2014 FINAL ROUND. The core is exposed. The Titan knows it. Its behavior changes: it stops protecting itself and starts trying to prevent the detonation\u2014lurching toward the nearest anchor-charge. You have one option. The Titan can reverse time, yes\u2014but can it reverse a strike to its own core if the core is already destroyed? You are about to find out. Countdown: 90 seconds.",
+            "PATH_B_narrative": "BOSS: PARADOX ELEMENTALS \u2014 FINAL ROUND. With [Future]'s assistance, you have cornered [Present]. It fights with everything it has\u2014a final blinding cascade that forces every character to make a DC 16 Concentration check. Then [Future] does something extraordinary: it reaches into [Present] and pulls out the moment of the timeline-merge. It shows [Present] what the merged world looks like. And [Present] goes still. It accepts. Both elementals dissolve, one in silver light, one in gold. Only [Future] remains. It bows. 'The timeline is yours to tend.'",
+            "choice_a": "PATH A: The Final Strike\u2014drive your weapon through the Titan's Liquid Chronos core (Combat DC 18, high stakes)",
+            "consequence_a": "You pour every resource into this single attack. The Titan tries to rewind it\u2014but it triggers simultaneously with the anchor detonations. Two time-reversals collide and cancel. The Titan's core shatters. The explosion is glass and gold light and 200 years of compressed time releasing at once. You and your team run. Charges detonate 40 seconds later. BOSS DEFEATED. Chronal Stability +15.",
+            "choice_b": "PATH B: Accept [Future]'s parting gift\u2014a vision of the merged timeline three months from now, which you use to make optimizations to the synchronization (Insight DC 15)",
+            "consequence_b": "You see it: the merged city, three months deep. You see the crisis points, the political fractures, the places where the glass shatters. And you know what to do about each one. You encode these insights into the final synchronization frequency. The merge begins. Chronal Stability +15 if stability is >= 85 (PERFECT MERGE ACHIEVED). +10 otherwise. BOSS DEFEATED.",
+            "convergence": "PATH A: The Glass-City explodes outward in slow motion\u2014wave after wave of crystallized time, dispersing into the ice-cavern sky. You run toward the shaft. PATH B: The Glass-City begins to rise. Slowly, impossibly, the ice around it cracks. The city surfaces, rising toward the present like a great ship coming in after a 200-year voyage.",
+            "chronal_stability_change": {
+                "titan_core_destroyed": "+15",
+                "perfect_merge_achieved": "+15",
+                "standard_merge": "+10"
+            },
+            "boss_stats": {
+                "BOSS_A": {
+                    "name": "Chronal-Titan",
+                    "hp": 450,
+                    "special_ability": "Temporal Reversal (reverse 6 seconds of actions each turn) + Core Drain (steal Chronos from demolition charges)",
+                    "defeat_condition": "Core destroyed simultaneously with external detonation"
+                },
+                "BOSS_B": {
+                    "name": "Paradox Elementals (Past, Present, Future)",
+                    "defeat_order": "Past -> Present -> Future (Future is optional - can be allied)",
+                    "special_ability": "[Past] recalls worst decisions; [Present] sensory overload; [Future] death-vision",
+                    "note": "[Future] can be converted to ally via Insight DC 14 in Turn 17"
+                }
+            },
+            "narrative": "The timeline diverges here. See PATH_A or PATH_B events below."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 4: The Climax",
+            "PATH_A_narrative": "The Glass-City collapses in waves, each building dissolving into temporal shards that scatter across the ice-cavern floor like fallen stars. The destruction takes eleven minutes and is beautiful in the way of things that cannot be saved. Your team stands at the cavern wall in silence. Then Valerius kneels and begins to collect the shards. Each one contains a fragment of life\u2014a moment preserved. The old man reading. The woman laughing. The children, arms out, joyful. They exist here now as permanent fragments. You gather what you can. The ice overhead has stopped vibrating. The North-Pass is quiet for the first time in years.",
+            "PATH_B_narrative": "The Glass-City rises. It takes two hours. The ice cracks and groans and yields. Buildings emerge into the surface air of North-Pass at dawn\u2014catching the early light, refracting it into spectral colors across the snowfield. In the present Emberheart, two hours south, people stop in the street and stare north. A ghost city is appearing on the horizon. The Warden Council's ravens fly in every direction at once. The Glass-City's citizens are awake now\u2014fully awake\u2014and they are looking at the dawn with the expressions of people who had been certain they would never see another one.",
+            "choice_a": "PATH A: Perform a formal archival of every temporal shard (careful collection, 2 hours, Valerius leads)",
+            "consequence_a": "You preserve 47 memory-shards from the Glass-City. Each one will be an artifact in Emberheart's museum. Pre-Scourge knowledge partially recovered (30%). Chronal Stability +5. Expedition: successful archival, all team members alive.",
+            "choice_b": "PATH B: Help orient awakening Glass-City citizens, prevent panic in the first critical hours (Leadership DC 14, companions assist)",
+            "consequence_b": "The next two hours are controlled chaos. You move person to person, citizen to citizen, explaining, calming, orienting. The Glass-City does not erupt into panic. It begins to function. Chronal Stability +5. Hidden: your actions here determine how smooth the integration is\u2014affects long-term settlement stability permanently.",
+            "convergence": "PATH A: Your team climbs the ice-shaft with the shards. Above, the North-Pass air smells clean. Empty. Right. PATH B: Your team spends the night in the Glass-City, the first outsiders to sleep under its roofs. Above, through glass that is not quite glass, you can see the stars\u2014and they are the same stars as outside.",
+            "chronal_stability_change": {
+                "archive_shards": "+5",
+                "citizen_orientation": "+5"
+            },
+            "narrative": "The timeline diverges here. See PATH_A or PATH_B events below."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 4: The Climax",
+            "narrative": "The return to Warden-Keep takes three days. You arrive to find the city changed by what it felt during the Glass-City event: two days of ghost-buildings flickering on the northern horizon, then either\u2014the silence of the Destroy path, or the growing solid presence of the Merge path. The Warden Council is assembled in full when you arrive. This is the largest debriefing in living memory.",
+            "PATH_A_epilogue": "The Council receives your report in silence. The North Ward time-skips have already ceased\u2014verified by three independent watchmen. For the first time in years, North-Ward citizens are sleeping through the night without temporal disturbances. The Council debates what was lost. There are those who grieve the pre-Scourge knowledge. There are those who believe you made the only rational choice. The temporal shards are installed in the Hall of Record. A monument is commissioned. Emberheart stabilizes. The Chronos thread is closed.",
+            "PATH_B_epilogue": "The Glass-City is visible from Warden-Keep's north wall, its towers catching the winter light three miles away. Delegations from its awakened citizens arrived yesterday. The Warden Council is in emergency session over governance, representation, resource allocation, and the integration of 200-year-old citizens who have rights, histories, and deeply different cultural memories. It will take years. But the city is alive, and its people are alive, and the pre-Scourge archive is intact\u2014the complete record of what the Scourge was, who built it, and why. Emberheart will never be the same. But it will be more.",
+            "PERFECT_epilogue": "The Glass-City rises seamless into the present, no temporal friction, no crisis. Citizens of both eras find each other and the shock is gentler than it should be, as if the timeline itself smoothed the path. The Warden Council, reading your report at midnight, sends a single raven: 'Well done, Timekeeper.' You return to your quarters and notice something: you can see six seconds ahead, every time you close your eyes. Not visions. Just the next six seconds, certain and clear, like reading from a very short book.",
+            "choice_a": "ADDRESS the Council formally, presenting full report and recommendations for the future",
+            "consequence_a": "You present the complete account: the Scourge's true origin, the Glass-City's archive, the choice you made and why. The Council records everything. History is being rewritten in real time. +5 to all future Warden Council reputation interactions.",
+            "choice_b": "Step back and let the events speak for themselves; request 3 days rest before formal debrief",
+            "consequence_b": "The Council respects the request. Those three days are yours: no demands, no politics. You walk Emberheart and feel what's changed. Something in you is quieter than it was. +10 to all future personal healing and mental recovery checks.",
+            "convergence": "The Chronos thread closes. The Glass-City's fate is sealed in history. What you chose, and how you chose it, will be referenced in every major political and philosophical debate in Emberheart for generations. The Chronal Stability meter reads its final number\u2014and that number is your legacy.",
+            "quest_complete": true,
+            "final_chronal_stability_scoring": {
+                "0-29": "Timeline Fracture: Quest failed at some point. Catastrophic instability damage to North Ward.",
+                "30-59": "Stable Outcome: City or merge achieved, timeline intact. Minor temporal echoes linger.",
+                "60-84": "Clear Resolution: Emberheart benefits fully from your choice. Thread closed cleanly.",
+                "85-99": "Masterwork: Hero of the Chronos. Additional lore entries generated. NPC relationships enhanced.",
+                "100": "PERFECT MERGE: Timekeeper achieved. Chronal Sense ability unlocked. SQ-LEGENDARY-TIMEKEEPER unlocked."
+            }
+        }
+    ],
+    "conclusion": "The Glass-City's fate has been sealed. Your choice will echo through Emberheart's timeline for generations\u2014the decision to destroy or preserve, to grieve or integrate, to close the door on the past or open it. Whatever ending you chose, the Chronos thread is complete. The North-Pass is changed. Emberheart is changed. And you carry the weight and wonder of it, and perhaps\u2014if you were careful enough, bold enough, and wise enough\u2014a very particular, very quiet gift: six seconds of foresight, every day, for the rest of your life.",
+    "loot_table": [
+        "Chronal-Titan Core (Legendary crafting material - can build time-delayed devices) [PATH A only]",
+        "Paradox Elemental Essence x3 (Legendary crafting - Past/Present/Future in separate vials) [PATH B only]",
+        "Pre-Scourge Archive Data-Crystal (grants +5 to all Lore checks permanently for entire party)",
+        "Temporal Stabilizer Gauntlets (Legendary armor - 1/day freeze time for 6 seconds, enemies cannot act)",
+        "Glass-City Citizen ID (opens 4 secret pre-Scourge vault locations in and around Emberheart)",
+        "Memory-Shard Collection (47 shards, museum installable, large Gold value) [PATH A only]",
+        "Weaver's Needle Compatibility Note (Archivist's data confirms Needle can repair reality - connects to Weaver thread)",
+        "10,000 Gold (pre-Scourge currency, converts at 3:1 ratio with present Gold)",
+        "Chronal Sense Ability (permanent player ability - 1/day, see 6 seconds into future) [PERFECT MERGE only]"
+    ],
+    "risk_matrix": {
+        "failure_threshold": "Chronal Stability reaches 0 at any point during the quest",
+        "penalty": "CATASTROPHIC: Timeline collapse. Player character is simultaneously in two eras and is erased from both. GAME OVER \u2014 must reload save from before quest commencement. North Ward suffers permanent -5 stability as residual effect.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

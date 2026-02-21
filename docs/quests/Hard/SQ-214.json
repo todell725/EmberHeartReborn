@@ -1,0 +1,73 @@
+{
+    "id": "SQ-214",
+    "title": "The Flesh Transmitters",
+    "difficulty": "Hard",
+    "xp_reward": 700,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-213"
+        ]
+    },
+    "location": "Undercity -> The Chittering Tunnels",
+    "district": "Undercity",
+    "thread": "Static",
+    "description": "The 'Harbinger' is expanding into the Undercity by building flesh-transmitters out of captured citizens. You must locate and destroy these nodes to blind the creature.",
+    "key_npcs": [
+        "Captured Citizens",
+        "Flesh-Golems"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Deep in the Undercity, you find three massive pillars of twisted bone and meat acting as radio towers. Captured citizens are wired into the base.",
+            "choice_a": "Carefully cut the citizens free first (Dexterity)",
+            "consequence_a": "You save the citizens, but it takes time, allowing a Flesh-Golem patrol to discover you.",
+            "choice_b": "Plant explosives on the transmitter ignoring the captives",
+            "consequence_b": "The explosion destroys the node instantly, killing the captives but securing your swift victory."
+        },
+        {
+            "turn": 2,
+            "narrative": "If you fought the Golem, it's a brutal melee against a creature that feels no pain and uses static-shocks as attacks.",
+            "choice_a": "Use slashing weapons on its limbs",
+            "consequence_a": "Cutting it apart is highly effective. You dismantle the Golem piece by piece.",
+            "choice_b": "Use lightning magic on it",
+            "consequence_b": "The lightning supercharges the Golem! It gains an attack buff and deals immense damage."
+        }
+    ],
+    "branching_outcomes": {
+        "nodes_destroyed_saved": {
+            "description": "You destroyed the nodes and saved the citizens.",
+            "unlocks": [
+                "SQ-215"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 20
+                }
+            }
+        },
+        "nodes_destroyed_casualty": {
+            "description": "You destroyed the nodes, but sacrificed innocent lives to do so.",
+            "unlocks": [
+                "SQ-215"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": -20
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Static Core Engine",
+        "200x Gold Coins"
+    ],
+    "conclusion": "You destroyed the nodes and saved the citizens.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

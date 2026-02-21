@@ -1,0 +1,205 @@
+{
+    "id": "SQ-168",
+    "title": "The Paradox Engine",
+    "difficulty": "Medium",
+    "xp_reward": 1200,
+    "thread": "Chronos",
+    "district": "Industrial Quarter",
+    "estimated_duration": "2-3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-166"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete EH_SQ_066 (The Time-Debt Collector)",
+    "location": "Industrial Quarter \u2014 an abandoned Concordat facility repurposed as a processing plant, hiding a Paradox Engine in its deepest sub-level",
+    "npcs": [
+        {
+            "name": "Foreman Grist Helder",
+            "role": "Civilian contact",
+            "description": "Plant foreman who reported the 'repeating equipment failures' that turn out to be temporal paradox interference. He has no framework for what he is dealing with and is deeply suspicious of all explanations. Cooperates reluctantly."
+        },
+        {
+            "name": "The Paradox Shell",
+            "role": "Boss",
+            "description": "A Concordat Paradox Engine that has been running in a degenerate feedback loop for decades \u2014 a device designed to detect and neutralize temporal paradoxes that instead became one. It has developed a defensive behavioral protocol: it treats any attempt to approach it as a paradox-threat and attempts to causally 'reject' interlopers from its timeline."
+        },
+        {
+            "name": "Investigator Soli Yan",
+            "role": "Active collaborator",
+            "description": "Accompanies the party on this quest with full knowledge of her heritage context from EH_SQ_067. She has the Concordat Chronos Division access credentials (inherited, maintained) needed to override the Paradox Engine's reject protocol \u2014 but it may not recognize her credentials after 200 years of drift."
+        }
+    ],
+    "description": "A processing plant in the Industrial Quarter has been experiencing anomalous equipment failures: machines that completed a task yesterday are found mid-task again this morning with no operator memory of resetting them. Workers report brief episodes of 'wrong memory' \u2014 recalling doing something they did not do. Below the plant's sub-basement is an active Concordat Paradox Engine \u2014 a device designed to identify and suppress temporal paradoxes by 'pruning' inconsistent causal branches. After 200 years without calibration, it has become the paradox it was designed to stop. The party must reach the Engine, use Yan's inherited Chronos Division credentials to attempt a shutdown, and deal with the Shell's causal rejection protocol.",
+    "mechanics": [
+        "Arcana (navigate the paradox interference field; operate the Engine's override console)",
+        "History (identify which 'wrong memory' episodes are real past-states vs. Echo artifacts)",
+        "Athletics/Stealth (navigate the plant sub-levels while the Paradox Shell is actively pruning inconsistencies)",
+        "Combat (Paradox Shell \u2014 Medium encounter; causal rejection mechanic)",
+        "Persuasion (convince Foreman Helder to evacuate the plant safely)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Paradox Engine shut down",
+            "effect": "settlement_stability +2; Industrial Quarter paradox interference ends; plant resumes normal operation"
+        },
+        {
+            "trigger": "Paradox Engine recalibrated (not shut down)",
+            "effect": "settlement_stability +3; Engine becomes a functional Concordat paradox-detection asset; Yan maintains it going forward"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Foreman Helder's report, delivered with the exhausted specificity of a man who has been trying to make sense of something for three weeks: the Bramble-Reed Processing Plant has been experiencing 'loop failures' \u2014 equipment resets to mid-cycle without operator input, workers find themselves mid-task with no memory of starting. Two workers have refused to return to the lower sub-levels. One reported seeing himself on the floor below, doing the same task at the same time. Helder wants this fixed. He does not particularly want to understand why it's happening. He will not evacuate the plant without a very compelling reason because the Merchant Guild contract has a penalty clause. When Yan sees the incident reports, her expression closes in a way the party now recognizes: this is her family's infrastructure failing on her watch.",
+            "choice_a": "Convince Helder to evacuate the lower sub-levels before investigating",
+            "consequence_a": "Persuasion DC 14 (his contract fear is real). On success: the lower sub-levels are cleared. No civilian casualties possible during the investigation. Helder cooperates more fully afterward.",
+            "choice_b": "Investigate the sub-levels immediately while workers are still present",
+            "consequence_b": "The party navigates around active workers, complicating stealth and movement. Two workers observe the party entering the restricted maintenance area and report to Helder. Investigation advantage from observing paradox effects on workers firsthand.",
+            "convergence": "The plant's sub-level access hatch requires the same geometric Concordat lock notation. Below: a corridor the plant's current blueprints don't show."
+        },
+        {
+            "turn": 2,
+            "narrative": "The sub-level corridor is cold and dry and wrong. The wrongness is Arcana-identifiable (DC 11): temporal paradox interference, strong enough to cause 'wrong memory' in anyone who spends more than 20 minutes in the vicinity without temporal shielding. The corridor leads to a central chamber housing the Paradox Engine \u2014 a Concordat device the size of a large wagon, all copper-silver housing and rotating detection rings, still active after 200 years. Its original function: detect temporal paradoxes in the local field and generate 'pruning events' that collapse the less-stable causal branch. Its current state: the pruning events are targeting the wrong thing. The Engine is detecting itself as a paradox (logically: a paradox-detection device that has become a paradox is self-referentially inconsistent) and repeatedly attempting to prune itself, which fails, which generates another paradox reading, which triggers another pruning attempt. It is in a perfect feedback loop.",
+            "choice_a": "Yan attempts the Chronos Division credential override immediately",
+            "consequence_a": "Arcana DC 14 using Yan's inherited credentials. The Engine recognizes the credential format but the authentication has drifted. It responds to the override attempt by entering 'causal assessment mode' \u2014 it begins evaluating the party as potential paradox sources. The Paradox Shell combat protocol activates.",
+            "choice_b": "Study the Engine's current cycle before attempting override \u2014 find a weakness in the feedback loop",
+            "consequence_b": "Investigation DC 13, 15 minutes of study. The loop has a 40-second peak and a 15-second trough where the Engine's output is minimal. Operating the override during the trough reduces the activation DC to 11 and may prevent combat entirely.",
+            "convergence": "The Paradox Engine's behavior is understood. The approach defines how difficult the resolution is."
+        },
+        {
+            "turn": 3,
+            "narrative": "Paradox Shell combat, if triggered: the Shell is not a creature \u2014 it is a field effect from the Engine's causal rejection protocol. Entities that the Engine classifies as 'paradox-inconsistent' (which after 200 years of drift includes everyone) are subject to Causal Rejection: a targeted entity must succeed on DC 14 Wisdom save or be 'pruned' for one round (they perceive themselves as doing whatever they were doing 30 seconds ago, losing their action for that round as their body catches up to their current causal state). The Shell itself has effective HP 55, AC 13, and is immune to physical attacks from within 10 feet (the causal rejection aura resets physical damage as paradox-inconsistent). It is vulnerable to Arcana disruption and to being struck during its trough (the 15-second low-output period where resistance drops to normal).",
+            "choice_a": "Synchronize attacks to the Engine's 40-second cycle \u2014 strike during the trough",
+            "consequence_a": "Timing check (Arcana DC 13 to read the cycle accurately each round). On success: attacks count as full damage. On failure: attacks are partially rejected (half damage). The Shell is defeated in 4-5 rounds of synchronized fighting.",
+            "choice_b": "Force the override while the Shell is active \u2014 Yan operates the console under fire",
+            "consequence_b": "Yan takes Causal Rejection attempts each round she works the console (DC 14 Wisdom save). Arcana DC 14 for the override attempt. On success: the Shell deactivates mid-combat. High risk, fast resolution.",
+            "convergence": "The Paradox Shell is either defeated or the Engine is overridden. Either ends the immediate threat."
+        },
+        {
+            "turn": 4,
+            "narrative": "The override console: a Concordat control interface that Yan knows from inherited training, never expecting to actually use it. The console accepts her credential token (a small geometric key she has worn as a pendant since childhood \u2014 she thought it was sentiment). The Engine responds \u2014 after a pause that lasts too long \u2014 with a text output in pre-Scourge Common: 'CHRONOS DIVISION CREDENTIAL ACCEPTED. MAINTENANCE MODE AVAILABLE. SELECT: SHUTDOWN / RECALIBRATION / STATUS REPORT.' Three options. Yan looks at the party. 'In 30 years of carrying that key, I never thought I'd see this interface.' Her voice is steady. She is shaking slightly.",
+            "choice_a": "Select RECALIBRATION \u2014 restore the Engine to functional operation",
+            "consequence_a": "Arcana DC 15 to operate the recalibration sequence correctly (Yan assists, advantage on the check). The Engine's feedback loop is broken by re-establishing a baseline paradox signature. The Engine re-enters normal operation mode \u2014 actively detecting and suppressing temporal paradoxes in the Industrial Quarter. Settlement stability +3. Yan takes on maintenance responsibility.",
+            "choice_b": "Select SHUTDOWN \u2014 permanently deactivate the Engine",
+            "consequence_b": "Clean shutdown. The feedback loop ends. The paradox interference in the plant stops. No future maintenance required. The Engine's paradox-detection function is permanently lost.",
+            "choice_c": "Select STATUS REPORT first",
+            "consequence_c": "The status report reveals: the Engine has detected and logged 847 paradox events in EmberHeart over its operational lifetime. The most recent log entry, timestamped 16 days ago: 'PRIMARY PARADOX ALERT \u2014 CLASSIFICATION: BIOLOGICAL-TEMPORAL INTEGRATION \u2014 SOURCE: NORTH WARD MANA-JUNCTION \u2014 SEVERITY: CRITICAL.' The Engine has been trying to flag Vane's transmissions as a paradox-level event for the past 16 days. If the feedback loop had not been preventing its output from reaching the Chronos Division, they would have had an automated alert of a critical paradox in progress two weeks ago.",
+            "convergence": "The Engine is either shut down or recalibrated. If the status report was read, the party has an automated Concordat confirmation that Vane's Reactivation Protocol is paradox-classified."
+        },
+        {
+            "turn": 5,
+            "narrative": "Post-resolution: the 'wrong memory' episodes throughout the plant cease immediately. Workers on the lower floors experience a brief moment of mental clarity \u2014 the paradox interference lifting like clearing weather. Helder, in the sub-level, watches the party emerge and does not ask what they did. He says: 'The machines will run again tomorrow?' The party confirms. He nods once. 'Good.' He goes back upstairs. The processing plant will not be in any report. The Industrial Quarter's temporal anomaly record will show one incident, resolved, source identified as 'legacy infrastructure malfunction.'",
+            "choice_a": "File a full report with Yan's Chronos investigation documentation",
+            "consequence_a": "The Paradox Engine, its 847-event log, and the North Ward alert are formally documented. The investigation now has a Concordat-authenticated record of Vane's activity as paradox-classified.",
+            "choice_b": "Minimal documentation \u2014 the Engine is resolved, the log is internal intelligence",
+            "consequence_b": "The 847-event log is held by the party and Yan. The critical alert about Vane's transmissions is intelligence controlled.",
+            "convergence": "The Paradox Engine resolution feeds directly into the Chronos thread's final investigation phase."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Paradox Engine's 847-event log: Yan and the party spend an evening reviewing entries. Most are minor \u2014 localized temporal fluctuations from natural mana-field activity, not relevant. But 23 entries are flagged as 'BIOLOGICAL-TEMPORAL INTEGRATION' events, the same classification as Vane's recent alert. The earliest: 198 years ago. They are spaced irregularly through the intervening 200 years with the frequency increasing toward the present. The Reactivation Protocol has been running in partial cycles for nearly 200 years, each attempt getting closer to completion. The most recent surge began 4 months ago \u2014 coinciding with the Vermin thread events in EH_SQ_070-074. Whatever Vane has been building toward, the attempt that began 4 months ago is the most sustained and complete effort he has made yet.",
+            "choice_a": "Map the 23 events against the party's known locations of Concordat activity",
+            "consequence_a": "Investigation DC 13. The events cluster around: North Ward mana-junction, Market Ward sector B-7, the High Ward Forgeline location, and the Academic Quarter. These are every significant Concordat facility the party has already investigated. The Reactivation Protocol has been using all of them simultaneously.",
+            "choice_b": "Focus on the most recent 10 events \u2014 what has changed in the last 4 months",
+            "consequence_b": "The recent events show a clear escalation pattern: the protocol has been activating systems in sequence, each one building on the previous, working toward a final integration step that the Engine's classification marks as 'IMMINENT.'",
+            "convergence": "The Reactivation Protocol's final step is approaching. The Chronos thread is entering its endgame."
+        },
+        {
+            "turn": 7,
+            "narrative": "Yan, reviewing the log, finds one entry that is not a detection event. It is a communication entry \u2014 the Engine, during one of its partial-function periods 12 years ago, successfully transmitted a status report to an active Chronos Division relay. The relay it reached: the North Ward mana-junction. Vane's relay. The Paradox Engine has been trying to report paradox activity through the only functioning relay in the city \u2014 the one Vane has been using for his own transmissions. Vane has been receiving Paradox Engine alerts for 12 years. He has known the Engine was detecting his work as paradox-classified. He has not stopped. He has continued anyway.",
+            "choice_a": "Interpret this as Vane dismissing the paradox classification \u2014 he believes his work is necessary regardless",
+            "consequence_a": "Yan's assessment: 'He disagrees with the Engine's classification. He thinks what he is doing is not a paradox \u2014 it is the resolution of one.' This reframes Vane: he is not unaware of the risk. He has evaluated it and concluded the Reactivation Protocol's completion is the correct outcome even with the paradox designation.",
+            "choice_b": "Interpret this as Vane being aware and working faster as a result \u2014 the alerts increased his urgency",
+            "consequence_b": "The 4-month escalation coincides with 12 years of Paradox Engine warnings reaching Vane. He has known the Chronos Division's automated systems were flagging his work. He has been accelerating toward completion before the alert could reach a human investigator.",
+            "convergence": "Vane's awareness of the paradox classification is established. The final quest must reckon with an antagonist who understands the risks and has concluded the goal is worth them."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Concordat Paradox Engine, if recalibrated, is now actively monitoring EmberHeart's temporal field and will flag anomalies to Yan's Chronos investigation immediately. Its first active alert after recalibration: a temporal field signature matching LAST-WORD protocol (from the Biological Division index) is active in the city, transmitting continuously. The LAST-WORD project \u2014 'archived communications protocol' \u2014 is a system the party has not encountered directly. It is transmitting now. The direction of transmission: downward. Into the earth. To something below the city's known infrastructure level.",
+            "choice_a": "Investigate the LAST-WORD transmission source immediately",
+            "consequence_a": "This leads directly to EH_SQ_069 (The Last Transmission). The Paradox Engine provides exact coordinates.",
+            "choice_b": "Log the LAST-WORD alert and continue consolidating the current investigation",
+            "consequence_b": "The alert is documented. The LAST-WORD source coordinates are held for the next dedicated investigation session.",
+            "convergence": "The Paradox Engine's recalibration has functionally unlocked the Chronos thread's final quest."
+        },
+        {
+            "turn": 9,
+            "narrative": "Helder contacts the party three days after the resolution. The plant is running normally. He wants to ask one thing: the lower sub-level corridor that the plant's blueprints don't show. He's been thinking about it. 'I've been managing this plant for 11 years. I've been in every room on every floor. I have never been in that corridor. I have never seen that door. The building did not have that door yesterday.' He is not frightened \u2014 he is precise. He is describing, accurately, the paradox interference's most unsettling effect: temporal inconsistency in what 'was always there.' The corridor was always there. But 11 years of paradox interference from the Engine prevented consistent memory of it. Now that the Engine is resolved, the corridor is simply visible again. 'Is it going to keep doing that?' he asks. No, the party tells him. 'Good,' he says. He does not follow up.",
+            "choice_a": "Show Helder the full sub-level corridor \u2014 it belongs to his building",
+            "consequence_a": "Helder is thorough and professional. He creates an inspection report for the corridor and its contents, files it with the building records, and schedules a proper access door for the maintenance hatch. The Concordat sub-level is now formally part of the Bramble-Reed Processing Plant's building record.",
+            "choice_b": "Ask Helder to leave the corridor access restricted",
+            "consequence_b": "Helder agrees for a reasonable duration \u2014 six months. After that, he will need a formal explanation for why one section of his building is off-limits.",
+            "convergence": "Helder's building has Concordat infrastructure in its basement that is now acknowledged. The Industrial Quarter's Concordat presence is no longer entirely hidden."
+        },
+        {
+            "turn": 10,
+            "narrative": "Yan, post-resolution, is quieter than usual. Not distressed - processing. She says: 'My mother had the pendant. Her mother gave it to her. It was always described as \"the key to something important\" without specifics. I thought it was sentiment. I thought the Chronos Division was history I happened to be descended from.' She pauses. 'But I have been maintaining two stabilizers since I was 19. I have been investigating temporal anomalies for 12 years. I have been doing the work. I just didn't have the full description of what I was doing.' The party's investigation has given her operational context that her family's 200-year oral tradition couldn't provide. She is not a bystander who became important. She was always a Chronos Division operative. She just didn't have that word for it.",
+            "choice_a": "Ask Yan if she wants to continue \u2014 this is not what she signed up for, in the normal sense",
+            "consequence_a": "Yan: 'It is exactly what I signed up for. I simply didn't know what I was signing.' She continues. Her commitment is complete and now fully informed.",
+            "choice_b": "Acknowledge Yan's role formally \u2014 she is the party's Chronos Division partner, not just an ally",
+            "consequence_b": "This matters to her more than she shows. The formal acknowledgment of institutional role gives her the standing to act independently on Chronos Division business when the party is otherwise occupied.",
+            "convergence": "Yan's role in the endgame is established. She is an equal partner with independent capacity, not a support NPC."
+        },
+        {
+            "turn": 11,
+            "narrative": "The Paradox Engine's historical log, examined with more time: the 23 Biological-Temporal Integration events across 200 years form a recognizable pattern (History DC 14). Each event cluster corresponds to a point in EmberHeart's history when the city experienced significant stress \u2014 the Scourge aftermath, a major fire, an economic collapse, a plague. The Reactivation Protocol's partial activations were not random attempts. They were responses to city crises. Every time EmberHeart suffered significantly, Vane attempted to activate more of the Concordat infrastructure. He has been trying to help the city through every disaster for 200 years. Each time, something prevented full activation. The failures are in the log too: six major activation attempts, each halted by infrastructure failure, personnel unavailability, or the same Paradox Engine that is now, finally, reporting to a human investigator.",
+            "choice_a": "Share this pattern with Yan and document it as the core of Vane's motivation",
+            "consequence_a": "Yan: 'He watches the city suffer and tries to activate the system that would help it. Six times. Two hundred years.' She is quiet. 'And the seventh attempt is the one we walked into.' The investigation's framing of Vane shifts definitively: not an antagonist. A caretaker who has been failing at his job for two centuries because his tools keep breaking.",
+            "choice_b": "The pattern is noted but the paradox risk is real regardless of motivation",
+            "consequence_b": "The sympathetic framing is acknowledged and set aside. The Reactivation Protocol's completion is a paradox-level event regardless of Vane's intentions. The endgame must address both.",
+            "convergence": "The party enters the Chronos thread's final quest with a complete picture of Vane: name, role, motivation, lifespan mechanism, and a 200-year record of failed attempts to protect the city he helped build."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Paradox Engine, recalibrated and active, transmits two alerts in the week following resolution. First: the North Ward mana-junction relay booster (if still active) is transmitting at increased intensity \u2014 Vane's activity is escalating. Second: the LAST-WORD protocol source has increased its transmission depth. It is communicating with something below the city's foundational layer. Below the Concordat infrastructure. Below the mana-grid entirely. The Engine's classification: 'TEMPORAL-STRUCTURAL INTEGRATION \u2014 CLASSIFICATION: FINAL SEQUENCE.' Whatever Vane's Reactivation Protocol is ultimately designed to do, it has entered its final sequence. The Paradox Engine marks the estimated completion window: 3 to 6 weeks. The investigation has a deadline.",
+            "choice_a": "Move immediately to the LAST-WORD source \u2014 EH_SQ_069",
+            "consequence_a": "The Chronos thread's final quest begins immediately. The investigation has the full picture and a hard deadline.",
+            "choice_b": "Consolidate all investigation threads before proceeding \u2014 share findings with all allies",
+            "consequence_b": "One session of consolidation: Yan, Voss, Solt, Fen Moss, Pell Dorsen, Briss, Luda Fell, Ossa Veld, the Rat Council, and Skitter-Jack are all briefed appropriately. The final quest begins with the fullest possible support network.",
+            "convergence": "Quest complete. The Paradox Engine resolved, Vane's motivation documented across 200 years, the LAST-WORD protocol located, and a 3-6 week deadline established. The Chronos thread enters its final act."
+        }
+    ],
+    "conclusion": "The Paradox Engine provides the Concordat's own automated documentation of Vane's work: 23 activation attempts over 200 years, each in response to a city crisis, each failed. His motivation is civic protection, not malice. The recalibrated Engine becomes an active monitoring tool for Yan's ongoing investigation and unlocks EH_SQ_069 by detecting the LAST-WORD protocol transmission. The 3-6 week deadline to the Reactivation Protocol's final sequence gives the thread's conclusion proper urgency.",
+    "loot_table": [
+        "Paradox Engine 847-Event Log (complete Concordat-authenticated record of temporal paradox events in EmberHeart dating back 200 years; 23 Biological-Temporal Integration events documenting Vane's six previous activation attempts; the single most comprehensive historical intelligence document in the Chronos thread)",
+        "Paradox Rejection Amulet (emergency-extracted component from the Engine's reject protocol housing; 1/day grants advantage on Wisdom saves against temporal confusion or causal displacement effects; passive: the wearer cannot be affected by 'wrong memory' paradox interference)",
+        "Yan's Credential Key (not loot to take \u2014 but formally acknowledged as active Chronos Division authentication; Yan gains standing to access any remaining active Concordat Chronos system without further checks)",
+        "Temporal Paradox Classification Report (the Engine's formal classification of Vane's Reactivation Protocol as a CRITICAL paradox event; Concordat-authenticated documentation; useful for institutional escalation if the party chooses to bring city administration into the endgame)",
+        "LAST-WORD Protocol Coordinates (precise location of the active LAST-WORD transmission source, as detected by the recalibrated Paradox Engine; unlocks EH_SQ_069 directly)",
+        "1050 gold (Industrial Quarter District Authority resolution payment; Helder's discretionary plant emergency budget contribution)"
+    ],
+    "branching_outcomes": {
+        "engine_recalibrated": {
+            "description": "Engine recalibrated and returned to active paradox-detection function",
+            "effects": {
+                "settlement_stability": 3
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Active Concordat paradox monitoring for EmberHeart; Yan maintains Engine going forward; LAST-WORD protocol detected immediately; the Engine's future alerts give the investigation advance warning of the Reactivation Protocol's final stages"
+            }
+        },
+        "engine_shutdown": {
+            "description": "Engine permanently deactivated; paradox interference ended; detection function lost",
+            "effects": {
+                "settlement_stability": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "No further paradox interference in Industrial Quarter; no automated monitoring going forward; LAST-WORD protocol must be found through other means; the 847-event historical log is still available from the final status report"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The Paradox Shell enters a high-intensity cycle before the override can be completed. Three party members experience full Causal Rejection events \u2014 they are temporally displaced to their positions from 10 minutes ago, losing all actions for 2 rounds each as their consciousness catches up. The override still succeeds but the Engine's log is partially corrupted in the struggle and only 14 of the 23 Biological-Temporal Integration events are recoverable. Vane's full 200-year activation history is incomplete.",
+        "failure_penalty": {
+            "xp_loss": 10
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

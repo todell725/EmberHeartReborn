@@ -1,0 +1,80 @@
+{
+    "id": "EH_SQ_458",
+    "title": "The Machine That Dreamed",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Industrial Quarter -> The Clockwork Assembly Plant",
+    "district": "Industrial Quarter",
+    "thread": "Standalone",
+    "description": "A large automated sorting machine in the Clockwork Assembly Plant has started producing non-standard outputs \u2014 sorting materials into patterns that have no logical process basis, but which the plant's engineer believes may represent something meaningful. Operations are halted. Engineer Tova needs help determining if the machine's behaviour is a malfunction or something more.",
+    "key_npcs": [
+        "Engineer Tova",
+        "Concordat Researcher Winn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The machine produces sorted object patterns that \u2014 when watched for long enough \u2014 repeat in a clear sequence. Tova shows you a fifteen-minute recording of the output. The sequence takes twenty-two minutes to complete and then resets. It is too complex to be random but has no operational purpose.",
+            "choice_a": "Ask Archive Researcher Winn if the pattern matches any known Concordat encoding system",
+            "consequence_a": "Winn studies the pattern for twenty minutes. She confirms: it matches a known Concordat mechanical message format \u2014 the machine is outputting encoded text.",
+            "choice_b": "Try to decode the repeating pattern by treating it as a simple substitution cipher",
+            "consequence_b": "Your decoding attempt is partially successful. Several groups clearly represent numbers. More complex groups resist simple decoding."
+        },
+        {
+            "turn": 2,
+            "narrative": "Winn confirms the machine is outputting a repeating Concordat mechanical message. Decoded, it reads: 'RESONANCE CORE ACTIVE \u2014 DEPTH 14 \u2014 REQUEST CONTACT.' The machine appears to have a Pre-Scourge Concordat component embedded in it that is communicating with something underground.",
+            "choice_a": "Advise Tova to document everything and report this to the Academic Quarter immediately",
+            "consequence_a": "The Academic Quarter is fascinated. A formal research team is assembled within a week.",
+            "choice_b": "Try to understand what component is responsible before reporting",
+            "consequence_b": "Tova opens the machine's lower access panel. A small amber-glowing module is found embedded in the base \u2014 clearly not factory-standard."
+        },
+        {
+            "turn": 3,
+            "narrative": "The amber module is a Concordat Resonance Relay \u2014 the same technology as the Resonant Crystal from the Ridge. It has been active inside this machine for decades, using the machine's mechanical movement as a signal generator.",
+            "choice_a": "Remove the module carefully for Academic Quarter analysis while documenting the full situation",
+            "consequence_a": "The module is removed. Tova's machine resumes normal operation. The module joins the Academic Quarter collection.",
+            "choice_b": "Leave the module in place and recommend the Academic Quarter study the machine in situ",
+            "consequence_b": "The plant agrees to grant limited academic access twice a week. The research continues without disrupting the machine."
+        }
+    ],
+    "branching_outcomes": {
+        "module_removed": {
+            "description": "Resonance Relay removed for study. Machine resumed normal operation.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Concordat Resonance Relay",
+                "reputation_change": {
+                    "Industrial Quarter": 12,
+                    "Academic Quarter": 14
+                }
+            }
+        },
+        "in_situ_study": {
+            "description": "Academic Quarter studying the machine in situ.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Concordat Message Transcript",
+                "reputation_change": {
+                    "Industrial Quarter": 10,
+                    "Academic Quarter": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Concordat Resonance Relay",
+        "Concordat Message Transcript",
+        "180x Gold Coins"
+    ],
+    "conclusion": "Resonance Relay removed for study. Machine resumed normal operation."
+}

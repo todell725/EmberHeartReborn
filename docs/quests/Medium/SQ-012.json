@@ -1,0 +1,152 @@
+{
+    "id": "SQ-012",
+    "title": "The Iron-Widow's Silk",
+    "xp_reward": 800,
+    "prerequisites": "None",
+    "description": "The 'Black-Forge' is being choked by a silver, metallic silk that's harder than steel. The Widow is hungry.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The forge's furnace is a dim, cooling orange. Thick, glistening strands of 'Iron-Silk' are wrapped around the bellows, pulsing with a slow, metallic heartbeat.",
+            "choice_a": "Test the silk's tension (Athletics DC 12)",
+            "consequence_a": "Success: You snap a minor strand, but your hand is stained with cold mercury. (+1 Progress)",
+            "choice_b": "Heat the silk with a blowtorch",
+            "consequence_b": "Success: The silk resists the heat, absorbing the energy. (+1 Lore)",
+            "convergence": "A series of clicking sounds echoes from the rafters\u2014something large is moving up there."
+        },
+        {
+            "turn": 2,
+            "narrative": "An 'Iron-Widow'\u2014a spider-construct the size of a shield, made of bolted plates\u2014descends on a single, heavy thread. Its eyes are red-hot embers.",
+            "choice_a": "Dodge the pounce (Dex DC 13)",
+            "consequence_a": "Success: You roll beneath the anvil, the Widow's legs striking the floor with a heavy 'thud'. (+1 Progress)",
+            "choice_b": "Raise your shield",
+            "consequence_b": "Success: The Widow's fangs leave deep gashes in your wood. (+100 XP)",
+            "convergence": "The Widow retreats to the ceiling, trailing a web that is beginning to conduct the forge's remaining heat toward its nest."
+        },
+        {
+            "turn": 3,
+            "narrative": "The heat is being sucked out of the room. The Widow's nest\u2014a massive sphere of silk above the furnace\u2014is starting to glow white-hot.",
+            "choice_a": "Target the nest with a water-bomb (Dex DC 14)",
+            "consequence_a": "Success: The steam explosion disrupts the silk. (+1 Progress)",
+            "choice_b": "Cut the widow's support thread (Attack DC 14)",
+            "consequence_b": "Success: The construct falls into the cooling furnace. (+1 Progress)",
+            "convergence": "A swarm of 'Spiderlings'\u2014tiny, clicking gear-bugs\u2014pours out of the silk vents."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Spiderlings are everywhere, trying to crawl into the gaps of your armor. They smell of hot oil and charcoal.",
+            "choice_a": "Spin and strike (Atk DC 13)",
+            "consequence_a": "Success: You crush scores of them. (+100 XP)",
+            "choice_b": "Use a magnetic pulse (Tech DC 12)",
+            "consequence_b": "Success: The tiny automatons freeze and drop. (+1 Progress)",
+            "convergence": "The Iron-Widow rises from the furnace, its plates now glowing a dangerous bright-orange."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Widow is superheated. Its very presence is making the metal tools on the wall begin to soften and sag.",
+            "choice_a": "Lure it to the cooling-tank (Str DC 14)",
+            "consequence_a": "Success: You position yourself so it charges toward the water. (+1 Progress)",
+            "choice_b": "Stun it with a 'Chilling-Flask'",
+            "consequence_b": "Success: The thermal shock cracks its carapace. (+1 Progress)",
+            "convergence": "The Widow hits the water with a deafening hiss, filling the room with blinding steam."
+        },
+        {
+            "turn": 6,
+            "narrative": "In the white mist, you can only see the glowing red eyes of the Widow. It's moving slower, but its silk is now steaming and toxic.",
+            "choice_a": "Filter the air (Con DC 13)",
+            "consequence_a": "Success: You maintain your breath through the vapor. (+100 XP)",
+            "choice_b": "Track the eyes (Perc DC 14)",
+            "consequence_b": "Success: You anticipate its next lunge. (+1 Progress)",
+            "convergence": "You catch the Widow's main gear-joint in a vice-like grip."
+        },
+        {
+            "turn": 7,
+            "narrative": "The construct is struggling, its hydraulic fluid leaking like dark blood onto the floor.",
+            "choice_a": "Execute a finishing blow (Atk DC 15)",
+            "consequence_a": "Success: You sever the head-piece. (+1 Progress)",
+            "choice_b": "Dismantle it for parts (Tech DC 15)",
+            "consequence_b": "Success: You salvage the 'Widow's Heart-Gear'. (+1 Loot)",
+            "convergence": "The main construct goes silent, but the silk nest above is still humming."
+        },
+        {
+            "turn": 8,
+            "narrative": "The 'Heart' of the Widow was just one part of the web. The silk is now vibrating in a specific frequency\u2014a distress signal.",
+            "choice_a": "Muffle the signal with sand (Repair DC 12)",
+            "consequence_a": "Success: The vibration stops. (+1 Progress)",
+            "choice_b": "Trace the signal's destination (Int DC 14)",
+            "consequence_b": "Success: It's pointing to the 'Main Cog-Works' in the High-Ward. (+1 Lore)",
+            "convergence": "The Blacksmith enters, looking at the wreckage of his forge with a mixture of horror and awe."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Blacksmith offers you his 'Master-Work Hammer' in exchange for the silk you've cleared.",
+            "choice_a": "Accept the Hammer",
+            "consequence_a": "Success: You gain a weapon that can repair as well as destroy. (+1 Gear)",
+            "choice_b": "Exchange the silk for 'Hardened Scales'",
+            "consequence_b": "Success: You gain material for superior armor. (+1 Gear)",
+            "convergence": "The furnace is relit. The fire burns steady and blue."
+        },
+        {
+            "turn": 10,
+            "narrative": "As you leave, you see a small, silver strand trailing from your boot. The silk is persistent.",
+            "choice_a": "Burn the strand away",
+            "consequence_a": "Success: You are clean. (+100 XP)",
+            "choice_b": "Keep it as a trophy",
+            "consequence_b": "Success: It pulses when constructed objects are near. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Iron-Widow has been dismantled, and the Black-Forge is back in production. But the signal it sent suggests a 'Mother-Widow' may be waiting in the foundations.",
+    "loot_table": [
+        "Widow's Heart-Gear",
+        "Master-Work Hammer",
+        "800 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Forge stays cold. -5 Resources and -2 to all future 'Gear-Repair' rolls.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Black-Forge reports production halt",
+        "flags": [
+            "forge_shutdown"
+        ]
+    },
+    "location": "The Black-Forge \u2014 Industrial District",
+    "district": "Industrial Quarter",
+    "thread": "Sovereignty & Order",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "Head Blacksmith Korren",
+        "Iron-Widow (construct boss)"
+    ],
+    "mechanics_featured": [
+        "Combat (construct)",
+        "Tech/Repair checks",
+        "Dex saves vs. webs"
+    ],
+    "permanent_effects": {
+        "settlement": "Forge operational; +2 Resources/session",
+        "world": "Iron-Widow signal points to Cog-Works"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Dismantle for parts",
+            "result": "Widow's Heart-Gear acquired"
+        },
+        {
+            "path": "Execute cleanly",
+            "result": "+1 Morale (threat eliminated)"
+        }
+    ]
+}

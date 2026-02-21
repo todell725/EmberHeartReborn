@@ -1,0 +1,77 @@
+{
+    "id": "SQ-221",
+    "title": "The Frontline Draft",
+    "difficulty": "Medium",
+    "xp_reward": 400,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-008"
+        ],
+        "level_required": 10
+    },
+    "location": "Lower Ward -> Conscription Office",
+    "district": "Lower Ward",
+    "thread": "Sovereignty & Order",
+    "description": "The Warden Council has initiated an emergency draft to hold the Scourge-Fringe. Desperate commoners are rioting outside the Conscription Office.",
+    "key_npcs": [
+        "Draft Master Torin",
+        "Angry Mob"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You arrive at the Conscription Office. A mob is throwing cobblestones at the barricaded doors, demanding an end to the draft.",
+            "choice_a": "Fire a warning shot into the air (Intimidation)",
+            "consequence_a": "The crowd staggers back, frightened but furious. You manage to reach the doors unharmed.",
+            "choice_b": "Inspire the crowd with a speech about defending the city (Charisma)",
+            "consequence_b": "The crowd calms down, and a few even volunteer to join. The riot dissolves peacefully."
+        },
+        {
+            "turn": 2,
+            "narrative": "Inside, Draft Master Torin is bleeding from a head wound. He asks you to deliver the conscription manifest safely to the Scourge-Fringe outpost.",
+            "choice_a": "Demand hazard pay upfront",
+            "consequence_a": "He scowls and hands over 50 gold from the lockbox. 'Just get it done.'",
+            "choice_b": "Accept the manifest without question",
+            "consequence_b": "Torin is grateful and notes your loyalty in his ledger."
+        }
+    ],
+    "branching_outcomes": {
+        "riot_intimidated": {
+            "description": "You dispersed the riot with fear, delivering the manifest.",
+            "unlocks": [
+                "SQ-222"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": -10,
+                    "Sovereignty & Order": 5
+                }
+            }
+        },
+        "riot_inspired": {
+            "description": "You inspired the mob and safely delivered the manifest.",
+            "unlocks": [
+                "SQ-222"
+            ],
+            "consequences": {
+                "item_reward": "Warden's Merit Badge",
+                "reputation_change": {
+                    "Lower Ward": 15,
+                    "Sovereignty & Order": 15
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Draft Manifest",
+        "50x Gold Coins"
+    ],
+    "conclusion": "You dispersed the riot with fear, delivering the manifest.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

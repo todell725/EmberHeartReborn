@@ -1,0 +1,74 @@
+{
+    "id": "SQ-255",
+    "title": "The Last Hearth",
+    "difficulty": "Epic",
+    "xp_reward": 1500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-254"
+        ]
+    },
+    "location": "Core District -> The Ember-Flame Hearth",
+    "district": "Core District",
+    "thread": "Community & Survival",
+    "description": "The Red Weeping is spiraling into a true city-wide epidemic. You must deliver the infected samples directly to the high alchemists at the Ember-Flame Hearth to begin synthesizing a cure before the city dies not of Scourge, but of disease.",
+    "key_npcs": [
+        "Grand Alchemist Vora",
+        "Mutated Vermin Carriers"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Your path to the Core is blocked by a swarm of Vermin that have been infected by the Weeping. Their bites transmit the disease instantly.",
+            "choice_a": "Use massive area-denial fire magic to forge a safe path",
+            "consequence_a": "The fire cleanses the street perfectly. You walk to the Core unharmed by rats or disease.",
+            "choice_b": "Sprint through the alleyway relying on agility",
+            "consequence_b": "You navigate the swarm perfectly, but one rat drops onto your shoulder, delivering a glancing bite."
+        },
+        {
+            "turn": 2,
+            "narrative": "You present the samples to Vora. She runs a swift analysis. 'This is no natural plague. This was engineered to trigger off starvation.'",
+            "choice_a": "Demand she make a cure immediately",
+            "consequence_a": "She agrees, but requires massive alchemical resources she doesn't have.",
+            "choice_b": "Ask where the disease originated",
+            "consequence_b": "She points to a bio-signature match in the deep Undercity. 'The Bio-Ward. They released it.' It unlocks the path to SQ-ELITE-PLAGUE."
+        }
+    ],
+    "branching_outcomes": {
+        "cure_research_begun": {
+            "description": "You delivered the samples and began the desperate research for a cure.",
+            "unlocks": [
+                "SQ-ELITE-PLAGUE"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "All Districts": 40
+                },
+                "item_reward": "Ember-Flame Access Badge"
+            }
+        },
+        "plague_origin_traced": {
+            "description": "You delivered the samples and identified the Bio-Ward as the origin of the Red Weeping.",
+            "unlocks": [
+                "SQ-ELITE-PLAGUE"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Core District": 50
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Ember-Flame Access Badge",
+        "800x Gold Coins"
+    ],
+    "conclusion": "You delivered the samples and began the desperate research for a cure.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

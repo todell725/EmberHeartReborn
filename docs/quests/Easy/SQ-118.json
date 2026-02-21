@@ -1,0 +1,151 @@
+{
+    "id": "SQ-118",
+    "title": "The Frost-Bitten Ledger",
+    "difficulty": "Easy",
+    "xp_reward": 220,
+    "prerequisites": "None",
+    "description": "A merchant's records have frozen in the summer heat...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "A merchant's record book in the Market Square is frozen solid, even though it\u2019s high summer. The ink on the pages is actually ice.",
+            "choice_a": "Thaw the ledger",
+            "consequence_a": "Success.",
+            "choice_b": "Analyze the frost-pattern",
+            "consequence_b": "Success.",
+            "convergence": "The frost is shaped like a 'Map of the Void-Fringes'. The smell is of wet snow and ancient paper."
+        },
+        {
+            "turn": 2,
+            "narrative": "As the ice melts, the ink begins to flow off the page and onto the table, forming words that scream when you touch them.",
+            "choice_a": "Listen to the screams",
+            "consequence_a": "Success.",
+            "choice_b": "Bind the ink with salt",
+            "consequence_b": "Success.",
+            "convergence": "The ink-words are the names of 'Warp-Survivors' who have been forgotten by the state."
+        },
+        {
+            "turn": 3,
+            "narrative": "A 'Frost-Spirit'\u2014a tiny figure of blue glass\u2014appears on the ledger, holding a needle made of frozen tears.",
+            "choice_a": "Speak to the spirit",
+            "consequence_a": "Success.",
+            "choice_b": "Trap the spirit in a jar",
+            "consequence_b": "Success.",
+            "convergence": "The spirit points to a specific entry in the ledger: a debt that was paid in 'Soul-Grain'."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Merchant claims he found the book in the 'Jagged-Ridge'. He's shivering, his breath coming out as blue mist.",
+            "choice_a": "Give him a warm coat",
+            "consequence_a": "Success.",
+            "choice_b": "Check for frost-bite",
+            "consequence_b": "Success.",
+            "convergence": "The merchant's skin is turning to blue porcelain. He's becoming a 'Frozen-Statue' of himself."
+        },
+        {
+            "turn": 5,
+            "narrative": "You must reverse the 'Deep-Freeze' by finding the 'Living-Fire' in the merchant's own history. The air smells of ozone and pine.",
+            "choice_a": "Search for his family crest",
+            "consequence_a": "Success.",
+            "choice_b": "Relight the shop's stove",
+            "consequence_b": "Success.",
+            "convergence": "You find a 'Warm-Memory'\u2014a locket containing a lock of red hair and a single, heat-emitting 'Sun-Bead'."
+        },
+        {
+            "turn": 6,
+            "narrative": "Placing the Sun-Bead on the ledger causes the ice to shatter like glass. The spirit cries out in a voice of melting snow and vanishes.",
+            "choice_a": "Collect the shards",
+            "consequence_a": "Success.",
+            "choice_b": "Seal the Sun-Bead into the ledger",
+            "consequence_b": "Success.",
+            "convergence": "The ledger returns to normal, its pages now filled with a 'Golden-Record' of the settlement's early days."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Merchant recovers, his skin warming up. He hands you a 'Frost-Glass-Lens'\u2014it can see the 'Mana-Paths' in the snow.",
+            "choice_a": "Accept the lens",
+            "consequence_a": "Success.",
+            "choice_b": "Ask for the Sun-Bead",
+            "consequence_b": "Success.",
+            "convergence": "The lens is cold to the touch but shows a world of vibrant, blue-green energy paths."
+        },
+        {
+            "turn": 8,
+            "narrative": "The ledger is now a 'State-Secret'. You are tasked with delivering it to the High-Temple of Flame.",
+            "choice_a": "Escort the Merchant",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The walk to the temple is quiet, the market-goers looking at the blue mist with nervous eyes."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Priestess accepts the ledger, her hands glowing with a soft, orange light as she touches the paper.",
+            "choice_a": "Receive a blessing",
+            "consequence_a": "Success.",
+            "choice_b": "Log the event",
+            "consequence_b": "Success.",
+            "convergence": "The 'Frost-Bitten Ledger' is safe. The merchant offers you a 'Merchant-Ring' (+1 Rep)."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends at the Temple. The summer heat finally feels good on your skin.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Exit",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Frost-Bitten Ledger' is complete. Quest Complete.",
+    "loot_table": [
+        "Frost-Glass-Lens",
+        "Merchant-Ring"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are frozen into a state-secret statue. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Market stall reports book frozen solid in summer heat",
+        "flags": []
+    },
+    "location": "Market Square \u2014 Merchant's Stall",
+    "district": "Market Ward",
+    "thread": "Scourge",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Merchant Tavis",
+        "Frost-Spirit (creature)",
+        "Priestess Solenne (recipient)"
+    ],
+    "mechanics_featured": [
+        "Alchemy (frost-analysis)",
+        "Social (spirit comm)",
+        "Medic (frost-bite)",
+        "Escort mission"
+    ],
+    "permanent_effects": {
+        "settlement": "Golden-Record ledger archived at Temple",
+        "world": "Warp-Survivors names known to Council"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Frost-Glass-Lens",
+            "result": "Mana-path vision in snow gained"
+        },
+        {
+            "path": "Ask for Sun-Bead",
+            "result": "Heat-source item retained"
+        }
+    ]
+}

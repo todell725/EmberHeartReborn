@@ -1,0 +1,247 @@
+{
+    "id": "EH_SQ_610",
+    "title": "The Grief-Harvest",
+    "difficulty": "Hard",
+    "xp_reward": 2300,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_510",
+            "EH_SQ_511",
+            "EH_SQ_512"
+        ],
+        "district_reputation": {
+            "Lower Ward": 30
+        }
+    },
+    "location": "Lower Ward -> Glass Shelf / Scourge-Fringe -> Void-Vineyard Deep Fold",
+    "district": "Lower Ward",
+    "thread": "Void-Wine",
+    "description": "Following the Void-Wine thread to its source: the deep fold of the Glass Shelf conceals the Vintner \u2014 a 130-year-old Concordat survivor who has tended an ancient Void-Vineyard that produces grief-crystal compound orders of magnitude more potent than Essa's cultivated line. The Vethaan Network wants the vineyard for weaponised grief-immersion operations. The Vintner wants therapeutic stewardship. The Void-Grape Guardians want to be left alone. The city's collective grief hangs on what you find and what you decide.",
+    "key_npcs": [
+        "The Vintner",
+        "Dr. Vel",
+        "Essa",
+        "Selva",
+        "Shepherd Cord",
+        "Pross",
+        "Dorr"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The map Essa drew of the Glass Shelf during her forty-two years of production tracking has one area she consistently refused to label \u2014 a deep fold in the Shelf's crystalline terrain three kilometres beyond her cultivation grid, marked only with a small symbol that Alora identifies as Pre-Scourge hazard notation for 'Void-proximate terrain, extreme gradient.' The cultivated Void-vine at Essa's facility is controlled, agricultural, managed. Whatever is at that symbol point is the vine's wild ancestor \u2014 the source from which the Concordat first took it, before the Scourge interrupted their work and left Essa's line as the only surviving specimen. Dr. Vel has been running spectral analysis on the Glass Shelf's deep-fold region through atmospheric instruments and the results are extraordinary: the grief-crystal concentration in that specific terrain is approximately four hundred times higher than anywhere else on the Shelf. Something is harvesting and concentrating human grief from across the city \u2014 the ambient psychic residue that the Shelf's crystalline structure collects from the Scourge's aftermath \u2014 and transforming it into a compound that a living organism is consuming. Sel, a Fringe researcher who has spent three years mapping the Shelf's geological patterns, contacts you. She says: 'Something in the deep fold is tending it. I have seen firelight from that direction on three separate nights over the past month.'",
+            "choice_a": "Move immediately to the deep fold with a small, capable team before whoever is tending it knows you are coming",
+            "consequence_a": "The three-kilometre traverse of the Shelf takes four hours through terrain that becomes increasingly crystalline and resonant underfoot. The grief-crystal forms become visible as you approach the deep fold \u2014 not the scattered deposits found elsewhere on the Shelf but dense, structured formations that pulse with a slow internal illumination, as if breathing. At the fold's edge, you look down and see a vineyard.",
+            "choice_b": "Survey the deep fold from a distance using the communication station's long-range sensing capability before committing to approach",
+            "consequence_b": "The communication station's atmospheric sensors, when directed at the deep fold, return imagery that Dorr describes as 'the single most complex biological formation I have seen outside the F-Chamber.' A structured vineyard of grievous beauty spanning perhaps three hundred metres, tended by a single human figure moving between the rows with the deliberate care of someone who has been doing this for a very long time."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Void-Vineyard in the deep fold is unlike anything the Glass Shelf has ever produced naturally. The vines are not wild descendants of Essa's cultivated line \u2014 they are a more ancient, more potent strain that appears to predate the Scourge itself, growing in neat rows that show evidence of decades, possibly centuries of careful management. The grapes \u2014 if that word applies to clustered crystalline nodules that are simultaneously organic and mineral \u2014 hang heavy with a substance that catches the dim Shelf light like deep purple glass. Each cluster contains grief in a form Vel's instruments cannot fully characterise: not metaphorically, not analogically, but literally \u2014 the crystallised psychic residue of human loss, concentrated, fermented by Void-adjacent processes into a compound of extraordinary potency. Essa's vine produced Void-Wine at trace concentration. This vineyard produces something several orders of magnitude more powerful. Whoever consumes what grows here is not experiencing grief management or mild euphoria. They are consuming distilled human loss at a level that Vel estimates would re-experience not their own grief but the accumulated grief of thousands of Scourge survivors. The single figure tending the rows is a man. He is old \u2014 extraordinarily old \u2014 and he knows you are here. He turns unhurriedly and looks up at the fold's edge where you stand. He raises his hand in a gesture of welcome. He has been waiting for someone to come for a long time.",
+            "choice_a": "Descend into the Vineyard and meet him at his level \u2014 this is his domain and showing respect costs nothing yet",
+            "consequence_a": "The descent takes twenty minutes. The Vintner \u2014 he gives no other name \u2014 greets you formally in a dialect that includes Concordat-era syntax. He is dressed practically, in clothes that show long wear but careful maintenance. He says: 'The Vineyard has been tended since before the city existed. The Scourge did not stop the harvest \u2014 it made it possible. I am sorry it has taken this long for someone to find it. There is much to discuss.'",
+            "choice_b": "Call out from the fold's edge \u2014 force the meeting on your terms without descending into terrain you don't control",
+            "consequence_b": "Your voice carries across the vineyard clearly. The Vintner stops walking between rows and waits. He does not look surprised or alarmed. After a pause he says, in a voice that carries equally well: 'If you prefer the high ground, that is fair. But what I have to show you requires proximity. The Harvest is not something that explains well at distance.' His tone is patient. Unnervingly so."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Vintner speaks for ninety minutes before you need to formulate a response to anything, because his account of himself and his work is so comprehensive that interruption would lose more than it gained. He was born before the Scourge \u2014 not long before, perhaps five years \u2014 but the Void-Vineyard's compound has extended his biological age far beyond any natural limit. He believes he is approximately 130 years old, though he counts by harvests rather than years. He discovered the deep fold's grief-crystal concentration as a young alchemist working for the Concordat, two years before the Scourge. The Concordat's initial plan was to study the crystallised grief as a psychic contaminant \u2014 a Scourge byproduct they needed to understand and potentially disperse. The Vintner's contribution was to discover that a specific vine strain grew naturally at the deep fold's base, already metabolising the grief-crystal into a fermentable compound. He identified the compound's potential not as a weapon or a drug but as a therapy \u2014 a mechanism for safely processing the city's accumulated grief at a population scale. The Scourge arrived before any of this could be implemented. The Concordat dissolved. The Vintner survived by consuming small quantities of the concentrated compound \u2014 which, at the dose he has maintained for a century, does not produce euphoria or dependency but what he calls 'sustained equilibrium.' He has tended the vineyard alone for a hundred years and has never distributed its output because there was no governance structure he trusted to receive it. That has now changed, he says. The Grief Architects have found him.",
+            "choice_a": "Ask him to explain the Grief Architects before anything else \u2014 you do not recognise the term",
+            "consequence_a": "The Vintner's expression shifts \u2014 the first significant change you have seen in his weathered calm. 'They call themselves various things. In my time they were called the Collectors. They have been aware of this vineyard for approximately twenty years and have been attempting to find it for three. They are the people who modified Essa's vine. They found her work and weaponised it because they could not find mine.' He pauses. 'They are very close now. I have been watching their approach routes.'",
+            "choice_b": "Ask him about the 'terrible bargain' \u2014 what is he offering and to whom",
+            "consequence_b": "The Vintner considers the question for a long moment. 'I am old enough to know that I will not live to see another century. The vineyard requires a steward. My bargain is not terrible from my perspective \u2014 it is simply honest. I am offering trusteeship of something that could heal an entire city's grief at scale, in exchange for a commitment to protect it from those who would use it to create dependency rather than recovery.' His eyes are completely clear. 'The terrible part is the responsibility, not the cost.'"
+        },
+        {
+            "turn": 4,
+            "narrative": "Before the Vintner's full account can be heard, circumstances accelerate. The Ridge communication station detects four human heat signatures moving across the Shelf toward the deep fold on an intercept course that puts them less than two hours away. Selva, who accompanied your team, identifies the approach route as using the same path markers the Vethaan network's courier was observed using during the Glass Shelf surveillance three months ago. The Grief Architects \u2014 whoever they are \u2014 have been tracking your investigation and are using your approach to the deep fold as a navigation cue. They were following you home to the vineyard you found for them. The Vintner is unsurprised. He says: 'I told you they were close. The choice now is whether you want the argument on my terms or theirs. On their terms, we are standing in an exposed Shelf depression with limited cover and four armed operators approaching. On my terms, we are in a vineyard that has very effective natural defenses \u2014 if I choose to activate them.' He gestures at the vine rows. 'I have never used them. I would prefer not to start today. But I am asking: are you going to be here when they arrive?'",
+            "choice_a": "Commit to defending the vineyard with the Vintner and prepare an ambush position using the vine rows as cover",
+            "consequence_a": "The Vintner activates a partial defense \u2014 selective grief-crystal resonance in the approach corridors that will disorient and slow the approaching team without incapacitating them. This gives you twenty additional minutes to prepare. He says: 'They will have counter-measures for Void energy. Do not rely on the vineyard to stop them. It will only slow them and confuse their instruments.' [COMBAT ENCOUNTER 1 APPROACHING \u2014 4 Vethaan-connected Grief Architect operatives, well-equipped, adaptive tactics]",
+            "choice_b": "Request the Vintner extract the most critical vineyard samples and records while you hold the approach",
+            "consequence_b": "The Vintner moves with remarkable speed for a 130-year-old man. He retrieves a sealed case that he says contains three items: living vine cutting, concentrated compound sample, and his complete century of research documentation. 'If I go down,' he says, 'this goes forward regardless.' He hands the case to Vel, who has been silent for the past hour and is now very focused. You prepare to receive the approaching team."
+        },
+        {
+            "turn": 5,
+            "narrative": "The four Grief Architects are professional \u2014 they come out of the crystalline terrain with the controlled movement of people who have spent time in hostile environments and with the equipment of people whose organisation has significant resources. They carry Ward-grade suppression weapons plus two specialist alchemical devices that Selva identifies as contained Void-energy dampers \u2014 specifically designed to suppress the grief-crystal resonance that the Vintner uses as a natural defense. They also carry chains and collection vessels sized for a significant harvest operation. They are not here to study the vineyard. They are here to take it. Their leader announces from forty metres: 'Step away from the Vintner and the product. You are interfering with a procurement operation under private commission.' No Ward authority. No legal framework. Pure commercial extraction of a century-old ecological and scientific resource. [COMBAT ENCOUNTER 1: 4 Grief Architect operatives \u2014 defeat or neutralise before they reach the harvest rows]",
+            "choice_a": "Engage aggressively before they can deploy the Void dampers \u2014 interrupt their operational capability first",
+            "consequence_a": "A running fight through the vine rows \u2014 the crystalline formations create unusual acoustic effects, making it impossible to track movement by sound. One Void damper is destroyed in the first exchange. Two operatives are incapacitated. The leader retreats with one operative, activating the remaining Void damper as they go. The vineyard's natural resonance is partially suppressed for six hours.",
+            "choice_b": "Draw the team out of formation with feints and use the vineyard's terrain to separate and isolate them individually",
+            "consequence_b": "The crystalline grape clusters detonate on contact as the operatives move through the rows \u2014 grief-resonant bursts that produce brief but intense memory intrusion experiences. Operatives become confused and slowed. All four are incapacitated over fifteen minutes of careful terrain use. No one killed. Both Void dampers intact and recoverable."
+        },
+        {
+            "turn": 6,
+            "narrative": "The immediate threat is neutralised. The Vintner examines the captured operatives with the clinical eye of someone who has observed human frailty for a century. He says: 'The one on the left has consumed refined vineyard output. I can see it in the capillary dilation pattern around the eyes \u2014 he has been given samples of what they planned to harvest. That means the principals already know what the compound does at high concentration and they have been testing it. On someone.' The interrogation of the operatives \u2014 conducted by Selva with Astrid's remote authorisation \u2014 yields operational intelligence: the Grief Architects are funded by an entity known as the Vethaan Network, operating under a commercial brief to locate, extract, and transport concentrated grief-crystal harvest to a processing facility outside the Ward. The processing facility is not in Emberheart. The operation has been running for two years. The vineyard was the final uncaptured resource. The Network already has a partial production capability using Essa's compromised vine strain and Celle's modification work \u2014 but the deep fold vineyard produces the fundamental compound at a concentration that makes the rest of their operation a derivative. Without the Vineyard, the Vethaan Network's grief-compound programme is functional but limited. With it, they have the most powerful psychoactive substance ever produced at scale.",
+            "choice_a": "Use the captured operatives' communications equipment to send a false confirmation of successful extraction \u2014 buy time while Astrid coordinates a counter-operation against the processing facility",
+            "consequence_a": "The deception works for six hours. Astrid's team identifies and moves on the processing facility's location \u2014 a Transit Corridor warehouse that has been hiding in plain sight. Simultaneous arrest of twelve Vethaan Network operatives.",
+            "choice_b": "Secure the vineyard immediately with everything available and focus on the Vintner's testimony as the prosecution anchor rather than the processing facility",
+            "consequence_b": "The Vintner's entire century of documentation, plus the operatives' captured equipment, is the evidentiary basis for the largest single prosecution package the Ward has ever assembled. Astrid says it is enough to pursue the Vethaan Network's principals directly."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Vintner's offer is now formally on the table: trusteeship of the Void-Vineyard. But the operatives' interrogation has revealed that the Vethaan Network's principals know the vineyard exists and a second extraction attempt is likely within days if the first team has not reported success. The vineyard cannot remain unprotected in its current location. The Vintner accepts this. He says: 'I have another proposal beyond trusteeship. The compound I produce at full concentration has never been shared widely because there was no framework to share it safely. The Grief Architects want to weaponise it. The Concordat intended to use it therapeutically. What I am offering the city is the third option \u2014 controlled therapeutic deployment under Ward authority. But the vineyard must move.' Moving a living ecosystem of grief-crystal-metabolising vines across the Glass Shelf without compromising their biological integrity is a challenge that requires capabilities you have gathered across multiple investigations: Essa's agricultural expertise, the F-Chamber's controlled environment, Alora's molecular biology, Vel's medical oversight, and Selva's Shelf navigation. All of them, together, for a relocation operation that the Vintner says will take three days and require continuous monitoring at every step.",
+            "choice_a": "Commit to the full vineyard relocation operation \u2014 this is the only way to both protect the resource and fulfill the Vintner's therapeutic intent",
+            "consequence_a": "Three days of extraordinary coordinated work across five specialists plus the Vintner's guidance. The vines respond to careful handling \u2014 their grief-crystal metabolic activity actually decreases during transport, as if aware of benign intent. The relocation destination is a prepared section of the F-Chamber's third sub-basement, where grief-crystal deposits are naturally present in the rock strata.",
+            "choice_b": "Destroy the Vethaan Network's ability to extract the vineyard by destroying the approach routes and setting up permanent Ward monitoring, leaving the vineyard in situ under protection",
+            "consequence_b": "The Vintner is initially resistant \u2014 in situ protection is less certain than relocation \u2014 but accepts when the monitoring plan is presented in detail. A Ward Fringe monitoring station is commissioned at the Shelf's deep fold access point."
+        },
+        {
+            "turn": 8,
+            "narrative": "Whether the vineyard has been relocated or secured in situ, the Vintner's terrible bargain must now be addressed. He has been honest about what trusteeship means: the compound at therapeutic dose can process years of accumulated grief in a single carefully supervised session. The result is not euphoria but genuine psychological release \u2014 the kind of grief processing that Pross's community circles work toward over months, achieved safely in hours, without dependency, without addiction, without Void saturation. The catch, and it is a genuine catch, is that the compound at higher dose \u2014 the dose the Grief Architects were harvesting toward \u2014 produces something categorically different. Not relief. Immersion. Full re-experiencing of accumulated grief across a population \u2014 not the individual's grief, but everyone's simultaneously. The Vintner describes this as 'the Grief Architects' preferred application' and says it would produce a city-wide traumatic response event if deployed without consent. This is what the Vethaan Network was building toward. The therapeutic application is real and extraordinary. The weaponised application is real and catastrophic. The compound cannot be modified to prevent both \u2014 the same chemistry enables both uses depending only on dose and context. Trusteeship means accepting stewardship of a compound that could heal the city or destroy it, with the sole protection being the integrity of the steward. [SECOND COMBAT ENCOUNTER \u2014 a faster second Vethaan team has been sent, this one tipped off that the first team was captured and moving with orders to destroy the vineyard rather than extract it]",
+            "choice_a": "Intercept the second team before they reach the vineyard's new location or current position",
+            "consequence_a": "Three-person fast-attack team with incendiary capacity. This engagement is faster and more dangerous than the first \u2014 they are not here to capture or negotiate. [COMBAT ENCOUNTER 2: 3 Vethaan incendiary operatives, high aggression, destroy-everything brief]",
+            "choice_b": "Let the Mother-Loaf's communication with the F-Chamber's new grief-vine presence alert the team that the vineyard has powerful non-human guardians \u2014 use the F-Chamber's integrated biology as deterrence",
+            "consequence_b": "If the vineyard has been relocated to the F-Chamber's sub-basement, the Mother-Loaf is immediately aware of its presence and forms a protective mycelial barrier around the relocation zone. The incendiary team enters the Yeast Quarter and finds every street subtly wrong, every landmark relocated by centimetres via the lattice's rearrangement. They cannot find the F-Chamber access. They are captured by Ward Guard two hours later, still circling."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Vethaan Network's second team is neutralised \u2014 either by combat, by the Mother-Loaf's disorienting lattice if the vineyard has been relocated, or by the Vintner's grief-crystal resonance deployed in open terrain at a force level he says he has never used before and hopes not to use again. The Vintner sits beside his sealed documentation case after the engagement and says: 'I have spent a hundred years not harming anyone. Tonight I used grief as a weapon. I did not enjoy this.' He is quiet for a moment. 'The people I repelled will have experienced authentic grief memories \u2014 their own, not manufactured. Whatever it produced, it was true.' He looks at you. 'I do not know if that makes it better or worse. I have had a hundred years to think about this question and I still do not know.' The vineyard \u2014 relocated or secured \u2014 is physically safe. The Vintner is ready to discuss his trusteeship offer in full, with the time pressure of the Network's interest providing urgency that the therapeutic potential alone may not have generated. The question of what to do with the Grief-Harvest has four possible answers, and all four are before you.",
+            "choice_a": "Recommend Ward Authority trusteeship \u2014 the vineyard under Heritage protection with Medical Quarter oversight for therapeutic deployment",
+            "consequence_a": "A Void-Vineyard Heritage Protection Charter is drafted. The Vintner is formally recognised as a Concordat-era survivor with heritage status equivalent to Senna's. Dr. Vel's medical team is designated the therapeutic deployment working group.",
+            "choice_b": "Recommend the Vintner retain personal custody under a Ward monitoring framework \u2014 he has earned the right to continue his stewardship",
+            "consequence_b": "The Vintner accepts this with visible relief. 'I have been alone with this for a hundred years. Having oversight is not a limitation \u2014 it is the first time I will have colleagues.' He says this with the sincerity of someone for whom loneliness has been a century-long companion."
+        },
+        {
+            "turn": 10,
+            "narrative": "The therapeutic deployment question is the most ethically complex decision the thread produces. The Vintner's compound at therapeutic dose can process accumulated grief safely and without addiction. The city's population has vast amounts of grief to process \u2014 the Scourge left a legacy that grief counselling circles, community memorials, and the Memory Archive are all working to address incrementally. The compound could accelerate that processing dramatically, bringing a century of collective loss to a point of genuine resolution for thousands of people. But grief is not pathology. Processing it through a compound \u2014 however safe \u2014 raises profound questions about consent, about whether artificial resolution is the same as lived resolution, about whether the city's grief is its to process on its own terms or to be assisted through. Pross, when consulted, says: 'The question isn't whether the compound works. It's whether offering it is an act of care or an act of impatience with how long grief takes.' Vel says: 'Both. And you have to decide which one matters more in which contexts.' The Vintner says: 'The Concordat intended it as a choice offered to individuals, not a population-level intervention. Perhaps that intention is the answer.'",
+            "choice_a": "Recommend individual-consent therapeutic sessions under full Medical Quarter clinical supervision \u2014 accessible to anyone who seeks it, prescribed by no one",
+            "consequence_a": "A Grief-Harvest Therapeutic Access Programme is established. Demand in the first month exceeds projection by three hundred percent. Pross's community circles continue to run for those who prefer the slower path. Both are available. Neither is required.",
+            "choice_b": "Recommend a research programme only \u2014 the therapeutic potential is real but the ethical framework for population-scale grief compound administration does not yet exist",
+            "consequence_b": "Vel leads a two-year research programme establishing the ethical, clinical, and consent frameworks. The compound remains inaccessible for therapeutic use during this period. The research produces the most comprehensive grief-medicine ethics document the Medical Quarter has ever published."
+        },
+        {
+            "turn": 11,
+            "narrative": "The Vethaan Network's operational intelligence from the two captured teams has produced a significant picture of the Network's grief-compound programme: they were not planning to deploy weaponised grief exposure at random. They were planning to expose specific individuals \u2014 Ward Councillors, Heritage Authority members, key institutional figures \u2014 to controlled grief-immersion events that would temporarily incapacitate them during a specific operational window. The intelligence suggests this window was timed to coincide with something \u2014 a civic event, a Council vote, a public occasion \u2014 that Astrid's team has been working to identify. The calendar item that fits the operational window: the annual Scourge Memorial in two weeks. The city's most significant public gathering, attended by every Ward official, every institutional leader, every community figure of consequence \u2014 all gathered in one place for two hours. A grief-immersion event deployed at that gathering would temporarily disable every person in a position to respond to whatever the Network intended to do during the incapacitation window. The Vintner's vineyard was never about commercial exploitation. It was a weapon designed for a specific target at a specific moment. The Memorial is in two weeks.",
+            "choice_a": "Immediately secure the Memorial venue and brief Ward Council on the Network's plan \u2014 cancel or relocate",
+            "consequence_a": "The Memorial is relocated to a secure venue with full crowd monitoring. The Network's operational window collapses because the gathering is no longer predictable. Astrid uses the two weeks to advance the Network investigation using the captured teams' intelligence.",
+            "choice_b": "Run the Memorial as planned but prepare a counter-deployment and use it as the moment to arrest the Network's principals when they attempt their operation",
+            "consequence_b": "The Memorial is used as a trap. Twelve Network operatives attempting to deploy contained grief-compound into the gathering's ventilation system are captured mid-operation. The principals giving remote direction are traced and arrested over the following three days."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Void-Vineyard's Void-Grape Guardians are the final combat encounter of the Grief-Harvest. They are not the Vethaan Network. They predate the Network by decades. The Guardians are indigenous to the deep fold \u2014 semi-crystalline organisms that evolved alongside the grief-crystal formations over centuries of Void-adjacent exposure. They are not intelligent in the way the Mother-Loaf is intelligent, but they are adaptive, defensive, and they have been protecting the vineyard's ecological integrity since before the Vintner arrived. The Vintner has coexisted with them for a century by moving carefully and non-aggressively. The Vethaan teams, the survey teams, and the relocation operation have disturbed enough of the Guardians' home terrain to produce a defensive response that the Vintner did not predict. Three Guardians \u2014 each the size of a large dog, constructed of crystalline grief-resin with embedded organic tissue \u2014 emerge from the deep fold's lower formations and begin attacking anyone near the vineyard perimeter. The Vintner says: 'They are not angry. They are frightened. The vineyard has been disturbed more in the past three weeks than in the previous century. They do not know the difference between protection and invasion anymore.' [BOSS ENCOUNTER: 3 Void-Grape Guardians \u2014 semi-crystalline, grief-resonant attack capability that triggers authentic grief-memory responses on contact, adaptive to combat tactics]",
+            "choice_a": "Fight the Guardians with conventional methods, using the grief-resonance disruption equipment recovered from the Vethaan teams",
+            "consequence_a": "The captured Void-suppression equipment works on the Guardians at short range \u2014 inhibiting their grief-resonance attacks. [BOSS COMBAT: 3 Guardians in open terrain, grief-memory attacks requiring suppression equipment management alongside physical combat]",
+            "choice_b": "Ask the Vintner to attempt to calm the Guardians using the vineyard's natural resonance \u2014 he has a century of relationship with them",
+            "consequence_b": "The Vintner stands at the vineyard's edge and produces a specific low-frequency resonance from the grief-crystal array that he says means 'safe' in the Guardians' perceptual register. Two of three stop immediately. One remains agitated \u2014 it has been directly injured in the previous combat and associates human presence with harm. [REDUCED BOSS: 1 remaining Guardian at full aggression \u2014 the other two are calmed and defensive only if re-engaged]"
+        },
+        {
+            "turn": 13,
+            "narrative": "The Guardians resolved \u2014 calmed or defeated \u2014 the vineyard's final fate is sealed. The Vintner looks at the deep fold's crystalline formations with the expression of someone assessing something they know they are seeing for the last time in its current form. He says: 'I have spent a hundred years with only them for company, most of the time. They were not colleagues. They were the neighbourhood. You understand there is a difference.' He is already planning the vineyard's next century rather than mourning its disrupted third month. Whatever option has been chosen \u2014 therapeutic programme, research phase, Ward trusteeship, or his own continued custody \u2014 the Vintner applies himself to implementing it with the focused patience of a man who thinks in decades rather than weeks. The Grief-Harvest's final political question is what to do with Essa. Her cultivated vine is the commercial derivative of the Vintner's ancient stock. The Vethaan Network's actions against her line \u2014 the Celle modifications, the targeting of her operation \u2014 were part of the same programme as the deep fold extraction plan. Essa deserves to know the full story. She is the last surviving independent producer in the thread that runs from Concordat prototype through a hundred years of underground cultivation to the city's most significant grief-processing resource. She also has no idea that the wine she has produced for forty-two years draws on the same root stock as what nearly became a weaponised population-control substance.",
+            "choice_a": "Tell Essa everything, including the Network's weaponised programme, and offer her the choice to formally associate her line with the Vintner's therapeutic framework",
+            "consequence_a": "Essa sits with the information for two days. She is angry \u2014 at the Celle modification, at the Network, at the years of vulnerability she was not told about. Then she is thoughtful. Then she is practical. 'My line can be the therapeutic access product if the development programme needs one. I understand vines. I understand time.' She is accepted immediately.",
+            "choice_b": "Tell Essa what she needs to know for her own safety and leave the Vintner's full story for a later, less fraught moment",
+            "consequence_b": "Essa is told about the Network's targeting and the safety of her operation. She is grateful and fiercely determined. The Vintner's existence and the full therapeutic programme are introduced to her gradually over the following months as trust develops."
+        },
+        {
+            "turn": 14,
+            "narrative": "The Grief-Harvest thread closes with a specific, personal encounter. The Violet Shepherd's congregation \u2014 whose void-wine sacrament has been a contentious element of the entire Void-Wine thread \u2014 sends a delegation to wherever the vineyard now exists. Shepherd Cord leads the delegation personally. They do not come asking for access to the therapeutic compound. They come to bring the Vintner a gift: a hand-copied collection of every grief prayer, grief meditation, and grief-processing ritual practice the congregation has developed in three years of working with their community. They say: 'You had the science. We had the practice. Perhaps they were looking for each other.' The Vintner receives the gift with the most emotion he has visibly shown throughout the quest and says: 'I was told the Concordat's therapeutic programme would work alongside existing spiritual practices rather than supplanting them. It is good to know this was correct.' He pauses. 'It is very good to know this was correct.' The Shepherd says: 'The grief does not go away. It becomes something you can carry without dropping.' The Vintner answers: 'In a hundred years I have not been able to say it better than that.'",
+            "choice_a": "Formally facilitate an integration between the congregation's grief-practice traditions and the Vintner's therapeutic programme",
+            "consequence_a": "A Grief-Bridge Programme is established: the congregation's practices provide the psychological framework, the Vintner's compound provides the biochemical acceleration when clinically appropriate. The combination is what the Concordat intended to build.",
+            "choice_b": "Let the relationship develop organically between Cord and the Vintner \u2014 institution-making can wait",
+            "consequence_b": "The Vintner and Shepherd Cord meet monthly for the following year. What develops is not documented but is evident to everyone who knows both of them."
+        },
+        {
+            "turn": 15,
+            "narrative": "Standing at the edge of the deep fold \u2014 whether the vineyard is still here or relocated to the F-Chamber's depths \u2014 the Glass Shelf's crystalline landscape reflects the late-afternoon light in amber and violet. The grief-crystal deposits pulse softly, metabolising the city's ambient emotional residue as they always have, converting it into something that can be received and processed. The Vintner says: 'The Concordat built this place \u2014 or rather, they found it and understood it. The Scourge gave it a hundred years to grow without being used. I gave it whatever I could of tending. And now the city knows it exists.' A pause. 'I was afraid for a long time. Coming here was the only thing I knew how to do. Staying was all I could offer.' He looks at the vine rows. 'Now it can be more than staying.' The city's grief, the central wound under every thread investigation, every governance dispute, every faction conflict \u2014 is not healed. It was never going to be healed in a single conversation or a single compound or a single programme. But there is now, for the first time, something genuinely designed to help people through it. The Scourge left a deposit. Something grew in that deposit. Something that, given time and careful tending, gives back. [PERMANENT WORLD EFFECTS]",
+            "choice_a": "Formally recognise the Vintner as the city's first Grief-Harvest Steward in a Ward ceremony",
+            "consequence_a": "The ceremony is small and private per the Vintner's request. The Shepherd's congregation sings. Essa brings bread. The Knowledge Keeper attends via crystal relay. The Vintner says: 'I have waited a long time to be useful to people who knew I was there.' It is the best thing anyone in this city has said in years.",
+            "choice_b": "Let the Vintner's work speak without ceremony \u2014 the vineyard is its own acknowledgement",
+            "consequence_b": "The Vintner seems genuinely relieved by this decision. 'I was never interested in recognition,' he says. 'I was interested in the harvest.' He returns to the vine rows. He is exactly where he has always been most completely himself."
+        }
+    ],
+    "branching_outcomes": {
+        "therapeutic_programme": {
+            "description": "Individual-consent therapeutic access programme established. Vintner as co-steward. Grief-Bridge integration with congregation.",
+            "permanent_world_effects": [
+                "City-wide grief processing capacity permanently improved",
+                "Void-Wine thread resolved \u2014 the commercial addiction chain supplanted by therapeutic alternative",
+                "Purple-Eyed congregation formally integrated into grief-medicine framework",
+                "Scourge Memorial becomes significantly more healing in tone with therapeutic support available"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 55,
+                    "Temple District": 30,
+                    "Medical Quarter": 35
+                },
+                "item_reward": "Vintner's Signet"
+            }
+        },
+        "research_phase": {
+            "description": "Two-year research programme. No therapeutic access yet. Ethics framework development. Vintner in custody under Ward monitoring.",
+            "permanent_world_effects": [
+                "Medical Quarter's grief-medicine ethics leadership established",
+                "Future therapeutic deployment has the strongest possible ethical foundation"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Medical Quarter": 40,
+                    "Lower Ward": 25
+                },
+                "item_reward": "Void-Grape Research Ethics Charter"
+            }
+        },
+        "ward_trusteeship": {
+            "description": "Heritage protection with Medical Quarter oversight. Vintner formally recognised as Concordat-era survivor.",
+            "permanent_world_effects": [
+                "Vintner integrated into Ward heritage structure",
+                "Therapeutic programme under full institutional governance"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 40,
+                    "Medical Quarter": 30,
+                    "Academic Quarter": 20
+                },
+                "item_reward": "Void-Vineyard Heritage Protection Charter"
+            }
+        },
+        "destroyed": {
+            "description": "Vineyard destroyed to prevent any weaponised use. Essa's line continues as the only surviving Void-Wine source.",
+            "permanent_world_effects": [
+                "The Vethaan Network's grief-compound programme permanently closed",
+                "Essa's line becomes the only surviving Void-Wine source \u2014 elevated to Ward heritage protection",
+                "The Vintner's century of research documentation preserved in Archive"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 20,
+                    "Academic Quarter": 15
+                },
+                "item_reward": "Vintner's Research Legacy \u2014 Century of Documentation"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 650,
+            "reputation_change": {
+                "Lower Ward": -50,
+                "Temple District": -30
+            }
+        },
+        "critical_failure": "Vethaan Network captures the vineyard. The Scourge Memorial grief-immersion op succeeds. Forty Ward officials experience forced grief events. Three die of cardiac complications during acute grief response. The Network deploys weaponised grief at will. The city enters a grief-politics crisis that costs the Ward Council three members.",
+        "npc_death_risk": [
+            "The Vintner (if Guardian fight produces no attempt at non-lethal resolution)",
+            "Essa (if Vethaan Network learns of her existence through the investigation's intelligence exposure)"
+        ]
+    },
+    "permanent_world_effects_universal": [
+        "Vethaan Memorial operation planned against Scourge Memorial is prevented",
+        "Void-Wine thread fully resolved \u2014 the commercial grief-exploitation chain is ended",
+        "Glass Shelf deep fold formally documented and mapped as a significant ecological and heritage site"
+    ],
+    "loot_table": [
+        "Vintner's Signet (Legendary \u2014 grants access to Grief-Harvest therapeutic sessions for party, connection to grief-processing network)",
+        "Void-Grape Seeds (Artifact \u2014 living propagation material from the ancient vine; requires careful cultivation)",
+        "Vintner's Century of Documentation (pre-Scourge Concordat epidemiological grief-compound research)",
+        "Void-Suppression Equipment (recovered from Vethaan teams \u2014 functional for future Void-adjacent encounters)",
+        "Grief-Harvest Therapeutic Access Charter",
+        "2500x Gold Coins"
+    ],
+    "conclusion": "Individual-consent therapeutic access programme established. Vintner as co-steward. Grief-Bridge integration with congregation. Vethaan Memorial operation planned against Scourge Memorial is prevented Void-Wine thread fully resolved \u2014 the commercial grief-exploitation chain is ended",
+    "permanent_effects": [
+        "Vethaan Memorial operation planned against Scourge Memorial is prevented",
+        "Void-Wine thread fully resolved \u2014 the commercial grief-exploitation chain is ended",
+        "Glass Shelf deep fold formally documented and mapped as a significant ecological and heritage site"
+    ]
+}

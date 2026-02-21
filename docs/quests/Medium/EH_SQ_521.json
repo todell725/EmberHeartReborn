@@ -1,0 +1,167 @@
+{
+    "id": "EH_SQ_521",
+    "title": "The Ridge-Lord Summit",
+    "difficulty": "Medium",
+    "xp_reward": 940,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_520",
+            "EH_SQ_422"
+        ],
+        "items_required": []
+    },
+    "location": "Ridge -> The Summit Hall / Ridge-Lord Estate Row",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "The discovery of the Concordat underground infrastructure and the resource cache has made the Ridge the most strategically significant district in the city overnight. Three Ridge-Lords \u2014 Fenn (whose labour violations you exposed), Darrow (ambitious and newly arrived), and Elder Voss (the oldest and most established) \u2014 are now competing to control the infrastructure programme. Overseer Kell has called a formal Summit to prevent a factional breakdown. She asks you to attend as a neutral adviser. The session will determine who controls the most significant find in a generation.",
+    "key_npcs": [
+        "Overseer Kell",
+        "Ridge-Lord Fenn",
+        "Ridge-Lord Darrow",
+        "Ridge-Lord Elder Voss",
+        "Foreman Ness",
+        "Worker Representative Renia"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Summit Hall is a vaulted chamber at the Ridge's administrative peak, reserved for significant multi-Lord negotiations. All three Ridge-Lords arrive with advisers and legal representatives. Fenn is over-dressed and nervous \u2014 your earlier exposure of his labour violations clearly damaged his standing. Darrow is younger and direct, presenting an immediate commercial proposal. Elder Voss sits with quiet patience and says nothing for the first twenty minutes. Kell opens by stating that the Ward Council has not yet designated control authority \u2014 this Summit is meant to produce a recommendation.",
+            "choice_a": "Begin by proposing that control should be determined by institutional mandate rather than Lord authority",
+            "consequence_a": "Voss nods immediately. Fenn bristles. Darrow pivots rapidly to present himself as the most institutionally aligned Lord.",
+            "choice_b": "Listen to each Lord's opening argument before offering any framework",
+            "consequence_b": "Fenn argues property rights \u2014 the mine section is under his licence area. Darrow argues first-mover advantage \u2014 his survey investment was largest. Voss argues that historical Ridge-Lord authority predates all of them."
+        },
+        {
+            "turn": 2,
+            "narrative": "Labour Representative Renia has requested and been granted observer status at the Summit. She does not have a vote but she does have the legal right to address the assembly on behalf of the 847 miners who work the deep sections. When she stands to speak, the room becomes extremely still. She says: 'The miners broke through that wall. The find belongs to the Ridge community \u2014 not the Lords.' This is not legally binding. But the room's response to it reveals who actually has moral authority here.",
+            "choice_a": "Support Renia's statement openly and propose a community governance model",
+            "consequence_a": "Voss supports this immediately. Fenn looks calculating. Darrow objects \u2014 his investment has no return under a community model.",
+            "choice_b": "Remain neutral but ensure Renia's statement is formally entered into the Summit record",
+            "consequence_b": "The formal record inclusion gives her argument legal weight in any subsequent Ward Council consideration."
+        },
+        {
+            "turn": 3,
+            "narrative": "Darrow makes a bold proposal: he will fund the entire infrastructure integration programme \u2014 communication station restoration, energy station upgrade, resource cache management \u2014 in exchange for a forty-year exclusive licensing arrangement over the infrastructure network's commercial output. The proposal is financially sound. It is also a private takeover of a public discovery. The other two Lords are silent, assessing whether to compete or cooperate.",
+            "choice_a": "Formally oppose Darrow's proposal and propose Ward Council oversight as the only appropriate governance for a discovery of this magnitude",
+            "consequence_a": "Kell is visibly relieved. Voss supports. Fenn, sensing the political wind, supports. Darrow's proposal fails in the room.",
+            "choice_b": "Negotiate amendments to Darrow's proposal that limit the exclusivity and add community benefit mandates",
+            "consequence_b": "A twenty-year, non-exclusive arrangement with mandatory worker profit-sharing is counter-proposed. Darrow considers for two hours."
+        },
+        {
+            "turn": 4,
+            "narrative": "Fenn, sensing the political dynamics shifting against his property-rights argument and seeing an opportunity, makes a private approach. He quietly reveals that he has documentation suggesting Darrow's survey investments were funded through a shell company with connections to the same High Ward trading families involved in the Bread Cartel commodity manipulation. Fenn is offering this as an exchange for your support of his governance model. His information may be valuable. His motivation certainly is not altruistic.",
+            "choice_a": "Take Fenn's documentation to Astrid for verification independently of the Summit",
+            "consequence_a": "Astrid confirms the shell company connection within twenty-four hours. Darrow's institutional credibility collapses when this is formally documented.",
+            "choice_b": "Decline to use private information as Summit leverage \u2014 report the approach to Kell as witness intimidation",
+            "consequence_b": "Kell is furious at Fenn's conduct. He is formally sanctioned and his governance model is disqualified on grounds of bad faith conduct during Summit proceedings."
+        },
+        {
+            "turn": 5,
+            "narrative": "With Darrow's model failed or discredited and Fenn sanctioned or outmanoeuvred, Elder Voss makes his move. His proposal is the most sophisticated of the three: a Ridge Mining Heritage Authority, jointly governed by the three Ridge-Lords in rotating chairmanship, with mandatory worker representation and Ward Council liaison. The proposal was clearly pre-prepared \u2014 Voss came to this Summit knowing what he wanted and waited for the other two to exhaust themselves.",
+            "choice_a": "Support the Heritage Authority model with modifications to ensure worker representative parity",
+            "consequence_a": "Renia stands again: 'If we receive genuine parity \u2014 not a single seat as token \u2014 yes.' The model is agreed with parity governance.",
+            "choice_b": "Raise concerns about rotating lordly chairmanship as merely redistributing control rather than genuinely sharing it",
+            "consequence_b": "Voss is surprised but listens carefully. After a thirty-minute recess, he returns with a modified model in which the chair is selected by secret ballot among all governance participants \u2014 including worker representatives."
+        },
+        {
+            "turn": 6,
+            "narrative": "The governance model is agreed in principle. The Summit breaks for the night with a working document to be finalised the next morning. During the dinner recess, you overhear a brief exchange between Darrow and an aide that stops you cold. They say a name \u2014 not clearly, not fully \u2014 but enough to suggest 'V-something' and refer to 'the timing problem at the mine.' This could be nothing. Or Darrow's shell company connection runs further than the Bread Cartel families.",
+            "choice_a": "Confront Darrow directly before the Summit reconvenes in the morning",
+            "consequence_a": "Darrow is smooth and convincingly dismissive. But he contacts someone by messenger within twenty minutes of your conversation \u2014 Astrid's surveillance team tracks the messenger to a High Ward address not in any existing file.",
+            "choice_b": "Add the overheard fragment to your OPERATION VETHAAN notes and say nothing at the Summit",
+            "consequence_b": "The fragment joins the growing archive. Darrow proceeds through the Summit's conclusion unaware you noted it."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Summit's second morning. The governance document is ready for signing. But overnight, Foreman Ness has discovered that someone attempted to access the communication station without authorisation \u2014 boot prints, a disturbed door seal, and an abandoned piece of equipment identified as a sophisticated listening device. One of the Summit participants, an adviser's aide, cannot be accounted for.",
+            "choice_a": "Halt the signing until the security breach is investigated",
+            "consequence_a": "Kell agrees. A two-hour investigation identifies the aide \u2014 employed by Darrow's organisation \u2014 as the intruder. Darrow claims ignorance.",
+            "choice_b": "Proceed with the signing but ensure the security breach is in the formal record",
+            "consequence_b": "The signing proceeds. The breach is documented. Two weeks later, the listening device is traced to a High Ward manufacturer with connections the investigators find significant."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Ridge Mining Heritage Authority is formally constituted. Voss is the first chair by ballot. Renia holds one of three worker seats. The breach investigation continues in the background. The Concordat infrastructure integration programme has its governance and begins proper execution. The Ridge community \u2014 miners, maintenance workers, the Vapour Lark Zone's residents \u2014 quietly celebrates. A district that was being stripped of resources and exploited for cheap labour is now in genuine institutional transformation.",
+            "choice_a": "Help formulate the Heritage Authority's first six-month operational plan",
+            "consequence_a": "Six priorities are set including worker safety standards, resource cache management, and the energy station restoration.",
+            "choice_b": "Step back from day-to-day governance and trust the Authority to run its own affairs",
+            "consequence_b": "The Authority operates well without continued intensive involvement. Kell provides monthly briefing summaries."
+        },
+        {
+            "turn": 9,
+            "narrative": "Dorr, the miner with the crystal trance experience, has been appointed as the Deep Survey's lead cartographer \u2014 his trance-derived architectural knowledge supplementing the technical survey teams. In his first week he identifies three additional Concordat facility locations that the technical teams had not found. He presents his findings in the Heritage Authority's first formal session with a quiet confidence that has nothing to do with his previous modest miner's identity. The crystal experience changed him \u2014 made him something new.",
+            "choice_a": "Advocate for Dorr to receive formal training support for his new cartographic role",
+            "consequence_a": "The Academic Quarter offers a six-month accelerated programme. Dorr is the first Ridge miner to receive academic credentials.",
+            "choice_b": "Simply ensure Dorr's contribution is properly credited in the Heritage Authority's records",
+            "consequence_b": "Dorr's contributions are formally credited. He asks for nothing more and seems entirely at peace."
+        },
+        {
+            "turn": 10,
+            "narrative": "A problem from the CONTAINMENT decision surfaces \u2014 if you opened the chamber, the entity's presence becomes harder to keep from public knowledge as more people cycle through the station. If you sealed it, Voss privately reveals that his family records include a Pre-Scourge Concordat notation about 'the preserved witnesses' \u2014 entities sealed in crystal suspension beneath the Ridge as insurance against the Scourge consuming all institutional memory. Either version converges on the same truth: the CONTAINMENT chamber holds a Concordat institutional memory keeper, sealed for over a century. [SIGNIFICANT TURNING POINT \u2014 how this information is managed shapes the city's relationship with the Pre-Scourge past]",
+            "choice_a": "Bring the full truth about the preserved entity to the Heritage Authority and Ward Council",
+            "consequence_a": "Extraordinary institutional meetings follow across three weeks. The entity is carefully awakened using Senna's guidance. It is \u2014 as Voss's records suggested \u2014 a Concordat Knowledge Keeper, designed specifically to survive catastrophic events and provide institutional continuity.",
+            "choice_b": "Keep the preserved entity's nature restricted to a small inner circle until there is a clear plan for managing the implications",
+            "consequence_b": "A five-person inner circle is formed. Planning begins for a carefully managed disclosure."
+        },
+        {
+            "turn": 11,
+            "narrative": "Whether the entity is publicly disclosed or managed in a small circle, its significance is undeniable: a living bridge to Pre-Scourge institutional memory in the same category as Senna \u2014 but designed for the purpose, complete, and carrying records that Senna's personal memory cannot match. The Concordat did not die. It waited. The Heritage Authority's first major challenge is now its most significant: integrating Pre-Scourge institutional memory with a century of Scourge-era experience. Voss says quietly: 'We were always going to need to reckon with this eventually.'",
+            "choice_a": "Facilitate a formal integration protocol \u2014 the Knowledge Keeper's records assessed systematically against current Ward knowledge",
+            "consequence_a": "A five-year integration programme is designed. The Knowledge Keeper agrees to participate. The programme begins immediately.",
+            "choice_b": "Recommend that integration happen slowly and organically rather than institutionally \u2014 the Knowledge Keeper is a person, not a database",
+            "consequence_b": "The Knowledge Keeper is granted full citizen status and allowed to engage on their own terms. Deep institutional learning happens at a human pace."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Ridge is unrecognisable from the district that existed three months ago. Underground infrastructure is being mapped and integrated. Worker governance is real and functional. A Pre-Scourge entity with institutional memory is cooperating with the Heritage Authority's knowledge integration programme. Dorr drafts city maps in the communication station's amber light. Renia chairs a worker safety working group that is rewriting Ridge employment standards. Kell stands in the station's operations centre looking at the deep-layer display and says: 'We thought we were mining the past. It turns out we were building the future.' The Ridge thread is alive in ways it has never been.",
+            "choice_a": "Accept formal Ward recognition for your role in the Discovery and Summit",
+            "consequence_a": "A Ward commendation is issued. The Ridge's transformation is publicly credited to a collaborative effort with your name foremost.",
+            "choice_b": "Decline formal recognition \u2014 point to Renia, Dorr, Voss, and Kell as the Summit's real architects",
+            "consequence_b": "Recognition goes to the community. It is entirely appropriate. You remain available for the next problem."
+        }
+    ],
+    "branching_outcomes": {
+        "heritage_authority_public": {
+            "description": "Heritage Authority constituted. Knowledge Keeper publicly integrated. Ridge in institutional transformation.",
+            "unlocks": [
+                "EH_SQ_522"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 50,
+                    "Academic Quarter": 20
+                },
+                "item_reward": "Heritage Authority Charter"
+            }
+        },
+        "heritage_authority_inner_circle": {
+            "description": "Heritage Authority constituted. Knowledge Keeper managed by inner circle initially. Framework building.",
+            "unlocks": [
+                "EH_SQ_522"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 38
+                },
+                "item_reward": "Knowledge Keeper Contact Protocol"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 200,
+            "reputation_change": {
+                "Ridge": -30
+            }
+        },
+        "critical_failure": "Darrow's model passes. The infrastructure programme is privately captured."
+    },
+    "loot_table": [
+        "Heritage Authority Charter",
+        "Knowledge Keeper Contact Protocol",
+        "Summit Governance Agreement",
+        "Deep Mining Commendation",
+        "940x Gold Coins"
+    ],
+    "conclusion": "Heritage Authority constituted. Knowledge Keeper publicly integrated. Ridge in institutional transformation."
+}

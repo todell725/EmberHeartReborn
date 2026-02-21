@@ -1,0 +1,165 @@
+{
+    "id": "EH_SQ_511",
+    "title": "The Purple-Eyed",
+    "difficulty": "Medium",
+    "xp_reward": 980,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_510"
+        ],
+        "items_required": []
+    },
+    "location": "Temple District -> Undercity Fringe -> Lower Ward",
+    "district": "Temple District",
+    "thread": "Void-Wine",
+    "description": "An unusual phenomenon has appeared in the Temple District: a small but growing congregation gathers at dawn at the Shrine of St. Ova \u2014 all with eyes that have turned permanently violet, a known sign of chronic Void-Wine saturation. They do not appear distressed. They appear reverent. Their leader, a soft-spoken figure in grey robes called the Violet Shepherd, teaches that Void-Wine is not an addiction but a sacrament \u2014 a gift from the Void that allows humans to perceive a reality beyond physical suffering. Temple Authority Warden Gais wants the congregation understood before deciding how to respond. Brother Avel, Shrine keeper, is in over his head.",
+    "key_npcs": [
+        "Warden Gais",
+        "Brother Avel",
+        "The Violet Shepherd",
+        "Congregation Members",
+        "Alchemist Rynn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The dawn congregation numbers about thirty people. Their violet eyes catch the morning light with extraordinary clarity \u2014 almost beautiful in an unsettling way. They move quietly and deliberately, displaying none of the distress or disorientation associated with Void-Wine addiction. The Violet Shepherd stands at the centre reading from what appears to be a self-produced text. When the reading ends, they distribute small measures of Void-Wine from a clay vessel in a ritual that mirrors the Concordat sacrament ceremony almost exactly. Brother Avel watches from his doorway looking deeply uncomfortable.",
+            "choice_a": "Approach the congregation openly and request to observe and ask questions",
+            "consequence_a": "The Shepherd welcomes you graciously. The congregation is mixed: some are clearly long-term Void-Wine users whose eyes have permanently changed; others are newer recruits with normal eyes who have just begun the 'sacrament.' All are polite, articulate, and genuinely at peace.",
+            "choice_b": "Observe from a distance and identify any members you recognise from previous investigations",
+            "consequence_b": "At least three members were referenced in Celle's dependency files from the Grief Merchants case \u2014 treated grief-related Void-Wine users who apparently found their way from recovery to congregation."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Violet Shepherd agrees to meet privately. They are a former Academic Quarter physician named Cord who experienced a profound Void vision during a severe grief episode twelve years ago. They believe the vision was real \u2014 a genuine perception of a post-death continuity \u2014 and have built a theology around the controlled use of Void-Wine to facilitate similar visions in others. They have developed a dosing protocol that maximises the visionary experience while preventing acute addiction crises. Their congregation has twenty chronically-saturated members and ten 'sacrament trainees.' Cord is intelligent, sincere, and from a medical standpoint, aware of exactly what they are doing.",
+            "choice_a": "Engage the Shepherd philosophically \u2014 understand the theology before assessing the safety",
+            "consequence_a": "The Shepherd's theology is sophisticated. The Void is described not as dangerous but as the understructure of reality that the Scourge briefly exposed \u2014 and which Void-Wine allows partial access to. This matches Academic Quarter theoretical frameworks in ways that are not coincidental.",
+            "choice_b": "Focus on the medical risk \u2014 ask Cord directly what happens to congregation members whose vision experience becomes dependency rather than practice",
+            "consequence_b": "Cord acknowledges this directly: seven previous trainees crossed i nto dependency and were released from the congregation and referred to Medical Quarter care. They appear to have a triage process."
+        },
+        {
+            "turn": 3,
+            "narrative": "Alchemist Rynn, when you consult her, is fascinated. The Shepherd's dosing protocol is the most sophisticated she has encountered \u2014 and the theological framework around it may actually be reducing harm compared to street use by providing context and support. But the twenty chronically-saturated members concern her: their violet eyes indicate irreversible neurological changes. Rynn doesn't know if this causes harm beyond the visual change \u2014 and neither does anyone else because no one has studied long-term controlled Void-Wine saturation in a supportive community context.",
+            "choice_a": "Recommend Rynn and the Shepherd collaborate on a proper study of the congregation's health outcomes",
+            "consequence_a": "The Shepherd agrees immediately. They have always wanted external scientific validation. Rynn begins baseline assessments within a week.",
+            "choice_b": "Recommend Warden Gais classify the congregation as a low-risk monitored group pending further data",
+            "consequence_b": "Gais issues a monitored status \u2014 not suppression, not endorsement. The congregation continues while oversight begins."
+        },
+        {
+            "turn": 4,
+            "narrative": "Two problems emerge simultaneously. First: three new 'trainees' appear at the congregation with no apparent grief history \u2014 they are young, healthy, and have been recruited via an underground pamphlet that describes the 'sacrament experience' primarily as a consciousness-expanding pleasure rather than a grief management tool. Someone is using the congregation's legitimacy to attract recreational users. Second: a Concordat remnant elder has identified the congregation's ritual as a direct theological appropriation of Pre-Scourge Concordat sacramental practice \u2014 and is preparing a formal protest.",
+            "choice_a": "Address the recreational recruitment problem first \u2014 it undermines everything the Shepherd has built",
+            "consequence_a": "The pamphlet's source is a fringe member who broke from the congregation's grief-only admission policy. Cord expels him immediately and issues an explicit counter-statement.",
+            "choice_b": "Address the Concordat elder first \u2014 their theological objection, if it gains traction, could trigger formal Temple Authority suppression of the congregation",
+            "consequence_b": "Elder Noss's objection is specific: the clay vessel used in the ritual is an exact replica of a Concordat sacramental vessel. Cord admits they modelled the ritual on Concordat sources. Noss is disarmed by the acknowledgement."
+        },
+        {
+            "turn": 5,
+            "narrative": "Both problems handled, the congregation's existence becomes a genuine Ward policy question. Warden Gais must formally rule on whether the Purple-Eyed congregation can continue operating. She has the medical risk data, the Shepherd's cooperation record, the theological objection response, and your investigation report. She asks for your recommendation directly.",
+            "choice_a": "Recommend continued monitored legal operation with strict admission requirements and Medical Quarter oversight",
+            "consequence_a": "Gais adopts this recommendation. The congregation is registered as a therapeutic-spiritual community under Medical Quarter oversight.",
+            "choice_b": "Recommend dissolution of the sacramental element while permitting the grief support community to continue",
+            "consequence_b": "This is the harder needle to thread. Cord accepts it reluctantly. The grief circles continue without Void-Wine. Several members leave; several stay."
+        },
+        {
+            "turn": 6,
+            "narrative": "Rynn's baseline assessments of the twenty chronically-saturated members yield unexpected findings: all twenty have elevated neurological activity in areas associated with spatial reasoning and pattern recognition. Their violet eyes are not merely cosmetic \u2014 they can perceive wavelengths of light slightly beyond normal human range. This appears to be an evolutionary response to Void saturation rather than degradation. The Academic Quarter researcher who receives Rynn's preliminary data requests immediate access to the congregation for further study and \u2014 without authorisation \u2014 contacts congregation members directly.",
+            "choice_a": "Intervene to protect the congregation from unsolicited Academic Quarter approaches",
+            "consequence_a": "The Academic Quarter is formally notified that all research contact must go through Rynn and Cord jointly. The researcher is reprimanded.",
+            "choice_b": "Use the Academic Quarter's interest to legitimise the congregation further \u2014 visibility helps protection",
+            "consequence_b": "Rynn negotiates a formal research partnership that grants the congregation Academic Quarter affiliated status \u2014 significant legal protection."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Violet Shepherd's congregation is, somewhat improbably, stabilising into a legitimate community institution. But a shadow falls: one of the seven previous trainees who were released after crossing into dependency \u2014 a man named Ferris \u2014 has disappeared. He was receiving Medical Quarter care and was improving. His counsellor reports he had become convinced that his dependency was not an illness but a sign that he was 'closer to the Void' than the congregation acknowledged. He may have gone seeking a deeper exposure somewhere in the Undercity.",
+            "choice_a": "Search the Undercity Fringe for Ferris personally \u2014 this could be dangerous if he has found a Void-proximate location",
+            "consequence_a": "Ferris is found in an Undercity pocket that has elevated Void-energy readings. He has been consuming raw, unprocessed Void-Wine \u2014 far beyond any safe level. He is alive but deeply disoriented.",
+            "choice_b": "Coordinate a Fringe search team and focus on processing the investigation's remaining policy work while others search",
+            "consequence_b": "A team finds Ferris after twelve hours. He is alive but medical intervention is needed immediately."
+        },
+        {
+            "turn": 8,
+            "narrative": "Ferris is recovered and hospitalised. His case becomes pivotal: he is the proof that the congregation's triage process is imperfect \u2014 someone slipped through who needed more intensive support than they received. Cord is shaken. The Shepherd visits Ferris daily. The Medical Quarter designs a more intensive re-intake protocol for congregation releases. But politically, Ferris's story is being used by Concordat elders and Temple conservatives to argue that the congregation should be dissolved entirely.",
+            "choice_a": "Shield Cord and the congregation from the political backlash by presenting the Medical Quarter's response as proof the system works",
+            "consequence_a": "Director Sela appears before Warden Gais to confirm that Ferris's case has driven meaningful protocol improvements. The criticism is blunted.",
+            "choice_b": "Acknowledge the failure honestly in public \u2014 trust built through transparency will be stronger than defensive positioning",
+            "consequence_b": "Cord appears with Gais and makes a public statement acknowledging the failure and describing specific changes. The congregation loses some members but gains significant public respect."
+        },
+        {
+            "turn": 9,
+            "narrative": "Ferris recovers. His case, processed with honesty or shielded with competence, leads to a genuinely better system. The congregation is now operating with Medical Quarter oversight, academic research partnership, controlled admission, and improved triage. The Violet Shepherd is scheduled to give a public address to the Temple District community \u2014 the first time they have stepped fully out of the congregation's private world. Before they speak, they pull you aside and say: 'There is something I should have told you from the beginning. The vision I received twelve years ago \u2014 it had a face in it. I drew what I could remember. I have never shown it to anyone.' They hand you a worn sketch.",
+            "choice_a": "Look at the sketch carefully",
+            "consequence_a": "The face in the sketch is indistinct but for one detail: a specific pattern of light around the eyes that Alchemist Rynn identifies, when you show her, as the visual signature of someone in deep Void-Wine saturation \u2014 but the sketch predates any known Void-Wine use by the Shepherd. The vision showed them someone who was already deep in the Void. The face has no name.",
+            "choice_b": "Accept the sketch without looking and bring it to Rynn and Astrid directly",
+            "consequence_b": "Rynn and Astrid study it together. The visual signature in the eyes matches recorded descriptions of Void visions from Celle's research files. The face may be a Void-echo \u2014 a real person visible through the Void layer."
+        },
+        {
+            "turn": 10,
+            "narrative": "The sketch connects the Violet Shepherd's founding vision to Celle's Void-research data and potentially to the Void-echo phenomenon documented in the students' shared vision from EH_SQ_414. Multiple Void-users from different contexts have perceived something consistent in the Void layer. A pattern is forming that none of the individual investigations revealed alone. Warden Gais requests an urgent joint briefing with the Medical Quarter, the Academic Quarter, and the Temple Authority to assess what the combined data suggests. [PIVOTAL BRIEFING \u2014 how you present the combined data shapes the institutional response]",
+            "choice_a": "Present the combined data as evidence of a cognitive-Void phenomenon that requires serious structured scientific investigation",
+            "consequence_a": "A multi-institutional Void Perception Research Committee is formed. The Shepherd is invited to participate as a primary data source.",
+            "choice_b": "Present it cautiously \u2014 highlight the pattern's existence without overstating its significance, prioritising safety over discovery",
+            "consequence_b": "A smaller, more cautious investigation is authorised. The Shepherd's sketch is classified. Progress slower but institutional risk is lower."
+        },
+        {
+            "turn": 11,
+            "narrative": "The Violet Shepherd gives their public address to the Temple District. It is not a sermon. It is a testimony \u2014 a careful, medically-informed account of their journey, the congregation's purpose, what went wrong with Ferris, what has been changed, and what they believe they are learning about the Void. Several Temple district residents weep. Three Concordat elders walk out. Brother Avel, who initially asked for help with a situation he couldn't understand, now watches from the shrine steps with what appears to be something close to respect. Cord speaks for ninety minutes and takes questions for another hour.",
+            "choice_a": "Step forward at the end to publicly acknowledge your role in supporting the congregation's development",
+            "consequence_a": "The public acknowledgement connects your name to the congregation's legitimisation. This has both protective and targeting implications.",
+            "choice_b": "Remain in the background \u2014 let this be entirely Cord's moment and the congregation's",
+            "consequence_b": "Cord receives the full credit. The congregation's identity is stronger for not depending on an outside figure."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Purple-Eyed congregation is now a Ward institution \u2014 imperfect, monitored, remarkable. Thirty-two people with violet eyes attend it. Seven more are in Medical Quarter care on improved protocols designed partly by Aldren's clinical data. Rynn's research is expanding. The sketch sits in the Void Perception Research Committee's files. The face with the saturated eyes waits in the Void, seen by multiple people across multiple events, unidentified and patient. You have not solved that thread. You have made it visible.",
+            "choice_a": "Formally accept a seat on the Void Perception Research Committee",
+            "consequence_a": "Your seat on the Committee will give you advance access to findings as the research develops.",
+            "choice_b": "Remain an external adviser rather than a formal member",
+            "consequence_b": "Flexibility is maintained. You can work across investigations without being bound to the Committee's formal processes."
+        }
+    ],
+    "branching_outcomes": {
+        "congregation_legalised": {
+            "description": "Congregation registered under Medical Quarter oversight. Academic research partnership formed. Void Perception Committee formed.",
+            "unlocks": [
+                "EH_SQ_512"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 30,
+                    "Lower Ward": 15
+                },
+                "item_reward": "The Shepherd's Vision Sketch"
+            }
+        },
+        "congregation_reformed": {
+            "description": "Congregation continues without Void sacrament. Grief circles operational. Research ongoing.",
+            "unlocks": [
+                "EH_SQ_512"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 22
+                },
+                "item_reward": "Rynn's Void Saturation Baseline Report"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 200,
+            "reputation_change": {
+                "Temple District": -20
+            }
+        },
+        "critical_failure": "Ferris dies in the Undercity. The congregation is dissolved by force. The sketch is never found."
+    },
+    "loot_table": [
+        "The Shepherd's Vision Sketch",
+        "Rynn's Void Saturation Baseline Report",
+        "Congregation Medical Protocol",
+        "Void Perception Research Charter",
+        "980x Gold Coins"
+    ],
+    "conclusion": "Congregation registered under Medical Quarter oversight. Academic research partnership formed. Void Perception Committee formed."
+}

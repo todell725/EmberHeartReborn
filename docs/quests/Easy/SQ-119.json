@@ -1,0 +1,150 @@
+{
+    "id": "SQ-119",
+    "title": "The Copper-Wire Tangle",
+    "difficulty": "Easy",
+    "xp_reward": 170,
+    "prerequisites": "None",
+    "description": "A metallic nest in the scrapyard is generating a dangerous static field...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The city scrapyard is vibrating. A mass of discarded 'Copper-Wire' has braided itself into a giant, metallic nest.",
+            "choice_a": "Poke the nest",
+            "consequence_a": "Success.",
+            "choice_b": "Scan the vibration",
+            "consequence_b": "Success.",
+            "convergence": "The nest hums with a frequency that makes your skin tingle with static electricity. It smells of hot metal and grease."
+        },
+        {
+            "turn": 2,
+            "narrative": "A 'Wire-Serpent'\u2014a ten-foot snake made of braided copper and brass\u2014slithers out of the nest, its tongue a literal spark of mana.",
+            "choice_a": "Dodge the strike",
+            "consequence_a": "Success.",
+            "choice_b": "Ground the serpent with an iron rod",
+            "consequence_b": "Success.",
+            "convergence": "The serpent's strike hits the iron rod, sending a surge of blue light into the ground. It chitters like a broken radio."
+        },
+        {
+            "turn": 3,
+            "narrative": "The serpent is trying to protect a 'Power-Core' at the center of the nest\u2014a device that was meant to power the 'Bio-Ward' before the Scourge.",
+            "choice_a": "Reach for the core",
+            "consequence_a": "Success.",
+            "choice_b": "Distract the serpent with a battery",
+            "consequence_b": "Success.",
+            "convergence": "The serpent eats the battery and glows bright orange, its movements becoming twice as fast."
+        },
+        {
+            "turn": 4,
+            "narrative": "The scrapyard floor is becoming magnetized. Metal scraps are flying toward the nest, creating an 'Iron-Armor' for the serpent.",
+            "choice_a": "Use a 'Degauss-Pulse'",
+            "consequence_a": "Success.",
+            "choice_b": "Anchor yourself with heavy boots",
+            "consequence_b": "Success.",
+            "convergence": "The iron scraps fall, but the serpent now has a 'Magnetic-Bite' that can pull the weapon from your hand."
+        },
+        {
+            "turn": 5,
+            "narrative": "The 'Junk-King'\u2014a man wearing a crown of gears\u2014emerges from the shadows. 'She\u2019s just trying to stay warm!' he shouts.",
+            "choice_a": "Negotiate for the core",
+            "consequence_a": "Success.",
+            "choice_b": "Subdue the King",
+            "consequence_b": "Success.",
+            "convergence": "He reveals the serpent is a 'Construct-Mother' for all the tiny machines in the city."
+        },
+        {
+            "turn": 6,
+            "narrative": "You must find a way to 'Pacify' the mother-vibration. The air is thick with the smell of scorched air and old gasoline.",
+            "choice_a": "Play a 'Soothe-Frequence'",
+            "consequence_a": "Success.",
+            "choice_b": "Apply 'Liquid-Insulator'",
+            "consequence_b": "Success.",
+            "convergence": "The serpent's glow fades to a soft, steady copper-light. The nest begins to unbraid itself."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Junk-King gives you a 'Copper-Tooth'\u2014a charm that allows you to talk to 'Simple-Machines'.",
+            "choice_a": "Accept the tooth",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Power-Core",
+            "consequence_b": "Success.",
+            "convergence": "The tooth is warm and tastes faintly of copper in your mouth. It allows you to unlock 'Basic-Tool' secrets."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Scrapyard is quiet, the static finally gone. The King promises to keep the serpent 'safe' in a lead-lined bunker.",
+            "choice_a": "Secure the bunker",
+            "consequence_a": "Success.",
+            "choice_b": "Take the gold",
+            "consequence_b": "Success.",
+            "convergence": "The sun sets over the junk-heaps, making them look like a city of jagged gold and rust."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, a small gear-bug follows you for a few steps before clicking its legs and scurrying back to the King.",
+            "choice_a": "Wave goodbye",
+            "consequence_a": "Success.",
+            "choice_b": "Log it in your journal",
+            "consequence_b": "Success.",
+            "convergence": "The air feels remarkably clear. Your hair is no longer standing on end."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Scrapyard. The 'Copper-Wire Tangle' is now a 'Copper-Wire Friend'.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Done",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Copper-Wire Tangle' is complete. Quest Complete.",
+    "loot_table": [
+        "Copper-Tooth",
+        "20 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are electrocuted into a pile of scrap. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Scrapyard workers report static shocks and flying metal",
+        "flags": []
+    },
+    "location": "City Scrapyard \u2014 East Industrial",
+    "district": "Industrial Quarter",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Junk-King Ferron",
+        "Wire-Serpent / Construct-Mother (creature)"
+    ],
+    "mechanics_featured": [
+        "Tech (pacification)",
+        "Combat (serpent + iron armor)",
+        "Social (negotiation)",
+        "Grounding mechanics"
+    ],
+    "permanent_effects": {
+        "settlement": "Scrapyard safe; Power-Core potentially reclaimed for Bio-Ward",
+        "world": "Wire-Serpent in lead-lined bunker (future hook)"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Copper-Tooth",
+            "result": "Machine-speech utility unlocked"
+        },
+        {
+            "path": "Take Power-Core",
+            "result": "High-value tech component for crafting"
+        }
+    ]
+}

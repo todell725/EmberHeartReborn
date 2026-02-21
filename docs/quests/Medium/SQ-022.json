@@ -1,0 +1,154 @@
+{
+    "id": "SQ-022",
+    "title": "The Gilded Suture",
+    "xp_reward": 800,
+    "prerequisites": "None",
+    "description": "A 'Rift-Doctor' is performing surgeries using 'Gilded-Suture'\u2014a thread that heals the body but stitches the soul to the machine.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Doctor's clinic is a place of white porcelain and gold-plated surgical tools. The patients are calm, their eyes fixed and glazed. A young girl is on the table, a golden thread being woven into her chest like a tapestry.",
+            "choice_a": "Stop the surgery (Str DC 13)",
+            "consequence_a": "Success: You grab the Doctor's hand, feeling the hum of his gold-plated fingers. (+1 Progress)",
+            "choice_b": "Examine the Gilded-Suture (Alchemist DC 14)",
+            "consequence_b": "Success: It's made of 'Soul-Lead' and 'Warp-Gold'. (+1 Lore)",
+            "convergence": "The Doctor looks at you with a face half-replaced by a golden mask. 'Beauty... requires a stitch,' he whispers."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Doctor's 'Nurse-Golems'\u2014humanoid constructs of ivory and brass\u2014step forward, their hands transitioning into needles.",
+            "choice_a": "Disarm the Golems (Dex DC 14)",
+            "consequence_a": "Success: You deflect the needles with your blade. (+1 Progress)",
+            "choice_b": "Reason with the Doctor's logic (Char DC 14)",
+            "consequence_b": "Success: He explains he's 'Stabilizing the Species'. (+1 Lore)",
+            "convergence": "The Gilded-Suture on the table begins to move on its own, like a Golden-Adder."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Suture-Adder is trying to find a port on your body. It smells of vanilla and hot copper, its movement a fluid, hypnotic dance.",
+            "choice_a": "Capture the Suture (Dex DC 14)",
+            "consequence_a": "Success: You coil the thread around a spool. (+1 Loot)",
+            "choice_b": "Freeze the thread with a 'Frost-Vial'",
+            "consequence_b": "Success: The gold becomes brittle and snaps. (+1 Progress)",
+            "convergence": "The clinic's floor opens, revealing a pit of 'Suture-Cores'\u2014living hearts encased in golden cages."
+        },
+        {
+            "turn": 4,
+            "narrative": "The hearts are beating in perfect unison. They are the 'Network' that powers the clinic. Every patient is connected to these hearts.",
+            "choice_a": "Disrupt the Network (Tech DC 15)",
+            "consequence_a": "Success: You cause a feedback loop that stuns the Doctor. (+1 Progress)",
+            "choice_b": "Free a heart (Str DC 14)",
+            "consequence_b": "Success: A patient wakes up, their eyes returning to normal. (+1 Progress)",
+            "convergence": "The Doctor screams, his golden mask beginning to merge with his skin."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Doctor is becoming a 'Gilded-Lich'\u2014a mass of golden stitches and raw, bleeding flesh. He lunges, his fingers now six inches of solid gold wire.",
+            "choice_a": "Slash the Lich (Atk DC 15)",
+            "consequence_a": "Success: You cut through the gold, but he heals instantly. (+1 Progress)",
+            "choice_b": "Target the gold-seams in his mask (Dex DC 15)",
+            "consequence_b": "Success: You find the 'Master-Stitch' that holds him together. (+1 Progress)",
+            "convergence": "The clinic's alarms sound\u2014the 'Sanitization Protocol' has been activated."
+        },
+        {
+            "turn": 6,
+            "narrative": "A 'Steam-Purge' is filling the room. The Gilded-Lich is trying to escape through a hidden elevator.",
+            "choice_a": "Wrestle him into the steam (Str DC 15)",
+            "consequence_a": "Success: The gold begins to melt, his form losing its structure. (+1 Progress)",
+            "choice_b": "Shoot the elevator's cables",
+            "consequence_b": "Success: He falls into the 'Suture-Pit' below. (+100 XP)",
+            "convergence": "The Doctor is gone, replaced by a puddle of molten gold and a single 'Gilded-Needle'."
+        },
+        {
+            "turn": 7,
+            "narrative": "The patients are wandering the clinic, confused and partially mechanical. Their stitches are now dim and gray.",
+            "choice_a": "Heal the patients (Medic DC 15)",
+            "consequence_a": "Success: You safely remove the sutures. (+5 Morale)",
+            "choice_b": "Collect the gray gold",
+            "consequence_b": "Success: You gain 'Lead-Gold-Scrap' (Value: 400g). (+1 Loot)",
+            "convergence": "The Council's 'Identity-Audit' team arrives to categorize the victims."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Audit team wants to 'Classify' the patients as 'Non-Human Assets'.",
+            "choice_a": "Argue for their humanity (Charisma DC 15)",
+            "consequence_a": "Success: They are granted 'Citizen-Status'. (+10 Reputation)",
+            "choice_b": "Demand a reward for the Doctor's head",
+            "consequence_b": "Success: They give you a 'Doctor's Bag' of surgical tools. (+1 Gear)",
+            "convergence": "The clinic is sealed with lead plates."
+        },
+        {
+            "turn": 9,
+            "narrative": "You find a 'Gilded-Suture-Scroll'\u2014the secrets of the Doctor's art.",
+            "choice_a": "Keep the scroll",
+            "consequence_a": "Success: You have the power to 'Fix' anyone. (+1 Secret)",
+            "choice_b": "Burn the scroll",
+            "consequence_b": "Success: You ensure this horror never returns. (+1 Morale)",
+            "convergence": "The sun rises over the clinic's golden dome, which is now being dismantled for scrap."
+        },
+        {
+            "turn": 10,
+            "narrative": "You look at your own hands. For a second, you think you see a golden thread under your skin. It's just a reflection of the sun.",
+            "choice_a": "Wash your hands in holy-water",
+            "consequence_a": "Success: You feel clean. (+1 Luck)",
+            "choice_b": "Go buy a drink",
+            "consequence_b": "Success: You forget the smell of the vanilla. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Gilded Suture was a plan to stitch the city into a single, golden network. The Doctor is gone, but the 'Master-Needle' is still sharp.",
+    "loot_table": [
+        "Gilded-Needle",
+        "Doctor's Bag",
+        "Lead-Gold-Scrap",
+        "800 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Clinic spreads. -5 Reputation and 10% of the population becomes 'Lobed' (Submissive).",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 5,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Clinic patients reported acting glazed and compliant",
+        "flags": [
+            "clinic_reports"
+        ]
+    },
+    "location": "The Rift-Doctor's Clinic \u2014 Medical Quarter",
+    "district": "Medical Quarter",
+    "thread": "Political Intrigue",
+    "estimated_duration": "3\u20135 hours",
+    "key_npcs": [
+        "The Rift-Doctor (antagonist)",
+        "Council Identity-Audit Team"
+    ],
+    "mechanics_featured": [
+        "Dex (needle dodging)",
+        "Strength (Lich fight)",
+        "Tech (network disruption)",
+        "Social (patient rights)"
+    ],
+    "permanent_effects": {
+        "settlement": "Clinic sealed; patients granted citizen status (if advocated)",
+        "world": "Gilded-Needle remains as unsolved plot hook"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Argue for patients' humanity",
+            "result": "+10 Reputation, citizenship granted"
+        },
+        {
+            "path": "Burn scroll",
+            "result": "+1 Morale, technique lost forever"
+        }
+    ]
+}

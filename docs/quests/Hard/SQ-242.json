@@ -1,0 +1,71 @@
+{
+    "id": "SQ-242",
+    "title": "Toxic Mapping",
+    "difficulty": "Hard",
+    "xp_reward": 700,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-241"
+        ]
+    },
+    "location": "Expedition -> The Acid Flats",
+    "district": "Expedition",
+    "thread": "Expedition (Beyond City)",
+    "description": "Armed with Linus's maps, you push further into the wastes toward the Scourge-Heart crater. You must cross the Acid Flats to reach the crater's edge.",
+    "key_npcs": [
+        "Giant Acid-Snails"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Flats are totally devoid of cover. Geysers of pure acid spray randomly.",
+            "choice_a": "Watch the geyser patterns to time your crossing (Intelligence)",
+            "consequence_a": "You master the timing, crossing perfectly dry.",
+            "choice_b": "Rely on your armor and sprint (Endurance)",
+            "consequence_b": "Your armor takes significant corrosion damage, burning your skin beneath."
+        },
+        {
+            "turn": 2,
+            "narrative": "A massive, twenty-foot Acid-Snail blocks the main pass. Its slime trail is impassable.",
+            "choice_a": "Attack the snail's delicate eyestalks with arrows",
+            "consequence_a": "The snail screams and retreats into its shell, letting you pass safely.",
+            "choice_b": "Throw a salt-bomb (if you have one) or massive fire magic",
+            "consequence_b": "The snail literally melts into a puddle of goo. You can pass, and harvest its rare shell."
+        }
+    ],
+    "branching_outcomes": {
+        "snail_bypassed": {
+            "description": "You crossed the flats and bypassed the beast.",
+            "unlocks": [
+                "SQ-243"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Expedition": 10
+                }
+            }
+        },
+        "snail_killed": {
+            "description": "You killed the giant snail and crossed the flats.",
+            "unlocks": [
+                "SQ-243"
+            ],
+            "consequences": {
+                "item_reward": "Acid-Snail Shell"
+            }
+        }
+    },
+    "loot_table": [
+        "Corrosive Slime",
+        "Acid-Snail Shell",
+        "200x Gold Coins"
+    ],
+    "conclusion": "You crossed the flats and bypassed the beast.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

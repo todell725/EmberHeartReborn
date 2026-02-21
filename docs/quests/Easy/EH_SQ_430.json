@@ -1,0 +1,81 @@
+{
+    "id": "EH_SQ_430",
+    "title": "The Sermon in the Wall",
+    "difficulty": "Easy",
+    "xp_reward": 410,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Temple District -> The Old Concordat Wall",
+    "district": "Temple District",
+    "thread": "Concordat",
+    "description": "Citizens have been reporting Concordat sermons and scripture appearing painted on Lower Ward walls overnight \u2014 identical text on different streets simultaneously, suggesting organised action. The Temple Authority wants the source identified before the situation becomes political.",
+    "key_npcs": [
+        "Temple Authority Warden Gais",
+        "Painted Wall Witnesses"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The painted text is precise, densely theological, and non-threatening in content \u2014 extracts from Pre-Scourge Concordat liturgy about renewal and suffering. But appearing overnight across five separate streets implies coordination, resources, and access.",
+            "choice_a": "Check each wall for fingerprints or physical evidence in the paint",
+            "consequence_a": "All walls used the same shade of deep blue paint \u2014 a specific alchemical blend that under magnification contains a mineral tracer unique to Concordat ceremonial suppliers.",
+            "choice_b": "Speak to residents who live closest to each wall about who they saw that night",
+            "consequence_b": "A resident on the third street saw three hooded figures working quickly and quietly. They moved 'like they knew exactly where they were going.'"
+        },
+        {
+            "turn": 2,
+            "narrative": "The paint traces back to a retired Concordat ceremonial supplier named Elm who now runs a small shop in the Temple District. Elm is elderly and emotional when approached \u2014 she was part of a small group of surviving Concordat faithful who believe the faith needs to be publicly visible again.",
+            "choice_a": "Treat this as a harmless act of religious expression and close the case",
+            "consequence_a": "Warden Gais is irritated but accepts. Elm's group are warned but not arrested.",
+            "choice_b": "Formally document the group's membership for the Temple Authority",
+            "consequence_b": "Warden Gais has the group registered as a recognised minority faith group \u2014 granting them limited legal protection."
+        },
+        {
+            "turn": 3,
+            "narrative": "The walls remain painted. Warden Gais wants them erased or left as a deliberate statement.",
+            "choice_a": "Recommend leaving the walls as an act of faith tolerance",
+            "consequence_a": "Gais agrees grudgingly. The walls become something of a local landmark.",
+            "choice_b": "Help Elm's group repaint the walls as a proper mural with official permission",
+            "consequence_b": "A formal mural agreement is reached. The scripture is presented with civic pride rather than secrecy."
+        }
+    ],
+    "branching_outcomes": {
+        "walls_as_landmark": {
+            "description": "Painted walls left as faith landmark.",
+            "unlocks": [
+                "EH_SQ_431"
+            ],
+            "consequences": {
+                "item_reward": "Concordat Scripture Rubbing",
+                "reputation_change": {
+                    "Temple District": 12
+                }
+            }
+        },
+        "official_mural": {
+            "description": "Walls repainted as approved civic mural.",
+            "unlocks": [
+                "EH_SQ_431"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Concordat Scripture Rubbing",
+        "Pre-Scourge Liturgy Fragment",
+        "150x Gold Coins"
+    ],
+    "conclusion": "Painted walls left as faith landmark."
+}

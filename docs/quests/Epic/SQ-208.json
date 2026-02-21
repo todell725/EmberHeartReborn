@@ -1,0 +1,71 @@
+{
+    "id": "SQ-208",
+    "title": "The Hollow Council",
+    "difficulty": "Epic",
+    "xp_reward": 1500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-207"
+        ]
+    },
+    "location": "High Ward -> The Zenith Spire",
+    "district": "High Ward",
+    "thread": "Political Intrigue",
+    "description": "The Warden Council convenes an emergency session at the Zenith Spire. You must present your findings, but a trap is waiting.",
+    "key_npcs": [
+        "The Warden-General (Traitor)",
+        "Remaining Councilors"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "As you present your evidence to the Council, the doors lock. The Warden-General stands up, drawing his blade. He was the true orchestrator of the Silken Hand.",
+            "choice_a": "Call for the royal guards to arrest him",
+            "consequence_a": "Half the guards draw weapons on you; they belong to him. A massive melee begins.",
+            "choice_b": "Duel the Warden-General single-handedly",
+            "consequence_b": "You challenge him to a duel of honor. His guards stand down temporarily."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Warden-General is a master swordsman equipped with pre-Scourge kinetic armor.",
+            "choice_a": "Use brute force (Combat)",
+            "consequence_a": "An exhausting fight. You shatter his armor through sheer attrition and strike him down.",
+            "choice_b": "Use environmental hazards (The Spire's glass windows)",
+            "consequence_b": "You shatter the window behind him, using the vacuum of the high altitude winds to drag him out to his death."
+        }
+    ],
+    "branching_outcomes": {
+        "general_defeated_melee": {
+            "description": "You and the loyal guards killed the traitor in a bloody brawl.",
+            "unlocks": [
+                "SQ-209"
+            ],
+            "consequences": {
+                "item_reward": "Kinetic Armor Plating"
+            }
+        },
+        "general_thrown_out": {
+            "description": "You threw the traitor from the Zenith Spire.",
+            "unlocks": [
+                "SQ-209"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "High Ward": 20
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Warden-General's Blade",
+        "Kinetic Armor Plating"
+    ],
+    "conclusion": "You and the loyal guards killed the traitor in a bloody brawl.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

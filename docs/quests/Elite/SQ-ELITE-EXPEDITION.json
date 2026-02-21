@@ -1,0 +1,195 @@
+{
+    "id": "SQ-ELITE-EXPEDITION",
+    "title": "The Scourge-Heart Expedition",
+    "difficulty": "Elite",
+    "xp_reward": 4600,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-015",
+            "SQ-030"
+        ],
+        "items_required": [
+            "Survival Gear",
+            "Scourge-Resistant Rations"
+        ]
+    },
+    "location": "Emberheart -> Outer Fringe -> Dead Zone -> Scourge-Heart Crater",
+    "thread": "Expedition (Beyond City)",
+    "estimated_duration": "4 hours",
+    "mechanics_featured": [
+        "Survival Mechanics (Food/Water/Meds deplete)",
+        "Companion Permanent Death",
+        "Environmental Hazards",
+        "21-Turn Progression"
+    ],
+    "branching_outcomes": {
+        "destroy_heart": {
+            "description": "Destroyed the Scourge-Heart, dispersing its energy globally.",
+            "effects": {
+                "settlement_morale": 30
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Scourge begins to slowly fade from the world. 2d4 expedition members die in the blast.",
+                "item_reward": "None"
+            }
+        },
+        "harvest_heart": {
+            "description": "Studied and harvested the Scourge-Heart for its energy.",
+            "effects": {
+                "settlement_lore": 50
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Emberheart becomes a Scourge-tech superpower. 50% chance of 'Second Scourge' event chain starting.",
+                "item_reward": "Scourge-Heart Fragment (Artifact)"
+            }
+        },
+        "seal_heart": {
+            "description": "Sealed the Scourge-Heart in temporal stasis.",
+            "effects": {
+                "settlement_stability": 40
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Scourge remains but cannot spread. One companion is sacrificed to become the eternal guardian.",
+                "item_reward": "None"
+            }
+        },
+        "merge_with_heart": {
+            "description": "Merged with the Scourge-Heart, absorbing its power.",
+            "effects": {
+                "settlement_morale": -50,
+                "settlement_stability": -20
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Player becomes an immortal Scourge-entity, losing their humanity. NPCs react with fear and awe.",
+                "item_reward": "Scourge-Touched Soul (+5 all stats)"
+            }
+        }
+    },
+    "loot_table": [
+        "Scourge-Heart Fragment (Artifact - multiple uses)",
+        "Explorer's Mantle (Legendary armor - survive any environment)",
+        "Fringe-Touched Blade (Legendary weapon - extra damage to Scourge)",
+        "Expedition Journal (Artifact book - complete Scourge knowledge)",
+        "5500 Gold"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: Departure",
+            "narrative": "The expedition is fully assembled at the South Gate. You have selected your 4 companions: Valerius (tech), Elian (navigation), the Vintner (Void-energy), and Doctor Vane (scientific analysis). Two wagons of supplies are secured. The deep Fringe awaits."
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: Departure",
+            "narrative": "Three days march through the documented Fringe. The maps are accurate thus far, but the wildlife is increasingly aggressive. You encounter a pack of Fringe-hounds. You dispatch them easily, but the noise attracts the attention of a hovering Scourge-storm."
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: Departure",
+            "narrative": "A Scourge-storm hits the convoy. The air turns purple and corrosive. You must secure the wagons and seek shelter in a shallow cave. Survival DC 15 to prevent food spoilage. You fail slightly; one unit of rations is tainted, increasing hunger pressure."
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: Departure",
+            "narrative": "Day six. You reach the boundary of the 'Dead Zone'\u2014the unmapped territory where all previous expeditions vanished. The compass spins wildly. Elian uses celestial navigation instead, guiding you into the ash-choked canyons."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 2: The Dead Zone",
+            "narrative": "The canyon walls are lined with petrified trees that look vaguely human. The Vintner insists they are people, frozen mid-scream by the Scourge. Morale dips significantly. You must ration out the good water to keep spirits up."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 2: The Dead Zone",
+            "narrative": "The ground begins to pulse, like walking on a sleeping chest. A massive tremor knocks the wagons over. A sinkhole opens, swallowing half your medical supplies. As you pull Valerius back from the edge, a colossal mutated beast rises from the dust."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 2: The Dead Zone",
+            "narrative": "BOSS 1: Scourge-Corrupted Megafauna. A horrifying amalgamation of bear, reptile, and crystal. It charges, attempting to ram the remaining wagon. You and Vane flank it, attacking its exposed crystalline joints."
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: The Dead Zone",
+            "narrative": "The Megafauna thrashes wildly in its death throes, discharging a burst of Scourge energy. Valerius takes a direct hit. He is severely poisoned. You must use the remaining medical supplies or watch him die permanently. You use them."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: The Dead Zone",
+            "narrative": "Day ten. The landscape is alien. Gravity is lighter here. You crest a ridge and see it: the Scourge-Heart Crater. A pit fifty miles wide, glowing with an intense, sickly violet light that reaches into the stratosphere."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 2: The Dead Zone",
+            "narrative": "You descend into the crater. Reality begins to fray. You experience 'flash-forwards'\u2014seeing yourself die in thirty different ways in the next minute. You must make a Wisdom save to avoid taking psychic damage."
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 3: The Center",
+            "narrative": "The floor of the crater is made of solid, polished obsidian. Floating in the exact center is the Scourge-Heart. It is smaller than you expected\u2014the size of a carriage\u2014but so dense it bends light around it. It is singing a song of pure despair."
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 3: The Center",
+            "narrative": "As you approach, the air shimmers. The song solidifies into physical manifestations of the expedition team's worst fears. Reality-Rift Guardians pull themselves out of Non-Space to protect the Heart."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 3: The Center",
+            "narrative": "BOSS 2: Reality-Rift Guardians. They mimic your party's abilities exactly, casting your own spells back at you. You must command your team to switch targets constantly to prevent the Guardians from adapting."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 3: The Center",
+            "narrative": "You shatter the Guardians, but the psychic backlash is immense. Elian collapses, his mind broken by the song of the Scourge-Heart. He goes completely insane and runs toward the Heart. You must stop him before he is vaporized."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 3: The Center",
+            "narrative": "You manage to tackle Elian. Vane scans the Scourge-Heart with his instruments. The readings are impossible. 'It's not a weapon,' Vane whispers, horrified. 'It's humanity's collective grief, given physical form. The Scourge wasn't an attack. It was a breakdown.'"
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 3: The Center",
+            "narrative": "The REVELATION triggers. The Heart recognizes you. It projects a vision of the ancient world: 10 billion people, all connected by an empathy-web, experiencing a single moment of absolute sorrow that instantly crystallized the atmosphere."
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 3: The Center",
+            "narrative": "The Heart reacts to the knowledge being downloaded into your mind. It perceives your presence not as a threat, but as an infection returning to the source. It awakens fully, unwinding its dense layers into a towering pillar of crystallized despair."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 3: The Center",
+            "narrative": "BOSS 3: The Scourge-Heart Itself. It is a stationary target, but it commands the environment. It summons localized earthquakes, gravity wells, and blasts of concentrated grief."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 4: Climax",
+            "narrative": "You struggle against the intense gravity wells, trying to reach the central core of the Heart. Your companions provide covering fire, absorbing the psychic blasts. You reach the console at the base of the pillar."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 4: Climax",
+            "narrative": "You must make the ultimate choice (Destroy / Harvest / Seal / Merge). The fate of the Scourge, and the entire continent, is literally at your fingertips. The pressure is crushing. Valerius shouts for you to hurry."
+        },
+        {
+            "turn": 21,
+            "phase": "Phase 4: Climax",
+            "narrative": "You execute the command. The Scourge-Heart reacts instantly. The brilliant violet light explodes outward, or collapses inward, depending on your choice. The crater shakes violently as you and the surviving members of your expedition make your escape."
+        }
+    ],
+    "description": "An expedition into the deep Dead Zone leads to the Scourge-Heart Crater\u2014the physical manifestation of humanity's collective grief that caused the cataclysm.",
+    "conclusion": "Destroyed the Scourge-Heart, dispersing its energy globally.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

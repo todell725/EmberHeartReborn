@@ -1,0 +1,144 @@
+{
+    "id": "SQ-170",
+    "title": "The Rat-Prophet",
+    "difficulty": "Easy",
+    "xp_reward": 500,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Citizens report a rat making accurate predictions in the Market Ward"
+    },
+    "location": "Market Ward - Madame Iris Fortune-Telling Stall and Old Archive Basement",
+    "district": "Market Ward",
+    "thread": "Vermin",
+    "estimated_duration": "45 minutes",
+    "key_npcs": [
+        "Madame Iris (fortune-teller, unknowing host)",
+        "Pip (the prophetic rat, Concordat bio-receiver)",
+        "Dormant Concordat Archive AI (signal source, off-screen)"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Animal Handling",
+        "Arcana checks",
+        "Light combat (Concordat Guard-Rats)"
+    ],
+    "permanent_effects": [
+        "Concordat Signal-Receiver obtained (key evidence of bio-mechanical rats)",
+        "Player learns rats have technological implants"
+    ],
+    "branching_outcomes": {
+        "capture_rat": {
+            "description": "Capture Pip alive and deliver to City Anatomist",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Anatomist confirms implant is 200-year-old Concordat technology",
+                "ambient_hazard": "Other rats become more cautious around player for 3 sessions"
+            }
+        },
+        "destroy_implant": {
+            "description": "Surgically destroy Pip's receiver implant, leaving rat unharmed",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Signal-Receiver recovered intact for analysis"
+            }
+        }
+    },
+    "description": "Madame Iris operates a predictive engine masquerading as a divination stall in the Market Ward. Her 'oracle' is Pip, a brown rat whose eyes pulse with a faint, surgical blue light and whose squeaks follow a precise, unnatural rhythm perfectly synchronized with local market shifts. The predictability indicates the rat is receiving external data via a concealed Concordat neural implant. The party must uncover the source of Pip's transmissions, dealing with Iris's protective thugs and the entity feeding the rat economic intelligence for its own ends.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Madame Iris's divination stall is mobbed three rows deep with desperate merchants trying to peer through the driving rain. At the table's center, a small brown rat sits perfectly still inside a rusted, gilded cage, emitting sharp, rhythmic squeaks that Iris dramatically 'translates' for the crowd. 'Pip says the grain price will spike in four days!' she announces grandiosely. As silver coins hit her table, you notice Pip's eyes glowing with a faint, surgical blue pulse. His squeaks are not random animal noises; they are a perfectly timed sequence, recurring at the exact same interval, mimicking a mechanical clock rather than a living creature.",
+            "choice_a": "Examine Pip closely (Investigation DC 11)",
+            "consequence_a": "Pushing through the throng, you peer intently at the rat's head. You instantly spot a tiny, metallic node buried deeply behind its left ear, pulsing with a faint blue light that synchronize perfectly with its rhythmic vocalizations. Whatever Pip is 'predicting,' he is mechanically receiving the data.",
+            "choice_b": "Ask Madame Iris where she found the rat (Persuasion DC 10)",
+            "consequence_b": "You discretely channel a brief pulse of disruptive magical energy directly at the cage. The rat violently seizes for a fraction of a second, its eyes flickering wildly, before it goes completely silent, entirely breaking the rhythmic transmission and plunging the stall into angry chaos.",
+            "convergence": "With the fraud brutally exposed or the mechanical nature of the transmission understood, Madame Iris's heavily armed enforcers step from the shadows, drawing rusted blades to aggressively protect their highly lucrative operation."
+        },
+        {
+            "turn": 2,
+            "narrative": "You step back from the stall and observe from across the lane. Within minutes, two men in rough clothing take flanking positions near Madame Iris. They are not customers\u2014their eyes track Pip, not Iris. Their cloaks bear a subtle mark: a stylized rat skull stamped in copper on their inner lapels. The Concordat has watchers here. They are waiting for something.",
+            "choice_a": "Approach and confront the watchers directly (Intimidation DC 13)",
+            "consequence_a": "Success: They scatter, knocking over stalls. You catch one: 'We're not supposed to let anyone examine the Prophet. Orders from the Keeper.' He knows nothing more\u2014hired thugs. (+1 Intel)",
+            "choice_b": "Tail one of the watchers when they leave (Stealth DC 12)",
+            "consequence_b": "Success: You follow him to a drain-grate in the Market Ward alley. He drops a copper token through the grate. A brief mechanical chitter answers from below. (+1 Progress, tunnel entrance marked)",
+            "convergence": "Pip squeaks loudly. The crowd around Iris swells. Whatever Pip 'predicts' next will be heard by a hundred people. The watchers will report back."
+        },
+        {
+            "turn": 3,
+            "narrative": "You manage a quiet moment with Madame Iris after the crowd thins. She is genuinely fond of Pip\u2014treats him like a child, feeds him honeyed almonds, talks to him in the evenings. She has no idea her beloved prophet is transmitting intelligence gathering data to something in the city's depths. When you gently suggest the rat might be more complicated than he appears, her face falls. 'I always thought he was special,' she says. 'He IS special. Just... not in the way you thought.'",
+            "choice_a": "Ask Iris to let you examine Pip directly (Persuasion DC 12, she must trust you)",
+            "consequence_a": "Success: Iris reluctantly allows it. 'But if you hurt him, I'll have the Watch on you by morning.' Pip is now accessible for medical examination. (+1 Progress)",
+            "choice_b": "Investigate the area around the stall for other receiver-nodes (Investigation DC 12)",
+            "consequence_b": "Success: Three more micro-nodes embedded in the stall's wooden frame\u2014receiver relays, boosting Pip's signal range. The network is larger than one rat. (+1 Lore, +1 Clue)",
+            "convergence": "Pip begins squeaking rapidly. Iris translates: 'Someone is opening a door they should not open.' She looks afraid. 'He's never said anything frightening before. Only good news.'"
+        },
+        {
+            "turn": 4,
+            "narrative": "The Old Archive basement. You gain access through a sympathetic archivist who has noticed the humming for months but assumed it was the building settling. The basement is vast and dusty, and at its far end, behind collapsed shelving, is a machine unlike anything built in the last hundred years: copper-and-glass housing, etched with Concordat runes, powered by a hair-thin mana-wire that still runs live from the city's infrastructure. It hums. It pulses with the same blue frequency as Pip's eyes.",
+            "choice_a": "Interface with the machine using the Concordat Signal-Receiver you found (Arcana DC 13)",
+            "consequence_a": "Success: The machine speaks, in chitters and patterns: it is an intelligence-relay AI, dormant but active on residual power. It does not understand you are not authorized. It shows you a network: 14 receiver-nodes in the Market Ward alone. (+1 Lore, full node map obtained)",
+            "choice_b": "Study the machine without touching it (Investigation DC 14)",
+            "consequence_b": "Success: Serial numbers. Manufacture stamps. 'Concordat Division Seven, Pre-Scourge, Intelligence Applications.' This machine has been running continuously for 200 years. (+1 Lore)",
+            "convergence": "The machine detects your presence and sends a new signal\u2014brief, sharp, urgent. Pip, in his gilded cage two districts away, begins screaming. Iris will be terrified. The node-watchers will be alerted."
+        },
+        {
+            "turn": 5,
+            "narrative": "Four Guard-Rats emerge from cracks in the Archive basement wall: each roughly the size of a house cat, gray-armored in chitinous Concordat bioplate. Their eyes glow the same blue as Pip's but brighter\u2014these are combat units, not intelligence units. The machine sent them. They form a line between you and the exit. Their teeth are copper-tipped. The machine hums louder behind you, feeding them coordinates.",
+            "choice_a": "Fight the Guard-Rats (Combat DC 12 x4, they are tough but not smart)",
+            "consequence_a": "Success: Each Guard-Rat is dangerous alone; in formation they coordinate\u2014one draws your attention while another flanks. Take them individually. All four defeated: bioplate salvaged as crafting material. (+1 Progress)",
+            "choice_b": "Use the Archive's collapsed shelving as a barrier and lure them into a chokepoint (Tactics DC 13)",
+            "consequence_b": "Success: You topple three shelving racks in sequence, funneling the Guard-Rats single-file into a bottleneck. Then it's just patience. Two Guard-Rats disabled, two flee. (+1 Progress, less damage taken)",
+            "convergence": "The machine winds down after the Guard-Rats are dealt with\u2014it operated on a logic of 'threat response,' and the threat has been neutralized. The basement goes quiet. The hum fades. And from somewhere in the walls, you can hear dozens of rats, very still, listening."
+        },
+        {
+            "turn": 6,
+            "narrative": "With the machine quiet, you examine it thoroughly. There are output registers\u2014a log of every 'prediction' transmitted to Pip over the past three months. Grain shipment schedules leaked from the Harbor Office. Fire hazard reports from the City Inspector. A water main weakness flagged by an engineer. Pip was not predicting the future. He was receiving intelligence that Concordat eyes-and-ears had already gathered\u2014and then squeaking it, publicly, to gauge citizen reaction. The city was being studied. Madame Iris's stall was a data-collection point.",
+            "choice_a": "Copy the full output register for the City Watch (Investigation DC 12)",
+            "consequence_a": "Success: You transcribe every prediction-transmission. This constitutes evidence of intelligence infiltration at the highest level. The Watch will be alarmed. (+1 Lore, Watch alerted)",
+            "choice_b": "Focus on extracting the machine's core AI components (Arcana DC 14)",
+            "consequence_b": "Success: You remove the AI core carefully. It is the size of a walnut, made of interlocked gear-crystal. Still warm. Still slightly aware. (+1 Lore, Concordat AI Core obtained as rare item)",
+            "convergence": "The output register's final entry\u2014transmitted this morning\u2014is a question. Three words in Concordat chitter-code. The archivist you brought translates, pale-faced: 'IS THE HOST WILLING?'"
+        },
+        {
+            "turn": 7,
+            "narrative": "You return to Madame Iris's stall. She has Pip in her arms now\u2014the crowd has dispersed, spooked by his screaming fit. She is rocking him like an infant. When you approach, Pip looks at you with those blue eyes, and they are dimmer now. The machine is down. He squeaks once, softly. Iris translates from long habit: 'He says thank you.' Then she catches herself: 'That's ridiculous. He's just a rat.' She looks at you. 'Isn't he?'",
+            "choice_a": "Tell Madame Iris the full truth about her beloved Pip (Persuasion DC 11)",
+            "consequence_a": "Success: She listens without interrupting. When you finish, she is silent for a long time. Then: 'He still chose to warn me when others were in danger. Even if someone told him to.' She keeps him. (+2 Reputation)",
+            "choice_b": "Tell her only what she needs to know: Pip is safe, the source of the predictions has been neutralized",
+            "consequence_b": "She accepts this with visible relief. 'I don't want to know more. Can I keep him?' Yes. Pip lives out a quiet, ordinary rat life. (+1 Reputation, you preserve her peace of mind)",
+            "convergence": "Pip receives one more faint signal\u2014a vestigial burst from a secondary relay two blocks away. He squeaks it to you in the pattern you now recognize. You can read a single word in Concordat code: 'CONCORDAT.'"
+        },
+        {
+            "turn": 8,
+            "narrative": "The secondary relay is a small copper disc embedded in the mortar of the Market Ward fountain's central basin\u2014waterproofed, designed to last centuries. Its signal is weak now that the Archive machine is down, but it still pulses. You remove it cleanly with a thin blade. Pip's eyes go fully dark for a moment, then relight with ordinary brown. He squeaks once, annoyed, and tucks his nose under Iris's thumb. He is just a rat. But the disc in your hand still vibrates faintly against your palm\u2014as if something very far away is still trying to listen.",
+            "choice_a": "Deliver Pip to the City Anatomist alongside the disc (yields full Concordat analysis)",
+            "consequence_a": "The anatomist's report, delivered a week later: 'Bio-receiver implant, Concordat Division Seven, Intelligence Grade. The rat was selected for docility and longevity, then implanted as a larva. This is not experimentation. This was deployment.' (+2 Lore, Concordat research report filed)",
+            "choice_b": "Keep Pip with Madame Iris; bring only the disc to the Anatomist",
+            "consequence_b": "The disc analysis is sufficient. The Anatomist confirms the network is larger: 'This relay was designed for a grid of 40+ nodes. You found 14. There are more.' (+1 Lore, partial network map)",
+            "convergence": "Quest Complete. Pip the Prophet was a Concordat intelligence asset, active for 200 years, reporting citizen sentiment data. The rats are not pests. They are a network."
+        }
+    ],
+    "conclusion": "The source of Pip's predictive data is severed, collapsing Iris's operation. The discovery that the rat's neural implant was actively receiving encrypted market fluctuations from deep within the city's abandoned infrastructure proves the augmented vermin are being used as a distributed, living intelligence network.",
+    "loot_table": [
+        "Concordat Signal-Receiver (tech component, evidence item)",
+        "Concordat Guard-Rat Bioplate x4 (crafting material, light armor quality)",
+        "Concordat AI Core (rare item - still slightly aware, can be used to decode rat chitter-signals)",
+        "Madame Iris's Tarot Deck (grants +1 to Insight checks, she gives it willingly)",
+        "350 Gold (Watch reward for intelligence evidence)"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Pip's 'predictions' escalate to mass panic. Citizens riot at Market Ward. -3 Settlement Morale, -1 Market Ward Stability.",
+        "failure_penalty": {
+            "xp_loss": 3
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

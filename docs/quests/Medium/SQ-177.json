@@ -1,0 +1,204 @@
+{
+    "id": "SQ-177",
+    "title": "The Swarm-Intelligence",
+    "difficulty": "Medium",
+    "xp_reward": 1200,
+    "thread": "Vermin",
+    "district": "Market Ward",
+    "estimated_duration": "2-3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-129"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete EH_SQ_029 (The Shadow-Rat's Nest)",
+    "location": "City-wide event \u2014 Market Ward epicenter, with connected events in Lower Ward, High Ward, and Industrial Quarter",
+    "npcs": [
+        {
+            "name": "Inventor Voss (Thessaly Voss)",
+            "role": "Expert consultant",
+            "description": "Independent bio-engineer who has been documenting copper-tail behavioral anomalies for months. Contacts the party when the Swarm-Event begins. Wants to study the phenomenon and will share research in exchange for access during resolution."
+        },
+        {
+            "name": "The Swarm-Mind Nexus",
+            "role": "Boss",
+            "description": "Not a creature but a location: a physical convergence node through which the distributed neural-lattice coordination signal is routing. Destroying it ends the event. It defends itself using coordinated copper-tail rat swarms."
+        },
+        {
+            "name": "Senior Watch-Captain Eld Marrus",
+            "role": "Institutional friction",
+            "description": "Head of the Market Ward watch post. Responding to the swarm event with crowd control and escalating panic. Cannot understand what he's dealing with. Needs the party to give him actionable information or he will begin lethal extermination protocols."
+        }
+    ],
+    "description": "Citizens awake to an unnerving biological anomaly: every rat in the city has abandoned its normal behavior to form massive, perfectly coordinated geometric rings around key infrastructure points, staring silently inward. Inventor Voss urgently contacts the party, claiming this terrifying, city-wide mobilization is the result of a 'neural-lattice prototype' violently firing. The party must navigate the panicked Market Ward, reach Voss's workshop, and help him forcibly shut down the prototype before the Ward Guard initiates a massive, fiery purge.",
+    "mechanics": [
+        "Investigation (map the swarm movement patterns to triangulate the Nexus location)",
+        "Animal Handling (interpret swarm behavior with Rat-Tongue Amulet or Skitter-Jack's assistance)",
+        "Arcana (identify the neural-lattice coordination signal)",
+        "Persuasion (convince Watch-Captain Marrus to delay the extermination order)",
+        "Combat (Swarm-Mind Nexus defense \u2014 coordinated copper-tail rat swarms, Medium encounter)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Nexus destroyed within 6 hours",
+            "effect": "settlement_morale +2; settlement_stability +1; wild rat population survives the extermination order"
+        },
+        {
+            "trigger": "Nexus destroyed after extermination begins",
+            "effect": "settlement_morale -1; wild rat population takes significant casualties; Rat Council trust reduced by 1 tier"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Dawn completely breaks. The city wakes to an incredibly terrifying silence in the normally bustling streets and incredibly dense, violent motion within the stone walls. Market Ward stallholders emerging early find the massive central square completely reconfigured: absolutely every rat in a three-block radius has perfectly assembled in a massive, dense ring around the central market fountain, sitting perfectly still, staring blankly inward. They are not frantically eating, not violently fighting, not aggressively fleeing. They are perfectly assembled in terrifying military precision. This horrific anomalous behavior violently spreads by panicked report across the entire city inside twenty minutes. In the Lower Ward alleys, rats are aggressively forming massive, perfectly straight directional corridors. In the High Ward, heavy copper-tail units are entirely abandoning their usual erratic patrol routes to furiously converge directly on the primary mana-grid service tunnels. Something is brilliantly, flawlessly coordinating all of them simultaneously. Inventor Voss frantically sends a desperate note to you via an incredibly urgent, terrified courier: 'This is the catastrophic neural-lattice prototype violently firing. I have been deeply waiting for this. Please find me at my workshop immediately before the Ward Guard decides to violently solve this entirely with intense fire.'",
+            "choice_a": "Go immediately to Inventor Voss's workshop",
+            "consequence_a": "You violently shove your way through the terrified, frantically screaming civilian crowds, brutally forcing a clean path entirely through the absolute chaos. You flawlessly reach Voss's heavily fortified workshop incredibly quickly, saving absolutely invaluable minutes before the heavily armed Guard arrives.",
+            "choice_b": "Begin investigating the swarm pattern directly without Voss",
+            "consequence_b": "You elegantly scale the damp masonry, violently leaping aggressively across the narrow, rain-slicked rooftops. You brilliantly avoid entirely disturbing the terrifying, perfectly still vermin formations completely, arriving exactly at Voss's heavily barricaded skylight precisely undetected and unhindered.",
+            "convergence": "You violently crash into Voss's Workshop just as a massive, loudly humming, completely overloaded crystalline control-pillar violently begins heavily sparking, radiating a deeply sickening, intensely powerful subsonic frequency that violently hurts your teeth."
+        },
+        {
+            "turn": 2,
+            "narrative": "Voss's working theory, presented in organized priority: the neural-lattice coordination matrix (from EH_SQ_076 if the party has the Blueprint, or reconstructed from behavioral observation otherwise) is not a remote control system. It is a distributed processing network. Today's event is a test run of the network at full scale \u2014 it is doing something computationally with the combined sensory data from every augmented rat in the city. The patterns in rat movement, when mapped, are not random crowd behavior. They trace EmberHeart's mana-grid infrastructure. The rats are conducting a diagnostic. On the city's infrastructure. Simultaneously. This is what the copper-tail relay network was always supposed to do: assess the city's structural health. The person who initiated this test run \u2014 V.A./Vane \u2014 is somewhere with a transmitter.",
+            "choice_a": "Focus on identifying the Nexus \u2014 destroy the central coordination node to stop the event",
+            "consequence_a": "The fastest path to resolution. The Nexus location is determined by triangulating where all swarm patterns converge. Mid-way through the quest.",
+            "choice_b": "Investigate what the network is actually diagnosing before stopping it",
+            "consequence_b": "The diagnostic takes the full six-hour window to complete. If you can prevent the extermination order and let it run, the network produces a complete infrastructure assessment of EmberHeart's mana-grid \u2014 an extraordinarily valuable document. Risk: the extermination order is very hard to prevent for the full duration.",
+            "convergence": "Either path requires dealing with Watch-Captain Marrus in the next hour."
+        },
+        {
+            "turn": 3,
+            "narrative": "Watch-Captain Marrus is on his third cup of something that isn't helping and growing faster at each report. His training covers riots, fires, organized crime, and mana-accidents. It does not cover 'coordinated rat civic behavior.' His current working theory is Void-contamination or hostile magical attack, which his protocols suggest he should eliminate. His extermination order requires approval from three Watch seniors and one city administrator. The approval would take 2 hours to process. He has already sent two of the three requests. He is an intelligent man in a situation his intelligence cannot parse.",
+            "choice_a": "Present Marrus with the full technical explanation \u2014 the neural-lattice network, Concordat origin, the diagnostic purpose",
+            "consequence_a": "Persuasion DC 16. He is skeptical. If the party has the Bio-Augmentation Blueprint or Voss's documentation, DC reduces to 12. On success: Marrus delays the extermination order by 3 hours, giving significantly more time. On failure: he proceeds on the original timeline.",
+            "choice_b": "Give Marrus a partial explanation \u2014 focus on 'Concordat artifact behavior' and ask for time to resolve it professionally",
+            "consequence_b": "Persuasion DC 13. Easier sell. He delays by 90 minutes \u2014 enough to find the Nexus if investigation is efficient. He doesn't fully understand but trusts 'Concordat artifact' as a categorizable problem.",
+            "convergence": "Marrus grants a delay \u2014 duration depending on the persuasion approach. The extermination clock is pushed back."
+        },
+        {
+            "turn": 4,
+            "narrative": "Mapping the swarm. The rats are not random \u2014 they're organized along the city's mana-grid conduit routes, each cluster positioned at a specific infrastructure node. Investigation (or Voss's triangulation work) reveals the pattern: all movement converges toward a single point in the Market Ward sub-basement, the original Concordat infrastructure junction that the modern mana-grid was built above. The Nexus is in the junction. Reaching it requires descending through the Market Ward's commercial sub-level, which is currently threaded with rat-swarm corridors. The rats are not aggressive \u2014 they have no aggression directive in the current coordination mode \u2014 but they are physically obstructive and dense.",
+            "choice_a": "Move through the rat corridors using Animal Handling to navigate without disturbing the pattern",
+            "consequence_a": "Animal Handling DC 13 (DC 10 with Rat-Tongue Amulet). Success: you reach the junction quickly, and the swarm diagnostic is undisturbed. You can observe it in progress. On failure: you disrupt a section of the pattern; the coordination compensates but the Nexus goes briefly into alert mode.",
+            "choice_b": "Force through quickly regardless of disruption \u2014 speed over subtlety",
+            "consequence_b": "You reach the junction in half the time. The swarm's alert mode activates in a two-block radius. Copper-tail units converge toward the disruption point \u2014 not aggressive, but physically obstructive. The Nexus has 10 minutes to prepare its defensive posture.",
+            "convergence": "The Concordat infrastructure junction beneath the Market Ward. The Swarm-Mind Nexus is visible: a Concordat-era signal processor the size of a large cabinet, active for the first time in 200 years, surrounded by a ring of copper-tail sentinel rats arranged like a chorus."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Swarm-Mind Nexus is not a creature. It is a piece of infrastructure: a Concordat signal processor, 200 years old, recently reactivated. Its processing cycle is visible in real time: thousands of data points from the copper-tail relay network flowing in, being organized, generating an output report. The output report is in Concordat data notation \u2014 inscribed onto a compressed clay disk by an automated press mechanism. The disk is halfway formed. If the Nexus is allowed to complete the cycle, the disk is a complete mana-grid infrastructure assessment of EmberHeart. If it is destroyed now, the disk is partial. The defensive posture is maintained by the surrounding copper-tail units in a coordination mode the party has not encountered before: individually weak, but responsive collectively.",
+            "choice_a": "Allow the Nexus to complete its full cycle before destroying it \u2014 a few more minutes",
+            "consequence_a": "The complete infrastructure assessment disk is produced. Extraordinarily valuable civic and intelligence data. The additional time puts pressure on the Marrus extermination timeline. Requires ensuring Marrus has been given sufficient extension.",
+            "choice_b": "Destroy the Nexus immediately \u2014 the extermination order is more urgent than the data",
+            "consequence_b": "Partial disk recovered. Some infrastructure data salvageable. The coordination event ends. Marrus's extermination order can be canceled cleanly.",
+            "convergence": "Combat begins with the Nexus's defensive swarm posture \u2014 whether you chose to wait or act immediately determines how much of the data disk was completed before the fight."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Swarm-Mind Nexus fight: the Nexus itself has no direct attack capability (AC 8, HP 40 as a Large Object), but it coordinates the surrounding copper-tail sentinel swarm as a collective defense. The swarm behaves as a single entity: CR 4, AC 13, HP 60, resistant to individual-target effects, capable of a coordinated charge (3d6 piercing to all targets in a 15-foot cone) and a signal-pulse (Arcana DC 14 or disadvantage on checks relying on precision for 2 rounds). The swarm takes full damage from area effects. The Rat Council's recognition token, if present, causes the swarm to briefly hesitate at the start of each of its turns (reduces its action to one per round instead of two).",
+            "choice_a": "Focus attacks on the Nexus object directly, accepting swarm damage while doing so",
+            "consequence_a": "The Nexus is destroyed in 2-3 rounds if focused. Swarm continues for 1 round after Nexus destruction before dispersing. High damage taken by the party.",
+            "choice_b": "Eliminate the swarm first, then destroy the undefended Nexus",
+            "consequence_b": "Takes longer (4-5 rounds total) but party takes less overall damage. The Nexus continues processing during the delay.",
+            "convergence": "The Nexus is destroyed. Signal ceases. Throughout the city, rats break from coordinated behavior simultaneously \u2014 each individual animal snapping back to self-directed action, like a choir stopping on the same beat."
+        },
+        {
+            "turn": 7,
+            "narrative": "The city's reaction is immediate and layered. Watch-Captain Marrus receives confirmation that the coordinated behavior has ceased. Citizens throughout EmberHeart report normal rat behavior resuming. The extermination teams, already deployed to staging positions, stand down on Marrus's order \u2014 sent with visible relief. In the Market Ward sub-basement, surrounded by dispersing copper-tail units returning to their patrol grids, the party holds what they made: a destroyed signal processor, a clay disk of city infrastructure data (partial or complete), and the knowledge that someone activated this deliberately as a prototype test. V.A./Vane is somewhere in the city with a transmitter powerful enough to fire the full neural-lattice network simultaneously.",
+            "choice_a": "Report the full incident to the City Watch with all technical details",
+            "consequence_a": "The Watch officially documents the event as a 'Concordat infrastructure anomaly.' Marrus files a full report. City administration requests a meeting about mana-grid assessment protocols \u2014 the partial or complete infrastructure disk is of significant interest.",
+            "choice_b": "Give Marrus a simplified version \u2014 the threat is stopped, the technical details are ongoing investigation",
+            "consequence_b": "Marrus accepts. The party retains intelligence control over the full scope of what the network was doing and why.",
+            "convergence": "Voss is examining the destroyed Nexus components with intense interest. She identifies the reactivation signal source: transmitted through the city's mana-grid conductor channels, originating from beneath the North Ward. The same direction the Chronos thread investigations have been pointing."
+        },
+        {
+            "turn": 8,
+            "narrative": "Voss's analysis of the clay disk \u2014 partial or complete \u2014 reveals the infrastructure assessment data. If complete: the city's mana-grid has seventeen significant structural vulnerabilities, four of which are actively deteriorating, two of which are in the Chronos thread's investigation area (the North Ward mana-junction beneath the Chronal Pint tavern). The copper-tail network was performing civic infrastructure maintenance that no human institution has been doing. The city has been less safe than anyone knew, and the Concordat built these rats specifically to tell it so. If partial: nine vulnerabilities identified, one confirmed critical (the North Ward mana-junction).",
+            "choice_a": "File the infrastructure assessment with the City Planning Authority immediately",
+            "consequence_a": "The Authority responds with alarmed gratitude. Emergency inspections are authorized for the flagged sites. Settlement stability +3 over the following month. The source of the data is awkward to explain.",
+            "choice_b": "Hold the assessment data; determine who needs to know it and in what form",
+            "consequence_b": "Intelligence controlled. The party can selectively share findings \u2014 for example, flagging the North Ward mana-junction without explaining the copper-tail network in full.",
+            "convergence": "Voss says: 'The network was doing its job. Badly, because it's been running alone for two centuries without calibration. But it was doing its job.' She pauses. 'Whoever reactivated it knew that. They wanted the assessment run. The question is whether they wanted you to see the results.'"
+        },
+        {
+            "turn": 9,
+            "narrative": "The North Ward mana-junction flagged in the infrastructure assessment is beneath the Chronal Pint tavern \u2014 a location that will shortly become relevant in EH_SQ_065 (The Frozen Moment). The junction, if the party investigates now, shows evidence of recent Concordat-era equipment installation: a signal relay booster that should not be in a 20-year-old mana-junction, running a transmission protocol the party recognizes from the Squeaker-Box. The booster has been routing V.A./Vane's transmissions through the mana-grid to reach the Forgeline and the Swarm-Mind Nexus. It is the link between Vane's location and every Concordat system he has been maintaining. It is also the reason the North Ward mana-grid has been experiencing the temporal disruptions logged in the Chronos thread.",
+            "choice_a": "Disable the relay booster \u2014 cut Vane's remote access to the Concordat systems",
+            "consequence_a": "Vane loses remote access. He will need to visit facilities in person for any further changes. His operational capacity is significantly degraded. The North Ward temporal disruptions stop. He will know someone found the relay.",
+            "choice_b": "Leave the relay booster intact and monitored \u2014 it is a line to Vane",
+            "consequence_b": "The relay remains active. The party can attempt to trace transmissions back to Vane's physical location (Arcana DC 18, multiple sessions of monitoring). If successful: Vane's location is identified. Risk: Vane may detect the monitoring.",
+            "convergence": "The mana-junction and its relay booster become a significant strategic decision point in the Vermin-Chronos convergence storyline."
+        },
+        {
+            "turn": 10,
+            "narrative": "Voss requests a formal meeting at her workshop the following evening to present her compiled analysis. Her documentation of copper-tail behavioral anomalies, combined with the Swarm-Intelligence event data, produces a working model: the Reactivation Protocol is not a single event. It is a sequence. Event 1 was the contact infection (spreading the base augmentation). Event 2 was today's Swarm-Intelligence test (validating that the neural-lattice network fires correctly at scale). Event 3, according to her projection, is a full-scale infrastructure remediation attempt \u2014 the network, if allowed to operate with a complete active roster and functioning Nexus, would begin physically guiding copper-tail units to reinforce, seal, and repair the city's mana-grid vulnerabilities. Someone has been trying to fix EmberHeart using rats. Badly. For a very long time.",
+            "choice_a": "Ask Voss to formalize her analysis into documentation that can be shared with the City Administration",
+            "consequence_a": "Voss produces a formal technical report over the next 3 days. The City Administration initiates a Concordat Infrastructure Working Committee. Slow institutional response but legitimate.",
+            "choice_b": "Keep Voss as a private consultant; the party manages what information leaves this room",
+            "consequence_b": "Voss agrees to confidentiality with conditions: she wants credit when this eventually becomes public, and she wants first access to any further Concordat bio-system discoveries.",
+            "convergence": "Voss and her analysis become a recurring resource for the Vermin thread's resolution arc."
+        },
+        {
+            "turn": 11,
+            "narrative": "The broader city reaction to the Swarm-Intelligence event plays out over the following 48 hours. Three distinct narratives emerge. The Watch files it as 'resolved Concordat anomaly, ongoing investigation.' Citizens who observed the coordinated rat behavior are divided: half are frightened and want immediate extermination of all augmented vermin; half are, unexpectedly, fascinated and want to know more. A pamphlet appears in the Market Ward two days after the event, author unknown, titled 'The City Has a Pulse': it describes the copper-tail relay network, the Swarm-Intelligence test, and the infrastructure assessment in language a non-technical reader can understand. Someone knows what happened and is telling people about it. The pamphlet is accurate. It is not the party's work. Someone else was watching today's events.",
+            "choice_a": "Investigate who published the pamphlet",
+            "consequence_a": "Investigation DC 14. The printing marks trace to a small press in the Academic Quarter. The operator received the text anonymously, delivered already written on clean paper with no identifying marks. The writing style, with Arcana or Investigation, shows the same syntactic pattern as the Squeaker-Box transmissions. Vane wrote the pamphlet.",
+            "choice_b": "Ignore the pamphlet \u2014 its accuracy suggests a second observer but chasing speculation is inefficient",
+            "consequence_b": "The pamphlet circulates widely over the following week. Public awareness of the copper-tail network grows \u2014 both its protective intent and its current dangerous state. This creates political pressure on the City administration.",
+            "convergence": "Whether or not the pamphlet's authorship is traced back to Vane, its existence tells the party something important: whatever Vane wants, it includes the citizens of EmberHeart understanding what he has been trying to do."
+        },
+        {
+            "turn": 12,
+            "narrative": "One week after the Swarm-Intelligence event, the city has somewhat normalized. The Watch has deployed additional patrols in copper-tail-heavy areas. Voss has begun publishing preliminary findings through academic channels. The infrastructure assessment data (if filed) has triggered three emergency engineering inspections, two of which have confirmed critical vulnerabilities. The mana-junction beneath the Chronal Pint has been flagged for priority review \u2014 a review that will, within a week, discover the temporal disturbances that begin EH_SQ_065. The Vermin thread has converged with the Chronos thread. Two ancient systems \u2014 the copper-tail relay network and the North Ward temporal infrastructure \u2014 are connected through the same underground mana-junction that Vane has been using as a transmission relay. Someone built EmberHeart as a single interconnected system. That someone has been trying to maintain it alone for 200 years.",
+            "choice_a": "Follow the Chronos thread connection immediately \u2014 investigate the North Ward temporal events",
+            "consequence_a": "Directly transitions into EH_SQ_065 investigation. The Vermin and Chronos threads merge into a unified investigation arc.",
+            "choice_b": "Consolidate the Vermin thread findings before moving to Chronos",
+            "consequence_b": "A final debrief session solidifies everything learned in the Vermin thread. The party enters the Chronos investigation with complete Vermin context, giving advantage on checks that involve the connection between the two threads.",
+            "convergence": "Quest complete. The Swarm-Intelligence event has been resolved, but it has also confirmed that EmberHeart's infrastructure is far more interconnected \u2014 and far more intentional \u2014 than any living citizen knew. Vane has been trying to run the whole city. He is running out of time to do it alone."
+        }
+    ],
+    "conclusion": "The neural-lattice prototype is decisively violently deactivated, instantly breaking the unnatural, city-wide trance and dispersing the massive vermin rings. Voss's deeply dangerous experiment proves definitively that the local vermin population can be completely neurologically hijacked and perfectly controlled as a massive, unified network.",
+    "loot_table": [
+        "Mana-Grid Infrastructure Assessment \u2014 Partial/Complete (Concordat clay disk; EmberHeart's seventeen mana-grid structural vulnerabilities mapped; immediate value to City Planning Authority; strategic value to understanding Vane's Reactivation Protocol; partial if Nexus destroyed quickly, complete if cycle allowed to finish)",
+        "Mind-Shield Circlet (Concordat-era cognitive defense item, recovered from Nexus processing unit; grants advantage on saves against mental coordination effects such as charm, domination, or collective consciousness abilities)",
+        "Voss's Behavioral Analysis Report (months of copper-tail documentation; advantage on Vermin-thread Animal Handling and Investigation checks where copper-tail behavioral patterns are relevant)",
+        "Swarm-Mind Nexus Fragment (salvageable from destroyed Nexus; Arcana research material; uniquely useful for understanding the neural-lattice signal protocol; Voss will offer significant favors for access to this)",
+        "1000 gold (Watch Captain Marrus's emergency civic resolution payment \u2014 standard procedure for contracted resolution of public safety incidents)"
+    ],
+    "branching_outcomes": {
+        "nexus_destroyed_before_cycle_completes": {
+            "description": "Nexus destroyed mid-cycle; partial infrastructure assessment recovered",
+            "effects": {
+                "settlement_stability": 2,
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Nine mana-grid vulnerabilities identified; two confirmed critical; extermination order canceled; wild rat population intact"
+            }
+        },
+        "cycle_allowed_to_complete": {
+            "description": "Full cycle completed before Nexus destroyed; complete infrastructure assessment produced",
+            "effects": {
+                "settlement_stability": 3,
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "All seventeen mana-grid vulnerabilities identified; complete civic resource; extermination order required careful political management throughout; settlement stability +3 from engineering responses to findings"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Watch-Captain Marrus's extermination order fires before the Nexus is destroyed. 60% of the wild rat population in the Market Ward is killed. The Rat Council's trust with the party drops by one tier. The coordination event still ends when the Nexus is eventually destroyed, but the damage to the city's non-augmented rat population is permanent and the Rat Council does not forgive it quickly.",
+        "failure_penalty": {
+            "xp_loss": 60
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

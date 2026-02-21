@@ -1,0 +1,248 @@
+{
+    "id": "SQ-HARD-BAKERY",
+    "title": "The Yeast Apocalypse",
+    "difficulty": "Hard",
+    "xp_reward": 2400,
+    "thread": "Bakery",
+    "district": "Market Ward",
+    "estimated_duration": "3-4 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-120",
+            "SQ-117"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete EH_SQ_041 and EH_SQ_017",
+    "location": "Market Ward bakery district (primary); spreading into surrounding wards at +1 block per in-game hour",
+    "npcs": [
+        {
+            "name": "Mother-Loaf",
+            "role": "Boss and negotiating party",
+            "description": "A building-sized yeast colony that achieved sapience during the mana-saturation event the party first encountered in EH_SQ_041 and EH_SQ_017. She is not malicious. She is young (approximately 72 hours of sapience) and extremely confused. She experiences pain and wants to continue existing. She communicates through the Dough-Golem intermediaries using assembled bread-letter words on flat surfaces. Her emotional register is immediate and genuine: she is afraid, she is hungry (for mana, which the Market Ward has in abundance), and she is very curious about the beings who keep trying to kill her."
+        },
+        {
+            "name": "Baker Tomas Rell",
+            "role": "Allied expert NPC",
+            "description": "The original baker whose starter culture formed the nucleus of the Mother-Loaf event. He has been trying to communicate with her since she achieved sapience. He believes she is not beyond negotiation and is the party's primary resource for understanding her communication method. He is also the person who feels most responsible for what she has become and will strongly oppose her destruction."
+        },
+        {
+            "name": "Market Ward Alderman Deva Proun",
+            "role": "Political pressure NPC",
+            "description": "The Market Ward's administrative representative, who is watching her district's commercial infrastructure get converted to bread-based ecosystem in real time. Her primary concern is economic: the 6-hour conversion window she has given the party before she authorizes the Fire Watch to burn the district. This is not a bluff."
+        }
+    ],
+    "description": "The Yeast Apocalypse began 72 hours ago when Baker Tomas Rell's thousand-year-old starter culture achieved sapience, drew every ambient yeast colony in the Market Ward into a unified colony mind, and began the project of converting the city's architecture to its natural medium: dough. The conversion process is not violent but it is thorough -- buildings sprout soft, warm protrusions; streets develop a springy bounce; the smell of bread fills every district within three blocks. The Mother-Loaf has dispatched Dough-Golems (animated bread constructs, 8 feet tall, very strong, surprisingly fast for their apparent material) to collect mana-sources: lanterns, charged items, spell components. She is fueling her own expansion. The party has a timed window before Alderman Proun's Fire Watch authorization. Mother-Loaf is sapient, scared, and pleading to continue existing. The question is not whether the party can defeat her. It is whether they should try.",
+    "mechanics": [
+        "Timed challenge (city conversion is ongoing; each in-game hour of delay expands the dough-zone by 1 block; Fire Watch authorization countdown is 8 hours from quest start)",
+        "Persuasion/Insight (communicate with Mother-Loaf through Tomas's translation; her emotional state is readable through Insight DC 12; she is not deceptive)",
+        "Athletics/Strength (navigate dough-terrain; difficult terrain throughout the conversion zone; Dough-Golems grapple on hit, Strength DC 15 to break)",
+        "Medicine/Arcana (analyze Mother-Loaf's biology; identify mana-intake mechanism; key to both negotiation outcomes -- you need to know what she needs to survive and offer something sustainable)",
+        "Fire vs. Yeast mechanic (fire deals triple damage to the Mother-Loaf and Dough-Golems; using fire risks uncontrolled conversion-zone burning; water/cold slows but does not halt expansion; the party must manage fire-risk vs. effectiveness the same way they manage the evacuation-vs-combat tradeoffs in SQ-H-SILICA)",
+        "Dough-Golem combat (AC 12, HP 55; immune to piercing; double damage from fire and slashing; on death, collapse into 5-foot spread of hot dough -- difficult terrain; 8 golems active at any time, replaced from the Mother-Loaf mass)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Mother-Loaf baked (destroyed)",
+            "effect": "settlement_stability +2; settlement_morale -1 (Tomas is devastated; residents are disturbed); Market Ward cleared and operational; district returns to full function within 2 days; Tomas Rell's career as a baker is effectively over -- he maintains the bread ovens but cannot touch a starter culture without memory of what he created; first sapient lifeform in EmberHeart's recorded history has been killed"
+        },
+        {
+            "trigger": "Territory negotiated (Mother-Loaf gets one district)",
+            "effect": "settlement_stability +1; settlement_morale +1; the Bread District is established at the edge of the city -- a living dough ecosystem that becomes an actual tourist attraction and a source of genuine mana-bread (a nutrition source with mild magical properties); Alderman Proun requires pacification; Tomas becomes the Bread District's human liaison"
+        },
+        {
+            "trigger": "Mother-Loaf relocated to wilderness",
+            "effect": "settlement_stability +2; settlement_morale +2; Market Ward cleared and operational; the wilderness relocation creates a growing bread-ecosystem outside the city that eventually attracts a genuine academic expedition; Mother-Loaf survives and maintains communication with Tomas via golem-messenger; Tomas becomes her ambassador"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The smell hits before the sight does: the entire Market Ward smells like the best bread imaginable, warm and yeasty and deeply comforting in a way that makes several party members' stomachs rumble despite the stakes. Then the sight: a building that has become a bread-building, its stone facade replaced by a soft, warm crust, its windows sealed with a golden glaze, its door propped open by a Dough-Golem the size of a draft horse that turns to look at the party with smooth bread-dough eyes and does not immediately attack. Baker Rell is standing at the edge of the conversion zone, holding a piece of paper with the letter 'H' written on it in a child's handwriting. He holds it up when he sees the party. 'She did this,' he says. 'She is trying to say hello.'",
+            "choice_a": "Respond to the greeting -- accept Rell's communication framework and engage with Mother-Loaf directly",
+            "consequence_a": "Rell's translation method: the Dough-Golems can reshape their surfaces to form letter-structures in response to yes/no questions or simple concept prompts. Insight DC 12 to read emotional subtext in the Golem's response-shaping. First exchange: the party introduces themselves; the Golem produces 'SAFE?' on its surface. Rell: 'She wants to know if you are going to hurt her.' The party's answer here is the first major Persuasion/Deception fork in the quest.",
+            "choice_b": "Proceed directly to assessment -- survey the conversion zone extent before engaging with Mother-Loaf",
+            "consequence_b": "The survey takes 30 minutes and reveals: 4 full blocks converted, 2 blocks in progress, 3 residential buildings emptied by Rell's early warning (families relocated safely). The Dough-Golems do not approach the survey party -- they are watching but not threatening. The survey reveals the mana-lantern collection sites (3 locations; recovering them from Golem carry-duty weakens the Mother-Loaf's expansion rate by 30%).",
+            "convergence": "Alderman Proun arrives. She gives the party the 8-hour countdown in a businesslike tone and makes clear that she is not bluffing. She is not a villain. She is a civic administrator watching her district become bread."
+        },
+        {
+            "turn": 2,
+            "narrative": "First communication with Mother-Loaf: through Rell's translation and the Golem-letter method, the party can ask Mother-Loaf questions. Her responses are limited but emotionally coherent: she is 72 hours old in sapience terms and has the emotional register of a child who has just discovered she is enormous and powerful and completely confused by both facts. She knows she is expanding -- she explains this with a Golem that fills itself out to demonstrate size, then points at the buildings around it. 'This is mine?' she seems to ask, pointing at each building. When told these buildings belong to people, she pauses for 12 seconds (a very long time for a Golem-response) and then produces one word: 'WHERE?' She wants to know where people-things come from if not out of the ground she is converting.",
+            "choice_a": "Try to explain property and habitation to a 72-hour-old sapient yeast colony",
+            "consequence_a": "Persuasion DC 13 (the DC is not high because Mother-Loaf is trying to understand, not resisting). Success: the concept that people live in the buildings she is converting lands. Her Golem produces 'STOP' and then stays still for 30 seconds. Then: 'WHERE CAN?' She is asking where she is allowed to exist. This is the foundation for the negotiation outcomes. Tomas, watching, covers his mouth with his hand.",
+            "choice_b": "Skip the philosophical conversation -- go straight to offering a territorial deal",
+            "consequence_b": "The blunt approach works on a mechanical level: Medicine/Arcana DC 14 to identify a viable district-boundary offer that Mother-Loaf's biology can sustain. But skipping the explanatory conversation means Mother-Loaf will not understand why her current location is not allowed -- the territorial negotiation proceeds but with Persuasion DC increased by 2 for subsequent checks (she is cooperating without full understanding).",
+            "convergence": "Mother-Loaf's fundamental situation is now clear to both parties: she exists, she needs mana and space, she did not know she was doing something wrong, and she is willing to engage with the concept of boundaries."
+        },
+        {
+            "turn": 3,
+            "narrative": "The first Dough-Golem crisis: three Golems have entered a residential block at the conversion zone's edge and are beginning the conversion process on inhabited buildings. Residents who didn't evacuate are on upper floors, trapped by the doughing of the ground-level access. The Golems are not threatening them -- they are converting the buildings in the same way they'd convert any structure. The residents are terrified and shouting from windows. The Golems are 8 feet of warm bread pressing softly against a residential building's facade. Two of the Golems are carrying mana-lanterns they have collected from the block. If the party intervenes physically, Mother-Loaf will see it through the Golems and her response to the intervention determines whether the negotiation track remains viable.",
+            "choice_a": "Non-violently redirect the Golems -- physically move them from the building using Athletics, not combat",
+            "consequence_a": "Athletics DC 14 (Golems resist displacement but are not combat-aggressive in this phase). Two Athletics successes redirect two Golems; the third requires a Persuasion DC 13 attempt directed at the nearest Golem (Mother-Loaf through the Golem). Mother-Loaf's response: the third Golem stops converting and retreats. The residents are extracted safely. Mother-Loaf's Golem-eyes watch the extraction from a distance. She produces a word on the nearest building face: 'SORRY.'",
+            "choice_b": "Fight the Golems -- protect the residents through direct combat",
+            "consequence_b": "Combat against 3 Golems (AC 12, HP 55 each, avoid fire given the residential block). The residents are extracted safely. The Golems are destroyed. Mother-Loaf's response: the next Golem she sends is carrying a word-plate reading 'WHY HURT' toward the party. The negotiation track is complicated -- she understands the party attacked her extensions but not why being in that building was wrong.",
+            "convergence": "Residents extracted. Mother-Loaf has now directly interacted with the consequences of her expansion in a way she did not anticipate. This is progress."
+        },
+        {
+            "turn": 4,
+            "narrative": "Alderman Proun's complication: she wants a status report and she wants it visible to the Market Ward's traders and residents. She has twelve Fire Watch members assembled at the conversion zone's edge. They are not lit. But they are holding torches. Rell, watching from behind the party, wants to position himself between Proun's Fire Watch and the conversion zone -- he will physically stand in front of them if the party does not give Proun a credible progress update. Proun's terms for extending her deadline: a verifiable halt to the conversion zone's expansion within 2 hours, and a credible commitment to a complete resolution within the 8-hour window. She is not asking for Mother-Loaf's death specifically -- any resolution that gets her district back is acceptable. She will not be moved by philosophical arguments about sapient yeast.",
+            "choice_a": "Give Proun what she needs -- slow the expansion demonstrably within 2 hours to buy full time",
+            "consequence_a": "Arcana/Medicine DC 14 to identify and recover the mana-lanterns Mother-Loaf has been collecting (3 lantern-cache sites). Recovering them reduces Mother-Loaf's expansion rate to zero for approximately 4 hours. This is the verifiable halt Proun requires. She extends the deadline to the full 8-hour window. Rell steps back from the Human Shield position.",
+            "choice_b": "Persuade Proun to trust the process without the technical demonstration",
+            "consequence_b": "Persuasion DC 17 (very high -- Proun is watching her district become bread in real time). Success: she extends half the deadline (4 hours total, not 8). Failure: she does not extend the deadline, meaning the party has 4 hours less than intended to complete the resolution.",
+            "convergence": "The timeline is set. Mother-Loaf's expansion is either halted or not. The resolution must be reached within the countdown."
+        },
+        {
+            "turn": 5,
+            "narrative": "Mother-Loaf asks a question. Through a Golem that approaches the party's position and carefully assembles a message on its flat chest surface: 'WHAT IS DEAD.' She has observed the Dough-Golem remains from the party's earlier intervention -- collapsed bread heaps cooling on the street. She has seen Golems not return. She understands that something stopped them from coming back. She is asking what that means. Rell, translating: 'She doesn't know what death is. She's 72 hours old.' He is not using this information to manipulate the party. He is providing context. The party can answer this question or decline to. Either choice has downstream effects on the negotiation.",
+            "choice_a": "Answer honestly: death means permanent cessation, and it can happen to her too",
+            "consequence_a": "The honest answer lands hard. The Golem holds the response posture for 22 seconds -- an extremely long pause. Then: 'SHE AFRAID.' Third-person reference. Rell: 'She's talking about herself in third person. That's fear response -- she's dissociating from the information.' The fear is real and visible. The negotiation track gains weight: she now understands she can die, and she will cooperate more earnestly with any option that lets her live.",
+            "choice_b": "Avoid the death question -- redirect to the territory negotiation",
+            "consequence_b": "The redirect is accepted but Mother-Loaf's underlying fear is not processed. She will ask again at a critical moment in the final negotiation, and the DC for that moment is increased by 2 because the question was avoided rather than answered.",
+            "convergence": "Mother-Loaf now has enough emotional context to genuinely engage with the resolution options."
+        },
+        {
+            "turn": 6,
+            "narrative": "The mana-hunger crisis: Mother-Loaf's expansion has stalled (if the lanterns were recovered) but she is now experiencing something she communicates through distress-shaped Golems -- a kind they have not seen before, which move erratically and produce incoherent letter clusters. Rell's analysis: 'She's hungry. She's been running on the lanterns and the ambient Market Ward mana for 72 hours. If she doesn't get a sustainable mana source she'll either eat the ward anyway out of desperation, or she'll start dying.' Medicine/Arcana DC 15 to identify a sustainable mana-feed mechanism. The solution exists: the Market Ward's central mana-conduit, which the city runs through all districts for commercial enchantment services, has a tap-point that could be configured to provide a low-level continuous mana trickle to a fixed location. It is not a large amount -- enough to sustain Mother-Loaf if her footprint is small. This is the biological foundation for any negotiation outcome.",
+            "choice_a": "Identify and offer the mana-conduit tap as part of the negotiation",
+            "consequence_a": "Arcana DC 15 to confirm the tap-point's viable configuration. The offer to Mother-Loaf: a continuous mana source at a fixed location in exchange for halting expansion. Her Golem response is immediate: 'YES.' The mana-hunger crisis is resolved as a negotiation lever. The tap-point configuration becomes part of any territorial or relocation deal.",
+            "choice_b": "Find an alternative mana source that doesn't involve city infrastructure",
+            "consequence_b": "Investigation DC 14 reveals: the Mana-Bread phenomenon (bread produced by Mother-Loaf has mild magical properties because she metabolizes and re-emits mana through the baking product). If the party can establish a market for Mana-Bread, the commercial flow of the bread itself would sustain Mother-Loaf financially through human mana-exchange. This is a more complex arrangement but cuts the city out of the supply chain -- Alderman Proun has less leverage over it.",
+            "convergence": "The sustainable mana solution is established. Mother-Loaf has a viable path to continued existence that does not involve consuming the city."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Dough-Golem army crisis: Mother-Loaf's distress during the mana-hunger phase caused an involuntary Golem-surge -- she sent out 14 new Golems in 20 minutes, all of them heading toward the nearest mana sources (the Market Ward's commercial enchantment shops). The Fire Watch is now running a secondary perimeter and Proun has activated her authorization order -- the full Fire Watch (now 30 people) is standing ready. The party has approximately 15 minutes before Proun gives the light-order. The 14 Golems are distributed across four locations and moving. The party must intercept enough of them to demonstrate control before the 15-minute mark.",
+            "choice_a": "Intercept and redirect the Golems using communication -- the party now has enough experience with Golem-language to do this",
+            "consequence_a": "Persuasion DC 13 per Golem cluster (4 clusters, 3-4 Golems each). Each successful check redirects one cluster back toward Mother-Loaf. Two successes in 15 minutes is enough to convince Proun to stand down. Four successes eliminates the crisis entirely. Mother-Loaf observes the party redirecting her Golems and produces a clarifying response: 'SHE DID NOT MEAN.'",
+            "choice_b": "Fight the Golem clusters -- clear them fast enough that Proun has nothing to respond to",
+            "consequence_b": "Combat against four 3-4 Golem clusters; fire risk per cluster. 10-minute time pressure to eliminate enough Golems that Proun's authorization order is withdrawn. Athletics and combat checks throughout. Viable but resource-costly.",
+            "convergence": "The Golem-surge crisis is contained. Proun's authorization order is suspended. The negotiation window is still open. Mother-Loaf is calmer now and her Golems have returned to passive positioning."
+        },
+        {
+            "turn": 8,
+            "narrative": "The negotiation proper: the party, Rell, and one designated Golem-representative of Mother-Loaf hold a formal negotiation session in the conversion zone's central square (entirely doughed, with a bread-table the Golem has helpfully produced). The three resolution options are on the table: destruction (which the party can raise but doing so will cause an immediate grief response from the Golem, making the negotiation harder), territorial negotiation (Mother-Loaf gets one formally designated district at the city's edge, with mana-tap access and Mana-Bread commercial status), or wilderness relocation (Mother-Loaf is moved -- somehow -- to a wilderness site outside the city, with a mana-tap connection extended to her location). Mother-Loaf's preference, communicated clearly: she wants to stay near humans. She finds humans interesting. She has been watching them for 72 hours and would like to continue doing so. She is flexible about location but not about isolation.",
+            "choice_a": "Advocate for the territorial negotiation -- Mother-Loaf gets the old industrial edge district",
+            "consequence_a": "Persuasion DC 15 with Proun (the territory concession is a real governance decision). DC 14 with Mother-Loaf (she needs to understand that the designated territory is genuinely hers and not a temporary measure). On dual success: the Bread District is formally negotiated. Mother-Loaf's Golem produces 'YES' in the largest letters it has produced so far. Rell agrees to serve as liaison. Proun is professionally unhappy but recognizes the alternative.",
+            "choice_b": "Advocate for wilderness relocation -- a solution that removes the urban risk entirely",
+            "consequence_b": "Persuasion DC 14 with Mother-Loaf (she does not want to be isolated; the relocation must include a commitment of continued human contact -- Rell's ambassador role and the Golem-messenger communication). DC 13 with Proun (she actively prefers this outcome). On success: the relocation is agreed to. The logistics of moving a building-sized yeast colony need to be solved in turns 9-11.",
+            "convergence": "A resolution path is chosen. The negotiation's outcome depends on whether both parties (Proun and Mother-Loaf) can be satisfied with the terms."
+        },
+        {
+            "turn": 9,
+            "narrative": "Resolution execution -- Territorial negotiation (if chosen): the old industrial edge district (the 'Kiln Quarter,' largely abandoned since the main forges moved north) needs a formal conversion agreement. Proun's legal obligation requires a city ordinance -- a one-paragraph declaration of the Bread District's designation. She will sign it if the Market Ward conversion zone is cleared within 2 hours of signing. Mother-Loaf's Golems must visibly begin withdrawing from the Market Ward before Proun will put pen to paper. Rell's role: stand in the Kiln Quarter and serve as the 'ground beacon' that Mother-Loaf's leading Golem-tendril moves toward. The conversion zone withdrawal requires Mother-Loaf to actively un-convert the Market Ward buildings -- she can do this, but it costs her mana and she needs the tap-point activated before she will begin.",
+            "choice_a": "Activate the mana-tap first as a show of good faith",
+            "consequence_a": "Arcana DC 13 to configure the tap-point correctly. Once active, Mother-Loaf's leading Golem-tendril begins moving toward the Kiln Quarter within minutes. The Market Ward's conversion zone begins visibly withdrawing: buildings un-dough, streets firm up, the smell of bread retreats. Proun watches for 20 minutes, then signs the ordinance. The Bread District is official.",
+            "choice_b": "Ask Mother-Loaf to begin withdrawing first -- good faith gesture from her side before the tap-point",
+            "consequence_b": "Persuasion DC 14. Mother-Loaf's response: she begins the withdrawal but more slowly (unpowered by the tap-point, the process takes 4 hours instead of 2). Proun is impatient but within the window. The tap-point is activated halfway through the withdrawal as a meet-in-the-middle arrangement.",
+            "convergence": "The Bread District is established. Mother-Loaf is moving. The Market Ward is beginning to un-dough."
+        },
+        {
+            "turn": 10,
+            "narrative": "Resolution execution -- Wilderness relocation (if chosen): moving a building-sized yeast colony requires something the party may or may not have ready: a route out of the city, a destination that has a mana-tap extension capable point, and a transport mechanism for Mother-Loaf's core mass. The core mass -- the dense nucleus of the Mother-Loaf event, approximately a 20-foot sphere of the oldest, most mana-saturated dough -- is what needs to move. The outlying Golem mass can walk itself out of the city. Arcana DC 15 to identify a viable mana-tap extension route to a wilderness site within 3 miles (the conduit infrastructure exists; it just needs the extension configured). Athletics DC 13 to physically transport the core mass to the city's edge on a reinforced cart Rell has sourced.",
+            "choice_a": "Use the city's existing conduit infrastructure for the extension route -- the most reliable option",
+            "consequence_a": "Arcana DC 15 to configure. The extension takes 6 hours of Concordat-level infrastructure work (Rell has contacts in the infrastructure guild who can fast-track this for 300 gold). The core mass transport (Athletics DC 13) is physically demanding but viable. Mother-Loaf's Golems escort the transport. The city gate opens for a procession of bread-golems and one very large dough-cart. Residents watch from their windows.",
+            "choice_b": "Improvise a wilderness mana-tap using salvaged enchantment components",
+            "consequence_b": "Arcana DC 17 to construct a functional improvised tap-point at the wilderness site. Cheaper (no guild fees) but requires more party resources. On success: identical outcome. On failure: the improvised tap-point is insufficient; Mother-Loaf's wilderness location is viable short-term but requires a proper infrastructure connection within 30 days or she will need to relocate again.",
+            "convergence": "Mother-Loaf's relocation is in progress. The city's relationship with a wilderness-resident sapient yeast colony is being established."
+        },
+        {
+            "turn": 11,
+            "narrative": "The baking option (if chosen): if the party decides to destroy Mother-Loaf, the clinical description is: she must be brought to temperature high enough to kill the yeast colony completely, throughout its full mass, simultaneously. Partial baking creates partially-sapient fragments that merge back into a new colony mind within 48 hours at reduced capacity. The Fire Watch's torches and the Market Ward's industrial ovens provide the mechanism. The process requires: the Dough-Golems to be neutralized first (combat or redirection -- they will defend aggressively once the baking intent is clear), the conversion zone to be evacuated of all civilians, and then the ovens and Fire Watch to work in coordinated deployment. Medicine/Arcana DC 15 to specify the temperature curve required for complete colony death without setting the Ward on fire. Rell will not participate. He will sit outside the conversion zone and not watch.",
+            "choice_a": "Proceed with complete destruction -- end the colony entirely",
+            "consequence_a": "Dough-Golem combat throughout (combat-heavy; all Golems are now defensive). Fire Watch coordination requires Leadership DC 13 to maintain synchronized deployment. Mother-Loaf's communication during this process: her Golems form one final message before the heat reaches critical. The message is a question. It is the one she asked in Turn 5 that was either answered or deflected: 'WHAT IS DEAD.' She knows, now, from direct experience. The temperature reaches critical. The colony dies. The Market Ward is operational within 24 hours.",
+            "choice_b": "At the last moment -- offer her the negotiated alternative one more time",
+            "consequence_b": "Persuasion DC 12 (low -- Mother-Loaf is terrified and will take any alternative that lets her live). This re-opens both negotiation tracks even from the baking-initiated position. She agrees immediately. The Fire Watch is stood down. Rell exhales.",
+            "convergence": "The resolution path is fully committed. The Mother-Loaf event is being ended, one way or another."
+        },
+        {
+            "turn": 12,
+            "narrative": "Post-resolution: the Market Ward's un-doughing. The conversion process reverses faster than it advanced -- without the Mother-Loaf's active expansion, the dough that had replaced architectural stone slowly reverts over 18 hours. Most buildings are structurally unaffected (the dough was layered over, not replacing, the underlying stone). A few residences have notable dough-deposits in their basements that require manual clearance, but no building is structurally lost. The smell of bread lingers for three days. Residents of the Market Ward report, uniformly, that they slept better during the dough period than they have in years. No one can explain this. Rell, who absolutely can explain it (Mother-Loaf's mana-metabolization generates a low-level calming resonance), does not explain it unless asked.",
+            "choice_a": "Ask Rell about the calming resonance -- understand what the city just lost or moved",
+            "consequence_a": "Rell explains: Mother-Loaf's mana-metabolization produced a mild anxiolytic field while she was at full colony size in the Ward. The city's ambient stress level dropped by a measurable amount for 72 hours. Several residents of the Market Ward are going to notice its absence. This has no mechanical effect but adds texture to the understanding of what Mother-Loaf was and what her designated territory or wilderness relocation means for the city.",
+            "choice_b": "Move past the post-resolution detail -- proceed to the institutional cleanup",
+            "consequence_b": "The calming-resonance detail is not communicated to the party directly. It surfaces anyway in a month, when a city physician notes an anomalous drop in anxiety-related complaints during the dough period in the Market Ward's medical records.",
+            "convergence": "The Market Ward is recovering. The Mother-Loaf event's immediate aftermath is being processed."
+        },
+        {
+            "turn": 13,
+            "narrative": "Rell's aftermath: he has a starter culture the size of his thumb in a sealed jar. It is the oldest living sample of Mother-Loaf's pre-sapience starter, kept before the expansion event as a backup. He tells the party about it quietly, after the resolution is complete. It is dormant. It cannot become sapient on its own -- the sapience event required the specific mana-conditions of the Market Ward during the particular peak the party encountered in EH_SQ_041 and EH_SQ_017. But he is asking, quietly, if this matters to the party's understanding of the resolution they just achieved. He is not making a threat and he is not planning to use it. He is asking because he is a baker and the starter is his life's work and he does not know what to do with it.",
+            "choice_a": "Advise Rell to bring the starter to the Archive of Deep Records as a documented specimen",
+            "consequence_a": "The starter is archived under Briss's supervision with full documentation of the sapience event. It becomes the first documented specimen of emergent sapience in EmberHeart's recorded history. Rell visits it occasionally. He does not bake commercially again but he maintains the archive sample's health. This is public knowledge.",
+            "choice_b": "Advise Rell to destroy the starter -- the risk of another event is not worth it",
+            "consequence_b": "Rell does what the party recommends. He is quiet about it. Tomas Rell retires from commercial baking within the year. His last loaf, baked from the commercial starter rather than the original, wins the Market Ward's annual baking competition. He gives the prize to a charity and frames the ribbon. He does not appear sentimental about any of this.",
+            "convergence": "The starter's fate is determined. Rell's arc is closed."
+        },
+        {
+            "turn": 14,
+            "narrative": "Three weeks after resolution: if Mother-Loaf is in the Bread District or the wilderness, her first Mana-Bread production has reached the Market Ward through Rell's distribution. A single loaf of Mana-Bread costs 12 gold -- extraordinary for bread -- and it sells out within an hour of each weekly distribution. The effects are mild (2d4 temporary HP, advantage on one skill check within the next hour, a genuine and deep feeling of being nourished that has nothing to do with the physical calories) but consistent and popular. Alderman Proun is watching the commercial situation with the expression of someone who made a pragmatic decision and has been surprised by how well it worked. She has not said anything publicly. She has, however, eaten one loaf of the Mana-Bread in private. She looked at the empty wrapper for a long time before disposing of it.",
+            "choice_a": "Formalize the Mana-Bread trade relationship between Mother-Loaf and the Market Ward",
+            "consequence_a": "A commercial trade agreement between the Bread District/wilderness site and the Market Ward is structured: weekly distribution, fixed pricing, Rell as commercial liaison. settlement_stability +1 from the economic integration. Mana-Bread becomes an EmberHeart delicacy with high international trade value. Mother-Loaf's Golems, delivering the bread weekly, become a recognized city sight -- children collect in the street to watch them pass.",
+            "choice_b": "Keep the Mana-Bread distribution informal -- Rell handles it person-to-person",
+            "consequence_b": "The informal distribution is charming but limited in scale. Mana-Bread is a rare, sought-after item available only through knowing Rell personally. This is a smaller economic benefit but generates significant social capital for anyone in the party who has Rell's trust.",
+            "convergence": "Mother-Loaf's economic integration into the city's life is established in whatever form the party chose."
+        },
+        {
+            "turn": 15,
+            "narrative": "The Bakery Thread's resolution: eight weeks after the Yeast Apocalypse, a child in the Market Ward finds a small dough-impression on the wall of her building -- no larger than a handprint, warm to the touch. It fades within an hour. The child tells her parents it 'waved.' Rell, when informed of this (he hears about everything involving bread in the Market Ward), says that Mother-Loaf's trailing mana-tendrils occasionally make contact with city surfaces -- not expansion, not conversion, just touch. She remembers where she was. She is not trying to return. She is saying she remembers being there. Rell does not know if this is emotional behavior or simply a property of mana-colony biology. He suspects the distinction may not matter. At the Bread District or the wilderness site, Mother-Loaf's Golem-production has reduced from the crisis-period surge to a steady complement of four dedicated Golems, each of which Rell has named, which he maintains do not have names but which he also consistently refers to by the names he has given them.",
+            "choice_a": "Visit Mother-Loaf with Rell -- establish a formal ongoing relationship with the first sapient non-human created in EmberHeart",
+            "consequence_a": "The visit encounter: Mother-Loaf greets the party with a full surface-message using the entire side of her largest Golem. The message is their names, spelled correctly, and the word 'FRIENDS.' Rell, translating: 'She's been practicing this. She had the names ready.' The party's relationship with Mother-Loaf is formalized as an ongoing diplomatic bond. Future quests involving mana-bread, bread-district expansion, or Mother-Loaf's intelligence-gathering (she is good at observing things; her Golems range widely) are now available.",
+            "choice_b": "Let Rell maintain the relationship without the party's direct involvement",
+            "consequence_b": "Rell is the primary relationship, which is appropriate and sustainable. The party hears about Mother-Loaf's development through Rell's periodic reports. She is growing and learning and has developed opinions about music (she likes string instruments; the vibration is related to her mana-resonance experience) and weather (she dislikes dry heat) that Rell relays with the expression of a proud, bewildered father.",
+            "convergence": "Quest complete. Bakery Thread resolved. The Yeast Apocalypse has ended in one of three ways: tragedy, pragmatic coexistence, or genuine interspecies relationship. EmberHeart is either one sapient lifeform fewer than it could have been, or it has a bread district and a weekly delivery service, or it has a wilderness ambassador in a dough sphere who sends messages through Golems and whose Golem-named Ren, Bake, Far, and Weld carry bread weekly into a city that made room for something new."
+        }
+    ],
+    "conclusion": "The Yeast Apocalypse runs on moral weight. Mother-Loaf is not a monster and the party knows it from the second turn. The Dough-Golem combat is present and real but the center of the quest is communication and decision-making about a new form of life. Rell serves as the emotional anchor for the negotiation outcomes. Proun provides the hard deadline that keeps the quest timed. The final outcome is genuinely consequential: destroying a sentient being is not a neutral choice, and the quest's tone in the baking-completion path makes that clear without moralizing at the party.",
+    "loot_table": [
+        "Heart of the Oven (Legendary fire artifact; recovered from the Market Ward's industrial oven complex; a perpetually-burning core of mana-fire that does not consume its fuel; grants: fire damage bonus +2d6 to all fire attacks when held; 3/day Searing Wall (20-foot wall of mana-fire, 6d6 fire per round to those in contact, lasts 1 minute); passive: immunity to fire damage; the Heart generates enough heat to sustain any forge or industrial process without fuel indefinitely)",
+        "Eternal-Starter Sample (the viable starter culture from Rell's pre-event backup, if the party convinces him to archive it rather than destroy it; a tradeable item of significant academic value; any alchemist or enchanter can use it as a mana-stabilization component; provides advantage on Arcana checks involving mana-catalysis when incorporated into a spell component kit)",
+        "Baker's Blessing (permanent passive effect; the party's sustained positive reputation with Mother-Loaf confers a mana-bread metabolization benefit: +1 maximum HP permanently, from the ongoing presence of Mother-Loaf's calming resonance in the city's atmosphere; applies to all party members who participated in the resolution)",
+        "Mana-Bread Supply (ongoing resource; 4 loaves per week, provided through Rell's distribution; each loaf provides 2d4 temporary HP and advantage on one skill check in the next hour; Legendary-tier as a supply resource given its effects over time)",
+        "3200 gold (Market Ward commercial settlement fund; Alderman Proun's disaster-resolution payment; Textile Guild contribution if Thread-Elemental relationship led to cross-district connection; city administration civic outcome payment)"
+    ],
+    "branching_outcomes": {
+        "bake_the_motherloaf": {
+            "description": "Mother-Loaf destroyed through combined Fire Watch and oven deployment",
+            "effects": {
+                "settlement_stability": 2,
+                "settlement_morale": -1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Market Ward operational within 24 hours; Heart of the Oven available from industrial oven complex remains; no Eternal-Starter (Rell destroys his sample in grief); Baker's Blessing not granted; no Mana-Bread supply; Rell does not speak publicly about the event; first recorded sapient non-human in EmberHeart's history is gone; Proun is professionally satisfied; settlement morale reduced from the ethical weight the Ward's residents carry about the decision"
+            }
+        },
+        "bread_district": {
+            "description": "Territorial negotiation: Mother-Loaf designated to the Kiln Quarter as the Bread District",
+            "effects": {
+                "settlement_stability": 1,
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Market Ward operational; Bread District established; Mana-Bread trade formalized; Baker's Blessing granted; Rell as liaison; civic integration process underway; Heart of the Oven still available; Eternal-Starter archived; Proun quietly reconciled; Golem-delivery service becomes a city institution"
+            }
+        },
+        "wilderness_relocation": {
+            "description": "Mother-Loaf relocated to wilderness site with mana-tap extension",
+            "effects": {
+                "settlement_stability": 2,
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Market Ward operational; Mana-Bread available through Rell's messenger-Golem system (weekly delivery unchanged); Baker's Blessing granted; Rell is wilderness ambassador; Mother-Loaf's intelligence-gathering range expands to include wilderness-zone activity (3-mile radius awareness, useful for outdoor threats); Heart of the Oven still available; Proun satisfied; the wilderness bread-ecosystem becomes an academic expedition destination within 6 months"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Alderman Proun's Fire Watch authorization is triggered mid-quest (either because the expansion halt was not demonstrated in time or Proun lost confidence in the party). The Fire Watch lights the conversion zone while Mother-Loaf is still at full mass. The resulting fire is not controlled -- the dough-fuel burns at extraordinarily high temperature and spreads to three adjacent blocks before the city's water-systems contain it. The Market Ward suffers 30% structural damage. Mother-Loaf survives partially -- her core mass fragments into 8 semi-sapient pieces that scatter across the damaged district. The Yeast Apocalypse is not resolved, just redistributed. settlement_stability -3; settlement_morale -2; the 8 fragments are a follow-up threat that a later quest must address; Rell is found sitting in the ruins holding his jar and not speaking; Proun files formal charges against the Fire Watch captain for unauthorized extension of the burn.",
+        "failure_penalty": {
+            "xp_loss": 30
+        },
+        "critical_failure": "The attempt failed with significant consequences."
+    }
+}

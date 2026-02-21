@@ -1,0 +1,148 @@
+{
+    "id": "SQ-173",
+    "title": "The Rat-Funeral",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-002"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Lower Ward sewer workers report rats holding a gathering around a dead Copper-Tail, preventing workers from accessing the junction"
+    },
+    "location": "Lower Ward - Sewer Junction 7 and surrounding tunnels",
+    "district": "Lower Ward",
+    "thread": "Vermin",
+    "estimated_duration": "45 minutes",
+    "key_npcs": [
+        "Sewer-Worker Bram Hoyle (quest-giver, completely baffled)",
+        "The Funeral Rats (dozens, organized, hostile if interrupted)",
+        "The Dead Copper-Tail (the deceased, unexpectedly important)",
+        "Concordat Record Fragment (found inside deceased's body cavity)"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Animal Handling",
+        "Insight checks",
+        "Light combat (if funeral is disrupted)",
+        "Medical examination (of deceased rat)"
+    ],
+    "permanent_effects": [
+        "Concordat Record Fragment recovered (encoded mission data)",
+        "Player discovers Copper-Tails have individual assigned mission IDs",
+        "Player learns the rats have something resembling grief-protocol"
+    ],
+    "branching_outcomes": {
+        "observe_respectfully": {
+            "description": "Allow the funeral to complete, observe and document",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Funeral ritual reveals Copper-Tails transmit mission data at death\u2014the body of the deceased is a data-package",
+                "ambient_hazard": "Rats note your respectful presence. Shadow-Rat surveillance of player decreases by 1 tier for 2 sessions"
+            }
+        },
+        "interrupt_and_seize": {
+            "description": "Break up the funeral and take the deceased for examination",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "ambient_hazard": "Rat hostility rating increases permanently by 1 tier. All subsequent Vermin encounters have +1 enemy unit"
+            }
+        }
+    },
+    "description": "Sewer-Worker Bram Hoyle has discovered sixty rats completely immobilized in a tight, perfectly circular formation deep in the sewage junctions, engaged in a terrifying 'Rat Vigil'. They hold a low, rhythmic hum over a single dead vermin carrying advanced, heavy metallic implants. The party must carefully disrupt the bizarre vigil, retrieve the central, highly valuable augmented corpse, and survive the unified psychic backlash of a hive-mind that does not behave like normal animals.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Sewer-Worker Bram Hoyle is a massive, heavily scarred man who is profoundly used to rats and does not typically find any vermin remotely distressing. He currently looks absolutely terrified. 'Exactly sixty of them,' he aggressively whispers, motioning with a shaking lantern toward the heavy iron sewer junction. You can perfectly hear a strange, incredibly faint noise echoing off the wet stone\u2014not squeaking, but something significantly lower, much more rhythmic. A deeply unified, sickening hum, like a single, perfectly sustained mechanical note held by dozens of tiny, wet voices. 'They have been sitting perfectly still there all night. The massive dead one lying in the exact middle, I genuinely do not know if it was there first or if they purposefully brought it. And they utterly refuse to move. I violently kicked a heavy iron bucket directly near them. They just... turned in perfect unison and looked at me. Then they turned perfectly back.' He pauses, wiping pure sweat from his forehead. 'It was absolutely not an animal look.'",
+            "choice_a": "Approach the junction slowly, with no threatening movements (Animal Handling DC 11)",
+            "consequence_a": "You carefully extend a long, perfectly balanced iron hook smoothly over the humming circle, decisively snagging the heavy, metallic corpse. You successfully deeply reel it back into the shadows smoothly without touching a single living rat.",
+            "choice_b": "Observe from a distance and document the ritual structure (Investigation DC 12)",
+            "consequence_b": "You violently hurl a highly contained, rapidly expanding burst of intense magical flame directly over their perfect circle. The intense, searing heat instantly breaks their deeply terrifying unified trance, rapidly scattering the heavily singed vermin in absolute, squeaking terror.",
+            "convergence": "As the unified hum abruptly completely breaks, the heavy, metallic corpse violently splits open in your possession, rapidly leaking a highly toxic, glowing green 'data-fluid' that immediately begins brutally burning cleanly through the stone floor."
+        },
+        {
+            "turn": 2,
+            "narrative": "The humming shifts in pitch. You recognize the pattern now\u2014you've heard it before if you've used the Squeaker-Box (or in the ambient rat-chitter of the lower city): it is Concordat chitter-code, but slowed, deepened, layered by 60 voices simultaneously. They are not grieving in any human sense. They are transmitting. The dead Copper-Tail's body is the subject of the transmission. They are reading from it\u2014the way an archivist reads from a document\u2014and broadcasting the contents across the network. This is a data-transfer ceremony, not a burial.",
+            "choice_a": "Attempt to record the transmission using any available means (Arcana DC 13, or Squeaker-Box if held)",
+            "consequence_a": "Success (Squeaker-Box present): Full translation: the dead Copper-Tail's mission record. 40 mana-infrastructure sabotage points, each logged with location and damage assessment. This is a mission completion report. (+2 Lore). Success (without device, DC 13 Arcana): You recognize the structure and frequency. Can't translate, but pattern is recorded for later. (+1 Lore)",
+            "choice_b": "Simply watch and let the ceremony complete without interference (Insight DC 10)",
+            "consequence_b": "Success: The ceremony takes 40 more minutes. Over that time you observe: the rats rotate in the outer ring (they have watches), some arrive fresh, some leave, but the inner circle never changes. When it ends, the inner circle disperses first\u2014mission accomplished. (+1 Lore, full observation record)",
+            "convergence": "Bram Hoyle, watching from the access ladder, whispers: 'It's organizing itself. Like a military unit.' He looks at you. 'My grandfather was in the city guard. That's what he said a military debrief looks like. You report, you're released. That's a debrief.'"
+        },
+        {
+            "turn": 3,
+            "narrative": "When the inner circle disperses, three rats remain with the body: two standing guard, one\u2014larger, broader, with a notably worn look around its implants\u2014sitting with its forepaws resting on the dead Copper-Tail's body. This remaining rat does not look like it is following protocol. It looks like it has stayed of its own accord. Its eyes are not the bright blue of active units\u2014they are dim, pulsing slow. It has been with the body since before the ceremony. You get the unsettling feeling that whatever architecture the Concordat built into these creatures, something in this one has been running longer and evolved further than intended.",
+            "choice_a": "Approach the remaining rat gently, without weapons (Animal Handling DC 14, Insight DC 12)",
+            "consequence_a": "Success: The rat holds its ground as you approach. At arm's length, it looks up at you, and what you see in its face is not animal. Not human either. Something in between. It permits you to touch the body beside it. Then it steps back and waits, watching. It is giving you permission. (+1 Lore, +1 Faction: Strange Rapport with Old-Unit rats)",
+            "choice_b": "Keep your distance and examine the body from here using available equipment (Investigation DC 13)",
+            "consequence_b": "Success: From six feet, you observe the body's decay pattern is unusual\u2014slower than it should be in a sewer environment. The Concordat bioware in the Copper-Tail is still running on residual power, preserving the body for data-transmission purposes. (+1 Lore)",
+            "convergence": "The old, worn rat watches you. It squeaks once\u2014a single note, not a report. Then it walks away down the sewer tunnel with the deliberate slowness of something very tired. Bram says nothing."
+        },
+        {
+            "turn": 4,
+            "narrative": "With the funeral concluded and the rats dispersed, you can examine the body. The dead Copper-Tail is a marvel of pre-Scourge engineering: the copper-filament network beneath the skin is intact and still faintly powered, individual mana-wire sabotage tools stored in hollow bone-cavities in the foreleg, and\u2014most remarkably\u2014a data-storage node embedded behind the left eye that the ceremony was reading from. With the right tools, the node still has readable content.",
+            "choice_a": "Extract the data-storage node intact for analysis (Medicine or Arcana DC 14)",
+            "consequence_a": "Success: The node comes free cleanly. On examination: a Concordat Record Fragment, containing 40 sabotage mission logs, a partial map of High Ward mana-wiring, and\u2014crucially\u2014a unit identification code: CT-2847. This rat had a name. A designation. It was unit 2847 in the Copper-Tail program. (+2 Lore, Concordat Record Fragment obtained)",
+            "choice_b": "Examine the sabotage tools without removing the node (non-destructive approach)",
+            "consequence_b": "You study and sketch the sabotage apparatus in detail. The tools are elegant: piezoelectric disruptors that cause mana-wire corrosion on contact, precise enough to target a single wire without disturbing adjacent infrastructure. This Concordat-Tail was not eating wires randomly. It was performing targeted surgical infrastructure damage. (+1 Lore, sabotage methodology documented)",
+            "convergence": "Bram Hoyle kneels beside the body. 'It's smaller than my fist,' he says. 'Smaller than my fist and it's been dismantling the city's infrastructure, one wire at a time, for\u2014how long?' You tell him the Concordat program existed before the Scourge. '200 years,' he says. He is quiet for a while. 'We never noticed.'"
+        },
+        {
+            "turn": 5,
+            "narrative": "While you've been examining the body, a fresh group of Copper-Tails has appeared in the junction. They are not here for the funeral\u2014that is over. They are here because the junction contains a mana-wire access panel that CT-2847 had logged as 'in progress' in its mission record. The next unit is here to complete the deceased's work. They are efficient. Professional. The mission does not stop because the unit does. Five Copper-Tails begin moving toward the access panel with purpose.",
+            "choice_a": "Block the access panel and drive the Copper-Tails off (Combat DC 11)",
+            "consequence_a": "Success: Copper-Tails are durable but not built for direct combat\u2014they are saboteurs. You drive them off in under two minutes. The access panel is secured. (+1 Progress)",
+            "choice_b": "Let them access the panel but document exactly what sabotage they perform (Stealth + Investigation DC 13)",
+            "consequence_b": "Success: You observe them executing CT-2847's final mission note: severing one specific mana-wire at Junction 7. You let it happen but understand exactly what was cut and why. The targeted wire feeds the High Ward emergency lighting. (+1 Lore, sabotage pattern documented, but 1 infrastructure damage logged)",
+            "convergence": "Either way, the Copper-Tails file out after their task is complete or abandoned. CT-2847's mission record is now yours. And somewhere in the data-node, you find a personal notation\u2014not a mission log, not a status report. A single repeated symbol the Concordat archivist in you recognizes as a grief marker from pre-Scourge citizen records. CT-2847 added it itself. For itself."
+        },
+        {
+            "turn": 6,
+            "narrative": "The grief marker is a shock. The Concordat rats were designed as tools\u2014bio-mechanical appliances. But something has happened over 200 years that the original engineers did not intend: some units have developed. Not sapience, not human-level consciousness, but something. A sense of loss. A capacity to mark the end of another unit as significant. The old, worn rat that sat with the body\u2014it was not following protocol when it stayed. The Concordat did not program loyalty. The rats built it themselves, over generations, in the dark.",
+            "choice_a": "Document this finding carefully and report it to the Mage Guild for ethical analysis",
+            "consequence_a": "The Guild's ethicist will later tell you: 'If they are developing genuine emotional response, the question of what they are becomes considerably more complex. They may not be weapons anymore. They may be something else.' (+2 Lore, Vermin-sentience question raised officially)",
+            "choice_b": "Keep this finding private\u2014you need time to think about what it means before sharing it",
+            "consequence_b": "The information sits with you heavily. The next time you are about to strike a rat in combat, you will pause for a moment. That is all. But it is something. (+1 Insight permanently, re: Vermin encounters)",
+            "convergence": "Bram gets his junction access back. He calls the Watch to report the sabotage. Walking out of the sewer, you look at the ordinary rats that scatter from your feet and wonder: which of them have been here for 200 years? Which of them have names?"
+        },
+        {
+            "turn": 7,
+            "narrative": "Filing your report at the Watch station, you are assigned to follow up on the mana-wire sabotage map from CT-2847's record: 40 locations, most in the High and Lower Wards. You don't have to act on all of them today\u2014but as a starting point, the three highest-priority targets (Junction 7, the Western Cistern mana-relay, and the Archive mana-trunk) need immediate inspection. The archived Concordat mission log is a complete guide to where the city is most vulnerable.",
+            "choice_a": "Inspect all three priority targets yourself (Athletics, 2-hour sweep)",
+            "consequence_a": "Success: All three show evidence of ongoing Copper-Tail attention. Junction 7: sabotage in progress (you witnessed it). Western Cistern relay: 60% degradation, 2 weeks from critical failure. Archive trunk: untouched, next in queue. (+1 Progress, crisis identified early)",
+            "choice_b": "Delegate the inspections to the Watch and provide CT-2847's map as a guide",
+            "consequence_b": "The Watch inspector reviews the map and goes pale. 'This is a map of how to take down every major mana-system in the city sequentially, ordered by interdependency. This is a city-shutdown plan.' He files it as a Category A threat. (+2 Settlement Stability from early response, Watch fully mobilized)",
+            "convergence": "CT-2847's mission record has given you the Concordat's infrastructure attack plan. They have been working it methodically for 200 years. At current pace, the critical cascade begins in approximately 18 months. The question is: what is the cascade for?"
+        },
+        {
+            "turn": 8,
+            "narrative": "The final task is the Concordat Record Fragment\u2014CT-2847's data node. You bring it to the best analyst available, a retired Concordat scholar named Provost Anwick who has spent forty years translating pre-Scourge documents without fully understanding their context. He is old and dry and brilliant. He reads the fragment in the original Concordat notation and says: 'This is a Phase 3 Preparation Document. Phase 3 of what?' He finds the header. He reads it. He sets the fragment down very carefully. 'Phase 3 of the Reactivation Protocol. They're not trying to destroy the city. They're trying to power something up.'",
+            "choice_a": "Press Anwick for everything he knows about Concordat Reactivation Protocols",
+            "consequence_a": "He works for three hours. His notes fill six pages. Summary: 'Reactivation Protocol appears to be a revival procedure for something large, pre-Scourge, that went dormant during the event. The infrastructure sabotage is not random\u2014it's redirecting mana-flow. Toward a single point.' He cannot identify the destination. (+3 Lore, major Concordat reveal)",
+            "choice_b": "Take the fragment to the Mage Guild's Concordat specialist for independent analysis",
+            "consequence_b": "The specialist takes three days. Her conclusion matches Anwick's independently: mana-redirection protocol, toward an unknown central point. 'Find the center of the sabotage map geometry,' she says. 'That is what they are waking up.' (+3 Lore, independently confirmed)",
+            "convergence": "Quest Complete. CT-2847 died completing a mission that its creators set for it 200 years ago. It developed grief in the dark. It carved a grief marker for itself on its last record. And it was building, one mana-wire at a time, toward the reactivation of something none of you can yet name."
+        }
+    ],
+    "conclusion": "The eerie Rat Vigil is violently dispersed, and the implanted corpse is safely secured. Analysis of the dead rat's heavy metallic core reveals it was operating as a localized data-relay, proving the vermin are transmitting massive amounts of organized intelligence through their terrifying collective hums.",
+    "loot_table": [
+        "Concordat Record Fragment CT-2847 (mission log, infrastructure map, 40 sabotage points)",
+        "Copper-Tail Sabotage Apparatus (intact, craftable into precision tools)",
+        "Provost Anwick's Analysis Notes (6-page Reactivation Protocol summary, key lore document)",
+        "Sewer Worker's Guild Hazard Payment: 250 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Copper-Tail continues CT-2847's mission uninterrupted, Junction 7 mana-wire fully severed. High Ward emergency grid offline. -2 Settlement Stability, -1 High Ward function.",
+        "failure_penalty": {
+            "xp_loss": 2847
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

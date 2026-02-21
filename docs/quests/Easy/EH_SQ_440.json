@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_440",
+    "title": "The Black Crop",
+    "difficulty": "Easy",
+    "xp_reward": 420,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Agricultural Zone -> The East Fields",
+    "district": "Agricultural Zone",
+    "thread": "Community & Survival",
+    "description": "A blight has swept the East Fields, turning the wheat heads black and hollow. Three farmer families stand to lose their entire harvest. Agronomist Liss believes the blight can be stopped but needs someone to identify the initial infected plot and isolate it.",
+    "key_npcs": [
+        "Agronomist Liss",
+        "Farmer Elder Wen"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The blackened wheat crumbles to ash-like dust when you touch it. Liss examines a sample under a magnifying lens and identifies Ashfungus \u2014 a soil-borne pathogen that spreads through root contact. The initial infected plot is the key to stopping the spread.",
+            "choice_a": "Walk the field boundaries systematically looking for the furthest advanced blight pocket",
+            "consequence_a": "You find a corner of the south field where the blight is densest \u2014 a patch about twenty metres across showing total infection.",
+            "choice_b": "Ask Farmer Elder Wen which plot received new soil amendment this season",
+            "consequence_b": "Wen recalls that Plot Seven received an experimental composting treatment from a travelling agronomist three weeks ago \u2014 right when the blight started."
+        },
+        {
+            "turn": 2,
+            "narrative": "The initial infected plot is identified. Liss says the only way to stop the spread is to burn it \u2014 and burn it now, before tonight's wind spreads the ash.",
+            "choice_a": "Burn the infected plot immediately with fire-starting tools",
+            "consequence_a": "The plot burns in forty minutes. Adjacent crops are saved.",
+            "choice_b": "Create a firebreak trench around the infected plot before burning to protect adjacent crops",
+            "consequence_b": "The trench takes two hours to dig but ensures no embers reach the healthy crop. A clean burn."
+        },
+        {
+            "turn": 3,
+            "narrative": "Liss wants to test the soil before replanting to ensure the blight is fully extinguished.",
+            "choice_a": "Volunteer to help Liss collect soil samples from the burned patch and adjacent areas",
+            "consequence_a": "Samples show the adjacent soil is clean. Replanting can begin in a week.",
+            "choice_b": "Suggest the farmers rotate the burned plot to a different crop variety that is Ashfungus-resistant",
+            "consequence_b": "Liss agrees. She provides a seed variety from the Academic Quarter's agricultural vault."
+        }
+    ],
+    "branching_outcomes": {
+        "soil_tested": {
+            "description": "Soil sampled and cleared for replanting.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Agronomist's Soil Report",
+                "reputation_change": {
+                    "Agricultural Zone": 14
+                }
+            }
+        },
+        "crop_rotated": {
+            "description": "Ashfungus-resistant variety planted in burned plot.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Resistant Crop Seed Packet",
+                "reputation_change": {
+                    "Agricultural Zone": 18
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Agronomist's Soil Report",
+        "Resistant Crop Seed Packet",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Soil sampled and cleared for replanting."
+}

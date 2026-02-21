@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_423",
+    "title": "The Glass Vein",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Ridge -> The Deep Mine Section 4",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "Miners in Ridge Section 4 have struck an unusual vein \u2014 not ore, but a substance that looks and feels like glass and resonates faintly when spoken to. Mining Foreman Ness has halted the dig and wants the anomaly assessed before proceeding.",
+    "key_npcs": [
+        "Foreman Ness",
+        "Ridge Alchemist Tev"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The vein runs thirty feet into the rock face, glowing a faint amber. Miners nearby report dreaming vividly for the first time in years. One miner claims he spoke to his dead father. Foreman Ness is pragmatic \u2014 either this has value or it's dangerous, and he needs to know which.",
+            "choice_a": "Touch the vein directly to assess its properties",
+            "consequence_a": "An immediate, overwhelming sensation of interconnectedness fills you \u2014 not frightening but deeply alien. You understand instinctively that this material responds to intent.",
+            "choice_b": "Have Alchemist Tev analyse a surface sample without anyone touching the intact vein",
+            "consequence_b": "Tev identifies Resonant Crystal \u2014 a Pre-Scourge alchemical substrate used in communication and memory-storage devices."
+        },
+        {
+            "turn": 2,
+            "narrative": "Resonant Crystal has both commercial and historical value, but it affects people's dreams and emotional states through proximity. The miners are not in danger but extended exposure may be unhealthy.",
+            "choice_a": "Recommend Ness continue mining the crystal under controlled conditions for the Academic Quarter",
+            "consequence_a": "Tev supervises. Several carefully harvested fragments are secured for study.",
+            "choice_b": "Recommend Ness seal the vein and restrict access pending full research",
+            "consequence_b": "Ness seals off the section. The anomaly is documented for future research under safer conditions."
+        },
+        {
+            "turn": 3,
+            "narrative": "The miners who experienced the dreams need to be accounted for.",
+            "choice_a": "Arrange for them to speak formally with an Academic Quarter researcher about their experiences",
+            "consequence_a": "Valuable anecdotal data is gathered. Three miners volunteer for continued study.",
+            "choice_b": "Simply ensure they are rotated out of Section 4 and monitored for well-being",
+            "consequence_b": "All affected miners are moved to unaffected sections. No lasting effects are reported."
+        }
+    ],
+    "branching_outcomes": {
+        "crystal_studied": {
+            "description": "Resonant Crystal harvested and sent for academic study.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Resonant Crystal Fragment",
+                "reputation_change": {
+                    "Ridge": 14,
+                    "Academic Quarter": 10
+                }
+            }
+        },
+        "vein_sealed": {
+            "description": "Crystal vein sealed pending future research.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Resonant Crystal Fragment",
+        "Mining Survey Report",
+        "180x Gold Coins"
+    ],
+    "conclusion": "Resonant Crystal harvested and sent for academic study."
+}

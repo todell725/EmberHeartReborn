@@ -1,0 +1,74 @@
+{
+    "id": "SQ-259",
+    "title": "The Silk Road",
+    "difficulty": "Epic",
+    "xp_reward": 1800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-003"
+        ]
+    },
+    "location": "High Ward -> The Silk Market",
+    "district": "High Ward",
+    "thread": "Weaver",
+    "description": "Following rumors of the Weaver, you investigate the luxury Silk Market. The nobles are buying garments woven with mind-altering, magical silk that subjugates their free will.",
+    "key_npcs": [
+        "Silk Merchant",
+        "Mind-Controlled Nobles"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Merchant's stall is guarded by three enthralled Wardens wearing the magical silk cloaks.",
+            "choice_a": "Cut off their cloaks to break the spell",
+            "consequence_a": "You gracefully slice the cloaks. The Wardens collapse, confused but alive.",
+            "choice_b": "Kill the Wardens to reach the merchant",
+            "consequence_b": "You clear the guards efficiently, but their deaths will anger the Council."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Merchant tries to wrap you in a massive bolt of subjugation silk.",
+            "choice_a": "Burn the silk with a fire spell",
+            "consequence_a": "The silk is highly flammable. It burns, creating a massive fire in the market. The merchant is caught in the blaze.",
+            "choice_b": "Dodge the silk and pin him to the wall",
+            "consequence_b": "You capture him alive and secure the remaining, highly valuable silk safely."
+        }
+    ],
+    "branching_outcomes": {
+        "market_burned": {
+            "description": "You burned the silk, destroying the market stall.",
+            "unlocks": [
+                "SQ-260"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "High Ward": -20
+                }
+            }
+        },
+        "merchant_captured": {
+            "description": "You captured the merchant and the silk seamlessly.",
+            "unlocks": [
+                "SQ-260"
+            ],
+            "consequences": {
+                "item_reward": "Bolt of Subjugation Silk",
+                "reputation_change": {
+                    "High Ward": 30
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Bolt of Subjugation Silk",
+        "500x Gold Coins"
+    ],
+    "conclusion": "You burned the silk, destroying the market stall.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

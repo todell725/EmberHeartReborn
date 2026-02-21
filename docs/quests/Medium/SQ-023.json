@@ -1,0 +1,155 @@
+{
+    "id": "SQ-023",
+    "title": "The Hollow-Men's Choir",
+    "xp_reward": 800,
+    "prerequisites": "None",
+    "description": "A group of 'Hollow-Men'\u2014people whose souls were harvested by the Scourge\u2014have gathered in the 'Shattered-Square' to sing.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Shattered-Square is a wasteland of white rubble and tilted statues. The Hollow-Men stand in a circle, their mouths open and perfectly still. The sound coming from them is a harmonic, vibrating hum that makes the loose stones on the ground dance and spin.",
+            "choice_a": "Join the circle to feel the frequency (Wis DC 13)",
+            "consequence_a": "Success: You feel a sense of 'Collective-Peace'. (+1 Secret)",
+            "choice_b": "Disperse the gathering before it's too late (Str DC 12)",
+            "consequence_b": "Success: You shove a Hollow-Man, and the hum falters. (+1 Progress)",
+            "convergence": "A 'Choir-Master'\u2014a Hollow-Man with a crown of rusted barbed-wire\u2014steps to the center."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Master's hum is deeper, reaching into the base of your skull. He's trying to tune the whole city to the 'Void-Frequency'.",
+            "choice_a": "Counter-sing with a 'Song of Life' (Char DC 14)",
+            "consequence_a": "Success: You break the Master's rhythm. (+1 Progress)",
+            "choice_b": "Strike the Master's wire-crown (Atk DC 14)",
+            "consequence_b": "Success: The crown snaps, and the hum turns into a scream. (+100 XP)",
+            "convergence": "The ground beneath the Square begins to tilt and float\u2014gravity is being unmade by the sound."
+        },
+        {
+            "turn": 3,
+            "narrative": "You're floating in a cloud of white dust. The Hollow-Men are ascending, their bodies becoming translucent. 'The Weaver... needs... the notes,' the Master whispers.",
+            "choice_a": "Grab a floating Hollow-Man (Str DC 14)",
+            "consequence_a": "Success: You anchor them to the ground. (+1 Progress)",
+            "choice_b": "Analyze the 'Void-Frequency' (Arcana DC 14)",
+            "consequence_b": "Success: It's the coordinates to the 'World-Core'. (+1 Lore)",
+            "convergence": "A 'Frequency-Siphon'\u2014a device of glass and copper\u2014appears in the air, drinking the sound."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Siphon is being used by a 'Shadow-Caster'\u2014a man in a high-ward uniform. He's stealing the Hollow-Men's last essence.",
+            "choice_a": "Smash the Siphon (Atk DC 15)",
+            "consequence_a": "Success: The essences return to their hosts. (+1 Progress)",
+            "choice_b": "Confront the Caster",
+            "consequence_b": "Success: He reveals he's 'Harvesting' for the Council. (+1 Secret)",
+            "convergence": "The Square collapses back to the earth with a violent jolt. The Hollow-Men are now just piles of gray dust."
+        },
+        {
+            "turn": 5,
+            "narrative": "The dust is swirling into the shape of a 'Grief-Giant'\u2014a massive entity made of pulverized bone and silver-regret.",
+            "choice_a": "Banish the Giant (Religo DC 15)",
+            "consequence_a": "Success: The entity dissolves into a cool rain. (+1 Progress)",
+            "choice_b": "Strike the Giant's 'Core-Stone' (Atk DC 14)",
+            "consequence_b": "Success: You shatter the source of its power. (+1 Progress)",
+            "convergence": "The Square is silent. The Shadow-Caster has vanished, leaving behind a 'Stolen-Essence-Jar'."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Jar is pulsing with a soft, blue light. Inside are the voices of the Hollow-Men\u2014their songs, their names, their lives.",
+            "choice_a": "Open the Jar to free the souls",
+            "consequence_a": "Success: The air is filled with a thousand whispers of 'Thank You'. (+10 Morale)",
+            "choice_b": "Take the Jar to the Temple of Flame",
+            "consequence_b": "Success: The Priestess can use the essence for 'Re-Souling'. (+1 Gear)",
+            "convergence": "A 'Hollow-King'\u2014a legendary figure from the Old-Wars\u2014rises from the dust."
+        },
+        {
+            "turn": 7,
+            "narrative": "The King has no face, only a void where his heart should be. He offers you his 'Shattered-Blade'.",
+            "choice_a": "Accept the Blade",
+            "consequence_a": "Success: You gain a weapon that can cut through any lie. (+1 Gear)",
+            "choice_b": "Decline and offer him a 'Truth-Coin'",
+            "consequence_b": "Success: He finds a moment of clarity and fades away. (+5 Reputation)",
+            "convergence": "The sun sets over the Shattered-Square, painting the ruins in a blood-red light."
+        },
+        {
+            "turn": 8,
+            "narrative": "You find a 'Choir-Sheet'\u2014a map of the city hidden in musical notation.",
+            "choice_a": "Study the Sheet (Int DC 14)",
+            "consequence_a": "Success: You find a 'Void-Tunnel' beneath the High-Ward. (+1 Intel)",
+            "choice_b": "Give the Sheet to the Tavern-Bard",
+            "consequence_b": "Success: He turns the struggle into a 'Legendary Ballad'. (+1 Fame)",
+            "convergence": "The Shadow-Caster's tracks lead into the sewers."
+        },
+        {
+            "turn": 9,
+            "narrative": "In the sewers, you find a 'Soul-Press'\u2014a machine used to create Hollow-Men.",
+            "choice_a": "Destroy the Press (Str DC 15)",
+            "consequence_a": "Success: You prevent any more souls from being stolen. (+5 Morale)",
+            "choice_b": "Tamper with the Press (Tech DC 14)",
+            "consequence_b": "Success: It now 'Screams' whenever a Shadow-Caster uses it. (+1 Secret)",
+            "convergence": "The Choir's echo remains in the Square, a hauntingly beautiful reminder of what was lost."
+        },
+        {
+            "turn": 10,
+            "narrative": "You stand in the center of the ruins. The air feels lighter, the silence no longer heavy with grief.",
+            "choice_a": "Accept a gold reward from the survivors",
+            "consequence_a": "Success: They give you everything they have. (+800 Gold)",
+            "choice_b": "Leave without payment",
+            "consequence_b": "Success: You are known as a 'Bringer of Peace'. (+10 Rep)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Hollow-Men's Choir was a call for help from the very foundations of the world. You answered it, but the 'Shadow-Casters' are still looking for more voices.",
+    "loot_table": [
+        "Stolen-Essence-Jar",
+        "Shattered-Blade",
+        "Choir-Sheet",
+        "800 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Square consumed. -10 Morale and the 'Grief-Giant' wanders the city for 3 days.",
+        "failure_penalty": {
+            "xp_loss": 10
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Shattered-Square vigil draws a crowd",
+        "flags": [
+            "hollow_choir_sighting"
+        ]
+    },
+    "location": "The Shattered-Square \u2014 Central Ruins",
+    "district": "Ruins District",
+    "thread": "Scourge",
+    "estimated_duration": "3\u20134 hours",
+    "key_npcs": [
+        "Choir-Master (Hollow-Man)",
+        "Shadow-Caster (High-Ward agent)",
+        "Hollow-King (spirit)"
+    ],
+    "mechanics_featured": [
+        "Music/Charisma (counter-song)",
+        "Combat (gravity-free)",
+        "Investigation (sewers)",
+        "Lore checks"
+    ],
+    "permanent_effects": {
+        "settlement": "Soul-Press discovered/disabled; +5 Morale",
+        "world": "Shadow-Caster network partially exposed"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Free souls from jar",
+            "result": "+10 Morale, whispers of gratitude"
+        },
+        {
+            "path": "Take jar to Temple",
+            "result": "Re-Souling service unlocked (+1 Gear)"
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+{
+    "id": "SQ-124",
+    "title": "The Baker's Yeast",
+    "difficulty": "Easy",
+    "xp_reward": 180,
+    "prerequisites": "None",
+    "description": "The community bakery is being taken over by a biological bread-anomaly...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The 'Warden\u2019s-Table' bakery is experiencing a 'Dough-Outbreak'. The yeast is growing five times its normal size and 'Breathing'.",
+            "choice_a": "Probe the dough",
+            "consequence_a": "Success.",
+            "choice_b": "Smell the fermentation",
+            "consequence_b": "Success.",
+            "convergence": "The dough is warm and spongy, with a scent of sweet honey and old hops. It\u2019s pulsating with a slow, biological rhythm."
+        },
+        {
+            "turn": 2,
+            "narrative": "A 'Dough-Golem'\u2014a man-sized mass of unbaked bread\u2014forms in the vat, its eyes two raisins that glow with a blue mana.",
+            "choice_a": "Dodge the dough-slam",
+            "consequence_a": "Success.",
+            "choice_b": "Dust yourself in flour",
+            "consequence_b": "Success.",
+            "convergence": "The flour makes you 'Invisible' to the Golem's simple awareness, its 'Raisin-Eyes' blinking in confusion."
+        },
+        {
+            "turn": 3,
+            "narrative": "The baker is trapped inside the oven-room, which is being filled with 'Mana-Gas' from the fermenting yeast.",
+            "choice_a": "Break the oven-room door",
+            "consequence_a": "Success.",
+            "choice_b": "Vent the gas through the chimney",
+            "consequence_b": "Success.",
+            "convergence": "The gas is flammable. A single spark from your torch could turns the bakery into a 'Bread-Bomb'."
+        },
+        {
+            "turn": 4,
+            "narrative": "You see the source of the anomaly: a 'Yeast-Heart'\u2014a pulsing, purple lump nestled in the center of the main dough-vat.",
+            "choice_a": "Extract the Heart (Dex DC 12)",
+            "consequence_a": "Success.",
+            "choice_b": "Freeze the Heart",
+            "consequence_b": "Success.",
+            "convergence": "The Heart chitters and secretes a 'Sugary-Sap' that tastes like memory and 'Warp-Dust'."
+        },
+        {
+            "turn": 5,
+            "narrative": "A 'Bakery-Wraith'\u2014a spirit of a deceased chef\u2014appears, trying to 'Knead' the Golem into a 'Master-Loaf'.",
+            "choice_a": "Help the chef (Cooking DC 14)",
+            "consequence_a": "Success.",
+            "choice_b": "Banish the kitchen ghost",
+            "consequence_b": "Success.",
+            "convergence": "The chef's hands are made of steam. He\u2019s Trying to 'Fix' the recipe that the Void-Heart corrupted."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Golem is now a 'Giant-Baguette-Monster'. It\u2019s trying to 'Bake' itself in the central furnace.",
+            "choice_a": "Stop the furnace (Str DC 13)",
+            "consequence_a": "Success.",
+            "choice_b": "Douse the monster with water",
+            "consequence_b": "Success.",
+            "convergence": "The Golem collapses into a pile of soggy, mana-rich dough. The air smells of fresh toast and ozone."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Baker emerges, covered in flour and relief. He hands you a 'Baker's Whistle'\u2014it can summon 'Kitchen-Mites'.",
+            "choice_a": "Accept the whistle",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Yeast-Heart",
+            "consequence_b": "Success.",
+            "convergence": "The whistle is made of polished bone and smells of cinnamon. It\u2019s a 'Utility-Item' for scavenging."
+        },
+        {
+            "turn": 8,
+            "narrative": "The 'Dough-Outbreak' is over. The bakery is a mess, but the bread is going to be 'Legendary' today.",
+            "choice_a": "Help clean up",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The sun rises over the bakery, its light making the spilled flour look like a field of snow."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, the smell of 'Mana-Bread' is everywhere. It\u2019s the smell of a settlement that is thriving.",
+            "choice_a": "Buy a loaf of Mana-Bread",
+            "consequence_a": "Success.",
+            "choice_b": "Log the mutation",
+            "consequence_b": "Success.",
+            "convergence": "The bread gives you a permanent +1 HP (once per character). It\u2019s delicious."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Bakery. The 'Baker's Yeast' is a localized miracle tonight.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Done",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Baker's Yeast' is complete. Quest Complete.",
+    "loot_table": [
+        "Baker's Whistle",
+        "30 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are baked into a giant loaf of bread. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Warden's-Table bakery reports dough 'breathing'",
+        "flags": []
+    },
+    "location": "Warden's-Table Bakery \u2014 Market Quarter",
+    "district": "Market Ward",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Baker Margot",
+        "Bakery-Wraith (spirit chef)",
+        "Dough-Golem (creature)"
+    ],
+    "mechanics_featured": [
+        "Dex (Yeast-Heart extraction)",
+        "Str (furnace)",
+        "Charisma (cooking assist)",
+        "Hazard (gas)"
+    ],
+    "permanent_effects": {
+        "settlement": "Bakery restored; Mana-Bread available for purchase",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Baker's Whistle",
+            "result": "Kitchen-Mite summoner utility item"
+        },
+        {
+            "path": "Take Yeast-Heart",
+            "result": "+1 Secret (biological anomaly sample)"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_401",
+    "title": "A Recipe for Anger",
+    "difficulty": "Easy",
+    "xp_reward": 420,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_400"
+        ],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Grain Alley",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "Petra is baking normally again, but her Sourdough causes customers to erupt in violent arguments. A fistfight broke out. Petra suspects rival baker Gorm of sabotage.",
+    "key_npcs": [
+        "Petra the Baker",
+        "Rival Baker Gorm"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Two customers are screaming at each other. The moment they stop eating the darker-shaded bread they look confused and embarrassed. The sourdough is a strange deep reddish colour.",
+            "choice_a": "Calm the customers and assess the scene",
+            "consequence_a": "They apologise profusely once separated. The darker slice has a metallic smell.",
+            "choice_b": "Grab the darker bread as evidence immediately",
+            "consequence_b": "You secure the unusual loaf. It has a faint mineral odour unlike any sourdough you've smelled."
+        },
+        {
+            "turn": 2,
+            "narrative": "Boot tracks behind the bakery lead toward Gorm's Bread House. Petra's sourdough starter has red fungal powder in it \u2014 Rage-Spore mushrooms.",
+            "choice_a": "Spy on Gorm's shop to catch him in the act",
+            "consequence_a": "You observe Gorm mixing red powder into a pouch. He notices you and tries to bolt.",
+            "choice_b": "Confront Gorm with the boot tracks as evidence",
+            "consequence_b": "Gorm confesses to buying Rage-Spore mushrooms from a travelling apothecary, not knowing they caused violence."
+        },
+        {
+            "turn": 3,
+            "narrative": "Gorm is remorseful. He had been losing customers for months and panicked.",
+            "choice_a": "Demand Gorm pay Petra three weeks of lost earnings",
+            "consequence_a": "Gorm pays. Relations remain cold but legally resolved.",
+            "choice_b": "Propose Gorm and Petra partner on a joint stall",
+            "consequence_b": "After coaxing, both agree. A combined stall opens to unexpected success."
+        }
+    ],
+    "branching_outcomes": {
+        "gorm_paid": {
+            "description": "Gorm compensated Petra financially.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 10
+                }
+            }
+        },
+        "gorm_partnered": {
+            "description": "Gorm and Petra opened a joint stall.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Joint Stall Deed",
+                "reputation_change": {
+                    "Market Ward": 20
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Rage-Spore Sample",
+        "Joint Stall Deed",
+        "200x Gold Coins"
+    ],
+    "conclusion": "Gorm compensated Petra financially."
+}

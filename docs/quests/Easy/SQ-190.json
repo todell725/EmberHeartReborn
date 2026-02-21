@@ -1,0 +1,149 @@
+{
+    "id": "SQ-190",
+    "title": "The Bleach-Cult",
+    "difficulty": "Easy",
+    "xp_reward": 480,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Merchants report robed strangers purchasing every drop of industrial bleach in the Market Ward"
+    },
+    "location": "Market Ward - Dye District and Bleach-Cult Compound",
+    "district": "Market Ward",
+    "thread": "Laundry",
+    "estimated_duration": "45 minutes",
+    "key_npcs": [
+        "Elder Whitmore (Bleach-Cult leader, zealous but genuinely deluded)",
+        "Maren the Dyer (quest-giver, her livelihood under attack)",
+        "The Colorless Ones (cultists in pure-white robes, disturbingly stain-free)"
+    ],
+    "mechanics_featured": [
+        "Persuasion",
+        "Investigation",
+        "Fabric-Handling checks",
+        "Combat (if cult provoked)",
+        "Cult psychology puzzle"
+    ],
+    "permanent_effects": [
+        "Player learns Warp-Static only affects colored fabric (white fabric is inert)",
+        "Bleach-Cult disbanded or converted into legitimate fabric-ward organization"
+    ],
+    "branching_outcomes": {
+        "disband_cult": {
+            "description": "Expose Elder Whitmore's theology as mistaken, dissolve the cult",
+            "effects": {
+                "settlement_stability": 1,
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Whitmore's research note recovered: white fabric IS inert to Warp-Static \u2014 he was accidentally right about that part"
+            }
+        },
+        "redirect_cult": {
+            "description": "Channel cult's bleach-zeal into legitimate Ward protection (they bleach Warp-Silk hotspots)",
+            "effects": {
+                "settlement_stability": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Bleach-Wardens become a recurring faction, providing minor Laundry Ward protection"
+            }
+        }
+    },
+    "description": "The Bleach-Cult believes all colored fabric is 'spiritually contaminated' and must be purified to white. Under Elder Whitmore's leadership, they've begun forcibly bleaching garments, destroying Maren the Dyer's stock, and threatening to purge the Dye District. The disturbing part: their theology is almost accidentally correct about Warp-Static.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Maren the Dyer is holding a bolt of formerly-scarlet silk that is now the color of old milk. Standing behind her counter in what is unmistakably a crime scene\u201455 bolts of silk, 20 barrels of dye, and a carefully tended indigo garden, all bleached to stark white\u2014she is not crying. She is too angry to cry. 'They came at 3 AM,' she says. 'Twelve of them. In white robes so clean they glowed. They sang while they bleached. SANG. It took them forty minutes.' Outside, you can see similar white patches on other dyers' awnings. The whole Dye District looks like a snowstorm hit only the fashionable things.",
+            "choice_a": "Examine the bleached fabrics for any unusual properties (Investigation + Arcana DC 11)",
+            "consequence_a": "Success: The bleached silk is not merely discolored\u2014the Warp-Static lattice within it is completely gone. Before: static charges measurable. After: inert as table linen. Elder Whitmore's cult is accidentally neutralizing Warp-Static affected fabric. (+1 Lore)",
+            "choice_b": "Ask around the Market Ward for information about the robed strangers (Persuasion DC 10)",
+            "consequence_b": "Success: 'The Colorless Ones. They preach at the Fountain of Veln every week with buckets of bleach as devotional props. Elder Whitmore. He says color is the mark of the Warp.' Several citizens find them funny. Two look slightly convinced. (+1 Intel)",
+            "convergence": "A Colorless One approaches--robe immaculate, manner serene, carrying a pamphlet titled 'The Pure White Future' and a small spray bottle of what is definitely industrial bleach. He smiles at you. 'Friend. Are your garments free of Warp-taint?' He eyes your clothing with clinical concern."
+        },
+        {
+            "turn": 2,
+            "narrative": "The pamphlet is surprisingly coherent. Elder Whitmore, it turns out, is not an idiot: he has observed that the Laundry Ward's animated-fabric incidents cluster around colored items, not white ones. White sheets don't animate. Colored ones do. He has drawn exactly the wrong conclusion from a correct observation\u2014inferring moral contamination where there is dimensional physics\u2014and built a religion around it. The pamphlet ends with: 'Join us. Surrender your colors. Find peace in the Blank.' Between the theology, it reads like decent incident data.",
+            "choice_a": "Attend a Bleach-Cult sermon to observe Whitmore directly (Investigation DC 12, Stealth optional)",
+            "consequence_a": "Success: Whitmore is magnetic. His recorded 'miracles' are all real\u2014he bleached a possessed sock that was strangling his nephew, a living shirt that had attacked three people, an animated tablecloth. He DID neutralize Warp-Static entities. He just thinks he did it through piety. (+1 Lore)",
+            "choice_b": "Confront the Colorless One directly with evidence the cult is causing property damage (Persuasion DC 13)",
+            "consequence_b": "Success: He is genuinely troubled. 'We only purify what has already been claimed by the Warp.' He does not understand that Maren's silk was NOT animated. In his framework, all color is suspect. He is not malicious. He is wrong. (+1 Intel)",
+            "convergence": "Elder Whitmore himself emerges from the cult compound\u2014a lean, precise man of sixty in immaculate white, who sees you and says, pleasantly: 'Investigator. I've been expecting someone like you. Please come in. I'd like to show you my research.' He means this sincerely."
+        },
+        {
+            "turn": 3,
+            "narrative": "Whitmore's compound is spotless. Every surface is white. Even the food looks slightly pale. His research room is extraordinary: 40 documented animated-fabric incidents in the Laundry Ward over six months, every one properly recorded with date, item description, behavior observed, and resolution. He has been bleaching Warp-Static entities out of fabric with 100% success. And he has been doing it with the thorough documentation of a scholar. He could be an asset. Except he just bleached someone's grandmother's wedding dress because it was blue.",
+            "choice_a": "Engage Whitmore academically\u2014show him the Warp-Static physics explanation for his observations (Arcana DC 14)",
+            "consequence_a": "Success: He listens. He is quiet for a long time. 'You are saying the color itself is not the contamination. The Warp-Static uses the chromatic molecular structure as...an anchor.' A longer silence. 'That is almost more disturbing than my theology.' (+2 Lore, Whitmore genuinely reconsidering)",
+            "choice_b": "Confront Whitmore with Maren's losses and demand he makes reparations before any theology discussion",
+            "consequence_b": "Success: Whitmore is genuinely aghast. 'We only bleach items that are actively manifesting. Maren's silk was not manifesting.' He rounds on his lieutenant. 'Brother Pale. You said those bolts were thrashing.' 'I... thought they were.' A lie, or paranoia. (+1 Progress, internal cult fissure opens)",
+            "convergence": "Whitmore shows you his final journal entry, from last night: three lines, underlined three times: 'Are we protecting the Ward? Or are we becoming the threat?' He closes the journal. 'I wrote that before you arrived. Tell me what you know.'"
+        },
+        {
+            "turn": 4,
+            "narrative": "You have Whitmore largely on your side\u2014he is a man of genuine intellectual honesty underneath the bleach-theology, and the evidence is reaching him. But his cult is not uniform. Brother Pale is the problem: younger, more zealous, and very attached to the idea that color is evil rather than merely physics. While you've been talking to Whitmore, Brother Pale has taken four cultists to the Silk Quarter and is currently standing outside the largest fabric merchant in the Ward with a pump-sprayer.",
+            "choice_a": "Rush to the Silk Quarter and physically stop Brother Pale before he acts (Athletics DC 12)",
+            "consequence_a": "Success: You arrive just as Pale raises the sprayer. You put yourself between him and the bolts. Pale blinks. You stare at each other. He blinks again. Not brave enough to spray a person who is clearly ready to take the sprayer from him. He lowers it. (+1 Progress)",
+            "choice_b": "Send Whitmore to stop his own lieutenant (Leadership DC 13, tests Whitmore's resolve)",
+            "consequence_b": "Success: Whitmore walks to Brother Pale without hurrying. In front of the four cultists, he says: 'We do not act without evidence of manifestation. Stand down.' Pale does\u2014but his face as he does says this is not over for him. (+1 Progress, Whitmore's authority tested and held)",
+            "convergence": "Brother Pale is standing down. But as he turns away, he does something strange: he sprays the wall beside him, once, quickly. There is a patch of colored plaster there\u2014old paint, flaking. And there is something behind it. Something in the wall that twitches when the bleach hits it. Brother Pale knew. He was not wrong about this spot."
+        },
+        {
+            "turn": 5,
+            "narrative": "Behind the peeling wall-paint, embedded in plaster that has not been touched in 20 years, is a bolt of Warp-Silk. Not large\u2014six inches wide, two feet long\u2014but it is unmistakably Warp-Silk: that iridescent shifting-color quality that doesn't resolve when you look directly at it, woven with the dimensional-bleed shimmer. It is in the wall of the Silk Quarter's largest merchant building. It has been there for decades. And it has been quietly animating fabric in this district the whole time. A passive Warp-Static source. Brother Pale knew because he felt it when he walked past. He is annoying, wrong about color theology, AND possesses genuine Warp-sensitivity.",
+            "choice_a": "Extract the Warp-Silk from the wall carefully (Fabric-Handling DC 14, careful approach preserves it intact)",
+            "consequence_a": "Success: You peel the Warp-Silk free without tearing. It writhes slightly in your hands like something alive. Warp-Silk sample obtained\u2014incredibly valuable for research. The district's ambient animation rate will drop measurably over the next few weeks. (+2 Lore, Warp-Silk sample obtained)",
+            "choice_b": "Bleach the Warp-Silk in place (follow Whitmore's method, fast and certain)",
+            "consequence_b": "Success: The Warp-Silk goes inert with a sound like a sigh. The shimmer fades to beige. It's dead, effectively\u2014no longer a Warp-Static source. Faster but destroys the research potential. (+1 Progress, source neutralized)",
+            "convergence": "Brother Pale watches whichever method you use. When it's done, he says: 'That's what I saw. I saw things in walls. I tried to tell Elder Whitmore they were there before the color was, but he said the color draws them.' He looks at the deactivated silk or the hole in the wall. 'I've been bleaching walls for months. That's the first one I actually found.' His theology is a rationalization for a real gift."
+        },
+        {
+            "turn": 6,
+            "narrative": "The reckoning with Brother Pale is actually more interesting than the one with Elder Whitmore. Pale is genuinely Warp-sensitive\u2014he can feel active Warp-Silk through walls, floors, possibly at significant distances. This is rare. This is useful. And he has been channeling this gift through a paranoid anti-color theology that has destroyed 55 bolts of innocent silk. You have a choice about what to do with this information and this person.",
+            "choice_a": "Recruit Brother Pale as an informal Warp-detection consultant (Persuasion DC 15, requires getting him to examine his assumptions)",
+            "consequence_a": "Success: Pale is resistant, then slowly, painfully interested. 'If the color isn't the problem... then I can stop counting colors and start feeling for the real thing.' He extends his hand. 'Show me what Warp-Silk actually feels like.' He is going to be very annoying AND extremely useful. (+2 Lore, Warp-sensor recruited)",
+            "choice_b": "Report Pale's Warp-sensitivity to the Mage Guild (bypassing his consent, efficient)",
+            "consequence_b": "The Guild is immediately interested. They send a letter to Pale that evening. He refuses for two weeks, then accepts under considerable Guild pressure and a stipend. (+1 Lore, Guild gains asset, Pale is resentful of you specifically)",
+            "convergence": "Elder Whitmore has been watching this exchange. When it's over, he says: 'Brother Pale felt the real thing and built the wrong map around it. I observed the real thing and built the wrong theology around it.' He removes his white robe, revealing ordinary grey underneath. 'What does the correct map look like?'"
+        },
+        {
+            "turn": 7,
+            "narrative": "The Bleach-Cult's reckoning takes the form of a congregation meeting that evening, attended by you, Whitmore, and 23 Colorless Ones in increasingly uncertain white robes. Whitmore presents the facts as you've shared them. The room is quiet. Then someone at the back says: 'So bleach still works?' Whitmore looks at you. You confirm: bleach neutralizes Warp-Static in fabric. 'Then we were doing the right thing,' the voice continues, 'just for the wrong reasons.' A pause. 'Can we keep doing it correctly now?' The congregation is not dissolving. It is self-correcting.",
+            "choice_a": "Help Whitmore reshape the cult into a formal Warp-Fabric Wardens guild (Leadership DC 13)",
+            "consequence_a": "Success: The Warp-Fabric Wardens are established within the week. Their mandate: detect and neutralize Warp-Static fabric events in the Laundry Ward using bleach protocols. Whitmore is the director. Brother Pale is the field-sensor. Maren the Dyer donates white cloth to replace the ones they ruined. Awkwardly heartwarming. (+2 Settlement Stability)",
+            "choice_b": "Leave the cult to Whitmore and just ensure they sign a reparations agreement with the Dyer's Guild",
+            "consequence_b": "The reparations agreement is painful for the cult financially but clears their legal standing. They continue operating, more cautiously, without formal structure. Occasional missteps. Less destructive. Tolerated. (+1 Settlement Stability)",
+            "convergence": "Maren the Dyer, who has been briefed on the Warp-Silk discovery, accepts Whitmore's apology with the specific phrasing: 'Your people destroyed my silk. And then one of them found the thing that was going to turn my silk into a problem anyway. I don't know how to feel about that.' She pauses. 'Infuriating. That's the word.'"
+        },
+        {
+            "turn": 8,
+            "narrative": "Final debrief. The Warp-Silk sample from the wall (if preserved) goes to the Mage Guild or your personal research collection. The Bleach-Cult has either been dissolved or transformed into something functional. Maren's losses are compensated, partially. And Brother Pale is doing something extraordinary: standing in the Silk Quarter with his eyes closed, slowly turning, feeling for Warp-Silk in the walls. He points at three buildings. 'There. There. And that one very strongly.' He opens his eyes and looks at you. 'You'll want to start with that one.'",
+            "choice_a": "Investigate the 'very strongly' building Pale identified immediately (creates follow-up content)",
+            "consequence_a": "Success: The building is a seamstress's workshop. In her sub-basement storage: not a scrap but a full bolt of Warp-Silk, six feet by thirty, rolled and tied with a cord stamped with a pre-Scourge weaver's mark. Someone stored this deliberately. This is not accidental bleed-through. (+3 Lore, major Warp-Silk cache discovery, connects to Weaver thread)",
+            "choice_b": "File the locations for future investigation and close the Bleach-Cult case",
+            "consequence_b": "The three locations are registered with the Watch and Mage Guild for follow-up. You're done for today. The Laundry Ward is slightly safer. Maren makes you a gift of a new jacket\u2014vivid green. 'Defiantly colorful,' she says. (+2 Reputation, green jacket item)",
+            "convergence": "Quest Complete. The Bleach-Cult was accidentally right about Warp-Static and comprehensively wrong about everything else. Brother Pale is the most useful annoying person in the Ward. And somewhere in the pre-Scourge record, someone was weaving Warp-Silk deliberately and storing it under the city. The fabric horror has a history."
+        }
+    ],
+    "conclusion": "The Bleach-Cult was built on a correct observation and a mistaken theology. Elder Whitmore has been inadvertently neutralizing Warp-Static fabric events for months. Brother Pale is genuinely Warp-sensitive\u2014a rare gift wrapped in paranoid zealotry. The Dye District will recover. And the pre-Scourge Warp-Silk cache beneath the seamstress's basement is a thread that pulls on something much larger.",
+    "loot_table": [
+        "Warp-Silk Sample (6-inch swatch, still faintly active - research material or Weaver-thread key item)",
+        "Elder Whitmore's Incident Log (40 documented Warp-Static events, major lore compendium)",
+        "Bleach-Warden Recruitment Certificate (Brother Pale as occasional Warp-sensor ally)",
+        "Maren's Green Jacket (fine clothing, +1 to Market Ward social checks, defiantly colorful)",
+        "Dyer's Guild Finder's Stipend: 300 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Bleach-Cult escalates to full Dye District purge. All colored fabric in Market Ward bleached. -4 Settlement Morale, Dyer's Guild strikes. -2 Market Ward Commerce for 3 sessions.",
+        "failure_penalty": {
+            "xp_loss": 4
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

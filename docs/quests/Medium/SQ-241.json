@@ -1,0 +1,74 @@
+{
+    "id": "SQ-241",
+    "title": "The Lost Cartographer",
+    "difficulty": "Medium",
+    "xp_reward": 500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-016"
+        ]
+    },
+    "location": "Ridge -> The Western Outpost",
+    "district": "Ridge",
+    "thread": "Expedition (Beyond City)",
+    "description": "Months ago, you helped fund an expedition for Cartographer Linus to map the deep wastes. He never returned, but his tracking pigeon just arrived carrying a bloodstained scrap of parchment.",
+    "key_npcs": [
+        "Outpost Ranger",
+        "Linus's Pigeon"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The parchment shows coordinates deep in the uncharted ash-lands. A local Ranger warns you it's a suicide run.",
+            "choice_a": "Hire the Ranger to guide you (Lose 100 Gold)",
+            "consequence_a": "He accepts. His knowledge of the terrain saves you from several acid-pits.",
+            "choice_b": "Ignore him and follow the coordinates yourself",
+            "consequence_b": "You navigate via the stars. It takes longer, and you stumble into a minor ambush by Scavenger-Hounds."
+        },
+        {
+            "turn": 2,
+            "narrative": "You find Linus's camp. It has been shredded by something massive. You find a locked metal lockbox.",
+            "choice_a": "Pry it open violently",
+            "consequence_a": "The lock breaks, but a localized acid trap destroys some of the maps inside.",
+            "choice_b": "Pick the lock carefully",
+            "consequence_b": "You secure Linus's fully intact maps of the Scourge-Heart crater."
+        }
+    ],
+    "branching_outcomes": {
+        "maps_damaged": {
+            "description": "You recovered Linus's maps, but they are partially destroyed.",
+            "unlocks": [
+                "SQ-242"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 5
+                }
+            }
+        },
+        "maps_intact": {
+            "description": "You recovered Linus's maps perfectly intact.",
+            "unlocks": [
+                "SQ-242"
+            ],
+            "consequences": {
+                "item_reward": "Perfect Ash-Land Map",
+                "reputation_change": {
+                    "Ridge": 15
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Ash-Land Map",
+        "100x Gold Coins"
+    ],
+    "conclusion": "You recovered Linus's maps, but they are partially destroyed.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "id": "SQ-201",
+    "title": "Shadows in the High Ward",
+    "difficulty": "Medium",
+    "xp_reward": 400,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-005"
+        ],
+        "district_reputation": {
+            "High Ward": 10
+        }
+    },
+    "location": "High Ward -> The Azure Balconies",
+    "district": "High Ward",
+    "thread": "Political Intrigue",
+    "description": "Councilor Vane's aide has gone missing after claiming to hold evidence of corruption in the city's food supply. You must investigate the Azure Balconies before the evidence disappears.",
+    "key_npcs": [
+        "Councilor Vane",
+        "Missing Aide Elara",
+        "Silken Assailant"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You arrive at the Azure Balconies, a wealth-drenched terrace overlooking the Lower Ward. Elara's apartment door is slightly ajar. A faint smell of burnt ozone lingers in the air.",
+            "choice_a": "Kick the door in and prepare for an ambush (Combat Advantage)",
+            "consequence_a": "You catch a Silken Assailant rifling through her desk. You get the drop on them.",
+            "choice_b": "Sneak through the adjacent balcony (Stealth check)",
+            "consequence_b": "You slip in unnoticed, observing the Assailant pocketing a wax-sealed letter before engaging."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Assailant is dead, but Elara is nowhere to be found. Her apartment has been swept clean, except for a hidden compartment under a floorboard that the assassin missed.",
+            "choice_a": "Force the compartment open quickly (Strength)",
+            "consequence_a": "The lock breaks, but a small poison needle pricks your finger. You take minor damage but recover the ledger.",
+            "choice_b": "Carefully pick the lock (Thieves Tools)",
+            "consequence_b": "You bypass the needle trap gracefully, securing a ledger titled 'The Silken Hand - Requisitions'."
+        },
+        {
+            "turn": 3,
+            "narrative": "The ledger contains coded entries for massive food purchases shipped to an unknown 'Archive'. As you read, the City Watch arrives, tipped off by a neighbor.",
+            "choice_a": "Show them the ledger and report the assassination attempt",
+            "consequence_a": "The Guard Captain suspiciously confiscates the ledger 'for official review'. You lose the primary evidence but avoid arrest.",
+            "choice_b": "Flee via the rooftops with the ledger",
+            "consequence_b": "You evade the Watch, keeping the ledger, but causing your reputation in the High Ward to dip slightly."
+        }
+    ],
+    "branching_outcomes": {
+        "surrendered_ledger": {
+            "description": "You gave the ledger to the Watch. Councilor Vane is disappointed but intrigued.",
+            "unlocks": [
+                "SQ-202"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "High Ward": -5
+                }
+            }
+        },
+        "kept_ledger": {
+            "description": "You kept the ledger. Vane is impressed and pays handsomely for the intelligence.",
+            "unlocks": [
+                "SQ-202"
+            ],
+            "consequences": {
+                "item_reward": "Gold Bar",
+                "reputation_change": {
+                    "High Ward": 5
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "100x Gold Coins",
+        "Silken Hand Dagger"
+    ],
+    "conclusion": "You gave the ledger to the Watch. Councilor Vane is disappointed but intrigued.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

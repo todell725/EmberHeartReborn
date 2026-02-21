@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_407",
+    "title": "Strange Spice",
+    "difficulty": "Easy",
+    "xp_reward": 420,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Spice Quarter",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "A new vendor is selling 'Deeproot Spice' cheaply. Bakers using it find their bread develops luminescent veining. Ward Chemist Polla suspects Void traces and wants a sample before the spice spreads further through the Ward.",
+    "key_npcs": [
+        "Ward Chemist Polla",
+        "Vendor Issra"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Vendor Issra found the spice growing near the Crater Ridge Glass Shelf. The spice smells wonderful \u2014 like cardamom mixed with something electrical. She clearly isn't hiding anything.",
+            "choice_a": "Purchase a sample to bring to Polla immediately",
+            "consequence_a": "Polla identifies Void-adjacent mineral traces \u2014 not immediately dangerous in small quantities but cumulative exposure could be.",
+            "choice_b": "Ask Issra exactly where she found it",
+            "consequence_b": "Issra pinpoints the Glass Shelf quadrant \u2014 an area exposed by the original Scourge breach."
+        },
+        {
+            "turn": 2,
+            "narrative": "Polla confirms the spice has Void-crystalline resin baked into its cells \u2014 potentially hallucinogenic after weeks of daily bread consumption. Issra is horrified.",
+            "choice_a": "Help Issra voluntarily recall all sold product",
+            "consequence_a": "Issra cooperates fully. Most buyers return the spice when warned.",
+            "choice_b": "Report to the Ward Authority for an official recall",
+            "consequence_b": "The Authority issues a public notice. More comprehensive but slower. Several bakers are annoyed."
+        },
+        {
+            "turn": 3,
+            "narrative": "The recall is complete. Now you must advise on the Glass Shelf source.",
+            "choice_a": "Recommend it be marked a restricted foraging zone",
+            "consequence_a": "The Shelf is flagged on expedition maps for future foragers.",
+            "choice_b": "Recommend Polla's team study it for safe alchemical applications",
+            "consequence_b": "The safe component of Deeproot Spice becomes a mildly valuable alchemical reagent."
+        }
+    ],
+    "branching_outcomes": {
+        "shelf_restricted": {
+            "description": "Glass Shelf marked restricted.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 8,
+                    "Expedition": 6
+                }
+            }
+        },
+        "spice_studied": {
+            "description": "Deeproot Spice safely isolated by alchemists.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Purified Deeproot Powder",
+                "reputation_change": {
+                    "Market Ward": 14
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Purified Deeproot Powder",
+        "Deeproot Spice Sample",
+        "170x Gold Coins"
+    ],
+    "conclusion": "Glass Shelf marked restricted."
+}

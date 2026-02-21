@@ -1,0 +1,165 @@
+{
+    "id": "EH_SQ_512",
+    "title": "The Vineyard's Roots",
+    "difficulty": "Medium",
+    "xp_reward": 1100,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_511"
+        ],
+        "items_required": [
+            "Void-Wine Supplier Ledger"
+        ]
+    },
+    "location": "Transit Corridor -> Scourge Fringe -> The Glass Shelf",
+    "district": "Transit Corridor",
+    "thread": "Void-Wine",
+    "description": "The Void-Wine Supplier Ledger recovered from the Canal Dock investigation contained one unresolved entry: 'Origin \u2014 GS/Shelf \u2014 See Issra.' Someone was using the Glass Shelf as a Void-Wine source long before Issra arrived. A primary underground production site must exist. Tracing it may reveal who has been controlling Void-Wine supply since the Scourge.",
+    "key_npcs": [
+        "Warden Astrid",
+        "Vendor Issra",
+        "Scourge Researcher Dr. Vel",
+        "Fringe Guide Selva",
+        "Essa the Producer"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Issra agrees to show you where she found the Deeproot Spice on the Glass Shelf \u2014 a location she has never revisited. Fringe Guide Selva accompanies you along with Dr. Vel for research purposes. The three-hour walk into the Fringe is quiet but tense. When you reach Issra's harvest location, the Deeproot Spice patch is gone \u2014 replaced by bare, glass-smooth stone bearing fresh tool marks. Someone has been actively working this area recently.",
+            "choice_a": "Follow the tool marks deeper into the extraction zone",
+            "consequence_a": "The marks form a cultivation grid extending a quarter-kilometre. Two zones are still active with fresh growth.",
+            "choice_b": "Search for concealed access beneath the Shelf surface",
+            "consequence_b": "Selva finds a hidden vertical shaft under a glass overhang \u2014 descending at least twenty metres into the Shelf."
+        },
+        {
+            "turn": 2,
+            "narrative": "Whether you traced the cultivation grid or found the shaft, both lead to a sophisticated underground facility. Carved into Scourge-crystalline rock and lit by Void-reactive bioluminescent fungi, the space holds stone fermentation vessels, drainage channels, a cistern, and paper records stored in dry conditions. The facility is active \u2014 and occupied. An elderly woman in practical clothing emerges from a side chamber. She looks at you with weary recognition rather than panic.",
+            "choice_a": "Move to secure the records before addressing the occupant",
+            "consequence_a": "You retrieve three ledger books before she introduces herself. The records show forty-two years of production.",
+            "choice_b": "Address the occupant directly \u2014 you want information, not confrontation",
+            "consequence_b": "She steps forward without hesitation. 'I wondered how long it would take someone to find this. Forty-two years, as it turns out.'"
+        },
+        {
+            "turn": 3,
+            "narrative": "Essa is a former Concordat Alchemist who survived the Scourge in the Fringe. She discovered the naturally-occurring Void-vine and began producing Void-Wine forty-two years ago as treatment for Scourge-trauma survivors suffering neurological collapse. Her original patients died long ago, but demand never stopped. Through intermediaries she has never met, she has supplied the city's entire Void-Wine market for four decades, producing approximately 200 litres monthly. She has never seen profit from the distribution \u2014 coin arrives at a Transit Corridor dead drop and production notes are collected.",
+            "choice_a": "Focus on understanding Essa's full history before deciding what to do",
+            "consequence_a": "Her account is medically coherent and heartbreaking \u2014 a genuine healer whose work was consumed by the shadow economy.",
+            "choice_b": "Focus on identifying her intermediaries \u2014 they are the criminal network exploiting both her and her customers",
+            "consequence_b": "The dead drop location and production note system is carefully documented. A name appeared once in a slip of paper: 'V.'"
+        },
+        {
+            "turn": 4,
+            "narrative": "The name 'V.' at the dead drop is a direct connection to the Vethaan thread. If Vethaan controls Void-Wine distribution city-wide \u2014 having also touched the F-Chamber compound, the Grief Merchants network, and this source \u2014 Vethaan is not one criminal operation. Vethaan is infrastructure. You report the connection to Astrid by messenger immediately.",
+            "choice_a": "Secure the facility and Essa's records intact and await Astrid's investigators",
+            "consequence_a": "Astrid arrives six hours later. Her face as she surveys the underground facility is unreadable \u2014 then quietly stunned.",
+            "choice_b": "Begin copying Essa's forty-two years of production records immediately",
+            "consequence_b": "Three hours of work yields a distribution pattern spanning twelve Ward districts and predating every existing investigation by decades."
+        },
+        {
+            "turn": 5,
+            "narrative": "Essa's legal situation is genuinely complex. Her production has been therapeutically valuable \u2014 the Violet Shepherd's congregation, Pross's clients, and thousands of others have depended on the quality she maintained. But the facility is unlicensed, in a restricted Fringe zone, and has been supplying an uncontrolled drug across the city. Dr. Vel argues passionately for preserving Essa's forty-two years of expertise.",
+            "choice_a": "Recommend a fast-track heritage medical licence for Essa's operation",
+            "consequence_a": "Essa becomes the city's only licensed Void-Wine production facility \u2014 regulated, monitored, no longer exploitable by intermediaries.",
+            "choice_b": "Recommend Essa be relocated to the Medical Quarter with the facility preserved as a research site",
+            "consequence_b": "Essa accepts with quiet relief. The facility becomes a research asset and her knowledge is formally recorded."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Transit Corridor dead drop is placed under surveillance. Four days pass before a carefully-dressed man retrieves Essa's latest production note and departs. Surveillance tracks him through the Transit Corridor and into an upper Market Ward private club. Not the High Ward \u2014 a different network than Serren operated.",
+            "choice_a": "Follow the operative into the club",
+            "consequence_a": "He is a mid-level Ward transport logistics administrator using legitimate cargo manifests to mask Void-Wine distribution routes.",
+            "choice_b": "Have Selva tail him after he exits the club",
+            "consequence_b": "He returns home and receives a visitor two hours later \u2014 the same High Ward courier seen during the Baker's Uprising investigation."
+        },
+        {
+            "turn": 7,
+            "narrative": "The High Ward courier now links Vethaan's Void-Wine distribution to the Baker's Uprising case. OPERATION VETHAAN now has six documented touchpoints across four investigations. Astrid has assembled the pattern. The name is no longer a whisper \u2014 it is a map being drawn.",
+            "choice_a": "Intercept the courier aggressively \u2014 surveil, identify, detain if possible",
+            "consequence_a": "The courier is intercepted. Low-level, knows little directly. But his route logs show thirty-two stops across the city in the past month.",
+            "choice_b": "Continue building the map quietly without alerting the network",
+            "consequence_b": "All thirty-two route stops are documented over two weeks. A remarkably complete picture of Vethaan's logistics emerges undisturbed."
+        },
+        {
+            "turn": 8,
+            "narrative": "Dr. Vel's analysis of Essa's records reveals a crucial finding: the Void-vine underwent a biological change approximately twenty years ago. Before the change, it produced purely sedative and grief-management compounds. After, it added the euphoric compound that creates recreational addiction. This change was not natural \u2014 and Essa was never informed it happened.",
+            "choice_a": "Investigate what physically changed in the facility twenty years ago",
+            "consequence_a": "An additional mineral channel was cut through the stone \u2014 connecting the cultivation grid to a deeper Void-energy source. Someone visited and modified the system without Essa's knowledge.",
+            "choice_b": "Cross-reference this timeline against Celle's research records",
+            "consequence_b": "Celle's classified files contain a journal entry from twenty-three years ago describing an 'observed field modification experiment' at an unspecified Fringe location. This was Celle."
+        },
+        {
+            "turn": 9,
+            "narrative": "Celle modified Essa's vine without consent twenty years ago \u2014 transforming a therapeutic facility into an addiction factory and creating the city-wide Void-Wine dependency crisis that has unfolded ever since. Whether she was working alone or for Vethaan's network is the critical question now.",
+            "choice_a": "Confront Celle directly with the vine modification evidence",
+            "consequence_a": "Celle does not deny it. She was hired through an intermediary she never met. Given a location map and specific modification protocol. Told it was a Scourge-resilience study.",
+            "choice_b": "Present the evidence to the joint oversight committee before confronting Celle",
+            "consequence_b": "In a formal supervised setting, Celle provides a partial account only \u2014 but enough to confirm she acted at someone else's direction."
+        },
+        {
+            "turn": 10,
+            "narrative": "Celle's confirmation closes the circle on twenty years of deliberate harm. OPERATION VETHAAN now has a provable twenty-year span of intentional city-wide manipulation. Astrid says quietly: 'We have never had a case this large.' She begins preparing a formal prosecution brief \u2014 but Vethaan has no documented personal identity. Every thread leads to a network node. No thread leads to a face. [KEY DECISION \u2014 how to build a prosecution when the target is deliberately nameless]",
+            "choice_a": "Search every documented Vethaan connection for a single persistent identifying characteristic",
+            "consequence_a": "A handwriting graphologist analyses three document sources and identifies consistent letter formation in the letter 'A' \u2014 distinctive enough to identify a single author across all three.",
+            "choice_b": "Build the case on the organisation rather than an individual \u2014 Vethaan as a network entity",
+            "consequence_b": "Astrid accepts this framing. The prosecution target becomes 'The Vethaan Network' \u2014 a novel legal approach that avoids requiring a named individual."
+        },
+        {
+            "turn": 11,
+            "narrative": "With the prosecution strategy set, you return to Essa's facility one final time to complete the evidence documentation. Essa is cooperative and thoughtful. She says something that stops you: 'The person in the 'V.' notes \u2014 they always paid coin in old Press-minted denominations. Pre-Scourge mint marks. Who would have access to pre-Scourge currency in circulation today?' Astrid's numismatist is contacted. Three of the coins recovered from Essa's dead drop payments match a specific Concordat Treasury mint that was operational only in the last two decades before the Scourge.",
+            "choice_a": "Trace the mint-mark coins to determine if any current holder of pre-Scourge currency could be identified",
+            "consequence_a": "The Deep Archive has records of pre-Scourge Treasury distributions. Three living individuals in Emberheart are confirmed recipients of Concordat Treasury stores. One of them runs a High Ward import business.",
+            "choice_b": "Add the mint-mark evidence to the VETHAAN file without immediately acting \u2014 this is the kind of lead that must be approached with caution",
+            "consequence_b": "The coins are photographed and documented and Astrid agrees to sit on the lead until the full prosecution framework is ready."
+        },
+        {
+            "turn": 12,
+            "narrative": "From Essa's underground chamber, now properly lit and under Medical Quarter oversight, forty-two years of careful therapeutic work is finally protected. The Void-Wine thread has reached its source. The production is legitimate. Twenty years of deliberate weaponisation is documented. Vethaan's network has a prosecution file. The mint-mark coins may represent the first truly personal thread leading to whoever Vethaan actually is. Selva looks at the cultivation grid carved into the Scourge crystal and says: 'Whoever built this knew what they were doing. They respected the material.' Essa nods. 'So did I. I think that was the problem.'",
+            "choice_a": "Formally open the mint-mark lead as OPERATION VETHAAN's primary active investigation strand",
+            "consequence_a": "The High Ward import business is placed under discreet surveillance. The investigation enters its deepest phase yet.",
+            "choice_b": "Submit the full file to Ward institutional investigators \u2014 the scale requires more resources than one person can manage",
+            "consequence_b": "A dedicated team is formed. The investigation continues at institutional scale."
+        }
+    ],
+    "branching_outcomes": {
+        "essa_licensed_vethaan_file": {
+            "description": "Essa's facility licensed. Vine modification documented. Mint-mark lead identified.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Transit Corridor": 25,
+                    "Lower Ward": 20
+                },
+                "item_reward": "Essa's Production Log"
+            }
+        },
+        "essa_relocated_network_prosecution": {
+            "description": "Essa relocated. Vethaan Network as prosecutable organisation established.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Medical Quarter": 22,
+                    "Transit Corridor": 16
+                },
+                "item_reward": "Glass Shelf Cultivation Map"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 250,
+            "reputation_change": {
+                "Transit Corridor": -20
+            }
+        },
+        "critical_failure": "Essa destroys her records. The vine modification cannot be proven."
+    },
+    "loot_table": [
+        "Essa's Production Log",
+        "Glass Shelf Cultivation Map",
+        "Void-Vine Modification Evidence",
+        "Celle's Field Journal Entry",
+        "Pre-Scourge Mint Coins",
+        "1100x Gold Coins"
+    ],
+    "conclusion": "Essa's facility licensed. Vine modification documented. Mint-mark lead identified."
+}

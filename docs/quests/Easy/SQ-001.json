@@ -1,0 +1,154 @@
+{
+    "id": "SQ-001",
+    "title": "The Whispering Vent",
+    "xp_reward": 750,
+    "prerequisites": "None",
+    "description": "Acrid steam and a low-frequency hum emanate from the geothermal vents near the refugee camp, causing migraines and dread.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The geothermal perimeter is a wasteland of churning white fog and the smell of ionized copper. The hum isn't just a sound; it's a vibration in your marrow, rhythmic and intentional.",
+            "choice_a": "Scour the vent-edge for residue (Investigation DC 12)",
+            "consequence_a": "Success: You scrape a violet, pulsing crystal dust from the brass pipes. It feels cold to the touch. (+1 Clue)",
+            "choice_b": "Hammer iron spikes into the main valve (Strength DC 14)",
+            "consequence_b": "Success: You force the vibrating metal into silence, though the pressure beneath your feet groans in protest. (+1 Stability)",
+            "convergence": "The steam pressure begins to scream, the pipes turning a cherry-red from some internal heat source that shouldn't exist."
+        },
+        {
+            "turn": 2,
+            "narrative": "A brass conduit buckles, glowing with an inner violet light. The excess heat is melting the stone foundation. The hum has turned into a rhythmic chant.",
+            "choice_a": "Etch a cooling sigil into the buckling pipe (Arcana DC 13)",
+            "consequence_a": "Success: The metal cools instantly, the violet glow receding into its core. (+1 Resource)",
+            "choice_b": "Divert the flow to the Auxiliary Siphon (Intelligence DC 12)",
+            "consequence_b": "Success: You reroute the superheated steam into a secondary reservoir, buying the camp time. (+1 Stability)",
+            "convergence": "A hidden access hatch in the floor pops open, forced by the sheer pressure of the subterranean chanting."
+        },
+        {
+            "turn": 3,
+            "narrative": "The hatch leads into a damp stone throat. Down here, the 'vibrations' are clearly words\u2014a repetitive, guttural invocation of 'The Weaver of the Deep'.",
+            "choice_a": "Decipher the frequency (Insight DC 14)",
+            "consequence_a": "Success: You recognize the pattern as a locator spell, targeted at the camp's main heart-stone. (+1 Clue)",
+            "choice_b": "Flood the chamber with alchemist's fire",
+            "consequence_b": "Hazard: The explosion is massive in the confined space, singeing your gear. (-5 HP)",
+            "convergence": "The path opens into a cathedral-like cavern carved from solid salt and obsidian."
+        },
+        {
+            "turn": 4,
+            "narrative": "In the center of the cavern, a jagged shard of 'Void-Glass' is embedded in a pedestal of bone. It pulses with the same violet light you saw above.",
+            "choice_a": "Extract the shard with silver tongs (Sleight of Hand DC 15)",
+            "consequence_a": "Success: You safely extract the Void-Glass, though its weight feels far heavier than its size. (+1 Item)",
+            "choice_b": "Shatter the glass with a heavy strike (Attack AC 14)",
+            "consequence_b": "Success: The glass shatters into harmless dust, releasing a wave of psychic relief. (+100 XP)",
+            "convergence": "The cavern begins to mourn; the obsidian walls crack as the anchor is removed."
+        },
+        {
+            "turn": 5,
+            "narrative": "The cracking walls reveal a tunnel slick with bioluminescent ichor. At the end of it, a shrine of silk and teeth awaits.",
+            "choice_a": "Ghost through the shadows (Stealth DC 13)",
+            "consequence_a": "Success: You reach the shrine's flank unseen, noting the ritual daggers laid out. (+1 Tactical Adv)",
+            "choice_b": "Kick in the silk tapestries",
+            "consequence_b": "Failure: The chimes attached to the silk alert the keeper. Combat is immediate.",
+            "convergence": "A hooded figure, his skin replaced by shimmering chitin, rises from the central altar."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Cultist of the Weaver holds a notebook of shifting leather. His eyes are milky, seeing into the frequencies rather than the light.",
+            "choice_a": "Snatch the notebook mid-ritual (Sleight of Hand DC 13)",
+            "consequence_a": "Success: You take the book; its pages contain sketches of Emberheart's defenses. (+1 Lore)",
+            "choice_b": "Topple the brazier onto the tapestries",
+            "consequence_b": "Success: The sacred silk burns, blinding the creature and boosting camp morale. (+1 Morale)",
+            "convergence": "The chitin-bound cultist unsheathes a blade of serrated bone."
+        },
+        {
+            "turn": 7,
+            "narrative": "The creature moves with spider-like speed, its blade whistling through the thick, salt-heavy air.",
+            "choice_a": "Focus on the joints (Dex Save DC 13)",
+            "consequence_a": "Success: You sidestep the lunge and strike the vulnerable gap in its chitin. (+Damage)",
+            "choice_b": "Brute force parry (Str Save DC 13)",
+            "consequence_b": "Success: You catch the bone-blade on your steel, feeling the strength of the Void behind it.",
+            "convergence": "The cultist's mask falls, revealing a face warped by Star-Dust exposure."
+        },
+        {
+            "turn": 8,
+            "narrative": "Injured, the cultist attempts to ignite a rune on the cavern floor\u2014a 'Ruin-Scream' that could collapse the tunnels.",
+            "choice_a": "Counter-spell the rune (Arcana DC 14)",
+            "consequence_a": "Success: The violet light fizzles and dies. The creature let's out a dry rasp of despair. (+100 XP)",
+            "choice_b": "End the threat before the chant finishes (Attack AC 13)",
+            "consequence_b": "Success: Your blade finds its mark. The cultist slumps against the altar.",
+            "convergence": "The humming stops. The silence of the deep stone returns, absolute and heavy."
+        },
+        {
+            "turn": 9,
+            "narrative": "The cultist\u2019s belongings are scattered. A heavy bronze key and a flask of 'Weaver's Ichor' lie among the debris.",
+            "choice_a": "Loot the remains",
+            "consequence_a": "Success: You take the key and several high-grade crystal vials. (+1 Gear)",
+            "choice_b": "Examine the altar's construction",
+            "consequence_b": "Success: You find it was built atop an ancient pre-Scourge survey point. (+1 Lore)",
+            "convergence": "The tremors from the pipes above signal that the camp has restored pressure."
+        },
+        {
+            "turn": 10,
+            "narrative": "You emerge from the vents, the cold Ridge air stinging your lungs after the humid salt-cavern. The Steward is waiting, his face tight with concern.",
+            "choice_a": "Deliver the Weaver\u2019s Notebook",
+            "consequence_a": "Success: Your standing with the Council rises as they study the threat patterns. (+2 Influence)",
+            "choice_b": "Keep the Void-Glass for your own research",
+            "consequence_b": "Success: The Council is none the wiser, and you have a new source of power. (+1 Secret)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The cultist of 'The Weaver' has been purged from the geothermal depths, but his notes suggest he was but a single eye of a much larger web.",
+    "loot_table": [
+        "Shard of Void-Glass",
+        "Serrated Bone Dagger",
+        "Weaver's Ritual Notebook",
+        "150 Gold",
+        "Bronze Sub-Key 09"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The pressure bursts. -1 Settlement Stability and half-pay for the next three days.",
+        "failure_penalty": {
+            "xp_loss": 1
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Automatic on session start",
+        "flags": [
+            "intro_complete"
+        ]
+    },
+    "location": "The High Ridge \u2014 Settlement Perimeter",
+    "district": "Ridge",
+    "thread": "Weaver",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "Warden-Captain Aldric",
+        "High Steward Mira"
+    ],
+    "mechanics_featured": [
+        "Persuasion checks",
+        "Social deduction",
+        "Reputation economy"
+    ],
+    "permanent_effects": {
+        "settlement": "+5 Morale if completed cleanly",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Diplomatic",
+            "result": "+10 Reputation, +2 Stability"
+        },
+        {
+            "path": "Forceful",
+            "result": "+5 Defense, -3 Morale"
+        }
+    ]
+}

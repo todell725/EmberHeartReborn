@@ -1,0 +1,154 @@
+{
+    "id": "SQ-011",
+    "title": "The Prophet of Geometrics",
+    "xp_reward": 900,
+    "prerequisites": "None",
+    "description": "A man in the Market Square is screaming that the 'Sky is a Mosaic' and that the 'Weaver' is coming to reclaim the grout.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Prophet stands on a crate of rotten melons, his eyes rolled back so far they show only white. He is drawing perfect, glowing circles in the air with a finger that has been stripped of skin. The air smells of ozone and burnt hair.",
+            "choice_a": "Listen to the frequency of his chant (Insight DC 13)",
+            "consequence_a": "Success: The chant is a mathematical sequence that matches the settlement's defense perimeter. (+1 Secret)",
+            "choice_b": "Subdue him before the crowd panics (Athletics DC 12)",
+            "consequence_b": "Success: You tackle him, but he whispers 'The grout is dry' into your ear. (+1 Progress)",
+            "convergence": "The Prophet has a shifting ink tattoo on his forearm that is actually moving, flowing like liquid mercury."
+        },
+        {
+            "turn": 2,
+            "narrative": "The tattoo is a map of the 'Grey-Spire' range, but it's actively updating. It shows a 'Void-Mass' approaching the town, represented by a black smudge that eats the ink.",
+            "choice_a": "Duplicate the map onto parchment (Dex DC 14)",
+            "consequence_a": "Success: You have a live tracking device for the coming storm. (+1 Intel)",
+            "choice_b": "Question his sanity in the guardhouse",
+            "consequence_b": "Success: He reveals he was a 'Void-Watcher' from the Old World. (+1 Lore)",
+            "convergence": "Suddenly, the Prophet's eyes turn into black glass, reflecting a sky that is shattered into thousand-mile triangles."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Prophet's body begins to stretch and fold in ways that violate Euclidean geometry. His limbs detach and reattach at impossible angles.",
+            "choice_a": "Strike his geometric core (Attack AC 15)",
+            "consequence_a": "Success: You shatter the glass-like ribs. He screams in the sound of breaking mirrors. (+100 XP)",
+            "choice_b": "Banish the entity (Arcana DC 15)",
+            "consequence_b": "Success: You force the entity back into the 'Between-Places'. (+1 Progress)",
+            "convergence": "The Prophet collapses, his body returning to a brittle, husk-like state, but the air around him remains 'fractured'."
+        },
+        {
+            "turn": 4,
+            "narrative": "The 'fractures' in the air look like ripples in a pond made of static. Through them, you can see a version of the market where the buildings are made of bone.",
+            "choice_a": "Reach into the fracture (Dex DC 15)",
+            "consequence_a": "Success: You pull out a shard of 'Bone-Glass'. (+1 Gear)",
+            "choice_b": "Seal the rift with silver-wire (Repair DC 13)",
+            "consequence_b": "Success: The vision of the bone-city fades. (+100 XP)",
+            "convergence": "The Prophet gasps his final breath, handing you a 'Star-Glass Prism'. 'Look through the dark,' he wheezes."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Prism feels cold, almost freezing, in your palm. Looking through it, the world is devoid of color, replaced by glowing ley-lines.",
+            "choice_a": "Follow a ley-line (Perc DC 12)",
+            "consequence_a": "Success: You find a hidden cache of 'Void-Capacitors' beneath the market. (+1 Loot)",
+            "choice_b": "Analyze the ley-line nodes (Int DC 14)",
+            "consequence_b": "Success: You realize the town is built on a massive 'Logic-Lock'. (+1 Lore)",
+            "convergence": "A representative from the 'Silent Order'\u2014draped in heavy, sound-dampening velvet\u2014arrives."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Order representative doesn't speak; they use a sign language that leaves trails of dim light in the air. They want the Prophet's remains and the Prism.",
+            "choice_a": "Refuse and protect the Prophet's dignity",
+            "consequence_a": "Success: The crowd rallies behind you. (+5 Morale)",
+            "choice_b": "Negotiate for information (Persuasion DC 14)",
+            "consequence_b": "Success: They reveal the Prophet was their escaped 'Living Archive'. (+1 Intel)",
+            "convergence": "The representative's velvet hood slips, revealing a face composed entirely of clockwork gears."
+        },
+        {
+            "turn": 7,
+            "narrative": "The clockwork face ticks with a frantic, uneven rhythm. 'The Mosaic... is incomplete,' it chirps in a voice of grinding metal.",
+            "choice_a": "Offer a drop of 'Weaver's Ichor' to the gears",
+            "consequence_a": "Success: The ticking stabilizes. (+1 Progress)",
+            "choice_b": "Lash out at the machine (Str DC 13)",
+            "consequence_b": "Success: You disrupt the Order's focus. (+1 Progress)",
+            "convergence": "The Order retreat into the shadows, but they leave behind a 'Sanctified Data-Slug'."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Data-Slug is a slug-like entity made of soft lead, pulsed with mana. It's trying to 'speak' to your gear, vibrating your weapons.",
+            "choice_a": "Connect the slug to your gauntlet (Tech DC 14)",
+            "consequence_a": "Success: Your weapon gains a 'Geometric-Edge' (+1 Damage for 2 turns).",
+            "choice_b": "Crush the slug to extract its core",
+            "consequence_b": "Success: You gain a 'Lead-Core' (Value: 200g). (+1 Loot)",
+            "convergence": "The Prophet's crate begins to float, the rotten melons inside freezing into perfect, crystalline spheres."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Market Square is now a zone of 'Static Gravity'. People are floating, their screams unheard in the vacuum-like silence.",
+            "choice_a": "Anchor the area with a 'Gravity-Well' (Int DC 15)",
+            "consequence_a": "Success: You restore normal physics to the ward. (+5 Morale)",
+            "choice_b": "Ride the static to the rooftops (Dex DC 14)",
+            "consequence_b": "Success: You escape the zone and can see the 'Mosaic' clearly from above. (+1 Lore)",
+            "convergence": "The phenomena dissipates as the Prophet's soul finally departs."
+        },
+        {
+            "turn": 10,
+            "narrative": "The sun rises, its light hitting the Prism in your hand. For a second, the whole market is bathed in a golden, logical clarity.",
+            "choice_a": "Keep the Prism",
+            "consequence_a": "Success: You have a permanent tool for seeing through Void-illusions. (+1 Gear)",
+            "choice_b": "Give the Prism to the Council",
+            "consequence_b": "Success: You are hailed as a hero of the state. (+100 Reputation)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Prophet's death was transition, not ending. The geometric truth he screamed is now a matter of public record, and the Silent Order is watching you from the grout.",
+    "loot_table": [
+        "Star-Glass Prism",
+        "Sanctified Data-Slug",
+        "Lead-Core",
+        "900 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Geometric madness spreads. -5 Settlement Morale and a permanent -2 to all future 'Wisdom Save' rolls in town.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 5,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Market Square disturbance reported",
+        "flags": [
+            "market_incident"
+        ]
+    },
+    "location": "Market Square",
+    "district": "Market Ward",
+    "thread": "Void",
+    "estimated_duration": "3\u20134 hours",
+    "key_npcs": [
+        "The Prophet (Void-Watcher)",
+        "Silent Order Representative"
+    ],
+    "mechanics_featured": [
+        "Insight checks",
+        "Arcana",
+        "Combat (geometric entity)",
+        "Social (non-verbal)"
+    ],
+    "permanent_effects": {
+        "settlement": "Silent Order awareness; permanent Void-watcher in city",
+        "world": "Star-Glass Prism added to loot pool"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Keep Prism",
+            "result": "Void-illusion immunity (personal)"
+        },
+        {
+            "path": "Give Prism to Council",
+            "result": "+100 Reputation, Prism becomes state asset"
+        }
+    ]
+}

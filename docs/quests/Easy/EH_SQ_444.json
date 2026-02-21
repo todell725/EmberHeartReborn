@@ -1,0 +1,77 @@
+{
+    "id": "EH_SQ_444",
+    "title": "The Restless Flock",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "High Forest -> The Canopy Station",
+    "district": "High Forest",
+    "thread": "Standalone",
+    "description": "The colony of Canopy-Bats that roosts in the High Forest's upper branches and pollinates the forest's medicinal plants has been behaving erratically \u2014 flying in daylight, refusing to roost, and appearing to flee from a specific section of the western canopy. Forest Keeper Vael wants to know why.",
+    "key_npcs": [
+        "Forest Keeper Vael",
+        "Naturalist Tris"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You enter the western section Vael indicated. The canopy is strangely quiet \u2014 no bird calls, no insect sounds. The Canopy-Bats are nowhere to be seen. But a faint vibration in the tree trunks is perceptible when you press your palm flat against the bark.",
+            "choice_a": "Follow the vibration to its source deeper in the western section",
+            "consequence_a": "The vibration intensifies as you move west. You find a geothermal micro-fissure in the forest floor, newly opened, emitting a low-frequency hum that only animals can properly hear.",
+            "choice_b": "Climb into the upper canopy to search for displaced bats and evidence of what disturbed them",
+            "consequence_b": "Sixty feet up you find dozens of bats huddled on the outermost branches, as far from the west as possible. Their echolocation is clearly being disrupted."
+        },
+        {
+            "turn": 2,
+            "narrative": "The micro-fissure is the source. The low-frequency hum is distressing the bats and other wildlife. Left alone it may widen into a proper vent \u2014 which would alter the forest floor ecology significantly.",
+            "choice_a": "Seal the fissure using packed clay and Vael's emergency repair kit",
+            "consequence_a": "A careful two-hour job. The fissure is sealed. The hum stops within an hour.",
+            "choice_b": "Report the fissure to the Ridge Authority's geological team for a proper assessment",
+            "consequence_b": "The geological team arrives the next morning. Their assessment confirms the fissure can be safely sealed."
+        },
+        {
+            "turn": 3,
+            "narrative": "The bats return to their roost within a day. Vael wants to monitor the fissure site going forward.",
+            "choice_a": "Place visible marker stakes around the fissure site for ongoing monitoring",
+            "consequence_a": "Marker stakes are set. Vael schedules monthly inspections.",
+            "choice_b": "Recommend the Ridge Authority include the High Forest in their routine geological survey circuit",
+            "consequence_b": "The survey circuit is extended to include the forest. Future fissures will be caught much earlier."
+        }
+    ],
+    "branching_outcomes": {
+        "fissure_sealed": {
+            "description": "Fissure sealed. Bats returned to roost.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Forest Keeper's Commendation",
+                "reputation_change": {
+                    "High Forest": 14
+                }
+            }
+        },
+        "survey_extended": {
+            "description": "Ridge geological survey extended to forest.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "High Forest": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Forest Keeper's Commendation",
+        "Canopy-Bat Wing Membrane",
+        "170x Gold Coins"
+    ],
+    "conclusion": "Fissure sealed. Bats returned to roost."
+}

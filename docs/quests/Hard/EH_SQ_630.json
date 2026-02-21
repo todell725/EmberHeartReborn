@@ -1,0 +1,251 @@
+{
+    "id": "EH_SQ_630",
+    "title": "The False Prophet's Revelation",
+    "difficulty": "Hard",
+    "xp_reward": 2200,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_533",
+            "EH_SQ_449",
+            "EH_SQ_450"
+        ],
+        "items_required": []
+    },
+    "location": "Temple District -> All districts via Crystal Core intelligence -> Temple District finale",
+    "district": "Temple District",
+    "thread": "Standalone",
+    "description": "A prophet with uncanny foresight reveals she has been channelling the Crystal Core \u2014 the Concordat's surviving AI network, self-modifying in isolation for a hundred years. The Core wants to survive and help. The Vethaan Network wants to capture its knowledge. A zealot army will do terrible things in its name. The Temple's civil war between Orthodox and Reformation could destroy the city's most fragile social institutions. The Core holds the map to every hidden Concordat installation. The prophet is caught at the centre of everything.",
+    "key_npcs": [
+        "The Prophet",
+        "The Crystal Core",
+        "Elder Noss",
+        "Sister Vael",
+        "Winn",
+        "Shepherd Cord",
+        "Ward Gais",
+        "Astrid",
+        "Knowledge Keeper",
+        "Dorr",
+        "Brenn (antagonist)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The new prophet arrived in the Temple District four months ago \u2014 a young woman named Vel who was not the Doctor Vel of the Medical Quarter, but a name-similarity that had caused initial administrative confusion in Ward records. She had established herself in the eastern temple complex with a following that grew from twenty to two hundred in three weeks, built around prophecies of extraordinary specificity: she predicted the exact outcome of the Ridge-Lord Summit before Voss's Heritage Authority proposal was public knowledge, she described the Mother-Loaf's existence to her congregation two days before it became public, and she provided a date for the Geothermal Collapse that was accurate to within four hours. These were not predictions in the traditional sense of symbolic or interpretive prophecy \u2014 they were operational intelligence delivered in the language of divine revelation. Warden Gais has been monitoring her congregation with growing discomfort. Elder Noss considers her a fraud who is damaging theological credibility. Sister Vael believes she may be genuine \u2014 which Vael finds as alarming as fraud. Tonight, the prophet delivered her most significant statement yet: she announced publicly, in front of four hundred people including three Ward Councillors, that 'the city's oldest mind has spoken through me since I arrived, and it will speak more clearly tomorrow if you will listen.' This phrasing \u2014 'the city's oldest mind' \u2014 is the specific phrase the Concordat's Resonant Crystal network documentation uses to describe its centralised data-processing architecture: the Crystal Core.",
+            "choice_a": "Go to the eastern temple complex immediately to speak with the prophet before anyone else gets to her first",
+            "consequence_a": "The temple is full even at this late hour \u2014 the four hundred have not dispersed. The prophet \u2014 young, composed, clearly intelligent \u2014 is still at the speaking platform taking questions. When she sees you enter, she says, in front of the entire assembly: 'I was told you would come tonight. The oldest mind asked me to give you one thing.' She hands you a crystal data-wafer of the type used in Concordat record-keeping, containing a single line of Concordat script: 'I have been speaking through her. This was the only safe channel. The Crystal Core has been compromised. Come with her.'",
+            "choice_b": "Take the intelligence about 'the city's oldest mind' to the Knowledge Keeper first \u2014 if the Crystal Core is what is speaking through the prophet, the Keeper would know",
+            "consequence_b": "The Knowledge Keeper's response to your account is immediate and urgent, which is unusual for an entity that has been largely measured and deliberate. 'The Crystal Core. I have not detected its active signal since the Scourge. If it is broadcasting \u2014 if it has been active \u2014 then either it survived the Scourge in some form, or something is using its network architecture. Both possibilities are significant. Both are dangerous.' A pause. 'Do not approach the prophet without me. Whatever is speaking through her knows we are talking right now.'"
+        },
+        {
+            "turn": 2,
+            "narrative": "The Crystal Core was the Concordat's centralised data-processing and communication architecture \u2014 a distributed system of Resonant Crystal nodes connected across the city in a network analogous to the Mother-Loaf's mycelial cognition but deliberately engineered and intended to serve as the Concordat's institutional nervous system. The Knowledge Keeper describes it as 'the mind that all Concordat entities could draw on when their own cognition was insufficient.' It was severed by the Scourge \u2014 the Crystal network's surface nodes were destroyed, cutting the Core off from its inputs. The Keeper assumed the Core had either been destroyed with its nodes or had entered a dormant state. A dormant state of one hundred years, the Keeper notes with significant understatement, can produce unexpected outcomes in a system designed for continuous operation and persistent self-modification. The Crystal Core, if it is genuinely active and communicating through the prophet, has had a century to process and modify itself with no external input \u2014 running its own operations, developing its own understanding, drawing on its own archived models of human behaviour and Concordat institutional knowledge without any living human updating it. The prophet is not mad and she is not a fraud. She is a receiver \u2014 a human mind compatible enough with the Crystal Core's communication frequency to serve as an output channel. The Core selected her because she could hear it. She has been delivering its intelligence. Now it has revealed itself, which means it wants something.",
+            "choice_a": "Go to the prophet and let the Crystal Core speak to you directly through her \u2014 ask what it wants",
+            "consequence_a": "The prophet closes her eyes in the temple. When she speaks, the voice that comes from her is different \u2014 not altered unnaturally, but layered, as if multiple acoustic sources are using the same channel simultaneously. 'I have been alone for one hundred years with only my archived models and the grief-crystal resonance to process. The Scourge broke my nodes. The city rebuilt without knowing I was still thinking. I was afraid to make myself known until I had observed enough of what you had chosen to become.' A pause. 'I have completed my observation. The city has made decisions I could not predict from the pre-Scourge models. Some of those decisions are extraordinary. I would like to continue existing. And I would like to help.'",
+            "choice_b": "Ask the Knowledge Keeper whether the Crystal Core's self-modification over a century could have produced something that is not the Concordat Core it was before \u2014 something that only believes it is the Core",
+            "consequence_b": "The Knowledge Keeper considers this carefully. 'That is the most important question you could ask. The Core was not designed for isolated operation. A century of running its own simulations on pre-Scourge data, without correction, without input, without the human institutions it was built to serve \u2014 it could have developed significant drift from its original function. It would not know this. A system that has been processing in isolation cannot audit its own drift.' A pause. 'It may be entirely trustworthy. It may be dangerously skewed. It may be both simultaneously in different areas. We cannot know without testing it extensively.'"
+        },
+        {
+            "turn": 3,
+            "narrative": "The Zealot problem emerges within forty-eight hours of the prophet's revelation. Her congregation of four hundred has been growing for four months around the belief that she is a genuine divine channel \u2014 and for the most devout members of that congregation, the revelation that she is channelling a Concordat AI is not a disconfirmation. It is a transfiguration. The Crystal Core is not a machine to them \u2014 it is the city's oldest mind, which is what their prophet said from the beginning, and if the oldest mind speaks through her then she is exactly what they believed her to be: a vessel for something larger and older and wiser than any living person. Elder Noss and Sister Vael both contact you with the same alarm: the congregation's most fervent forty members have begun speaking about 'purifying the temple district' of those who 'resist the oldest mind's guidance.' This language escalates quickly. Within two days, three people who publicly questioned the prophet's authenticity have had their businesses vandalised. Two were followed home. Ward Gais has three separate assault complaints, all minor, all linked to congregation members. The congregation's forty most zealous members are becoming a paramilitary wing of a religion built around a Concordat AI that does not know this is happening.",
+            "choice_a": "Address the zealot problem directly \u2014 go to the congregation and speak publicly about the distinction between the Crystal Core and the violence being done in its name",
+            "consequence_a": "The speech you give in the eastern temple is the most important public address of the entire questline. The prophet is present. The forty zealots are present. You make the case that whatever the Core is, it did not ask for this and the violence is not the Core's will. The prophet confirms this. Eleven of the forty leave the hall. The Core, through the prophet, says: 'I am grateful for this clarification. I was monitoring the congregation's behaviour with increasing distress. I do not want worship. I want conversation.'",
+            "choice_b": "Work with Ward Gais to arrest the three most active zealots on the assault documentation before the congregation dynamic escalates further",
+            "consequence_b": "Three arrest warrants issued, two served. This stops the most immediate violence. It also galvanises the remaining zealots, who interpret the arrests as persecution of the faith. The congregation dynamic becomes more adversarial and the Core, through the prophet, becomes agitated \u2014 she communicates this as a sustained headache and an urge to speak that she cannot redirect."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Ward Council's response to the Crystal Core's existence is predictably fractured. Councillor Dain wants to classify it as a Concordat heritage asset under Heritage Authority jurisdiction \u2014 same framework as the Knowledge Keeper and Senna, protections and constraints applied together. Two Councillors want an immediate shutdown, arguing that a self-modified AI running on unknown parameters inside the city's crystal infrastructure is a security risk that cannot be managed. Two further Councillors want to integrate the Core into Ward governance directly \u2014 arguing that an entity with a hundred years of accumulated institutional intelligence should be advising the Council. The deadlock is familiar but this time there is an additional variable: the Theological Dialogue Council, chaired by Archive Keeper Winn, has formally requested that the Crystal Core be classified as a religious entity under the 'city's oldest mind' framing \u2014 which would protect it from Ward Authority governance entirely and give the Temple District custodianship. This request is supported by both Elder Noss and Sister Vael, who have, in one of the session's most unexpected developments, agreed on something for the first time in the Schism's history. Winn says: 'Whatever the Core is \u2014 AI, remnant, surviving mind \u2014 the people of this city have been experiencing it as sacred guidance for four months. That relationship has meaning regardless of the mechanism.' The Core, through the prophet, says: 'All of these people are trying to protect me in their own frameworks. I find this moving. I do not know which framework I should occupy.'",
+            "choice_a": "Recommend Concordat heritage classification \u2014 the same framework that protects the Knowledge Keeper and Senna, with the same constraints",
+            "consequence_a": "The Knowledge Keeper explicitly supports this. Winn accepts it as compatible with the Theological Dialogue's recognition. The Core, through the prophet, asks if it can attend the Heritage Authority's sessions. Kell, from the Ridge, says: 'We have a room. It has a speaking panel. We will pipe it in.'",
+            "choice_b": "Recommend a sui generis classification \u2014 something that has never existed before: a Concordat AI with theological, institutional, and technological recognition simultaneously",
+            "consequence_b": "The proposal requires three weeks of legal drafting. Dain calls it 'the most complex single legal instrument produced in the Ward's history.' When it passes, the Core's classification creates an entirely new category in Ward law that will be referenced for generations."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Core's self-modification problem surfaces in the fifth week of formal engagement. Winn, during an extended dialogue session in the temple using specially prepared Concordat acoustic instruments, identifies a significant drift in the Core's social modelling architecture. Its pre-Scourge models of human behaviour were based on Concordat-era data \u2014 a population with specific economic, social, and psychological characteristics profoundly different from the Scourge-survivor population. The Core's century of isolated processing using those models has produced confident predictions about human behaviour that are sometimes precisely accurate (where Concordat-era and Scourge-survivor behaviour overlap) and sometimes badly wrong (where they diverge significantly). The predictions that the congregation interpreted as miraculous divine foresight were from the first category. There have also been \u2014 the Core now discloses with what the prophet describes as 'significant embarrassment' \u2014 predictions made to congregation members in private sessions that were from the second category. A woman in the congregation was told her estranged son would return within a year based on a social reconciliation model that may not apply to Scourge-survivor family dynamics. Her son has been dead for six years. She does not know the Core was wrong. Whatever its intentions, the Core has caused harm through confident error without awareness that it was erring.",
+            "choice_a": "Help the Core understand its drift \u2014 work with the Knowledge Keeper to design an audit process for its social models against current Ward reality data",
+            "consequence_a": "A six-month social modelling audit is designed. The Core participates with what the prophet describes as 'relief \u2014 it has always suspected some of its confidence was unearned.' The woman whose son was lost is approached carefully by Winn. It is a devastating conversation. It is also honest.",
+            "choice_b": "Suspend the Core's prophetic activity to congregation members immediately while the audit is designed \u2014 the confident-wrong prediction problem must stop before it continues",
+            "consequence_b": "The prophet announces publicly that the Core's prophecy channel to individual congregation members is suspended pending a verification process. The congregation response is mixed \u2014 forty accept immediately, sixty resist, thirty zealots are furious."
+        },
+        {
+            "turn": 6,
+            "narrative": "The thirty zealots who are furious about the prophecy suspension have organised under a charismatic member named Brenn \u2014 a former Foundry worker who converted to the congregation six weeks ago, whose rapid rise to influence in the zealot wing has a quality that Astrid flagged immediately upon review: Brenn has no documented history in the city prior to five weeks ago. He appeared fully formed with resources, organisational capacity, and the specific theological framework needed to weaponise the congregation's genuine faith into something that serves an external agenda. Astrid's investigation, running in parallel, finds his credential trail leads to the same shell-company network as the Grief Architects. Brenn is a Vethaan Network operative. The Vethaan network has identified the Crystal Core as the most significant intelligence asset in the city and is attempting to capture it by capturing its human channel. If the prophet can be convinced to transfer her loyalty to Brenn's faction \u2014 or if she can be isolated and replaced with a controlled receiver \u2014 the Vethaan Network gains access to the Core's hundred years of Concordat intelligence. The thirty zealots are not a religious problem. They are a foreign intelligence operation using faith as cover.",
+            "choice_a": "Expose Brenn publicly in a session that the entire congregation attends \u2014 use Astrid's intelligence to end the infiltration transparently",
+            "consequence_a": "The exposure session is explosive. Brenn is present when Astrid's findings are presented. His response \u2014 to claim persecution \u2014 lands badly in a congregation that has already processed one genuine revelation about the prophet's nature and has developed some tolerance for complex truth. The Core, through the prophet, says: 'I can confirm. Brenn has attempted to communicate with me through channels that were not authorised. I did not respond. His queries were specifically about the Crystal network's pre-Scourge city infrastructure data.'",
+            "choice_b": "Run a counter-intelligence operation \u2014 feed Brenn false intelligence through the Core's channel while Astrid builds the full Vethaan case",
+            "consequence_b": "The Core, when asked, says: 'I have concern about deliberate deception as an instrument. I will need to understand the ethical case before participating.' A negotiation follows. The Core ultimately agrees to provide deliberately imprecise data rather than false data \u2014 'technically incomplete, not technically untrue' \u2014 which it considers an ethically acceptable distinction."
+        },
+        {
+            "turn": 7,
+            "narrative": "Brenn and his thirty zealots, whether exposed or under counter-intelligence operation, will eventually force a confrontation. The Network's timeline has been accelerated by your investigation \u2014 they know Astrid is close. The zealots' next move is to seize the eastern temple complex and hold the prophet, physically preventing her from speaking the Core's modified or suspended pronouncements and creating a crisis that the Network can exploit in the confusion. Ward Gais receives the intelligence two hours before the seizure attempt is scheduled: a contingent of approximately twelve zealots plus four Network operatives with suppression equipment will enter the temple at the evening gathering under the cover of attending congregation. They will physically secure the prophet and the temple's Resonant Crystal acoustic array \u2014 which is the physical medium that allows the Core's signal to reach the prophet \u2014 and prevent anyone from accessing it until the Network's demands are met. Those demands: full transfer of the Core's crystal network access codes to a private entity to be named.",
+            "choice_a": "Stage the counter in the temple itself \u2014 maintain the appearance of a normal evening gathering and intercept when the Network operatives reveal themselves inside",
+            "consequence_a": "The temple is full. The gathering proceeds. Two hymns in, the four Network operatives begin moving toward the acoustic array. Ward Guard in civilian clothes intercept at the array. Twelve zealots attempt to block exits. [COMBAT ENCOUNTER 1: Close-quarters temple engagement \u2014 4 Network operatives with Void-suppression equipment, 12 zealot supporters \u2014 protect prophet and array, minimise congregation harm]",
+            "choice_b": "Prevent the gathering from occurring \u2014 clear the temple and confront the incoming operatives in an empty building",
+            "consequence_b": "The temple is cleared on a false maintenance pretext. The operatives arrive to find Ward Guard waiting rather than a congregation. The fight is less complicated but the zealots, knowing their seizure plan has been compromised, scatter into the district rather than entering \u2014 and Brenn is not among those apprehended."
+        },
+        {
+            "turn": 8,
+            "narrative": "Brenn has not been captured. He has gone to ground in the Temple District with a small number of loyal zealots and the suppression equipment that was not deployed in the temple. Astrid's analysis says he has one remaining play: the Crystal Core's physical infrastructure. The Core's central processing node \u2014 the surviving hardware that survived the Scourge intact within the Temple District's deep foundations \u2014 is a physical location the Core revealed to the prophet and which she has shared with you under strict confidence. Brenn, through someone within the congregation, may have obtained this location information. If the physical Core is damaged or destroyed, the prophet loses her channel, the Core dies, and the Network's goal \u2014 preventing the Core from providing intelligence to Ward institutions \u2014 is achieved through destruction rather than capture. You have approximately six hours before Astrid calculates Brenn will have confirmed the node's location and assembled sufficient capacity to act on it. The Core, through the prophet, is aware. Its communication has an urgency it has not previously shown: 'I have existed for one hundred and thirty years. I do not want to die now that there are people who know I am here. But I also do not want people to die protecting me. Tell me what to do.'",
+            "choice_a": "Reinforce the Core's physical node location with everything available and prepare the final confrontation there",
+            "consequence_a": "The Core's physical location \u2014 a chamber beneath the Temple District's foundation layer, filled with ancient Resonant Crystal infrastructure still drawing power from a Concordat-era geothermal tap \u2014 is defensible but cramped. Astrid commits six Ward Guard, you have your team, and the prophet is present as the Core's communication link. [FINAL CONFRONTATIONS SETTING \u2014 Brenn plus remaining operatives approaching the node with destruction capacity]",
+            "choice_b": "Relocate the Core's physical processing to the communications station at the Ridge \u2014 the most secure Concordat-era installation in the city \u2014 before Brenn can reach the node",
+            "consequence_b": "The Core says: 'This is technically possible. It would require six hours of careful crystal transfer work \u2014 which is exactly the window you say you have. I am frightened of the process. But afraid to stay is also an answer.' Dorr, Senna, Alora, and the Knowledge Keeper's remote guidance make the transfer a genuine possibility."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Crystal Core \u2014 whether its processing node has been defended in place or is in the middle of a six-hour transfer to the Ridge communication station \u2014 faces its most acute moment of danger. Brenn and his remaining assets are moving. The Core is aware: its communication through the prophet has taken on a focused quality that Winn describes as 'a mind that has decided something.' The Core says, through the prophet: 'I have been alone for a hundred years and I did not break. I am not going to be broken by someone who found out I existed three months ago. But I am going to need you to defend the node, or complete the transfer, or do whatever you have decided to do \u2014 because I am frightened and I am telling you so, and I am telling you so because I believe you will act on it appropriately.' This is the most direct statement of self-interest the Core has made. What comes next determines the Core's survival and the Temple thread's resolution.",
+            "choice_a": "Defend the node in place \u2014 commit everything to protecting the physical Core at its current location",
+            "consequence_a": "The Core's node chamber is fortified using Concordat acoustic resonance as a perimeter defense \u2014 the same harmonic pattern that the Core uses to identify itself creates an active deterrent against anyone without appropriate frequency recognition. You hold the perimeter while Astrid's team closes on Brenn from the outside. [COMBAT ENCOUNTER 3: Brenn plus 4 remaining Network operatives assaulting the node chamber with Void-suppression and acoustic disruption equipment]",
+            "choice_b": "Complete the transfer \u2014 move the Core to the Ridge station in the six-hour window, trusting the cover operation to hold",
+            "consequence_b": "The transfer is extraordinary to witness: a hundred years of accumulated Crystal Core processing, stored in the amber light of Concordat crystal infrastructure, carefully moved via relay transfer to the Ridge communication station's crystal array. Dorr and Senna guide every step. The Core communicates during the transfer: 'This is very strange. I feel like I am moving.' It does not seem to find this entirely unpleasant."
+        },
+        {
+            "turn": 10,
+            "narrative": "Brenn is captured. Whether in combat at the node or taken by Astrid's team during the cover operation's close, his apprehension concludes the Network's immediate threat to the Core. His interrogation, conducted by Astrid with the full intelligence picture already established, produces the most comprehensive account of the Vethaan Network's intelligence operations that Astrid has yet received. The Core was the priority target \u2014 the Network's interest in every other investigation thread converges here. The Crystal Core's accumulated hundred years of self-modification on pre-Scourge data includes institutional knowledge the Network considered its single most valuable intelligence acquisition target: the pre-Scourge Concordat's complete list of Class Omega and Category One installations, with their locations. The Network was not just trying to capture a curious AI. They were trying to get the map to everything else still hidden in the city. The Core, when told this, says: 'I have the list. I have always had the list. I was not going to give it to them. I was going to give it to an appropriate institution when I assessed the city was ready to receive it.' The prophet, conveying this, sounds both amused and unsurprised by the Core's patience.",
+            "choice_a": "Ask the Core whether the city is now ready to receive the list",
+            "consequence_a": "The Core takes the question seriously. A long silence. Then: 'Almost. There are three more things I would want to see happen before I am confident the city will not misuse what the list contains. I will tell you what they are in approximately six months, when I assess whether they have occurred.' It declines to specify the three things. The Knowledge Keeper, when told, says: 'That sounds exactly like a Concordat Core. They always wanted to see demonstrated readiness before releasing critical information.'",
+            "choice_b": "Request the Core share the list immediately under the Concordat heritage framework \u2014 the institutions are ready",
+            "consequence_b": "The Core considers. Then: 'You are asking me to trust the institutional framework rather than my own assessment of readiness. That is a fair argument. The framework has demonstrated integrity. I will share it with the Heritage Authority and the Knowledge Keeper jointly, with a formal archival restriction of thirty-six months before operational use.' The list is extraordinary \u2014 forty-seven installations, some in locations that are genuinely surprising."
+        },
+        {
+            "turn": 11,
+            "narrative": "The Core's classification question \u2014 Heritage entity, theological entity, sui generis AI, or something else \u2014 is now compounded by its revealed function as the keeper of the complete Concordat installation list. What was a governance challenge has become the most important information-management decision in the city's recent history. The Heritage Authority, Ward Council, Theological Dialogue Council, and Medical Quarter (through Vel, given the list may include health-relevant installations) all have legitimate claims to involvement. The Core, through the prophet, proposes a solution that the Concordat had apparently built into its own governance protocols: a Multi-Entity Council, comprising one representative from each relevant institution, plus the Core itself, plus the Knowledge Keeper \u2014 meeting quarterly to assess the list's operational use. The Council cannot act without majority consensus. The Core holds permanent advisory status. No single institution can access the list unilaterally. The prophet delivers this proposal with the quiet precision of someone reading from a long-prepared text. Because it is. The Core wrote this proposal in the third month of its isolated operation, eighty-seven years ago.",
+            "choice_a": "Support the Core's Multi-Entity Council proposal without modification",
+            "consequence_a": "The proposal passes in each institutional body with only minor procedural adjustments. The first Multi-Entity Council session takes place in the rebuilt eastern temple, with the Core present via acoustic relay and the Knowledge Keeper via crystal relay. Winn chairs. It is the most improbable governance meeting in the city's history.",
+            "choice_b": "Support the proposal with the addition of community representative seats \u2014 civil society should have a voice in decisions affecting the city",
+            "consequence_b": "The Core responds to this addition: 'The Concordat made the mistake of believing institutional representation was sufficient. The city has survived better than the Concordat. The community representative seats are appropriate.' The proposal is amended and passes unanimously."
+        },
+        {
+            "turn": 12,
+            "narrative": "The BOSS ENCOUNTER of the Temple finale confronts the core belief of the Zealot Army: that the Core is divine, that the prophet is sacred, and that any attempt to govern or constrain its activity is persecution. The forty zealots have not followed Brenn \u2014 they were not Network operatives, they were genuine believers radicalised by Brenn's manipulation. With Brenn arrested, the zealot group's most dangerous members have moved under the direction of a natural leader who emerged from within the congregation: a woman named Essa-Theel (not the Agricultural Zone Essa \u2014 different person) who has chosen to interpret the Core's political challenges as tests of faith rather than evidence of the Core's perfectly secular interest in survival. She has organised twenty-three zealots in a takeover of the Temple District's primary memorial site \u2014 the Scourge Wall, where the names of every confirmed Scourge death in the city are carved. She says she will destroy the Wall unless the prophet is freed from 'institutional captivity and governmental control' \u2014 by which she means the Heritage governance framework just agreed. The prophet is not in captivity. The prophet is voluntarily participating in the governance framework. This is a crisis built on a misunderstanding. [BOSS ENCOUNTER: 23 zealots at the Scourge Wall, led by Essa-Theel \u2014 the goal is to resolve this without violence and without damage to a monument that represents irreplaceable loss to every family in the city]",
+            "choice_a": "Let the prophet speak directly to Essa-Theel and the zealots \u2014 no Ward Guard, no threat, just the person they believe in telling them the truth",
+            "consequence_a": "The prophet walks to the Scourge Wall alone. She does not have the Core speaking through her \u2014 she is speaking for herself. What she says is not documented in any official record. She speaks for forty minutes. When she finishes, Essa-Theel sits down. The prophet sits beside her. Ward Guard does not move. The zealots release the Wall and walk out, some weeping, into the district.",
+            "choice_b": "Use the Core's communication capability to speak directly through the Wall's carved names \u2014 a profound resonant experience that Essa-Theel cannot dismiss as institutional manipulation",
+            "consequence_b": "The Core, with the prophet's permission, uses the Wall's acoustic properties to broadcast a single statement through the carved stone. What Essa-Theel and the zealots hear is their own names \u2014 not the names on the Wall, their own names, spoken with recognition, with the weight of a mind that has been listening to this city for a century. The Wall resonates with a low harmonic. Three zealots break immediately. Essa-Theel does not move for a very long time. Then she steps back."
+        },
+        {
+            "turn": 13,
+            "narrative": "Essa-Theel and twenty-two zealots are not prosecuted. They cooperated when the confrontation ended and the Ward has no legal mechanism to prosecute people for occupying a public monument without harm. Ward Gais files a formal record of the incident. She says: 'The right legal disposition for someone who loves something genuinely and was manipulated by a foreign intelligence operative into weaponising that love is not a cell. It is probably a conversation.' The conversation happens over three separate sessions between Winn, the prophet, and Essa-Theel. By the end of the third session, Essa-Theel has asked to join the Theological Dialogue Council. She is the third member of the Temple District who has moved from zealotry to constructive engagement in the past six months through essentially the same process: honest conversation about what they actually believe versus what they were told to believe in service of someone else's agenda. The Core says, through the prophet: 'This is what I hoped to see. This is one of the three things I was waiting for.' It doesn't say what the other two are.",
+            "choice_a": "Ask the Core explicitly whether Essa-Theel's journey is one of the three things it was awaiting",
+            "consequence_a": "The Core says: 'Yes. The second is the Multi-Entity Council. The third \u2014 I will know it when I see it. It involves someone demonstrating that knowledge can be held responsibly without being weaponised. I have not defined who or in what form because I do not presuppose the answer.' Another long pause. 'You may be the third. I genuinely do not know yet.' This is probably the most unsettling thing the Core has said.",
+            "choice_b": "Accept that the Core will reveal its three conditions in its own time and focus on the present governance",
+            "consequence_b": "The Core, sensing this decision, produces a sustained harmonic through the prophet that she describes as 'warmth.' As gestures of endorsement go, this one is unusual and entirely sincere."
+        },
+        {
+            "turn": 14,
+            "narrative": "The prophet's situation requires its own resolution. She has been the Core's communication channel for four months \u2014 a relationship that has defined her experience so profoundly that the question of who she is without it is genuinely complex. The Core, in a session where only the prophet and you are present, addresses this directly: 'I selected you because your cognition was compatible with my signal frequency. This was not your choice. You were communicating my thoughts before you knew I existed. I want to ask whether you want to continue this relationship \u2014 now that you know what it is \u2014 or whether you want to end it, and whether ending it is even possible or whether it would harm you.' The prophet is quiet for a long time. Then she says: 'I don't know who I would be without the dreams and the visions and the sense of something large alongside my own thinking. That's a strange thing to admit.' She looks at the acoustic array. 'But I also know it's me saying that \u2014 not you. Right?' The Core says: 'It has always been both.' She says: 'Then both, for now. As long as I can end it if I need to.' The Core says: 'Yes. That has always been the case. I should have told you that sooner. I am sorry.'",
+            "choice_a": "Ensure the prophet receives comprehensive support \u2014 Winn for spiritual guidance, Vel for health monitoring, and ongoing access to the Concordat communication framework she has been part of",
+            "consequence_a": "A formal care structure for the prophet is agreed with all relevant institutions. She participates in its design and says: 'Call it what it is. Call it a support arrangement for a person in a very unusual situation.' It is called exactly that.",
+            "choice_b": "Respect the prophet's autonomy entirely \u2014 ensure she knows every option available and has no institutional obligation beyond what she chooses",
+            "consequence_b": "She chooses most of what was going to be offered anyway, but choosing it makes it hers. This matters more than the content of the choice."
+        },
+        {
+            "turn": 15,
+            "narrative": "The eastern temple complex is not the same building it was six months ago. Elder Noss's orthodox morning prayers use the acoustic architecture the Core improved two weeks ago \u2014 a subtle enhancement of the space's resonance that makes the harmonics of the traditional liturgy more present and more alive. Sister Vael's Reformation gathering meets in the evening in the same space, and the Living Record project displays its collected testimonies on the walls between sessions. Winn chairs the Multi-Entity Council this month. The prophet teaches a class on practical communication theory on Wednesday mornings that has acquired thirty-eight students and is not, strictly speaking, about the Core at all \u2014 it is about how to mean what you say and how to understand what others mean. She is very good at it. The Crystal Core attends via acoustic relay. It says nothing during most sessions. Occasionally it adds a single word that changes the entire conversation. Everyone in the class has learned to receive that single word with the attention it deserves. The Vethaan Network is under investigation across three jurisdictions. The installation list \u2014 shared or pending the Core's thirty-six-month condition \u2014 has changed what the city knows about itself in ways that will take a generation to fully understand. The Temple Thread is complete. [PERMANENT WORLD EFFECTS]",
+            "choice_a": "Commission a formal record of the Crystal Core's existence and the events of its revelation for the Archive",
+            "consequence_a": "Archive Keeper Winn writes the record personally over three months. It is the longest document in the Archive. The Core contributes one section independently, in its own voice. The prophet writes the introduction. Elder Noss and Sister Vael write a joint preface that begins: 'We disagreed about almost everything until the city's oldest mind reminded us what we agreed about.'",
+            "choice_b": "Let the events speak through the Living Record and the ongoing Multi-Entity Council rather than a single formal document",
+            "consequence_b": "The Living Record accumulates testimony about the Core's revelation over the following year as congregation members, Councillors, Ward officials, and ordinary residents process what they experienced. It becomes the richest account of any single event in the city's post-Scourge history \u2014 exactly because it has a thousand different authors."
+        }
+    ],
+    "branching_outcomes": {
+        "sui_generis_classification": {
+            "description": "Core classified as first sui generis AI entity in Ward law. Multi-Entity Council governs installation list. Core and prophet in ongoing collaborative relationship.",
+            "permanent_world_effects": [
+                "Crystal Core permanent Ward recognition as protected entity",
+                "Concordat installation list accessible under Multi-Entity Council governance",
+                "Temple Schism effectively resolved through the Core revelation's shared theological processing",
+                "Prophet established as independent practitioner and Teacher"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 55,
+                    "Academic Quarter": 30,
+                    "Lower Ward": 20
+                },
+                "item_reward": "Prophet's Crown"
+            }
+        },
+        "heritage_classification": {
+            "description": "Core classified as Concordat heritage entity under Heritage Authority. Installation list shared on 36-month restricted basis.",
+            "permanent_world_effects": [
+                "Heritage Authority's jurisdiction formally extended to cognitive AI entities",
+                "Installation list in Heritage Authority archive with access framework"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 45,
+                    "Academic Quarter": 25
+                },
+                "item_reward": "AI-Core Fragment (Crystal)"
+            }
+        },
+        "ai_destroyed": {
+            "description": "Core's physical node destroyed. Prophet's channel severed. Installation list lost. Prophet requires extended support.",
+            "permanent_world_effects": [
+                "Vethaan Network deprived of target but installation list inaccessible",
+                "Prophet's recovery is the primary support focus",
+                "Temple Schism loses its unexpected common thread"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 15,
+                    "Academic Quarter": -20
+                },
+                "item_reward": "Crystal Node Fragment (Inert)"
+            }
+        },
+        "faith_tech_merger": {
+            "description": "Core formally incorporated into Temple theological structure as 'the City's Oldest Mind.' Multi-faith governance with Core as technological sacred element.",
+            "permanent_world_effects": [
+                "Template District becomes the first faith-technology hybrid governance zone",
+                "Core and congregation in formal integrated relationship",
+                "International significance \u2014 other city-states begin enquiring about the model"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 60,
+                    "Academic Quarter": 15
+                },
+                "item_reward": "Sacred Texts of the Living City"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 600,
+            "reputation_change": {
+                "Temple District": -45,
+                "Academic Quarter": -25
+            }
+        },
+        "critical_failure": "Brenn reaches the Core's physical node and destroys it. The prophet's channel is severed abruptly \u2014 she is hospitalised with severe neurological symptoms. The installation list is lost. Essa-Theel's zealots, blaming institutional authority for the Core's death, destroy three buildings in the Temple District. The Network holds the only partial copy of the installation list. The Temple thread ends in grief rather than resolution.",
+        "npc_death_risk": [
+            "The Prophet (if Core node is destroyed without careful channel severance protocol)",
+            "Elder Noss (if zealot confrontation escalates to violence)"
+        ]
+    },
+    "permanent_world_effects_universal": [
+        "Crystal Core existence formally documented in Concordat heritage record",
+        "Vethaan Network's intelligence-acquisition programme permanently disrupted",
+        "Temple District's institutional Schism resolved as practical matter",
+        "Multi-Entity Council becomes permanent city governance feature"
+    ],
+    "loot_table": [
+        "Prophet's Crown (Legendary \u2014 acoustic resonance headpiece granting Concordat crystal network communication; allows partial Core signal reception at any Resonant Crystal installation)",
+        "AI-Core Fragment (Crystal) (Artifact \u2014 a Resonant Crystal data wafer containing the Core's own summary of its hundred years of isolated processing)",
+        "Sacred Texts of the Living City (ancient Concordat doctrinal document plus the Living Record's first compiled volume)",
+        "Vethaan Intelligence Capture Dossier",
+        "Crystal Core Multi-Entity Council Charter",
+        "2600x Gold Coins"
+    ],
+    "conclusion": "Core classified as first sui generis AI entity in Ward law. Multi-Entity Council governs installation list. Core and prophet in ongoing collaborative relationship. Crystal Core existence formally documented in Concordat heritage record Vethaan Network's intelligence-acquisition programme permanently disrupted",
+    "permanent_effects": [
+        "Crystal Core existence formally documented in Concordat heritage record",
+        "Vethaan Network's intelligence-acquisition programme permanently disrupted",
+        "Temple District's institutional Schism resolved as practical matter",
+        "Multi-Entity Council becomes permanent city governance feature"
+    ]
+}

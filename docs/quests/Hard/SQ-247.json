@@ -1,0 +1,73 @@
+{
+    "id": "SQ-247",
+    "title": "The Pied Piper of Emberheart",
+    "difficulty": "Hard",
+    "xp_reward": 750,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-246"
+        ]
+    },
+    "location": "Transit Corridor -> The Eastern Spire",
+    "district": "Transit Corridor",
+    "thread": "Vermin",
+    "description": "The Spire is a narrow, steep ascending staircase choked by a literal river of panicked vermin flowing upward. The physical density of the terrified horde makes forward progress impossible without specialized crowd-control tactics.",
+    "key_npcs": [
+        "The Pied Piper",
+        "Mind-Controlled Swarm"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The twisting stone stairs of the Spire are a horrifying, continuous river of panicked rats flowing endlessly upwards. The crushing physical mass of the desperate vermin makes simply walking impossible; they coat the heavy stone steps four feet deep. They are not attacking deliberately; they are terrified of what lies behind them, crushing anyone caught in their escape path.",
+            "choice_a": "Deploy a continuous wave of heavy fire (Arcana/Fire)",
+            "consequence_a": "You project a focused, continuous stream of magical fire. The searing heat parts the living river perfectly, creating a narrow, smoking path of safety through the charred bodies of the vanguard.",
+            "choice_b": "Slam a heavy iron barricade shield forward (Strength DC 13)",
+            "consequence_b": "You lock your shoulders behind a heavy shield, acting as a physical breakwater against the furry tide. You grind forward inches at a time, forcing your way up the punishing incline.",
+            "convergence": "Shattering the initial crush of the horde, you reach the halfway landing, but the structural integrity of the stone stairs groans under the impossible weight."
+        },
+        {
+            "turn": 2,
+            "narrative": "At the intermediate landing, the rat-flow is bottlenecking terribly. The sheer pressure of thousands of bodies is threatening to collapse the ancient stone walkway completely. A massive, deformed 'Breaker-Rat', its skull plated with rusted iron, is actively trying to bash down a sealed side-door to escape the crush.",
+            "choice_a": "Eliminate the Breaker-Rat (Attack AC 14)",
+            "consequence_a": "You drive your weapon cleanly under the iron plating on its skull. The massive rat collapses instantly, and the horde mindlessly tramples its corpse instead of breaching the side tunnel.",
+            "choice_b": "Help it open the side-door (Athletics DC 12)",
+            "consequence_b": "You wedge a heavy bar into the rusted doorframe alongside the desperate beast. The door snaps open, instantly siphoning thousands of rats into the side-tunnels and massively relieving the pressure.",
+            "convergence": "With the bottleneck cleared or bypassed, the final ascent to the top of the Spire is open, leading directly toward the heavy iron bulkhead that seals the upper levels."
+        }
+    ],
+    "branching_outcomes": {
+        "flute_shattered": {
+            "description": "You broke the flute. The rats ate the Piper and scattered.",
+            "unlocks": [
+                "SQ-248"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "High Ward": 15
+                }
+            }
+        },
+        "piper_killed": {
+            "description": "You killed the Piper and recovered his bone-flute.",
+            "unlocks": [
+                "SQ-248"
+            ],
+            "consequences": {
+                "item_reward": "Vermin Bone-Flute"
+            }
+        }
+    },
+    "loot_table": [
+        "Vermin Bone-Flute",
+        "200x Gold Coins"
+    ],
+    "conclusion": "The Spire is ascendantly cleared, breaking the upward flow of the Vermintide. The impossible volume of fleeing rats suggests they are terrified of whatever waits at the top of the structure.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

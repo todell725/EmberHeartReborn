@@ -1,0 +1,77 @@
+{
+    "id": "EH_SQ_442",
+    "title": "The Intruder in the Field",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Agricultural Zone -> The Northern Livestock Pens",
+    "district": "Agricultural Zone",
+    "thread": "Community & Survival",
+    "description": "Something has been raiding the northern livestock pens nightly \u2014 not stealing the animals, but eating only specific parts and leaving the rest. Three goats and a pig have been found in this state. Farmer Cord believes it may be a large Scourge-touched predator.",
+    "key_npcs": [
+        "Farmer Cord",
+        "Tracker Selva"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The predator takes only organ meat \u2014 heart and liver \u2014 leaving everything else completely untouched. Tracker Selva crouches over a set of prints near the pen. They are large, six-toed, and show retractable claw marks \u2014 consistent with a large feline Scourge-variant, but the print pattern shows the animal is injured: its left rear foot drags slightly.",
+            "choice_a": "Follow the tracks immediately while they're fresh",
+            "consequence_a": "The tracks lead to a drainage culvert under the north wall where a large, emaciated creature has made a temporary den. It is clearly suffering.",
+            "choice_b": "Set a live trap baited with organ meat before following the tracks",
+            "consequence_b": "The trap works. By morning, you find the creature caught \u2014 a Scourge-feline, badly injured, unable to hunt normally."
+        },
+        {
+            "turn": 2,
+            "narrative": "The creature is a Scourge-touched lynx variant, badly injured \u2014 likely from a trap or debris in the Fringe. It raided the pens out of desperation, unable to hunt wild prey. It is not threatening you directly but is clearly suffering.",
+            "choice_a": "Attempt to calm and treat the creature's injury",
+            "consequence_a": "A careful, tense interaction. The creature allows you to clean and bind the infected wound after you move very slowly.",
+            "choice_b": "Humanely put the creature down to end its suffering",
+            "consequence_b": "Selva agrees it is the responsible choice. She performs the action quickly. Farmer Cord is relieved."
+        },
+        {
+            "turn": 3,
+            "narrative": "Cord wants his pens better protected going forward.",
+            "choice_a": "Help upgrade the pen fencing with reinforced stakes and motion-triggered noise makers",
+            "consequence_a": "The upgraded pens deter future intrusions effectively.",
+            "choice_b": "Recommend Cord apply to the Agricultural Zone for a Zone Guard patrol route that includes the north pens",
+            "consequence_b": "The Zone Guard agrees. Pens are added to the nightly patrol circuit."
+        }
+    ],
+    "branching_outcomes": {
+        "creature_treated": {
+            "description": "Scourge-feline treated and released. Pens reinforced.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Scourge-Feline Claw",
+                "reputation_change": {
+                    "Agricultural Zone": 14
+                }
+            }
+        },
+        "creature_euthanised": {
+            "description": "Creature euthanised humanely. Pens reinforced.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Agricultural Zone": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Scourge-Feline Claw",
+        "Tracker's Field Notes",
+        "170x Gold Coins"
+    ],
+    "conclusion": "Scourge-feline treated and released. Pens reinforced."
+}

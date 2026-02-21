@@ -1,0 +1,154 @@
+{
+    "id": "SQ-014",
+    "title": "The Flicker-Man's Shadow",
+    "xp_reward": 950,
+    "prerequisites": "None",
+    "description": "A 'Flicker-Man'\u2014a survivor who was caught in a warp-rift\u2014has returned. He's leaving shadows that move on their own.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Flicker-Man sits in the tavern, his body semi-translucent. Every few seconds, he 'blinks' out of existence and reappears an inch to the left. His shadow, however, remains fixed to the floor, staring up at him.",
+            "choice_a": "Communicate with the Flicker-Man (Insight DC 13)",
+            "consequence_a": "Success: He tells you he's 'caught between frequencies'. (+1 Lore)",
+            "choice_b": "Observe the shadow's behavior (Perc DC 14)",
+            "consequence_b": "Success: You notice the shadow is slowly peeling itself off the floor. (+1 Progress)",
+            "convergence": "The tavern lights begin to flicker in a rhythmic, stuttering pattern."
+        },
+        {
+            "turn": 2,
+            "narrative": "With every flicker of light, the shadow grows larger. It's no longer just a silhouette; it's gaining three dimensions, its surface like oily black velvet.",
+            "choice_a": "Interpose your own shadow (Int DC 12)",
+            "consequence_a": "Success: You confuse the entity's growth pattern. (+100 XP)",
+            "choice_b": "Strike the shadow with a cold-iron blade",
+            "consequence_b": "Success: The blade passes through, but the shadow recoils as if burned. (+1 Progress)",
+            "convergence": "The Flicker-Man screams as his shadow begins to pull him into the floorboards."
+        },
+        {
+            "turn": 3,
+            "narrative": "The floorboards are turning into a liquid, black tarp. The Flicker-Man is chest-deep in the shadow-mire. 'Help me find my anchor!' he cries.",
+            "choice_a": "Pull him out with a rope of light (Arcana DC 14)",
+            "consequence_a": "Success: You haul him back to the physical plane. (+1 Progress)",
+            "choice_b": "Dive into the shadow-mire to pull him from below (Str DC 15)",
+            "consequence_b": "Success: You enter the 'Flip-Side' momentarily. (+1 Secret)",
+            "convergence": "The Flicker-Man is free, but the shadow has now fully detached and is standing behind the bar."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Shadow-Man is a perfect, featureless copy of the Flicker-Man. It reaches for a bottle of 'Glint-Wine' and drinks it; the wine simply vanishes into its chest.",
+            "choice_a": "Reason with the Shadow-Man",
+            "consequence_a": "Success: It speaks in a voice like a radio between stations. (+5 Lore)",
+            "choice_b": "Attack the Shadow-Man (Atk DC 15)",
+            "consequence_b": "Success: You slice through its chest, but it simply reforms. (+1 Progress)",
+            "convergence": "The Flicker-Man reveals that his 'Anchor'\u2014a copper watch\u2014is still in the warp-rift zone."
+        },
+        {
+            "turn": 5,
+            "narrative": "You must travel to the 'Jagged-Fissure', a place where physics is a suggestion. The air here tastes like copper and old static.",
+            "choice_a": "Navigate the static (Survival DC 14)",
+            "consequence_a": "Success: You find the path through the shifting rocks. (+100 XP)",
+            "choice_b": "Use a 'Warp-Scanner' (Tech DC 13)",
+            "consequence_b": "Success: You locate the copper watch immediately. (+1 Progress)",
+            "convergence": "The watch is floating in the center of a miniature vortex of violet lightning."
+        },
+        {
+            "turn": 6,
+            "narrative": "The vortex is trying to pull you in. Around the watch, you can see 'After-Images' of the Flicker-Man's life\u2014his wedding, his first house, his death.",
+            "choice_a": "Reach for the watch (Dex DC 15)",
+            "consequence_a": "Success: You snatch the watch from the center of the storm. (+1 Progress)",
+            "choice_b": "Disrupt the vortex with a force-wave",
+            "consequence_b": "Success: The storm collapses, and the watch falls. (+100 XP)",
+            "convergence": "You have the Anchor. The air in the fissure suddenly goes quiet, but your skin is tingling."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Shadow-Man appears behind you in the fissure. It's much stronger here. It wants the watch to complete its takeover.",
+            "choice_a": "Offer the watch to the Shadow",
+            "consequence_a": "Success: The Shadow merges with the watch, becoming a 'Shadow-Sentinel'. (+1 Gear)",
+            "choice_b": "Smash the watch on the rocks",
+            "consequence_b": "Success: You destroy the link, weakening the Shadow. (+1 Progress)",
+            "convergence": "The Shadow-Man lunges for you, his hands like knives of solidified darkness."
+        },
+        {
+            "turn": 8,
+            "narrative": "The fight is taking place in two dimensions at once. Every strike you land on the Shadow is echoed in your own mind as a bad memory.",
+            "choice_a": "Maintain mental focus (Wis Save DC 14)",
+            "consequence_a": "Success: You shrug off the psychic feedback. (+1 Progress)",
+            "choice_b": "Unleash a 'Nova-Flash' to end the darkness",
+            "consequence_b": "Success: The Shadow is disintegrated. (+1 Progress)",
+            "convergence": "The Flicker-Man appears at the edge of the fissure, his body finally solid and steady."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Flicker-Man thanks you. He looks older now, his hair turned white by the experience. He gives you his 'Warp-Cap' as a reward.",
+            "choice_a": "Accept the Cap",
+            "consequence_a": "Success: You gain a headpiece that allows for short-range blinks. (+1 Gear)",
+            "choice_b": "Decline and buy him a drink at the tavern",
+            "consequence_b": "Success: You gain a loyal informant in the Fringe. (+5 Reputation)",
+            "convergence": "The sun begins to set, the shadows returning to their proper, two-dimensional places."
+        },
+        {
+            "turn": 10,
+            "narrative": "You sit on the edge of the fissure, watching the violet lightning fade. The world feels a little more solid today.",
+            "choice_a": "Write a report for the Council",
+            "consequence_a": "Success: They reward you with gold for the data. (+750 Gold)",
+            "choice_b": "Rest and recover",
+            "consequence_b": "Success: You lose the 'Flicker-Tint' from your skin. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Flicker-Man is anchored, and the Shadow-Man is gone. But the Jagged-Fissure remains open, a wound in the world that won't stop bleeding.",
+    "loot_table": [
+        "Warp-Cap",
+        "Shadow-Sentinel Watch",
+        "Copper Anchor",
+        "950 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Flicker-sickness spreads. -5 Health and -2 to all Dexterity checks for a week.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 5,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Tavern patrons report stranger flicking in and out",
+        "flags": [
+            "flicker_sighting"
+        ]
+    },
+    "location": "The Jagged-Fissure \u2014 Eastern Warp Zone",
+    "district": "Scourge-Fringe",
+    "thread": "Scourge",
+    "estimated_duration": "4\u20135 hours",
+    "key_npcs": [
+        "The Flicker-Man (Edrin)",
+        "Shadow-Man (entity)"
+    ],
+    "mechanics_featured": [
+        "Wis saves (identity)",
+        "Dex checks",
+        "Dimensional mechanics",
+        "Boss fight (2-plane)"
+    ],
+    "permanent_effects": {
+        "settlement": "Jagged-Fissure remains open (future threat)",
+        "world": "Flicker-Man becomes settlement informant"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Warp-Cap",
+            "result": "Gain short-range blink ability (gear)"
+        },
+        {
+            "path": "Befriend as informant",
+            "result": "+5 Reputation, recurring contact"
+        }
+    ]
+}

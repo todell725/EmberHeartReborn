@@ -1,0 +1,71 @@
+{
+    "id": "SQ-263",
+    "title": "The Ashen Road",
+    "difficulty": "Epic",
+    "xp_reward": 2200,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-028"
+        ]
+    },
+    "location": "Scourge-Fringe -> The Long March",
+    "district": "Scourge-Fringe",
+    "thread": "ULTIMATE CONSPIRACY",
+    "description": "You intercepted a strange, metallic carrier-drone flying towards the distant Red Wastes. It was transmitting data back to a localized grid. You must follow its flight path to uncover its source.",
+    "key_npcs": [
+        "Rogue Drones"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The drone's path leads into a highly irradiated sector of the Fringe. A swarm of hunter-killer drones attempts to stop your approach.",
+            "choice_a": "Use a heavy energy shield and push through",
+            "consequence_a": "The drones exhaust their batteries on your shield. They fall dead from the sky.",
+            "choice_b": "Hack their targeting matrix to turn them against each other",
+            "consequence_b": "A complex override. You succeed, saving your stamina as they blow each other to pieces."
+        },
+        {
+            "turn": 2,
+            "narrative": "You find a buried, highly advanced metallic bunker doors buried under centuries of ash.",
+            "choice_a": "Melt the doors with focused arcane heat",
+            "consequence_a": "The magma tears through the metal, triggering the base's inner alarm sirens.",
+            "choice_b": "Rip the manual override wheel with sheer strength",
+            "consequence_b": "The gears groan and snap. The door slides open silently, avoiding the alarms."
+        }
+    ],
+    "branching_outcomes": {
+        "bunker_alarmed": {
+            "description": "You forced your way into the bunker loudly.",
+            "unlocks": [
+                "SQ-264"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Expedition": -10
+                }
+            }
+        },
+        "bunker_silent": {
+            "description": "You breached the bunker silently.",
+            "unlocks": [
+                "SQ-264"
+            ],
+            "consequences": {
+                "item_reward": "Bunker Master-Key"
+            }
+        }
+    },
+    "loot_table": [
+        "Drone CPU Core",
+        "Scrap Metal",
+        "800x Gold Coins"
+    ],
+    "conclusion": "You forced your way into the bunker loudly.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

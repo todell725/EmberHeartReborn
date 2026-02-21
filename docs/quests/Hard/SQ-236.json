@@ -1,0 +1,71 @@
+{
+    "id": "SQ-236",
+    "title": "The Bakery's Secret",
+    "difficulty": "Hard",
+    "xp_reward": 600,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-009"
+        ]
+    },
+    "location": "Lower Ward -> The Hearth-Oven",
+    "district": "Lower Ward",
+    "thread": "Bakery",
+    "description": "The strange flour you delivered to the Hearth-Oven months ago has borne fruit. The baker is mass-producing a strange bread that causes aggressive euphoria in the Ward.",
+    "key_npcs": [
+        "Baker Thade",
+        "Addicted Citizens"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The bakery is swarmed by desperate citizens. Thade is handing out the 'Joy-Loaves' for free.",
+            "choice_a": "Fight through the crowd to confront Thade",
+            "consequence_a": "The crowd violently defends him. You must incapacitate several civilians before reaching the shop.",
+            "choice_b": "Sneak in through the flour-chute on the roof",
+            "consequence_b": "You drop directly into the kitchen, avoiding the mob entirely."
+        },
+        {
+            "turn": 2,
+            "narrative": "In the kitchen, Thade is mixing the dough with a glowing blue liquid\u2014distilled Void-Wine.",
+            "choice_a": "Smash the vats of Void-Wine",
+            "consequence_a": "The vats shatter, spilling the volatile liquid. The fumes cause you to hallucinate violently during the ensuing fight.",
+            "choice_b": "Arrest Thade quietly at swordpoint",
+            "consequence_b": "He surrenders, realizing he is caught. You secure the evidence without a fight."
+        }
+    ],
+    "branching_outcomes": {
+        "vats_smashed": {
+            "description": "You destroyed the Void-Wine supply, stopping the production.",
+            "unlocks": [
+                "SQ-237"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 10
+                }
+            }
+        },
+        "thade_arrested": {
+            "description": "You arrested Thade and secured the uncorrupted Void-Wine.",
+            "unlocks": [
+                "SQ-237"
+            ],
+            "consequences": {
+                "item_reward": "Distilled Void-Wine"
+            }
+        }
+    },
+    "loot_table": [
+        "Joy-Loaf (Consumable)",
+        "100x Gold Coins"
+    ],
+    "conclusion": "You destroyed the Void-Wine supply, stopping the production.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

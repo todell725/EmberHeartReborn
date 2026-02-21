@@ -1,0 +1,161 @@
+{
+    "id": "EH_SQ_502",
+    "title": "The Baker's Uprising",
+    "difficulty": "Medium",
+    "xp_reward": 1050,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_501"
+        ],
+        "items_required": []
+    },
+    "location": "Market Ward -> Merchant Guild Hall / Bakery District",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "The Bread Cartel's dismantling and the F-Chamber's public legitimisation has emboldened the Market Ward's bakery community. Led by Petra and Gorm \u2014 who have now merged their operations \u2014 forty-three bakers present a formal petition to the Merchant Guild demanding independent licensing, price floor protections, and the right to buy flour directly from the Agricultural Zone without Guild intermediaries. The Guild has responded by revoking five bakers' licences on technical grounds within 24 hours. A full trade confrontation is building. This is the bakers' chance to break free from Guild control permanently \u2014 or be crushed before they have fully organised.",
+    "key_npcs": [
+        "Baker Petra",
+        "Baker Gorm",
+        "Guild Master Tolver",
+        "Agricultural Rep Liss",
+        "Ward Councillor Dain"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Petra and Gorm present you with their petition in the merged bakery \u2014 now the largest in the Market Ward and operating as a workers' cooperative. The document is thorough, legally cited, and signed by forty-three proprietors. Gorm has a bruise on his jaw. He says Guild enforcers visited last night to explain why the petition was 'inadvisable.' Petra is furious and wants to go to the press. Gorm wants to find leverage first. You were the one who dismantled the Cartel \u2014 they trust you to help them navigate this.",
+            "choice_a": "Advise immediate press engagement \u2014 public disclosure makes Guild enforcement dangerous and costly",
+            "consequence_a": "Ward journalist Ira runs the story within six hours. The Guild licence revocations become front-page news. Guild Master Tolver issues an angry denial that reads as confirmation.",
+            "choice_b": "Advise securing Ward Council support before going public \u2014 a Councillor's backing changes the legal landscape immediately",
+            "consequence_b": "Councillor Dain, who owes political capital to Ward communities after recent events, agrees to review the petition formally \u2014 a significant procedural protection."
+        },
+        {
+            "turn": 2,
+            "narrative": "The five revoked bakers are now locked out of their premises. Their families are losing income daily. The Guild has invoked an obscure 'standards compliance' clause that requires a formal 30-day appeals process \u2014 time specifically designed to break resistance by financial attrition. You need either to accelerate the appeals or find the Guild in violation of a protection that invalidates the clause entirely.",
+            "choice_a": "Examine the standards compliance clause closely for procedural defects",
+            "consequence_a": "The clause was amended four years ago without the required full Guild membership vote \u2014 making the amendment itself procedurally void. The revocations are based on an invalid clause.",
+            "choice_b": "Get the five revoked bakers emergency interim licences from a sympathetic Ward Authority official while appeals proceed",
+            "consequence_b": "A sympathetic official issues interim operating permits. The bakers reopen immediately. The Guild is furious but legally blocked from stopping it."
+        },
+        {
+            "turn": 3,
+            "narrative": "With the five bakers protected and the procedural defect identified, the uprising has momentum. Tolver calls an emergency Guild session and you receive an invitation \u2014 not to testify but to 'mediate.' In the Guild Hall's grand chamber, forty Guild members sit across from forty-three bakers. The air is thick. Tolver opens by offering to restore the five licences in exchange for the petition being withdrawn. Petra looks at you.",
+            "choice_a": "Advise Petra to reject the offer and demand the Guild recognise the independent licensing framework",
+            "consequence_a": "Petra stands: 'The petition is not withdrawn. We will accept licence restoration as a first step only.' The room electrifies.",
+            "choice_b": "Recommend accepting the offer as a tactical retreat \u2014 preserve the five shops and rebuild for a second push",
+            "consequence_b": "Gorm disagrees but follows your lead. The licences are restored. The petition is officially withdrawn \u2014 but the bakers begin organising a formal independent trade association that doesn't require Guild recognition."
+        },
+        {
+            "turn": 4,
+            "narrative": "Either the confrontation intensifies or the independent trade association route is pursued. In both cases, Tolver makes a private move: he contacts the High Ward Merchant Families who have long held de facto control over the Guild. Within forty-eight hours, two of the largest wheat trading families withdraw supply contracts from six bakeries who are part of the petition. Suddenly six more bakers face closure \u2014 not from licence revocation but from inability to source flour. The Agricultural Zone's direct supply route is the bakers' lifeline now.",
+            "choice_a": "Travel to the Agricultural Zone and negotiate an emergency direct supply arrangement with Agronomist Liss",
+            "consequence_a": "Liss has been watching the Ward situation closely. She is eager to provide direct supply \u2014 the Guild intermediaries have been underpaying her farmers for years. She agrees to a trial direct-supply contract.",
+            "choice_b": "Expose the supply withdrawal as anticompetitive collusion to the Ward Trade Authority",
+            "consequence_b": "The Ward Trade Authority determines the coordinated withdrawal across two unrelated trading families constitutes market manipulation. A temporary injunction restores supply within 24 hours."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Agricultural Zone direct supply arrangement or the injunction stabilises the crisis. Tolver is now exposed on two fronts: the procedural defect, the supply manipulation. He makes a personal visit \u2014 without Guild escort \u2014 to the merged bakery. He is older than you remember. He closes the door and says: 'I have spent thirty years building something. I don't want to spend my last years enforcing it.' He offers a bargain: he will support the independent licensing framework internally if the bakers agree not to pursue the supply manipulation charge.",
+            "choice_a": "Accept Tolver's personal bargain \u2014 his internal support could deliver the framework faster than a fight",
+            "consequence_a": "Tolver is as good as his word. Three weeks later, the Guild votes to recognise independent baker licensing by a slim majority. His advocacy is the decisive factor.",
+            "choice_b": "Reject Tolver's bargain \u2014 the bakers deserve the full legal outcome and his personal support doesn't outweigh accountability for the supply manipulation",
+            "consequence_b": "The supply manipulation case proceeds. Tolver testifies against the trading families to limit his own exposure. The framework is won through the courts."
+        },
+        {
+            "turn": 6,
+            "narrative": "The agricultural supply line is secured and the independent licensing framework is through either Guild approval or legal ruling. Forty-three bakeries are free of Guild pricing control for the first time in two generations. But the power vacuum is real: the Guild had been providing genuine services \u2014 standards enforcement, dispute arbitration, supplier verification \u2014 that the bakers now need to replicate themselves. Petra and Gorm ask you to help design the Baker's Independent Trade Council.",
+            "choice_a": "Draft a council charter modelled on the Guild's functional services but with democratic baker governance",
+            "consequence_a": "The council is constituted with twelve elected seats, rotating annually. Petra is the first Chair. Gorm is the first Standards Officer.",
+            "choice_b": "Recommend the bakers form a looser cooperative alliance rather than formalising a new institution",
+            "consequence_b": "The Baker's Alliance is informal but effective. It operates on trust and shared interest \u2014 lighter and more nimble than the Guild."
+        },
+        {
+            "turn": 7,
+            "narrative": "Councillor Dain, who provided the formal review that protected the petition, now wants something in return: political support for his upcoming proposal to create a unified Market Ward Food Authority that would oversee all food traders, not just bakers. It sounds beneficial in principle \u2014 in practice it would give a single Ward Council committee oversight over the new Baker's Council or Alliance, potentially recreating the control problem with a different body at the top.",
+            "choice_a": "Negotiate with Dain \u2014 support the Food Authority in exchange for explicit carve-outs protecting baker independence",
+            "consequence_a": "Dain agrees to amended language. The Food Authority is created with clear independence provisions for licensed trader associations.",
+            "choice_b": "Oppose the Food Authority proposal as premature \u2014 the bakers need time to consolidate their independence before any new oversight body is introduced",
+            "consequence_b": "Dain is irritated but the opposition is sufficient to delay the proposal. The bakers have a window of genuine independence."
+        },
+        {
+            "turn": 8,
+            "narrative": "The High Ward Merchant Families who attempted the supply manipulation have not forgotten. Two weeks after the settlement or ruling, a new entity appears in the Ward's commercial registry: The Market Ward Grain Collective, capitalised at significant funds and immediately offering bakeries below-market flour prices. It is an attempt to buy influence that the Guild lost through legitimate competition \u2014 making the bakers financially dependent again but through economic rather than coercive means.",
+            "choice_a": "Identify the Collective's backers and expose any connection to the previous supply manipulation attempt",
+            "consequence_a": "The Collective's primary investor is a holding company with documented links to the trading family that ordered the supply withdrawal. Exposed, the Collective's offer collapses as bakeries withdraw from discussions.",
+            "choice_b": "Advise the bakers to accept the Collective's below-market offer but structure it with a one-year exit clause at no penalty",
+            "consequence_b": "Smart financial positioning. Bakeries take the lower prices for one year while building their independent supply capacities from the Agricultural Zone. When the exit clause is invoked, they are self-sufficient."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Ward journalist Ira publishes a feature on the Baker's Uprising \u2014 a long-form account of everything that has happened over the past several months, from the Cartel to the F-Chamber to the Guild confrontation and the Uprising itself. The piece is well-researched and balanced. But it names you prominently as the central figure in all of it. By nightfall, you have received three anonymous messages: one is a note of congratulation that feels menacing, one is a threat to your physical safety, and one says only the name 'Vethaan' with a bread loaf drawn beneath it.",
+            "choice_a": "Report all three messages to Astrid with full documentation",
+            "consequence_a": "Astrid pulls security resources immediately. The Vethaan bread loaf symbol is added to the investigation file \u2014 it suggests someone within the bakery community, or someone with detailed knowledge of it, is connected to Vethaan.",
+            "choice_b": "Analyse the three messages yourself before deciding what to share",
+            "consequence_b": "The handwriting, paper quality, and seal wax on the threatening note match High Ward stationery. The Vethaan note was delivered by a Lower Ward child who was given a silver coin and a note to deliver."
+        },
+        {
+            "turn": 10,
+            "narrative": "The Vethaan breadloaf symbol combined with the threatening note creates genuine urgency. The Baker's Uprising has made you a public figure and a visible target. At the same time, the Uprising itself is reaching its successful conclusion \u2014 but the final ratification of the independent licensing framework requires a Ward Council vote that is happening in two days. Two Council members who were expected to support it have gone suspiciously silent. [INVESTIGATION ENCOUNTER \u2014 determine if Council members have been pressured and counter the pressure before the vote]",
+            "choice_a": "Visit both Council members personally and directly ask if they have been approached by anyone regarding the vote",
+            "consequence_a": "One of them \u2014 the more junior \u2014 cracks under direct questioning: they received a private communication with financial inducements to abstain from the vote. You have documented bribery.",
+            "choice_b": "Have Astrid run surveillance on both Council members for 48 hours before the vote to catch any meetings with interested parties",
+            "consequence_b": "A High Ward legal courier makes a delivery to one Council member's private residence two hours before the vote \u2014 a sealed envelope that the member immediately burns without reading, apparently deciding against accepting the inducement."
+        },
+        {
+            "turn": 11,
+            "narrative": "The bribery either documented or deflected, the Ward Council vote proceeds. The chamber is packed. Bakers from across the Market Ward stand in the public gallery watching. Petra is in the front row. The vote is called. It passes \u2014 twenty-two to seventeen, with three abstentions. The independent bakery licensing framework is now Ward law. The gallery erupts. Petra is weeping. Gorm is grinning. Tolver, sitting alone in the back of the chamber, is completely still. He catches your eye, nods once, and leaves.",
+            "choice_a": "Find Tolver after the vote and acknowledge what he helped accomplish",
+            "consequence_a": "Tolver speaks quietly. 'I've been with the Guild since I was Gorm's age. I thought it was everything. Now I think it was just a place I was comfortable.' He shakes your hand and walks away.",
+            "choice_b": "Let Tolver go \u2014 the moment belongs to the bakers, not to complicated acknowledgements",
+            "consequence_b": "You watch the celebration in the gallery instead. Pross and Rella are both there. The city feels, for a moment, capable of changing."
+        },
+        {
+            "turn": 12,
+            "narrative": "Three weeks after the vote, the Baker's Council or Alliance holds its inaugural session. Forty-three businesses operating freely. The F-Chamber providing subsidised yeast. Direct Agricultural Zone supply flowing. Every baker in the Market Ward who wanted independence has it. The thread started with three bakery incidents that looked random but were anything but \u2014 and has ended with the Ward's food infrastructure genuinely transformed. The Vethaan thread remains open. The breadloaf symbol sits in Astrid's files. Whoever Vethaan is, they have been watching the bakery district carefully enough to know your involvement in detail. That is worth remembering.",
+            "choice_a": "Formally commit to investigating the Vethaan breadloaf connection actively",
+            "consequence_a": "OPERATION VETHAAN receives two new data points. A sub-investigation specifically targeting Vethaan's interest in the bakery district is opened.",
+            "choice_b": "Log the breadloaf connection and return to other work \u2014 Vethaan will surface again on their own schedule",
+            "consequence_b": "The connection is logged. Vethaan remains a shadow. The baker thread closes cleanly."
+        }
+    ],
+    "branching_outcomes": {
+        "framework_passed_guild_support": {
+            "description": "Independent licensing framework passed with Tolver's cooperation. Baker's Council constituted.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 45,
+                    "High Ward": -15
+                },
+                "item_reward": "Baker's Council Charter"
+            }
+        },
+        "framework_passed_legal": {
+            "description": "Independent licensing framework won through Ward Courts. Baker's Alliance formed.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 40
+                },
+                "item_reward": "Ward Trade Authority Ruling"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 250,
+            "reputation_change": {
+                "Market Ward": -30
+            }
+        },
+        "critical_failure": "The Council vote fails. The Guild retaliates. Multiple bakeries close within a week."
+    },
+    "loot_table": [
+        "Baker's Council Charter",
+        "Ward Trade Authority Ruling",
+        "Tolver's Guild Keys",
+        "Independent Licensing Framework Document",
+        "1050x Gold Coins"
+    ],
+    "conclusion": "Independent licensing framework passed with Tolver's cooperation. Baker's Council constituted."
+}

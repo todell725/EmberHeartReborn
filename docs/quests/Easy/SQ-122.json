@@ -1,0 +1,160 @@
+{
+    "id": "SQ-122",
+    "title": "The Lantern's Ghost",
+    "difficulty": "Easy",
+    "xp_reward": 210,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-006"
+        ],
+        "items_required": [
+            "Vial of Liquid Chronos"
+        ],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "description": "A streetlamp is projecting haunting memories onto the streets of the High-Ward...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "A streetlamp in the High-Ward is flickering with a blue light that shows 'Memories of the Past' on the cobblestones.",
+            "choice_a": "Watch the memories",
+            "consequence_a": "Success.",
+            "choice_b": "Open the lantern-casing",
+            "consequence_b": "Success.",
+            "convergence": "You see a vision of a 'Old-World' wedding, the people's faces blurred like melting wax. The smell is of ozone and old perfume."
+        },
+        {
+            "turn": 2,
+            "narrative": "The lantern is powered by a 'Memory-Crystal' that has been 'Infected' by the Scourge. It\u2019s weeping a blue, glowing liquid.",
+            "choice_a": "Collect the 'Tear'",
+            "consequence_a": "Success.",
+            "choice_b": "Clean the crystal",
+            "consequence_b": "Success.",
+            "convergence": "The liquid is 'Liquid-Memory'. Drinking it (at your own risk) gives you a +2 to 'History' for 1 hour."
+        },
+        {
+            "turn": 3,
+            "narrative": "A 'Lantern-Ghost'\u2014a translucent figure of a man in a top hat\u2014appears, trying to 'Refix' the crystal with a screwdriver made of light.",
+            "choice_a": "Help the Ghost",
+            "consequence_a": "Success.",
+            "choice_b": "Question his identity",
+            "consequence_b": "Success.",
+            "convergence": "He reveals he was the 'Master of Lights' before the fall. He is a 'Logic-Echo'."
+        },
+        {
+            "turn": 4,
+            "narrative": "The 'Memory-Crystal' begins to project a 'Future-Vision'\u2014a map to a hidden 'Warp-Silo' beneath the palace.",
+            "choice_a": "Record the map",
+            "consequence_a": "Success.",
+            "choice_b": "Disrupt the vision",
+            "consequence_b": "Success.",
+            "convergence": "The vision is unstable, the blue light turning a jagged purple that warns of 'Total-Erasure'."
+        },
+        {
+            "turn": 5,
+            "narrative": "A 'Memory-Eater'\u2014a creature of static and teeth\u2014descends from the rafters of a nearby house, seeking to consume the crystal.",
+            "choice_a": "Slash the eater",
+            "consequence_a": "Success.",
+            "choice_b": "Distract it with a 'False-Memory'",
+            "consequence_b": "Success.",
+            "convergence": "The eater is a cloud of 'Data-Mites'. They are trying to 'Delete' the Master of Lights."
+        },
+        {
+            "turn": 6,
+            "narrative": "You must shield the Ghost with your own 'Will'. The air is cold and hums with a sound like a skipping record.",
+            "choice_a": "Stand in the light (Wis DC 13)",
+            "consequence_a": "Success.",
+            "choice_b": "Use a 'Will-Stone'",
+            "consequence_b": "Success.",
+            "convergence": "The Eater is repelled by the 'Solid-Truth' of your presence. The Ghost completes the repair."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Master of Lights gives you a 'Lantern-Charm'\u2014a small, glowing blue sphere that can repel 'Static-Wraiths'.",
+            "choice_a": "Accept the charm",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Memory-Crystal",
+            "consequence_b": "Success.",
+            "convergence": "The charm is warm and hums a steady, comforting blue note in your palm."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Streetlamp is now a 'Beacon of History'. The High-Ward guards promise to protect it as a 'cultural asset'.",
+            "choice_a": "Log the discovery",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The memories on the cobbles are now clear\u2014a scene of children playing in a summer garden long ago."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, the blue light makes your shadow look like it\u2019s wearing a top hat. It mimics your every wave with a bow.",
+            "choice_a": "Bow back to your shadow",
+            "consequence_a": "Success.",
+            "choice_b": "Consult the Weaver",
+            "consequence_b": "Success.",
+            "convergence": "The night is peaceful, the blue lamplight casting a magical, safe glow on the street."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the High-Ward. The 'Lantern's Ghost' is a friendly guide tonight.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Done",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Lantern's Ghost' is complete. Quest Complete.",
+    "loot_table": [
+        "Lantern-Charm",
+        "Liquid-Memory Vial",
+        "Shard of True-Memory"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Your own memories are deleted by the Eater. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "High-Ward guards report cobblestone projections from streetlamp",
+        "flags": []
+    },
+    "location": "High-Ward Streetlamp \u2014 Heritage Road",
+    "district": "North Ward",
+    "thread": "Chronos",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Master of Lights (Logic-Echo ghost)",
+        "Memory-Eater (creature)"
+    ],
+    "mechanics_featured": [
+        "Insight (ghost aid)",
+        "Wis saves (will shield)",
+        "Investigation (map recording)",
+        "Combat (data-mites)"
+    ],
+    "permanent_effects": {
+        "settlement": "Streetlamp declared cultural asset; Warp-Silo map obtained",
+        "world": "Hidden silo beneath palace flagged"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Lantern-Charm",
+            "result": "Static-Wraith repellent item"
+        },
+        {
+            "path": "Take Memory-Crystal",
+            "result": "History-bonus potion source"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "id": "SQ-212",
+    "title": "Frequency of Fear",
+    "difficulty": "Medium",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-211"
+        ]
+    },
+    "location": "Bio-Ward -> Abandoned Intake Chutes",
+    "district": "Bio-Ward",
+    "thread": "Static",
+    "description": "Following the lingering echoes of the broadcast, you descend into the sealed Bio-Ward. The static on the radio is causing intense auditory hallucinations.",
+    "key_npcs": [
+        "Hallucinations",
+        "Mutated Scavengers"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The descent into the Bio-Ward is pitch black. The radio static sporadically whispers your name.",
+            "choice_a": "Turn the radio off to save your sanity (Willpower)",
+            "consequence_a": "You lose the guiding signal, forcing you to navigate blindly and walk right into an ambush.",
+            "choice_b": "Keep it on and endure the whispers",
+            "consequence_b": "You take minor psychic damage, but the signal guides you safely past a nest of mutated scavengers."
+        },
+        {
+            "turn": 2,
+            "narrative": "You reach a massive steel bulkhead marked 'SUBJECT 7 CONTAINMENT'. The door is sealed with an electronic keypad.",
+            "choice_a": "Use the tuned radio to broadcast the code back at it",
+            "consequence_a": "The numbers sequence perfectly matches the lock. The heavy doors hiss open.",
+            "choice_b": "Pry the panel off and hardwire it (Thieves Tools)",
+            "consequence_b": "You bypass the lock, but trigger a silent alarm deeper in the facility."
+        }
+    ],
+    "branching_outcomes": {
+        "silent_entry": {
+            "description": "You entered the containment sector without alerting the denizens.",
+            "unlocks": [
+                "SQ-213"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Bio-Ward": 5
+                }
+            }
+        },
+        "alarm_triggered": {
+            "description": "You entered the facility, but something inside knows you are here.",
+            "unlocks": [
+                "SQ-213"
+            ],
+            "consequences": {
+                "item_reward": "Scrap Electronics"
+            }
+        }
+    },
+    "loot_table": [
+        "Scrap Electronics",
+        "Old Empire Keycard"
+    ],
+    "conclusion": "You entered the containment sector without alerting the denizens.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "id": "SQ-258",
+    "title": "The Swarm's Echo",
+    "difficulty": "Epic",
+    "xp_reward": 1500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-250"
+        ]
+    },
+    "location": "Undercity -> The Chrono-Fracture",
+    "district": "Undercity",
+    "thread": "Chronos",
+    "description": "Flushing the Vermintide revealed a strange, glowing tear in the fabric of the Undercity. A Chrono-Fracture. Time is flowing backwards near the pumping station.",
+    "key_npcs": [
+        "Time-Lost Vermin",
+        "The Fracture"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "As you approach the fracture, the flushed Vermin are suddenly regurgitated from the water, running exactly backwards up the pipes.",
+            "choice_a": "Use Chronos-Magic to stabilize your own timeline",
+            "consequence_a": "You anchor yourself. You can fight normally while the rats move in erratic, predictable reverse patterns.",
+            "choice_b": "Fight the backwards-moving swarm conventionally",
+            "consequence_b": "Highly disorienting. You take several bites you couldn't see coming because the rats attack before they wind up."
+        },
+        {
+            "turn": 2,
+            "narrative": "At the center of the fracture is a shattered piece of an hourglass. You must seal the rift.",
+            "choice_a": "Crush the hourglass shard completely",
+            "consequence_a": "The rift closes violently, throwing you backwards and dealing moderate force damage.",
+            "choice_b": "Carefully recalibrate the shard into your own timepiece",
+            "consequence_b": "The rift seals seamlessly, and your timepiece gains the ability to briefly rewind minor mistakes."
+        }
+    ],
+    "branching_outcomes": {
+        "rift_crushed": {
+            "description": "You violently closed the time rift.",
+            "unlocks": [
+                "SQ-ELITE-UNWEAVE"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Academic Quarter": 20
+                }
+            }
+        },
+        "rift_absorbed": {
+            "description": "You absorbed the Chrono-Shard and sealed the rift.",
+            "unlocks": [
+                "SQ-ELITE-UNWEAVE"
+            ],
+            "consequences": {
+                "item_reward": "Chrono-Shard Matrix"
+            }
+        }
+    },
+    "loot_table": [
+        "Chrono-Shard Matrix",
+        "Temporal Dust",
+        "400x Gold Coins"
+    ],
+    "conclusion": "You violently closed the time rift.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

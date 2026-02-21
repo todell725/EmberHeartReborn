@@ -1,0 +1,69 @@
+{
+    "id": "SQ-243",
+    "title": "The Crater's Edge",
+    "difficulty": "Epic",
+    "xp_reward": 1000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-242"
+        ]
+    },
+    "location": "Expedition -> The Scourge-Heart Rim",
+    "district": "Expedition",
+    "thread": "Expedition (Beyond City)",
+    "description": "You reach the edge of the crater where the Scourge meteor first struck 300 years ago. An old pre-Scourge science team camp remains perfectly preserved in amber-like resin.",
+    "key_npcs": [
+        "Resin-Trapped Scientists"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The camp is surrounded by hostile resin-elementals. They attempt to encase you.",
+            "choice_a": "Shatter them with blunt weapons",
+            "consequence_a": "They shatter easily into crystalline shards. A quick victory.",
+            "choice_b": "Melt them with fire",
+            "consequence_b": "The fire works, but releases a highly toxic, hallucinogenic vapor."
+        },
+        {
+            "turn": 2,
+            "narrative": "You find the lead scientist frozen mid-scream in a pillar of resin. He is holding a metallic data-slate.",
+            "choice_a": "Use a specialized solvent to dissolve the resin",
+            "consequence_a": "It takes an hour. You safely extract the slate without damaging it or the corpse.",
+            "choice_b": "Smash the resin with a hammer",
+            "consequence_b": "The corpse shatters instantly. You get the slate, but feel a sickening wave of bad karma."
+        }
+    ],
+    "branching_outcomes": {
+        "slate_extracted": {
+            "description": "You extracted the final pre-Scourge data safely.",
+            "unlocks": [
+                "SQ-244"
+            ],
+            "consequences": {
+                "item_reward": "Crater Data-Slate"
+            }
+        },
+        "slate_smashed": {
+            "description": "You crudely extracted the data, disrespecting the dead.",
+            "unlocks": [
+                "SQ-244"
+            ],
+            "consequences": {
+                "item_reward": "Damaged Crater Data-Slate"
+            }
+        }
+    },
+    "loot_table": [
+        "Crater Data-Slate",
+        "Resin Shards",
+        "350x Gold Coins"
+    ],
+    "conclusion": "You extracted the final pre-Scourge data safely.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "id": "EH_SQ_415",
+    "title": "The Purple Ghost",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Undercity -> The Drip Tunnels",
+    "district": "Undercity",
+    "thread": "Void-Wine",
+    "description": "Citizens in the Lower Ward have been reporting sightings of a purple-glowing 'ghost' moving through the streets at night. On closer inspection, this is someone or something that has consumed enormous quantities of Void-Wine and is bioluminescent. You need to find them before someone panics and causes an incident.",
+    "key_npcs": [
+        "Ward Ghost-Hunters (Civilians)",
+        "The Bioluminescent Figure"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You stake out the Drip Tunnels where the ghost was last seen. Two hours into your watch a lavender glow appears around a corner \u2014 and resolves into a man named Edden, a former city surveyor, wrapped in a worn blanket and visibly bewildered by his own glow.",
+            "choice_a": "Approach Edden calmly and non-threateningly",
+            "consequence_a": "Edden is frightened and ashamed. He has been buying cheap Void-Wine for months and the glow started three weeks ago.",
+            "choice_b": "Signal the Ward patrol to come assist before approaching",
+            "consequence_b": "The Ward patrol arrives. Their torchlight and loud voices cause Edden to bolt deeper into the tunnels."
+        },
+        {
+            "turn": 2,
+            "narrative": "Edden explains he lost his surveying job after the Scourge restructured the city's mapping department. He started drinking to cope with unemployment and isolation. The glow appeared gradually. He has been hiding underground to avoid terrifying people.",
+            "choice_a": "Take Edden to Alchemist Rynn to assess his condition",
+            "consequence_a": "Rynn confirms severe Void-saturation. The glow will fade with abstinence over several weeks.",
+            "choice_b": "Help Edden find a safe place to stay while dealing with withdrawal",
+            "consequence_b": "You secure him a bunk at a Lower Ward shelter. Out of sight, the panic stops."
+        },
+        {
+            "turn": 3,
+            "narrative": "With Edden stabilising you address his underlying unemployment.",
+            "choice_a": "Help Edden apply to the Reconstruction Survey Office \u2014 they need surveyors urgently",
+            "consequence_a": "Edden gets an interview. His pre-Scourge expertise is immediately valued.",
+            "choice_b": "Simply ensure Edden is safe and let him handle his own recovery",
+            "consequence_b": "Edden thanks you sincerely. He handles his own recovery over the following weeks."
+        }
+    ],
+    "branching_outcomes": {
+        "edden_employed": {
+            "description": "Edden found surveying work. Lower Ward ghost sightings ceased.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Old Survey Map",
+                "reputation_change": {
+                    "Lower Ward": 14
+                }
+            }
+        },
+        "edden_stabilised": {
+            "description": "Edden stabilised and recovering at the shelter.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Old Survey Map",
+        "Void-Glow Sample",
+        "170x Gold Coins"
+    ],
+    "conclusion": "Edden found surveying work. Lower Ward ghost sightings ceased."
+}

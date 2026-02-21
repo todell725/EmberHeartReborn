@@ -1,0 +1,154 @@
+{
+    "id": "SQ-013",
+    "title": "The Salt-Sump Siphon",
+    "xp_reward": 850,
+    "prerequisites": "None",
+    "description": "The 'Salt-Sumps' are overflowing with a brine that is corrosive to the soul. A rogue siphon is pumping the liquid into the drinking water.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The sumps are a series of deep, stone vats filled with a thick, iridescent white liquid that tastes like copper and tears. The air is so salty it makes your eyes sting and your skin itch.",
+            "choice_a": "Identify the brine's origin (Alchemist DC 12)",
+            "consequence_a": "Success: You realize the salt is 'Condensed Despair'. (+1 Lore)",
+            "choice_b": "Follow the siphon pipe (Perc DC 11)",
+            "consequence_b": "Success: You find the pipe leading into a hidden sub-basement. (+1 Progress)",
+            "convergence": "The floor tiles here are covered in a thin, white crust of salt that crunches like bone."
+        },
+        {
+            "turn": 2,
+            "narrative": "A man is hunched over the main valve, his clothes white as ghosts. He's talking to the brine, whispering secrets that make the liquid bubble.",
+            "choice_a": "Confront the Saboteur",
+            "consequence_a": "Success: He looks at you with eyes that have been bleached white. (+1 Progress)",
+            "choice_b": "Sneak closer (Stealth DC 13)",
+            "consequence_b": "Success: You see he's using a 'Void-Siphon'\u2014a device prohibited by the Council. (+1 Secret)",
+            "convergence": "The Saboteur screams and kicks a lever, causing a high-pressure jet of brine to spray toward you."
+        },
+        {
+            "turn": 3,
+            "narrative": "The brine is corrosive. It's not just eating your armor; it's eating your memories. You feel a sudden, sharp pang of loss for a childhood friend whose name you can't remember.",
+            "choice_a": "Hold on to your identity (Con Save DC 14)",
+            "consequence_a": "Success: You maintain your sense of self through the mental rot. (+1 Progress)",
+            "choice_b": "Dodge the spray (Dex DC 14)",
+            "consequence_b": "Success: You avoid the worst of the liquid. (+100 XP)",
+            "convergence": "The room is filling with brine. The Saboteur has locked the exit and is laughing hysterically."
+        },
+        {
+            "turn": 4,
+            "narrative": "The water is at your knees. You see the Saboteur attempting to merge with the brine, his skin turning into translucent salt-crystals.",
+            "choice_a": "Pull him out of the vat (Str DC 15)",
+            "consequence_a": "Success: You save him from 'The Great Dissolve'. (+1 Progress)",
+            "choice_b": "Smash the Siphon (Atk DC 14)",
+            "consequence_b": "Success: The mechanism shatters, and the flow stops. (+1 Progress)",
+            "convergence": "The brine begins to drain away, but it's leaving behind a 'Salt-Phantom'\u2014a humanoid figure made of swirling crystals."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Salt-Phantom moves with a jerky, unnatural rhythm. It speaks with the voices of a thousand grieving mothers.",
+            "choice_a": "Dispel the phantom (Religo DC 14)",
+            "consequence_a": "Success: The brine-spirit evaporates into a cloud of steam. (+100 XP)",
+            "choice_b": "Shatter its form (Atk DC 15)",
+            "consequence_b": "Success: The phantom explodes into a thousand harmless shards. (+1 Progress)",
+            "convergence": "The Saboteur is unconscious on the ground, his body a living map of salt-burns."
+        },
+        {
+            "turn": 6,
+            "narrative": "You find a journal on his belt. It contains a list of every person he intended to 'Purify' with the brine.",
+            "choice_a": "Read the names (Int DC 13)",
+            "consequence_a": "Success: You find several Council members on the list. (+1 Intel)",
+            "choice_b": "Burn the journal",
+            "consequence_b": "Success: You decide some truths are better left buried. (+1 Morale)",
+            "convergence": "The local guards arrive, led by a Sump-Captain who looks suspicious of your presence."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Captain demands to know if you were working with the Saboteur. He's looking at the Void-Siphon in your hand.",
+            "choice_a": "Persuade him of your innocence (Charisma DC 14)",
+            "consequence_a": "Success: He accepts your story and thanks you. (+1 Progress)",
+            "choice_b": "Intimidate him into silence (Str DC 15)",
+            "consequence_b": "Success: He backs down, but his loyalty is now zero. (+1 Progress)",
+            "convergence": "He offers you a 'Salt-Guard's Pouch' as a bribe or a reward, depending on your tone."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Sump is safe, but the damage to the water supply will take days to fix. The townspeople are thirsty and angry.",
+            "choice_a": "Provide a clean water source (Survival DC 13)",
+            "consequence_a": "Success: You find an old, forgotten well in the ruins. (+5 Morale)",
+            "choice_b": "Organize a water-rationing plan",
+            "consequence_b": "Success: You prevent a riot. (+5 Reputation)",
+            "convergence": "The sun sets, the horizon turning a salt-white as the moon rises."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Saboteur wakes up in the cell. He begs for one last drop of the brine. He says the salt is 'The Only Way to Forget'.",
+            "choice_a": "Give him a drop (Evil Action)",
+            "consequence_a": "Success: He smiles and dissolves into dust. (+1 Secret)",
+            "choice_b": "Offer him fresh water",
+            "consequence_b": "Success: He weeps and begins to repent. (+1 Morale)",
+            "convergence": "The Siphon is dismantled, and the Salt-Sump is sealed with iron bars."
+        },
+        {
+            "turn": 10,
+            "narrative": "You look at your reflection in a cup of clean water. Your eyes look a little more tired, but your soul is intact.",
+            "choice_a": "Rest at the Tavern",
+            "consequence_a": "Success: You recover your memories. (+1 Luck)",
+            "choice_b": "Check the walls for more siphons",
+            "consequence_b": "Success: You find nothing, but the paranoia remains. (+1 Lore)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Salt-Sump Siphon was a localized madness, but the presence of the Void-Siphon suggests that someone is supplying these forbidden tools to the desperate.",
+    "loot_table": [
+        "Salt-Guard's Pouch",
+        "Saboteur's Journal",
+        "Brine-Crystal Shard",
+        "850 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Water supply corrupted. -10 Health and -5 Morale for all residents.",
+        "failure_penalty": {
+            "xp_loss": 10
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Water supply flags contamination",
+        "flags": [
+            "water_contaminated"
+        ]
+    },
+    "location": "The Salt-Sumps \u2014 Undercity Vats",
+    "district": "Undercity",
+    "thread": "Void",
+    "estimated_duration": "3\u20134 hours",
+    "key_npcs": [
+        "Sump-Captain Harrow",
+        "The Saboteur (cultist)"
+    ],
+    "mechanics_featured": [
+        "Con saves (corrosion)",
+        "Stealth",
+        "Alchemy",
+        "Social (interrogation)"
+    ],
+    "permanent_effects": {
+        "settlement": "Water supply restored; Void-Siphon catalogued as contraband",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Read the journal",
+            "result": "Council members flagged as targets (+1 Intel)"
+        },
+        {
+            "path": "Burn the journal",
+            "result": "+1 Morale, secrets buried"
+        }
+    ]
+}

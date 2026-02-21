@@ -1,0 +1,156 @@
+{
+    "id": "SQ-030",
+    "title": "The Fog-Watcher's Lantern",
+    "xp_reward": 750,
+    "prerequisites": "None",
+    "description": "The outer-perimeter signal lantern has gone dark during a thick Scourge-fog. Without it, the scout ships are blind.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The fog is so thick you can't see your own hand. It's cold, damp, and smells of wet ash. The path to the signal tower is barely a shadow in the white.",
+            "choice_a": "Use a guide-rope (Dex DC 11)",
+            "consequence_a": "Success: You don't lose your way in the mist. (+1 Progress)",
+            "choice_b": "Chant a navigation mantra",
+            "consequence_b": "Success: Your inner sense of direction holds. (+100 XP)",
+            "convergence": "A 'Fog-Stalker'\u2014a spindly, long-limbed shadow\u2014darts past you in the mist."
+        },
+        {
+            "turn": 2,
+            "narrative": "The tower looms up ahead, a jagged finger of stone. The stairs are slick with 'Fog-Condensate', which is as slippery as ice.",
+            "choice_a": "Climb with pitons (Str DC 12)",
+            "consequence_a": "Success: You make steady upward progress. (+1 Progress)",
+            "choice_b": "Dash up the stairs (Dex DC 14)",
+            "consequence_b": "Success: You reach the first landing before the fog can slow you. (+1 Progress)",
+            "convergence": "The door to the lantern room is locked from the inside."
+        },
+        {
+            "turn": 3,
+            "narrative": "You hear a scratching sound from behind the door. A weak voice is sobbing inside: 'The light... it wasn't enough...'",
+            "choice_a": "Break down the door (Str DC 14)",
+            "consequence_a": "Success: The hinges snap, and you burst in. (+1 Progress)",
+            "choice_b": "Pick the lock (Dex DC 13)",
+            "consequence_b": "Success: You enter quietly. (+100 XP)",
+            "convergence": "The Lantern-Watcher is huddled in the corner, holding a shard of broken glass. The main lantern is shattered."
+        },
+        {
+            "turn": 4,
+            "narrative": "The lantern used a 'Sol-Crystal' which has now been drained of its light. The room is filled with a small, localized vortex of fog.",
+            "choice_a": "Soothe the Watcher (Char DC 13)",
+            "consequence_a": "Success: He tells you the fog 'drank' the light. (+1 Lore)",
+            "choice_b": "Examine the lantern base (Int DC 13)",
+            "consequence_b": "Success: You find the 'Mana-Filter' is clogged with soot. (+1 Progress)",
+            "convergence": "The fog-vortex begins to solidify into a 'Cloud-Wraith'."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Wraith is made of swirling vapors and two glowing, violet eyes. It's feeding on the remaining mana in the room.",
+            "choice_a": "Banish it with a 'Burst of Light'",
+            "consequence_a": "Success: The Wraith shrieks and dissolves. (+100 XP)",
+            "choice_b": "Trap it in a containment jar (Dex DC 14)",
+            "consequence_b": "Success: You have a miniature storm in a bottle. (+1 Loot)",
+            "convergence": "The room is clear, but you need a new light source immediately."
+        },
+        {
+            "turn": 6,
+            "narrative": "A scout ship's horn sounds in the distance. They're heading straight for the 'Jagged-Ridge'. You have less than a minute.",
+            "choice_a": "Use your own weapon as a conduit",
+            "consequence_a": "Success: Your weapon glows with an intense, holy light. (+1 Progress)",
+            "choice_b": "Apply 'Flare-Powder' to the wick (DEX DC 15)",
+            "consequence_b": "Success: You create a blinding, temporary signal. (+1 Progress)",
+            "convergence": "The light cuts through the fog, painting the white world in a harsh, neon blue."
+        },
+        {
+            "turn": 7,
+            "narrative": "The scout ship swerves just in time. You see its silhouette pass safely by the tower, its horn sounding a note of gratitude.",
+            "choice_a": "Maintain the signal (Str DC 14)",
+            "consequence_a": "Success: You keep the light steady until the fleet passes. (+1 Progress)",
+            "choice_b": "Fix the Sol-Crystal (Int DC 14)",
+            "consequence_b": "Success: You restore the permanent light. (+1 Progress)",
+            "convergence": "The Scourge-fog begins to lift, retreating into the frozen wastes."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Watcher is beginning to recover. He thanks you and offers you his 'Fog-Glass' lens.",
+            "choice_a": "Accept the lens",
+            "consequence_a": "Success: You gain a tool that can see through any mist. (+1 Gear)",
+            "choice_b": "Refuse and tell him to be more careful",
+            "consequence_b": "Success: He promises to double-check the filters. (+1 Rep)",
+            "convergence": "The sun begins to peek through the remaining clouds, illuminating the tower in gold."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you descend the tower, you find a 'Fog-Cutter'\u2014a piece of the Cloud-Wraith that didn't dissolve. It's solid, cold, and hums with energy.",
+            "choice_a": "Harvest the Fog-Cutter (Int DC 14)",
+            "consequence_a": "Success: You gain a rare component for 'Anti-Fog' gear. (+1 Loot)",
+            "choice_b": "Bury it in the snow",
+            "consequence_b": "Success: You return the energy to the wastes. (+1 Luck)",
+            "convergence": "The horizon is clear, and the settlement's scouts are safe."
+        },
+        {
+            "turn": 10,
+            "narrative": "You look back at the tower. It stands as a lonely sentinel against the dark. The horizon is clear.",
+            "choice_a": "Return to the settlement",
+            "consequence_a": "Success: You bring news of the fleet's arrival. (+10 Morale)",
+            "choice_b": "Stay for one more watch",
+            "consequence_b": "Success: You find a deep sense of peace. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Fog-Watcher's Lantern was a direct target of a Cloud-Wraith. The fleet is safe, and the beacon burns through the Scourge.",
+    "loot_table": [
+        "Fog-Glass Lens",
+        "Fog-Cutter Shard",
+        "Crate of Void-Vellum",
+        "750 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Scout ship lost. -5 Local Resources and a week of mourning.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Scout fleet reports signal lantern dark during fog",
+        "flags": [
+            "lantern_dark",
+            "fog_alert"
+        ]
+    },
+    "location": "Outer-Perimeter Signal Tower \u2014 North Cliffs",
+    "district": "Lower Ward",
+    "thread": "Community & Survival",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "Lantern-Watcher Orren",
+        "Cloud-Wraith (creature)",
+        "Scout Fleet Commander"
+    ],
+    "mechanics_featured": [
+        "Dex (fog navigation)",
+        "Str (piton climbing)",
+        "Perception",
+        "Light-source mechanics"
+    ],
+    "permanent_effects": {
+        "settlement": "Lantern restored; fleet safe; Fog-Watcher protocol reviewed",
+        "world": "Cloud-Wraith catalogued"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Fog-Glass lens",
+            "result": "Mist-vision tool gained"
+        },
+        {
+            "path": "Harvest Fog-Cutter",
+            "result": "Anti-Fog gear component acquired"
+        }
+    ]
+}

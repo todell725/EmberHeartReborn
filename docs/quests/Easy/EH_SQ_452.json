@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_452",
+    "title": "The Coughing Quarter",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Medical Quarter -> The Infirmary Hall",
+    "district": "Medical Quarter",
+    "thread": "Community & Survival",
+    "description": "A cluster of respiratory illness cases has appeared in the Lower Ward \u2014 seventeen people in four adjacent streets all presenting the same dry cough and morning fever within a single week. Medical Quarter Director Sela believes this is environmental rather than contagious. She needs someone to identify the source.",
+    "key_npcs": [
+        "Director Sela",
+        "Dust Analyst Kem"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "All seventeen cases live or work within two hundred metres of each other. The illness isn't spreading beyond that radius, which confirms Director Sela's hypothesis: environmental exposure. Dust Analyst Kem suggests checking the neighbourhood's air quality and building conditions.",
+            "choice_a": "Inspect the buildings in the affected radius for any new construction or industrial activity",
+            "consequence_a": "You find that a warehouse conversion project began ten days ago \u2014 seven days before the first cases. The conversion disturbed forty years of accumulated dust and old stone plaster.",
+            "choice_b": "Collect air samples in the affected streets at different times of day",
+            "consequence_b": "Morning samples are dramatically higher in fine particulate matter than afternoon. The source is something that disperses during early morning temperature changes."
+        },
+        {
+            "turn": 2,
+            "narrative": "Investigation confirms the warehouse conversion is releasing Settled Quarry Dust \u2014 fine silica particles from the original construction period that accumulate in old walls. It's not toxic in small amounts but at this concentration it causes respiratory irritation.",
+            "choice_a": "Order the construction company to halt work immediately pending dust abatement",
+            "consequence_a": "The site supervisor is resistant but backs down when you invoke Ward public health authority.",
+            "choice_b": "Work with Kem to arrange free particle masks for all affected residents while the source is addressed",
+            "consequence_b": "Kem distributes masks to all seventeen affected households within two hours. Symptoms begin improving."
+        },
+        {
+            "turn": 3,
+            "narrative": "Director Sela wants the conversion project to comply with dust safety standards before resuming.",
+            "choice_a": "Draft a compliance checklist for the construction company to meet before work resumes",
+            "consequence_a": "The checklist is submitted to the Ward Authority. Construction resumes ten days later with proper dust suppression.",
+            "choice_b": "Recommend the Medical Quarter establish a formal Environmental Illness Investigation protocol",
+            "consequence_b": "Sela approves. A new Environmental Illness Protocol is formally adopted by the Medical Quarter."
+        }
+    ],
+    "branching_outcomes": {
+        "construction_halted": {
+            "description": "Construction halted. Dust abatement required before resuming.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Dust Abatement Report",
+                "reputation_change": {
+                    "Medical Quarter": 14,
+                    "Lower Ward": 10
+                }
+            }
+        },
+        "protocol_adopted": {
+            "description": "Environmental Illness Protocol formally adopted.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Medical Quarter Commendation",
+                "reputation_change": {
+                    "Medical Quarter": 18
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Medical Quarter Commendation",
+        "Dust Abatement Report",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Construction halted. Dust abatement required before resuming."
+}

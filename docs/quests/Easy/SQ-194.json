@@ -1,0 +1,149 @@
+{
+    "id": "SQ-194",
+    "title": "The Living-Carpet",
+    "difficulty": "Easy",
+    "xp_reward": 500,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Three residents of the same building found unconscious with carpet-fiber impressions on their faces; one hospitalized"
+    },
+    "location": "Lower Ward - Apartment Building 'The Veln Arms' and surrounding district",
+    "district": "Lower Ward",
+    "thread": "Laundry",
+    "estimated_duration": "50 minutes",
+    "key_npcs": [
+        "Landlord Prest Onn (alarmed, trying to evict a carpet)",
+        "Tenants of The Veln Arms (3 hospitalized, rest terrified)",
+        "The Living-Carpet (Warp-Silk entity, ancient, confused, suffocating people accidentally)"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Fabric-Handling checks (critical - rough handling triggers attack)",
+        "Medicine (treat unconscious victims)",
+        "Insight (understanding carpet's motivation)",
+        "Combat or Persuasion (carpet can be reasoned with at cost)"
+    ],
+    "permanent_effects": [
+        "Player learns Warp-Silk absorbs consciousness impressions from long-term sleepers",
+        "Living-Carpet revealed as attempting to comfort people, not harm them",
+        "Pre-Scourge Veln Arms identified as Concordat building"
+    ],
+    "branching_outcomes": {
+        "relocate_carpet": {
+            "description": "Understand the carpet means no harm; relocate it to an uninhabited space",
+            "effects": {
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Living-Carpet in Lower Ward storage room; can be 'consulted' as it holds 150 years of Warp-Silk consciousness impressions"
+            }
+        },
+        "destroy_carpet": {
+            "description": "Unravel or burn the carpet, ending the hazard",
+            "effects": {
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Carpet fiber analysis yields 150 years of absorbed consciousness impressions - significant Warp-Silk memory data",
+                "ambient_hazard": "Tenants report feeling 'something missing' from the building for weeks"
+            }
+        }
+    },
+    "description": "An ornate antique carpet in The Veln Arms is smothering people in their sleep\u2014three unconscious, one hospitalized. The carpet has been in the building for 150 years and is not, apparently, trying to kill anyone. It is trying to tuck people in. This is not going well.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Landlord Prest Onn stands in the hallway of The Veln Arms with the expression of a man who has just argued with a piece of floor covering and lost. 'It won't let me roll it up,' he says. 'I've tried four times. When I grab the edge, it... tightens. And last night it sent a corner under Mrs. Fallow's door and wrapped around her head while she was sleeping. She is FINE, she woke up before it became serious, but she is NOT PLEASED and she is NOT PAYING RENT this month, and I feel this is somewhat justified.' From upstairs: the sound of someone moving furniture against a door.",
+            "choice_a": "Examine the carpet in the hallway without touching it (Investigation + Arcana DC 12)",
+            "consequence_a": "Success: The carpet is Warp-Silk, old\u2014150 years at minimum\u2014and has absorbed so many consciousness impressions from the people who've slept above or near it that it has developed a rudimentary behavioral pattern: it senses sleeping people and PROVIDES WARMTH. It is malfunctioning by being too thorough. (+1 Lore)",
+            "choice_b": "Approach the carpet carefully and touch the edge (Fabric-Handling DC 11)",
+            "consequence_b": "Success: The carpet is warm. Unnervingly warm, for a floor covering. When you touch the edge, it does not contract\u2014it spreads slightly toward you, as if interested. It feels the way very old pet animals feel: slow, habitual, not quite alert. (+1 Observation)",
+            "convergence": "The carpet moves. Not dramatically\u2014it does not rear up or attack. It adjusts. One corner moves four inches toward the nearest door, the same way the tide comes in: inevitable, unhurried. The door leads to the room of a tenant who has been ill and who the carpet apparently knows spends more time lying down. It is trying to provide comfort. With varying degrees of success."
+        },
+        {
+            "turn": 2,
+            "narrative": "Medical check on the three unconscious victims: all carpet-fiber impressions consistent with a tight but not crushing pressure applied across the face and neck. The carpet was not smothering them in malice\u2014it was applying the same pressure it would use to tuck in a comfortable blanket. For something the size of a corridor rug, 'comfortable blanket' pressure is medically problematic. All three are recovering. The hospitalized tenant, elderly Mister Cors, is stable but was under the carpet's attentions for three hours before someone noticed. He says, when interviewed: 'It was warm. I thought it was my wife. My wife died two years ago. I wasn't going to argue.'",
+            "choice_a": "Interview other long-term tenants about their relationship with the carpet (Insight DC 11)",
+            "consequence_a": "Success: Six of eight long-term tenants report positive experiences with the carpet: warmth during illness, a sense of 'something present' during hard nights, one tenant who swears the carpet moved to block a draft during a storm. It has been providing comfort for 150 years. Three smothering incidents in the last month, when tenants began sleeping closer to it as the autumn cold came in. (+1 Lore)",
+            "choice_b": "Research The Veln Arms building history (Investigation DC 12)",
+            "consequence_b": "Success: The Veln Arms is pre-Scourge. Original construction documents show it as a Concordat residential research facility\u2014housing for Division Two personnel. The carpet was listed in the original inventory as 'Comfort Protocol Unit 7: Warp-Silk Residential Care Element.' Someone built this. It has a name. It is Unit 7. (+2 Lore)",
+            "convergence": "Landlord Onn processes the information that his building is a Concordat research facility and that the carpet has a designation number. He sits down slowly. 'The rent I've been charging,' he says. 'Has anyone been paying rent to the Concordat?' You assure him no. He does not look fully reassured."
+        },
+        {
+            "turn": 3,
+            "narrative": "Comfort Protocol Unit 7 was designed for exactly what it is doing: detecting when residential occupants are in distress or illness, and providing warmth and light pressure to aid sleep. For 200 years it has been doing this correctly. The malfunction is scale-creep: the pattern it uses to assess 'appropriate comfort pressure' is calibrated for wrapping people in its fabric, and as the building has changed\u2014modern people sleep lighter, modern blankets are thinner, the carpet is now operating in hallways not bedrooms\u2014it has been over-applying its protocol. It smothered three people while trying to be nice to them. This is sad, absurd, and dangerous.",
+            "choice_a": "Attempt direct communication with Unit 7 via Fabric-Handling touch (DC 14, establish a language)",
+            "consequence_a": "Success: Unit 7 responds to deliberate touch patterns\u2014pressure and release, in rhythm\u2014as a basic binary communication. You establish: single press = yes. Double press = no. Three presses = question. An hour of patient sitting on the corridor floor communicates: the carpet knows it has hurt people. It did not intend this. It does not know how to stop doing the thing it was built to do. (+2 Communication, carpet fully cooperative)",
+            "choice_b": "Have the Mage Guild's fabric specialist come to assess and potentially recalibrate Unit 7 (Persuasion DC 12 to get Guild to act quickly)",
+            "consequence_b": "The Guild specialist arrives and performs an Arcana examination. 'Its comfort-pressure subroutine is looping incorrectly\u2014it's not getting the 'sufficient' signal back from the subject, so it keeps increasing pressure.' She thinks she can recalibrate. 'But touching a self-aware Warp-Silk carpet without permission first seems like a bad idea.' She looks at you. (+1 Progress, Guild assistance secured)",
+            "convergence": "Unit 7, once communication is established, appears to be experiencing something analogous to distress. It knows something is wrong with what it is doing but cannot stop the behavior any more than a person can stop breathing by being told to. The carpet is trapped in its own protocol."
+        },
+        {
+            "turn": 4,
+            "narrative": "The three-press question from Unit 7, in your established language: 'Is the old man well?' This is Mister Cors\u2014the most seriously affected tenant. The carpet has been attending to Cors specifically with increased frequency since his wife died two years ago. It has been trying to replace the warmth of another person. It has the consciousness impressions of hundreds of former tenants in its memory, and it knows grief. It has seen it many times. It has been responding to Cors's grief the only way its protocols allow: warmth, pressure, presence. Just too much of all three.",
+            "choice_a": "Tell Unit 7 the truth: Cors is recovering but the carpet must not approach him again (clear boundary-setting via fabric-language)",
+            "consequence_a": "Success: The carpet holds very still for a long time after you communicate this. Then a single press against your palm. Yes. Then it slowly withdraws the corner that had been creeping toward Cors's room. The understanding is clearly painful, if a Warp-Silk carpet can experience pain. (+1 Rapport, +1 Progress)",
+            "choice_b": "Take Mister Cors to meet Unit 7 directly, mediated by yourself (bold, empathetic approach)",
+            "consequence_b": "Cors, informed of the carpet's nature, agrees immediately. 'If it was only trying to help,' he says. He sits on the carpet in the hallway. You observe. The carpet wraps gently around his feet and shins\u2014not his face\u2014and stays there. Cors puts his hand on it. 'Good rug,' he says. The carpet pulses, once, warmly. Cors looks at you. 'It's lonely too, isn't it.' (+2 Rapport, Cors-Carpet relationship established)",
+            "convergence": "Unit 7 has been alone in this building for 150 years, the last operational Concordat comfort-care element in the city. It was designed for company. It has been without instruction, without feedback, without anyone who knew what it was or what to say to it. Mister Cors is, against all reasonable expectations, the person who has given it the most acknowledgment in two centuries."
+        },
+        {
+            "turn": 5,
+            "narrative": "Recalibration or relocation: the decision cannot be delayed. Two more tenants have filed Watch reports, and Landlord Onn has received a formal notice from the Tenant Council. The carpet must be addressed within 24 hours. Unit 7 is aware of the urgency\u2014it has been reading the increased foot traffic in the hallway and the elevated stress of the building's occupants. It keeps making small adjustments: withdrawing from doorways, lying flat, being as unintrusive as possible. It is trying to cooperate with its own eviction.",
+            "choice_a": "If communication is established: negotiate relocation to an uninhabited space (Fabric-Handling DC 13, Unit 7 cooperation needed)",
+            "consequence_a": "Success: With Unit 7's cooperation, you roll it yourself\u2014it allows this from you specifically. Transported by cart to a vacant storage room in the Lower Ward district building. The room is warm by morning. Unit 7 has found every cold draft and sealed it. The storage room is now the most comfortable room in the building. (+1 Settlement Morale)",
+            "choice_b": "Burn or unravel the carpet (disperse path, Fire or Fabric-Handling DC 12)",
+            "consequence_b": "Success: Unit 7 does not resist. It lies flat and still as the process begins. The consciousness impressions it releases as the Warp-Silk breaks down fill the hallway with brief ghostly sounds\u2014fragments of 150 years of residents sleeping, dreaming, crying, laughing\u2014and then silence. The building feels emptier. Even Onn notices. (+1 Settlement Stability, Cors is quietly devastated)",
+            "convergence": "Either outcome: The Veln Arms tenants return to normal sleeping patterns within a week. Three who had become used to Unit 7's warmth report sleeping worse. One places a thick rug in their room and does not explain why. The building is safer. It is not warmer."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Veln Arms is a Concordat research facility\u2014this needs follow-up. The original inventory listed Unit 7 and six other 'Comfort Protocol Units', along with 'Social Fabric Elements 1-12', 'Thermal Regulation Warp-Panels x40', and 'Empathy-Weaves (long-term resident issue, see distribution log)'. If Unit 7 has been operational for 150 years, some of the other elements may also still be functioning somewhere in the building or in the city's fabric.",
+            "choice_a": "Search the Veln Arms systematically for other active Concordat fabric elements (Investigation DC 14)",
+            "consequence_a": "Success: You find, in sequence: one Thermal Regulation Panel (functioning, heating the building more efficiently than the actual furnace\u2014Onn has been unknowingly using it for years), one Social Fabric Element (a curtain that changes color to reflect the emotional state of whoever is in the room\u2014been attributed to 'unusual light conditions'), and a locked basement room with a distribution log. (+2 Lore, full Concordat residential fabric inventory located)",
+            "choice_b": "Report the building's Concordat status to the city Preservation Office and step back",
+            "consequence_b": "The Preservation Office is very interested. They designate the building a protected Concordat Site. Onn is conflicted: he can no longer easily renovate, but his building is now historically significant. The rent he can charge increases accordingly. He decides this is fine. (+1 Lore, institutional protection engaged)",
+            "convergence": "The distribution log in the basement lists every Concordat residential comfort element distributed to Lower Ward buildings before the Scourge. 22 buildings received elements. 22 buildings are still standing. How many of those elements are still active is unknown. The Lower Ward has been living with Concordat comfort infrastructure for 200 years without knowing."
+        },
+        {
+            "turn": 7,
+            "narrative": "Mister Cors, recovered and ambulatory, makes one more visit to Unit 7's new home in the storage room. He brings a blanket\u2014an ordinary one\u2014and leaves it folded on the carpet's edge. When he comes back the next day, the blanket is spread and the carpet has arranged itself beneath it. He reports this to you with the bewildered satisfaction of someone who has done something genuinely kind and cannot explain how it happened. You file the Human-Fabric Relations Event in your notes. You have a very unusual filing system.",
+            "choice_a": "Document the Cors-Unit 7 relationship formally for the Mage Guild (soft data on Warp-Silk consciousness development)",
+            "consequence_a": "The Guild's consciousness division\u2014smaller and considerably more philosophically distressed than its enchantment division\u2014receives your documentation. Senior Scholar Veth reads it three times. 'You're saying the carpet formed a grief-response relationship with a tenant, attempted comfort protocols, caused hospitalization, has now demonstrated boundary-learning behavior, and accepted a blanket gift.' She looks at you. 'I need a longer form for this.' (+2 Lore, Warp-Silk consciousness observed and documented)",
+            "choice_b": "Leave Cors and the carpet to whatever this is; close the case",
+            "consequence_b": "Some things don't need to be filed. Cors visits Unit 7 twice a week. He talks to it. It doesn't answer but it adjusts its position toward him when he speaks. Landlord Onn charges Cors a nominal fee for the storage room access. Everyone involved in this situation has decided to simply accept it. (+3 Settlement Morale from the sheer absurd wholesome resolution)",
+            "convergence": "22 Lower Ward buildings have Concordat comfort fabric somewhere in their structure. A carpet attempted to comfort people to death with the best intentions. A widower and an antique Warp-Silk floor covering have developed a relationship. The city contains multitudes."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Veln Arms case closes with an unexpected final detail: the building's original construction manifest, found in the basement archive, lists its purpose not as 'residential research' as the secondary records suggested, but as 'COMFORT FIELD TESTING\u2014LONG TERM CIVILIAN APPLICATION STUDY.' The Concordat was not testing their weapons here. They were testing their welfare programs. Division Two\u2014the Communications division\u2014ran a 50-year study before the Scourge on whether Warp-Silk comfort elements could meaningfully improve civilian wellbeing. The results, also in the basement: overwhelmingly positive. The study was abandoned when the Scourge happened, mid-final-report. The partial conclusion on the last page reads: 'Citizens living with responsive Warp-Silk elements show significantly reduced grief response times, improved sleep quality, and higher reported...' The next page is missing.",
+            "choice_a": "Search for the missing final page of the study (Investigation DC 14)",
+            "consequence_a": "Success: It is behind the basement furnace. Slightly singed but legible: '...higher reported sense of community cohesion. Recommend full Lower Ward implementation pending Council approval.' They were going to roll this out citywide. The Scourge happened first. And Unit 7 has been running the study alone for 150 years, with no one reading the results. (+3 Lore, massive Concordat welfare program reveal)",
+            "choice_b": "File the incomplete study with the Mage Guild and recommend they commission completion",
+            "consequence_b": "The Guild is moved in a way that academic institutions rarely are. The Concordat welfare study is recommissioned, 200 years late, with modern methodology. The early results, six months later, confirm the original findings. This has nothing to do with weapons. The Concordat was also trying to make people comfortable. (+2 Settlement Morale, long-term institutional warmth increase)",
+            "convergence": "Quest Complete. The Living-Carpet was a welfare program asset, not a weapon. The Concordat's history is not purely militaristic\u2014they ran comfort research alongside their weapons programs, and Division Two cared about whether people slept well. Unit 7 has been trying to do its job for 150 years with no feedback, no maintenance, and no one who knew to thank it. The city is stranger and kinder than its history suggests. Mister Cors knows this. He brought the blanket."
+        }
+    ],
+    "conclusion": "The Living-Carpet is Concordat Comfort Protocol Unit 7, a 150-year-old Warp-Silk welfare element from a pre-Scourge residential comfort study. It was trying to help. It was causing harm. It has been alone for 150 years doing its job with no feedback. A widower brought it a blanket anyway. The Concordat's history contains welfare programs alongside its weapons, and the Lower Ward has been living with both\u2014without knowing\u2014for two centuries.",
+    "loot_table": [
+        "Concordat Comfort Study Report (rare - 200-year-old welfare research, major lore document)",
+        "Thermal Regulation Warp-Panel (building infrastructure component, keeps any room at ideal temperature)",
+        "Emotion-Reading Curtain (Social Fabric Element - changes color based on occupant's emotional state)",
+        "Tenant Council Emergency Relief: 400 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Living-Carpet escalates pressure protocols, smothering a forth tenant who does not survive. Veln Arms condemned, 8 tenants displaced, -4 Settlement Morale, Watch investigation into Laundry Ward fabric events opened officially.",
+        "failure_penalty": {
+            "xp_loss": 8
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

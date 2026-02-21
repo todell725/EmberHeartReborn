@@ -1,0 +1,155 @@
+{
+    "id": "SQ-009",
+    "title": "The Bandit King's Toll",
+    "xp_reward": 750,
+    "prerequisites": "None",
+    "description": "A group of self-styled 'Ridge-Lords' has blockaded the main trade road to the High Ward.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The blockade is a wall of spikes and overturned wagons. In the center sits a man on a throne of rusted shields\u2014the Bandit King, 'Iron-Jaw' Jax.",
+            "choice_a": "Negotiate a 'Trade Passport' (Charisma DC 14)",
+            "consequence_a": "Success: You convince him that a tax-paying road is better than a blockaded one. (+1 Stability)",
+            "choice_b": "Scout their flank for a weak point (Perception DC 13)",
+            "consequence_b": "Success: You find their stores of oil are dangerously close to their barracks. (+1 Tactical Adv)",
+            "convergence": "Jax is not a common thug; he wears the armor of a fallen City Warden."
+        },
+        {
+            "turn": 2,
+            "narrative": "Jax demands 10% of the settlement's monthly income or 'the head of the current High Warden'.",
+            "choice_a": "Refuse and challenge him to a duel",
+            "consequence_a": "Success: The bandits respect the old laws. A circle is formed. (+100 XP)",
+            "choice_b": "Pay a 'One-Time' fee (100 Gold)",
+            "consequence_b": "Success: The road is cleared temporarily. (-100 Gold)",
+            "convergence": "Jax steps down from his throne, his giant 'Sunder-Mace' sparking against the stone."
+        },
+        {
+            "turn": 3,
+            "narrative": "The duel is to first blood or yield. The bandits chant Jax\u2019s name, their weapons beating a rhythm on their shields.",
+            "choice_a": "Defensive Stance (Str Save DC 14)",
+            "consequence_a": "Success: You weather the giant mace's impact, your shield arm numbing but holding. (+1 Progress)",
+            "choice_b": "Aggressive Lunge (Attack AC 16)",
+            "consequence_b": "Success: You find a gap in his Warden-plate. Jax grunts in surprise. (+100 XP)",
+            "convergence": "Jax laughs. 'You've got spirit, pup. But I've got the Ridge on my side!'"
+        },
+        {
+            "turn": 4,
+            "narrative": "Jax uses a smoke-bomb, the thick gray cloud filling the dueling circle. He moves with surprising silence for a man of his size.",
+            "choice_a": "Trust your ears (Insight DC 13)",
+            "consequence_a": "Success: You hear the air-displacement and duck. (+1 Tactical Adv)",
+            "choice_b": "Sweeping strike to clear the air",
+            "consequence_b": "Failure: You strike only smoke, leaving your back exposed. (-5 HP)",
+            "convergence": "Jax emerges from the fog behind you, his mace high."
+        },
+        {
+            "turn": 5,
+            "narrative": "Jax\u2019s mace misses your head by an inch, shattering a nearby wagon-wheel. He is breathing heavy now.",
+            "choice_a": "Disarm him (Str vs DC 15)",
+            "consequence_a": "Success: You twist the mace from his grip.jax falls to his knees. (+100 XP)",
+            "choice_b": "Lethal execution during his recovery",
+            "consequence_b": "Success: You end the threat. The bandits disperse in fear. (+1 Rep)",
+            "convergence": "The Bandit King yields. He offers you his 'Ridge-Lord' ring as a sign of respect."
+        },
+        {
+            "turn": 6,
+            "narrative": "With the King defeated, the Trade Road is open. Caravans begin to move again, their drivers giving you a wide berth.",
+            "choice_a": "Offer Jax a job in the City Guard",
+            "consequence_a": "Success: You gain a powerful, if untrustworthy, lieutenant. (+5 Defense, -2 Morale)",
+            "choice_b": "Exile Jax from the Ridge",
+            "consequence_b": "Success: He leaves, but his legend will grow in the wastes. (+3 Rep)",
+            "convergence": "You find a hidden stash of trade goods in the King\u2019s throne."
+        },
+        {
+            "turn": 7,
+            "narrative": "The stash contains 'Oakhaven Spices'\u2014luxury items that have been missing for months.",
+            "choice_a": "Return the spices to the Merchant Guild",
+            "consequence_a": "Success: They reward you with a share of the profits. (+150 Gold)",
+            "choice_b": "Distribute the spices to the refugees",
+            "consequence_b": "Success: A rare taste of luxury boosts camp hope significantly. (+5 Morale)",
+            "convergence": "A Trade Envoy from the High Ward arrives, looking for Jax."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Envoy is clearly working with Jax. He realization that Jax is gone makes him reach for a hidden knife.",
+            "choice_a": "Subdue the traitor (Sleight of Hand DC 13)",
+            "consequence_a": "Success: You capture the man before he can react. (+1 Intel)",
+            "choice_b": "Bribe the Envoy for information (50 Gold)",
+            "consequence_b": "Success: He reveals the Trade Guild was 'paying' Jax to block certain rivals. (+1 Lore)",
+            "convergence": "The conspiracy is deeper than simple banditry."
+        },
+        {
+            "turn": 9,
+            "narrative": "Back at the settlement, the Council asks for your final recommendation on a 'Permanent Road Guard'.",
+            "choice_a": "Establish 'The Ridge Rangers' militia",
+            "consequence_a": "Success: A dedicated force for the trade roads. (+2 Stability, -1 Resource/turn)",
+            "choice_b": "Hire the remaining Bandits as mercenaries",
+            "consequence_b": "Success: Cheap security, but high risk of corruption. (+1 Security)",
+            "convergence": "The Trade Road is now the 'Warden\u2019s Way'."
+        },
+        {
+            "turn": 10,
+            "narrative": "Final decision on Jax\u2019s Sunder-Mace.",
+            "choice_a": "Keep it for yourself",
+            "consequence_a": "Success: You gain a weapon capable of shattering stone walls. (+1 Heavy Weapon)",
+            "choice_b": "Display it in the City Hall",
+            "consequence_b": "Success: A trophy of your triumph for all to see. (+5 Reputation)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Ridge-Lords are broken. Jax is either an ally or a memory, and the trade road is once again the lifeblood of Warden-Keep.",
+    "loot_table": [
+        "Jax's Sunder-Mace (+1 vs Structures)",
+        "Ridge-Lord Signet Ring",
+        "Oakhaven Spices (Valuable)",
+        "200 Gold",
+        "Submersible Prototype",
+        "Deep-Water Breather"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Road remains blocked. -10 Settlement Income and -2 Morale.",
+        "failure_penalty": {
+            "xp_loss": 10
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Merchants report road blockade",
+        "flags": [
+            "trade_road_blocked"
+        ]
+    },
+    "location": "The Ridgeback Trade Road \u2014 Iron-Jaw Pass",
+    "district": "High Ward",
+    "thread": "Sovereignty & Order",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "'Iron-Jaw' Jax",
+        "Trade Envoy (corrupt)"
+    ],
+    "mechanics_featured": [
+        "Dueling mechanics",
+        "Charisma",
+        "Investigation (conspiracy)"
+    ],
+    "permanent_effects": {
+        "settlement": "Warden's Way established; +10 Income",
+        "world": "Ridge-Lords faction dissolved"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Hire Jax",
+            "result": "+5 Defense, -2 Morale"
+        },
+        {
+            "path": "Exile Jax",
+            "result": "+3 Reputation, Jax recurs as antagonist"
+        }
+    ]
+}

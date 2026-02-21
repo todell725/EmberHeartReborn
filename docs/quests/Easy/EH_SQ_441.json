@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_441",
+    "title": "Water Rights",
+    "difficulty": "Easy",
+    "xp_reward": 410,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Agricultural Zone -> The Irrigation Canal",
+    "district": "Agricultural Zone",
+    "thread": "Community & Survival",
+    "description": "Farmers Orel and Marta share an irrigation canal. Orel has installed a water gate that he opens only at times that consistently leave Marta's crops dry during peak irrigation hours. She has asked for mediation before this becomes a physical dispute.",
+    "key_npcs": [
+        "Farmer Orel",
+        "Farmer Marta",
+        "Water Authority Rep Coll"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You meet both farmers at the disputed irrigation gate. It is currently closed. Marta's southern plots are visibly wilting. Orel stands to one side with his arms crossed. He insists he opens the gate on a schedule that was agreed years ago \u2014 though no written agreement exists.",
+            "choice_a": "Ask both farmers to describe their understanding of the original arrangement",
+            "consequence_a": "Their versions are almost identical except for a single disagreement on mid-day versus morning priority. This is a genuine misunderstanding, not malice.",
+            "choice_b": "Inspect the gate mechanism to see if it has been recently modified",
+            "consequence_b": "The gate has a new locking pin added recently \u2014 one that wasn't there under the original agreement."
+        },
+        {
+            "turn": 2,
+            "narrative": "Water Authority Rep Coll arrives. She points out that the original canal grant allocated equal time and the current arrangement clearly gives Orel 70% of active irrigation hours.",
+            "choice_a": "Draft a new written schedule with Coll that gives equal hours to both farmers",
+            "consequence_a": "After some negotiation both farmers sign the new schedule. Orel removes the locking pin.",
+            "choice_b": "Recommend Coll install a regulated flow splitter that automatically divides canal flow equally at all times",
+            "consequence_b": "Coll approves installation. The hardware problem is solved permanently. No schedule disputes possible."
+        },
+        {
+            "turn": 3,
+            "narrative": "With the water dispute resolved, Marta asks whether you can help her access this season's emergency crop subsidy to recover from the wilted plots.",
+            "choice_a": "Help Marta complete the subsidy application with Coll's assistance",
+            "consequence_a": "Marta receives 300 gold in emergency crop relief. She is deeply grateful.",
+            "choice_b": "Advise Marta on the process and let her handle her own application",
+            "consequence_b": "Marta submits the application herself. She receives the relief two weeks later."
+        }
+    ],
+    "branching_outcomes": {
+        "schedule_signed": {
+            "description": "New equal water schedule signed by both farmers.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Agricultural Zone": 12
+                }
+            }
+        },
+        "splitter_installed": {
+            "description": "Automated flow splitter installed. Dispute permanently resolved.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Water Authority Commendation",
+                "reputation_change": {
+                    "Agricultural Zone": 18
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Water Authority Commendation",
+        "Canal Survey Map",
+        "150x Gold Coins"
+    ],
+    "conclusion": "New equal water schedule signed by both farmers."
+}

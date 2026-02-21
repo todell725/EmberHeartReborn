@@ -1,0 +1,155 @@
+{
+    "id": "SQ-018",
+    "title": "The Weaver's Reflection",
+    "xp_reward": 900,
+    "prerequisites": "None",
+    "description": "A 'Mirrored-Pool' in the High-Forest is showing things that haven't happened yet. The Weaver wants a look.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Mirrored-Pool is a perfect circle of liquid silver, surrounded by trees made of white bone. The water doesn't reflect the sky; it reflects a city on fire, and then, a city made of gold.",
+            "choice_a": "Peer into your own future (Wis Save DC 13)",
+            "consequence_a": "Success: You see yourself standing atop a mountain of books. (+1 Secret)",
+            "choice_b": "Toss a 'Truth-Coin' into the water",
+            "consequence_b": "Success: The water ripples, revealing a map to a hidden temple. (+1 Lore)",
+            "convergence": "A 'Reflection' of yourself\u2014made of starlight and shadow\u2014steps out of the pool."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Reflection is beautiful and terrifying. It doesn't move like you; it moves with a fluid, pre-determined grace. 'The threads are tangled,' it whispers.",
+            "choice_a": "Ask about the 'Tangle' (Char DC 13)",
+            "consequence_a": "Success: It reveals that a 'Scourge-Anchor' is buried beneath the pool. (+1 Progress)",
+            "choice_b": "Challenge the Reflection to a duel (Atk DC 14)",
+            "consequence_b": "Success: You exchange blows, each one echoing in your mind. (+1 Progress)",
+            "convergence": "The trees around the pool begin to weep a violet sap that tastes like electricity."
+        },
+        {
+            "turn": 3,
+            "narrative": "The sap is attracting 'Void-Butterflies'\u2014tiny, flickering insects that eat the 'Possibilities' of the future. The pool's reflection is becoming blurry.",
+            "choice_a": "Purify the sap with 'Holy-Fire' (Religo DC 14)",
+            "consequence_a": "Success: You clear the air. (+100 XP)",
+            "choice_b": "Capture a butterfly in a jar (Dex DC 14)",
+            "consequence_b": "Success: You gain a 'Butterfly of Fate'. (+1 Loot)",
+            "convergence": "The Reflection points to the center of the pool. A 'Logic-Node' is rising from the silver depths."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Logic-Node is a complex, clockwork sphere that dictates the 'Probabilities' of the region. It's being choked by a 'Scourge-Vine'.",
+            "choice_a": "Untangle the vine (Dex DC 15)",
+            "consequence_a": "Success: You restore the proper flow of time. (+1 Progress)",
+            "choice_b": "Burn the vine with 'Incendiary-Oil'",
+            "consequence_b": "Success: The vine shrieks and withers, but the Node is slightly charred. (+1 Progress)",
+            "convergence": "The Reflection merges back with the pool, leaving behind its 'Star-Cloak' on the bank."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Forest is silent now. The sap has stopped weeping. You feel a strange, hollow sensation in your chest, as if a part of your future was just deleted.",
+            "choice_a": "Meditate by the pool (Wis DC 14)",
+            "consequence_a": "Success: You regain your sense of destiny. (+100 XP)",
+            "choice_b": "Dive into the pool to see the Anchor (Str DC 15)",
+            "consequence_b": "Success: You find a 'Silver-Vessel' at the bottom. (+1 Loot)",
+            "convergence": "A 'Forest-Spirit'\u2014a deer with antlers of crystal\u2014emerges from the white trees."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Spirit is the guardian of the pool. It's angry that you've 'touched' the future. It charges, its antlers glowing with a blinding white light.",
+            "choice_a": "Soothe the Spirit (Nature DC 15)",
+            "consequence_a": "Success: It bow its head, allowing you to pass. (+1 Progress)",
+            "choice_b": "Dodge the charge (Dex DC 14)",
+            "consequence_b": "Success: You avoid the lethal antlers. (+1 Progress)",
+            "convergence": "The Spirit dissolves into a thousand white petals, leaving behind a 'Crystal-Antler-Shard'."
+        },
+        {
+            "turn": 7,
+            "narrative": "You're holding the Star-Cloak and the Shard. The pool is now reflecting the 'Real' world\u2014a group of Council Guards approaching your position.",
+            "choice_a": "Hide in the white trees (Stealth DC 14)",
+            "consequence_a": "Success: The guards pass by without seeing you. (+1 Progress)",
+            "choice_b": "Stand your ground and explain your presence",
+            "consequence_b": "Success: They recognize you as a hero of the state. (+1 Progress)",
+            "convergence": "The Guard-Captain offers to escort you back to the city, but he's looking at the Star-Cloak with greed."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Captain hints that the Star-Cloak could 'buy a lot of favors' in the High-Ward. He's subtly threatening to arrest you for 'Treason against Time'.",
+            "choice_a": "Offer him a bribe (Deception DC 13)",
+            "consequence_a": "Success: He lets you go, but you lose a 'Truth-Coin'. (+1 Secret)",
+            "choice_b": "Refuse and cite the 'Weaver's Law'",
+            "consequence_b": "Success: He backs down, fearing the divine wrath. (+5 Reputation)",
+            "convergence": "You return to the city as the stars begin to fall, each one a tiny miracle."
+        },
+        {
+            "turn": 9,
+            "narrative": "You reach the tavern. The Chronicle Weaver is there, waiting in the shadows. He wants to know what you saw in the pool.",
+            "choice_a": "Tell him the truth (Lore DC 14)",
+            "consequence_a": "Success: He rewards you with 'A Weaver's Thread'. (+1 Rare Item)",
+            "choice_b": "Lie about the vision",
+            "consequence_b": "Success: He sees through your lie but respects your privacy. (+1 Luck)",
+            "convergence": "The Star-Cloak begins to fade, its power now a part of your own aura."
+        },
+        {
+            "turn": 10,
+            "narrative": "The sun rises. You look in a mirror, and for a split second, your reflection doesn't match your movements. It's smiling.",
+            "choice_a": "Smile back",
+            "consequence_a": "Success: You are in harmony with the future. (+20 Morale)",
+            "choice_b": "Cover the mirror",
+            "consequence_b": "Success: You choose to live in the present. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Weaver's Reflection was a peek behind the curtain of fate. You saved the pool, but the future is no longer a single, straight line.",
+    "loot_table": [
+        "Star-Cloak",
+        "Crystal-Antler-Shard",
+        "Butterfly of Fate",
+        "900 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Future corrupted. -5 Luck and a permanent 'Unstable' tag (Disadvantage on your next 3 rolls).",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 10,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "High-Forest reports prophet-tree visions",
+        "flags": [
+            "mirror_pool_active"
+        ]
+    },
+    "location": "The Mirrored-Pool \u2014 High-Forest",
+    "district": "High Forest",
+    "thread": "Weaver",
+    "estimated_duration": "3\u20135 hours",
+    "key_npcs": [
+        "The Chronicle Weaver",
+        "Forest-Spirit (deer guardian)",
+        "Reflection Entity"
+    ],
+    "mechanics_featured": [
+        "Wis saves",
+        "Dex checks (rift combat)",
+        "Nature (spirit)",
+        "Logic puzzles"
+    ],
+    "permanent_effects": {
+        "settlement": "Logic-Node restored; pool becomes divination site",
+        "world": "Future sight partially unlocked"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Tell Weaver truth",
+            "result": "A Weaver's Thread (rare item) gained"
+        },
+        {
+            "path": "Lie to Weaver",
+            "result": "+1 Luck; Weaver remains suspicious"
+        }
+    ]
+}

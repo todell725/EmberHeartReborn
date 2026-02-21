@@ -1,0 +1,155 @@
+{
+    "id": "SQ-021",
+    "title": "The Ember-Hush",
+    "xp_reward": 950,
+    "prerequisites": "None",
+    "description": "The 'Eternal-Flame' in the High-Temple has stopped crackling. It's burning, but it's completely silent. The Priestess is terrified.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Temple is built of white marble and bone-ash. The Eternal-Flame is a pillar of violet-white fire that reaches the ceiling, but there is no sound. No heat. No smell. It's a 'Ghost-Fire'.",
+            "choice_a": "Listen to the 'Silence' (Perc DC 12)",
+            "consequence_a": "Success: You hear a faint, 'Un-Sound' like a negative frequency. (+1 Lore)",
+            "choice_b": "Touch the flame (Risk DC 14)",
+            "consequence_b": "Success: Your hand doesn't burn; it becomes translucent for a second. (+1 Progress)",
+            "convergence": "A 'Hush-Ghost'\u2014a creature with a mouth sewn shut with silver-thread\u2014floats above the altar."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Hush-Ghost point to the 'Flame-Base'\u2014a massive crystal bowl that is being filled with 'Void-Water' from an invisible leak.",
+            "choice_a": "Seal the leak with 'Holy-Wax' (Repair DC 13)",
+            "consequence_a": "Success: You stop the infusion of the Void. (+1 Progress)",
+            "choice_b": "Analyze the Void-Water (Alchemist DC 14)",
+            "consequence_b": "Success: It's 'Liquid-Silence'\u2014the blood of a dead god. (+1 Lore)",
+            "convergence": "The Hush-Ghost lets out a silent scream, and the Temple's bells begin to ring with a sound that has no noise."
+        },
+        {
+            "turn": 3,
+            "narrative": "The bells are vibrating your internal organs. You feel your heart-rate synchronization with the 'Un-Sound'.",
+            "choice_a": "Resist the frequency (Con Save DC 14)",
+            "consequence_a": "Success: You maintain your physical integrity. (+1 Progress)",
+            "choice_b": "Sing a counter-note (Char DC 15)",
+            "consequence_b": "Success: The bells' vibration breaks. (+100 XP)",
+            "convergence": "A central node of the flame\u2014the 'Ember-Heart'\u2014is being stolen by a portal of black glass."
+        },
+        {
+            "turn": 4,
+            "narrative": "A pair of long, obsidian fingers are reaching through the portal to grab the Ember-Heart. The air is freezing.",
+            "choice_a": "Slash the fingers (Atk DC 15)",
+            "consequence_a": "Success: The obsidian hand retreats, leaving behind a 'Void-Shard'. (+1 Loot)",
+            "choice_b": "Grab the Ember-Heart yourself (Risk DC 16)",
+            "consequence_b": "Success: You hold the heat of a thousand suns in your palm. (+1 Progress)",
+            "convergence": "The portal shatters, and the Temple is plunged into total darkness."
+        },
+        {
+            "turn": 5,
+            "narrative": "In the dark, the Ember-Heart in your hand is the only light. You see the Priestess is being pulled into the 'Deep-Ward' floor.",
+            "choice_a": "Save the Priestess (Str DC 14)",
+            "consequence_a": "Success: You pull her from the living shadows. (+1 Progress)",
+            "choice_b": "Use the Ember-Heart to light the way",
+            "consequence_b": "Success: You reveal a hidden 'Logic-Staircase'. (+100 XP)",
+            "convergence": "A 'Silent-Warden'\u2014a suit of armor filled with nothing but dust\u2014blocks your path."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Warden's sword is a blade of 'Pure-Silence'. Every time it swings, the sound of the world is deleted for a second.",
+            "choice_a": "Parry the silence (Str DC 15)",
+            "consequence_a": "Success: Your weapon rings with a sound that breaks the spell. (+1 Progress)",
+            "choice_b": "Blind the Warden with the Ember-Heart",
+            "consequence_b": "Success: The dust inside the armor ignites. (+1 Progress)",
+            "convergence": "The Warden collapses, leaving behind a 'Cape of the Silent'."
+        },
+        {
+            "turn": 7,
+            "narrative": "You've reached the 'Flame-Root'\u2014the furnace beneath the Temple. It's being clogged with 'Soot of the Void'.",
+            "choice_a": "Scrub the pipes (Endurance DC 14)",
+            "consequence_a": "Success: You restore the proper airflow. (+1 Progress)",
+            "choice_b": "Ignite the soot with the Ember-Heart",
+            "consequence_b": "Success: The Void-matter is converted into 'Starlight-Refuse'. (+1 Loot)",
+            "convergence": "The Eternal-Flame roars back to life, its sound a comfort that brings tears to the Priestess's eyes."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Temple is warm once more. The sound of the flame is like a distant, rolling thunder. The Priestess offers you her 'Silver-Thread'.",
+            "choice_a": "Accept the Thread",
+            "consequence_a": "Success: You gain a tool that can sew shut any portal. (+1 Gear)",
+            "choice_b": "Ask for a 'Temple-Blessing'",
+            "consequence_b": "Success: Your 'Faith' attribute increases permanently. (+1 Luck)",
+            "convergence": "A group of High-Ward officials enters, looking relieved and slightly annoyed at the disruption."
+        },
+        {
+            "turn": 9,
+            "narrative": "The officials suspect the 'Hush-Ghost' was a result of a failed experiment in the 'Lower-Labs'.",
+            "choice_a": "Investigate the Labs (Int DC 14)",
+            "consequence_a": "Success: You find blueprints for a 'Silence-Engine'. (+1 Intel)",
+            "choice_b": "Stay for a prayer of thanks",
+            "consequence_b": "Success: You receive a 'Pouch of Holy-Ash'. (+1 Loot)",
+            "convergence": "The Priestess promises to keep the 'Void-Shard' you found for further study."
+        },
+        {
+            "turn": 10,
+            "narrative": "You leave the temple as the first bells of Dawn ring. They sound deep, clear, and very, very alive.",
+            "choice_a": "Accept a gold reward",
+            "consequence_a": "Success: You are paid in 'Church-Marks'. (+950 Gold)",
+            "choice_b": "Return to the tavern for a drink",
+            "consequence_b": "Success: You tell the story of the Silent Flame. (+5 Reputation)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Ember-Hush was an attempt to suffocate the world's divinity. The flame burns bright, but the 'Obsidian fingers' are still reaching from the dark.",
+    "loot_table": [
+        "Silver-Thread",
+        "Pouch of Holy-Ash",
+        "Void-Shard",
+        "950 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Temple goes dark. -10 Morale and all 'Clerical' spells are disabled for a week.",
+        "failure_penalty": {
+            "xp_loss": 10
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 10,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Temple reports Eternal-Flame gone silent",
+        "flags": [
+            "flame_hushed"
+        ]
+    },
+    "location": "The High-Temple of Flame",
+    "district": "Temple District",
+    "thread": "Weaver",
+    "estimated_duration": "3\u20134 hours",
+    "key_npcs": [
+        "Priestess Solenne",
+        "Hush-Ghost",
+        "Silent-Warden"
+    ],
+    "mechanics_featured": [
+        "Con saves (sonic)",
+        "Charisma (counter-note)",
+        "Combat (armour)",
+        "Repair (furnace)"
+    ],
+    "permanent_effects": {
+        "settlement": "Temple flame restored; +10 Morale",
+        "world": "Silence-Engine blueprints discovered in Lower-Labs"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Silver-Thread",
+            "result": "Portal-sealing tool gained"
+        },
+        {
+            "path": "Take Temple Blessing",
+            "result": "+1 Luck permanent; Faith attribute increased"
+        }
+    ]
+}

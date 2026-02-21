@@ -1,0 +1,75 @@
+{
+    "id": "SQ-249",
+    "title": "The Rat King's Court",
+    "difficulty": "Epic",
+    "xp_reward": 1200,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-248"
+        ]
+    },
+    "location": "Undercity -> The Charnel Pit",
+    "district": "Undercity",
+    "thread": "Vermin",
+    "description": "To permanently end the Vermin threat, the party must assassinate the true Rat King in his horrifying court deep within the Charnel Pit. The Court is a deeply unnatural biological structure made entirely of fused living rats, and the King himself is a massive amalgamation of hundreds of dire-rats bound magically at the tails.",
+    "key_npcs": [
+        "The Rat King (Boss)",
+        "Royal Guards"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Rat King's Court is a profoundly horrifying biological structure, woven entirely from the twitching, living bodies of thousands of fused rats. At the very center of this breathing throne sits the King himself: a massive, terrifying amalgamation of hundreds of alpha dire-rats, their tails magically fused together in an unbreakable, pulsing knot. He speaks directly into your mind with a dozen overlapping, screeching voices.",
+            "choice_a": "Use the Vermin Bone-Flute to confuse his Royal Guards",
+            "consequence_a": "You play a high, shrieking note on the scavenged bone-flute. The King's Royal Guards violently turn on each other in absolute confusion, leaving the massive amalgamation completely isolated and vulnerable.",
+            "choice_b": "Charge the King directly with heavy physical strikes (Athletics DC 14)",
+            "consequence_b": "You lower your shoulder and aggressively charge straight through the living walls of the court. You slice cleanly through the biting guards, taking numerous superficial wounds before finally reaching the King's perimeter.",
+            "convergence": "The massive Rat King roars, physically manifesting giant, swinging limbs constructed entirely of writhing rats, striking the ground with the force of a heavy catapult."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Rat King's attacks are utterly devastating, sweeping the cavern floor with massive columns of living teeth. The very air is thick with the smell of musk and dark magic, making it difficult to breathe or stand your ground.",
+            "choice_a": "Sever the knot of tails at his true center (Attack AC 15)",
+            "consequence_a": "You dive under a sweeping limb and hack violently at the central, pulsing knot of fused tails. The dark magic breaks instantly, and the King screams as his hundreds of component bodies violently tear themselves apart to escape.",
+            "choice_b": "Use massive area-of-effect fire magic (Arcana/Fire)",
+            "consequence_b": "You unleash a continuous torrent of pure fire directly into the center of the mass. The creature burns horribly, thrashing and remaining highly dangerous until the very last fused rat turns completely to ash.",
+            "convergence": "With the telepathic nexus destroyed, the remaining millions of vermin in the area immediately break their formations, scrambling blindly over each other to flee the Charnel Pit entirely."
+        }
+    ],
+    "branching_outcomes": {
+        "king_severed": {
+            "description": "You strategically severed the Rat King, ending the entity instantly.",
+            "unlocks": [
+                "SQ-250"
+            ],
+            "consequences": {
+                "item_reward": "Crown of Tails",
+                "reputation_change": {
+                    "Lower Ward": 20
+                }
+            }
+        },
+        "king_burned": {
+            "description": "You burned the Rat King to ash in a fiery battle.",
+            "unlocks": [
+                "SQ-250"
+            ],
+            "consequences": {
+                "item_reward": "Charred King Skull"
+            }
+        }
+    },
+    "loot_table": [
+        "Crown of Tails",
+        "Charred King Skull",
+        "800x Gold Coins"
+    ],
+    "conclusion": "The Rat King is severed and his horrifying court is dismantled. Without his telepathic, unified control, the massive vermin swarms in the Undercity immediately break into chaotic, panicked factions, ending their organized threat to the city above.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "id": "SQ-211",
+    "title": "The Dead Signal",
+    "difficulty": "Medium",
+    "xp_reward": 400,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-020"
+        ],
+        "items_required": [
+            "Broken Radio Receiver"
+        ]
+    },
+    "location": "Lower Ward -> Tinker's Alley",
+    "district": "Lower Ward",
+    "thread": "Static",
+    "description": "A merchant in Tinker's Alley sold you a 'Broken Radio Receiver' for cheap. Late at night, it suddenly turns on, broadcasting a repeating sequence of numbers in a dead language.",
+    "key_npcs": [
+        "Paranoid Tinkerer Jaxx"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You bring the radio to Jaxx, the best tinkerer in the Ward. He turns pale upon hearing the numbers. 'That's the Old Imperial military code. But there hasn't been an Empire for three hundred years.'",
+            "choice_a": "Ask him to boost the signal to trace it",
+            "consequence_a": "He connects it to his shop's main antenna. The numbers grow deafeningly loud, shattering several glass tubes in his shop.",
+            "choice_b": "Intimidate him into translating it",
+            "consequence_b": "He stammers out the translation: 'Awakening protocol... Subject 7... Hunger...'"
+        },
+        {
+            "turn": 2,
+            "narrative": "As the signal clarifies, a horde of minor Vermin (rats) suddenly swarm the shop, seemingly agitated by the frequency.",
+            "choice_a": "Fight the swarm off",
+            "consequence_a": "You crush the rats, protecting Jaxx and the equipment.",
+            "choice_b": "Smash the radio to stop the signal",
+            "consequence_b": "The radio breaks, the rats immediately scatter. Jaxx is furious you broke his tech, but the immediate threat is gone."
+        }
+    ],
+    "branching_outcomes": {
+        "signal_traced": {
+            "description": "You successfully traced the signal's origin down into the Bio-Ward.",
+            "unlocks": [
+                "SQ-212"
+            ],
+            "consequences": {
+                "item_reward": "Tuned Radio Receiver"
+            }
+        },
+        "radio_smashed": {
+            "description": "You smashed the radio, but memorized the frequency baseline.",
+            "unlocks": [
+                "SQ-212"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": -5
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Tuned Radio Receiver",
+        "50x Gold Coins"
+    ],
+    "conclusion": "You successfully traced the signal's origin down into the Bio-Ward.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

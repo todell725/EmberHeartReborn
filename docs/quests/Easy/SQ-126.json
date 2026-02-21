@@ -1,0 +1,156 @@
+{
+    "id": "SQ-126",
+    "title": "The Oozing Barrel",
+    "difficulty": "Easy",
+    "xp_reward": 170,
+    "prerequisites": "None",
+    "description": "A barrel of 'Void-Wine' is leaking a dangerous joy into the tavern cellar...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The tavern cellar is flooded with a purple, carbonated liquid that smells of 'Void-Berries' and hot brass. One barrel is 'Gurgling' a rhythmic code.",
+            "choice_a": "Listen to the gurgle",
+            "consequence_a": "Success.",
+            "choice_b": "Sample the 'Wine'",
+            "consequence_b": "Success.",
+            "convergence": "The liquid tastes like a summer storm and static. It\u2019s highly addictive but turns your tongue a permanent neon-purple (+1 Lore)."
+        },
+        {
+            "turn": 2,
+            "narrative": "A 'Barrel-Beast'\u2014a construct of wood-staves and iron-hoops\u2014is 'Protecting' the oozing wine with a roar of escaping gas.",
+            "choice_a": "Battle the Beast",
+            "consequence_a": "Success.",
+            "choice_b": "Douse the fire with the purple wine",
+            "consequence_b": "Success.",
+            "convergence": "The wine is actually 'Fire-Retardant' mana. It extinguishes the beast\u2019s 'Internal-Pilot-Light'."
+        },
+        {
+            "turn": 3,
+            "narrative": "The floor of the cellar is dissolving into 'Purple-Mud'. You find a 'Void-Flask' at the bottom of the vat.",
+            "choice_a": "Retrieve the flask",
+            "consequence_a": "Success.",
+            "choice_b": "Drain the mud",
+            "consequence_b": "Success.",
+            "convergence": "The flask contains the 'Essence of a Lost-Summer'\u2014a liquid that can heal any mental scar."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Tavern-Master reveals he found the barrel in the 'Warp-Docks'. He\u2019s been selling it as 'Special-Reserve'.",
+            "choice_a": "Question his ethics",
+            "consequence_a": "Success.",
+            "choice_b": "Help him seal the vat",
+            "consequence_b": "Success.",
+            "convergence": "The air is sweet and dizzying. You feel a sense of 'Artificial-Joy' that hides a deep, cold fear."
+        },
+        {
+            "turn": 5,
+            "narrative": "A 'Wine-Wraith'\u2014a spirit of a drunkard made of purple steam\u2014appears, singing a 'Drinking-Song of the Void'.",
+            "choice_a": "Sing along (Char DC 13)",
+            "consequence_a": "Success.",
+            "choice_b": "Banish the spirit with salt",
+            "consequence_b": "Success.",
+            "convergence": "The song reveals the coordinates to a 'Hidden-Vineyard' in the Scourge-Fringes. (+1 Intel)"
+        },
+        {
+            "turn": 6,
+            "narrative": "The 'Barrel-Beast' reforms, but its eyes are now soft blue. It\u2019s 'Tame'. It offers you its 'Master-Hoop' as a shield.",
+            "choice_a": "Accept the hoop",
+            "consequence_a": "Success.",
+            "choice_b": "Smash the construct",
+            "consequence_b": "Success.",
+            "convergence": "The hoop is made of 'Void-Iron' and reflects all magical attacks."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Tavern-Master gives you a 'Purple-Stain'\u2014a permanent mark on your hand that allows you to detect 'Tainted-Liquids'.",
+            "choice_a": "Accept the mark",
+            "consequence_a": "Success.",
+            "choice_b": "Ask for gold",
+            "consequence_b": "Success.",
+            "convergence": "The mark glows when near poison. It\u2019s a 'Utility-Skill'."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Cellar is clean, the purple wine now bottled as 'High-Ward-Extract'. The smell of ozone remains, however.",
+            "choice_a": "Walk the tavern",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The sun sets, the horizon matching the color of the wine you just cleared."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, you feel 'Light-Headed' but strong. The world looks a little more colorful tonight.",
+            "choice_a": "Visit the Ridge",
+            "consequence_a": "Success.",
+            "choice_b": "Rest",
+            "consequence_b": "Success.",
+            "convergence": "The Tavern-Master promises you free drinks for a month. (+5 Morale)"
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Tavern. The 'Oozing Barrel' is a new specialty tonight.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Final",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Oozing Barrel' is complete. Quest Complete.",
+    "loot_table": [
+        "Master-Hoop Shield",
+        "Void-Berry Flask",
+        "Essence of Lost-Summers",
+        "Vintner's Recipe Book"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are dissolved into a puddle of purple wine. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Tavern reports cellar flooding with purple carbonated fluid",
+        "flags": []
+    },
+    "location": "The Damp-Rat Tavern Cellar",
+    "district": "Lower Ward",
+    "thread": "Void-Wine",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Tavern-Master Barro",
+        "Wine-Wraith (spirit)",
+        "Barrel-Beast (construct)"
+    ],
+    "mechanics_featured": [
+        "Alchemy (wine analysis)",
+        "Charisma (song)",
+        "Combat (beast)",
+        "Social (ethics)"
+    ],
+    "permanent_effects": {
+        "settlement": "Cellar cleared; Void-Wine bottled as High-Ward-Extract",
+        "world": "Hidden Vineyard in Scourge-Fringes as future destination",
+        "additional": [
+            "Purple Tongue status (if tasted Void-Wine)"
+        ]
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Master-Hoop Shield",
+            "result": "Magic-reflective shield gear"
+        },
+        {
+            "path": "Take Void-Flask (Lost Summer)",
+            "result": "Mental scar healer (1-use)"
+        }
+    ]
+}

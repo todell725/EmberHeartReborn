@@ -1,0 +1,83 @@
+{
+    "id": "EH_SQ_421",
+    "title": "The Failing Seal",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_420"
+        ],
+        "items_required": []
+    },
+    "location": "Ridge -> Primary Pressure Valve Station",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "A routine pressure check reveals Primary Valve Station 3 has a cracked seal that could vent superheated steam directly into the adjacent Ridge worker housing. You have about two hours before the seal fails completely.",
+    "key_npcs": [
+        "Maintenance Chief Dara",
+        "Seal Engineer Pol"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The crack is clearly visible under magnification \u2014 a hairline fracture extending two-thirds across the primary seal ring. Steam hisses from it with increasing urgency. Maintenance Chief Dara has the replacement seal but no one rated to work under active pressure.",
+            "choice_a": "Apply the replacement seal manually under active pressure",
+            "consequence_a": "A tense twenty minutes of careful work under scalding conditions. You succeed but suffer minor burn injuries to your hands and forearms.",
+            "choice_b": "Help Dara shut down the primary flow from the upstream junction first",
+            "consequence_b": "You locate the upstream shutoff. Closing it requires physically holding a corroded wheel for three minutes while Dara installs the seal safely."
+        },
+        {
+            "turn": 2,
+            "narrative": "The immediate crisis is averted. But Engineer Pol points out that three other valve stations in the same age-group have never been inspected. Any one of them could have the same problem.",
+            "choice_a": "Volunteer to inspect all three aging valve stations immediately",
+            "consequence_a": "You spend four hours inspecting. One additional station has a similar but less advanced crack. Caught early.",
+            "choice_b": "Document the incident and formally recommend a Ridge-wide valve inspection program to the Authority",
+            "consequence_b": "Kell approves an emergency inspection program. Pol is assigned to lead it."
+        },
+        {
+            "turn": 3,
+            "narrative": "The housing adjacent to Station 3 needs to be informed about what nearly happened.",
+            "choice_a": "Brief the housing residents openly about the near-miss",
+            "consequence_a": "The residents are shaken but deeply grateful for the honesty. They are now more engaged in reporting safety concerns.",
+            "choice_b": "Handle the communications through the Authority to avoid unnecessary panic",
+            "consequence_b": "An official brief is issued. Calm but uninformative \u2014 residents are safe but none the wiser."
+        }
+    ],
+    "branching_outcomes": {
+        "residents_informed": {
+            "description": "Residents briefed openly. Community trust increased.",
+            "unlocks": [
+                "EH_SQ_422"
+            ],
+            "consequences": {
+                "item_reward": "Dara's Maintenance Citation",
+                "reputation_change": {
+                    "Ridge": 16
+                }
+            }
+        },
+        "authority_briefed": {
+            "description": "Official communication handled by the Authority.",
+            "unlocks": [
+                "EH_SQ_422"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Dara's Maintenance Citation",
+        "Pressure Seal Shard",
+        "180x Gold Coins"
+    ],
+    "conclusion": "Residents briefed openly. Community trust increased."
+}

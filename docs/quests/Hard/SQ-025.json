@@ -1,0 +1,163 @@
+{
+    "id": "SQ-025",
+    "title": "The Ember's Final Breath",
+    "xp_reward": 2000,
+    "prerequisites": "None",
+    "description": "The 'Great-Ember'\u2014the source of the city's warmth\u2014is dying. You must enter the 'Core-Vault' for a final stand.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Core-Vault is a place of white heat and blinding light. The 'Great-Ember' is a sphere of liquid fire the size of a house, vibrating with a tone that signifies its impending collapse. The air is so hot it scorches your lungs.",
+            "choice_a": "Identify the cause of the decay (Int DC 13)",
+            "consequence_a": "Success: You find 'Void-Rust' on the primary heat-cables. (+1 Progress)",
+            "choice_b": "Channel your own mana into the Ember (Risk DC 15)",
+            "consequence_b": "Success: You stabilize the core for a few seconds. (+100 XP)",
+            "convergence": "A 'Scourge-Titan'\u2014a titan made of solidified shadow and rusted iron\u2014steps into the vault."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Titan is the source of the decay. It's 'Eating' the heat to empower its own shadow-form. It roars, a sound that vibrates the very bedrock of the city.",
+            "choice_a": "Strike the Titan's iron-shield (Str DC 15)",
+            "consequence_a": "Success: You create a breach in its defense. (+1 Progress)",
+            "choice_b": "Use the 'Star-Prism' to burn through the shadow",
+            "consequence_b": "Success: The light carves a path through the beast's chest. (+1 Progress)",
+            "convergence": "The Titan lunges, its shadow-claws reaching for the Ember itself."
+        },
+        {
+            "turn": 3,
+            "narrative": "You must stand between the Titan and the Ember. The heat is reaching a 'White-Line' critical point. The vault walls are starting to melt into slag.",
+            "choice_a": "Hold the line (Endurance DC 16)",
+            "consequence_a": "Success: You take the Titan's full force, protecting the city's heart. (+1 Progress)",
+            "choice_b": "Unleash a 'Mana-Burst' (Arcana DC 15)",
+            "consequence_b": "Success: You push the Shadow back, but lose some of your own life-essence. (+100 XP)",
+            "convergence": "The Titan collapses, its shadow-form burning away in the intense heat of the Ember."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Titan is dead, but the Ember is still unstable. The Priestess's voice crackles over the comms: 'It's going to blow! Use the First-Shard!'",
+            "choice_a": "Apply the First-Shard to the Core (Dex DC 15)",
+            "consequence_a": "Success: The Ember stabilizes, its color returning to a steady, warm orange. (+50 Morale)",
+            "choice_b": "Evacuate the Vault and let it blow (Evil Action)",
+            "consequence_b": "Success: You escape, but the city is plunged into eternal frost. (-50 Reputation)",
+            "convergence": "The vault is quiet. The 'Great-Ember' is breathing steadily once more."
+        },
+        {
+            "turn": 5,
+            "narrative": "You've saved the city, but you're badly burned. You see a 'Vision' of the Weaver standing in the fire, smiling. She hands you a 'Sun-Amulet'.",
+            "choice_a": "Accept the Amulet",
+            "consequence_a": "Success: You gain permanent resistance to Void-damage. (+1 Rare Gear)",
+            "choice_b": "Refuse and ask for the city's safety",
+            "consequence_b": "Success: She grants the settlement a 'Golden-Age' (Bonus resources for a month). (+100 Reputation)",
+            "convergence": "You emerge from the vault as a legend. The city is warm. The sun is gold."
+        },
+        {
+            "turn": 6,
+            "narrative": "The High-Ward holds a celebration in your honor. A statue is commissioned in the central plaza.",
+            "choice_a": "Accept the glory",
+            "consequence_a": "Success: You are now a 'High-Councilor'. (+10 Reputation)",
+            "choice_b": "Disappear into the wastes",
+            "consequence_b": "Success: Your legend becomes part of the city's spirit. (+1 Fame)",
+            "convergence": "You find a 'Vial of Ember-Sap' in your pocket\u2014a gift from the fire."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Ember-Sap can be used to forge the 'Ultimate-Weapon'.",
+            "choice_a": "Go to the Black-Forge",
+            "consequence_a": "Success: You forge 'Ember-Bane'. (+1 Legendary Weapon)",
+            "choice_b": "Save it for the Winter-Seed",
+            "consequence_b": "Success: You ensure the settlement's survival for decades. (+100 Resources)",
+            "convergence": "The night is clear, and for the first time, you don't feel the cold."
+        },
+        {
+            "turn": 8,
+            "narrative": "A 'Scourge-Lord' sends you a message: 'The Ember is just one spark. The dark is infinite.'",
+            "choice_a": "Shred the message",
+            "consequence_a": "Success: You remain defiant. (+1 Morale)",
+            "choice_b": "Keep it for study (Int DC 14)",
+            "consequence_b": "Success: You find a weakness in the Lord's own shadow. (+1 Lore)",
+            "convergence": "The 'Ember's Final Breath' was actually its first true breath in centuries."
+        },
+        {
+            "turn": 9,
+            "narrative": "You sit on the battlements, looking out at the Scourge-Fog. It seems a little thinner today.",
+            "choice_a": "Accept your payment (2000 Gold)",
+            "consequence_a": "Success: You are wealthy beyond measure. (+2000 Gold)",
+            "choice_b": "Donate the gold to the Bio-Ward",
+            "consequence_b": "Success: You are a saint of the wastes. (+20 Reputation)",
+            "convergence": "The sun rises over a city that finally knows peace."
+        },
+        {
+            "turn": 10,
+            "narrative": "You close your eyes and feel the warmth. It's the warmth of home. The warmth of a future you fought for.",
+            "choice_a": "Rest",
+            "consequence_a": "Success: You have earned it. (+1 Luck)",
+            "choice_b": "Plan the next expedition",
+            "consequence_b": "Success: The journey continues. (+1 Progress)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The siege of the Southern Gate is over. The settlement has survived its darkest hour, and the name of the 'Ember' will be sung for generations.",
+    "loot_table": [
+        "Sun-Amulet",
+        "Ember-Bane",
+        "Vial of Ember-Sap",
+        "2000 Gold",
+        "Amulet of True Sight",
+        "Four Heretic Seals"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 5,
+        "penalty": "Settlement destroyed. The campaign ends in darkness.",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed with significant consequences."
+    },
+    "difficulty": "Hard",
+    "prerequisites_complex": {
+        "quests_required": [
+            "SQ-21",
+            "SQ-08"
+        ],
+        "reputation_min": 50,
+        "items_required": [
+            "First-Shard"
+        ]
+    },
+    "unlock_conditions": {
+        "trigger": "Great-Ember decay reaches critical threshold",
+        "flags": [
+            "ember_critical",
+            "titan_sighted"
+        ]
+    },
+    "location": "The Core-Vault \u2014 Deep Settlement Foundations",
+    "district": "Core District",
+    "thread": "Scourge",
+    "estimated_duration": "5\u20137 hours",
+    "key_npcs": [
+        "Priestess Solenne (comms)",
+        "Scourge-Titan (boss)",
+        "The Chronicle Weaver (vision)"
+    ],
+    "mechanics_featured": [
+        "boss encounter (heavy)",
+        "Endurance DC 16",
+        "Arcana burst",
+        "Settlement-wide consequence"
+    ],
+    "permanent_effects": {
+        "settlement": "Settlement survives; Golden-Age unlocked if Weaver gift chosen",
+        "world": "Scourge-Lord becomes active antagonist"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Sun-Amulet",
+            "result": "Permanent Void-damage resistance (personal)"
+        },
+        {
+            "path": "Request Golden-Age",
+            "result": "+100 Reputation, +100 Resources/month for 4 sessions"
+        }
+    ]
+}

@@ -1,0 +1,201 @@
+{
+    "id": "SQ-ELITE-VOIDWINE",
+    "title": "The Vintner's Ascension",
+    "difficulty": "Elite",
+    "xp_reward": 4500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-007",
+            "SQ-126"
+        ],
+        "items_required": [
+            "Vintner's Recipe Book",
+            "Essence of Lost-Summers"
+        ],
+        "district_reputation": {
+            "Lower Ward": 50
+        },
+        "status_effects": [
+            "Purple Tongue"
+        ]
+    },
+    "location": "Scourge-Fringe Vineyard -> Lower Ward sewers -> Market Ward central fountain",
+    "thread": "Void-Wine (Finale)",
+    "estimated_duration": "3-4 hours",
+    "mechanics_featured": [
+        "Massive Branching (World Modification)",
+        "3 Boss Encounters",
+        "22-Turn Progression",
+        "Memory-Retrieval Skill System"
+    ],
+    "branching_outcomes": {
+        "allow_release": {
+            "description": "Allowed 'Final Summer' release into water supply",
+            "effects": {
+                "settlement_morale": -15,
+                "settlement_lore": 50,
+                "settlement_unity": 25
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Monthly 'Remembrance Day' event added. Citizens can access ancestor memories.",
+                "item_reward": "Cup of Infinite Summers"
+            }
+        },
+        "destroy_vintage": {
+            "description": "Destroyed the vintage and killed the Vintner",
+            "effects": {
+                "settlement_morale": 10,
+                "settlement_stability": 15,
+                "settlement_lore": -50
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Void-Wine becomes strictly contraband. Underground trade war begins.",
+                "item_reward": "Vintner's Final Bottle"
+            }
+        },
+        "compromise_therapy": {
+            "description": "Convinced Vintner to create individual-dose therapy vintage",
+            "effects": {
+                "settlement_morale": 5,
+                "settlement_lore": 20,
+                "settlement_health": 10
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Players can purchase memory vials to learn specific skills. Memory Therapy Clinic built.",
+                "stat_reward": "Vintner's Gratitude (+2 Charisma, +5 Alchemy)"
+            }
+        }
+    },
+    "loot_table": [
+        "Void-Soaked Robes (Legendary armor - resistance to psychic damage)",
+        "Grief-Crystallizer (Artifact crafting tool - turn emotions into material components)",
+        "5000 Gold",
+        "The Final Recipe (document revealing Void-Wine is reverse-engineered from Scourge weapon)",
+        "Thread-Master Artifact: Void",
+        "Weaver's Final Thread"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: Journey to Void-Vineyard",
+            "narrative": "A ragged courier finds you in the Lower Ward, his tongue stained deep purple. He thrusts a crumpled note into your hand before collapsing. The note is in the Vintner's handwriting: 'It is done. The Final Summer is bottled. I see the Scourge as it really was. I see everything. Come to the Vineyard tonight, or miss the end of ignorance.' You gather your gear. The Void-Vineyard in the Scourge-Fringe awaits."
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: Journey to Void-Vineyard",
+            "narrative": "You reach the Scourge-Fringe border at dusk. The quarantine guards are unconscious, purple stains on their lips. The path to the Vineyard, usually crawling with corrupted wildlife, is eerily silent. The air smells powerfully of crushed grapes and ozone. You feel a strange psychic pressure, as if thousands of people are whispering just out of earshot."
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: Journey to Void-Vineyard",
+            "narrative": "Entering the Void-Vineyard proper, you see the vines themselves have changed. The grapes are no longer black, but a luminous, pulsing violet. Touching a leaf (Constitution DC 14) sends a flash of memory through your mind: a man in a pre-Scourge city, watching a sky turn white. The plants are absorbing memories from the soil."
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: Journey to Void-Vineyard",
+            "narrative": "You reach the Vintner's chateau. The doors are blown off their hinges. Inside, the massive fermentation vats are cracked open, empty. A journal on the desk details the perfection of 'The Final Summer' - a vintage capable of restoring pre-Scourge memories to an entire city. But the final ingredient was raw, crystallized grief."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 1: Journey to Void-Vineyard",
+            "narrative": "Scrawled on the wall in wine is his plan: 'The city must drink. Only by sharing the grief of the Scourge can we remember what we lost.' He intends to pour the master cask into the Market Ward's central fountain, treating the city's entire water supply. You must stop him, or help him."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 1: Journey to Void-Vineyard",
+            "narrative": "As you turn to leave the chateau, the spilled wine on the floor begins to coalesce. The vines from outside slither through the broken doors, binding the psychic residue into physical forms. Three Void-Grape Golems rise to block your exit. BOSS ENCOUNTER 1 BEGINS."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 1: Journey to Void-Vineyard",
+            "narrative": "BOSS 1: The Void-Grape Golems fight with brute strength and psychic backlash. Every time you strike them, you must make a Wisdom save or lose your next action to a hallucination of pre-Scourge tragedy. You focus fire on their central cores\u2014fermentation stones\u2014and shatter them one by one. The golems collapse into puddles of foul-smelling must."
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 1: Journey to Void-Vineyard",
+            "narrative": "You rush back toward Emberheart. The Vintner has a massive head start, but he is dragging a master cask. You track his trail\u2014heavy cart tracks mixed with purple drips\u2014down into the smuggler grates leading to the Lower Ward sewers."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: Sewer Chase",
+            "narrative": "The Lower Ward sewers are a maze of ancient brickwork. The purple trail is clear, but the fumes down here are intoxicating. You must wrap your face (Survival DC 15) to avoid becoming 'drunk' on aerosolized memories. The water itself seems to whisper."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 2: Sewer Chase",
+            "narrative": "You hit a junction. The physical tracks go left, but your 'Purple Tongue' status effect tingles, pulling you right. If you trust the tracks (left), you trigger a tripwire trap set by the Vintner. If you trust the psychic pull (right), you bypass the trap and find a secret shortcut."
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 2: Sewer Chase",
+            "narrative": "You emerge into a massive cistern beneath the Market Ward. The Vintner is on the far catwalk, winching the master cask upward toward the fountain access grate. He sees you and raises a hand, his eyes burning with violet light. 'They have forgotten, my friend! I will give them back their minds!'"
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 2: Sewer Chase",
+            "narrative": "He shatters a smaller bottle against the catwalk. The vapors rise and form a spectral choir\u2014the Wine-Wraith Chorus. They are spirits of grief, bound by the vintage. The Vintner escapes up the ladder while they descend upon you. BOSS ENCOUNTER 2 BEGINS."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 2: Sewer Chase",
+            "narrative": "BOSS 2: The Wine-Wraith Chorus attacks with harmonic despair\u2014sonic damage that drains your will to fight. You must disrupt their song by smashing the acoustic resonance crystals in the cistern (Ranged Attacks or Athletics) while fending them off. Once the crystals break, the choir dissipates into tears."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 2: Sewer Chase",
+            "narrative": "You climb the access ladder, ascending towards the Market Ward. The metal rungs are cold. Above, you hear the midday bustle of Emberheart's busiest district. Thousands of people, completely unaware that their water supply is about to become a mind-altering catalyst."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 2: Sewer Chase",
+            "narrative": "You emerge from the grate behind the central fountain statue. The Vintner has just finished mounting the master cask to the main aqueduct intake. He holds a massive hammer, ready to shatter the valve. 'One strike,' he shouts over the crowd noise, 'and 200 years of amnesia ends!'"
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 3: Final Confrontation",
+            "narrative": "You step into the open. The Vintner looks at you, his purple lips curled in a transcendent smile. 'Will you stop me? Will you condemn them to ignorance? The Scourge weapon... it was made of grief. Void-wine is the cure, made of the same poison!' He drinks a concentrated vial of the vintage."
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 3: Final Confrontation",
+            "narrative": "The Vintner begins to Ascend. The pure, concentrated Final Summer rewrites his biology. Violet energy arcs from his skin, shattering nearby cobblestones. The crowd screams and scatters. He hovers inches off the ground, a vessel of collective humanity's sorrow."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 3: Final Confrontation",
+            "narrative": "BOSS 3: THE VINTNER ASCENDED. He no longer uses physical attacks. He unleashes waves of pure emotional trauma. You must use the environment\u2014the fountain's statues, market stalls\u2014to block line-of-sight when he pulses. He tries to crush your mind with the memory of the Scourge's impact."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 3: Final Confrontation",
+            "narrative": "You fight through the trauma waves, striking at the Vintner while he recharges. Your companions (if any) provide vital distractions. The Vintner's ascended form is unstable; the sheer volume of memory is tearing his mortal body apart. He drops to his knees, clutching the hammer."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 3: Final Confrontation",
+            "narrative": "The Vintner looks up at you. 'It's ready. The valve is right there.' He drops the hammer at your feet. 'You decide. The truth and the pain, or the lie and the peace.' You hold the fate of Emberheart's consciousness in your hands."
+        },
+        {
+            "turn": 21,
+            "phase": "Phase 3: Final Confrontation",
+            "narrative": "You make your choice (Allow Release / Destroy Vintage / Compromise if conditions met). The energy in the square peaks. If you destroyed it, the Vintner attacks one last time in a frenzy before dying. If you compromise, you talk him down. If you allow it, you strike the valve yourself."
+        },
+        {
+            "turn": 22,
+            "phase": "Phase 3: Final Confrontation",
+            "narrative": "The event concludes. Your choice echoes across the city. The truth of the Void-Wine\u2014that it is reverse-engineered from the very weapon that caused the Scourge\u2014is locked away or revealed. The Vintner's legacy is sealed. Emberheart will never be the same."
+        }
+    ],
+    "description": "The Vintner has perfected his Final Summer vintage and plans to release it into the city's water supply, restoring all pre-Scourge memories but at the cost of immense, crystallized grief.",
+    "conclusion": "Allowed 'Final Summer' release into water supply",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

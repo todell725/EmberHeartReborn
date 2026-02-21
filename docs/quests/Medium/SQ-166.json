@@ -1,0 +1,206 @@
+{
+    "id": "SQ-166",
+    "title": "The Time-Debt Collector",
+    "difficulty": "Medium",
+    "xp_reward": 1200,
+    "thread": "Chronos",
+    "district": "North Ward",
+    "estimated_duration": "2-3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-006"
+        ],
+        "items_required": [
+            "Liquid Chronos sample"
+        ],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete SQ-06 and possess a Liquid Chronos sample",
+    "location": "North Ward streets, primarily the residential and commercial blocks above the Chronos Division infrastructure zone",
+    "npcs": [
+        {
+            "name": "The Debt-Taker",
+            "role": "Boss",
+            "description": "A temporal parasite entity \u2014 not a creature in the biological sense but a localized temporal field anomaly that has evolved goal-directed behavior over an unknown period. It has developed the capacity to identify and claim 'time owed' \u2014 specifically, time that was borrowed from the natural temporal flow by Concordat temporal interventions and never returned. The 'debt' it collects is real: the temporal interventions of the Concordat Chronos Division left imbalances. The Debt-Taker is collecting them."
+        },
+        {
+            "name": "Investigator Soli Yan",
+            "role": "Active collaborator",
+            "description": "Already investigating the aging complaints in the North Ward. She has a working model of the Debt-Taker but cannot interact with it directly \u2014 her Chronos Division credentials (inherited from study, not employment) make her a larger target. She provides intelligence, Liquid Chronos antidote protocols, and is genuinely afraid."
+        },
+        {
+            "name": "Maret Torven",
+            "role": "Primary victim",
+            "description": "A dockworker in his 40s who aged 15 years in three days. He is now physically 57-equivalent, confused, and frightened. His family is around him. He has no idea why this happened. He was in the right place when the Debt-Taker passed. The aging has stabilized but will not reverse without the Liquid Chronos treatment."
+        }
+    ],
+    "description": "Citizens in the North Ward are aging rapidly and without explanation \u2014 fifteen years in three days for Maret Torven; twelve years in two days for two others. Investigator Yan's working model: a temporal parasite entity (the Debt-Taker) is claiming the 'temporal debt' left by Concordat Chronos Division interventions \u2014 time that was borrowed from the future to stabilize infrastructure during the Reconstruction Era and never repaid. The debt is real and the people paying it are those with genetic descendance from Concordat-era North Ward residents, or anyone in the temporal field vicinity of a major Debt-collection event. The Liquid Chronos sample, properly applied, can restore the stolen time. The party must find and confront the Debt-Taker, restore the victims, and address the underlying problem: the temporal debt that draws it to the North Ward is embedded in the infrastructure.",
+    "mechanics": [
+        "Arcana (identify, track, and interact with the Debt-Taker temporal field)",
+        "Medicine (apply Liquid Chronos treatment to restore aging victims)",
+        "Investigation (map the debt-collection events to the Chronos Division infrastructure zones)",
+        "Combat (The Debt-Taker \u2014 Medium encounter, temporal field entity with time-steal attack)",
+        "History (understand the Concordat temporal debt mechanism)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Debt-Taker dispersed",
+            "effect": "settlement_morale +2; aging victims restored; North Ward temporal debt imbalance addressed temporarily"
+        },
+        {
+            "trigger": "Temporal debt partially addressed at infrastructure level",
+            "effect": "settlement_stability +1; Debt-Taker cannot return to North Ward for at least 6 months"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Yan's briefing, urgent: four confirmed victims in the North Ward over six days. Ages: 15 years, 12 years, 8 years, 22 years. All in public spaces, all in the same 6-block radius, all with no Concordat connection they are aware of. The first victim is Maret Torven, now physically 57-equivalent in a body that was 42 a week ago. He is ambulatory but confused. His family's physician says the aging is structural \u2014 not cosmetic, not a spell, not resolvable by conventional medicine. Yan's research: the Concordat Chronos Division's infrastructure work in the North Ward created measurable temporal debt \u2014 time-rate adjustments that stabilized the area during Reconstruction but were never neutralized. The Debt-Taker is not attacking people. It is collecting what it is owed. The people it collects from are incidental vessels \u2014 they happen to be present when a debt point pulses.",
+            "choice_a": "Ask Yan to identify the specific infrastructure debt points so you can map the Debt-Taker's likely path",
+            "consequence_a": "She has a partial map from Chronos Division records modified by Pell Dorsen's transmission timing data (if that resource is available). The debt points cluster around six locations, all above the Chronos Division's original infrastructure zone. The Debt-Taker visits them on a cycle.",
+            "choice_b": "Go immediately to Maret Torven and begin antidote preparation",
+            "consequence_b": "Medicine DC 13 to prepare the Liquid Chronos treatment for Maret's specific aging profile. Treatment will take 3 hours and requires the Liquid Chronos sample. Maret is restorable. The Debt-Taker is still active while you treat him.",
+            "convergence": "Yan says: 'The Liquid Chronos can restore the victims. But until the Debt-Taker is dispersed, it will make more.'"
+        },
+        {
+            "turn": 2,
+            "narrative": "Tracking the Debt-Taker: it is not visible to unaided sight. Arcana DC 13 reveals it as a mobile temporal pressure gradient \u2014 a region approximately 8 feet in diameter where time-rate is slightly accelerated, manifesting as a faint shimmer and an instinctive sense of urgency in anyone nearby. Animals avoid it instinctively; the copper-tail relay network, if any active units are in the area, exhibits erratic signal interference when the Debt-Taker passes. Pell Dorsen's transmission timing data (if available) shows the Debt-Taker's movement correlates with Vane's transmission schedule \u2014 the transmissions perturb the temporal debt infrastructure and cause the Debt-Taker to activate. It is not Vane's weapon. It is an unintended consequence of his transmissions triggering old debt-collection mechanisms.",
+            "choice_a": "Set up an observation point at the most active debt-point location and wait for the Debt-Taker",
+            "consequence_a": "4-6 hour wait. During the wait, Yan conducts additional victim outreach \u2014 two more North Ward residents report mild temporal pressure symptoms (not yet full aging, but the 'urgency' sensation). The Debt-Taker arrives on schedule. You are positioned.",
+            "choice_b": "Follow the copper-tail interference trail dynamically \u2014 track the Debt-Taker as it moves",
+            "consequence_b": "Investigation DC 14 to maintain tracking. On success: you intercept the Debt-Taker mid-route, choosing the engagement ground. On failure: it reaches the next debt point first and completes a minor collection before you arrive.",
+            "convergence": "The Debt-Taker is located. The confrontation is about to begin."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Debt-Taker confrontation: it does not engage aggressively. As a temporal field entity, it does not have aggression in the biological sense \u2014 it has directionality. When the party enters its field boundary (the 15-foot radius of accelerated time-rate), time passes faster for them: each of their turns within the field has a 50% chance of aging the affected character by 1d4 years (Constitution save DC 14 negates). The entity moves toward the next debt point on its schedule unless stopped. It can be dispersed with: concentrated Arcana disruption (DC 16 while in the field, requires 3 successful checks across different rounds), Liquid Chronos applied to the entity rather than a victim (DC 14 Arcana, uses one dose), or by destroying the debt-point infrastructure node it is currently approaching (permanent but removes the infrastructure from the area).",
+            "choice_a": "Disperse the Debt-Taker using Liquid Chronos applied directly to it",
+            "consequence_a": "Arcana DC 14. One dose consumed. The Liquid Chronos interacts with the temporal field, restoring the debt imbalance the field is claiming \u2014 the Debt-Taker's directive is partially fulfilled by the restoration. It disperses. Does not return to North Ward for 6 months.",
+            "choice_b": "Concentrate Arcana disruption across three rounds",
+            "consequence_b": "3 rounds of Arcana DC 16, risking 1d4 year aging each round if the save fails. On third success: the entity's coherence collapses. Does not return for 3 months (less permanent than the Liquid Chronos method).",
+            "convergence": "The Debt-Taker is dispersed. The immediate danger is over. The debt that drew it will return eventually unless the infrastructure is addressed."
+        },
+        {
+            "turn": 4,
+            "narrative": "Victim restoration: with the Debt-Taker dispersed, the party has time to treat all four confirmed victims. Maret Torven first, as the most severely affected. The Liquid Chronos treatment \u2014 applied with Medicine DC 13 \u2014 reverses the aging structurally. Maret loses 15 physical years of aging over two hours, returning to his correct biological state. He is exhausted and bewildered but fundamentally healthy. He has no memory of the event other than a brief period of 'feeling very old.' The treatment for the other three victims follows similarly. The Liquid Chronos sample, if the party started with one dose, is consumed across the four treatments \u2014 it requires careful titration (Medicine DC 11 for the three less-severe cases, DC 13 for Maret). Running out of doses mid-treatment before all victims are treated is a risk if the sample was small.",
+            "choice_a": "Treat all four victims immediately using the available Liquid Chronos sample",
+            "consequence_a": "All four restored. Sample fully consumed. The party's Liquid Chronos resource is depleted. This will require sourcing more for future Chronos thread events.",
+            "choice_b": "Treat the two most severely affected and ration the sample for future use",
+            "consequence_b": "Maret and the 12-year victim are restored. The two less-severe cases are partially treated (aging reduced by 50%) and will continue recovering naturally. No guarantee of full recovery without more sample.",
+            "convergence": "The victims are treated. Yan makes formal notes on each treatment for Chronos Division protocol documentation."
+        },
+        {
+            "turn": 5,
+            "narrative": "The underlying problem: the temporal debt exists in the North Ward's Chronos Division infrastructure, and the Debt-Taker will return as long as the debt is not addressed. Yan's assessment: fully resolving the debt requires either neutralizing the infrastructure debt-points (destroying or properly decommissioning the Concordat temporal adjustment nodes that created the debt) or generating an equivalent amount of temporal 'credit' through a controlled temporal intervention using Chronos Division protocols. The first option removes the debt but also removes the temporal stabilization the debt-points provide \u2014 Concordat infrastructure intended to suppress temporal side effects of the relay network. The second option is technically possible but requires a Chronos Division operator, which no one alive claims to be.",
+            "choice_a": "Neutralize the debt-points \u2014 accept the loss of temporal stabilization",
+            "consequence_a": "Engineering and Arcana checks (DC 14 each, six checks for six nodes). The debt is cleared. The Debt-Taker cannot return. The temporal stabilization is lost \u2014 North Ward temporal disturbances from Vane's transmissions will be more significant going forward.",
+            "choice_b": "Attempt to generate temporal credit using Concordat protocols and the recovered Chronal instrument",
+            "consequence_b": "Arcana DC 18 and the Loop-Breaker Pendant (or active chronal instrument). On success: the temporal credit balances the debt. Debt-points remain. Debt-Taker cannot return for 12 months and the stabilization infrastructure stays intact. On failure: a minor temporal field collapse in one node, aging 1d6 years to everyone within 20 feet.",
+            "convergence": "The temporal debt treatment is applied. The Debt-Taker's return timeline is set."
+        },
+        {
+            "turn": 6,
+            "narrative": "Yan produces, from her archived research, the Chronal Ledger: a Concordat Chronos Division record that listed every temporal intervention made during the Reconstruction Era and the projected 'repayment' schedules for the temporal debt incurred. It is an extraordinary document \u2014 200 years old, detailing dozens of temporal interventions across EmberHeart, most of which have already been naturally resolved by the passage of time. But twelve interventions in the North Ward remain unresolved. These twelve are the debt-points the Debt-Taker has been servicing. The Ledger also contains, in the projections column, an estimated 'danger threshold' for each debt-point \u2014 the point at which unresolved debt would begin causing autonomous collection events. Most of the twelve are past their threshold. The Debt-Taker arrived exactly on schedule.",
+            "choice_a": "Take the Chronal Ledger as primary evidence of the temporal debt situation",
+            "consequence_a": "The Ledger is one of the most important Chronos thread artifacts: a complete accounting of the ResConstruction Era temporal debts, their locations, and their timelines. Some locations have implications for threads outside the North Ward.",
+            "choice_b": "Let Yan retain the Ledger for official Chronos thread investigation purposes",
+            "consequence_b": "The Ledger stays with the investigation. Yan will share findings as they develop and the party has full access, but institutional rather than personal control.",
+            "convergence": "The Chronal Ledger, regardless of custody, is now part of the active Chronos thread investigation."
+        },
+        {
+            "turn": 7,
+            "narrative": "Maret Torven, restored to his correct biological age, has a conversation with the party that he requested. He is not angry \u2014 he is curious. He wants to understand what happened to him. The party's explanation, calibrated to whatever the player chooses to share, is his first encounter with the concept that the city he lives in was built by an institution that made time-loans to stabilize it and then disappeared, leaving the debts uncollected for 200 years. His response: 'So the city owes time, and I paid some of it by accident.' He sits with this for a moment. 'That seems like the sort of thing people should know about.' He is a dockworker. He is not educated in temporal theory. He has absolutely no way to further this investigation independently. He just felt that naming the injustice was important.",
+            "choice_a": "Tell Maret everything \u2014 including Vane, the relay network, the Biological Division, the full picture",
+            "consequence_a": "Maret is not equipped to do anything with this information practically. But he tells seven people over the next two weeks, in the clear vernacular of a dockworker explaining something unfair to friends. The story spreads in the North Ward in simplified but accurate form. Popular awareness of 'the city's time debt' increases. This has political implications.",
+            "choice_b": "Tell Maret the minimum that explains what happened to him without broader context",
+            "consequence_b": "Maret understands his specific experience but not the larger picture. He is satisfied with the explanation. The political spread of information is controlled.",
+            "convergence": "Maret Torven is not a high-status NPC. He is a useful reality check \u2014 the first ordinary person who directly experienced and then understood the consequences of a 200-year-old infrastructure decision."
+        },
+        {
+            "turn": 8,
+            "narrative": "Yan and the party pool findings: the Debt-Taker is dispersed, the victims are restored, the Chronal Ledger is in evidence, and the debt-point infrastructure is either neutralized or credited. The next threat on the Chronos thread is the temporal debt in locations outside the North Ward \u2014 the Ledger lists three interventions south of the Industrial Quarter and two in the High Ward. If those debt-points are also past threshold, the Debt-Taker (or a similar entity) will appear there eventually. Yan's recommendation: establish a monitoring protocol. This requires more Liquid Chronos \u2014 the existing sample was consumed in restoration. The primary source of Liquid Chronos is the Chronos thread's existing supply, which Yan has limited access to. Alternatively, the Concordat temporal calibration device (Loop-Breaker Pendant) can be used to produce a small amount if properly operated \u2014 Arcana DC 16, produces 2 doses per week.",
+            "choice_a": "Establish a monitoring protocol and invest in Liquid Chronos production via the calibration device",
+            "consequence_a": "Weekly Liquid Chronos production (2 doses) becomes available if the party maintains one session of Arcana work per week. The monitoring protocol flags debt-point activity. Settlement stability +1 from the proactive management.",
+            "choice_b": "Advise Yan to establish institutional monitoring; this is a city-level problem",
+            "consequence_b": "Yan escalates to the City Administration. Institutional response is slow (3-4 weeks before resources are committed) but eventually more comprehensive than the party can provide alone.",
+            "convergence": "The temporal debt monitoring framework is established in some form."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Debt-Taker's dispersion site \u2014 the location where the entity was dissolved \u2014 shows a curious aftermath property. The temporal field gradient at that location has inverted: instead of slightly accelerated time, there is a region of slightly decelerated time, approximately 6 feet in diameter, persisting for approximately 3 hours before normalizing. Within this region, concentration is easier (advantage on Arcana and Investigate checks taken while inside it) and minor injuries heal 1 HP per minute. This is the Debt-Taker's temporal debt returning to the environment rather than being collected \u2014 a small gift from a resolved imbalance. Yan is fascinated.",
+            "choice_a": "Spend time in the decelerated field \u2014 the advantage on checks is useful for current investigation work",
+            "consequence_a": "The 3-hour window is used productively for Arcana analysis. Significant research progress made on the Chronal Ledger's remaining debt-point locations.",
+            "choice_b": "Document the phenomenon and move on \u2014 time is limited",
+            "consequence_b": "Documented for Yan's research. The phenomenon is added to the Chronos thread's investigation record as a 'dispersion aftermath signature' useful for identifying where the Debt-Taker has previously collected.",
+            "convergence": "The dispersion aftermath is either used or documented. Either way, it adds to the understanding of how temporal debt resolves."
+        },
+        {
+            "turn": 10,
+            "narrative": "Two more individuals contact Yan over the following week: they experienced the 'urgency' sensation associated with Debt-Taker proximity but were not aged. They report the sensation occurred near the High Ward mana-junction service tunnels \u2014 Ossa Veld's territory. The Debt-Taker may have attempted a collection in the High Ward, found the debt-point threshold not yet reached (the High Ward interventions are slightly younger than the North Ward ones), and moved on. But the Debt-Taker's path is mapped: North Ward primary zone, then High Ward, then Industrial Quarter. A future collection event in the High Ward is coming unless the debt is addressed. The Forgeline infrastructure (now closed by EH_SQ_076) was in the High Ward's debt zone.",
+            "choice_a": "Pre-emptively neutralize the High Ward debt-points before the Debt-Taker arrives",
+            "consequence_a": "Proactive resolution. Arcana and Engineering checks (DC 14) in the High Ward infrastructure \u2014 Ossa Veld is available to guide. The High Ward's debt is cleared. No collection event will occur there.",
+            "choice_b": "Monitor the High Ward and respond when the Debt-Taker next appears",
+            "consequence_b": "The party is now prepared for a Debt-Taker encounter and can resolve it more efficiently. The High Ward may experience 1-2 aging victims before the party can respond.",
+            "convergence": "The Debt-Taker's city-wide path is mapped. The temporal debt problem is larger than the North Ward but now has a framework for management."
+        },
+        {
+            "turn": 11,
+            "narrative": "Yan's final accounting of the Chronal Ledger's implications: twelve North Ward debt-points (addressed), three Industrial Quarter debt-points (unaddressed), two High Ward debt-points (in process based on this session's activity). But the Ledger also lists one entry that is not a debt-point. It is labeled 'Temporal Credit Reserve \u2014 North Ward Central Infrastructure.' Approximately 200 years ago, the Chronos Division made a temporal deposit: a reserve of temporal credit deliberately stored in the North Ward's central infrastructure to be drawn against in the event of significant temporal debt. The reserve has not been drawn against. It still exists. If accessible, it could resolve all remaining temporal debts in the North Ward and the Industrial Quarter simultaneously \u2014 a complete discharge. The reserve is stored in Concordat infrastructure at a location the Ledger marks with the same geometric notation as the Concordat maintenance hatch locks.",
+            "choice_a": "Activate the temporal credit reserve immediately",
+            "consequence_a": "The reserve discharges: all North Ward and Industrial Quarter temporal debts resolved. The Debt-Taker cannot return to either zone. The reserve is consumed \u2014 no further credit available. The discharge causes a brief 10-second temporal ripple visible across the entire city: clocks reset by 10 seconds, time seems to stutter. The City Watch logs 24 reports of 'temporal irregularity' simultaneously.",
+            "choice_b": "Leave the reserve as a last resort; manage the debt-points incrementally",
+            "consequence_b": "The reserve is preserved. Incremental management continues. The reserve represents a significant future resource if a larger temporal crisis requires it.",
+            "convergence": "The temporal credit reserve is either used or held. The Chronos thread's resolution arc now has a clear picture of all remaining temporal debt in the city."
+        },
+        {
+            "turn": 12,
+            "narrative": "One month after the Debt-Taker is dispersed: no new aging cases in the North Ward. Maret Torven is fully recovered \u2014 his physician certified his biological age returned to correct parameters within two weeks of the Liquid Chronos treatment. He bought the party a round at the Chronal Pint and did not make a speech. He simply raised his glass. The Chronal Ledger is the most comprehensive temporal debt map anyone has had in 200 years. Yan is using it systematically. The Debt-Taker's path across the city, if not resolved, represents a slow-moving temporal justice process that will continue affecting innocent bystanders until the Concordat's debts are paid or the entity is permanently dispersed. The party has a tool to do either. What they do next with the Chronal Ledger determines the shape of the Chronos thread's second half.",
+            "choice_a": "Commit to systematically addressing all remaining Chronal Ledger debt-points",
+            "consequence_a": "A multi-session project. Each addressed debt-point reduces the Debt-Taker's future harvest territory. Yan assists with institutional resources. The city's temporal health improves incrementally but measurably.",
+            "choice_b": "Pass the Chronal Ledger to institutional management; the party handles the acute crises",
+            "consequence_b": "Yan's initiative handles the incremental work. The party is freed to focus on the larger Vane investigation. The Debt-Taker's city-wide path continues on a managed but not fully resolved basis.",
+            "convergence": "Quest complete. The Time-Debt Collector is dispersed, the victims restored, the Chronal Ledger in hand, and the temporal credit reserve located. The Chronos thread's second half has a clear structure: resolve the temporal debt, address Vane's transmission impact, and determine what the complete Reactivation Protocol actually does to the city's infrastructure when fully activated."
+        }
+    ],
+    "conclusion": "The Time-Debt Collector disperses the temporal parasite, restores four victims, and produces the Chronal Ledger as the Chronos thread's central navigational document \u2014 a map of all remaining temporal debts in EmberHeart. The discovery of the Temporal Credit Reserve offers a dramatic resolution option for the thread's second half. Maret Torven provides a grounded, human-scale perspective on the consequences of 200-year-old infrastructure decisions. Yan transitions from investigator to active partner.",
+    "loot_table": [
+        "Chronal Ledger (Concordat Chronos Division debt accounting document; complete map of all 17 temporal debt-points in EmberHeart; their danger thresholds, current statuses, and the location of the Temporal Credit Reserve; the most important single document in the Chronos thread)",
+        "Temporal Credit Reserve Location (coordinates derived from Chronal Ledger; allows complete discharge of North Ward and Industrial Quarter temporal debts in one action; trade-off: reserve consumed, brief city-wide temporal ripple)",
+        "Liquid Chronos Restoration Data (Yan's full treatment protocols for all four victims; establishes precise medicine DCs for future temporal aging restoration; reference documentation for future Debt-Taker encounters in High Ward and Industrial Quarter)",
+        "Debt-Taker Dispersion Aftermath Sample (Yan's collection of material from the dispersion site; research into the 'temporal debt return' phenomenon; Arcana advantage on future Debt-Taker encounters)",
+        "1100 gold (North Ward Ward Authority emergency resolution payment; Maret Torven's family contribution; Yan's investigation discretionary budget contribution)"
+    ],
+    "branching_outcomes": {
+        "debt_points_neutralized": {
+            "description": "Infrastructure debt-points decommissioned; temporal debt cleared; temporal stabilization lost",
+            "effects": {
+                "settlement_morale": 2,
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Debt-Taker cannot return to North Ward; North Ward temporal disturbances from Vane's transmissions worsen without stabilization infrastructure"
+            }
+        },
+        "debt_credited": {
+            "description": "Temporal credit generated using Concordat protocols; debt balanced; infrastructure preserved",
+            "effects": {
+                "settlement_morale": 2,
+                "settlement_stability": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Debt-Taker cannot return for 12 months; temporal stabilization infrastructure intact; Arcana checks related to North Ward temporal field at advantage for 3 sessions"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Three additional North Ward residents are aged during the investigation period before the Debt-Taker is dispersed. One of them \u2014 a child \u2014 is aged 8 years and the Liquid Chronos restoration is more complex (Medicine DC 17). If the sample is consumed restoring the original four victims, this fifth case cannot be treated immediately. Settlement morale -2.",
+        "failure_penalty": {
+            "xp_loss": 8
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

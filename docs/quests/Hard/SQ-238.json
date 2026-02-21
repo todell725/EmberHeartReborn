@@ -1,0 +1,72 @@
+{
+    "id": "SQ-238",
+    "title": "The Laundry's Ledger",
+    "difficulty": "Hard",
+    "xp_reward": 750,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-012"
+        ]
+    },
+    "location": "Laundry Ward -> The Steam-Tunnels",
+    "district": "Laundry Ward",
+    "thread": "Laundry",
+    "description": "The Laundry is a notorious front for the city's assassins. Following a dead-end from months ago, you finally deciphered the hit-contract ledger you found in the steam-tunnels.",
+    "key_npcs": [
+        "Laundry Master",
+        "Contract Killers"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You confront the Laundry Master in his scalding, steam-filled office. The visibility is zero.",
+            "choice_a": "Use wind magic to clear the steam",
+            "consequence_a": "The air clears instantly, revealing three killers poised to strike.",
+            "choice_b": "Rely on your hearing and strike blindly",
+            "consequence_b": "A dangerous gamble. You strike one killer, but take a poisoned blade to the shoulder."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Laundry Master attempts to flee, throwing boiling lye behind him.",
+            "choice_a": "Chase him through the lye",
+            "consequence_a": "You catch him, but suffer severe chemical burns to your legs.",
+            "choice_b": "Throw a bola or use a binding spell",
+            "consequence_b": "He trips and crashes into his own boiling vats, dying instantly."
+        }
+    ],
+    "branching_outcomes": {
+        "master_captured": {
+            "description": "You suffered burns but captured the Laundry Master alive.",
+            "unlocks": [
+                "SQ-239"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 20
+                }
+            }
+        },
+        "master_boiled": {
+            "description": "The Laundry Master died in his own vats.",
+            "unlocks": [
+                "SQ-239"
+            ],
+            "consequences": {
+                "item_reward": "Master's Ledger Key"
+            }
+        }
+    },
+    "loot_table": [
+        "Master's Ledger Key",
+        "Poisoned Kunai",
+        "250x Gold Coins"
+    ],
+    "conclusion": "You suffered burns but captured the Laundry Master alive.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

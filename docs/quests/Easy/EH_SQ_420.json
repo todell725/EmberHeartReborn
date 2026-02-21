@@ -1,0 +1,81 @@
+{
+    "id": "EH_SQ_420",
+    "title": "The Vent That Screams",
+    "difficulty": "Easy",
+    "xp_reward": 420,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Ridge -> The Steam Vent Array",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "Maintenance worker Bram reports Vent Station 7 has been emitting a rhythmic screaming noise for three days that is disrupting nearby housing. The sound is not mechanical \u2014 it is too tonally complex. The Ridge Authority wants it investigated before panic spreads.",
+    "key_npcs": [
+        "Bram the Maintenance Worker",
+        "Ridge Authority Overseer Kell"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Vent Station 7 is a squat iron cylinder jutting from the ridge basalt. You hear it from fifty metres away \u2014 a rising and falling wail that does indeed sound disturbingly organic. Bram stands nervously nearby holding a pressure gauge.",
+            "choice_a": "Open the vent access panel and investigate the interior",
+            "consequence_a": "Inside you find a large bird-like creature, a Vapour Lark, nesting in the intake pipe. Its distress cries echo through the pipe and are amplified into the screaming noise.",
+            "choice_b": "Take pressure readings around the vent to identify mechanical causes first",
+            "consequence_b": "Pressure readings are entirely normal. The noise source is organic, not mechanical, confirming it's something alive inside."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Vapour Lark is a native Ridge bird that uses geothermal heat to incubate its eggs. It has laid a clutch of six eggs in the intake and will not leave willingly. Forcibly removing it would cause extreme distress and may kill the eggs.",
+            "choice_a": "Carefully relocate the nest \u2014 eggs and all \u2014 to an adjacent inactive vent",
+            "consequence_a": "A delicate operation. The Lark is anxious but follows its eggs. Within hours, the screaming stops.",
+            "choice_b": "Simply cap the exhaust port to redirect the sound away from housing",
+            "consequence_b": "The noise is redirected downward into the Ridge stone. Humans can no longer hear it. The Lark continues nesting undisturbed."
+        },
+        {
+            "turn": 3,
+            "narrative": "With the immediate problem resolved, Overseer Kell wants a policy on Ridge wildlife and the vent arrays.",
+            "choice_a": "Suggest installing bird-exclusion grilles on open intake vents",
+            "consequence_a": "Kell immediately approves the measure. Maintenance teams note three other occupied vents that are now properly addressed.",
+            "choice_b": "Recommend designating a zone of inactive vents as a protected Vapour Lark nesting area",
+            "consequence_b": "Kell agrees. A small ridge zone is designated accordingly."
+        }
+    ],
+    "branching_outcomes": {
+        "grilles_installed": {
+            "description": "Bird-exclusion grilles installed across the vent array.",
+            "unlocks": [
+                "EH_SQ_421"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 10
+                }
+            }
+        },
+        "zone_designated": {
+            "description": "Protected Vapour Lark nesting zone designated.",
+            "unlocks": [
+                "EH_SQ_421"
+            ],
+            "consequences": {
+                "item_reward": "Vapour Lark Feather",
+                "reputation_change": {
+                    "Ridge": 14
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Vapour Lark Feather",
+        "Vent Access Key",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Bird-exclusion grilles installed across the vent array."
+}

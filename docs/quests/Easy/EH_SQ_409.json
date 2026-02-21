@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_409",
+    "title": "The Secret Ingredient",
+    "difficulty": "Easy",
+    "xp_reward": 500,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Culinary College Hall",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "The annual Bread Competition is rocked by scandal: the winning loaf has an unidentifiable ingredient causing judges to grin uncontrollably. Runner-up baker Oswin alleges winner Petra used illegal alchemy. The prize is 500 gold and the title of City Baker.",
+    "key_npcs": [
+        "Baker Petra",
+        "Baker Oswin",
+        "Judge Sella"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The winning loaf sits on a velvet cushion \u2014 golden and perfect but with an iridescent sheen along its crust. Judge Sella has eaten three slices and cannot stop grinning.",
+            "choice_a": "Taste a small piece and assess the effect",
+            "consequence_a": "An extraordinary wave of contentment settles over you \u2014 deep and pleasant but clearly unnatural. You feel no desire to argue with anyone.",
+            "choice_b": "Examine the bread under alchemical light",
+            "consequence_b": "Small crystalline particles are visible in the crumb \u2014 too fine for flour, too regular for impurity."
+        },
+        {
+            "turn": 2,
+            "narrative": "Petra admits she accidentally used ancestral 'old honey' from her grandmother \u2014 a very diluted Mirthbloom extract her family has used for three generations as a secret spice. She had no idea it was alchemically active.",
+            "choice_a": "Recommend Sella disqualify Petra",
+            "consequence_a": "Petra is disqualified despite innocence. Oswin wins by default but feels hollow.",
+            "choice_b": "Recommend Sella declare a tie since the ingredient was used in innocent good faith",
+            "consequence_b": "Sella agrees. Both share the title and split the prize. Both are grudgingly satisfied."
+        },
+        {
+            "turn": 3,
+            "narrative": "The ancestral honey tin is now a matter of record and public interest.",
+            "choice_a": "Ensure the honey tin is documented with the City Alchemists",
+            "consequence_a": "It is properly categorised \u2014 mildly regulated but not banned.",
+            "choice_b": "Suggest Petra keep the tin private and stop using it in competition",
+            "consequence_b": "Petra agrees. The tin stays in her family. The Ward is none the wiser."
+        }
+    ],
+    "branching_outcomes": {
+        "honey_documented": {
+            "description": "Ancestral honey formally registered.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Ancestral Honey Tin",
+                "reputation_change": {
+                    "Market Ward": 16
+                }
+            }
+        },
+        "honey_private": {
+            "description": "Honey kept private. No formal registration.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Ancestral Honey Tin",
+        "Competition Judge Badge",
+        "220x Gold Coins"
+    ],
+    "conclusion": "Ancestral honey formally registered."
+}

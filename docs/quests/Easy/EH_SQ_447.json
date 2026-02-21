@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_447",
+    "title": "The Missing Silverware",
+    "difficulty": "Easy",
+    "xp_reward": 410,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Service District -> The Chamberlain's Office",
+    "district": "Service District",
+    "thread": "Standalone",
+    "description": "Noble House Renn has reported a series of petty thefts \u2014 silverware, small decorative items, and a gold candlestick. They suspect one of their domestic staff. House Chamberlain Veli wants the matter resolved without public scandal or false accusations.",
+    "key_npcs": [
+        "Chamberlain Veli",
+        "House Staff of twelve"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The thefts began six weeks ago, always on evenings when a specific weekly social gathering is held at the house. Items go missing during the party chaos. Veli provides a list of all twelve staff members and notes that two have recently paid off personal debts significantly above their salary level.",
+            "choice_a": "Interview the two high-profile staff members first",
+            "consequence_a": "One \u2014 the scullery assistant Benn \u2014 becomes immediately flustered when asked about his debts. He is clearly not a good liar.",
+            "choice_b": "Review the household entry and exit logs for the six theft evenings",
+            "consequence_b": "The logs reveal a pattern: the same service corridor is used on every theft evening to reach the silverware cabinet by a route that bypasses the main serviced areas."
+        },
+        {
+            "turn": 2,
+            "narrative": "Both paths lead to Benn, who is eventually identified as the thief. When confronted privately, he breaks immediately and explains: his mother is ill and the medical costs were beyond his means. He is deeply ashamed.",
+            "choice_a": "Report Benn to Veli and let the household decision govern the outcome",
+            "consequence_a": "Veli, moved by the explanation, arranges for the Medical Quarter to cover Benn's mother's costs and Benn repays the value of stolen goods through wage deductions rather than prosecution.",
+            "choice_b": "Negotiate a private restitution agreement yourself before involving Veli",
+            "consequence_b": "Benn agrees to return all items still in his possession and write an itemised restitution promise for the rest."
+        },
+        {
+            "turn": 3,
+            "narrative": "Veli asks why the household's security allowed this to happen for six weeks unnoticed.",
+            "choice_a": "Recommend a basic staff possessions locker policy to prevent future incidents",
+            "consequence_a": "Lockers are installed. All staff store personal items there. Impromptu searches become standard.",
+            "choice_b": "Recommend Veli create a voluntary staff hardship fund that helps workers avoid desperation-driven theft",
+            "consequence_b": "Veli is moved by the suggestion and creates a small discretionary fund. Three other staff immediately apply for minor hardship support."
+        }
+    ],
+    "branching_outcomes": {
+        "veli_decided": {
+            "description": "Veli handled Benn's case with surprising mercy.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Chamberlain's Letter of Thanks",
+                "reputation_change": {
+                    "Service District": 14
+                }
+            }
+        },
+        "hardship_fund": {
+            "description": "Staff hardship fund created. Three staff immediately helped.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "House Renn Staff Voucher",
+                "reputation_change": {
+                    "Service District": 18
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Chamberlain's Letter of Thanks",
+        "House Renn Staff Voucher",
+        "150x Gold Coins"
+    ],
+    "conclusion": "Veli handled Benn's case with surprising mercy."
+}

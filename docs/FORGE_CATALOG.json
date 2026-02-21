@@ -1,0 +1,722 @@
+{
+    "version": "1.0",
+    "forge_name": "The Sovereign Arcanotech Forges",
+    "blueprints": [
+        {
+            "id": "ART_001",
+            "name": "Warden's Heart-Plate",
+            "type": "Armor",
+            "description": "Crystalline plate armor powered by a Gelatinous Nucleus. +2 AC, Ooze Resistance.",
+            "cost": {
+                "ore_ou": 15000,
+                "metal_m2u": 8000
+            },
+            "materials": [
+                {
+                    "item": "Cube's Heart-Nucleus",
+                    "quantity": 1
+                },
+                {
+                    "item": "Ooze Membrane",
+                    "quantity": 5
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "ART_002",
+            "name": "Displacer Shroud",
+            "type": "Cloak",
+            "description": "A cloak that bends light. Grants Displace (1x/day) and Stealth Bonus.",
+            "cost": {
+                "ore_ou": 5000,
+                "metal_m2u": 2000
+            },
+            "materials": [
+                {
+                    "item": "Displacer Hide Scrap",
+                    "quantity": 3
+                },
+                {
+                    "item": "Void-Scent Gland",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 12
+        },
+        {
+            "id": "ART_003",
+            "name": "Blade of the Beholder",
+            "type": "Weapon",
+            "description": "A longsword that suppresses magic. Target must save vs Antimagic.",
+            "cost": {
+                "ore_ou": 25000,
+                "metal_m2u": 15000
+            },
+            "materials": [
+                {
+                    "item": "Beholder Eyestalk",
+                    "quantity": 1
+                },
+                {
+                    "item": "Vial of Antimagic-Fluid",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 48
+        },
+        {
+            "id": "ART_004",
+            "name": "Tarrasque Buckler",
+            "type": "Shield",
+            "description": "Fragment of a Tarrasque carapace. Grant's 'Indestructible' property.",
+            "cost": {
+                "ore_ou": 100000,
+                "metal_m2u": 50000
+            },
+            "materials": [
+                {
+                    "item": "Tarrasque Carapace Piece",
+                    "quantity": 1
+                },
+                {
+                    "item": "Indestructible Claw Shard",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 72
+        },
+        {
+            "id": "BAS_001",
+            "name": "Steel Longsword",
+            "type": "Weapon",
+            "description": "A finely weighted steel blade. Standard issue for Emberheart Marines.",
+            "cost": {
+                "ore_ou": 150,
+                "metal_m2u": 100
+            },
+            "materials": [
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Bone Dust",
+                    "quantity": 5
+                }
+            ],
+            "craft_time_hours": 2
+        },
+        {
+            "id": "BAS_002",
+            "name": "Standard Phalanx Shield",
+            "type": "Armor",
+            "description": "Heavy wooden shield reinforced with steel bands.",
+            "cost": {
+                "ore_ou": 100,
+                "metal_m2u": 50
+            },
+            "materials": [
+                {
+                    "item": "Shattered Shield Shard",
+                    "quantity": 3
+                },
+                {
+                    "item": "Rusted Shortsword",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 1
+        },
+        {
+            "id": "BAS_003",
+            "name": "Standard Field Plate",
+            "type": "Armor",
+            "description": "Full plate armor for front-line enforcers. 18 AC.",
+            "cost": {
+                "ore_ou": 1500,
+                "metal_m2u": 1000
+            },
+            "materials": [
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 50
+                },
+                {
+                    "item": "Bone Dust",
+                    "quantity": 25
+                }
+            ],
+            "craft_time_hours": 12
+        },
+        {
+            "id": "BAS_004",
+            "name": "Star-Wood Longbow",
+            "type": "Weapon",
+            "description": "Made from the resilient wood of old-growth star-oaks.",
+            "cost": {
+                "ore_ou": 200,
+                "metal_m2u": 50
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 10
+                }
+            ],
+            "craft_time_hours": 4
+        },
+        {
+            "id": "MAG_001",
+            "name": "Adamantine Armor",
+            "type": "Armor",
+            "description": "Standard D&D rules apply for Adamantine Armor. Rarity: Common.",
+            "cost": {
+                "ore_ou": 1000,
+                "metal_m2u": 500
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 4
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_002",
+            "name": "Alchemy Jug",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Alchemy Jug. Rarity: Common.",
+            "cost": {
+                "ore_ou": 1000,
+                "metal_m2u": 500
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 4
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_003",
+            "name": "Bag of Holding",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Bag of Holding. Rarity: Common.",
+            "cost": {
+                "ore_ou": 1000,
+                "metal_m2u": 500
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 4
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_004",
+            "name": "Boots of Elvenkind",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Boots of Elvenkind. Rarity: Common.",
+            "cost": {
+                "ore_ou": 1000,
+                "metal_m2u": 500
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 4
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_005",
+            "name": "Broom of Flying",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Broom of Flying. Rarity: Common.",
+            "cost": {
+                "ore_ou": 1000,
+                "metal_m2u": 500
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 4
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_006",
+            "name": "Gauntlets of Ogre Power",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Gauntlets of Ogre Power. Rarity: Common.",
+            "cost": {
+                "ore_ou": 1000,
+                "metal_m2u": 500
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 4
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_007",
+            "name": "Cloak of Protection",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Cloak of Protection. Rarity: Common.",
+            "cost": {
+                "ore_ou": 1000,
+                "metal_m2u": 500
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 4
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_008",
+            "name": "Amulet of Health",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Amulet of Health. Rarity: Rare.",
+            "cost": {
+                "ore_ou": 20000,
+                "metal_m2u": 10000
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 36
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 18
+                },
+                {
+                    "item": "Dread-Armor Fragment",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 72
+        },
+        {
+            "id": "MAG_009",
+            "name": "Animated Shield",
+            "type": "Armor",
+            "description": "Standard D&D rules apply for Animated Shield. Rarity: Rare.",
+            "cost": {
+                "ore_ou": 20000,
+                "metal_m2u": 10000
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 36
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 18
+                },
+                {
+                    "item": "Dread-Armor Fragment",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 72
+        },
+        {
+            "id": "MAG_010",
+            "name": "Gusting Blowgun",
+            "type": "Weapon",
+            "description": "Standard D&D rules apply for Gusting Blowgun. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3091,
+                "metal_m2u": 1923
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_011",
+            "name": "Mask of the Beast",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Mask of the Beast. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3780,
+                "metal_m2u": 1918
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_012",
+            "name": "Ambitious Medic\u2019s Box",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Ambitious Medic\u2019s Box. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3109,
+                "metal_m2u": 1398
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_013",
+            "name": "Boots of False Tracks",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Boots of False Tracks. Rarity: Common.",
+            "cost": {
+                "ore_ou": 605,
+                "metal_m2u": 265
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 5
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_014",
+            "name": "Whirlpool Dart",
+            "type": "Weapon",
+            "description": "Standard D&D rules apply for Whirlpool Dart. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3225,
+                "metal_m2u": 1769
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_015",
+            "name": "Dark Shard Amulet",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Dark Shard Amulet. Rarity: Common.",
+            "cost": {
+                "ore_ou": 612,
+                "metal_m2u": 242
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 5
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_016",
+            "name": "Harkon's Bite",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Harkon's Bite. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3070,
+                "metal_m2u": 1652
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_017",
+            "name": "Armor of the Fallen",
+            "type": "Armor",
+            "description": "Standard D&D rules apply for Armor of the Fallen. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3911,
+                "metal_m2u": 1461
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_018",
+            "name": "Ball of Wild Earth",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Ball of Wild Earth. Rarity: Common.",
+            "cost": {
+                "ore_ou": 582,
+                "metal_m2u": 369
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 5
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_019",
+            "name": "Hat of Disguise",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Hat of Disguise. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3765,
+                "metal_m2u": 1680
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_020",
+            "name": "Instrument of Scribing",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Instrument of Scribing. Rarity: Common.",
+            "cost": {
+                "ore_ou": 594,
+                "metal_m2u": 347
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 5
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_021",
+            "name": "Great Owl\u2019s Shroud",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Great Owl\u2019s Shroud. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3044,
+                "metal_m2u": 1679
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_022",
+            "name": "Foxfire Charm",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Foxfire Charm. Rarity: Common.",
+            "cost": {
+                "ore_ou": 558,
+                "metal_m2u": 280
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 5
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 2
+                }
+            ],
+            "craft_time_hours": 8
+        },
+        {
+            "id": "MAG_023",
+            "name": "Immovable Rod",
+            "type": "Wondrous",
+            "description": "Standard D&D rules apply for Immovable Rod. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 3571,
+                "metal_m2u": 1990
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        },
+        {
+            "id": "MAG_024",
+            "name": "Sir Varion\u2019s Lance",
+            "type": "Weapon",
+            "description": "Standard D&D rules apply for Sir Varion\u2019s Lance. Rarity: Uncommon.",
+            "cost": {
+                "ore_ou": 2509,
+                "metal_m2u": 1013
+            },
+            "materials": [
+                {
+                    "item": "Bone Dust",
+                    "quantity": 15
+                },
+                {
+                    "item": "Iron Arrowhead",
+                    "quantity": 10
+                },
+                {
+                    "item": "Enchanted Residue",
+                    "quantity": 1
+                }
+            ],
+            "craft_time_hours": 24
+        }
+    ]
+}

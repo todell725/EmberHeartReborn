@@ -1,0 +1,150 @@
+{
+    "id": "SQ-192",
+    "title": "The Stitched-Memories",
+    "difficulty": "Easy",
+    "xp_reward": 460,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Grieving widow contacts the Watch after her late husband's quilt 'started talking' in his voice"
+    },
+    "location": "Lower Ward - Widow Tessaly's home and Quilters' Guild Hall",
+    "district": "Lower Ward",
+    "thread": "Laundry",
+    "estimated_duration": "45 minutes",
+    "key_npcs": [
+        "Widow Tessaly Vorn (quest-giver, grieving but pragmatic)",
+        "Aldric Vorn (deceased, speaks via the memorial quilt)",
+        "Mistress Quell (Quilters' Guild head, alarmed)",
+        "The Memory-Quilts (multiple, different deceased voices)"
+    ],
+    "mechanics_featured": [
+        "Insight (reading fabric communication)",
+        "Arcana (understanding Warp-Silk memory retention)",
+        "Fabric-Handling checks",
+        "Persuasion (of ghosts, essentially)",
+        "Investigation"
+    ],
+    "permanent_effects": [
+        "Player learns Warp-Silk retains emotional memories of its owners",
+        "Memory-Quilt network discovered (Quilters' Guild has been unwittingly using Warp-Silk thread for decades)"
+    ],
+    "branching_outcomes": {
+        "preserve_quilts": {
+            "description": "Recognize the quilts as genuine memory archives, establish a Memory-Quilt library",
+            "effects": {
+                "settlement_morale": 5
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Memory-Quilt Library established in Lower Ward - citizens can speak to deceased relatives via Warp-Silk quilt patches",
+                "lore_gain": "Quilts reveal pre-Scourge memories including key Concordat information when queried correctly"
+            }
+        },
+        "neutralize_quilts": {
+            "description": "Bleach or contain the quilts, preventing further ghostly contact",
+            "effects": {
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "ambient_hazard": "Tessaly and other affected families are deeply upset. -1 Settlement Morale, +1 Stability.",
+                "lore_gain": "Neutralized quilt threads analyzed by Guild reveal Warp-Silk memory retention mechanism"
+            }
+        }
+    },
+    "description": "A memorial quilt is speaking in the deceased's voice. This should be impossible. It is not, apparently, unique\u2014the Quilters' Guild uses thread from a supplier who has been selling Warp-Silk blend for fifteen years. Half the memorial quilts in the Lower Ward remember their owners.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Widow Tessaly Vorn is a small, precise woman who opens her front door and says: 'Before you say anything, I know what I heard.' She leads you upstairs to a bedroom that smells of cedar and old wool. The quilt on the bed is a masterpiece of a different era\u2014forty years of patches, each one Tessaly's addition after a significant family moment. In the center is a square of dark blue that was sewn by her husband the year they married. As you enter the room, the quilt says, in a clear, slightly echoey voice: 'The kettle's boiling.' Tessaly does not flinch. 'That's what he always said when he came downstairs. He never let the kettle sit.'",
+            "choice_a": "Study the quilt for Warp-Static properties without touching it (Arcana DC 12)",
+            "consequence_a": "Success: The blue central square is woven with Warp-Silk thread\u2014subtle, but unmistakable under Arcana examination. The thread has retained emotional-memory imprints of everyone who regularly slept beneath this quilt. It is not haunted. It is a recording made of cloth. (+1 Lore)",
+            "choice_b": "Gently touch the blue center square and see what happens (Fabric-Handling DC 10, receptive approach)",
+            "consequence_b": "Success: The voice changes register when you touch it\u2014no longer projecting into the room but speaking to you directly, as if through the fabric: 'You're not her.' A pause. 'The kettle is boiling.' A second register shift: 'Tell her I watched over her.' (+1 Connection established)",
+            "convergence": "Tessaly sits on the bed beside the quilt, her hand resting on the blue square. It says four more things her husband was known to say. She is not afraid. She is sad in the specific way of someone who has been given one more day of the thing they thought was over."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Quilters' Guild Hall is a building full of people who are having a very hard morning. Mistress Quell, the Guild head, meets you with the energy of someone managing a crisis she does not understand and finds personally offensive. Six Guild members have come forward in the last 24 hours with quilts that have begun speaking. The voices are consistent with the deceased owners of the remembered fabric patches. The Guild has been using thread from Supplier Merin for fifteen years. Merin's thread is Warp-Silk blend. Merin has known this. Merin is not currently available to comment because Merin has left the city.",
+            "choice_a": "Search the Quilters' Guild supply records to understand the Warp-Silk thread distribution (Investigation DC 12)",
+            "consequence_a": "Success: Merin's records show Warp-Silk blend thread sold to 43 quilts in the Lower Ward over 15 years. You compile a list of purchasers. Every memorial quilt made during this period potentially contains speaking fabric. (+1 Lore, full list obtained)",
+            "choice_b": "Interview the six affected Guild members about what their quilts are saying (Insight DC 11)",
+            "consequence_b": "Success: The voices are all low-level domestic memory: 'The cat gets fed twice a day,' 'Left sock on the right.' But one quilt\u2014belonging to a former City Watch captain\u2014has said something actionable: 'The vault under the Harbor Office has a second basement. Beneath the second basement.' This may be the most useful thing a quilt has ever said. (+1 Intel)",
+            "convergence": "Mistress Quell has a question she is having trouble framing: 'If these quilts are... remembering people. Are the people in them? And if we neutralize the quilts, are we...' She cannot finish the sentence. It is, as questions go, genuinely difficult."
+        },
+        {
+            "turn": 3,
+            "narrative": "The question of what the quilts ARE philosophically needs a practical answer. You spend an hour testing the blue square from Tessaly's quilt with systematic questions: things only Aldric Vorn would know, things she knows are wrong to test for hallucination, and things she genuinely does not know the answer to. Results: the quilt knows accurate personal details (not guessable by Tessaly alone). The quilt does not know things it couldn't have known (not omniscient). It doesn't add new information about events after death. It is memory. It is Aldric Vorn's memories of their life together, preserved in thread. Not a ghost. An echo.",
+            "choice_a": "Systematically interview the blue square about anything of investigative value (Investigation DC 13)",
+            "consequence_a": "Success: Aldric was a merchant. He shipped goods through a specific Harbor connection. Through careful questioning, the quilt reveals: 'The third warehouse at the North Pier, there are crates that were never registered with the customs office.' Living intelligence from a dead man. (+2 Intel, actionable Harbor data)",
+            "choice_b": "Let Tessaly have time alone with the quilt while you investigate the Warp-Silk mechanism (Arcana DC 14)",
+            "consequence_b": "Success: The memory-retention works through emotional imprinting during sleep\u2014the quilt absorbed years of subconscious memory projection from everyone who slept beneath it regularly. Warp-Silk doesn't just animate: it records. (+2 Lore, memory mechanism fully understood)",
+            "convergence": "Tessaly emerges after 20 minutes. Her eyes are red. She says: 'He said to stop blaming myself for the argument in March.' She holds the quilt tightly for a moment. 'How long does it last?' You estimate: as long as the Warp-Silk threads hold. Decades, possibly. 'Good,' she says."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Watch Captain's quilt is the concerning one. Its memories include references to a second Harbor vault basement\u2014unknown to the current Watch leadership. And something else: when you sit with this quilt and ask careful questions, the Captain's voice eventually says, in a different tone than his domestic memories: 'The Concordat used quilts. Before the Scourge. For courier messages too sensitive for paper. They'd weave the message into Warp-Silk panels and deliver the quilt to the recipient. Only someone who knew the right questions could read them.' The quilt has just told you that Concordat memory-fabric is a historical espionage technology. And there are 43 of them in the Lower Ward.",
+            "choice_a": "Query every accessible memorial quilt for Concordat-era information (systematic Intelligence sweep, 3 hours)",
+            "consequence_a": "Success: Of the 43 quilts, 6 contain pre-Scourge memories from people old enough\u2014or connected enough\u2014to have Concordat-era knowledge. You extract: three safe-house locations, a partial map of Concordat maintenance tunnels (cross-references Vermin thread data), and a name that appears twice: 'Dr. Aldric Vane.' (+3 Lore, major cross-thread connection)",
+            "choice_b": "Focus only on the Captain's quilt: it seems to have the most operationally useful content",
+            "consequence_b": "In 90 minutes of careful questioning, the Captain's quilt yields: the Harbor basement, a name ('Vane'), and one final detail: 'The quilts were supposed to be burned after receipt. None of us burned ours.' (+1 Lore, Vane cross-thread mention)",
+            "convergence": "The name 'Vane' appears in pre-Scourge memory-quilts. Not Doctor Vane as a title, but as a person known personally to pre-Scourge citizens who were alive when the Concordat was still active. This confirm Vane existed before the Scourge. An echo of a 200-year-old memory is naming the person currently commanding the Copper-Tails."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Warp-Silk supplier Merin needs to be found. His records show the Warp-Silk blend thread came from a single bolt, purchased 15 years ago from an estate sale of antique textile stock. The estate was that of a deceased fabric merchant whose family had held the bolt for five generations. Where the original bolt came from: a pre-Scourge estate sale. The Warp-Silk in every memorial quilt is 200-year-old Concordat-era thread that has been passing through the secondhand market for generations. Merin is scared because he recognized what it was only when the quilts started talking\u2014and he bolted. He is hiding in the Dye District. The Watch has him.",
+            "choice_a": "Interview Merin about the Warp-Silk bolt's full provenance (Persuasion DC 12, he is terrified)",
+            "consequence_a": "Success: Merin is a small frightened man who says: 'I didn't know it did THAT. I just knew the thread was unusually high quality. I never told anyone it was blend because nobody asks.' He produces the original purchase receipt: 'Lot 47, Estate of House Vael, textile stock.' House Vael: a Concordat-era noble family. (+1 Lore)",
+            "choice_b": "Search Merin's warehouse for the remnant Warp-Silk bolt (Investigation DC 13)",
+            "consequence_b": "Success: 3 yards remaining. Still on the original spool, which is stamped: 'CONCORDAT DIVISION TWO - COMMUNICATIONS APPLICATIONS.' This was not accidental Warp-Silk leaking into the market. This was a Concordat communications material cache that survived 200 years of estate sales. (+2 Lore, Concordat memory-fabric origin confirmed)",
+            "convergence": "Either route confirms: the quilts are made of Concordat espionage material that has been passively recording the domestic memories of Lower Ward families for 15 years, while also containing older pre-Scourge intelligence in the deepest memory layers. The Guild is sitting on a 200-year-old archive."
+        },
+        {
+            "turn": 6,
+            "narrative": "Mistress Quell has made a decision while you've been investigating: she called a Guild meeting and the vote is 11-4 to preserve the quilts and establish them as a community resource. The four against want the quilts neutralized for 'dignity of the deceased.' The eleven in favor point out that several Guild members have had farewell conversations they never had the chance to have. The decision feels irreversible. Then a quilt in the corner of the meeting room says, in an old woman's voice, completely without context: 'The rats under the city are not rats.' The whole room goes quiet.",
+            "choice_a": "Question the quilt about the rats (immediate priority, Fabric-Handling DC 12, be gentle)",
+            "consequence_a": "Success: It takes 20 minutes of careful fabric-communication. The old woman's memory knew the Concordat. 'Division Seven made the vermin. Division Two made the quilts. They were not supposed to interact. Vane\u2014Aldric Vane\u2014was in Division Seven. He was young.' She remembers him as 25 at most. In 200 years, he has become something that makes direct contact via Squeaker-Box. (+3 Lore, massive cross-thread Vane revelation)",
+            "choice_b": "Note the comment, continue establishing Memory-Quilt library protocol (focus on quest resolution)",
+            "consequence_b": "The comment is logged. The Mage Guild is notified. Someone else will follow up. The Memory-Quilt library establishment continues. (+1 Settlement Morale, Vane intel deferred)",
+            "convergence": "The Memory-Quilt library is established in the Guild Hall. Citizens can book appointments to speak with quilts containing their relatives. The Guild charges a modest fee. Tessaly is made honorary curator. And somewhere in the oldest quilts, in the deepest Warp-Silk memory layers, pre-Scourge voices are waiting for the right questions."
+        },
+        {
+            "turn": 7,
+            "narrative": "The remaining Concordat Warp-Silk thread spool needs to be secured. Three yards of pre-Scourge Concordat communications material cannot simply sit in Merin's warehouse. The Mage Guild wants it. The Watch wants it. Tessaly Vorn wants one more yard of it\u2014enough for a small memorial for a friend who died last year without a proper quilt. You have to decide who gets the material and in what quantity.",
+            "choice_a": "Give the spool entirely to the Mage Guild for research and controlled distribution",
+            "consequence_a": "The Guild archives it carefully. They will use it for targeted Memory-Quilt creation: intentional, researched, documented. The emotional-memory technology becomes a formal Guild specialty. (+1 Lore, controlled Warp-Silk distribution)",
+            "choice_b": "Distribute it equitably: Tessaly gets a yard, Guild gets a yard, Mage Guild gets a yard",
+            "consequence_b": "Three institutions, three projects. Tessaly's friend gets a memorial. The Guild continues their library. The Mage Guild studies the mechanism. The Warp-Silk is used meaningfully by people who needed it. (+2 Settlement Morale)",
+            "convergence": "Merin is charged with selling an unregistered magical material but given a suspended sentence in recognition that he didn't know what it did. He is now, bizarrely, the city's leading expert in Warp-Silk thread identification by touch\u2014a skill no one else has. The Watch puts him on informal retainer."
+        },
+        {
+            "turn": 8,
+            "narrative": "Final visit to Widow Tessaly. The blue square of her quilt has been speaking less frequently since the Guild established the library\u2014perhaps the Warp-Static is distributed now, the emotional resonance spread across many quilts rather than concentrated in one. When you arrive, the quilt says: 'You've been looking into something. Don't stop.' Tessaly looks at you. 'He was always like that. Noticing things from the edges.' She touches the blue square. The quilt adds: 'The rats, the cloth, the glass city\u2014it's the same thing underneath. You'll see.' Then it is quiet.",
+            "choice_a": "Sit with Tessaly and ask the quilt everything you can about what Aldric saw (Insight DC 14)",
+            "consequence_a": "Success: The quilt yields its last organized memory on the topic: 'Aldric heard a presentation at a Merchant's Council meeting, 35 years ago. A man said: everything in the city is infrastructure. The fabric, the wiring, the ice. All of it channels something toward a center. Not outward. Inward.' The presenter's name was not given. Aldric agreed with him. (+2 Lore, grand unified thread hint)",
+            "choice_b": "Let Tessaly have a quiet last conversation with the quilt's remaining active memory",
+            "consequence_b": "You wait outside. Twenty minutes later, Tessaly opens the door. 'He only had one regret,' she says. 'He never went to see what's north of the pass.' She pauses. 'Neither did I.' (+2 Settlement Morale - Tessaly's arc completed)",
+            "convergence": "Quest Complete. The memorial quilts of the Lower Ward are archives, conversation partners, and now intelligence assets. The Concordat built Warp-Silk for espionage, and two centuries later it is giving grief support to a widow and confounding a city investigator with the suggestion that every weird thing happening in EmberHeart points to the same center. The kettle is still boiling."
+        }
+    ],
+    "conclusion": "Memorial quilts made with Concordat-era Warp-Silk thread retain the memories of their owners\u2014including pre-Scourge knowledge about the Concordat itself. The quilts have named Aldric Vane as a young man in Division Seven 200 years ago, cross-confirming the Vermin thread. The Memory-Quilt Library is established. And an old merchant's half-remembered memory suggests the Fabric thread, the Vermin thread, and the Chronos thread may all be infrastructure pointing toward the same unknown center.",
+    "loot_table": [
+        "Concordat Warp-Silk Thread Spool (1 yard - memory-retention material, can create custom memory-quilts)",
+        "Memory-Quilt Library Pass (access to all Lower Ward memorial quilts for Intelligence queries)",
+        "Aldric Vorn's Harbor Intelligence (location of unregistered warehouse, actionable side content)",
+        "Quilters' Guild Research Grant: 350 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Memory-Quilts begin broadcasting indiscriminately throughout the Lower Ward. Citizens hear the voices of dead relatives in the street without warning. -4 Settlement Morale, 1 session of community psychological crisis.",
+        "failure_penalty": {
+            "xp_loss": 4
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

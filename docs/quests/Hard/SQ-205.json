@@ -1,0 +1,92 @@
+{
+    "id": "SQ-205",
+    "title": "Assembly of Masks",
+    "difficulty": "Hard",
+    "xp_reward": 800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-204"
+        ]
+    },
+    "location": "High Ward -> The Grand Coliseum Theater",
+    "district": "High Ward",
+    "thread": "Political Intrigue",
+    "description": "A captured operative drops a location: The Grand Coliseum Theater, where the Silken Hand leaders are holding a clandestine masquerade ball.",
+    "key_npcs": [
+        "The Silkmaster (Boss)",
+        "Masked Nobles"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You arrive at the masquerade. To blend in, you need a suitable mask and attire.",
+            "choice_a": "Steal a Noble's mask in the cloakroom",
+            "consequence_a": "You acquire a gilded mask. You look the part but risk being recognized by the noble's friends.",
+            "choice_b": "Bribe a servant for a waiter's uniform",
+            "consequence_b": "You blend perfectly with the staff, gaining access to the VIP lounges undetected."
+        },
+        {
+            "turn": 2,
+            "narrative": "In the VIP lounge, you overhear the Silkmaster negotiating with a corrupted Warden Commander. They plan to leave the city gates unstaffed during the next blood moon.",
+            "choice_a": "Record the conversation with a memory-stone",
+            "consequence_a": "You secure undeniable proof of the treason.",
+            "choice_b": "Assassinate the corrupted Commander on the spot",
+            "consequence_b": "The Commander dies, disrupting the plan immediately, but the Silkmaster escapes in the chaos."
+        },
+        {
+            "turn": 3,
+            "narrative": "If you didn't attack, the Silkmaster notices you. 'A rat in the masquerade,' he purrs, drawing a pair of serrated rapiers. Combat begins.",
+            "choice_a": "Fight the Silkmaster to the death",
+            "consequence_a": "An intense duel. You kill him, severing the head of the Silken Hand.",
+            "choice_b": "Capture him alive for interrogation",
+            "consequence_b": "A much harder non-lethal fight. You bind him, ready to drag him to the Council."
+        }
+    ],
+    "branching_outcomes": {
+        "silkmaster_dead": {
+            "description": "The Silkmaster is dead. The conspiracy loses its leader.",
+            "unlocks": [
+                "SQ-206"
+            ],
+            "consequences": {
+                "item_reward": "Silkmaster's Rapiers"
+            }
+        },
+        "silkmaster_captured": {
+            "description": "You captured the Silkmaster. The Council will have questions.",
+            "unlocks": [
+                "SQ-206"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Warden Council": 25
+                },
+                "item_reward": "Memory-Stone of Treason"
+            }
+        },
+        "commander_assassinated": {
+            "description": "You killed the traitor Commander, but the Silkmaster is at large.",
+            "unlocks": [
+                "SQ-206"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "High Ward": -15
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Gilded Masquerade Mask",
+        "Silkmaster's Rapiers",
+        "300x Gold Coins"
+    ],
+    "conclusion": "The Silkmaster is dead. The conspiracy loses its leader.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

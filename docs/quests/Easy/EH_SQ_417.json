@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_417",
+    "title": "Vintage of Regret",
+    "difficulty": "Easy",
+    "xp_reward": 500,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "High Ward -> The Collector's Auction",
+    "district": "High Ward",
+    "thread": "Void-Wine",
+    "description": "An auction in the High Ward lists a sealed case of Pre-Scourge Void-Wine as a luxury curiosity. Ward Warden Astrid suspects this wine is far more potent than modern diluted versions and could be catastrophically dangerous if consumed. She wants it intercepted before the sale.",
+    "key_npcs": [
+        "Warden Astrid",
+        "Auctioneer Tol",
+        "Buyer Lord Edric"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The auction house is full of well-dressed High Ward citizens thumbing catalogues. The Void-Wine case is lot fourteen, listed as 'Pre-Scourge Curiosity \u2014 Non-Potable Display Item.' However the wax seals are intact, suggesting it could still be consumed by a wealthy eccentric.",
+            "choice_a": "Approach Tol the Auctioneer and request lot fourteen be withdrawn",
+            "consequence_a": "Tol is irritated but agrees to pause the lot pending an official inspection request from Astrid.",
+            "choice_b": "Identify the anticipated buyer and whisper in their ear about the risks before bidding starts",
+            "consequence_b": "Lord Edric looks alarmed. He withdraws his bidding card. With no competitive buyer the lot fails to sell."
+        },
+        {
+            "turn": 2,
+            "narrative": "Astrid wants either the wine secured as evidence or quietly destroyed. There is also the question of who consigned the lot \u2014 a name on the consignment paper reads 'Estate of Vel de Haas' \u2014 a High Ward noble family that supposedly died out before the Scourge.",
+            "choice_a": "Secure the wine case for Astrid and investigate the de Haas consignment",
+            "consequence_a": "The wine is secured. The consignment appears to be from a Pre-Scourge estate accessed by a recent property buyer.",
+            "choice_b": "Have the wine destroyed on the auction house floor to prevent any future risk",
+            "consequence_b": "Tol is furious but Astrid's authority is sufficient. The case is smashed. The Void inside dissipates harmlessly in the air."
+        },
+        {
+            "turn": 3,
+            "narrative": "Resolving this raises the question of what else might be in the de Haas estate.",
+            "choice_a": "Recommend Astrid open a formal investigation into the de Haas property",
+            "consequence_a": "Investigators find a partially intact wine cellar and several more sealed cases, all secured.",
+            "choice_b": "File a note and let the matter rest for now",
+            "consequence_b": "The case is closed. The de Haas property stays unexamined for now."
+        }
+    ],
+    "branching_outcomes": {
+        "estate_investigated": {
+            "description": "De Haas estate opened. Multiple cases of Pre-Scourge wine secured.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Pre-Scourge Wine Seal Fragment",
+                "reputation_change": {
+                    "High Ward": 16
+                }
+            }
+        },
+        "matter_rested": {
+            "description": "Wine destroyed. De Haas estate left for now.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "High Ward": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Pre-Scourge Wine Seal Fragment",
+        "Auction Catalogue",
+        "220x Gold Coins"
+    ],
+    "conclusion": "De Haas estate opened. Multiple cases of Pre-Scourge wine secured."
+}

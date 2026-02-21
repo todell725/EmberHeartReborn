@@ -1,0 +1,74 @@
+{
+    "id": "SQ-226",
+    "title": "The Slag-Fields",
+    "difficulty": "Hard",
+    "xp_reward": 800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-225"
+        ]
+    },
+    "location": "Scourge-Fringe -> The Black Ash Wastes",
+    "district": "Scourge-Fringe",
+    "thread": "Sovereignty & Order",
+    "description": "With the barricade holding, you are sent beyond the wall into the Slag-Fields. You must map the enemy troop movements and find their staging ground.",
+    "key_npcs": [
+        "Cartographer Elian",
+        "Scourge Behemoths"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The ash is thick, reducing visibility to a few meters. You hear the heavy, rhythmic thuds of a Scourge Behemoth nearby.",
+            "choice_a": "Activate a stealth-field generator (Expend item)",
+            "consequence_a": "You bypass the Behemoth completely, continuing your mapping uninterrupted.",
+            "choice_b": "Dive into a nearby impact crater and hold your breath",
+            "consequence_b": "The Behemoth passes overhead. The crater is filled with toxic sludge, causing moderate poison damage."
+        },
+        {
+            "turn": 2,
+            "narrative": "You discover the staging area: an old pre-Scourge quarry. Thousands of corrupted beasts are being equipped with crude scrap-iron armor.",
+            "choice_a": "Sketch the layout and retreat quietly",
+            "consequence_a": "You secure the intel without alerting the horde.",
+            "choice_b": "Snipe the 'Armor-Smith' to slow their production",
+            "consequence_b": "A risky shot. You kill the smith, but the gunshot echo triggers a hunt. You have to sprint back to the gate under fire."
+        }
+    ],
+    "branching_outcomes": {
+        "intel_secured_quiet": {
+            "description": "You mapped the staging ground silently.",
+            "unlocks": [
+                "SQ-227"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 15
+                }
+            }
+        },
+        "intel_secured_loud": {
+            "description": "You mapped the ground and assassinated an enemy VIP.",
+            "unlocks": [
+                "SQ-227"
+            ],
+            "consequences": {
+                "item_reward": "Scrap-Iron Armor Plating",
+                "reputation_change": {
+                    "Sovereignty & Order": 25
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Slag-Field Map",
+        "Scrap-Iron Armor Plating"
+    ],
+    "conclusion": "You mapped the staging ground silently.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

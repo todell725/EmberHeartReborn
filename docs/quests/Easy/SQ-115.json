@@ -1,0 +1,156 @@
+{
+    "id": "SQ-115",
+    "title": "The Saffron Stain",
+    "difficulty": "Easy",
+    "xp_reward": 180,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-001"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "description": "A dyer's shop is being consumed by its own golden ink...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The dyer\u2019s shop is a riot of color, but a single barrel of saffron dye is bubbling with a toxic, neon-yellow froth.",
+            "choice_a": "Stir the dye",
+            "consequence_a": "Success.",
+            "choice_b": "Skim the froth",
+            "consequence_b": "Success.",
+            "convergence": "The liquid pulses, and a golden stain begins to crawl up the shop walls like a living vine."
+        },
+        {
+            "turn": 2,
+            "narrative": "The smell is of concentrated marigolds and scorched lead. The cloth weaver screams as his favorite loom is enveloped by the yellow growth.",
+            "choice_a": "Cut the 'vine'",
+            "consequence_a": "Success.",
+            "choice_b": "Douse it with vinegar",
+            "consequence_b": "Success.",
+            "convergence": "The growth recoils, but secretes a sticky, resinous sap that glows in the dim workshop light."
+        },
+        {
+            "turn": 3,
+            "narrative": "Tiny, gold-plated beetles begin to hatch from the sap, their wings clicking with a sound like miniature cymbals.",
+            "choice_a": "Capture a beetle",
+            "consequence_a": "Success.",
+            "choice_b": "Crush the eggs",
+            "consequence_b": "Success.",
+            "convergence": "The beetles hum and swarm toward the open window, seeking sunlight."
+        },
+        {
+            "turn": 4,
+            "narrative": "The weaver claims the dye was imported from the 'Gilded-Reach'. He looks pale, with yellow lines appearing under his fingernails.",
+            "choice_a": "Apply a poultice",
+            "consequence_a": "Success.",
+            "choice_b": "Check his pulse",
+            "consequence_b": "Success.",
+            "convergence": "The yellow lines are glowing. The weaver begins to hum the same frequency as the beetles."
+        },
+        {
+            "turn": 5,
+            "narrative": "The shop's floor begins to turn translucent, revealing a 'Ley-Line' node beneath the foundation that matches the dye's color.",
+            "choice_a": "Anchor the node with iron",
+            "consequence_a": "Success.",
+            "choice_b": "Pour ink into the pool",
+            "consequence_b": "Success.",
+            "convergence": "The neon growth stabilizes, but the weaver's humming is now loud enough to vibrate the glass windows."
+        },
+        {
+            "turn": 6,
+            "narrative": "A 'Gilded-Sentry'\u2014a construct of yellow silk and brass\u2014emerges from the dye-barrel, wielding a golden weaver-staff.",
+            "choice_a": "Parry the staff",
+            "consequence_a": "Success.",
+            "choice_b": "Negotiate with the spirit",
+            "consequence_b": "Success.",
+            "convergence": "The Sentry bows, its movements fluid and silent, and points to the weaver's stained hands."
+        },
+        {
+            "turn": 7,
+            "narrative": "It seems the weaver 'stole' the dye from a sacred vat. The Sentry demands a 'Tithe of Toil'.",
+            "choice_a": "Agree to the Tithe",
+            "consequence_a": "Success.",
+            "choice_b": "Drive the Sentry away",
+            "consequence_b": "Success.",
+            "convergence": "The yellow growth retreats from the walls, pooling back into the barrel with a mournful sigh."
+        },
+        {
+            "turn": 8,
+            "narrative": "The weaver is cured, but his skin is permanently stained a faint, noble gold. He hands you a 'Saffron-Thread'.",
+            "choice_a": "Accept the thread",
+            "consequence_a": "Success.",
+            "choice_b": "Ask for gold instead",
+            "consequence_b": "Success.",
+            "convergence": "The thread vibrates when held near artifacts. It\u2019s a piece of the Gilded-Reach itself."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, the street outside looks brighter, the afternoon sun reflecting off the dyer's sign in a crown of gold.",
+            "choice_a": "Bless the loom",
+            "consequence_a": "Success.",
+            "choice_b": "Lock the shop",
+            "consequence_b": "Success.",
+            "convergence": "The weaver begins to sing a new song, a melody of the Gilded-Reach."
+        },
+        {
+            "turn": 10,
+            "narrative": "The quest ends under a lavender sky. The 'Saffron Stain' is gone, but the golden thread in your pocket remains warm.",
+            "choice_a": "Go to the Tavern",
+            "consequence_a": "Success.",
+            "choice_b": "Rest on the Ridge",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Saffron Stain' is complete. Quest Complete.",
+    "loot_table": [
+        "Saffron-Thread",
+        "25 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The yellow growth consumes the shop and your gear. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Dyer's shop window cracks from pressure inside",
+        "flags": []
+    },
+    "location": "Dyer's Shop \u2014 Market Quarter",
+    "district": "Market Ward",
+    "thread": "Weaver",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Cloth-Weaver Aldous",
+        "Gilded-Sentry (construct)"
+    ],
+    "mechanics_featured": [
+        "Alchemy (dye analysis)",
+        "Combat (sentry)",
+        "Social (tithe negotiation)"
+    ],
+    "permanent_effects": {
+        "settlement": "Shop restored; Saffron-Thread artifact available",
+        "world": "Gilded-Reach named as region of interest"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Agree to Tithe",
+            "result": "Weaver cured, Saffron-Thread gained"
+        },
+        {
+            "path": "Drive Sentry away",
+            "result": "Weaver partially cured, no thread"
+        }
+    ]
+}

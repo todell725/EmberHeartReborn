@@ -1,0 +1,75 @@
+{
+    "id": "SQ-256",
+    "title": "The Void Cartel",
+    "difficulty": "Epic",
+    "xp_reward": 1500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-237"
+        ]
+    },
+    "location": "Market Ward -> The Velvet Syndicate's Deep Vault",
+    "district": "Market Ward",
+    "thread": "Void-Wine",
+    "description": "The cartels you dismantled in the cellars were just distributors. The true source of the corrupted Void-Wine is the Velvet Syndicate's master vault. You must shut off the flow permanently.",
+    "key_npcs": [
+        "Cartel Boss Silas",
+        "Void-Thralls"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The vault is guarded by Void-Thralls, humans mutated by raw magical wine into hulking brutes with glowing blue veins.",
+            "choice_a": "Focus fire on the glowing veins",
+            "consequence_a": "The veins rupture, spilling volatile wine that damages other thralls nearby.",
+            "choice_b": "Sweep the legs and use blunt weapons",
+            "consequence_b": "You avoid puncturing the veins, keeping the fight clean but taking longer to bring them down."
+        },
+        {
+            "turn": 2,
+            "narrative": "Boss Silas is drinking pure Void-Wine directly from a vat. He transforms into a massive Void-Aberration.",
+            "choice_a": "Use holy/cleansing magic to purge the Void",
+            "consequence_a": "The magic burns the Void out of him rapidly. He shrinks back to human size, weakened for an easy kill.",
+            "choice_b": "Duel the Aberration directly",
+            "consequence_b": "A terrifying fight. He teleports erratically using Void magic, nearly killing you before you land a fatal blow."
+        }
+    ],
+    "branching_outcomes": {
+        "cartel_purged": {
+            "description": "You cleansed the vault and killed Boss Silas effortlessly.",
+            "unlocks": [
+                "SQ-ELITE-VOIDWINE"
+            ],
+            "consequences": {
+                "item_reward": "Purified Void-Tear",
+                "reputation_change": {
+                    "Market Ward": 40
+                }
+            }
+        },
+        "cartel_slain": {
+            "description": "You defeated the Aberration in a brutal duel.",
+            "unlocks": [
+                "SQ-ELITE-VOIDWINE"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 20
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Purified Void-Tear",
+        "Syndicate Boss Ring",
+        "500x Gold Coins"
+    ],
+    "conclusion": "You cleansed the vault and killed Boss Silas effortlessly.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

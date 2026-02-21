@@ -1,0 +1,73 @@
+{
+    "id": "SQ-253",
+    "title": "Riots in the Green Quarter",
+    "difficulty": "Epic",
+    "xp_reward": 1000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-252"
+        ]
+    },
+    "location": "Green Quarter -> The Farmers' Square",
+    "district": "Green Quarter",
+    "thread": "Community & Survival",
+    "description": "You returned the hoarding supplies, but it was too late. Famine has set in. Desperate citizens are rioting, attempting to burn down Silas's distribution center because they feel it is too slow.",
+    "key_npcs": [
+        "Starving Rioters",
+        "Silas"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The riot is out of control. Hundreds of starving citizens are throwing torches at the granary doors.",
+            "choice_a": "Knock the rioters completely unconscious without killing them",
+            "consequence_a": "An exhausting defense that drains your mana/stamina significantly, but you preserve innocent lives.",
+            "choice_b": "Release a terrifying area-of-effect fear spell",
+            "consequence_b": "The mob scatters in absolute terror. No one is hurt physically, but they will never trust you or Silas again."
+        },
+        {
+            "turn": 2,
+            "narrative": "A group of radical agitators breaks through the back loading bay wielding crude firebombs.",
+            "choice_a": "Engage them in melee before they can throw",
+            "consequence_a": "You cut them down quickly, preventing the granary from catching fire.",
+            "choice_b": "Shoot the firebombs in their hands with an arrow",
+            "consequence_b": "A spectacular explosion. The agitators burn to death, and part of the loading bay is damaged."
+        }
+    ],
+    "branching_outcomes": {
+        "riot_subdued_safely": {
+            "description": "You defended the granary without terrorizing the populace.",
+            "unlocks": [
+                "SQ-254"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Green Quarter": 40
+                }
+            }
+        },
+        "riot_terrified": {
+            "description": "You saved the granary using fear tactics, losing the trust of the very people you saved.",
+            "unlocks": [
+                "SQ-254"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Green Quarter": -20
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Agitator's Firebomb",
+        "150x Gold Coins"
+    ],
+    "conclusion": "You defended the granary without terrorizing the populace.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

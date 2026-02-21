@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_446",
+    "title": "The Price of Service",
+    "difficulty": "Easy",
+    "xp_reward": 420,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Service District -> The Steward's Quarter",
+    "district": "Service District",
+    "thread": "Standalone",
+    "description": "Three households in the High Ward have reported that their domestic servants have quietly organised and submitted a joint wage petition. The servants are asking for nothing illegal \u2014 just the Ward minimum wage rather than 'traditional' rates which are forty percent below it. The nobles have refused and several servants have been locked out of the houses they live in.",
+    "key_npcs": [
+        "Servant Spokesperson Rella",
+        "Noble Head Housemaster Berwick"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Rella is articulate and calm. She presents the petition \u2014 eleven signatures, all requesting Ward minimum wage compliance. She is holding a copy of the Ward Labour Charter. Housemaster Berwick is furious and insists that 'household servants are not wage workers in the commercial sense.'",
+            "choice_a": "Review the Ward Labour Charter and determine if Berwick's interpretation is legally correct",
+            "consequence_a": "The Charter is unambiguous: household employment above thirty hours per week fully qualifies for minimum wage protection. Berwick is simply wrong.",
+            "choice_b": "Speak to the Labour Authority to get a binding interpretation of the Charter that Berwick cannot dispute",
+            "consequence_b": "The Labour Authority provides a written ruling within the day: the servants are fully protected workers."
+        },
+        {
+            "turn": 2,
+            "narrative": "Armed with the legal ruling, you return to Berwick. He is embarrassed and defensive but has no legal basis to resist.",
+            "choice_a": "Present the ruling firmly and give Berwick twenty-four hours to comply or face an Authority complaint",
+            "consequence_a": "Berwick complies within twelve hours. All back-pay and rate corrections are implemented.",
+            "choice_b": "Propose a face-saving arrangement where Berwick implements the changes as a 'voluntary improvement program'",
+            "consequence_b": "Berwick accepts the framing. The servants are paid correctly. Berwick maintains the fiction that it was his idea."
+        },
+        {
+            "turn": 3,
+            "narrative": "The locked-out servants need their accommodation restored immediately.",
+            "choice_a": "Accompany the servants back to collect their belongings or confirm readmission to their rooms",
+            "consequence_a": "Berwick is present. He is stiff and humiliated but allows them back in.",
+            "choice_b": "Arrange temporary accommodation at the Service District Resource House while the situation resolves",
+            "consequence_b": "The Resource House takes in all eleven servants for two nights. The situation resolves within three days."
+        }
+    ],
+    "branching_outcomes": {
+        "compliance_demanded": {
+            "description": "Berwick complied within 24 hours. Full back-pay issued.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Ward Labour Charter Copy",
+                "reputation_change": {
+                    "Service District": 16,
+                    "High Ward": -4
+                }
+            }
+        },
+        "face_saving_deal": {
+            "description": "Changes implemented as voluntary program. Servants paid correctly.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Service District": 12,
+                    "High Ward": 2
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Ward Labour Charter Copy",
+        "Rella's Petition Document",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Berwick complied within 24 hours. Full back-pay issued."
+}

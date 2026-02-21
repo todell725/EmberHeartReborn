@@ -1,0 +1,164 @@
+{
+    "id": "EH_SQ_530",
+    "title": "The Cross-District Smuggling",
+    "difficulty": "Medium",
+    "xp_reward": 920,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_410",
+            "EH_SQ_447"
+        ],
+        "items_required": []
+    },
+    "location": "Market Ward -> Transit Corridor -> Lower Ward",
+    "district": "Market Ward",
+    "thread": "Standalone",
+    "description": "The Ward Trade Authority has flagged a pattern of goods disappearing between the Market Ward's licensed suppliers and Lower Ward distributors \u2014 an invisible pinch point somewhere in the Transit Corridor. The missing goods are diverse: medicines, food preservatives, alchemical compounds, and tool metal stock. No single thread except transit routing. Three Lower Ward community leaders have formally complained about supply chain reliability. Warden Astrid suspects professional cargo diversion \u2014 not theft but sophisticated rerouting that redirects goods to unlicensed buyers before official delivery.",
+    "key_npcs": [
+        "Warden Astrid",
+        "Transit Coordinator Helv",
+        "Lower Ward Community Leader Renia",
+        "Cargo Diversion Operative (Unknown)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Transit Corridor is the city's arterial transport network \u2014 hundreds of cargo movements daily through a series of licensed waypoints. Coordinator Helv provides you with three months of cargo manifests. The pattern that emerges is subtle: goods are logged at the Market Ward origin, arrive at Transit Waypoint 4, and then show discrepancies at the Lower Ward destination \u2014 not missing, but the wrong items, consistent with cargo being swapped in transit. Professional operators who know the manifest system well enough to produce matching documentation.",
+            "choice_a": "Physically shadow a specific cargo batch from Market Ward origin to Lower Ward destination",
+            "consequence_a": "You spend eight hours accompanying a medicine consignment. At Waypoint 4, while the cargo is being officially re-weighed, a four-minute gap in supervision is all that is needed. When you're not directly watching, a crate is swapped. You catch the swap mid-action \u2014 the exchange operative freezes.",
+            "choice_b": "Audit Waypoint 4's staffing and access logs to identify who has consistent unsupervised access during transit windows",
+            "consequence_b": "Two Transit Corridor employees have access patterns that perfectly correlate with the discrepancy events \u2014 including a night-shift cargo supervisor named Broll who has worked every diversion incident shift."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Waypoint 4 operative \u2014 caught in the swap or identified through the audit \u2014 is Broll, a Transit Corridor cargo supervisor of twelve years who has been running the diversion for three years. He cooperates immediately when confronted, explaining that he was recruited by a Market Ward merchant who needed a way to sell goods off-manifest to Lower Ward buyers at inflated prices while maintaining the official supply relationship. The merchant skims the difference. Lower Ward buyers pay more for the same goods. The transit system's legitimate reputation masks the operation.",
+            "choice_a": "Trace the merchant Broll identifies \u2014 they are the operation's architect",
+            "consequence_a": "The merchant is Gos, a licensed goods trader who appears in two previous investigation threads as a peripheral figure. His licence network is extensive.",
+            "choice_b": "Document Broll's account fully and immediately in front of a Ward legal officer to create protected testimony",
+            "consequence_b": "Broll's account is formally protected. He becomes the prosecution's key witness."
+        },
+        {
+            "turn": 3,
+            "narrative": "Gos runs fourteen licensed goods licences across the Market Ward and Upper Transit Corridor. His operation is technically sophisticated: he maintains perfect compliance with licensed goods categories while diverting approximately 20% of each consignment through Broll's Waypoint 4 swap. The 20% is sold to unlicensed Lower Ward buyers at premium pricing through a network of three intermediary collectors. The goods are not counterfeit \u2014 they are genuine licensed goods being sold outside the supply chain at exploitative prices.",
+            "choice_a": "Target Gos's goods network directly \u2014 audit all fourteen licences simultaneously",
+            "consequence_a": "A coordinated single-day audit of all fourteen licences finds systematic discrepancies. Gos has been running the diversion across all active lines simultaneously.",
+            "choice_b": "Use Broll's cooperation to arrange a monitored delivery swap that Gos authorises \u2014 catching him directing the fraud directly",
+            "consequence_b": "Gos authorises the swap via written instruction to Broll. He has convicted himself."
+        },
+        {
+            "turn": 4,
+            "narrative": "The three Lower Ward intermediary collectors \u2014 the people who purchased and distributed the diverted goods \u2014 present a moral complexity: they have been providing their communities with goods that the official supply chain failed to deliver reliably. They paid premiums but the goods genuinely arrived. Their communities are angry that the supply chain was being exploited, but some residents note that the intermediaries were the only reliable source of certain medical supplies during three months of official supply disruption.",
+            "choice_a": "Recommend the collectors receive leniency \u2014 they were exploited by Gos more than they were exploiters themselves",
+            "consequence_a": "The Ward Authority agrees to prioritise Gos's prosecution with the collectors receiving conditional warnings and mandatory registration.",
+            "choice_b": "Recommend full prosecution of the complete chain \u2014 the collectors knowingly participated in unlicensed goods distribution",
+            "consequence_b": "All parties are prosecuted. Several Lesser Ward residents object vigorously in public."
+        },
+        {
+            "turn": 5,
+            "narrative": "Gos's legal team argues that the supply chain discrepancy is a market failure problem \u2014 and that his 'alternative distribution system' was filling a genuine gap. This argument has some legitimacy: the Lower Ward supply chain has documented reliability problems. This creates a perverse situation where the perpetrator's defence illuminates a real governance failure. Renia, in her observer capacity at the proceedings, stands and says: 'He exploited a broken system. That doesn't make it his broken system to profit from.'",
+            "choice_a": "Use the Gos proceedings to also launch a formal supply chain reliability inquiry into the Transit Corridor",
+            "consequence_a": "The inquiry runs parallel to the prosecution. Transit Coordinator Helv is deposed. Three systemic failures are identified and funded for repair.",
+            "choice_b": "Keep the prosecution focused and handle the supply chain issues through separate channels",
+            "consequence_b": "The prosecution proceeds cleanly. The supply chain inquiry is launched separately by Renia's community group."
+        },
+        {
+            "turn": 6,
+            "narrative": "Gos is convicted. Broll receives a suspended sentence and mandatory retraining. The four-minute supervision gap at Waypoint 4 is closed through a new monitoring protocol. The Lower Ward supply chain's documented reliability problems receive a Ward Authority remediation budget. Three of the fourteen licences Gos held are reassigned to legitimate operators. But the intermediary collector communities still need reliable supply \u2014 and the transition from Gos's informal system back to official channels takes planning.",
+            "choice_a": "Work with Renia to design a community-managed cooperative supply distribution network for the affected Lower Ward blocks",
+            "consequence_a": "A cooperative is constituted with fifteen founding households. Helv provides Transit Corridor priority access for community cooperatives.",
+            "choice_b": "Recommend the Ward Authority designate the Lower Ward a priority supply zone with enhanced monitoring",
+            "consequence_b": "Priority designation is granted. Transit manifests for the Lower Ward blocks are reviewed daily for ninety days."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Transit Corridor's monitoring improvement reveals three additional minor diversion operations at other waypoints \u2014 smaller than Gos's but using similar methods. They appear to be independent operators who learned the technique from observing Gos's operation rather than being part of his network.",
+            "choice_a": "Address all three simultaneously with coordinated enforcement",
+            "consequence_a": "All three are shut down in a single coordinated operation. Combined, they were diverting approximately 800 gold of goods monthly.",
+            "choice_b": "Address them sequentially and use each takedown to gather intelligence on how the technique spread",
+            "consequence_b": "The sequential approach reveals that Gos was not the originator \u2014 the technique was described in an unlicensed trade document circulating in Market Ward back-of-house distributor networks."
+        },
+        {
+            "turn": 8,
+            "narrative": "A Transit Corridor infrastructure review prompted by the investigation reveals a physical problem: Waypoint 6's cargo floor has a structural weakness that has been creating a natural shadow \u2014 a blind spot in the waypoint's layout that makes unsupervised cargo access possible without any deliberate evasion. This is a design flaw, not human error, and it exists at two other waypoints. Physical remediation is needed.",
+            "choice_a": "Commission immediate physical remediation of all three flawed waypoints",
+            "consequence_a": "Structural improvements are completed over three weeks. Future diversion attempts become significantly harder.",
+            "choice_b": "Install enhanced lighting and monitoring while scheduling remediation for the next maintenance cycle",
+            "consequence_b": "Interim monitoring covers the vulnerability adequately. Full remediation is funded for the following quarter."
+        },
+        {
+            "turn": 9,
+            "narrative": "The cooperative supply network Renia helped build (or the priority designation) is showing early results: Lower Ward residents in the affected blocks are receiving goods on schedule for the first time in three years. Three community leaders write a joint commendation letter. But one of the former Gos intermediary collectors writes to you directly \u2014 asking if there is any legitimate route for a community-managed goods importing operation that would eliminate the vulnerability to future exploitation entirely.",
+            "choice_a": "Help the former intermediary apply for a legitimate community goods cooperative licence",
+            "consequence_a": "The application is approved. A formerly-extralegal operator becomes a licensed cooperative leader. This is the best possible version of the outcome.",
+            "choice_b": "Refer them to Renia's cooperative structure \u2014 joining an existing institution is more stable than creating a new licence",
+            "consequence_b": "The intermediary joins Renia's cooperative as a senior distribution coordinator. Their network knowledge makes the cooperative immediately more effective."
+        },
+        {
+            "turn": 10,
+            "narrative": "Helv has used the investigation's outcomes to pilot a new Transit Corridor transparency programme: all cargo manifests are publicly logged in real-time at each waypoint, accessible to the originating supplier and receiving party. The system eliminates paper-based gaps entirely. The Ward Trade Authority endorses it. Gos's lawyer, in an unfortunate comment to a journalist, describes it as 'the most effective anti-corruption measure since the Ward Guard was formed.' Gos, in custody, is apparently furious. [FINAL ENCOUNTER \u2014 ceremonial handover of the new system and community response]",
+            "choice_a": "Attend the Transit Corridor transparency programme launch and publicly support Helv's work",
+            "consequence_a": "Your presence at the launch gives the programme public credibility across the Market Ward and Lower Ward communities.",
+            "choice_b": "Let the programme launch be entirely Helv and the Transit Authority's moment",
+            "consequence_b": "Helv's leadership of the programme is unambiguously their own achievement. Appropriate credit goes to appropriate people."
+        },
+        {
+            "turn": 11,
+            "narrative": "The investigation has had effects beyond its immediate scope: the Transit Corridor monitoring improvements, the community cooperative network, and the supply chain reliability programme together represent a fundamental change in how goods flow between the Market Ward and Lower Ward. Three community leaders who filed the original complaints send a joint message: 'Not exactly what we asked for. Far better than what we asked for.'",
+            "choice_a": "Document the full investigation as a model for cross-district supply chain enforcement",
+            "consequence_a": "Astrid uses the case as the basis for a Ward enforcement training module.",
+            "choice_b": "Close the case file and move on \u2014 the system is better. That was the goal.",
+            "consequence_b": "The file is closed. The improvements run themselves."
+        },
+        {
+            "turn": 12,
+            "narrative": "At Waypoint 4 \u2014 where the four-minute supervision gap enabled three years of systematic diversion \u2014 a monitoring station now shows real-time cargo data accessible to all parties. The physical renovation has removed the blind spots. Broll, in his retraining programme, will become a cargo fraud detection consultant for the Transit Authority. The Lower Ward cooperative receives its first full consignment of properly licensed and correctly priced medical supplies. Nobody made a speech. The goods simply arrived on time, in full, at the right price, as they always should have.",
+            "choice_a": "Take quiet satisfaction in a system improved through careful, unglamorous work",
+            "consequence_a": "An appropriate response to an appropriate outcome. The next problem is already waiting somewhere in the city.",
+            "choice_b": "Formally propose a cross-district supply chain charter to codify these improvements in Ward law",
+            "consequence_b": "The charter is drafted by Renia's office and submitted to the Ward Council. It passes in the next session."
+        }
+    ],
+    "branching_outcomes": {
+        "full_cooperative": {
+            "description": "Gos convicted. Cooperative supply network running. Transit transparency programme launched.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 25,
+                    "Lower Ward": 30,
+                    "Transit Corridor": 20
+                },
+                "item_reward": "Ward Trade Enforcement Model Report"
+            }
+        },
+        "priority_designation": {
+            "description": "Gos convicted. Priority supply designation granted. Transit improvements implemented.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 20,
+                    "Lower Ward": 25
+                },
+                "item_reward": "Transit Transparency Programme Charter"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 200,
+            "reputation_change": {
+                "Market Ward": -15,
+                "Lower Ward": -20
+            }
+        },
+        "critical_failure": "Broll recants testimony. Gos walks free. The diversion network restructures."
+    },
+    "loot_table": [
+        "Ward Trade Enforcement Model Report",
+        "Transit Transparency Programme Charter",
+        "Gos Conviction Record",
+        "Community Cooperative Licence",
+        "920x Gold Coins"
+    ],
+    "conclusion": "Gos convicted. Cooperative supply network running. Transit transparency programme launched."
+}

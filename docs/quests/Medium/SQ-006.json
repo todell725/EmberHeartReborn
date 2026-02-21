@@ -1,0 +1,162 @@
+{
+    "id": "SQ-006",
+    "title": "The Glass Sentry",
+    "xp_reward": 850,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-116"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "description": "A deactivated pre-Scourge guardian has been unearthed in the 'Wailing Sands'. It is bleeding a viscous blue fluid.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The 'Wailing Sands' earn their name from the wind whistling through the porous red rock. The Sentry is half-buried, its translucent glass frame reflecting the harsh sun in blinding, prismatic streaks.",
+            "choice_a": "Siphon the blue fluid (Investigation DC 12)",
+            "consequence_a": "Success: You collect 'Liquid Chronos'. It feels like time is slowing down around the vial. (+1 Rare Material)",
+            "choice_b": "Scrape the sand from its ocular sensors",
+            "consequence_b": "Success: The glass eye flickers with a low, amber light. (+1 Progress)",
+            "convergence": "The Sentry\u2019s internal processors grind with the sound of breaking ice."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Sentry\u2019s torso is etched with coordinates that match no modern map. A panel on its chest contains a series of star-charts.",
+            "choice_a": "Sync your 'World-Spark' with its core (Arcana DC 14)",
+            "consequence_a": "Success: A holographic map of the Old World projects into the dust. (+1 Lore)",
+            "choice_b": "Reinforce the glass frame with steel braces (Engineering DC 13)",
+            "consequence_b": "Success: The structure stabilizes, preventing a collapse. (+1 Stability)",
+            "convergence": "Suddenly, a series of clicks emanates from the surrounding dunes\u2014Scourge-Strider ambush."
+        },
+        {
+            "turn": 3,
+            "narrative": "Scourge-Striders\u2014spindly, multi-legged horrors\u2014emerge from the sand. They are attracted to the Sentry\u2019s leaking energy.",
+            "choice_a": "Activate the Sentry's defensive pulse",
+            "consequence_a": "Success: A wave of blue energy vaporizes the nearest Strider. (+1 Tactical Adv)",
+            "choice_b": "Form a defensive circle (Athletics DC 12)",
+            "consequence_b": "Success: You hold the line, your steel clashing against their obsidian carapaces.",
+            "convergence": "The Striders' leader, a massive 'Grave-Walker', screeches from the ridge."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Grave-Walker is a patchwork of bone and shadow. It targets the Sentry\u2019s exposed core with a beam of necrotic energy.",
+            "choice_a": "Reflect the beam with your shield (Dex Save DC 14)",
+            "consequence_a": "Success: The beam bounces back, blinding the Grave-Walker. (+100 XP)",
+            "choice_b": "Interpose yourself to protect the artifact",
+            "consequence_b": "Failure: Your armor is scorched. (-10 HP)",
+            "convergence": "The Sentry begins to stand, its glass limbs moving with a slow, crystalline grace."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Sentry is now fully active, but its logic centers are damaged. It sees everything\u2014you included\u2014as a threat from the 'Era of Silence'.",
+            "choice_a": "Recite the ancient 'Loyalty Frequency' (Insight DC 15)",
+            "consequence_a": "Success: The Sentry\u2019s eyes turn from red to blue. It identifies you as 'Command'. (+1 Powerful Ally)",
+            "choice_b": "Strike the reset button on its neck (Sleight of Hand DC 13)",
+            "consequence_b": "Success: The Sentry shuts down safely, its secrets preserved. (+1 Lore)",
+            "convergence": "The Grave-Walker lunges for a final, desperate strike."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Grave-Walker's claws are made of 'Shatter-Steel', designed to penetrate even the strongest glass.",
+            "choice_a": "Parry and Riposte (Str Save DC 13)",
+            "consequence_a": "Success: You shatter its claw and bury your blade in its core. (+100 XP)",
+            "choice_b": "Evade into the sand-fog (Stealth DC 14)",
+            "consequence_b": "Success: The creature misses, and the Sentry crushes it under a crystalline fist.",
+            "convergence": "The Grave-Walker dissolves into black dust. The sands go silent."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Sentry stands in the center of the battlefield. It offers its right hand, which contains a data-shard.",
+            "choice_a": "Take the Data-Shard",
+            "consequence_a": "Success: You possess the blueprints for 'Glass-Plate' armor. (+1 Rare Schema)",
+            "choice_b": "Instruct it to defend the Oasis Mines",
+            "consequence_b": "Success: The Sentry marches away, increasing settlement defense. (+3 Defense)",
+            "convergence": "The sandstorm begins to bury the site once more."
+        },
+        {
+            "turn": 8,
+            "narrative": "You return to the settlement with the Sentry's 'Chrono-Fluid'. The alchemists are in awe of its properties.",
+            "choice_a": "Sell the fluid to the Trade Guild (200 Gold)",
+            "consequence_a": "Success: You gain a massive payout. (+200 Gold)",
+            "choice_b": "Use it to create a 'Static-Field' for the hospital",
+            "consequence_b": "Success: Patients heal twice as fast. (+2 Settlement Health)",
+            "convergence": "The Council hears of your discovery in the Sands."
+        },
+        {
+            "turn": 9,
+            "narrative": "A representative from Oakhaven offers to 'buy' the Sentry's coordinates from you.",
+            "choice_a": "Decline with a warning (Intimidation DC 12)",
+            "consequence_a": "Success: They retreat, though they will surely watch you. (+1 Influence)",
+            "choice_b": "Agree to a joint expedition",
+            "consequence_b": "Success: You gain resources, but lose the Sentry\u2019s exclusivity. (+1 Resource, -1 Security)",
+            "convergence": "The Sentry\u2019s internal clock has been reset to the modern day."
+        },
+        {
+            "turn": 10,
+            "narrative": "You stand on the ridge, looking back at the Wailing Sands. Something has changed in the frequency of the wind.",
+            "choice_a": "Record the new 'Wind-Frequency' (Insight DC 13)",
+            "consequence_a": "Success: You find a pattern that leads to the 'City of Glass'. (+1 Secret)",
+            "choice_b": "Ponder the Sentry's warning: 'The Silence returns.'",
+            "consequence_b": "Success: You gain a deep understanding of the Scourge's cycle. (+1 Lore)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Glass Sentry is no longer an artifact of the past, but a guardian of the future. The secrets of the Wailing Sands are beginning to surface.",
+    "loot_table": [
+        "Prismatic Glass Dagger",
+        "Vial of Liquid Chronos",
+        "Sentry Data-Shard",
+        "180 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The Sentry self-destructs. -1 Settlement Morale and a permanent -2 to all future 'Sand Search' rolls.",
+        "failure_penalty": {
+            "xp_loss": 1
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 15,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Merchant guild petitions Council about smuggling",
+        "flags": [
+            "smuggling_reported"
+        ],
+        "event_trigger": "Player has witnessed time-skip phenomenon in North-Ward"
+    },
+    "location": "The Under-Docks \u2014 Warp-Port Tunnels",
+    "district": "Ridge",
+    "thread": "Chronos",
+    "estimated_duration": "3\u20135 hours",
+    "key_npcs": [
+        "Dockmaster Varro",
+        "Shadow-Fence Ilena"
+    ],
+    "mechanics_featured": [
+        "Stealth",
+        "Investigation",
+        "Deception/Persuasion",
+        "Skill challenges"
+    ],
+    "permanent_effects": {
+        "settlement": "Black market disrupted (temporarily)",
+        "world": "Shadow-Fence becomes rumor source"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Expose smugglers",
+            "result": "+10 Reputation, +2 Stability"
+        },
+        {
+            "path": "Negotiate cut",
+            "result": "+200 Gold, -5 Reputation"
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "id": "EH_SQ_510",
+    "title": "The Grief Merchants",
+    "difficulty": "Medium",
+    "xp_reward": 960,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-007",
+            "EH_SQ_411"
+        ],
+        "items_required": []
+    },
+    "location": "Lower Ward -> Transit Corridor -> High Ward",
+    "district": "Lower Ward",
+    "thread": "Void-Wine",
+    "description": "Following the canal dock Void-Wine supplier investigation, a pattern has emerged across three districts: Void-Wine is being systematically marketed to recently bereaved citizens \u2014 those who lost family members in Scourge-adjacent incidents within the past year. The operation targets grief with pharmaceutical precision, identifies new victims within days of a death, and makes contact through seemingly sympathetic community figures. Warden Astrid has received sixteen formal addiction complaints this month alone, all from recently bereaved Lower Ward families. This is not opportunistic \u2014 it is a designed predation network.",
+    "key_npcs": [
+        "Warden Astrid",
+        "Bereaved Victim Families",
+        "Community Figure Healer Pross",
+        "Network Coordinator (Unknown)",
+        "Supplier Chain Runner Moll (if captured)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Astrid has compiled a map of the sixteen complaints. Every single victim received their first Void-Wine dose within ten days of a funeral and all of them were approached by someone they trusted \u2014 a community healer, a neighbourhood leader, a distant relative who appeared suddenly. The pattern is too consistent to be coincidence. Someone inside the bereavement community is identifying and flagging new targets. Astrid calls it 'grief scouting' \u2014 finding the vulnerable before they have had time to build defences. Your job is to identify the scout network and trace it to whoever is directing it.",
+            "choice_a": "Attend upcoming funerals and memorial services in the Lower Ward to identify anyone unusual attending",
+            "consequence_a": "Over three services in four days you notice the same two individuals: a middle-aged woman named Pross who introduces herself as a 'community healer' and offers free grief counselling, and a younger man who stays at the periphery taking notes on a small slate. You do not approach either yet.",
+            "choice_b": "Work backwards from the sixteen victims \u2014 find where their first contact happened and who made it",
+            "consequence_b": "Twelve of the sixteen victims were first approached at the Labourer's Community Hall by individuals offering 'grief circles.' The Hall's logs show sixteen unscheduled guests over the past month \u2014 all visitors without regular membership."
+        },
+        {
+            "turn": 2,
+            "narrative": "Whether you have identified Pross or the Hall pattern, both threads converge on the same person: Healer Pross operates the 'grief circles' at the Community Hall and makes personal follow-up home visits to the most distressed attendees. She is legitimately compassionate by all accounts \u2014 neighbours genuinely trust her. But on home visits she leaves small bottles of Void-Wine as a 'calming aid for the first night.' She believes she is helping. She does not know, or does not allow herself to know, where the wine comes from.",
+            "choice_a": "Intervene with Pross directly and compassionately \u2014 she is a victim of the network as much as her clients",
+            "consequence_a": "Pross is devastated when you lay out the full picture. She has been receiving the wine through a 'grief aid donation' left at the Hall each week in an unmarked box. She genuinely did not know its Void composition.",
+            "choice_b": "Surveil Pross's next home visit to identify whether she has any direct contact with the network's upper levels",
+            "consequence_b": "Pross's home visit is entirely genuine in manner \u2014 but the client's home is visited two days later by an unknown man who seems to assess the client's level of dependency and collect Pross's informal usage report from a planted listener."
+        },
+        {
+            "turn": 3,
+            "narrative": "The planted listener discovery or Pross's cooperative testimony identifies the network's assessment layer: a mild-mannered man who poses as a follow-up charity worker, visiting clients to 'check in on their progress' while actually gauging addiction progression and adjusting supply quantities accordingly. He is the network's key analytics operative \u2014 the person who turns grief scouts into precision dosing programmes. His name is Aldren and he operates from a Transit Corridor address above a legitimate grief counselling charity that he has likely fully corrupted.",
+            "choice_a": "Enter the Transit Corridor charity premises undercover to assess Aldren's full operation",
+            "consequence_a": "The charity's basement contains a remarkable data operation: files on over a hundred Lower Ward residents organised by grief timeline, dependency assessment scores, and dosing histories. This is a pharmaceutical-grade addiction management system.",
+            "choice_b": "Watch Aldren make his rounds and follow his end-of-day route to identify where he reports back to",
+            "consequence_b": "Aldren's end-of-day route takes him to a High Ward private club where he spends forty minutes before emerging lighter \u2014 he has made a report or left documentation for someone above him."
+        },
+        {
+            "turn": 4,
+            "narrative": "Whether through the basement files or Aldren's trail, you now have the scale: over a hundred active cases across three districts, dosing managed with clinical precision, and a High Ward connection. This is not a street-level operation \u2014 it is a sophisticated predation business run by someone with financial resources, alchemical expertise, and no conscience. The hundred active cases are being kept in a dependency window that maximises continued purchase while preventing acute crisis that would trigger medical intervention \u2014 a deliberately calibrated level of addiction.",
+            "choice_a": "Prioritise identifying the High Ward principal before acting on the dependency network",
+            "consequence_a": "You follow the High Ward trail. The private club is frequented by three individuals who could be principals \u2014 a physician, a minor noble, and a disgraced Academic Quarter researcher named Celle who was expelled for prohibited experimentation.",
+            "choice_b": "Prioritise breaking the supply chain first \u2014 protect the hundred active victims even if the principal escapes temporarily",
+            "consequence_b": "You work with Astrid to identify all supply points. Over forty-eight hours, six delivery routes are interrupted. The network's reliability drops immediately and victims begin seeking help as their supply becomes erratic."
+        },
+        {
+            "turn": 5,
+            "narrative": "The disgraced Academic Quarter researcher Celle is the key figure. Her expulsion from the Academic Quarter six years ago was for conducting unauthorised Void-adjacent compound research on 'willing subjects' \u2014 who, when the investigation reached them, turned out to be poorly informed Lower Ward patients who did not understand what they had agreed to. She was expelled but not criminally charged due to a technicality in consent documentation. She has been running the same experiment at city-wide scale ever since, now calling it 'grief management research' and publishing coded findings in underground alchemical journals.",
+            "choice_a": "Confront Celle directly with the full evidence of her operation",
+            "consequence_a": "Celle is surprisingly calm. She argues that her research will ultimately produce anti-grief medication that saves thousands of lives and that the individual suffering of a hundred test cases is an acceptable cost. She offers her complete research notes in exchange for immunity.",
+            "choice_b": "Secure Celle's laboratory first \u2014 she will destroy evidence if she knows you're coming",
+            "consequence_b": "A tense raid on her High Ward laboratory apartment. She has already begun burning physical records but two data-crystal storage devices are recovered undamaged."
+        },
+        {
+            "turn": 6,
+            "narrative": "With Celle either in direct negotiation or caught in the act, the immediate network falls apart rapidly. Aldren, when his basement operation is exposed, provides a full confession immediately \u2014 he is genuinely shocked by the scale of harm the operation caused and believed he was participating in legitimate compassionate research. Pross is cleared of criminal responsibility. The hundred active victims need intervention. Astrid begins coordinating a medical response but the Medical Quarter is stretched. You must personally oversee the most critical cases.",
+            "choice_a": "Work with the Medical Quarter to triage the hundred cases by dependency severity",
+            "consequence_a": "Dr. Vel's team accepts the case list prioritised by Aldren's own assessment scores \u2014 ironically, his clinical data makes the triage process faster and more effective.",
+            "choice_b": "Arrange for the F-Chamber's second chamber research team to assess whether the Pre-Scourge fermentation compound \u2014 a safer predecessor \u2014 could ease withdrawal",
+            "consequence_b": "The research committee grants emergency access. Three researchers work around the clock on withdrawal management."
+        },
+        {
+            "turn": 7,
+            "narrative": "Celle's immunity offer or the recovered data crystals reveal her ten years of research. The research is genuine and genuinely useful \u2014 her understanding of Void-Wine's neurological mechanisms is the most sophisticated in existence. She has essentially solved the science of how Void compounds interact with grief-related brain function. This knowledge could form the basis of a legitimate therapeutic treatment \u2014 or could be used to produce even more effective predatory addiction compounds in the wrong hands.",
+            "choice_a": "Bring Celle's research to the Medical Quarter and Academic Quarter for ethical review and prosecution simultaneously",
+            "consequence_a": "Celle is tried for criminal negligence. Her research is partially classified and partially registered as a foundation for legitimate study.",
+            "choice_b": "Pursue immunity for Celle in exchange for her full cooperation with Medical Quarter-supervised research",
+            "consequence_b": "Celle is given a supervised research role. Her criminal charges are suspended pending a three-year research outcome review."
+        },
+        {
+            "turn": 8,
+            "narrative": "The hundred victims' recovery is uneven. Most manage with Medical Quarter support. Nine cases require residential care that the Ward does not have infrastructure for. Pross \u2014 freed of charges but devastated \u2014 proposes converting the Community Hall's grief programme into a legitimate addiction recovery resource. She asks you to help her build the case for Ward funding.",
+            "choice_a": "Support Pross's proposal publicly and attend the Ward Council funding hearing",
+            "consequence_a": "The Council is moved by the story and by Pross's evident integrity. A modest recurring fund is approved for the Community Hall grief recovery programme.",
+            "choice_b": "Help Pross write the proposal and submit it but let her make the case independently",
+            "consequence_b": "Pross presents it herself and wins the funding on the strength of her own testimony. She is better for having done it alone."
+        },
+        {
+            "turn": 9,
+            "narrative": "Celle's research notes contain a classified section she did not offer during negotiations \u2014 a second, deeper compound she was close to synthesising at the time of her expulsion. The Medical Quarter researcher reads the section at 3am and contacts you immediately. The compound is not a grief management tool. It is something else entirely: a chemical that causes Void-Wine dependency to transfer to a different substance \u2014 essentially a 'redirection agent' that could be used to break Void-Wine addiction by substituting a less harmful compound. Or, in the wrong direction, could be used to make any substance as addictive as Void-Wine.",
+            "choice_a": "Classify the second compound section and restrict access immediately",
+            "consequence_a": "The section is classified. Only Astrid, you, and the Medical Quarter director have access. The Vethaan connection in Astrid's files makes this the right call.",
+            "choice_b": "Commission immediate ethical research into the redirection agent's therapeutic applications",
+            "consequence_b": "A controlled research programme begins. The compound could revolutionise addiction treatment \u2014 it needs careful handling."
+        },
+        {
+            "turn": 10,
+            "narrative": "A complication arrives: one of the nine residential-care patients goes missing from their temporary accommodation. The missing person is Rella, a servant's rights advocate from a previous case, who became addicted to Void-Wine after losing her partner. Her disappearance is reported to Astrid who suspects she has been taken \u2014 or has relapsed and gone back to a supply source. Either way, she cannot be in the residential system when she is gone. [TENSE INVESTIGATION ENCOUNTER \u2014 trace Rella across three district locations in under two hours before nightfall makes the search significantly more dangerous]",
+            "choice_a": "Retrace Rella's last known movements starting from the Community Hall",
+            "consequence_a": "Rella visited the Hall at midday, spoke with Pross, and then headed toward the Transit Corridor \u2014 toward Aldren's old address, which she knew from her case file. She is looking for supply.",
+            "choice_b": "Contact Rella's remaining network of servant-community acquaintances for her likely shelter options",
+            "consequence_b": "A contact identifies a Transit Corridor safe house used by servant-community members in crisis. Rella is there, distressed but not yet using."
+        },
+        {
+            "turn": 11,
+            "narrative": "Rella is found and returned to care. She is frightened and ashamed but intact. Her crisis is a reminder that recovery timelines are not linear and the system needs more support resources than currently exist. Pross, when told, immediately finds ways to extend her programme's capacity. Meanwhile, the Grief Merchants operation is completely dismantled \u2014 Celle charged or under supervised research, Aldren cooperating with prosecutions, supply chains severed, the hundred cases in treatment. The Ward's bereavement community is safer. A small, proper grief processing network is emerging under Pross's guidance.",
+            "choice_a": "Help establish a formal protocol that flags recent-bereavement households for legitimate support outreach",
+            "consequence_a": "A new bereavement outreach protocol is formalised by the Ward Authority. It ensures legitimate contact before predatory networks can identify targets.",
+            "choice_b": "Recommend the protocol come from community organisations rather than Ward Authority to preserve trust",
+            "consequence_b": "Pross's Hall becomes the anchor institution for the protocol. Community trust is higher than it would be with a Ward-branded approach."
+        },
+        {
+            "turn": 12,
+            "narrative": "Standing in Pross's Community Hall as it hosts its first properly-resourced grief circle, watching twelve residents \u2014 including Rella \u2014 participate in a session that is entirely genuine and entirely safe, you reflect on what the 'Grief Merchants' actually were: not a criminal enterprise driven by greed but something darker \u2014 a researcher willing to sacrifice real people to data, surrounded by a logistical engine that made it possible. Celle's research, however it is ultimately used, came at an enormous human cost. The Ward is incrementally safer. The void in the grief support infrastructure, if not filled, will simply attract the next Celle. You have begun filling it. Pross hands you a cup of tea and says: 'You stayed longer than most people do.' You are not entirely sure she is only talking about tonight.",
+            "choice_a": "Accept a formal role as Pross's operational adviser for the grief recovery programme",
+            "consequence_a": "The role is informal but real. Future events in the Void-Wine thread may connect through Pross's programme.",
+            "choice_b": "Decline any formal role but promise to return if needed",
+            "consequence_b": "Pross nods. She knows how to find you. The investigation is complete."
+        }
+    ],
+    "branching_outcomes": {
+        "celle_charged": {
+            "description": "Celle prosecuted. Research partially registered. Recovery programme established.",
+            "unlocks": [
+                "EH_SQ_511"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 35,
+                    "Market Ward": 15
+                },
+                "item_reward": "Celle's Research Dossier"
+            }
+        },
+        "celle_researching": {
+            "description": "Celle under supervised research. Recovery programme established. Redirection compound in development.",
+            "unlocks": [
+                "EH_SQ_511"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 28
+                },
+                "item_reward": "Redirection Agent Research Notes"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 200,
+            "reputation_change": {
+                "Lower Ward": -25
+            }
+        },
+        "critical_failure": "Rella is not found. Celle's second compound section falls into Vethaan's network."
+    },
+    "loot_table": [
+        "Celle's Research Dossier",
+        "Redirection Agent Research Notes",
+        "Grief Network Assessment Files",
+        "Pross's Community Programme Charter",
+        "960x Gold Coins"
+    ],
+    "conclusion": "Celle prosecuted. Research partially registered. Recovery programme established."
+}

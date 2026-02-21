@@ -1,0 +1,77 @@
+{
+    "id": "EH_SQ_414",
+    "title": "Colours of the Deep",
+    "difficulty": "Easy",
+    "xp_reward": 460,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Academic Quarter -> The University Hall",
+    "district": "Academic Quarter",
+    "thread": "Void-Wine",
+    "description": "A University professor reports that three students who consumed Void-Wine at an off-campus party experienced vivid shared hallucinations \u2014 all three saw exactly the same vision of a city beneath the city. The professor considers this scientifically significant but dangerous.",
+    "key_npcs": [
+        "Professor Wex",
+        "Student Trio (Maren Pell Yosi)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The three students are physically fine but deeply shaken. They each independently drew the same image \u2014 a vast underground space with towering arcane machinery and channels of glowing blue liquid. The detail is extraordinary in its consistency.",
+            "choice_a": "Interview each student separately to verify the consistency",
+            "consequence_a": "Every detail matches across all three interviews \u2014 the same archways, same machinery, same faint figure standing in the centre.",
+            "choice_b": "Examine the drawings and compare them to any known architectural records",
+            "consequence_b": "Professor Wex matches two of the drawn archways to Pre-Scourge architectural diagrams in the restricted section of the university library."
+        },
+        {
+            "turn": 2,
+            "narrative": "The hallucination appears to be a genuine Void-echo \u2014 a phenomenon where Void-Wine users briefly perceive the Void layer beneath physical reality. What the students saw may actually exist somewhere under Emberheart.",
+            "choice_a": "Recommend the University fund an expedition to find the location",
+            "consequence_a": "Wex is excited. A proposal is drafted for a supervised academic expedition.",
+            "choice_b": "Warn Wex that pursuing this could be extremely dangerous and recommend suppressing the findings",
+            "consequence_b": "Wex reluctantly files the drawings in the restricted archive, marked 'Sensitive \u2014 Void-Cognition Study.'"
+        },
+        {
+            "turn": 3,
+            "narrative": "You also need to address the students' wellbeing after the experience.",
+            "choice_a": "Connect them with a specialist in Void-exposure counselling",
+            "consequence_a": "The students process the experience safely. Two of them become interested in Void-research as a career.",
+            "choice_b": "Advise them simply to avoid Void-Wine permanently",
+            "consequence_b": "All three agree immediately and with obvious relief. They clearly had no desire to repeat the experience."
+        }
+    ],
+    "branching_outcomes": {
+        "expedition_proposed": {
+            "description": "Academic expedition proposal drafted for the underground space.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Pre-Scourge Architectural Sketch",
+                "reputation_change": {
+                    "Academic Quarter": 18
+                }
+            }
+        },
+        "findings_suppressed": {
+            "description": "Drawings filed in restricted archive.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Academic Quarter": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Pre-Scourge Architectural Sketch",
+        "Void-Echo Research Notes",
+        "200x Gold Coins"
+    ],
+    "conclusion": "Academic expedition proposal drafted for the underground space."
+}

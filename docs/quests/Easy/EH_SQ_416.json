@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_416",
+    "title": "The Other Side of the Glass",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Sunken Lounge Tavern",
+    "district": "Market Ward",
+    "thread": "Void-Wine",
+    "description": "The Sunken Lounge is a known Void-Wine tavern that operates openly under a grey-area permit. A journalist named Ira wants to expose the tavern's impact on vulnerable patrons. She asks you to gather evidence from inside over a single evening.",
+    "key_npcs": [
+        "Journalist Ira",
+        "Tavern Owner Syl",
+        "Regular Patrons"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Sunken Lounge is atmospheric \u2014 dim Void-blue lanterns, plush seating, a very quiet crowd who stare into their cups with glassy contentment. Tavern Owner Syl is gracious and well-dressed. She points out that all patrons sign a consent waiver.",
+            "choice_a": "Accept a small taster glass to blend in and observe the room",
+            "consequence_a": "A wave of deep calm settles over you \u2014 pleasant but disorienting. You maintain your faculties but understand the appeal immediately.",
+            "choice_b": "Decline politely and simply observe the room as a curious visitor",
+            "consequence_b": "Syl is mildly suspicious but tolerates you. You note that three patrons have been here for over six hours without moving from their seats."
+        },
+        {
+            "turn": 2,
+            "narrative": "You speak with several patrons throughout the evening. Most are managing grief, pain, or isolation. Two are clearly over-consuming \u2014 their eyes are vacant and they cannot consistently answer basic questions.",
+            "choice_a": "Document specific cases for Ira's expos\u00e9, including the long-term sitters",
+            "consequence_a": "Ira is given compelling human-centred testimony that goes beyond mere illegality.",
+            "choice_b": "Confront Syl directly about the over-consuming patrons and demand she stop serving them",
+            "consequence_b": "Syl points to her consent waiver and says these are adults making their own choices."
+        },
+        {
+            "turn": 3,
+            "narrative": "Ira wants to publish but asks if you think the story should also humanise the patrons rather than just condemn the tavern.",
+            "choice_a": "Recommend a balanced story: humanise the patrons, critique the system that drives them here",
+            "consequence_a": "Ira writes a nuanced piece. The Ward Council opens a debate on Void-Wine regulation.",
+            "choice_b": "Recommend a hard-hitting expos\u00e9 that focuses on the tavern's exploitation",
+            "consequence_b": "Ira publishes a damning piece. Syl faces a formal license audit."
+        }
+    ],
+    "branching_outcomes": {
+        "balanced_story": {
+            "description": "Balanced journalism published. Council debate opened.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Ira's Article Copy",
+                "reputation_change": {
+                    "Market Ward": 14
+                }
+            }
+        },
+        "exposee_published": {
+            "description": "Damning expos\u00e9 published. Tavern audit launched.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Ira's Article Copy",
+        "Sunken Lounge Entry Pass",
+        "190x Gold Coins"
+    ],
+    "conclusion": "Balanced journalism published. Council debate opened."
+}

@@ -1,0 +1,150 @@
+{
+    "id": "SQ-121",
+    "title": "The Soot-Streaked Window",
+    "difficulty": "Easy",
+    "xp_reward": 180,
+    "prerequisites": "None",
+    "description": "A cursed soot is haunting the windows of the Low-District...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "A window in the 'Low-District' is covered in a soot that can't be washed away. It\u2019s forming the shape of a screaming face.",
+            "choice_a": "Scrape the soot",
+            "consequence_a": "Success.",
+            "choice_b": "Analyze the face's features",
+            "consequence_b": "Success.",
+            "convergence": "The soot is warm and smells of old charcoal and wet stone. It feels like velvet and sticks to your tools like a living shadow."
+        },
+        {
+            "turn": 2,
+            "narrative": "Looking through the window, the room inside is filled with 'Grey-Mist'. You can see a 'Chimney-Sweep'\u2014a child made of ash\u2014cleaning a fireplace that isn't lit.",
+            "choice_a": "Break the window",
+            "consequence_a": "Success.",
+            "choice_b": "Pick the door lock",
+            "consequence_b": "Success.",
+            "convergence": "The 'Ash-Child' looks at you with eyes of glowing embers. 'The fire... it went the wrong way,' he whispers."
+        },
+        {
+            "turn": 3,
+            "narrative": "The fireplace is actually a 'Small-Rift' to the 'Void-Fringe'. It\u2019s sucking the color and warmth out of the district.",
+            "choice_a": "Plug the chimney",
+            "consequence_a": "Success.",
+            "choice_b": "Stoke the fire with 'Mana-Coal'",
+            "consequence_b": "Success.",
+            "convergence": "The fire blazes violet, and the Ash-Child begins to solidify into a 'Soot-Sentry'\u2014a guardian of the hearth."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Sentry is trying to 'Sweep' the soot back into the rift. He gives you a 'Cinder-Brush' and asks for your help.",
+            "choice_a": "Sweep the soot (Dex DC 12)",
+            "consequence_a": "Success.",
+            "choice_b": "Burn the soot with a torch",
+            "consequence_b": "Success.",
+            "convergence": "The soot chitters and retreats into the rift, leaving a trail of 'Cinder-Dust' on the floor."
+        },
+        {
+            "turn": 5,
+            "narrative": "A 'Smoke-Wraith'\u2014a creature of swirling gray vapors\u2014emerges from the chimney, its limbs like long, wispy fingers reaching for your throat.",
+            "choice_a": "Dodge the smoke",
+            "consequence_a": "Success.",
+            "choice_b": "Banish the wraith with 'Holy-Incense'",
+            "consequence_b": "Success.",
+            "convergence": "The wraith dissolves into a cloud of fragrant white smoke, but the Ash-Child's ember-eyes are fading."
+        },
+        {
+            "turn": 6,
+            "narrative": "He needs a 'Fuel-source' to remain in this world. The air is cold and smells of burnt milk and old soot.",
+            "choice_a": "Offer a 'Sun-Bead'",
+            "consequence_a": "Success.",
+            "choice_b": "Feed him 'Spark-Zest'",
+            "consequence_b": "Success.",
+            "convergence": "The Ash-Child glows orange and smiles. He gives you a 'Coal-Locket'\u2014it contains a piece of 'Eternal-Spark'."
+        },
+        {
+            "turn": 7,
+            "narrative": "The window is clear now, the screaming face gone. The room is warm and smells of fresh pine-needles.",
+            "choice_a": "Check the chimney-structure",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The Sentry remains as a small, wooden doll by the fireplace. He's a 'Hearth-Guardian' (+1 Morale)."
+        },
+        {
+            "turn": 8,
+            "narrative": "The local dwellers offer you a 'Soot-Cloak' (+1 Stealth). It\u2019s made of the same velvety soot, but it\u2019s no longer screaming.",
+            "choice_a": "Accept the cloak",
+            "consequence_a": "Success.",
+            "choice_b": "Decline reward",
+            "consequence_b": "Success.",
+            "convergence": "The cloak is light as air and makes you feel like a shadow in the corner of the eye."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, the 'Low-District' feels a little warmer, the chimneys all puffing out steady, white smoke.",
+            "choice_a": "Walk the street",
+            "consequence_a": "Success.",
+            "choice_b": "Report the rift",
+            "consequence_b": "Success.",
+            "convergence": "The sun sets, its light making the soot-stained buildings look like jagged obsidian."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Low-Ward. The 'Soot-Streaked Window' is now a clear view of home.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Final",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Soot-Streaked Window' is complete. Quest Complete.",
+    "loot_table": [
+        "Coal-Locket",
+        "Soot-Cloak"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are swept into the Void-Fringe through the chimney. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Low-District residents report screaming soot on windows",
+        "flags": []
+    },
+    "location": "Low-District Hearth House",
+    "district": "Lower Ward",
+    "thread": "Void",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Ash-Child (soot spirit)",
+        "Soot-Sentry (hearth guardian)"
+    ],
+    "mechanics_featured": [
+        "Stealth (entering)",
+        "Dex (sweeping soot)",
+        "Combat (smoke wraith)",
+        "Resource management (fuel)"
+    ],
+    "permanent_effects": {
+        "settlement": "Rift sealed; Hearth-Guardian installed (+1 Morale passively)",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Soot-Cloak",
+            "result": "+1 Stealth wearable"
+        },
+        {
+            "path": "Decline reward",
+            "result": "+1 Reputation (selflessness noted)"
+        }
+    ]
+}

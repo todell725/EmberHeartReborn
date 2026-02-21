@@ -1,0 +1,248 @@
+{
+    "id": "EH_SQ_640",
+    "title": "The Plague-Maker's Cure",
+    "difficulty": "Hard",
+    "xp_reward": 2500,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_535",
+            "EH_SQ_452",
+            "EH_SQ_453"
+        ],
+        "items_required": []
+    },
+    "location": "Medical Quarter -> High Ward -> External city-states (via network operations) -> Medical Quarter finale",
+    "district": "Medical Quarter",
+    "thread": "Standalone",
+    "description": "The Crimson Rot cure was stolen \u2014 it was never developed, it was found in a century-old Concordat archive and registered as private property by Dren Morren, who staged the epidemic to prove the cure's value. The Medical Quarter's most celebrated moment was manufactured. The Plague-Maker's blackmail uses the city's fear of a worse epidemic as leverage. The Concordat Epidemiological Research Programme archive is the most valuable and most dangerous medical resource in the city. Who controls it determines what the Medical Quarter can do for the next century.",
+    "key_npcs": [
+        "Dr. Vel",
+        "Director Sela",
+        "Calla",
+        "Phoss",
+        "Warden Astrid",
+        "Dren Morren (antagonist)",
+        "Coss (antagonist/collaborator)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Crimson Rot cure has been in public use for eight months \u2014 distributed through the Medical Quarter, Ward emergency reserves, and the Agricultural Zone field stations without incident. The crisis that the cure resolved is still raw in the city's memory: three hundred people dead in four months before the treatment was developed, another sixty saved by its application. The doctor credited with developing the emergency treatment protocol is Chief Researcher Phoss \u2014 a Medical Quarter veteran of thirty years whose previous work on plague-adjacent respiratory conditions gave him the epidemiological foundation for the cure's development. Phoss was publicly decorated by the Ward Council seven months ago. His research methodology is standard, his peer review documentation is thorough, and his cooperation with Dr. Vel's medical team during the crisis was impeccable. Tonight Vel contacts you with a voice that has none of its usual clinical precision. She says: 'Phoss sent me a message this evening. He wants a meeting tomorrow at his private laboratory, not the Medical Quarter. He says \u2014 and I am quoting \u2014 'I need to tell you what the cure actually is before someone else does. And then I need you to understand why you cannot publish it.' She pauses. 'I have known Phoss for fifteen years. He has never said anything like this in my hearing before. I am frightened for him. I am also frightened of him.' She wants you at the meeting.",
+            "choice_a": "Attend the meeting with Vel and prepare to receive whatever Phoss has to reveal",
+            "consequence_a": "Phoss's private laboratory is two levels beneath his Medical Quarter office \u2014 a space only his senior staff know exists. He is waiting when you arrive, documents arranged on his desk with the organised precision of a man who has been preparing this conversation for a long time. He says: 'Thank you for coming. I will be as concise as I can. The Crimson Rot cure works. I did not develop it. I found it. And the person I found it from has told me that if I do not provide them with specific cooperation within the next thirty days, they will release a variant of the Rot for which the current cure is ineffective.' He opens his desk and puts a sealed alchemical vial on the surface. 'This is what they sent me last week. As a demonstration.'",
+            "choice_b": "Have Astrid place Phoss under surveillance before attending the meeting \u2014 if he is under coercion from a Plague-Maker, you need to know who is watching him",
+            "consequence_b": "Astrid's surveillance team identifies two individuals maintaining a loose watch on Phoss's laboratory building \u2014 not Ward operatives, not known criminals, but equipped with alchemical monitoring devices consistent with exposure-tracking instruments. If Phoss attempts to pass information to authorities, they will know within minutes. The meeting proceeds under Astrid's quiet counter-surveillance cover."
+        },
+        {
+            "turn": 2,
+            "narrative": "Phoss's account is fifteen years of accumulated guilt delivered in forty-five minutes. Twelve years ago, when his work on respiratory pathogen treatment first produced results, a contact approached him \u2014 not threatening but extraordinary: offering access to archival pathogen research that would accelerate his work by a decade. The research was extraordinary. It was also clearly of Pre-Scourge Concordat origin, specifically from the Concordat's epidemiological emergency programme \u2014 a classified research branch that had been developing both pathogen modelling and treatment development in parallel, categorising them as a single system: understanding disease to treat it, understanding how to treat it to understand how disease worked. The contact made a single condition for access: when Phoss produced results, a portion of any treatment protocol would be registered under a holding structure that the contact controlled. Not published \u2014 held. A proprietary interest in life-saving medical research. Phoss agreed because the research was real and the treatments saved lives and he believed the holding structure was a legal protection mechanism rather than a weapon. For twelve years, it was. Then the Crimson Rot appeared. Then the holding structure's owner \u2014 the Plague-Maker \u2014 revealed the arrangement's true weight: a treatment protocol for a deadly pathogen, registered under private control, that the city's Medical Quarter was freely distributing on the assumption that it was public medical knowledge. In thirty days, if Phoss did not comply with new demands, the Plague-Maker would release a modified Rot variant for which the registered-private cure was the only existing treatment.",
+            "choice_a": "Ask Phoss directly what the Plague-Maker's demands are before deciding anything else",
+            "consequence_a": "Phoss says: 'Access. They want access to the Medical Quarter's classified epidemic contingency protocols \u2014 the emergency stockpile records, the research archive, and the distribution network's full logistical map. They want to know how the city would respond to a serious outbreak \u2014 sequence, stockpile levels, who gets treated first. This is intelligence for designing an epidemic that the city could not respond to effectively.' A pause. 'They are planning something for which they want to understand our defenses first.'",
+            "choice_b": "Ask Phoss about the original contact \u2014 who approached him twelve years ago and where the Pre-Scourge research actually came from",
+            "consequence_b": "Phoss produces the original contact document: a meeting summary from twelve years ago, a name he was given that traces through Ward records to a shell company that dissolved eight years later \u2014 but whose ownership chain, when Astrid runs it, connects to a trading family name that has appeared in four previous investigations. The Plague-Maker has been operating in this city for at least twelve years. Possibly longer."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Crimson Rot cure's private registration is confirmed by the Ward legal office within forty-eight hours of Phoss providing the documentation. It is real, it is valid, and it is legally registered under a holding structure that the Ward Authority cannot immediately dissolve \u2014 the legal mechanism Phoss signed is ironclad by current Ward commercial law. The Medical Quarter's legal counsel says: 'The treatment protocol that 847 living people received as emergency care is technically private property. The Ward distributed it freely in good faith, unaware of the registration. The Plague-Maker could, theoretically, sue the Ward for unlicensed use of a proprietary medical protocol.' The political and legal situation is a deliberate trap: the Plague-Maker is not primarily interested in the lawsuit. The registration is leverage \u2014 a standing threat that can be activated at any time to create a legal crisis that disrupts the Medical Quarter's operations. The demonstration vial that was sent to Phoss is real. Vel has analysed it: it is a modified Rot variant with a mutation pattern she describes as 'precisely targeted to the cure's current mechanism.' Someone with extraordinary pathogen expertise deliberately engineered a variant that defeats the existing cure. They then registered the cure before the variant existed. The registration predates the Rot outbreak by three months. The Crimson Rot was deliberately released by the same entity that held the cure. Everything \u2014 the outbreak, the deaths, Phoss's emergency research, the cure, the Ward's gratitude \u2014 was staged.",
+            "choice_a": "Take this directly to Warden Astrid and the Ward Council \u2014 this is a murder-by-plague case and must be understood as a crime rather than a crisis",
+            "consequence_a": "Astrid's response is controlled fury. The Ward Council convenes an emergency extraordinary session. The political implications are severe: the Ward publicly celebrated Phoss's 'developed' cure. Now they must quietly disclose that the Crimson Rot was engineered, the cure was pre-existing proprietary property, and the city was manipulated through a staged epidemic. The session is closed to public attendance.",
+            "choice_b": "Begin with the intelligence question \u2014 find out who the Plague-Maker is before anything becomes public, because public disclosure will immediately cause the Plague-Maker to activate the variant threat",
+            "consequence_b": "Astrid agrees. The investigation proceeds under complete information blackout \u2014 no Ward Council notification until the Plague-Maker's identity is confirmed and their operational capacity can be neutralised simultaneously with disclosure. The risk: if they learn you are investigating, the variant deployment could be accelerated."
+        },
+        {
+            "turn": 4,
+            "narrative": "The investigation into the Plague-Maker's identity is the most sensitive operation Astrid has run in her tenure as Warden. The shell company chain connecting Phoss's original contact to the registration structure runs through seven business entities across three jurisdictions, terminating in a Ward trading house called the Morren Holdings Group \u2014 a company name that appeared in the Medical Quarter investigation's Morren Family private care scandal. The Morren Family, whose referral fee corruption was prosecuted successfully, has a subsidiary structure that was not investigated at the time because it appeared to be a dormant shell with no active operations. The subsidiary is called Morren Epidemiological Research Partners. It has been active for fourteen years. Its registered expertise is 'Pre-Scourge archival pathogen documentation and treatment protocol recovery.' This is what Phoss was told he was accessing: historical medical research. What he was actually accessing was the Morren Family's private programme to acquire proprietary control over Concordat-origin treatment protocols for every major pathogen type in the Ward's recorded history. The Plague-Maker is not a rogue individual. It is a family operation. And the Morren Family patriarch \u2014 Dren Morren \u2014 who was considered a peripheral figure in the private care prosecution and walked free on that charge, is the principal.",
+            "choice_a": "Build a case against Dren Morren using the shell company chain and Phoss's testimony as the evidentiary foundation",
+            "consequence_a": "Phoss is terrified but cooperates. His testimony, combined with the shell company documentation, is compelling but incomplete \u2014 Astrid says it would support a prosecution but might not survive a defence team of the quality the Morren Family can afford without additional evidence.",
+            "choice_b": "Go directly at Dren Morren \u2014 a confrontation under observation that captures him stating his demands directly, providing an unimpeachable evidentiary record",
+            "consequence_b": "A controlled meeting is arranged through Phoss as intermediary. Morren is careful on first approach \u2014 but his hubris in the third meeting, where he believes Phoss has agreed to provide the contingency protocol access, prompts him to explain his methodology in enough detail to constitute a confession. Astrid has recording instruments in place."
+        },
+        {
+            "turn": 5,
+            "narrative": "The intelligence operation's clock is running. The Plague-Maker's thirty-day ultimatum to Phoss has eighteen days remaining. Wherever the investigation lands, the modified Rot variant's deployment threat must be neutralised before Morren's arrest \u2014 because arrest without first securing the variant's production and release mechanisms risks triggering a dead-man's-switch deployment. Vel's analysis of the demonstration vial has produced an understanding of the variant's mechanism, and she has been working continuously for five days on a counter-treatment. Her current assessment: a counter-treatment is theoretically achievable but requires Morren's own research records, which contain the specific mutation parameters used. Without those records, Vel can model a broad-spectrum counter-treatment that might work for most variant presentations. With the records, she can develop an exact cure with certainty. The ethical tension is sharp: the exact cure requires accessing Morren's private research without his cooperation, which requires either a legal mechanism Astrid says will take thirty days to obtain properly, or an operation of more ambiguous legal standing.",
+            "choice_a": "Advocate for the ambiguous-legal-standing operation \u2014 break into Morren's research facility and recover the variant records before the arrest",
+            "consequence_a": "Astrid runs the operation personally. Morren's Epidemiological Research Partners office \u2014 a facility in the High Ward that presents as a standard academic research archive \u2014 contains a sub-level laboratory of extraordinary sophistication. The records are recovered. Vel receives them within six hours. A precise counter-treatment is in development immediately.",
+            "choice_b": "Develop Vel's broad-spectrum counter-treatment on the available data while pursuing the legal mechanism for the records \u2014 accept stronger legal footing at the cost of precision",
+            "consequence_b": "Vel's broad-spectrum counter-treatment is produced in nine days. It is estimated to be effective against 85% of the variant's predicted mutation range. Fifteen percent represents genuine uncertainty. Vel notes: 'We may need to trust the 85% and hope we have not guessed 15% of how this variant expressed itself.'"
+        },
+        {
+            "turn": 6,
+            "narrative": "Dren Morren has four bodyguards who accompany him at all times \u2014 medical-grade individuals equipped with personal alchemical protective systems and a level of professional competence that Astrid describes as 'significantly above what a trading family patriarch would ordinarily employ.' He also has a laboratory assistant named Coss who has worked with him for eight years and who Phoss describes as 'the person who actually does the pathogen work \u2014 Morren understands business, not biology, Coss is the scientist.' Coss's medical qualification records trace back to a ghost institution. Coss is not a licensed medical practitioner. Coss is a practitioner of something with no licensing framework, operating under Morren's commercial protection, producing pathogen engineering of a sophistication that would require extraordinary natural talent or extensive Concordat-era training documentation access. Astrid's team finds a link between Coss's activity pattern and the Concordat Epidemiological Research Programme documents that Phoss received \u2014 Coss has been accessing the same archive set through a different channel for twelve years, building on the Concordat's legacy pathogen research systematically. Coss is the Plague-Maker in practical terms. Morren is the business owner. And Coss, per Phoss's information, lives in the laboratory. If Morren is arrested first, Coss disappears with the variant production capability still intact. The arrest operations must be simultaneous.",
+            "choice_a": "Coordinate simultaneous arrest of Morren and Coss with Astrid's best operational team",
+            "consequence_a": "The operations run within thirty seconds of each other. Morren's bodyguards present significant resistance. [COMBAT ENCOUNTER 1: Morren's 4 professional bodyguards \u2014 trained, equipped, defending a principal, do not underestimate the engagement] Coss is found in the laboratory sub-level with three variant production batches active.",
+            "choice_b": "Secure Coss and the laboratory first \u2014 then arrest Morren with the variant capability already neutralised",
+            "consequence_b": "Getting to Coss requires penetrating a research facility with active laboratory protocols and two specialist security personnel. [COMBAT ENCOUNTER 1: 2 laboratory security, then the immediate challenge of neutralising three active variant production batches before they can be deployed \u2014 a technical challenge running alongside a combat one]"
+        },
+        {
+            "turn": 7,
+            "narrative": "Morren and Coss are in custody. The variant production batches are secured \u2014 three sealed alchemical vessels containing what Vel describes as 'the most sophisticated intentional pathogen engineering she has ever seen.' The vessels are stable and under Medical Quarter hazard containment. Phoss has been taken to a safe location by Ward Guard. The thirty-day ultimatum has eleven days remaining. But the arrest of two people does not automatically neutralise a dead-man's-switch that may exist. Astrid's interrogation of Morren reveals controlled fury and complete silence on the variant's deployment mechanism. Coss, when interviewed by Vel specifically \u2014 Astrid's assessment being that Coss's primary loyalty is to the science rather than to Morren's business interests \u2014 provides a different response. Coss says: 'There is no dead-man's-switch. There was never going to be one. A deployed variant cannot be controlled \u2014 it would spread to the Morren Family's own networks. Morren threatened deployment as leverage only. He had no capacity or intention to actually do it.' Coss pauses and looks at the ceiling. 'I built the variant because he told me it was theoretical modelling. When I found out what it was for, I was the only one who knew the full production process. I could have refused. I did not.' Another pause. 'I would like to cooperate with the counter-treatment development.'",
+            "choice_a": "Accept Coss's offer \u2014 their cooperation in developing the exact counter-treatment is too valuable to decline on principle",
+            "consequence_a": "A legally complex arrangement is negotiated with Astrid and the Ward legal office: Coss cooperates fully in counter-treatment development under supervised Medical Quarter conditions, in exchange for a formal consideration of the cooperation in sentencing. Vel oversees the work directly. The exact counter-treatment is complete in four days.",
+            "choice_b": "Decline Coss's direct involvement \u2014 their culpability is real regardless of claimed unawareness \u2014 but use their written technical records under independent analysis",
+            "consequence_b": "Coss's research notes are extraordinarily detailed. Vel's team, using the notes without Coss's direct input, completes the exact counter-treatment in six days \u2014 two more than with Coss's direct help, but on a firmer ethical footing. Coss is held in standard custody throughout."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Concordat Epidemiological Research Programme archive that Morren and Coss were accessing is a genuinely significant discovery: a pre-Scourge research database containing treatment protocols, pathogen documentation, and epidemiological modelling for practically every disease type the Concordat had encountered in its institutional history. The Morren Family did not create this resource \u2014 they found it and commercially captured it through proprietary registration of treatments derived from its contents. The archive exists and contains knowledge that could save lives if properly managed. Managed being the critical word: it also contains pathogen documentation that, in wrong hands, would be what Coss's talent plus Morren's commercial motivation produced. This is the Medical Quarter's equivalent of the Forge's production floor. Extraordinary capability that requires extraordinary stewardship. The Medical Quarter's leadership team \u2014 Director Sela, Vel, and the newly created Epidemiological Research review committee \u2014 must decide what to do with the archive. Who has governance, what is accessible, what is not, and how new research derived from it is registered and protected. [SETTING FOR FINAL CONFRONTATION \u2014 the Morren Family has three additional members not named in the prosecution, and two of them have engaged private legal enforcement to recover the archive's access credentials before the Ward Authority can formally seize the holding structure]",
+            "choice_a": "Anticipate the Morren Family's legal enforcement move and have the archive's access credentials formally surrendered to Ward legal custody within the next twelve hours",
+            "consequence_a": "A race against time with the Ward legal office and a private enforcement team trying to reach the credential holding point simultaneously. [COMBAT ENCOUNTER 2: Private legal enforcement \u2014 5 individuals, professional, operating under the pretense of Morren Family legitimate legal right]",
+            "choice_b": "Let the Morren Family legal enforcement arrive, then arrest them under the conspiracy prosecution's extended warrant \u2014 capture the additional family members as co-conspirators",
+            "consequence_b": "Astrid is delighted with this approach. The extended warrant is valid and comprehensive. The enforcement team arrives, presents paperwork, is surrounded by Ward Guard, and the additional Morren Family members are added to the prosecution's case. This is cleaner than the alternative and less physically hazardous."
+        },
+        {
+            "turn": 9,
+            "narrative": "Morren and Coss are in custody. The Morren Family's additional legal enforcement attempt is either intercepted and arrested or strategically captured as additional co-conspirators. The Ward legal office is working through the most complex medical crime prosecution it has ever received. But the immediate threat requires parallel resolution: three active variant production batches are in Medical Quarter hazard containment, Vel's counter-treatment is complete (precise or broad-spectrum depending on the research decision), and the Concordat Epidemiological Research Programme archive needs immediate secure status before any other Morren Family interests can act on it. Vel says: 'We have the variant contained. We have the counter-treatment ready. What I need to know is whether anyone else has access to the original pathogen design \u2014 not the variant, the original Rot. If Morren's production programme has external partners beyond Coss, we could receive a second-generation deployment from outside the Ward.' This question requires a thorough analysis of Morren's operational network \u2014 an intelligence operation, not a medical one.",
+            "choice_a": "Run the external partner analysis through Astrid using Morren's captured communications as the base dataset",
+            "consequence_a": "Astrid's team works through the communications archive over four days. Two external contacts are identified \u2014 one in a city-state three days travel distant, one local address that turns out to be a dead drop. The dead drop is monitored for a week. A payment confirmation is retrieved. Morren's programme has two external Coss-equivalent pathogen engineers who have never been to Emberheart.",
+            "choice_b": "Interrogate Coss directly about external partners \u2014 their knowledge of the production network is the most direct intelligence available",
+            "consequence_b": "Coss, in cooperation, names two individuals without hesitation and expresses something that reads as relief at doing so. 'I always hated the external connections,' they say. 'I never trusted that they were working on the same research framing I was. Morren told them different things than he told me.' This is an important detail \u2014 the external engineers may not know the weaponised application of their work."
+        },
+        {
+            "turn": 10,
+            "narrative": "The external partner question has a time-sensitive dimension. Morren's operational protocol, per his communications archive, included a check-in system: if Morren failed to confirm contact with external partners every fourteen days, a dead-man's-switch Coss said did not exist \u2014 but Morren apparently did not share that detail with Coss \u2014 activates automatically. Coss's claim that there was no dead-man's-switch was accurate for their own knowledge. Morren built one without telling Coss. The fourteen-day window opened six days ago, when Morren was arrested. You have eight days to either provide a false check-in signal or reach the external production sources before the dead-man's-switch triggers. The trigger's action, per the communications archive: automatic deployment of a pre-staged Rot variant from a location outside the Ward that Morren called 'the Seed.'",
+            "choice_a": "Use Morren's communications equipment to send a false check-in signal and buy a full fourteen more days to investigate and act",
+            "consequence_a": "Astrid operates the deception with Morren's protocols. The false check-in succeeds. Fourteen days to find and neutralise 'the Seed' location outside the Ward.",
+            "choice_b": "Immediately alert the relevant external city-state authorities and request emergency cooperation to locate the external production sources within eight days",
+            "consequence_b": "The external city-state's authorities respond within twenty-four hours. They have been watching Morren's external contact for unrelated reasons. Their combined intelligence with Astrid's archive analysis identifies 'the Seed' location within three days. The external apprehension takes six days."
+        },
+        {
+            "turn": 11,
+            "narrative": "The Seed is neutralised \u2014 either through Astrid's extended investigation over fourteen days or through external city-state cooperation. The last operational threat of Morren's pathogen programme has been removed. What remains is a prosecution of extraordinary scope \u2014 Morren, Coss, the Morren Family's additional members, and the two external engineers \u2014 plus the management of the Concordat Epidemiological Research Programme archive that enabled all of it. The archive is the most valuable and most dangerous medical resource the city has ever acquired. It contains treatment protocols for every documented pathogen in the Concordat's research history \u2014 including pathogens that no longer exist in the natural environment because the Scourge disrupted the conditions that sustained them. It also contains pathogen engineering documentation that Coss used to create the Crimson Rot variant. In wrong hands it is exactly what the Morren Family tried to make it. In right hands it is the city's most powerful medical asset. The Medical Quarter's ethics review committee \u2014 newly constituted in the wake of the referral fee scandal \u2014 has been briefed and meets within forty-eight hours of the last threat's neutralisation. Their question: who holds the archive and under what governance?",
+            "choice_a": "Recommend Ward-level governance with Medical Quarter operational authority and Heritage protection classification",
+            "consequence_a": "The tri-layer governance model \u2014 Ward oversight, Medical Quarter operation, Heritage protection \u2014 is accepted unanimously by the ethics committee and the Ward Council. The archive becomes the city's most securely governed medical resource.",
+            "choice_b": "Recommend Medical Quarter exclusive governance with external ethics audit every two years",
+            "consequence_b": "The Medical Quarter's Director Sela accepts the responsibility with her characteristic gravity. The two-year external audit condition gives it credibility with the Ward Council. Three Councillors request specific reporting rights. Sela grants them."
+        },
+        {
+            "turn": 12,
+            "narrative": "The BOSS ENCOUNTER of the Medical Finale is Dren Morren's final attempt to destroy the prosecution before it can be completed. In custody, with legal representation of extraordinary quality, Morren has been building an alternative strategic track: he has been contacting the Medical Quarter's remaining uncharacterised staff members \u2014 people not identified in Calla's investigation, people whose records sit at the edge of the referral fee scandal without being definitively implicated \u2014 and offering them an arrangement. If three of them can simultaneously provide testimony that the Crimson Rot was a naturally occurring pathogen that Morren's organisation merely studied and developed a treatment for, the staged-epidemic theory collapses and the prosecution's murder-by-plague charge evaporates. He does not need all three to believe this. He needs them to say it. Two of the three have agreed \u2014 they have been receiving payments for years through shell accounts that Morren can prove their involvement with, making them far more afraid of the alternative. The third has instead contacted Vel and Director Sela, and then you. They have not agreed. They want to help stop this. [BOSS ENCOUNTER: Morren's testimony-tampering operation \u2014 prevent it before two witnesses perjure themselves; also defeat Morren's four bodyguards who have been positioned near the witnesses' residences as implied threats]",
+            "choice_a": "Move simultaneously on all three witnesses \u2014 invoke Ward protection for the willing third, use Astrid's team to intercept Morren's associates near the other two",
+            "consequence_a": "The willing witness is immediately placed under Ward protection with Astrid's counter-surveillance. Two simultaneous arrested of Morren's implied-threat associates near the other two residences \u2014 without the threat, both witnesses are reassessed. One comes over to cooperation. One remains committed to the paid testimony but cannot maintain it under rigorous legal examination. [COMBAT ENCOUNTER 3: Morren's 4 bodyguards, positioned at two residences simultaneously \u2014 a multi-location engagement]",
+            "choice_b": "Use the willing witness's information to build a comprehensive suborning-of-testimony charge that adds to the prosecution rather than merely preventing perjury",
+            "consequence_b": "The recording of Morren's contact with the two witnesses \u2014 obtained through the willing third's cooperation and a monitored contact session Astrid designs \u2014 constitutes a second criminal charge of equal seriousness to the original plague engineering. Morren's legal team, facing two watertight charges instead of one contested one, shifts visibly in their approach."
+        },
+        {
+            "turn": 13,
+            "narrative": "The testimony tampering is stopped. Morren's final legal strategy has collapsed. The prosecution proceeds on a full evidentiary record including the pathogen engineering documentation, Phoss's protected testimony, the payment records, the staging evidence, the external-partner network, the archive's governance records showing sixty years of proprietary medical protocol capture, and the suborning-of-testimony charges. Morren's legal team makes a final offer: full cooperation and disclosure of the Vethaan Network's medical intelligence operation in exchange for reduced sentencing consideration. The offer is genuine and the information would be significant. Coss is already cooperating fully. The question is whether Morren's cooperation on the Network adds enough value to warrant the reduction his team is seeking.",
+            "choice_a": "Accept the cooperation deal \u2014 the Vethaan Network intelligence is worth the sentencing consideration",
+            "consequence_a": "Morren's account of the Network's medical intelligence operation is extensive and names six additional principals across two city-states. Astrid calls it 'the single most valuable piece of criminal intelligence I have received in twenty years.' Morren receives a reduced but still very significant sentence.",
+            "choice_b": "Decline \u2014 Morren's evidentiary position is already defeated and cooperation should not be rewarded with leniency for staging an epidemic that killed three hundred people",
+            "consequence_b": "The prosecution proceeds without Morren's cooperation. It succeeds completely on the existing evidence. His sentence is the maximum the Ward law allows for a Class One public health crime. The Vethaan Network intelligence takes Astrid's team six more months to build independently."
+        },
+        {
+            "turn": 14,
+            "narrative": "With Morren sentenced and Coss in a research-cooperation arrangement, the Concordat Epidemiological Research Programme archive becomes the Medical Quarter's most significant immediate asset. Vel \u2014 designated as its first operational director \u2014 begins the systematic review of what the archive contains. The first month's findings are extraordinary: treatment protocols for eight diseases that currently have no effective treatment in the Ward's medical knowledge. Most are rare. Two are not \u2014 one is the primary respiratory illness that kills approximately thirty Ward residents each winter, for which the archive contains a Concordat-era treatment that was never implemented because the Scourge interrupted distribution. Vel's team begins adapting the archive protocol to current Medical Quarter standards. By the following winter, the respiratory treatment is in production. The winter mortality figures, when reviewed the following spring, show a 40% reduction in respiratory-related deaths. Calla, in her patient advocacy role, is one of the first people to receive the adapted treatment when she develops a respiratory infection in December. She recovers completely in four days. She sends Vel a single note: 'Thank you.' Vel is in her office when she receives it. She sits with it for a while before putting it on her desk.",
+            "choice_a": "Publicly announce the archive's therapeutic applications as a Medical Quarter achievement \u2014 the city deserves to know this resource exists",
+            "consequence_a": "The announcement, carefully managed to emphasise the therapeutic applications without revealing the full archive's scope, produces a significant public health response. Demand for the respiratory treatment exceeds initial projections within two weeks.",
+            "choice_b": "Develop the archive's treatments through standard Medical Quarter publication channels without a specific announcement \u2014 let the clinical results speak without political context",
+            "consequence_b": "Vel's approach: methodical, peer-reviewed, without fanfare. The respiratory treatment enters clinical practice without most people knowing where it came from. The winter deaths decline. That is the point."
+        },
+        {
+            "turn": 15,
+            "narrative": "The Plague-Maker's prosecution is complete. The archive is governed. The counter-treatment is ready. The external network is neutralised. The thirty people who were saved by the early counter-treatment \u2014 the ones who contracted a second-wave Rot exposure from residual environmental contamination identified during Vel's post-prosecution cleanup \u2014 will never know that the investigation's speed was the difference between their survival and the alternative. Calla has been asked to speak at a Medical Quarter staff session about her role in the referral fee investigation. She declines, politely but firmly, and suggests instead that Vel speak about the systemic reforms. Vel does. The session is attended by three hundred Medical Quarter staff. She does not mention Calla by name, per their agreement. She describes, in precise clinical terms, what happened, how it was found, and what has changed. At the end of the session, every person in the room knows that a nursing aide stopped something very bad with a folder of patient transfer records and a willingness to go outside the normal channels. Nobody needs to know her name. The Medical Thread is complete. [PERMANENT WORLD EFFECTS]",
+            "choice_a": "Formally commission the Concordat Medical Archive research programme as a permanent Medical Quarter institution",
+            "consequence_a": "Director Sela establishes the Archive Research Division with Vel as its founding director. Coss joins as a supervised research consultant in year two, having completed their initial custody arrangement. Coss is extraordinarily good at the work. Their research under appropriate governance is genuinely valuable.",
+            "choice_b": "Trust the archive to the normal operations of the Medical Quarter and step back \u2014 the system is good now, it doesn't need more governance",
+            "consequence_b": "The Medical Quarter performs this work with exactly the competence it has always had when not corrupted. The archive enriches its practice. In three years, three diseases with no previous treatment have effective clinical protocols. In ten years, six more. The work continues."
+        }
+    ],
+    "branching_outcomes": {
+        "nationalised_prosecution": {
+            "description": "Full prosecution. Archive under Ward-Medical Quarter governance. Coss in research cooperation. Archive Research Division established.",
+            "permanent_world_effects": [
+                "Medical Quarter has access to Concordat-era treatment protocols for 40+ diseases",
+                "Winter respiratory mortality reduced by 40% in first year",
+                "Morren Family prosecuted \u2014 private medical protocol capture as a business model permanently foreclosed",
+                "Calla's patient advocacy function becomes a Medical Quarter permanent institution"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Medical Quarter": 60,
+                    "Lower Ward": 40,
+                    "High Ward": -25
+                },
+                "item_reward": "Plague-Maker's Notes (Legendary Archive Access)"
+            }
+        },
+        "formula_stolen": {
+            "description": "Archive accessed before governance framework. Therapeutic applications deployed immediately but governance follows rather than precedes access.",
+            "permanent_world_effects": [
+                "Archive deployed faster but governance questions persist",
+                "Vel's operational record includes a legally ambiguous access action"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Medical Quarter": 45,
+                    "Lower Ward": 30
+                },
+                "item_reward": "Universal Antidote Formula"
+            }
+        },
+        "conspiracy_joined": {
+            "description": "Player joins Morren's network briefly to gather evidence, then turns on it. Resolution achieved but with reputational and ethical cost.",
+            "permanent_world_effects": [
+                "Prosecution documentation includes player's temporary involvement \u2014 a permanent record",
+                "Morren still convicted but player's credibility as independent investigator is permanently questioned by some"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Medical Quarter": 25,
+                    "Lower Ward": 20,
+                    "High Ward": 15
+                },
+                "item_reward": "Morren's Private Keys (access to external network remnants)"
+            }
+        },
+        "kill_plague_maker": {
+            "description": "Morren killed during confrontation. Prosecution impossible. Archive seized under emergency order. Coss in standard custody.",
+            "permanent_world_effects": [
+                "Morren's death prevents full network exposure \u2014 some Network connections never identified",
+                "Archive governance framework built from scratch without Morren's cooperation",
+                "Coss refuses research cooperation following violent resolution"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Medical Quarter": 35,
+                    "Lower Ward": 25,
+                    "High Ward": -30
+                },
+                "item_reward": "Plague-Maker's Private Journal"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 750,
+            "reputation_change": {
+                "Medical Quarter": -55,
+                "Lower Ward": -45
+            }
+        },
+        "critical_failure": "Dead-man's-switch triggers before it is identified. 'The Seed' deploys a Rot variant outside the Ward. Cross-boundary epidemic. Medical Quarter overwhelmed. Counter-treatment at broad-spectrum confidence level deployed \u2014 85% effective rate means 15% of cases progress. Forty additional deaths. Morren escapes custody during the crisis. The Concordat archive is seized by the Vethaan Network while the Medical Quarter is occupied with the outbreak.",
+        "npc_death_risk": [
+            "Phoss (if Morren's implied-threat associates reach him before Ward protection is invoked)",
+            "Calla (if her identity is exposed before Ward whistleblower protection is invoked)"
+        ]
+    },
+    "permanent_world_effects_universal": [
+        "Crimson Rot fully resolved \u2014 variant neutralised, counter-treatment ready, archive governing future treatment",
+        "Medical Quarter ethics and oversight framework permanently strengthened",
+        "Concordat Epidemiological Research Programme archive formally documented as city heritage resource",
+        "Staged-epidemic as a commercial strategy permanently foreclose by legal precedent"
+    ],
+    "loot_table": [
+        "Plague-Maker's Notes \u2014 Legendary Research Archive (access credential to the Concordat Epidemiological Research Programme; treatment protocols for 40+ historical diseases)",
+        "Universal Antidote (Artifact \u2014 broad-spectrum counter-treatment effective against known pathogen variants in the archive's documented range)",
+        "Phoss's Protected Testimony Record",
+        "Coss's Research Turning Point Documentation",
+        "Calla's Patient Transfer Evidence Dossier (full set)",
+        "2800x Gold Coins"
+    ],
+    "conclusion": "Full prosecution. Archive under Ward-Medical Quarter governance. Coss in research cooperation. Archive Research Division established. Crimson Rot fully resolved \u2014 variant neutralised, counter-treatment ready, archive governing future treatment Medical Quarter ethics and oversight framework permanently strengthened",
+    "permanent_effects": [
+        "Crimson Rot fully resolved \u2014 variant neutralised, counter-treatment ready, archive governing future treatment",
+        "Medical Quarter ethics and oversight framework permanently strengthened",
+        "Concordat Epidemiological Research Programme archive formally documented as city heritage resource",
+        "Staged-epidemic as a commercial strategy permanently foreclose by legal precedent"
+    ]
+}

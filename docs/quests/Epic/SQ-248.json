@@ -1,0 +1,75 @@
+{
+    "id": "SQ-248",
+    "title": "Swarm Tactics",
+    "difficulty": "Epic",
+    "xp_reward": 1000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-247"
+        ]
+    },
+    "location": "North Ward -> The Grain Silos",
+    "district": "North Ward",
+    "thread": "Vermin",
+    "description": "Without the Piper's control, the feral intelligence guiding the Vermin is revealed. A massive, telepathic 'Rat King' is organizing the swarm to attack the city's primary remaining food silos. The party must defend the reinforced steel doors from a sea of gnashing teeth and deal with the monstrous Tunneling-Beast sieging the structure.",
+    "key_npcs": [
+        "Militia Defenders",
+        "Vermin Vanguard"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The agricultural silos are under a horrific siege. A literal sea of grey fur and snapping, diseased teeth is mindlessly gnawing through the reinforced lower steel doors of the primary grain reserve. The sheer volume of the swarm is deafening, a chittering roar that vibrates the stone beneath your boots.",
+            "choice_a": "Electrify the steel doors from the inside (Tinker DC 13)",
+            "consequence_a": "You strip the heavy mana-cables and permanently fuse them to the iron hinges. Thousands of rats are fried instantly in a blinding flash of ozone, stopping the frontal assault completely dead.",
+            "choice_b": "Open the doors and funnel them into a brutal melee chokepoint",
+            "consequence_b": "You heave the doors open, bracing behind heavy shields. It is a grueling, bloody battle lasting hours in the cramped entryway. You hold the line, but the defending militia suffers heavy, horrific casualties.",
+            "convergence": "The Vanguard is pushed back, their numbers thinned, but a massive tremor shakes the very foundation of the silo from the eastern wall."
+        },
+        {
+            "turn": 2,
+            "narrative": "A monstrous Vermin Tunneling-Beast\u2014a horrific, blind mutation the size of a siege engine\u2014crest the surface, its heavy digging claws violently attempting to break the silo open entirely from the vulnerable side wall.",
+            "choice_a": "Throw a satchel charge into its open maw (Dex DC 14)",
+            "consequence_a": "You pull the pin and vault off a rusted wagon, hurling the explosive deeply down its throat. The beast explodes violently from within, raining gore and severing the spine of the assault.",
+            "choice_b": "Use heavy siege ballistae to pin it to the ground (Ranged Attack AC 12)",
+            "consequence_b": "You quickly crank the heavy platform ballista and fire a massive iron bolt directly through its shoulder. The beast is pinned securely to the cobblestone, bleeding out slowly while you finish it cleanly with a heavy lance.",
+            "convergence": "With the siege-beast dead and the swarm broken, the silos finally fall silent, securing the last remnants of the Ward's desperately needed winter harvest."
+        }
+    ],
+    "branching_outcomes": {
+        "silos_saved_electric": {
+            "description": "You electrified the doors and killed the tunneling beast, saving the grain flawlessly.",
+            "unlocks": [
+                "SQ-249"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "North Ward": 30
+                }
+            }
+        },
+        "silos_saved_messy": {
+            "description": "You saved the grain, but lost many militiamen in a prolonged melee.",
+            "unlocks": [
+                "SQ-249"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "North Ward": 5
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Tunneling-Beast Fang",
+        "500x Gold Coins"
+    ],
+    "conclusion": "The silos are saved and the massive Tunneling-Beast lies dead. The desperate siege proves the vermin are not just surviving; they are actively attempting to starve the remaining human population of EmberHeart out of the city entirely.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

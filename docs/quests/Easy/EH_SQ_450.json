@@ -1,0 +1,80 @@
+{
+    "id": "EH_SQ_450",
+    "title": "The Argument of Saints",
+    "difficulty": "Easy",
+    "xp_reward": 420,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_449"
+        ],
+        "items_required": []
+    },
+    "location": "Temple District -> The Hall of Six Faiths",
+    "district": "Temple District",
+    "thread": "Concordat",
+    "description": "The annual Hall of Six Faiths interfaith ceremony has deteriorated into a public shouting match between the Concordat remnant faction and the newer Order of the Veil. Both groups claim the Hall's central prayer space as their liturgical home. Temple Authority Warden Gais asks you to mediate before the argument turns physical.",
+    "key_npcs": [
+        "Concordat Leader Elder Noss",
+        "Order of the Veil Leader Priestess Yael",
+        "Warden Gais"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "When you arrive, Elder Noss and Priestess Yael are three feet apart, both speaking loudly and simultaneously to different parts of the crowd. About forty worshippers are watching. No violence but the tension is thick enough to cut.",
+            "choice_a": "Step physically between them and call for an immediate pause",
+            "consequence_a": "Surprised by the sheer confidence of the intervention, both pause. The crowd is watching you now.",
+            "choice_b": "Speak first to Warden Gais to understand the historical allocation of Hall space",
+            "consequence_b": "Gais confirms: the central prayer space has no formal allocation \u2014 it was simply first-come-first-served, which has now failed."
+        },
+        {
+            "turn": 2,
+            "narrative": "Both factions have genuine grievances. The Concordat has historical precedence in this hall. The Order of the Veil has more current worshippers by a significant margin.",
+            "choice_a": "Propose alternating use by ceremony type \u2014 the Concordat uses the space for memorial ceremonies, the Order for public services",
+            "consequence_a": "After an hour of careful negotiation, both leaders grudgingly accept the arrangement.",
+            "choice_b": "Propose a joint ceremony format that incorporates elements from both traditions",
+            "consequence_b": "Elder Noss is deeply resistant. But when Priestess Yael agrees to incorporate a Concordat candle-lighting rite into Order services, Noss visibly softens."
+        },
+        {
+            "turn": 3,
+            "narrative": "Gais asks you to help document the agreement formally to prevent future disputes.",
+            "choice_a": "Draft a formal Hall Allegiance Charter that both leaders will sign publicly",
+            "consequence_a": "The signing ceremony becomes a positive public event. Citizens from both faiths attend and applaud.",
+            "choice_b": "Simply verbally witness the agreement and ask Gais to log it in Authority records",
+            "consequence_b": "Gais logs it. The agreement holds but has no ceremony to embed it in community memory."
+        }
+    ],
+    "branching_outcomes": {
+        "charter_signed": {
+            "description": "Formal interfaith charter signed publicly.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Hall of Six Faiths Charter Copy",
+                "reputation_change": {
+                    "Temple District": 20
+                }
+            }
+        },
+        "agreement_logged": {
+            "description": "Agreement logged in Authority records.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 12
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Hall of Six Faiths Charter Copy",
+        "Interfaith Ceremonial Candle",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Formal interfaith charter signed publicly."
+}

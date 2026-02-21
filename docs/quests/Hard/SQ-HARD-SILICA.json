@@ -1,0 +1,250 @@
+{
+    "id": "SQ-HARD-SILICA",
+    "title": "The Silica-Vent War",
+    "difficulty": "Hard",
+    "xp_reward": 2300,
+    "thread": "Ridge",
+    "district": "Ridge",
+    "estimated_duration": "3-4 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-015"
+        ],
+        "items_required": [],
+        "district_reputation": {
+            "Ridge": 40
+        },
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete SQ-15 and hold 40+ Ridge reputation",
+    "location": "Ridge geothermal complex \u2014 the Silica-Vent network, evacuation corridors, and the Glass-Widow's Forge-Sanctum",
+    "npcs": [
+        {
+            "name": "The Glass-Widow",
+            "role": "Boss (3-phase)",
+            "description": "A Ridge chemist who weaponized Glass-Lung disease after losing her family to it. She does not consider herself monstrous. She considers herself the only person who understood the disease well enough to leverage it. In Phase 1 she is a calculating, glass-sharded human combatant. In Phase 2 her own experimental treatment has begun consuming her. In Phase 3 she is no longer human \u2014 a silica elemental who has forgotten her name, though fragments of her purpose remain."
+        },
+        {
+            "name": "Foreman Dreck Hault",
+            "role": "Allied civilian commander",
+            "description": "Veteran Ridge foreman coordinating the civilian evacuation. Pragmatic, refuses to leave anyone behind, will clash with the party if they pursue tactics that risk civilian lives. His people have been breathing the silica-clouds for weeks and many are already infected."
+        },
+        {
+            "name": "Warden-Scout Tela Voss",
+            "role": "Allied combatant",
+            "description": "Warden-Keep's advance scout sent to assess the situation. She has combat training and knowledge of the geothermal complex's structural weak points. She wants the Glass-Widow captured alive for trial \u2014 the Warden-Keep has legal jurisdiction over Ridge and will not accept summary execution."
+        }
+    ],
+    "description": "The Glass-Widow has been weaponizing the Ridge's silica-vent network for months, converting her Glass-Lung research from a cure-project into a weapon. She has created an army of Glass-Lung infected soldiers \u2014 Ridge miners and workers in advanced stages of the disease, whose silica-crystallized lung tissue has made them pain-resistant, silica-breathing, and controllable through resonance frequencies she broadcasts from her Forge-Sanctum. The infected are not undead and are not fully willing \u2014 they are people, still alive, in terrible pain, conscious enough to know what is happening to them. The geothermal complex is becoming uninhabitable as she redirects the silica-vent pressure to create choking clouds across the evacuation routes. The party arrives as the civilian evacuation is failing and the Glass-Widow's army is beginning its march toward the Ridge's inhabited districts.",
+    "mechanics": [
+        "Athletics/Constitution (navigate silica-cloud terrain; Silica-Cloud exposure DC 14 CON save each round in vent-corridor areas or gain one Silica-Exposure level; three levels = Glass-Lung infected)",
+        "Medicine (stabilize Glass-Lung infected; identify potential treatment using Silica-Cure Formula components in the complex)",
+        "Arcana/Engineering (redirect geothermal vent pressure to clear evacuation routes; overload vent sections to create barriers against the infected army)",
+        "Leadership (command civilian evacuation groups; keep Foreman Hault's workers coordinated under pressure)",
+        "Combat - Phase 1: Glass-Widow (Human form, glass-shard projectiles, tactical combatant; AC 16, HP 120; Silica-Storm ability - 30ft cone of crystallized silica, DC 15 DEX for half 4d8 piercing damage)",
+        "Combat - Phase 2: Glass-Widow Hybrid (AC 18, HP 180; glass-body immune to piercing; Crystallize ability - ranged touch DC 14 CON or target's movement halved for 1 minute as joints crystallize)",
+        "Combat - Phase 3: Pure Silica-Elemental (AC 20, HP 240; immune to non-magical physical; Vent-Surge ability - pulls geothermal silica through floor, 60ft radius eruption 6d10 piercing; vulnerable to water/cold damage)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Glass-Widow killed",
+            "effect": "settlement_stability +3; Ridge district cleared; cure formula must be reconstructed from research notes (partial cure available within 6 months)"
+        },
+        {
+            "trigger": "Glass-Widow captured for trial",
+            "effect": "settlement_stability +2; settlement_morale +2; full cure formula obtained immediately from her cooperation; Ridge district cleared but Warden-Keep trial becomes major political event"
+        },
+        {
+            "trigger": "Glass-Widow escapes in exchange for cure formula",
+            "effect": "settlement_stability +1; settlement_morale -1; immediate full cure formula; Glass-Widow becomes a recurring threat elsewhere; Ridge cleared but faction relationships strained"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Ridge's evacuation sirens started four hours ago and haven't stopped. Foreman Hault meets the party at the lower access gate with blood on his jacket and a very precise summary of the situation: seventeen evacuation groups, roughly 400 people, scattered across the complex's six inhabited sectors. The Glass-Widow's infected army is blocking routes 2, 4, and 7. The silica-cloud pressure from the redirected vents is already at dangerous concentration in sectors 3 and 5. He has twelve able workers left who aren't showing Glass-Lung symptoms. Scout Voss is already inside, she went in forty minutes ago, and he hasn't heard from her since. The party has the complex schematics \u2014 from here, they need to decide what they're securing first: the evacuation routes or the vent-pressure control systems.",
+            "choice_a": "Prioritize vent-pressure control \u2014 clearing the silica-clouds buys time for all evacuees",
+            "consequence_a": "Vent control is in sector 3 (already cloud-heavy); CON save DC 14 for every minute in the corridor. Resetting the pressure clears routes 3 and 5 for evacuation. Two of the twelve workers must be directed here, removing them from evacuation assistance. This takes 20 minutes of in-fiction time before the clouds thin.",
+            "choice_b": "Prioritize direct evacuation \u2014 get people out on the routes that are still clear",
+            "consequence_b": "Routes 1, 3, and 6 are still passable. Hault's twelve workers can shepherd 3 evacuation groups (approximately 70 people) to safety before the clouds become critical in those routes too. The remaining evacuees are deeper in the complex and will need the party to fight through to reach them.",
+            "convergence": "Either choice establishes the party's operational role: environmental control or direct extraction. The Glass-Widow's infected are aware of both approaches and will concentrate force accordingly."
+        },
+        {
+            "turn": 2,
+            "narrative": "Warden-Scout Voss makes contact \u2014 her signal mirrors are still working in the complex. Her report, in abbreviated flash-code from two sectors over: she has found the Glass-Widow's command position (the old Forge-Sanctum at the complex's thermal core), and she has found something she wasn't expecting. The infected soldiers blocking the evacuation routes are not aggressive by default. They are stationed. They are holding positions rather than advancing, which means the Glass-Widow is maintaining formation discipline. They respond to the resonance frequency she's broadcasting, and Voss has identified the broadcast tower's location near the sanctum. If the broadcast tower can be disrupted, the infected lose coordination. But disrupting it will also signal the Glass-Widow that someone capable has entered the complex.",
+            "choice_a": "Disrupt the broadcast tower \u2014 accept the signal trade, gain tactical advantage over the infected",
+            "consequence_a": "The infected soldiers decohere \u2014 they lose formation discipline and become individually disoriented rather than coordinated. Evacuation routes 2 and 4 can be forced with moderate combat opposition. The Glass-Widow accelerates her timeline: the party loses 10 minutes before she locks down the Forge-Sanctum completely.",
+            "choice_b": "Leave the broadcast tower intact \u2014 approach the Forge-Sanctum covertly, disrupting it at the last moment",
+            "consequence_b": "Stealth approach to the Forge-Sanctum (Stealth DC 15; the infected soldiers are scanning for intruders but following patrol routes). Arriving at the Sanctum gives the party a surprise round in Phase 1 combat. The evacuation routes remain contested throughout.",
+            "convergence": "The Glass-Widow is aware she has organized opposition within the complex by end of turn 2. How much she knows shapes the Phase 1 encounter's opening conditions."
+        },
+        {
+            "turn": 3,
+            "narrative": "Two evacuation groups are in crisis \u2014 the infected soldiers have passive awareness from the Glass-Widow's resonance and have begun drifting toward civilian noise. Hault's voice, over the signal relay: 'Sector 4, group 9, thirty-one people including six children and four infirm workers \u2014 the infected have cut off their route and they're pinned in the structural bay.' These are real people, and from the party's position they can see the infected moving in the sector 4 corridor: twelve people in various stages of Glass-Lung's crystallization, moving with the stiff, effortful gait of bodies that have been changed against their will. They are not attacking yet. They are forming a wall. The party must get through them without knowing if the infected inside can be reasoned with or are beyond reach.",
+            "choice_a": "Attempt to communicate with or reason with the infected \u2014 they may retain enough awareness",
+            "consequence_a": "Medicine DC 13 to identify an infected individual who appears less crystallized (earlier stage). Persuasion DC 16 against the Glass-Widow's resonance control. On success: one infected individual breaks formation briefly, creating a gap and a moment of confused, anguished eye contact with a nearby civilian they recognize. The infected cannot speak clearly through crystallized throat tissue but the gap holds for 30 seconds \u2014 enough to move the evacuation group through.",
+            "choice_b": "Force through with non-lethal combat \u2014 fight the infected without killing them",
+            "consequence_b": "Non-lethal combat against twelve partially-crystallized opponents: AC 13, HP 35 each, resistant to piercing damage. They are not trying to kill \u2014 they are trying to hold position. Non-lethal takedowns are possible. This takes 4 rounds and costs resources. No infected die. Evacuation group 9 is extracted.",
+            "convergence": "The evacuation group is secured. The infected soldiers incapacitated or bypassed. But the party has now engaged directly with the human cost of the Glass-Widow's work \u2014 these are people, and whatever happens in the Forge-Sanctum, the infected soldiers are victims first."
+        },
+        {
+            "turn": 4,
+            "narrative": "Sector 5's silica-cloud density has hit critical before the vent controls were fully reset. Three evacuation groups in that sector are taking Silica-Exposure damage \u2014 the cloud is opaque and bitter, and breathing it coats the throat within minutes. Hault's workers have emergency filtered masks for 20 people; there are 58 in sector 5. The party can requisition whatever resources they have to address this: the complex's old chemical-processing bay (sector 5, adjacent) has large drums of water-slurry solution used in mining suppression, which can temporarily neutralize silica-cloud density if deployed. Getting to the bay through the cloud requires full CON save exposure. The alternative is directing all 20 filtered masks to the most vulnerable evacuees and accepting that 38 adults will take one level of Silica-Exposure during extraction.",
+            "choice_a": "Fight to the chemical bay \u2014 neutralize the cloud with slurry deployment",
+            "consequence_a": "Two party members take full cloud exposure (CON save DC 14 per minute in transit, three minutes of movement). On arrival, an Engineering DC 13 check to deploy the slurry correctly. Success clears the sector 5 cloud. All 58 evacuees extracted without Silica-Exposure. Party members may have accumulated exposure levels.",
+            "choice_b": "Distribute the 20 masks to children and infirm workers; extract quickly",
+            "consequence_b": "Fast extraction \u2014 15 minutes. 38 adults take one Silica-Exposure level each. None progress to Glass-Lung (one level is treatable with rest and time). No party member exposure required. The sector 5 extraction is complete but 38 people need medical attention afterward.",
+            "convergence": "Sector 5 is evacuated. The party's resource state going into the Forge-Sanctum reflects accumulated exposure from the complex traversal."
+        },
+        {
+            "turn": 5,
+            "narrative": "Voss has reached the Forge-Sanctum's outer ring and is providing tactical relay. Her description: the Glass-Widow is in the central chamber, which is a working thermal forge venting upward into the vent system \u2014 the mechanism she has been using to pump silica into the complex. The sanctum has three access points: a worker's maintenance corridor (concealed, tight, CON save territory), the main forge entrance (defended by six infected guard-soldiers, the most heavily crystallized individuals the party has seen \u2014 these are final-stage Glass-Lung, and these six are not capable of independent reason anymore), and a vent-shaft access that drops into the sanctum from above (Acrobatics DC 16, no opposition). Voss is holding position at the vent shaft. She will cover the party's entry from her position but will not enter until she understands the party's capture-vs-kill intent.",
+            "choice_a": "Enter through the vent shaft \u2014 aerial approach, limited opposition",
+            "consequence_a": "Acrobatics DC 16. Success: drop into the Forge-Sanctum's upper gallery. The Glass-Widow is below, at the forge controls. Surprise round possible against Phase 1. Voss follows. The six guard-soldiers are positioned at the main entrance and do not immediately register the aerial entry.",
+            "choice_b": "Enter through the maintenance corridor \u2014 concealed approach, take the Glass-Widow off-guard at ground level",
+            "consequence_b": "CON save DC 14 for each party member (silica-rich maintenance corridor). Stealth DC 13. Success: approach within 30 feet of the Glass-Widow before she registers the party. No surprise round but the six guard-soldiers at the main entrance are not in position to respond for the first two rounds of combat.",
+            "convergence": "Phase 1 combat begins. The Glass-Widow turns, and the party sees her clearly for the first time: a lean, glass-flecked figure in modified protective gear, with a calm expression that suggests she expected this. 'I wondered when someone capable would arrive,' she says. 'Let's see which of you is fast enough to matter.'"
+        },
+        {
+            "turn": 6,
+            "narrative": "PHASE 1 \u2014 The Glass-Widow (Human Form). She fights with precise, clinical efficiency: glass-shard projectiles launched from a chest-mounted pressurized dispenser (range 60 feet, 3d8 piercing per hit, bonus action reload), and a melee glass-blade that extends from her forearm housing. Her Silica-Storm ability (3/day) releases a cone of crystallized silica from the forge vents she controls. She uses the forge's terrain \u2014 elevated catwalks, heat-shimmer zones that impose disadvantage on ranged attacks targeting her, and the six guard-soldiers if the party didn't neutralize the main entrance approach. She is not monologuing. She is fighting. Between combat rounds, in the brief pauses, she is clearly calculating something \u2014 looking at the party's resources, adjusting her approach. At 60 HP remaining, she says, flatly: 'I see you understand what you're doing. Good. Then you understand I can't stop.' She triggers Phase 2.",
+            "choice_a": "Press the attack aggressively \u2014 keep her from reaching Phase 2 transition safely",
+            "consequence_a": "If the party deals 20+ damage in the round she attempts the Phase 2 trigger, the transition is disrupted \u2014 she takes the Phase 2 crystallization but with 20 fewer HP and without her full Crystallize ability activating (cooldown 3 rounds). DC 15 Athletics or Arcana to interrupt the forge-channel mechanism she's using for the transformation.",
+            "choice_b": "Pull back and reassess when she begins the transition \u2014 let her transform rather than fight through it",
+            "consequence_b": "The Phase 2 transition completes without interruption. The Glass-Widow's form cracks and reshapes as silica floods her body from the forge-channel. She is significantly more dangerous but the party has not expended resources fighting the transition. Full Phase 2 stats activate.",
+            "convergence": "Phase 2 begins. The Glass-Widow's human form is gone \u2014 she is a crystalline-glass hybrid, taller than before, her voice now resonating through silica vibration. She is still coherent. She is still herself. But she is in visible pain and not acknowledging it."
+        },
+        {
+            "turn": 7,
+            "narrative": "PHASE 2 \u2014 Glass-Widow Hybrid. She is immune to piercing damage (glass-body deflects projectiles) and resistant to slashing. Her Crystallize ability (melee or ranged touch, 30 feet, DC 14 CON or target's movement speed halved for 1 minute). She can absorb silica-cloud from the forge atmosphere and release it as a burst (30-foot radius, DC 14 CON or one Silica-Exposure level). Her HP is 180 and she regenerates 10 HP per round while within the forge-vent area. The forge-vent mechanism that is feeding her regeneration can be disrupted with an Engineering/Arcana DC 14 action (destroys the vent feed, ends regeneration, and also permanently frees the six guard-soldiers from resonance control \u2014 they collapse, gasping, themselves again). At 90 HP remaining, Phase 2 has a revelation: she stops, mid-combat, and says something unexpected.",
+            "choice_a": "Stop attacking when she pauses \u2014 listen",
+            "consequence_a": "She says: 'The cure formula is in the secondary lab, vault 7-B. I will give you the access code if you promise to use it on my people first. Before anything else happens.' She names a number of infected individuals by name \u2014 workers she knows personally. 'They trusted me. They got the disease because of working conditions my research was supposed to fix. I owe them.' She is giving the party something. This is not a trap. She resumes fighting immediately after.",
+            "choice_b": "Keep the pressure on \u2014 don't let her dictate the tempo of combat",
+            "consequence_b": "Phase 2 continues without the revelation dialogue. The cure formula's vault location must be found through Investigation DC 15 after the encounter \u2014 it exists but locating it takes time. The Glass-Widow's personal motivation is not communicated directly.",
+            "convergence": "Phase 2 resolution triggers when the Glass-Widow reaches 30 HP or the party successfully disrupts the forge-vent feed. At this point, something goes wrong with her experimental treatment. The Phase 3 transformation is not a choice she makes. It is a failure."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Phase 3 transformation is not controlled. The Glass-Widow's crystalline form fractures along stress lines the party can see forming as the combat has damaged her experimental treatment housing \u2014 the implanted device that was supposed to keep her hybrid form stable and conscious. It shatters. What comes through the forge floor is pure silica elemental: the human-shaped outline is still roughly present, a ghost-form of her standing in the center of a 20-foot silica construct of living geothermal glass. She is in there. Whether she is aware is unclear. The forge-sanctum is now genuinely dangerous terrain: the silica elemental's Vent-Surge ability can pull geothermal material through the floor, and the forge's own systems are starting to cascade. The party has approximately 15 combat rounds before the sanctum's structural integrity fails and the entire vent network collapses \u2014 which would clear the complex of silica permanently but also bury everything and everyone in immediate proximity.",
+            "choice_a": "Fight to kill \u2014 focus everything on the elemental form, accept the structural risk",
+            "consequence_a": "Full combat against Phase 3 (AC 20, HP 240, immune to non-magical physical, vulnerable to water/cold). Vent-Surge activates on initiative 20 each round (DC 15 DEX to avoid, 6d10 piercing). If the elemental is destroyed before structural collapse: the Glass-Widow's human consciousness does not survive the elemental's destruction at this stage. She is gone. The cure formula from vault 7-B is the legacy.",
+            "choice_b": "Attempt to reach the human consciousness inside the elemental \u2014 call to her, use what she revealed in Phase 2",
+            "consequence_b": "Charisma/Persuasion DC 18 (very hard \u2014 the elemental is not fully coherent) or DC 14 if the party addresses her by name and references the workers she named. On success: the human consciousness fragments surface. She has enough control to partially arrest the Vent-Surge for 3 rounds. She cannot return to human form. But she can choose her ending.",
+            "convergence": "Phase 3 resolution determines the Glass-Widow's fate and Ridge's future. The structural cascade timer is still running regardless."
+        },
+        {
+            "turn": 9,
+            "narrative": "Structural cascade warning \u2014 Foreman Hault's voice on the relay: 'Something's wrong with the deep vents. The thermal readings are going critical. How long do you need?' The party has approximately 8 minutes before the forge-sanctum becomes non-survivable for humans. The infected soldiers throughout the complex have been affected by the Phase 3 event \u2014 with the resonance tower compromised and the Glass-Widow fully non-human, the control frequency has become erratic. The infected are disoriented, some of them moving toward the Forge-Sanctum as though drawn by the elemental's presence. The last evacuation group \u2014 23 people from sector 6 \u2014 is not yet clear. The party must decide resource allocation: continue fighting the elemental (full combat focus) or split resources to extract the last evacuation group while someone holds position in the Forge-Sanctum.",
+            "choice_a": "Split party \u2014 half to the final evacuation, half to hold the Forge-Sanctum",
+            "consequence_a": "The evacuation group is extracted with careful combat management (Athletics DC 12, one infected confrontation). The Forge-Sanctum fight continues at reduced party capacity \u2014 the elemental has a better chance of triggering Vent-Surge during the reduced-focus rounds. But all 400 evacuees will be clear before the structural collapse.",
+            "choice_b": "Prioritize ending the elemental immediately \u2014 complete combat before the structural window closes",
+            "consequence_b": "Full party in the Forge-Sanctum. The elemental is resolved faster. But the last evacuation group of 23 cannot be extracted without party backup \u2014 Hault will attempt it with his remaining workers, Athletics and Leadership DC 14. On success: all 23 extracted. On failure: the group retreats to a structural shelter and is recovered after the collapse from a safe pocket.",
+            "convergence": "The evacuation situation has a definitive status. The Forge-Sanctum is approaching structural failure. The Glass-Widow \u2014 in whatever form her Phase 3 resolution took \u2014 is at the decision point."
+        },
+        {
+            "turn": 10,
+            "narrative": "The branching resolution of the Glass-Widow's fate. If the party reached her human consciousness in Phase 3: she is partially coherent, aware she cannot survive, and she makes a choice. She can direct the elemental form to drive itself into the deep-vent structure, sealing the geothermal silica permanently \u2014 Ridge becomes immediately safe, the whole vent-weapon destroyed from within, and the cure formula is in vault 7-B. This is her offering. She does not ask for anything in return. The elemental does not survive the deep-vent immersion. If combat ended in her destruction: the elemental's collapse is an explosion of silica-glass across the Forge-Sanctum, and the party must make DC 14 DEX saves or take 4d10 piercing damage. Either way, the forge-sanctum's structural failure countdown is now measured in minutes.",
+            "choice_a": "[If consciousness reached] Accept her offering \u2014 let her seal the vents from within",
+            "consequence_a": "The Glass-Widow-as-elemental descends into the deep-vent structure. The silica-cloud throughout the complex begins thinning immediately \u2014 the geothermal feed is being sealed. The process takes 4 minutes. The elemental does not return. The party has a window to exit. Cure formula obtained from vault 7-B. Ridge is immediately safe. permanent_effect: Ridge clears completely; full cure for all infected; Glass-Widow gone but not by the party's hand; no trial.",
+            "choice_b": "[If consciousness reached] Try to capture her instead \u2014 the Warden-Keep's trial matters",
+            "consequence_b": "The elemental form cannot be constrained at this stage. Voss, if present in the Forge-Sanctum, says quietly: 'She's already gone. Let her do this.' Accepting the offering is the only viable path. The trial option is only available if Phase 2 ended with capture before Phase 3 triggered.",
+            "convergence": "The Glass-Widow's arc is resolved. The party has approximately 3 minutes to exit the Forge-Sanctum before structural collapse of the central chamber."
+        },
+        {
+            "turn": 11,
+            "narrative": "Egress from the Forge-Sanctum. Three minutes, structural collapse of the central forge chamber imminent. The maintenance corridor, the vent-shaft, and the main entrance are all still viable exit routes, but the thermal stress is cracking the floors and the ceiling of the central chamber is shedding glass. Athletics DC 12 to navigate the egress under pressure; on failure, the character is caught in falling glass debris for 2d8 piercing damage but can still exit. Voss pulls an injured party member through if one goes down \u2014 she is professionally capable and is already heading for the exit. Foreman Hault's voice, on the relay, counting down from outside: 'You have three minutes. Two minutes fifty. Two forty.' He is calm. He has evacuated mines before. He is counting because people need to hear a voice.",
+            "choice_a": "Retrieve the cure formula from vault 7-B on the way out \u2014 it was identified by the Glass-Widow",
+            "consequence_a": "Vault 7-B is on the egress route (30-second detour). Sleight of Hand or Athletics DC 12 to manage the route under structural stress. The formula is a sealed glass vial with attached documentation in the Glass-Widow's handwriting. It survives intact if the check succeeds.",
+            "choice_b": "Straight egress \u2014 prioritize exit, retrieve the formula later from the collapsed debris",
+            "consequence_b": "Clean exit. The formula is in the collapsed area but the vault is structurally reinforced \u2014 Investigation DC 14 in the debris field two days later recovers it intact.",
+            "convergence": "The party exits the Forge-Sanctum into the main complex corridor. Behind them, the central forge chamber collapses inward in a muffled series of stress-fracture sounds rather than an explosion. No dramatic fireball. Just closure."
+        },
+        {
+            "turn": 12,
+            "narrative": "The complex, 30 minutes after the Glass-Widow's resolution: the silica-cloud is dispersing. The complex's natural air circulation, freed from the redirected vent pressure, is pulling the clouds toward the exterior exhausts. Foreman Hault's final tally: 398 of 400 evacuees accounted for (two were in the deep sector 6 shelter; Hault's workers are extracting them now). The infected soldiers \u2014 all of them \u2014 are sitting, kneeling, or lying down across the complex. Some are unconscious. Some are crying. Several are trying to speak around crystallized throat tissue. They are alive. They need immediate medical attention. The cure formula, if the party has it, provides a complete treatment course for fully-infected individuals: three-week recovery period, significant discomfort, but complete reversal of the silica-crystallization in 80% of cases. The other 20% will have partial glass-tissue as a permanent condition \u2014 visible, functional, not dangerous.",
+            "choice_a": "Begin immediate triage \u2014 organize treatment for the infected soldiers first (the Glass-Widow's stated priority)",
+            "consequence_a": "Medicine DC 11 to begin distributing the formula per the Glass-Widow's documentation. Hault's workers assist. The infected soldiers receive first-course treatment within the hour. Settlement morale +3 from the visible care of people the city had written off. The Glass-Widow's stated priority was honored.",
+            "choice_b": "Prioritize the civilian evacuees who were exposed during extraction \u2014 treat them before the soldiers",
+            "consequence_b": "The civilian-exposed individuals receive treatment first (all at level 1 or 2 exposure, easy recovery). The infected soldiers receive treatment in the second wave \u2014 an additional 90-minute delay. No clinical difference in outcome for the soldiers, but several of them are aware of the ordering, and one of them \u2014 the early-stage individual the party may have communicated with in turn 3 \u2014 holds eye contact with the party for a moment before looking away.",
+            "convergence": "Treatment begins. The cure formula is active. The infected will recover. Ridge's immediate crisis is resolved."
+        },
+        {
+            "turn": 13,
+            "narrative": "Warden-Scout Voss's after-action obligation: she needs to file a report to Warden-Keep that explains the Glass-Widow's fate. The trial option is off the table. Voss knows this and is not upset about it \u2014 she is a pragmatist and she was in the Forge-Sanctum. But the report must characterize the resolution accurately. She asks the party directly: 'How do you want me to write this?' The options are not fabrication \u2014 they are framing. 'Subject terminated during combat operations' is accurate. 'Subject sacrificed herself to neutralize the vent-weapon' is also accurate. 'Subject's experimental self-treatment resulted in terminal phase failure; remains unrecoverable' is accurate. The framing determines the Glass-Widow's historical record in Warden-Keep's documentation, and whether the Ridge's surviving residents ever get a version of events they can live with.",
+            "choice_a": "Ask Voss to write the accurate, full-context version \u2014 sacrifice framing, with the workers named",
+            "consequence_a": "The Warden-Keep report documents the Glass-Widow's sacrifice and her final act of directing the cure formula's location. The survivors receive the full account. Several infected soldiers request copies of the report. The Glass-Widow becomes a complicated historical figure \u2014 not a hero, not a villain, not easily filed. Settlement morale improves because the Ridge's survivors have the truth.",
+            "choice_b": "Keep the report minimal \u2014 combat-terminated, no additional framing",
+            "consequence_b": "Clean institutional record. The survivors don't get the context. The Glass-Widow is logged as a threat neutralized. The party holds the fuller version. Voss does not press this choice \u2014 the Warden was going to ask fewer questions about a clean report anyway.",
+            "convergence": "The historical record is set. The Glass-Widow's legacy in Ridge's institutional memory is either the full story or the simplified one."
+        },
+        {
+            "turn": 14,
+            "narrative": "The Ridge complex three days later: the geothermal vent network, with the deep-vent sealed by the Glass-Widow's elemental form, is operating safely for the first time in years. The silica-cloud that had been a background fact of Ridge life for two decades is measurably reduced. Foreman Hault's engineering assessment: the sealed deep-vent has eliminated the primary source of excess silica in the atmosphere. The ambient Glass-Lung risk in Ridge is reduced to pre-industrial occupational levels \u2014 still present, but no longer the epidemic risk it has been. The Geothermal Core artifact \u2014 the stabilizer crystal at the heart of the vent-control mechanism, recovered from the Forge-Sanctum's debris field \u2014 is intact and is now the most precisely calibrated geothermal management artifact known to exist in EmberHeart. Hault wants it used to permanently improve Ridge's thermal management. The party has it.",
+            "choice_a": "Give the Geothermal Core to Hault and Ridge's engineering division for permanent installation",
+            "consequence_a": "Ridge's geothermal management improves permanently \u2014 settlement stability +2, Ridge district produces 15% more safe thermal energy for the city. Hault's team will study it and implement it within three months. The party gains Hault's personal gratitude and Ridge faction standing.",
+            "choice_b": "Keep the Geothermal Core as a party artifact for future use",
+            "consequence_b": "The Core is a Legendary artifact (detailed in loot table). Ridge misses out on its permanent installation benefit but manages with the vent-sealing's baseline improvement. Hault is disappointed but professional about it.",
+            "convergence": "Ridge's long-term trajectory is established. The district is on a recovery path for the first time in recorded memory."
+        },
+        {
+            "turn": 15,
+            "narrative": "The settlement-wide reckoning: Ridge's 20% permanently glass-tissue patients. They are visible. They move differently. In good light, the glass-tissue catches and refracts \u2014 some of them are, objectively, beautiful in a way that has nothing to do with beauty they chose. The city has not yet decided what to do with them politically or socially: are they Ridge workers who are fully recovered from an occupational incident, or are they marked by what happened to them? Hault's answer to this question is the same answer he gives to every workforce integration question \u2014 they go back to work when they're cleared by Medicine DC 10, they get the same rate, and anyone who has a problem with it can file a formal complaint. Nobody files a formal complaint. The Ridge Thread has reached its resolution. The Glass-Widow's work \u2014 her research, her weaponized disease, and her final act \u2014 has reshaped the district permanently. The party stands in the Ridge's central concourse and watches workers return to their shifts, glass-tissue and all, moving through air that is cleaner than it has been in two decades.",
+            "choice_a": "Establish a formal relationship with Hault's Ridge engineering division going forward",
+            "consequence_a": "The party gains Ridge as an ongoing allied district. Hault's division will provide geothermal engineering assistance for any future city infrastructure challenge. settlement_stability +1. Ridge residents recognize party members and will assist with shelter, information, and equipment.",
+            "choice_b": "Mark the Glass-Widow's Forge-Sanctum as a memorial rather than a salvage site",
+            "consequence_b": "Hault agrees and implements it: the sealed Forge-Sanctum entrance is marked. No formal cenotaph \u2014 just a Foreman's notation on the complex map: 'Sealed vent. Site of resolution, Glass-Lung crisis. D.W.' The Ridge workers know what the notation means. settlement_morale +1 from the acknowledgment.",
+            "convergence": "Quest complete. Ridge Thread resolved. The Glass-Widow's war is over. The district is recovering. The infected are being treated. The deep-vents are sealed. What remains is the long, undramatic work of rebuilding a district that spent twenty years under a cloud \u2014 literal and otherwise."
+        }
+    ],
+    "conclusion": "The Silica-Vent War resolves the Ridge Thread's central crisis and the Glass-Widow's arc. She was never simply a villain \u2014 she was a researcher who understood the disease she was supposed to be curing, made a monstrous choice about how to use that understanding, and in the end used the elemental form she became to seal the source of the disease permanently. The party's handling of the infected soldiers, the cure formula, and the Geothermal Core shapes Ridge's recovery trajectory. The 20% with permanent glass-tissue are the living reminder that 'resolved' and 'clean' are not synonyms.",
+    "loot_table": [
+        "Glass-Widow's Mask (Legendary; recovered from the Phase 2 combat area before Phase 3; carved from Forge-glass, hardened in silicant thermal process; grants: immunity to Silica-Exposure, 3/day Silica-Storm ability identical to the Glass-Widow's own, passive resistance to piercing damage while worn)",
+        "Silica-Cure Formula (complete research documentation in the Glass-Widow's handwriting; provides full cure for Glass-Lung at any stage; can be replicated by any Medicine DC 15 practitioner from the documentation; one of the most valuable medical documents in EmberHeart)",
+        "Geothermal Core (Legendary artifact; stabilizer crystal from the Forge-Sanctum's vent control mechanism; can be permanently installed in Ridge infrastructure OR used as a portable geothermal-power source yielding up to 3/day Heat-Surge equal to a Fireball; the two uses are mutually exclusive)",
+        "Glass-Widow's Research Archive (salvaged from vault 7-B; covers ten years of Glass-Lung research including treatment methodology, silica-biology, and geothermal interaction models; research value to any academic or medical institution in the city)",
+        "3000 gold (Warden-Keep formal resolution payment; Foreman Hault's Ridge Emergency Fund contribution; Ridge merchant council settlement)"
+    ],
+    "branching_outcomes": {
+        "kill_glasswido": {
+            "description": "Glass-Widow destroyed in combat before Phase 3 or during Phase 3 elemental destruction",
+            "effects": {
+                "settlement_stability": 3,
+                "settlement_morale": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Ridge cleared; cure formula available from vault 7-B; Glass-Widow's human cost and motivation not communicated; Warden-Keep satisfied; Ridge recovers on a 6-month timeline (partial cure reconstruction period)"
+            }
+        },
+        "capture_trial": {
+            "description": "Glass-Widow captured at end of Phase 2 before Phase 3 triggers (highest difficulty outcome)",
+            "effects": {
+                "settlement_stability": 2,
+                "settlement_morale": 3
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Full cure formula obtained immediately from Glass-Widow's cooperation; Warden-Keep trial becomes a major political event in the city (defines Ridge's relationship to Warden-Keep for two years); Glass-Widow's trial testimony reveals full scope of corporate negligence that created Glass-Lung epidemic (opens political story avenue); Ridge cleared"
+            }
+        },
+        "sacrifice_resolution": {
+            "description": "Glass-Widow elemental form seals the deep-vents; party reached her consciousness in Phase 3",
+            "effects": {
+                "settlement_stability": 4,
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Ridge immediately cleared (no partial-cure delay); deep-vent sealed permanently; cure formula obtained; Glass-Widow's full story communicated to Ridge survivors; no Warden-Keep trial; the 20% permanent glass-tissue patients are the only ongoing material consequence; Ridge faction becomes full party ally"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "The structural cascade in the Forge-Sanctum is triggered prematurely by the party's combat damage to the forge mechanism before the Glass-Widow's arc is resolved. The elemental form is partially destroyed but not resolved \u2014 a fragment survives in the deep-vent system, now inaccessible, continuing to bleed silica into the complex at a reduced rate. Ridge is not cleared. The infected soldiers are freed from resonance control but without the cure formula (which is buried in the collapse), 80% of them will not fully recover. settlement_stability -1 from the incomplete resolution; Ridge Thread remains partially active and the deep-vent fragment is a future threat. 2000 gold and basic loot recovered from accessible debris.",
+        "failure_penalty": {
+            "xp_loss": 80
+        },
+        "critical_failure": "The attempt failed with significant consequences."
+    }
+}

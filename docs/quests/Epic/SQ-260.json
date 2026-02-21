@@ -1,0 +1,72 @@
+{
+    "id": "SQ-260",
+    "title": "The Broken Spindle",
+    "difficulty": "Epic",
+    "xp_reward": 2000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-259"
+        ]
+    },
+    "location": "Transit Corridor -> The Overgrown Loom",
+    "district": "Transit Corridor",
+    "thread": "Weaver",
+    "description": "The Merchant's supply line leads to a massive, corrupted Loom hidden in the abandoned subway tunnels. You must destroy the machine producing the mind-control silk.",
+    "key_npcs": [
+        "Spider-Thralls",
+        "The Overseer"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Loom is operated by horrifying Spider-Thralls\u2014half human, half arachnid. They spit sticky webbing.",
+            "choice_a": "Use a specialized solvent to dissolve the webs instantly",
+            "consequence_a": "You remain mobile, easily outmaneuvering and killing the thralls.",
+            "choice_b": "Hack your way through the webs with brute force",
+            "consequence_b": "You get bogged down. The thralls bite you repeatedly, causing moderate poison damage."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Loom is powered by a massive, spinning spindle of arcane energy. The Overseer, a colossal arachnid, defends it.",
+            "choice_a": "Throw the Overseer into the spinning spindle",
+            "consequence_a": "The beast is shredded by the arcane energy, simultaneously clogging and destroying the Loom.",
+            "choice_b": "Plant explosives on the spindle while dodging the Overseer",
+            "consequence_b": "You blow the Loom up, but have to fight the enraged Overseer in the burning ruins."
+        }
+    ],
+    "branching_outcomes": {
+        "spindle_clogged": {
+            "description": "You used the Overseer's body to destroy the Loom.",
+            "unlocks": [
+                "SQ-ELITE-UNWEAVE"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 40
+                }
+            }
+        },
+        "spindle_exploded": {
+            "description": "You blew up the Loom and defeated the Overseer.",
+            "unlocks": [
+                "SQ-ELITE-UNWEAVE"
+            ],
+            "consequences": {
+                "item_reward": "Overseer Carapace"
+            }
+        }
+    },
+    "loot_table": [
+        "Overseer Carapace",
+        "Arcane Spindle Shard",
+        "800x Gold Coins"
+    ],
+    "conclusion": "You used the Overseer's body to destroy the Loom.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

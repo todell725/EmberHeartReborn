@@ -1,0 +1,154 @@
+{
+    "id": "SQ-010",
+    "title": "A Union of Ash",
+    "xp_reward": 600,
+    "prerequisites": "None",
+    "description": "A Romeo & Juliet situation between a Miner's son and a Refugee's daughter.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Fathers are arguing in the street. Violence imminent.",
+            "choice_a": "Intervene (Persuasion DC 13)",
+            "consequence_a": "Success: Consperated.",
+            "choice_b": "Restrain them (Strength DC 13)",
+            "consequence_b": "Success: Forced apart.",
+            "convergence": "Kids are missing."
+        },
+        {
+            "turn": 2,
+            "narrative": "They ran away to the 'Old Chapel'.",
+            "choice_a": "Track them",
+            "consequence_a": "Found trail.",
+            "choice_b": "Ask friends",
+            "consequence_b": "Found location.",
+            "convergence": "Chapel is in a dangerous zone."
+        },
+        {
+            "turn": 3,
+            "narrative": "Wolves prowling the path.",
+            "choice_a": "Fight wolves",
+            "consequence_a": "Combat.",
+            "choice_b": "Scare them off",
+            "consequence_b": "Success.",
+            "convergence": "Reach Chapel."
+        },
+        {
+            "turn": 4,
+            "narrative": "Kids are cornered by a Bear.",
+            "choice_a": "Distract Bear",
+            "consequence_a": "Bear chases you.",
+            "choice_b": "Kill Bear",
+            "consequence_b": "Bear dead.",
+            "convergence": "Kids saved."
+        },
+        {
+            "turn": 5,
+            "narrative": "They refuse to return. 'They won't let us be together.'",
+            "choice_a": "Counsel them (Insight DC 12)",
+            "consequence_a": "Success: They listen.",
+            "choice_b": "Drag them back",
+            "consequence_b": "Failure: Resentment.",
+            "convergence": "You escort them back."
+        },
+        {
+            "turn": 6,
+            "narrative": "Return to town. Fathers waiting.",
+            "choice_a": "Mediate truce",
+            "consequence_a": "Success: Temporary peace.",
+            "choice_b": "Scold fathers",
+            "consequence_b": "Success: Shamed them.",
+            "convergence": "Council gets involved."
+        },
+        {
+            "turn": 7,
+            "narrative": "Council decision on Refugee integration.",
+            "choice_a": "Advocate for marriage",
+            "consequence_a": "Success: Union approved.",
+            "choice_b": "Suggest waiting",
+            "consequence_b": "Success: Keep peace.",
+            "convergence": "Tension diffuses."
+        },
+        {
+            "turn": 8,
+            "narrative": "Wedding planning?",
+            "choice_a": "Help",
+            "consequence_a": "+Rep.",
+            "choice_b": "Leave",
+            "consequence_b": "Neutral.",
+            "convergence": "Events proceed."
+        },
+        {
+            "turn": 9,
+            "narrative": "Wedding day / Ceremony.",
+            "choice_a": "Give gift",
+            "consequence_a": "-10 Gold.",
+            "choice_b": "attend",
+            "consequence_b": "Free food.",
+            "convergence": "Celebration."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest Complete.",
+            "choice_a": "Accept thanks",
+            "consequence_a": "Heartwarming.",
+            "choice_b": "Demand payment",
+            "consequence_b": "+20 Gold.",
+            "convergence": "Unity increased."
+        }
+    ],
+    "conclusion": "The union of the two families helps bridge the gap between Miners and Refugees.",
+    "loot_table": [
+        "Wedding Favor",
+        "20 Gold",
+        "Unity Token"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Couple runs away forever. -1 Population.",
+        "failure_penalty": {
+            "xp_loss": 1
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Fathers fighting in the market square",
+        "flags": [
+            "social_unrest_minor"
+        ]
+    },
+    "location": "The Old Chapel \u2014 Ruined District",
+    "district": "Ruins District",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Miner Father Bren",
+        "Refugee Father Ossik",
+        "Lira & Tam (the couple)"
+    ],
+    "mechanics_featured": [
+        "Social skill checks",
+        "Persuasion",
+        "Tracking",
+        "Combat (wildlife)"
+    ],
+    "permanent_effects": {
+        "settlement": "+1 Integration (Refugee/Miner tensions eased)",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Advocate for union",
+            "result": "+5 Morale, +1 Population stability"
+        },
+        {
+            "path": "Suggest waiting",
+            "result": "Neutral, tension deferred"
+        }
+    ]
+}

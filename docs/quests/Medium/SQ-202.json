@@ -1,0 +1,81 @@
+{
+    "id": "SQ-202",
+    "title": "The Archivist's Gambit",
+    "difficulty": "Medium",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-201"
+        ]
+    },
+    "location": "Academic Quarter -> The Grand Archive",
+    "district": "Academic Quarter",
+    "thread": "Political Intrigue",
+    "description": "The ledger from Elara's apartment points to the Grand Archive. You must infiltrate the restricted historical records to see what the 'Silken Hand' is researching.",
+    "key_npcs": [
+        "Head Archivist Theron",
+        "Silken Scribes"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Grand Archive is a towering maze of bookshelves. The restricted section requires an adamantine key, held by Head Archivist Theron, who is known to take bribes.",
+            "choice_a": "Bribe Theron directly (Lose 50 Gold)",
+            "consequence_a": "Theron gladly accepts the gold and hands over the key, turning a blind eye.",
+            "choice_b": "Pickpocket the key while he's distracted",
+            "consequence_b": "You secure the key but alert a passing patrol of Silken Scribes who notice your suspicious behavior."
+        },
+        {
+            "turn": 2,
+            "narrative": "Inside the restricted section, you find several desks covered in schematics for the city's aqueduct system and old Scourge containment protocols.",
+            "choice_a": "Gather all the documents (Time-consuming)",
+            "consequence_a": "You get all the info, but two Silken Scribes corner you among the shelves. Combat initiates.",
+            "choice_b": "Copy the most crucial maps quickly",
+            "consequence_b": "You escape before anyone arrives, but miss some context regarding the containment protocols."
+        },
+        {
+            "turn": 3,
+            "narrative": "You must exit the Archive without triggering the magical alarms set on the restricted documents.",
+            "choice_a": "Dispel the wards on the door (Arcana)",
+            "consequence_a": "The wards fizzle out harmlessly. You exit clean.",
+            "choice_b": "Smash a window and repel down the exterior",
+            "consequence_b": "Loud, messy, but effective. The Archive goes on lockdown as you hit the streets."
+        }
+    ],
+    "branching_outcomes": {
+        "silent_exit": {
+            "description": "You escaped with the documents quietly.",
+            "unlocks": [
+                "SQ-203"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Academic Quarter": 5
+                }
+            }
+        },
+        "loud_exit": {
+            "description": "You escaped, but the Archive is now on high alert.",
+            "unlocks": [
+                "SQ-203"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Academic Quarter": -10
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Restricted Archive Tome",
+        "75x Gold Coins"
+    ],
+    "conclusion": "You escaped with the documents quietly.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

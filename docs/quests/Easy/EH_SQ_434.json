@@ -1,0 +1,80 @@
+{
+    "id": "EH_SQ_434",
+    "title": "The Concordat Mark",
+    "difficulty": "Easy",
+    "xp_reward": 420,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Lower Ward -> The Old Spire Alley",
+    "district": "Lower Ward",
+    "thread": "Concordat",
+    "description": "Workers clearing rubble in the Lower Ward have uncovered a pre-Scourge building foundation with Concordat insignia burned into the cornerstone. Temple Authority Warden Gais wants the find assessed before developers cover it over. Locals are demanding it be preserved as a heritage site.",
+    "key_npcs": [
+        "Warden Gais",
+        "Developer Brask",
+        "Local History Group Leader Pem"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The cornerstone is clearly a genuine Concordat primary foundation mark \u2014 the four-point emblem is pristine, preserved under fifty years of rubble. Developer Brask has already filed construction permits for the site. Local History Group leader Pem has gathered thirty signatures demanding preservation.",
+            "choice_a": "Inspect the full foundation area to determine the extent of the buried building",
+            "consequence_a": "The foundation is substantial \u2014 likely a Concordat administrative hall. The buried structure extends under two additional adjacent lots.",
+            "choice_b": "Research the Concordat land use records in the Deep Archive",
+            "consequence_b": "Records confirm this was a Concordat district welfare office \u2014 food distribution and civil record keeping \u2014 a significant civic building."
+        },
+        {
+            "turn": 2,
+            "narrative": "You must navigate between Brask's legal permits and Pem's community push, with Warden Gais looking for a lawful settlement.",
+            "choice_a": "Argue that the archaeological significance outweighs the commercial permit and file an emergency heritage injunction",
+            "consequence_a": "The injunction is granted. Brask's permits are suspended pending a heritage survey.",
+            "choice_b": "Negotiate a compromise where Brask builds above grade while preserving the Concordat foundation as a viewable cellar exhibit",
+            "consequence_b": "Brask agrees \u2014 the exhibit adds commercial appeal to his development. Pem is satisfied."
+        },
+        {
+            "turn": 3,
+            "narrative": "Regardless of outcome, the cornerstone should be properly documented.",
+            "choice_a": "Arrange for the Deep Archive to make rubbings and a detailed photographic record of all Concordat markings on site",
+            "consequence_a": "A comprehensive record is created. Pem's group is involved in the documentation.",
+            "choice_b": "Have the cornerstone itself carefully removed and placed in the Archive for safekeeping",
+            "consequence_b": "The cornerstone is removed with care and placed on permanent display in the Archive's Pre-Scourge collection."
+        }
+    ],
+    "branching_outcomes": {
+        "heritage_injunction": {
+            "description": "Emergency heritage injunction filed. Permits suspended.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Concordat Foundation Rubbing",
+                "reputation_change": {
+                    "Lower Ward": 14,
+                    "Temple District": 10
+                }
+            }
+        },
+        "compromise_reached": {
+            "description": "Foundation preserved as viewable cellar exhibit.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Concordat Foundation Rubbing",
+                "reputation_change": {
+                    "Lower Ward": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Concordat Foundation Rubbing",
+        "Pre-Scourge Civic Record",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Emergency heritage injunction filed. Permits suspended."
+}

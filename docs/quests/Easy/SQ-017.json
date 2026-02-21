@@ -1,0 +1,154 @@
+{
+    "id": "SQ-017",
+    "title": "The Rust-Worms' Feast",
+    "xp_reward": 600,
+    "prerequisites": "None",
+    "description": "A swarm of 'Rust-Worms' has invaded the central granary. They don't eat grain; they eat the silos.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The granary is a massive complex of corrugated iron silos. The 'Rust-Worms' are three-foot-long, segmented monstrosities with saws for mouths. They are chewing through the thick metal like it's paper.",
+            "choice_a": "Identify the swarm's leader (Nature DC 12)",
+            "consequence_a": "Success: You spot a 'Prime-Worm' with a golden carapace. (+1 Progress)",
+            "choice_b": "Spray 'Rust-Resistant' coating (Tech DC 13)",
+            "consequence_b": "Success: You slow their feast significantly. (+1 Progress)",
+            "convergence": "A silo collapses, spilling tons of 'Spark-Grain' across the floor."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Spark-Grain is highly flammable. The Rust-Worms' chewing is creating friction and sparks. The air is a powder-keg.",
+            "choice_a": "Dampen the grain with foam (Dex DC 13)",
+            "consequence_a": "Success: You prevent an explosion. (+100 XP)",
+            "choice_b": "Lure the worms away with iron-scraps",
+            "consequence_b": "Success: The majority of the swarm follows the 'Easy Meal'. (+1 Progress)",
+            "convergence": "The Prime-Worm roars, a sound like a circular saw hitting a nail, and charges you."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Prime-Worm's saw-mouth is spinning at thousands of RPM. It's aiming for your legs.",
+            "choice_a": "Jump and strike from above (Atk DC 14)",
+            "consequence_a": "Success: You land on its back, avoiding the saws. (+1 Progress)",
+            "choice_b": "Parry with a heavy shield (Str DC 14)",
+            "consequence_b": "Success: You hold your ground, but your shield is badly scarred. (+100 XP)",
+            "convergence": "The Prime-Worm retreats into a grain-pile, its golden shell glowing with a manic energy."
+        },
+        {
+            "turn": 4,
+            "narrative": "You're waist-deep in the Spark-Grain. You can feel the worms moving beneath the surface like sharks.",
+            "choice_a": "Use a 'Vibration-Pulse' (Tech DC 14)",
+            "consequence_a": "Success: You force the worms to the surface. (+1 Progress)",
+            "choice_b": "Listen for their movement (Perc DC 14)",
+            "consequence_b": "Success: You anticipate the next ambush. (+100 XP)",
+            "convergence": "A hidden vent opens, and a 'Grain-Watcher'\u2014a robotic scarecrow\u2014steps into the room."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Grain-Watcher is malfunctioning, firing 'Harpoon-Bolts' at anything that moves\u2014including you.",
+            "choice_a": "Hack the Watcher (Tech DC 15)",
+            "consequence_a": "Success: You turn its weapons on the worms. (+1 Progress)",
+            "choice_b": "Dismantle the Watcher (Atk DC 14)",
+            "consequence_b": "Success: You salvage its 'Harpoon-Launcher'. (+1 Gear)",
+            "convergence": "The worms are being thinned out, but the Prime-Worm is now twice its original size."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Prime-Worm has eaten the Watcher's battery. It's now trailing lightning alongside its saws.",
+            "choice_a": "Insulate yourself with a 'Rubber-Cloak'",
+            "consequence_a": "Success: You ignore the electrical shocks. (+100 XP)",
+            "choice_b": "Ground the worm with a copper-spike (Str DC 14)",
+            "consequence_b": "Success: You cause a massive short-circuit in its body. (+1 Progress)",
+            "convergence": "The Prime-Worm explodes in a shower of sparks and iron-filings."
+        },
+        {
+            "turn": 7,
+            "narrative": "The swarm scatters with the death of their leader. The granary is a mess of spilled grain and mangled metal.",
+            "choice_a": "Help the workers salvage the grain (Endurance DC 13)",
+            "consequence_a": "Success: You save 60% of the winter supply. (+5 Morale)",
+            "choice_b": "Harvest the Prime-Worm's Golden Shell",
+            "consequence_b": "Success: You gain a 'Gold-Obsidian Curio' (Value: 300g). (+1 Loot)",
+            "convergence": "The Granary-Manager arrives, offering you a 'Life-Long Voucher' for bread."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Manager reveals the worms weren't natural\u2014they were 'Engineered' to target this specific granary.",
+            "choice_a": "Investigate the shipping logs (Int DC 14)",
+            "consequence_a": "Success: You trace the worms back to the 'Warp-Docks'. (+1 Intel)",
+            "choice_b": "Search the ruins for a 'Control-Disk' (Perc DC 14)",
+            "consequence_b": "Success: You find a small, buzzing device in the debris. (+1 Secret)",
+            "convergence": "You hand the evidence to the local Magistrate."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Magistrate rewards you with a 'Defender's Medal' and a bag of 'Spark-Rice'.",
+            "choice_a": "Accept the reward",
+            "consequence_a": "Success: You are now a recognized protector of the food supply. (+5 Reputation)",
+            "choice_b": "Decline and ask for the Prime-Worm's heart",
+            "consequence_b": "Success: You gain a 'Saw-Heart Engine'. (+1 Gear)",
+            "convergence": "The granary is reinforced with stone walls to prevent future attacks."
+        },
+        {
+            "turn": 10,
+            "narrative": "The smell of fresh bread from the saved grain fills the air. It's the smell of survival.",
+            "choice_a": "Eat a warm loaf",
+            "consequence_a": "Success: You feel remarkably healthy. (+1 Luck)",
+            "choice_b": "Train the guards in 'Worm-Detection'",
+            "consequence_b": "Success: You increase local security. (+1 Rep)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Rust-Worms' feast was stopped, but the sabotage suggests a 'Food-War' is brewing between the wards.",
+    "loot_table": [
+        "Gold-Obsidian Curio",
+        "Harpoon-Launcher",
+        "Saw-Heart Engine",
+        "600 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Silos destroyed. -10 Resources and bread prices double for a month.",
+        "failure_penalty": {
+            "xp_loss": 10
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Granary Director flags structural damage",
+        "flags": [
+            "granary_damage"
+        ]
+    },
+    "location": "Central Granary Complex",
+    "district": "Agricultural Zone",
+    "thread": "Community & Survival",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "Granary Manager Pell",
+        "Magistrate Dorn"
+    ],
+    "mechanics_featured": [
+        "Combat (swarm + boss)",
+        "Tech hacking",
+        "Fire hazard management",
+        "Investigation"
+    ],
+    "permanent_effects": {
+        "settlement": "Granary reinforced; food sabotage conspiracy opened",
+        "world": "Warp-Docks flagged as suspect"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Investigate logs",
+            "result": "Sabotage traced to Warp-Docks (+1 Intel)"
+        },
+        {
+            "path": "Find control disk",
+            "result": "Secret evidence secured (+1 Secret)"
+        }
+    ]
+}

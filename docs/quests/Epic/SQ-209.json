@@ -1,0 +1,80 @@
+{
+    "id": "SQ-209",
+    "title": "The Usurper's Throne",
+    "difficulty": "Epic",
+    "xp_reward": 2000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-208"
+        ]
+    },
+    "location": "Core District -> The Obsidian Keep",
+    "district": "Core District",
+    "thread": "Political Intrigue",
+    "description": "With the General dead, his fanatic loyalists seize the Obsidian Keep, threatening to detonate the arcane cores underneath the city if they are not granted rule.",
+    "key_npcs": [
+        "Fanatic Commander",
+        "Hostages"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Keep is locked down. They hold several high-ranking nobles as hostages above the arcane cores.",
+            "choice_a": "Negotiate a surrender",
+            "consequence_a": "They mock you and execute a hostage to prove they are serious.",
+            "choice_b": "Sneak in through the arcane exhaust vents",
+            "consequence_b": "You bypass the outer defenses but suffer minor arcane radiation burns."
+        },
+        {
+            "turn": 2,
+            "narrative": "You reach the core chamber. The Fanatic Commander has his hand on the detonator.",
+            "choice_a": "Snipe him perfectly (Dexterity check)",
+            "consequence_a": "A perfect shot. He drops dead before triggering it. The hostages are saved.",
+            "choice_b": "Charge the detonator directly",
+            "consequence_b": "You tackle him, but the detonator hits the floor, starting a 3-minute self-destruct timer."
+        },
+        {
+            "turn": 3,
+            "narrative": "If the timer is active, you must disarm it while fighting off continuous waves of fanatics.",
+            "choice_a": "Focus entirely on the bomb (Requires high Arcana)",
+            "consequence_a": "You disable it with 2 seconds left, surviving the onslaught thanks to your armor.",
+            "choice_b": "Kill all fanatics first, then disarm",
+            "consequence_b": "You clear the room quickly, giving you just enough time to rip the wires out."
+        }
+    ],
+    "branching_outcomes": {
+        "flawless_rescue": {
+            "description": "The commander was sniped, no detonation occurred.",
+            "unlocks": [
+                "SQ-210"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Core District": 50
+                }
+            }
+        },
+        "bomb_defused": {
+            "description": "You defused the bomb at the last second. The city is safe.",
+            "unlocks": [
+                "SQ-210"
+            ],
+            "consequences": {
+                "item_reward": "Inactive Arcane Core"
+            }
+        }
+    },
+    "loot_table": [
+        "Fanatic's Sigil",
+        "Inactive Arcane Core",
+        "500x Gold Coins"
+    ],
+    "conclusion": "The commander was sniped, no detonation occurred.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "id": "SQ-203",
+    "title": "Poisoned Quills",
+    "difficulty": "Hard",
+    "xp_reward": 600,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-202"
+        ]
+    },
+    "location": "High Ward -> Council Chambers",
+    "district": "High Ward",
+    "thread": "Political Intrigue",
+    "description": "Armed with the Archive documents, you must warn Councilor Vane that the Silken Hand is targeting the aqueducts. But the Council Chambers themselves may be compromised.",
+    "key_npcs": [
+        "Councilor Vane",
+        "Council Guard Captain",
+        "Assassin 'The Quill'"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You reach the Council Chambers. Vane's guards look different today\u2014tense, unfamiliar. When you ask to see him, they cross their halberds to block your path.",
+            "choice_a": "Intimidate the guards into stepping aside",
+            "consequence_a": "They falter, letting you pass, but silently lock the heavy oak doors behind you.",
+            "choice_b": "Use a side-entrance known for servant access",
+            "consequence_b": "You bypass the guards entirely and slip into Vane's private study."
+        },
+        {
+            "turn": 2,
+            "narrative": "Vane is at his desk, but a masked figure stands behind him, holding a poisoned needle to his neck. 'Drop the documents,' the assassin whispers.",
+            "choice_a": "Comply and drop the documents",
+            "consequence_a": "The assassin snatches them and throws a smoke bomb, escaping, but Vane lives unharmed.",
+            "choice_b": "Throw a dagger at the assassin",
+            "consequence_b": "You clip the assassin's shoulder. They drop the needle, scratching Vane, and flee out the window. Vane is poisoned."
+        },
+        {
+            "turn": 3,
+            "narrative": "If Vane is poisoned, you have moments to act before the toxin reaches his heart.",
+            "choice_a": "Administer a generic antivenom from your pack",
+            "consequence_a": "It stabilizes him, but he falls into a deep coma. The documents are safe.",
+            "choice_b": "Let him die, saving the documents (If you didn't drop them)",
+            "consequence_b": "Vane perishes. You keep the intel, but Emberheart loses a key leader."
+        }
+    ],
+    "branching_outcomes": {
+        "vane_saved_docs_lost": {
+            "description": "Councilor Vane lives, but the Silken Hand retrieved the aqueduct plans.",
+            "unlocks": [
+                "SQ-204"
+            ],
+            "consequences": {
+                "item_reward": "Vane's Signet Ring",
+                "reputation_change": {
+                    "High Ward": 20
+                }
+            }
+        },
+        "vane_comatose_docs_safe": {
+            "description": "Vane is in a coma, but you retained the vital intelligence.",
+            "unlocks": [
+                "SQ-204"
+            ],
+            "consequences": {
+                "item_reward": "Aqueduct Schematics"
+            }
+        },
+        "vane_dead": {
+            "description": "Councilor Vane is dead. The High Ward is in mourning and panic.",
+            "unlocks": [
+                "SQ-204"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "High Ward": -20,
+                    "Warden Council": -30
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Assassin's Smoke Bomb",
+        "150x Gold Coins"
+    ],
+    "conclusion": "Councilor Vane lives, but the Silken Hand retrieved the aqueduct plans.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

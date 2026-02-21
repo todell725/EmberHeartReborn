@@ -1,0 +1,148 @@
+{
+    "id": "SQ-193",
+    "title": "The Fabric-Eater Moths",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "High-end clothing merchants in Market Ward report enchanted garments dissolving overnight, leaving only buttons"
+    },
+    "location": "Market Ward - Silk Promenade boutiques and warehouse district",
+    "district": "Market Ward",
+    "thread": "Laundry",
+    "estimated_duration": "45 minutes",
+    "key_npcs": [
+        "Merchant Brio Fenn (quest-giver, expensive taste, considerable losses)",
+        "The Fabric-Eater Moths (swarm, eerie intelligence, dissolve enchanted clothing)",
+        "Warden Artificer Soli Yan (enchantment inspector, alarmed about enchantment dissolution mechanism)"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Arcana (understanding enchantment-dissolution)",
+        "Fabric-Handling checks",
+        "Trap-setting",
+        "Combat (moth swarm)"
+    ],
+    "permanent_effects": [
+        "Player learns Fabric-Eater Moths are Warp-Static byproduct, dissolve enchantments into raw mana",
+        "Mana-collection from moth activity discovered (they are farming enchanted fabric)"
+    ],
+    "branching_outcomes": {
+        "destroy_colony": {
+            "description": "Burn or disperse the moth colony and its nest",
+            "effects": {
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Moth nest contains raw collected mana in crystallized form - significant energy resource"
+            }
+        },
+        "relocate_colony": {
+            "description": "Relocate moths to an area with non-enchanted fabric, where they act as harmless fabric-eaters",
+            "effects": {
+                "settlement_morale": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Colony in Lower Ward midden eats waste fabric, keeping area cleaner",
+                "ambient_hazard": "Enchanted items near midden slowly degrade if left too long"
+            }
+        }
+    },
+    "description": "Enchanted silk coats, charmed gloves, and mana-stitched gowns are dissolving overnight in the Market Ward's high-end boutiques. The moths responsible are not eating the fabric\u2014they are extracting the enchantments, leaving raw, non-magical thread behind. Something very strange is farming mana from expensive clothing.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Merchant Brio Fenn holds up what was, yesterday, a mana-stitched coat from the far coast worth 200 Gold. What remains is a perfectly arranged pile of non-magical thread and twelve buttons, placed in a neat row. The thread is unharmed. The enchantment is simply gone\u2014extracted clean. 'This is the SECOND one this week,' he says. 'And it happened to the Marchioness's gown at the boutique next door. That was 800 Gold. She is not pleased. Nobody is pleased with me, specifically, for reasons I cannot completely explain.' Three empty hangers hang behind him, rotating slightly in a draft that shouldn't be there.",
+            "choice_a": "Examine the remaining thread for traces of the extraction process (Arcana DC 11)",
+            "consequence_a": "Success: The thread is clean\u2014cleaner than it would be from normal fabric dissolution. The enchantment was removed with precision, leaving structural fiber intact. This was not mindless eating. Something extracted the mana selectively, like a skilled artificer deconstructing a spell. (+1 Lore)",
+            "choice_b": "Search the boutique for signs of how entry was gained (Investigation DC 10)",
+            "consequence_b": "Success: Moth-dust on the window sill\u2014fine, iridescent powder that glows faintly violet. Warp-Static signature. The entry point: a gap in the window frame barely a finger wide, through which nothing living should have been able to pass. Unless it was phasing. (+1 Progress)",
+            "convergence": "Warden Artificer Soli Yan arrives with a spectroscope and tests the moth-dust. 'Warp-Static residue,' she says, 'combined with extracted enchantment mana.' She looks up. 'Something is dissolving enchantments and taking the mana somewhere. The moths are the mechanism. The question is: what needs this much mana, and why is it in the Market Ward boutiques?'"
+        },
+        {
+            "turn": 2,
+            "narrative": "The moth-dust trail is visible under Yan's spectroscope: a faint path of iridescent powder leading along the Silk Promenade, turning into an alley, going through a grate. You follow it for two blocks before the grate becomes a warehouse access door that has been used recently despite being listed as vacant in the city register. The warehouse smells of mana\u2014the specific ozone-and-sweetgrass scent of pure extracted enchantment energy, three times stronger than any enchanted item you've been near. From inside: the soft, pervasive sound of a million small wings.",
+            "choice_a": "Enter the warehouse carefully and observe before engaging (Stealth DC 12)",
+            "consequence_a": "Success: The interior is extraordinary. The moth colony covers every surface\u2014thousands of Fabric-Eater Moths, each about the size of a thumb, with wings that shift through colors in the Warp-Static spectrum. In the center of the colony, a mound of crystallized mana the size of a barrel, still growing. They are farming it. This is a mana-production operation. (+1 Lore)",
+            "choice_b": "Toss a non-enchanted piece of fabric through the door ahead of you to test the moths' response",
+            "consequence_b": "The fabric lands inside. Thirty moths descend on it immediately, taste it, and fly off uninterested. Non-enchanted fabric: irrelevant to them. Then you try a small enchanted button from Fenn's collection. It is stripped bare in 12 seconds. The moths are selective. (+1 Observation)",
+            "convergence": "The moth colony is organized. Outer-ring moths seem to be scouts. Inner-ring moths are producers, sitting on the mana-crystal and apparently feeding directly from it. The queen\u2014if there is one\u2014is in the center, very large, very still, wings spread flat over the crystal. This is not an infestation. This is a factory."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Queen Fabric-Eater is roughly the size of a large cat, with wings that display a full Warp-Static shimmer\u2014every color simultaneously, resolving to nothing when you look directly at it. It is not moving. It has been here long enough to become part of the crystal, its legs embedded at the base. It is not alive in any conventional sense. It is a Warp-Static mana-collection organ that evolved\u2014or was designed\u2014to use moths as the harvest mechanism. The colony is its body. The moths are its cells. And you are now standing inside it.",
+            "choice_a": "Approach the Queen directly to examine the mana-crystal (Fabric-Handling DC 13, treat as living fabric)",
+            "consequence_a": "Success: At close range, the Queen's wings pulse against your approach. Not attacking\u2014registering. The crystal beneath her emits a deep resonant hum. You estimate: 400 units of raw mana, equivalent to 40 premium enchantments. Someone has been building this for months. (+1 Lore, mana quantity assessed)",
+            "choice_b": "Set up an observation post in the warehouse and watch the colony's daily cycle (Investigation DC 12, 2 hours)",
+            "consequence_b": "Success: The moths sleep from dawn to noon. Active 12 hours, collecting. At 3 AM, a subset of the colony leaves the warehouse with crystallized mana fragments. They are delivering something. You follow one: it goes to a drain in the Laundry Ward. The steam-tunnel network. The mana is going into the infrastructure. (+2 Lore, mana-delivery route discovered)",
+            "convergence": "If the mana deliveries go into the steam-tunnel network, they connect to the Warp-Silk plumbing discovered in EH_SQ_091. The moths are farming enchantment mana and feeding it into the city's Warp-Static infrastructure. Someone is using moths and plumbing to maintain and grow the Warp-Static network."
+        },
+        {
+            "turn": 4,
+            "narrative": "Yan confirms the worst: 'The mana deliveries to the tunnels are boosting the Warp-Static field throughout the residential plumbing. Every Warp-Silk pipe fitting, every Warp-Static event in the Laundry Ward\u2014it's being powered. Maintained. By moth-harvested enchantment mana from boutique clothing.' She sets her spectroscope down. 'Someone is running an ecosystem. Warp-Silk infrastructure as the hardware. Fabric-Eater Moths as the power supply. They're farming mana from the city's richest district and pumping it into the poorest district's spooky plumbing.' She pauses. 'We are in a very weird city.'",
+            "choice_a": "Cut off the mana-delivery routes by sealing the steam-tunnel drain access (Arcana DC 13)",
+            "consequence_a": "Success: Three drain points sealed. Mana deliveries interrupted. The Warp-Static field in the Laundry Ward dims noticeably\u2014animated fabrics in the area go inert for 24 hours before stabilizing at a lower level. The moth colony without a delivery mechanism becomes overloaded with mana. Signs of instability at the warehouse increase. (+1 Progress, partial infrastructure disruption)",
+            "choice_b": "Trace the delivery routes to find out exactly where the mana ultimately goes (Investigation DC 14)",
+            "consequence_b": "Success: The mana routes converge at a single point deep in the Laundry Ward's sub-basement: a Warp-Silk weaving frame, old, enormous, working slowly, weaving something\u2014a fabric, room-sized, that has been growing for years. It is not finished. (+2 Lore, massive discovery, connects to potential thread climax)",
+            "convergence": "The moth ecosystem is not self-directed. Something set it up. The moths didn't evolve this. The Queen is not a natural creature. It is a Concordat mana-harvesting organ, placed here, left running. Like the rats. Like the plumbing. All of it infrastructure. All of it pointing inward."
+        },
+        {
+            "turn": 5,
+            "narrative": "The moth colony combat is unavoidable at some stage\u2014either because a scout registers threat and the colony responds, or because you need to reach the Queen to end the harvest. A Fabric-Eater moth swarm is not individually dangerous\u2014each moth is thumb-sized. As a swarm moving in coordinated Warp-Static patterns, they have a collective attack: they attempt to strip enchantments from everything you wear or carry, leaving non-magical equipment untouched but potentially disabling magical items and armor enchantments.",
+            "choice_a": "Remove all enchanted equipment before engaging (prevents stripping, reduces combat power)",
+            "consequence_a": "Fighting in mundane equipment, you are less effective but immune to the swarm's primary attack. The moths disperse from physical strikes and fire easily\u2014they are individually fragile. Swarm depleted in 5 minutes. Queen exposed. (+1 Progress, smart approach)",
+            "choice_b": "Engage with enchanted equipment and take the stripping risk (Combat DC 14, protective gear recommended)",
+            "consequence_b": "Three enchantments stripped from your equipment during the fight: two minor, one moderate. The stripped enchantments feed the crystal. But the physical assault on the swarm is effective. The colony is disrupting, the Queen stirring. (+1 Combat Progress, some equipment temporarily non-magical)",
+            "convergence": "The Queen is now mobile\u2014the mana-crystal disruption has freed her legs from the crystal base. She is not fighting. She is trying to protect the crystal. You have one decision: what happens to the crystal and the colony?"
+        },
+        {
+            "turn": 6,
+            "narrative": "The Queen regards you with wings spread\u2014a display, not an attack. The mana-crystal behind her contains months of harvested enchantments. The stripped enchantments from your gear are already integrating into the crystal's matrix. The colony has gone into a defensive cluster rather than a swarm-attack formation. The Queen makes a sound\u2014not moth sound, something deeper\u2014that the air carries as a feeling rather than a noise: reluctance. She does not want to fight. She also will not simply abandon the crystal she has been tending for what seems like years.",
+            "choice_a": "Destroy the mana-crystal and scatter the colony (disperse path\u2014fire works, Arcana DC 12)",
+            "consequence_a": "Success: The crystal shatters in a spectacular mana-release, briefly illuminating the warehouse in every color simultaneously. The colony disperses through every gap and crack in the building. The Queen goes with them\u2014surviving, homeless, probably reforming elsewhere eventually. 400 units of raw mana are gone. (+1 Settlement Stability, but mana lost)",
+            "choice_b": "Relocate the Queen and crystal to the Lower Ward midden\u2014non-enchanted fabric, harmless operation (Fabric-Handling DC 14)",
+            "consequence_b": "Success: This requires carefully moving a cat-sized magical entity and a barrel of crystallized mana through the city streets in a borrowed cart, which draws significant attention. But the Queen settles in the midden. Non-enchanted wastecloth: available endlessly, harmless. Colony follows. Boutique theft ends. Midden gets cleaner. (+1 Settlement Morale, practical resolution)",
+            "convergence": "Merchant Fenn is pleased the thefts have stopped. Less pleased to learn his coats powered a Concordat-era mana-harvesting ecosystem. He asks if he can submit an insurance claim against 'pre-Scourge bio-mechanical infrastructure.' You suggest no."
+        },
+        {
+            "turn": 7,
+            "narrative": "Yan's analysis of the mana-crystal (if preserved or partially recovered from the scatter) yields extraordinary data: the enchantments within it are not blended together. Each one is discrete, layered, identifiable. She can read what was originally enchanted: a flame-ward, a water-repellent charm, a small speed enhancement, twelve warmth spells. 'These are ordinary clothing enchantments,' she says. 'But in this concentration and crystalline form, they could be re-cast as wholly different spells.' She looks at you. 'Someone could use this as raw mana stock for anything.' The moths were, effectively, a free enchantment refinery.",
+            "choice_a": "Recover the mana-crystal remnants and use them for city infrastructure repair (practical use)",
+            "consequence_a": "The recovered fragments power two weeks of Warden repairs throughout the Market Ward\u2014every small fix that needed mana but lacked budget. Efficient, if morally complex. (+1 Settlement Stability, clear civic benefit)",
+            "choice_b": "Archive the mana-crystal as evidence and give it to the Mage Guild entirely",
+            "consequence_b": "The Guild's energy division is very interested. 'If moths can selectively extract enchantment mana this cleanly, the mechanism could be studied and replicated artificially.' A Research Grant is offered. Yan is excited. (+2 Lore, mana-extraction research program begins)",
+            "convergence": "Yan files her official report: 'Fabric-Eater Moth colony operating as Concordat-era enchantment-mana harvesting system. Infrastructure integration confirmed. Medical/magical hazard: moderate. Property damage: significant to boutique district. Conclusion: the Concordat left behind a city full of things still running their last instructions.' She hands you your copy of the report and adds: 'I am going to take a week off after this.'"
+        },
+        {
+            "turn": 8,
+            "narrative": "The boutique district recovers quickly\u2014no enchanted items have been lost in the week since the colony's removal or dispersal, and Fenn has grudgingly filed a city-damage claim. The steam-tunnel Warp-Static field has stabilized at a lower level without the moth mana-supply. Several Laundry Ward fabric events that were sustained by the extra energy have resolved on their own\u2014three animated curtains, a living tablecloth, and a sock elemental in Junction 14 that just... sat down and stopped moving. Two things remain: the Warp-Silk weaving frame in the sub-basement (if discovered), and the question of what it was weaving.",
+            "choice_a": "Return to the sub-basement to examine the massive partially-woven fabric",
+            "consequence_a": "The weaving frame holds a fabric 15 feet wide and 40 feet long, still incomplete. The pattern woven into it is not decorative: it is functional geometry\u2014the same type of pattern as the Shadow-Rat summoning circle from EH_SQ_071, but far larger. Yan stares at it. 'This is a probability restructuring field. Room-sized. This would affect every probability calculation in a large area.' A pause. 'What's above this sub-basement?' The Laundry Ward. 'And the moths were feeding the mana to power this weaving.' (+3 Lore, grand-scale Concordat fabric weapon discovered)",
+            "choice_b": "File the sub-basement location with the Mage Guild and close the case",
+            "consequence_b": "The Guild seals the sub-basement. Designated Concordat Archaeological Site. Future study ongoing. You receive your finder's fee. The mystery of what was being woven waits. (+1 Lore deferred, future content seeded)",
+            "convergence": "Quest Complete. Fabric-Eater Moths were a Concordat mana-harvesting system, feeding power to Warp-Static infrastructure throughout the Laundry Ward\u2014and apparently toward a large-scale probability-manipulation fabric in a sub-basement. The boutique merchants will not be pleased when you explain their expensive clothing was being used to power a pre-Scourge weapon."
+        }
+    ],
+    "conclusion": "The Fabric-Eater Moths are a Concordat mana-harvesting system farming enchanted clothing from the Market Ward to power Warp-Static infrastructure in the Laundry Ward. The infrastructure appears to include a massive partially-woven probability-manipulation field in a sub-basement. The Concordat left the city full of systems still running, and those systems are interconnected in ways that are becoming clearer with each investigation.",
+    "loot_table": [
+        "Mana-Crystal Fragments (raw enchantment mana, 200 units recoverable if colony dispersed)",
+        "Queen Fabric-Eater Specimen (rare - intact, for research, worth significant Gold to Mage Guild)",
+        "Yan's Enchantment-Stripping Analysis (technical document on moth mana-extraction mechanism)",
+        "Boutique Owner Compensation (from Warden crisis fund): 320 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Moth colony goes into full expansion mode. All enchanted items in Market Ward targeted systematically. -500 Gold value from city merchant losses per session. -3 Settlement Morale.",
+        "failure_penalty": {
+            "xp_loss": 500
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

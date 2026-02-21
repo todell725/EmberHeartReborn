@@ -1,0 +1,72 @@
+{
+    "id": "SQ-239",
+    "title": "Blood Stains",
+    "difficulty": "Epic",
+    "xp_reward": 1000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-238"
+        ]
+    },
+    "location": "Laundry Ward -> The Deep Wash",
+    "district": "Laundry Ward",
+    "thread": "Laundry",
+    "description": "The Master's death revealed the location of 'The Deep Wash'\u2014the sub-level where the assassins dispose of their most high-profile victims.",
+    "key_npcs": [
+        "The Cleaner (Boss)",
+        "Undead Victims"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You descend into the Deep Wash. The chemical vats here have inadvertently reanimated the dissolving corpses of the assassins' victims.",
+            "choice_a": "Use holy magic to purge the undead",
+            "consequence_a": "The undead crumble peacefully to ash.",
+            "choice_b": "Hack them apart physically",
+            "consequence_b": "They are tough and leak toxic chemicals, making the fight an agonizing slog."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Cleaner, a towering figure in a hazard suit wielding a pressurized acid-hose, attacks.",
+            "choice_a": "Puncture the pressurized tank on his back",
+            "consequence_a": "The tank explodes. He melts from the inside out in seconds.",
+            "choice_b": "Dodge the spray and sever the hose",
+            "consequence_b": "You cut the weapon. He resorts to brutal melee combat, but you eventually overpower him."
+        }
+    ],
+    "branching_outcomes": {
+        "cleaner_exploded": {
+            "description": "You blew up the Cleaner, rendering his gear useless.",
+            "unlocks": [
+                "SQ-240"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Laundry Ward": 20
+                }
+            }
+        },
+        "cleaner_dismembered": {
+            "description": "You defeated the Cleaner in melee, preserving his gear.",
+            "unlocks": [
+                "SQ-240"
+            ],
+            "consequences": {
+                "item_reward": "Heavy Hazard Suit"
+            }
+        }
+    },
+    "loot_table": [
+        "Heavy Hazard Suit",
+        "Acid-Hose Nozzle",
+        "300x Gold Coins"
+    ],
+    "conclusion": "You blew up the Cleaner, rendering his gear useless.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

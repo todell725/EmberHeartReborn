@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_413",
+    "title": "The Grieving Widow",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "North Ward -> The Quiet Homes District",
+    "district": "North Ward",
+    "thread": "Void-Wine",
+    "description": "A woman named Sera has been spending her entire weekly wage on Void-Wine from a house operation nearby. Her adult daughter Lena begs you to help her mother before the addiction takes the family's savings completely.",
+    "key_npcs": [
+        "Widow Sera",
+        "Daughter Lena",
+        "House Dealer Gant"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You meet Lena at the door of a tidy but exhausted-looking home. Sera is inside, glassy-eyed and serene, turning a tiny bottle in her fingers. She lost her husband to the Scourge six months ago. The wine makes her feel him near her still.",
+            "choice_a": "Speak directly to Sera about the addiction and her financial situation",
+            "consequence_a": "Sera listens without anger. She admits she knows it's expensive but says the emptiness without it is unbearable.",
+            "choice_b": "First trace where Sera is buying the wine before engaging with her",
+            "consequence_b": "Lena shows you a house three streets over. Dealer Gant sells small doses from a locked parlour."
+        },
+        {
+            "turn": 2,
+            "narrative": "Gant's parlour operation is not violent \u2014 he sells carefully and in small doses to ensure repeat customers. But his pricing is exploitative of grieving, vulnerable citizens.",
+            "choice_a": "Confront Gant and threaten to report him if he keeps selling to Sera",
+            "consequence_a": "Gant is coldly pragmatic. He agrees to cut Sera off because losing a customer to legal trouble isn't worth it.",
+            "choice_b": "Report Gant to the Ward Warden with documentation of his clientele",
+            "consequence_b": "Warden Astrid sends inspectors. Gant's operation is shut down permanently."
+        },
+        {
+            "turn": 3,
+            "narrative": "With Gant's supply cut or shut, Sera must face her grief without chemical help.",
+            "choice_a": "Connect Sera with a grief counsellor at the Temple District",
+            "consequence_a": "Sera resists initially but agrees to try. Lena is deeply grateful.",
+            "choice_b": "Simply support Lena as her mother goes through withdrawal \u2014 providing comfort items and company",
+            "consequence_b": "You spend three evenings with the family. Sera comes through it shakily but with her savings mostly intact."
+        }
+    ],
+    "branching_outcomes": {
+        "sera_helped": {
+            "description": "Sera connected with grief counselling. Supply cut.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Lena's Family Locket",
+                "reputation_change": {
+                    "North Ward": 16
+                }
+            }
+        },
+        "family_supported": {
+            "description": "You personally helped the family through withdrawal.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "North Ward": 12
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Lena's Family Locket",
+        "Grief Counsellor's Referral",
+        "150x Gold Coins"
+    ],
+    "conclusion": "Sera connected with grief counselling. Supply cut."
+}

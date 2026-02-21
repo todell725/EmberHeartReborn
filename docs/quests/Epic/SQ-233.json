@@ -1,0 +1,73 @@
+{
+    "id": "SQ-233",
+    "title": "Extermination Protocol",
+    "difficulty": "Epic",
+    "xp_reward": 2200,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-232"
+        ]
+    },
+    "location": "Ruins District -> The Spawning Pits",
+    "district": "Ruins District",
+    "thread": "Sovereignty & Order",
+    "description": "With their highway destroyed and engine ruined, the Vanguard is trapped in the Ruins District. It is time for a brutal counter-attack. The goal: destroy the Spawning Pits.",
+    "key_npcs": [
+        "Broodmother (Boss)",
+        "Warden Strike Team"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You lead a strike team into the dark, fleshy depths of the Spawning Pits. Thousands of grubs line the walls, gestating.",
+            "choice_a": "Order the flamethrower units to burn everything",
+            "consequence_a": "The walls turn to ash. You breathe in toxic fumes, but the grubs are wiped out instantly.",
+            "choice_b": "Save the fuel and push straight for the Broodmother",
+            "consequence_b": "You save your fuel, but the grubs begin hatching behind you, cutting off your escape."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Broodmother is a towering mass of chitin and acid. She spits a massive glob of digestive fluid at your team.",
+            "choice_a": "Throw up a magical shield to protest the team",
+            "consequence_a": "The shield holds. Everyone survives the initial volley.",
+            "choice_b": "Dodge the acid and let the team fend for themselves",
+            "consequence_b": "You avoid damage entirely, but two of your best Wardens melt into puddles."
+        }
+    ],
+    "branching_outcomes": {
+        "mother_killed_clean": {
+            "description": "You purged the pits and kept your squad alive.",
+            "unlocks": [
+                "SQ-234"
+            ],
+            "consequences": {
+                "item_reward": "Broodmother Chitin",
+                "reputation_change": {
+                    "Sovereignty & Order": 50
+                }
+            }
+        },
+        "mother_killed_messy": {
+            "description": "You killed the Broodmother, but the Strike Team suffered heavy losses.",
+            "unlocks": [
+                "SQ-234"
+            ],
+            "consequences": {
+                "item_reward": "Broodmother Acid Gland"
+            }
+        }
+    },
+    "loot_table": [
+        "Broodmother Chitin",
+        "Broodmother Acid Gland",
+        "1000x Gold Coins"
+    ],
+    "conclusion": "You purged the pits and kept your squad alive.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

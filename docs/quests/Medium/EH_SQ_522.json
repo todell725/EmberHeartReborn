@@ -1,0 +1,165 @@
+{
+    "id": "EH_SQ_522",
+    "title": "The Geothermal Collapse",
+    "difficulty": "Medium",
+    "xp_reward": 1050,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_521",
+            "EH_SQ_421"
+        ],
+        "items_required": []
+    },
+    "location": "Ridge -> The Deep Vent Nexus / Lower Ward adjacency",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "Three months after the Heritage Authority's formation, Engineer Pyra's atmospheric sensors detect an anomaly in the Ridge's geothermal pressure network: the primary vent nexus \u2014 the convergence point of all eight major geothermal lines \u2014 is showing a pressure accumulation pattern that has no precedent in modern records. Pyra calculates an 85% probability of catastrophic release within 96 hours unless the pressure is actively managed. A full collapse of the nexus would vent superheated steam and geothermal gas across an area covering the Ridge and adjacent Lower Ward, potentially killing hundreds.",
+    "key_npcs": [
+        "Engineer Pyra",
+        "Overseer Kell",
+        "Maintenance Chief Dara",
+        "Ridge Mining Heritage Authority",
+        "Dr. Vel"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Pyra's presentation to the Heritage Authority Emergency Session is precise and frightening. The pressure accumulation began forty-eight hours ago \u2014 the same period during which the energy station restoration work (from EH_SQ_521) has been running at elevated output. The two are connected: increasing the energy station's throughput has altered the geothermal flow balance across the network. The restoration crew inadvertently destabilised the system that has been in equilibrium for a century. Pyra says: 'We have about ninety hours to either equalise the pressure or evacuate a twelve-block radius including most of the Lower Ward adjacency.' Both are necessary \u2014 evacuation as insurance, pressure management as real solution.",
+            "choice_a": "Prioritise immediate pressure management \u2014 focus all resources on solving the technical problem",
+            "consequence_a": "Kell assigns every available maintenance resource. Dara has a theory about controlled release valves on sections 3 and 7 that could begin pressure equalisation within six hours.",
+            "choice_b": "Evacuate the at-risk zone first before attempting the technical fix \u2014 protect people before property",
+            "consequence_b": "Ward Guard begins coordinating with Lower Ward residents. Approximately 1,400 people need to relocate temporarily to safe Ward facilities."
+        },
+        {
+            "turn": 2,
+            "narrative": "Dara's controlled release theory requires accessing three valve stations simultaneously \u2014 one of which is Valve Station 3, which was repaired during a previous incident. The other two are in sections 5 and 7, neither of which has been inspected in over two decades. Section 7's access route goes through the Concordat communication station, which is currently in active operation mode. Disrupting its signal patterns risks complications with the Resonant Crystal arrays.",
+            "choice_a": "Route through the communication station carefully, coordinating with Dorr to minimise crystal disruption",
+            "consequence_a": "Dorr guides you through the station's signal patterns during a ninety-second window between broadcast cycles. The route is navigated without incident.",
+            "choice_b": "Find an alternative route to Section 7 even if it takes additional time",
+            "consequence_b": "An older service route exists \u2014 unused for decades and partially blocked by debris. It takes three hours to clear but preserves the communication station's integrity."
+        },
+        {
+            "turn": 3,
+            "narrative": "At Section 5, the valve station's equipment is operational but the pressure seals are degraded \u2014 they will only handle two controlled releases before they need replacement. You have four release events planned for full pressure equalisation. You must either find replacement seals or redesign the release sequence to work within the two-release limit.",
+            "choice_a": "Send Dara to retrieve replacement seals from the energy station's supply cache",
+            "consequence_a": "The energy station's Concordat-era supply cache contains pressure seal components that are a far superior quality to modern equivalents \u2014 they fit perfectly and exceed the original specifications.",
+            "choice_b": "Redesign the release sequence to work within the two-release limit at Section 5",
+            "consequence_b": "Pyra calculates that a modified two-release approach at Section 5, combined with adjusted timing at Sections 3 and 7, can achieve 70% of necessary pressure reduction."
+        },
+        {
+            "turn": 4,
+            "narrative": "Forty-eight hours into the incident, a second complication emerges: the geothermal pressure spike is not just accumulation from the energy station increase. Pyra's refined models show that a deep fault 400 metres below the nexus has been slowly shifting for six months \u2014 long before the energy station work began. The energy station restoration accelerated a process that was already underway. This fault shift is a structural geological event that the controlled release valves can only delay, not solve.",
+            "choice_a": "Consult the Concordat deep-station maps for any infrastructure designed to manage deep-fault events",
+            "consequence_a": "The deep maps show a fault stabilisation array at approximately 350 metres depth \u2014 a Concordat-era system for managing exactly this type of geological event. It requires the Resonant Relay to activate.",
+            "choice_b": "Accept that the valve approach is a temporary measure and focus on permanent evacuation and zoning changes in the affected area",
+            "consequence_b": "Kell authorises a permanent zoning review for the twelve-block radius. Evacuation becomes a permanent partial-resettlement rather than a temporary measure."
+        },
+        {
+            "turn": 5,
+            "narrative": "The fault stabilisation array \u2014 if accessible \u2014 represents the only permanent solution. Its depth requires a descent through the communication station's lower access system. Dorr, who knows the crystal array architecture better than anyone, says he believes the Resonant Relay can interface with the stabilisation array's control system. The Knowledge Keeper (if awakened) confirms this: the stabilisation array was built to be remotely managed from the communication station exactly for this type of geological emergency.",
+            "choice_a": "Activate the fault stabilisation array through the communication station",
+            "consequence_a": "A tense forty-minute operation. Dorr manages the crystal interface. The array activates \u2014 a deep vibration felt throughout the Ridge that slowly resolves into steady quiet over the following hour. The fault stabilises.",
+            "choice_b": "Deploy a physical team to the 350-metre depth to manually trigger the stabilisation array",
+            "consequence_b": "A three-person team descends with Concordat-era access documentation. The array is found operational. Manual activation triggers successfully after forty minutes of equipment interfacing."
+        },
+        {
+            "turn": 6,
+            "narrative": "With the stabilisation array active, pressure readings begin declining across all eight nexus lines. Pyra watches the monitors with red-rimmed eyes and says: 'We're going to be okay.' The 1,400 evacuated residents begin returning home. Valve Station repairs are completed at Sections 3, 5, and 7. The energy station is throttled back to 40% output \u2014 its current safe maximum given the fault dynamics \u2014 while the stabilisation array runs parallel support. No lives were lost. A few structural wall cracks in the Lower Ward adjacency require repair.",
+            "choice_a": "Commission an immediate structural assessment of all Lower Ward buildings in the adjacency zone",
+            "consequence_a": "Seventeen buildings have meaningful structural damage. Six require temporary shoring before residents can return. Two need partial reconstruction.",
+            "choice_b": "Focus on the geological assessment \u2014 understanding the full extent of the fault shift before anything else",
+            "consequence_b": "Pyra's extended assessment takes seventy-two hours. The fault shift has stabilised but shows ongoing micro-adjustment that requires monthly monitoring."
+        },
+        {
+            "turn": 7,
+            "narrative": "The energy station's throttled output has reduced the Ridge's heating capacity below the level committed to Lower Ward housing agreements \u2014 the supply shortfall that Ridge-Lord Fenn originally exploited is now a structural reality rather than deliberate manipulation. The Lower Ward's housing association is notified. Ward Councillor Dain contacts you privately saying this is 'a political disaster waiting to happen' unless creative solutions are found quickly.",
+            "choice_a": "Engage the Heritage Authority in emergency supplemental heat solutions for the affected Lower Ward blocks",
+            "consequence_a": "Portable geothermal units sourced from the resource cache provide emergency supplemental heating. The shortfall is covered for ninety days while permanent solutions are designed.",
+            "choice_b": "Be transparent with affected residents \u2014 explain the geological situation and the timeline for restoration",
+            "consequence_b": "A public meeting is held. Residents are frustrated but respond far better to honesty than most Ward officials expected. A community monitoring group is formed."
+        },
+        {
+            "turn": 8,
+            "narrative": "The fault stabilisation array's successful activation raises a significant question: what other emergency infrastructure exists in the deep Concordat system that has not yet been mapped or activated? Dorr's cartographic team, now working from the communication station's deep-map displays, has identified four more structural emergency systems in the Layer 3 deep zone. Any one of them could be relevant to future crises. The Heritage Authority must decide on a proactive assessment programme.",
+            "choice_a": "Launch a proactive assessment of all four identified emergency systems",
+            "consequence_a": "Two are found fully operational. One is partially damaged. One has been naturally sealed by geological movement over the past century.",
+            "choice_b": "Prioritise the one system closest to active geothermal operations first",
+            "consequence_b": "The closest system \u2014 a pressure distribution manifold \u2014 is found operational and is immediately integrated into the Ridge's safety monitoring network."
+        },
+        {
+            "turn": 9,
+            "narrative": "Dr. Vel has accompanied the lower-level survey teams as a medical observer. She has been tracking the health effects of the geothermal pressure anomaly on Ridge workers over the past 96 hours. Her data shows a significant number of workers experienced headaches, nausea, and mild auditory hallucinations during the pressure spike \u2014 consistent with infrasonic exposure from the deep fault movement. She also notes that several workers with the longest Ridge tenure showed less pronounced symptoms \u2014 suggesting physiological adaptation over time.",
+            "choice_a": "Request Vel design a comprehensive occupational health study for long-term Ridge workers",
+            "consequence_a": "The Heritage Authority approves the study. Vel believes Ridge workers may represent a population with unique physiological adaptations to geothermal exposure.",
+            "choice_b": "Ensure the worker health data goes into the Heritage Authority's safety protocol development",
+            "consequence_b": "Vel's data directly shapes three new safety standards including mandatory rotation schedules and infrasonic monitoring at deep operations."
+        },
+        {
+            "turn": 10,
+            "narrative": "The incident has generated enormous amounts of data \u2014 pressure records, geological assessments, crystal array logs, stabilisation array performance data, health impact studies. The Academic Quarter requests full access for research purposes. The Heritage Authority is willing but wants a formal data-sharing agreement that prevents commercial exploitation of geological intelligence by private interests. The negotiation is complex and has significant implications for how the Ridge discloses future discoveries. [NEGOTIATION ENCOUNTER \u2014 balance research openness with operational security]",
+            "choice_a": "Negotiate a research partnership with explicit commercial-use restrictions and community benefit mandates",
+            "consequence_a": "A strong data-sharing agreement is reached. Three Academic Quarter researchers are embedded with the Heritage Authority on a permanent basis.",
+            "choice_b": "Propose that the Heritage Authority establish its own research capability rather than depending on external institutions",
+            "consequence_b": "A Heritage Authority Research Division is constituted. Two Academic Quarter researchers join it permanently, working under Heritage Authority governance rather than external direction."
+        },
+        {
+            "turn": 11,
+            "narrative": "Six weeks after the incident, the Ridge is stabilised and significantly better understood than before it happened. The fault stabilisation array is maintaining geological equilibrium. The energy station is operating at a sustainable 60% after careful throttle increase. The heating supply to the Lower Ward is fully restored. A community monitoring group meets weekly with Heritage Authority representatives. Pyra has been appointed as the Ridge's first Chief Safety Officer \u2014 a new position created specifically in response to the incident. She accepts it with characteristic precision: 'I expect to be regularly inconvenient to the people in charge. That seems like the job.'",
+            "choice_a": "Support Pyra's appointment publicly and attend her inauguration session",
+            "consequence_a": "The inauguration is a genuinely warm community event. Dorr, Dara, Kell, Renia, and Voss all attend.",
+            "choice_b": "Send formal congratulations and continue working in the background",
+            "consequence_b": "Pyra sends a brief note back: 'See you at the next crisis.' It is absolutely a promise."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Geothermal Collapse that never fully happened has transformed the Ridge's safety infrastructure and its governance in permanent and meaningful ways. A district that once primarily had its resources extracted is now building the expertise to manage those resources responsibly for generations. The Concordat infrastructure layer that caused the initial problem has become the key to solving it. Everything the Ridge has learned about its own underground \u2014 the crystal arrays, the fault maps, the stabilisation systems \u2014 represents knowledge that the Scourge interrupted and the Heritage Authority has now resumed. Elder Voss says at the Heritage Authority's monthly session: 'The Concordat spent a hundred years building something for us to inherit. I think we've finally started accepting the inheritance.'",
+            "choice_a": "Formally propose a Ridge Concordat Infrastructure Heritage programme to the Ward Council",
+            "consequence_a": "The programme is approved. It becomes one of the Ward's flagship reconstruction initiatives.",
+            "choice_b": "Leave the legacy work to the Heritage Authority and move to other investigations",
+            "consequence_b": "The Heritage Authority is excellent. The Ridge thread closes in the best possible position."
+        }
+    ],
+    "branching_outcomes": {
+        "array_activated_station": {
+            "description": "Fault stabilised via communication station. Energy restored. Heritage Authority research division formed.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 50,
+                    "Lower Ward": 25
+                },
+                "item_reward": "Fault Stabilisation Array Schematics"
+            }
+        },
+        "array_activated_manual": {
+            "description": "Fault stabilised via manual team descent. Evacuation managed well. Safety protocols updated.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 40,
+                    "Lower Ward": 20
+                },
+                "item_reward": "Pyra's Chief Safety Officer Citation"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 300,
+            "reputation_change": {
+                "Ridge": -40,
+                "Lower Ward": -30
+            }
+        },
+        "critical_failure": "Nexus releases. Superheated vent event injures sixty workers and Lower Ward residents. Ridge is quarantined for thirty days."
+    },
+    "loot_table": [
+        "Fault Stabilisation Array Schematics",
+        "Pyra's Chief Safety Officer Citation",
+        "Geothermal Collapse Incident Report",
+        "Heritage Authority Research Charter",
+        "Dara's Maintenance Commendation",
+        "1050x Gold Coins"
+    ],
+    "conclusion": "Fault stabilised via communication station. Energy restored. Heritage Authority research division formed."
+}

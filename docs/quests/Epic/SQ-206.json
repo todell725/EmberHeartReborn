@@ -1,0 +1,74 @@
+{
+    "id": "SQ-206",
+    "title": "A Dagger in the Dark",
+    "difficulty": "Epic",
+    "xp_reward": 1000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-205"
+        ]
+    },
+    "location": "Academic Quarter -> The Shrouded Lyceum",
+    "district": "Academic Quarter",
+    "thread": "Political Intrigue",
+    "description": "The fallout from the Masquerade points to the Shrouded Lyceum. The Hand is fractured but cornered. They are activating their sleeper agents to assassinate the remaining loyal Councilors.",
+    "key_npcs": [
+        "Sleeper Agents",
+        "Loyal Councilor Voss",
+        "The Whisperer (Boss)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You rush to Councilor Voss's estate in the Academic Quarter. You find the outer guards dead. The door is locked from the inside.",
+            "choice_a": "Smash through the heavy oak doors (Strength)",
+            "consequence_a": "You burst in, stunning two assassins inside, but taking taking splinter damage.",
+            "choice_b": "Scale the wall to the second-floor balcony",
+            "consequence_b": "You slip in silently, ambushing the assassins tracking Voss."
+        },
+        {
+            "turn": 2,
+            "narrative": "Voss is bleeding out on the floor. Standing over him is 'The Whisperer', the Hand's elite executioner.",
+            "choice_a": "Focus on healing Voss first (Medicine)",
+            "consequence_a": "Voss stabilizes, but The Whisperer gets a free critical strike on you.",
+            "choice_b": "Attack The Whisperer immediately",
+            "consequence_b": "You engage in brutal combat, but Voss slowly bleeds out during the fight."
+        }
+    ],
+    "branching_outcomes": {
+        "voss_saved": {
+            "description": "You defeated the executioner and saved Councilor Voss.",
+            "unlocks": [
+                "SQ-207"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Warden Council": 30
+                }
+            }
+        },
+        "voss_dead": {
+            "description": "The executioner is dead, but Councilor Voss bled out.",
+            "unlocks": [
+                "SQ-207"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Warden Council": -20
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Whisperer's Cloak",
+        "200x Gold Coins"
+    ],
+    "conclusion": "You defeated the executioner and saved Councilor Voss.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

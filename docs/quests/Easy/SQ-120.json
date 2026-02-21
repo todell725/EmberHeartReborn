@@ -1,0 +1,151 @@
+{
+    "id": "SQ-120",
+    "title": "The Greenhouse Hum",
+    "difficulty": "Easy",
+    "xp_reward": 190,
+    "prerequisites": "None",
+    "description": "The community garden is being taken over by a singing, emerald growth...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The community garden\u2019s greenhouse is glowing with a pulsing, emerald light. The 'Star-Leaf' plants are humming a lullaby.",
+            "choice_a": "Listen to the melody",
+            "consequence_a": "Success.",
+            "choice_b": "Sample the soil",
+            "consequence_b": "Success.",
+            "convergence": "The hum is so soothing it makes you want to lie down and sleep in the warm, damp earth. The smell is of wet moss and vanilla."
+        },
+        {
+            "turn": 2,
+            "narrative": "You notice the 'Star-Leaf' roots are actually growing *up* the glass, seeking the moonlight instead of the soil.",
+            "choice_a": "Trim the roots",
+            "consequence_a": "Success.",
+            "choice_b": "Apply 'Moon-Water'",
+            "consequence_b": "Success.",
+            "convergence": "The roots pulse red and secrete a 'Mana-Dew' that makes your skin tingle with a secondary heartbeat."
+        },
+        {
+            "turn": 3,
+            "narrative": "A 'Greenhouse-Wisp'\u2014a spirit of light and leaves\u2014appears, tending to the plants with a touch that looks like liquid gold.",
+            "choice_a": "Talk to the Wisp",
+            "consequence_a": "Success.",
+            "choice_b": "Trap the Wisp in a lantern",
+            "consequence_b": "Success.",
+            "convergence": "The Wisp points to a 'Void-Patch' of soil that is turning the plant roots into black, razor-sharp thorns."
+        },
+        {
+            "turn": 4,
+            "narrative": "The 'Thorn-Roots' are trying to strangle the Star-Leaf. They smell of decay and cold metal, moving with a predatory intent.",
+            "choice_a": "Sever the thorns",
+            "consequence_a": "Success.",
+            "choice_b": "Pour 'Life-Ichor' on the patch",
+            "consequence_b": "Success.",
+            "convergence": "The thorns scream and wither, but the Star-Leaf's hum turns into a frantic, high-pitched alarm."
+        },
+        {
+            "turn": 5,
+            "narrative": "The glass of the greenhouse begins to crack. The 'Emerald-Light' is escaping, painting the gardener's house in a sickly green glow.",
+            "choice_a": "Seal the cracks with 'Void-Putty'",
+            "consequence_a": "Success.",
+            "choice_b": "Distract the wisp with light",
+            "consequence_b": "Success.",
+            "convergence": "The Wisp merges with the Star-Leaf, forming a 'Guardian-Bloom'\u2014a flower the size of a man."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Bloom opens, revealing a heart of 'Living-Crystal'. It\u2019s purring now, a sound that vibrates the floorboards of the greenhouse.",
+            "choice_a": "Harvest a crystal-shimmer",
+            "consequence_a": "Success.",
+            "choice_b": "Offer a drop of blood",
+            "consequence_b": "Success.",
+            "convergence": "The Bloom gives you a 'Green-Seed-Heart'. It feels like a small, beating heart made of polished jade."
+        },
+        {
+            "turn": 7,
+            "narrative": "The gardener enters, weeping with relief. He gives you a 'Gardener's Gloves' (+1 Survival). 'The earth... it\u2019s hungry for more than water,' he sighs.",
+            "choice_a": "Accept the gloves",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Green-Seed",
+            "consequence_b": "Success.",
+            "convergence": "The gloves are stained with rich, dark earth and smell of lavender. They feel remarkably sturdy."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Greenhouse is quiet, the emerald light now a soft, steady glow. The Star-Leaf plants are back in the soil, their leaves twitching happily.",
+            "choice_a": "Check the irrigation",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The moon rises over the glass roof, turning the greenhouse into a cathedral of light and growth."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, you feel a 'Green-Sensation' in your fingers. You can sense the 'Life-Force' of the trees outside.",
+            "choice_a": "Touch a tree",
+            "consequence_a": "Success.",
+            "choice_b": "Report to the Weaver",
+            "consequence_b": "Success.",
+            "convergence": "The tree 'hums' back at you, a sound of deep, slow contentment."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Garden. The 'Greenhouse Hum' is a peaceful song once more.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "End",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Greenhouse Hum' is complete. Quest Complete.",
+    "loot_table": [
+        "Green-Seed-Heart",
+        "Gardener's Gloves"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are converted into a 'Star-Leaf' plant. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Greenhouse lit emerald at midnight; plants humming audibly",
+        "flags": []
+    },
+    "location": "Community Greenhouse \u2014 Green Quarter",
+    "district": "Green Quarter",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Head Gardener Sofi",
+        "Greenhouse-Wisp (spirit)",
+        "Guardian-Bloom (creature)"
+    ],
+    "mechanics_featured": [
+        "Nature",
+        "Combat (thorn-roots)",
+        "Spirit communication",
+        "Moral choice (void patch)"
+    ],
+    "permanent_effects": {
+        "settlement": "Greenhouse stable; Green-Sensation passive unlocked",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Harvest crystal-shimmer",
+            "result": "Living-Crystal component gained"
+        },
+        {
+            "path": "Offer blood to Bloom",
+            "result": "+1 Secret (Bloom bonded to player)"
+        }
+    ]
+}

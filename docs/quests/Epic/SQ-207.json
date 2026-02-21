@@ -1,0 +1,82 @@
+{
+    "id": "SQ-207",
+    "title": "Redaction Protocol",
+    "difficulty": "Epic",
+    "xp_reward": 1200,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-206"
+        ]
+    },
+    "location": "Deep Archive -> The Black Stacks",
+    "district": "Deep Archive",
+    "thread": "Political Intrigue",
+    "description": "To sever the Silken Hand permanently, you must find their blackmail repository in the heavily guarded Black Stacks and destroy it.",
+    "key_npcs": [
+        "Archive Golems",
+        "Hand Remnants"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Black Stacks are guarded by ancient mechanical constructs. The Hand remnants are fighting them to extract the blackmail files before you can destroy them.",
+            "choice_a": "Let them fight, then finish off the survivors",
+            "consequence_a": "You save energy, but the Hand secures the files. You have to chase them.",
+            "choice_b": "Charge in and destroy both sides",
+            "consequence_b": "A massive three-way chaotic battle. You secure the room but suffer heavy damage."
+        },
+        {
+            "turn": 2,
+            "narrative": "You locate the Vault of Secrets. It requires a blood sacrifice to open.",
+            "choice_a": "Use your own blood (Take moderate damage)",
+            "consequence_a": "The vault opens smoothly. You find the files.",
+            "choice_b": "Drag a dead Hand operative and use their blood",
+            "consequence_b": "The vault opens, but triggers a minor curse trap as punishment for the dead blood."
+        },
+        {
+            "turn": 3,
+            "narrative": "You have the blackmail files. You can destroy them, or keep them to manipulate the Council yourself.",
+            "choice_a": "Burn them all",
+            "consequence_a": "The secrets turn to ash. The Council is free from blackmail.",
+            "choice_b": "Keep them and become the hidden power",
+            "consequence_b": "You pocket the files. You now hold immense political power over Emberheart."
+        }
+    ],
+    "branching_outcomes": {
+        "files_burned": {
+            "description": "The blackmail was destroyed. The Council's integrity is restored.",
+            "unlocks": [
+                "SQ-208"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Warden Council": 40
+                }
+            }
+        },
+        "files_kept": {
+            "description": "You kept the blackmail. You are the shadow ruler now.",
+            "unlocks": [
+                "SQ-208"
+            ],
+            "consequences": {
+                "item_reward": "Vault of Secrets Ledger",
+                "reputation_change": {
+                    "Warden Council": 50
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Archive Golem Core",
+        "400x Gold Coins"
+    ],
+    "conclusion": "The blackmail was destroyed. The Council's integrity is restored.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "id": "SQ-213",
+    "title": "Descent into the Bio-Ward",
+    "difficulty": "Hard",
+    "xp_reward": 600,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-212"
+        ]
+    },
+    "location": "Bio-Ward -> Observation Deck Alpha",
+    "district": "Bio-Ward",
+    "thread": "Static",
+    "description": "Inside Containment Sector 7, the walls are coated in a pulsing, fleshy substance. The 'radio signal' isn't coming from a machine\u2014it's coming from something biological.",
+    "key_npcs": [
+        "Flesh-Grafted Scientist (Hostile)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You enter an observation deck looking down into a massive silo. The silo is filled with a giant, brain-like mass. A scientist, fused into the wall by fleshy tendrils, spots you.",
+            "choice_a": "Try to communicate with the scientist",
+            "consequence_a": "He screams in two contrasting voices\u2014one human, one static noise\u2014and attacks you with biological tendrils.",
+            "choice_b": "Shoot him immediately",
+            "consequence_b": "You secure a preemptive strike, dealing heavy damage before he can manifest his weapons."
+        },
+        {
+            "turn": 2,
+            "narrative": "After defeating the creature, you find a logbook on the terminal. It details 'Project Harbinger'\u2014an attempt to use modified Scourge tissue to predict the future.",
+            "choice_a": "Download the logbook files to a portable drive",
+            "consequence_a": "You secure the digital files, but the terminal arcs electricity, dealing minor shock damage.",
+            "choice_b": "Rip the hard drive out manually",
+            "consequence_b": "You get the drive without injury, but risk corrupting the data later."
+        },
+        {
+            "turn": 3,
+            "narrative": "The giant brain-mass below pulses, and the radio in your pocket squeals: 'INTRUDER. CORRECTION PROTOCOL INITIATED.'",
+            "choice_a": "Flee back up the elevator",
+            "consequence_a": "You escape the deck just as the flesh on the walls begins to seal the doors shut.",
+            "choice_b": "Throw an incendiary down the silo before running",
+            "consequence_b": "The fire burns a chunk of the brain. The static screams in agony, making your escape easier."
+        }
+    ],
+    "branching_outcomes": {
+        "brain_burned": {
+            "description": "You escaped and significantly wounded the Harbinger mass.",
+            "unlocks": [
+                "SQ-214"
+            ],
+            "consequences": {
+                "item_reward": "Burnt Neural Tissue"
+            }
+        },
+        "fled_intact": {
+            "description": "You escaped, leaving the mass unharmed.",
+            "unlocks": [
+                "SQ-214"
+            ],
+            "consequences": {
+                "item_reward": "Corrupted Hard Drive"
+            }
+        }
+    },
+    "loot_table": [
+        "Burnt Neural Tissue",
+        "Corrupted Hard Drive",
+        "Bio-Resin Shield"
+    ],
+    "conclusion": "You escaped and significantly wounded the Harbinger mass.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

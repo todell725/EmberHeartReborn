@@ -1,0 +1,75 @@
+{
+    "id": "SQ-250",
+    "title": "Vermintide",
+    "difficulty": "Epic",
+    "xp_reward": 1800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-249"
+        ]
+    },
+    "location": "Undercity -> The Pumping Stations",
+    "district": "Undercity",
+    "thread": "Vermin",
+    "description": "The violent death of the Rat King has caused millions of surviving Vermin to panic en-masse. A literal 'Vermintide'\u2014a tidal wave of panicked, fleeing rats\u2014is rushing endlessly up the main pumping stations to desperately escape the Undercity. The party must overload the primary turbines to flush the horrific tide safely into the river before they flood the upper wards.",
+    "key_npcs": [
+        "The Vermintide"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The sheer physical mass of millions of panicked, leaderless rats is actively buckling the heavy steel doors of the Undercity pumping station. A literal 'Vermintide' is aggressively rushing up the pipes, desperately trying to escape the deep tunnels. If they breach the gates, the lower wards will be completely overrun. You must massively overload the massive, ancient water turbines to literally wash them out into the deep river.",
+            "choice_a": "Manually override the pressure safeties (Strength DC 14)",
+            "consequence_a": "You throw your entire body weight against the heavy iron valve wheels. They scream loudly as you force them fully open, blasting a massively pressurized wave of cold river water directly into the main tunnels.",
+            "choice_b": "Use electrical magic to short the control panels open (Arcana DC 12)",
+            "consequence_b": "You overload the rusted control console with a violent burst of lighting. The heavy panel violently explodes, hitting you with hot shrapnel, but the safety valves blow completely open as intended.",
+            "convergence": "The massive torrent of water brutally hits the leading edge of the Vermintide, sweeping tens of thousands of them away, but their sheer physical mass causes a terrifying, immediate clog."
+        },
+        {
+            "turn": 2,
+            "narrative": "The horrific clog of drowned vermin and rushing water is building pressure at a catastrophic rate. The massive iron pipes are severely groaning under the city's weight; if the blockage doesn't break, the ensuing explosive rupture will literally tear the foundations of the Lower Ward completely apart.",
+            "choice_a": "Throw an incendiary charge into the clog to vaporize the blockage",
+            "consequence_a": "You perfectly time a heavy blast-charge, hurling it directly into the center of the jam. The resulting massive steam explosion violently blows the massive clog entirely out into the main river, safely away from the city.",
+            "choice_b": "Wait it out and hope the pipes hold (Constitution Save DC 13)",
+            "consequence_b": "You brace yourself securely against the violently shaking iron walkways and pray. The pipes groan, heavily crack, but eventually the massive clog naturally breaks. High amounts of structural damage violently occur, but the city itself is ultimately safe.",
+            "convergence": "As the roaring water finally clears, you watch the last of the desperate horde wash harmlessly away into the deep current. The Vermin threat to EmberHeart has been permanently broken."
+        }
+    ],
+    "branching_outcomes": {
+        "tide_blasted": {
+            "description": "You flawlessly flushed the Vermintide out of the city.",
+            "unlocks": [
+                "SQ-258"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "All Districts": 40
+                }
+            }
+        },
+        "tide_waited": {
+            "description": "You flushed the Vermin, but the pumping station suffered massive structural damage.",
+            "unlocks": [
+                "SQ-258"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": -10,
+                    "Lower Ward": -10
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Golden Valve Wheel",
+        "1000x Gold Coins"
+    ],
+    "conclusion": "The Vermintide is successfully flushed out of the city's pipe network and into the deep river. The immediate threat of the organized vermin army is permanently gone, though the structural damage to EmberHeart's lower pipes will take years to repair.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "id": "EH_SQ_532",
+    "title": "The Transit Strike",
+    "difficulty": "Medium",
+    "xp_reward": 930,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_446",
+            "EH_SQ_530"
+        ],
+        "items_required": []
+    },
+    "location": "Transit Corridor -> All Connected Districts",
+    "district": "Transit Corridor",
+    "thread": "Community & Survival",
+    "description": "Transit Corridor workers have gone on strike after fifteen years without a formal pay review. The Corridor's 340 workers manage every cargo and passenger movement between six districts \u2014 without them, supply chains stop, worker transport to the Foundry and Industrial Quarter ceases, medical supply deliveries fail, and the Agricultural Zone's perishables cannot reach the Market Ward. The Ward Council has called the strike 'illegal under emergency provision law.' Labour Advocate Renia calls that characterisation 'a deliberate misreading of statute.' The city is holding its breath. The strike is already in its second day.",
+    "key_npcs": [
+        "Labour Advocate Renia",
+        "Transit Coordinator Helv",
+        "Ward Councillor Dain",
+        "Strike Leader Forris",
+        "Foundry Director Vane"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Transit Strike Leader Forris explains the situation in precise terms: the Corridor's workers have not received a pay review since the Scourge emergency provisions were first applied fifteen years ago. Every review request has been deferred under the same emergency clause. The clause \u2014 designed for temporary crisis \u2014 has been applied continuously for a decade and a half. The workers' base wages are now significantly below every comparable Ward labour category. 'We waited,' Forris says. 'We filed. We petitioned. We're done waiting.' He shows you a two-centimetre-thick folder of denied review requests.",
+            "choice_a": "Position yourself as a neutral mediator between the workers and the Ward Authority",
+            "consequence_a": "Both Forris and Councillor Dain accept. A mediation session is scheduled for tomorrow \u2014 but the city has 24 hours before supply chain disruption becomes critical.",
+            "choice_b": "Immediately assess whether the emergency provision's application to Transit workers is legally sound",
+            "consequence_b": "A Ward legal reviewer finds the 15-year continuous application deeply questionable. The emergency provision permits 12-month renewable deferrals but requires evidence of genuine emergency to renew \u2014 evidence never formally provided."
+        },
+        {
+            "turn": 2,
+            "narrative": "Foundry Director Vane contacts you in the first twelve hours. The Foundry depends on Transit Corridor for 60% of its raw material deliveries. Day three of the strike will begin to affect production. Vane is not hostile to the workers \u2014 she has publicly supported previous labour rights measures \u2014 but she needs resolution. She offers to publicly support an immediate provisional pay increase from Foundry operating funds if it helps break the deadlock, noting that the Foundry has a direct stake in Transit Corridor workers being fairly compensated.",
+            "choice_a": "Bring Vane's offer to the negotiating table immediately as external financial evidence",
+            "consequence_a": "Vane's public statement changes the dynamic immediately. Dain's position \u2014 that a pay review is unaffordable \u2014 is undercut by a major city institution offering to contribute.",
+            "choice_b": "Use Vane's offer to privately pressure Dain into accepting a provisional increase before the mediation session",
+            "consequence_b": "Dain privately acknowledges the political reality has shifted. He agrees to a provisional increase in principle before the public session begins."
+        },
+        {
+            "turn": 3,
+            "narrative": "The mediation session convenes with Forris, Helv, Dain, Renia, and Vane's representative at the table. The legal review of the emergency provision is in your hands. If you present it now, the Ward Council's position collapses \u2014 but Dain may become hostile and the political resolution becomes confrontational. If you hold it in reserve, you preserve goodwill but accept a slower process.",
+            "choice_a": "Present the legal review finding at the session \u2014 the workers' right to a pay review cannot be legally denied",
+            "consequence_a": "The session's atmosphere shifts dramatically. Forris is quietly triumphant. Dain's legal adviser urgently confers with him. The provision argument is effectively abandoned.",
+            "choice_b": "Hold the legal review in reserve and pursue a negotiated resolution without deploying it",
+            "consequence_b": "Negotiation proceeds on economic grounds. It is slower but generates more genuine buy-in from Dain's side."
+        },
+        {
+            "turn": 4,
+            "narrative": "The medical supply situation is becoming critical by day three. The Medical Quarter's Dr. Vel contacts you: perishable medicines and blood products cannot be stored indefinitely. If transit does not resume for medical cargo within twelve hours, two critical care patients at the Medical Quarter will be at risk. This is not manipulative framing \u2014 Vel is clinically precise. Strike Leader Forris, when told, immediately designates medical cargo as a humanitarian exemption subject to voluntary Transit worker coverage.",
+            "choice_a": "Formalise the humanitarian exemption with full worker support \u2014 it shows the strike is principled, not punitive",
+            "consequence_a": "Forris and twelve volunteers work the medical cargo overnight. Vel's critical cases are secured. The act of good faith significantly changes public opinion of the strike.",
+            "choice_b": "Use the medical situation to pressure accelerated resolution of the full strike rather than setting a precedent of partial work",
+            "consequence_b": "The pressure accelerates the negotiation timeline significantly. A provisional settlement is reached within six hours \u2014 faster than any other scenario."
+        },
+        {
+            "turn": 5,
+            "narrative": "A provisional settlement framework is emerging: a 22% pay increase for all 340 Transit workers, retroactive partial payment for the fifteen years of undercompensated service, and a formal annual review mechanism with independent arbitration. The retroactive payment \u2014 modest but significant \u2014 is the sticking point. Dain is willing to fund the prospective increase from Ward operating budget but argues the retroactive element requires Council approval he cannot guarantee.",
+            "choice_a": "Propose a structured retroactive payment over four years rather than a lump sum",
+            "consequence_a": "The four-year structure makes the retroactive component financially manageable for the Ward and acceptable to Forris's team.",
+            "choice_b": "Identify external funding for the retroactive element \u2014 Vane's Foundry contribution plus other major Transit users could cover it",
+            "consequence_b": "Three major Transit users \u2014 the Foundry, the Medical Quarter supply operation, and the Merchant Guild cooperative \u2014 contribute collectively. The retroactive amount is funded externally."
+        },
+        {
+            "turn": 6,
+            "narrative": "The settlement is signed on day four of the strike. Transit workers return to work. The Corridor is operational within six hours of signing. Cargo begins moving. The Foundry's delayed material deliveries arrive in a rush. Agricultural Zone perishables reach the Market Ward markets slightly late but intact. The city's supply chains normalise within 24 hours. Forris shakes hands with Helv. Both of them appear exhausted and cautiously relieved. Renia is already drafting a broader Ward Labour Review proposal based on the Transit case.",
+            "choice_a": "Support Renia's broader Ward Labour Review proposal \u2014 the Transit case has demonstrated the problem is systemic",
+            "consequence_a": "Renia's proposal, with your backing, goes to the Ward Council within two weeks. Three other Ward worker categories are flagged for immediate review.",
+            "choice_b": "Let Renia lead the broader review independently \u2014 the Transit case should stand as its own achievement first",
+            "consequence_b": "Renia proceeds with full independent authority. The Transit case is cited as precedent in every labour review that follows."
+        },
+        {
+            "turn": 7,
+            "narrative": "The independent arbitration mechanism established in the settlement includes a requirement: an annual public report on Transit Corridor worker compensation relative to comparable Ward labour categories. Helv has been asked to produce this report. She asks your help with the first edition \u2014 it will set the format and depth for all future reports and she wants to get it right.",
+            "choice_a": "Help Helv design a comprehensive report format with full labour market comparison data",
+            "consequence_a": "The first annual report is a model of transparency. It is adopted as standard by two other Ward worker bodies.",
+            "choice_b": "Advise Helv on the key data points and let her design the format herself",
+            "consequence_b": "Helv's format is excellent \u2014 she knows her data better than anyone. Your advice was useful framing, not direction."
+        },
+        {
+            "turn": 8,
+            "narrative": "A specific Corridor worker comes forward in the post-settlement period. A night-shift loader named Sev who was central to the strike organisation has been identified by his Ward employer as a 'labour agitator' and had his supplemental housing benefit revoked. The revocation appears targeted and retaliatory \u2014 a benefit that twelve other workers of identical status retain. Renia flags this as protected activity retaliation.",
+            "choice_a": "File a formal retaliation complaint on Sev's behalf through the new arbitration mechanism",
+            "consequence_a": "The first use of the arbitration mechanism is successful. Sev's benefit is restored and the targeting employer receives a formal warning.",
+            "choice_b": "Investigate whether the revocation was individually targeted or part of a broader pattern of post-strike retaliation",
+            "consequence_b": "Three other workers show similar post-strike benefit changes. A broader retaliation pattern is documented and formally adjudicated."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Transit Strike and its resolution has made the Corridor the most professionally organised worker cohort in the city. Other worker categories are watching. The Foundry's internal worker committee formally proposes a voluntary Foundry pay review to pre-empt a similar situation. Vane endorses it immediately. The Ward is incrementally becoming a place where labour relations are managed rather than deferred until crisis.",
+            "choice_a": "Help the Foundry's worker committee model their review on the Transit arbitration framework",
+            "consequence_a": "The Foundry review follows similar principles. It completes in six weeks with a 15% increase and a five-year review cycle.",
+            "choice_b": "Let the Foundry and its workers handle their review independently \u2014 the Transit case established the model, it doesn't need your involvement to replicate",
+            "consequence_b": "Independent replication is healthier than dependent replication. The Foundry committee reaches a settlement that is slightly better than the Transit outcome."
+        },
+        {
+            "turn": 10,
+            "narrative": "The Ward Council's emergency provision clause \u2014 the same clause applied to Transit workers for fifteen years \u2014 is now formally under review by the Council's legal committee. Three other worker categories are actively citing Transit as precedent in their own review petitions. Dain, in a session that might be called reflective, says: 'We shouldn't have needed a four-day strike to act on a fifteen-year petition.' He moves to establish a formal emergency provision sunset mechanism \u2014 any emergency provision application requires annual active evidence and lapses automatically after five years without Council renewal vote.",
+            "choice_a": "Support the sunset mechanism proposal publicly",
+            "consequence_a": "The proposal passes. Ward emergency provisions are fundamentally reformed.",
+            "choice_b": "Suggest the sunset should be three years rather than five \u2014 five years is still too long for a measure described as 'emergency'",
+            "consequence_b": "Dain accepts the three-year amendment. The final mechanism is more protective than originally proposed."
+        },
+        {
+            "turn": 11,
+            "narrative": "Forris has been elected to the Transit Workers' Collective \u2014 the first formally constituted worker body in the Transit Corridor's history under the settlement's governance provisions. He contacts you to say: 'We're doing our first formal meeting next week. We'd like you to chair the inaugural session as an independent neutral. Just for the founding session.' It is an unusual thing to be asked. It is a significant honour in the community's terms.",
+            "choice_a": "Accept \u2014 chair the inaugural session of the Transit Workers' Collective",
+            "consequence_a": "The session is brief and efficient. Forris thanks you formally. You are listed as first chair in the Collective's founding record.",
+            "choice_b": "Decline graciously \u2014 the Collective's first chair should be a worker or Renia",
+            "consequence_b": "Renia chairs the inaugural session. She is better suited \u2014 it becomes her institutional connection to the Collective."
+        },
+        {
+            "turn": 12,
+            "narrative": "Fourteen days after the strike began, the Transit Corridor is running at full capacity with workers earning fair wages under a transparent review mechanism protected by independent arbitration. Forty-eight hours of full-capacity disruption were sufficient to achieve fifteen years of deferred justice. The city's supply chains are reliable. The emergency provision clause is reformed. Three other worker categories are mid-review. The Transit Strike will be cited for years \u2014 as an example of what happens when bureaucratic deferral mistakes patience for permanent acceptance.",
+            "choice_a": "Document the Transit Strike as a formal case study in Ward labour relations",
+            "consequence_a": "The case study is published by the Ward Authority as reference material for future labour negotiations.",
+            "choice_b": "Let the outcome speak for itself \u2014 the changed reality is the case study",
+            "consequence_b": "Forris says this. He says it at the Collective's second meeting. Renia writes it down."
+        }
+    ],
+    "branching_outcomes": {
+        "settlement_negotiated": {
+            "description": "Strike resolved day 4. Full settlement with retroactive pay. Labour review mechanism established.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Transit Corridor": 40,
+                    "Lower Ward": 20,
+                    "Market Ward": 15
+                },
+                "item_reward": "Transit Workers' Collective Charter"
+            }
+        },
+        "settlement_legal": {
+            "description": "Emergency provision declared invalid. Immediate settlement forced. Review mechanism established.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Transit Corridor": 35,
+                    "Lower Ward": 18
+                },
+                "item_reward": "Emergency Provision Legal Review"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 200,
+            "reputation_change": {
+                "Transit Corridor": -25,
+                "Market Ward": -15
+            }
+        },
+        "critical_failure": "Strike continues for seven days. Medical Quarter loses one patient. Foundry backs down from endorsement."
+    },
+    "loot_table": [
+        "Transit Workers' Collective Charter",
+        "Emergency Provision Legal Review",
+        "Annual Compensation Report Template",
+        "Renia's Labour Review Proposal",
+        "930x Gold Coins"
+    ],
+    "conclusion": "Strike resolved day 4. Full settlement with retroactive pay. Labour review mechanism established."
+}

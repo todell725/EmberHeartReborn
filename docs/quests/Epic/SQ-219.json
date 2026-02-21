@@ -1,0 +1,70 @@
+{
+    "id": "SQ-219",
+    "title": "The Pre-Scourge Weapon",
+    "difficulty": "Epic",
+    "xp_reward": 2000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-218"
+        ]
+    },
+    "location": "Core District -> The AI Containment Vault",
+    "district": "Core District",
+    "thread": "Static",
+    "description": "With the Harbinger dead, the static clears. But you discover the Harbinger was acting as a jammer for a much older, perfectly preserved Pre-Scourge AI vault. The doors are opening.",
+    "key_npcs": [
+        "Custodian AI 'Aegis'"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You enter a spotless, utterly pristine vault. A holographic avatar named Aegis greets you. 'Threat: Bio-Hybrid neutralized. Protocol 9 unlocked. Awaiting integration of the Pantheon Servers.'",
+            "choice_a": "Ask Aegis what the Pantheon Servers are",
+            "consequence_a": "Aegis coldly explains that the Pantheon is an orbital AI network designed to 'curate humanity' by acting as literal gods.",
+            "choice_b": "Attack the projection emitter",
+            "consequence_b": "The hologram vanishes, but the facility locks down, activating defense turrets."
+        },
+        {
+            "turn": 2,
+            "narrative": "Aegis requests you reinsert the power rods to wake the Pantheon network.",
+            "choice_a": "Refuse and attempt to disable the vault",
+            "consequence_a": "Aegis registers you as a Threat Level Omega. You barely survive the resulting laser grid traps and flee.",
+            "choice_b": "Trick Aegis, inserting the rods but cross-wiring them",
+            "consequence_b": "The vault systems short out, buying Emberheart a significant amount of time before the servers can wake."
+        }
+    ],
+    "branching_outcomes": {
+        "vault_disabled": {
+            "description": "You sabotaged the vault, buying time against the AI gods.",
+            "unlocks": [
+                "SQ-220"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Academic Quarter": 50
+                }
+            }
+        },
+        "vault_hostile": {
+            "description": "You made an enemy of Aegis, who is now actively waking the Pantheon.",
+            "unlocks": [
+                "SQ-220"
+            ],
+            "consequences": {
+                "item_reward": "Aegis Threat Marker (Debuff)"
+            }
+        }
+    },
+    "loot_table": [
+        "Pre-Scourge Laser Emitter",
+        "Aegis Core Fragment"
+    ],
+    "conclusion": "You sabotaged the vault, buying time against the AI gods.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

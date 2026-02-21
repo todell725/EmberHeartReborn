@@ -1,0 +1,150 @@
+{
+    "id": "SQ-191",
+    "title": "The Sock-Thief Elemental",
+    "difficulty": "Easy",
+    "xp_reward": 420,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Laundress Guild reports systematic left-sock disappearances during 3 AM laundry shift"
+    },
+    "location": "Lower Ward - Laundry Ward Steam-Tunnels",
+    "district": "Lower Ward",
+    "thread": "Laundry",
+    "estimated_duration": "40 minutes",
+    "key_npcs": [
+        "Head Laundress Dottie Grieve (quest-giver, magnificently furious)",
+        "The Sock Elemental (Warp-Static entity, made of 300+ lost left socks, lonely)",
+        "Rennick the Plumber (steam-tunnel expert, deeply philosophical about socks)"
+    ],
+    "mechanics_featured": [
+        "Survival (tracking)",
+        "Animal Handling (befriending elemental)",
+        "Fabric-Handling checks",
+        "Light combat (if elemental frightened)",
+        "Puzzle: understanding elemental's goal"
+    ],
+    "permanent_effects": [
+        "Player learns Warp-Static can coalesce into elemental form from accumulated fabric",
+        "Sock Elemental befriended or dispersed",
+        "Steam-tunnel Warp-Static hotspot identified"
+    ],
+    "branching_outcomes": {
+        "befriend_elemental": {
+            "description": "Understand the Sock Elemental wants company; give it a home and a purpose",
+            "effects": {
+                "settlement_morale": 3
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Sock Elemental becomes Laundry Ward mascot; returns socks and can sense Warp-Static disturbances",
+                "ambient_hazard": "Occasional left-sock disappearances continue (it keeps 1 per visit as toll)"
+            }
+        },
+        "disperse_elemental": {
+            "description": "Unravel the Sock Elemental's component socks, dispersing the Warp-Static",
+            "effects": {
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "ambient_hazard": "300 socks returned to owners, many deeply confused by the experience"
+            }
+        }
+    },
+    "description": "Three hundred left socks have been stolen. Only left socks. Only during the 3 AM laundry shift. A mountain of wet hosiery in the steam-tunnels is moving, giggling, and\u2014apparently\u2014trying to make a friend.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Head Laundress Dottie Grieve is a formidable woman who has managed the Laundry Ward for thirty years and has seen everything. She has not, she is clear, seen anything like this. She places 14 right-sock orphans on the table in front of you with the precision of a prosecutor presenting evidence. 'Three hundred left socks. Three weeks. Always the left. ALWAYS. The right socks remain! 'What use is a right sock without the left?' She has apparently asked the universe this question many times this week and received no satisfactory answer.",
+            "choice_a": "Examine the laundry vats for clues about how the socks are disappearing (Investigation DC 10)",
+            "consequence_a": "Success: The vats have faint discharge marks at their base\u2014Warp-Static residue, in a pattern that tracks toward the drain grates. Something is pulling specific items through a Warp-Static gradient. Left socks specifically because they spin in a particular direction in the vats. (+1 Lore)",
+            "choice_b": "Conduct a stakeout of the 3 AM laundry shift (Stealth DC 11)",
+            "consequence_b": "Success: At exactly 3:04 AM, in the steam and sudsy air, something comes up through the drain\u2014an appendage that is unmistakably made of socks, damp and knotted, that reaches into the vat and collects 11 left socks with the careful selectivity of a connoisseur. Then retreats. (+1 Progress)",
+            "convergence": "Damp left-sock footprints lead toward the steam-tunnel access grate. They are the footprints of something much larger than a sock, made entirely of socks. From somewhere below, there is a sound. It is, genuinely, a giggle."
+        },
+        {
+            "turn": 2,
+            "narrative": "The steam-tunnels beneath the Laundry Ward are hot, humid passages of old copper piping that date back pre-Scourge. Rennick the Plumber acts as guide\u2014he has worked these tunnels for twenty years and has opinions about everything, including, apparently, socks. 'I've been hearing it for a month,' he says, ducking under a low pipe. 'Giggling in the dark. I thought it was the apprentices. But apprentices don't giggle like that\u2014that's a confused giggle. Like something that's worked out how to be amused but hasn't quite got the range.' The sock-prints on the wet floor are enormous. Whatever made them is the size of a cart-horse. Made entirely of socks.",
+            "choice_a": "Follow the prints carefully, making as little noise as possible (Stealth DC 10)",
+            "consequence_a": "Success: You round a pipe-junction and see it: a ten-foot-tall mound of interlocked, knotted left socks, faintly glowing violet with Warp-Static, slowly assembling what appears to be\u2014with sock-mittened hands\u2014a smaller figure of socks. It is building a companion. (+1 Observation, elemental unaware of you)",
+            "choice_b": "Call out to it\u2014Rennick's assessment suggests it might not be hostile (Animal Handling DC 11)",
+            "consequence_b": "Success: Your voice echoes down the tunnel. The sock-mound freezes. Turns. Its 'face'\u2014a loose arrangement of sock-toes\u2014shifts into an expression you read, somehow, as embarrassed. It clutches its half-formed companion to its chest. (+1 Progress, elemental contact made)",
+            "convergence": "The Sock Elemental sees you. It does not attack. It does not flee. It extends one damp sock-hand toward you, palm up. In the palm, carefully arranged, is a single right sock. A peace offering. It wants to make friends and it knows, dimly, that you need the other half."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Sock Elemental's intelligence is difficult to assess. It does not speak. It communicates in squeaks, sock-rustles, and the expressivity of its loosely-assembled face. What you can determine: it is lonely. It became aware\u2014coalesced from Warp-Static and accumulated sympathy for lost socks\u2014somewhere around six weeks ago. Since then, it has been collecting left socks specifically because it decided left socks were the lonely ones (the right ones always have partners in the vats; left socks tumble more). It is building a companion from stolen socks. The companion is currently one arm and a head of dubious construction.",
+            "choice_a": "Try to communicate with the elemental through fabric manipulation (Fabric-Handling DC 12)",
+            "consequence_a": "Success: You take a sock from your pack and fold it carefully\u2014no aggression, deliberate, gentle\u2014into a shape. The Elemental watches with absolute focus, then copies you. You've established a language of sorts. Folded sock = yes. Balled sock = no. Dangling sock = question. (+1 Communication established)",
+            "choice_b": "Help it build the companion (Animal Handling DC 11, win trust through participation)",
+            "consequence_b": "Success: You sit down in the steam-tunnel and start knotting socks alongside the elemental. It watches, then adjusts your work with damp gentle hands. Rennick observes this with the equanimity of a man who has seen everything. 'You're helping a sock monster make a friend,' he says. 'Right. Sure.' (+1 Rapport)",
+            "convergence": "The half-built companion is beginning to take form: roughly humanoid, roughly sock-height (about three feet), and entirely made of stolen laundrywear. The elemental regards it with something like hope. Then looks at you. Dangle-sock: question. Can you help make this work?"
+        },
+        {
+            "turn": 4,
+            "narrative": "The core problem: the elemental's companion, assembled from 130 individual socks, is not coming alive. The elemental keeps adding socks and it keeps being a pile. The Warp-Static in the area is not sufficient to animate a second entity\u2014it can barely sustain the first. The elemental has been trying to solve this for three weeks by collecting more socks. But quantity is not the issue. The issue is the Warp-Static source. Somewhere nearby is a Warp-Silk hotspot feeding the elemental. The companion needs to be placed at the hotspot to animate.",
+            "choice_a": "Locate the Warp-Static hotspot in the steam-tunnels (Arcana DC 13, feel for dimensional bleed)",
+            "consequence_a": "Success: Two junctions north, there is a pipe fitting that is distinctly wrong\u2014original copper replaced at some point with a metal that is slightly translucent at certain angles. Warp-Silk pipe fitting, embedded in the tunnel infrastructure by someone with very odd priorities. (+1 Lore, hotspot located)",
+            "choice_b": "Ask Rennick to identify any 'weird pipes' from his maintenance experience",
+            "consequence_b": "'Third junction left, the fitting that sounds hollow when you knock but has no hollow inside it. Always sounded wrong to me.' He finds the fitting in three minutes, because he has knocked on every pipe in these tunnels. (+1 Progress, faster route)",
+            "convergence": "The Warp-Silk fitting pulses gently when the sock-companion is placed against it. The elemental watches. You watch. Rennick takes a step back. Something stirs in the sock-pile."
+        },
+        {
+            "turn": 5,
+            "narrative": "The sock-companion does not animate. But it tries. For about 30 seconds, the pile shivers and something resembling awareness flickers through it\u2014a gesture, a tilt of the head made of sock-toes. Then it sits inert again. The Warp-Static is not strong enough. The elemental makes a sound you recognize from Turn 3's established language: a loose, trailing dangle. It does not know what to do. For just a moment, a ten-foot pile of sentient lost socks is heartbreaking. Then it does something surprising: it sits down next to the inert companion, tucks the half-formed figure under one enormous sock-arm, and simply... keeps it company. It is staying with someone who cannot yet respond.",
+            "choice_a": "Attempt to temporarily boost the Warp-Static from the fitting to animate the companion (Arcana DC 15, costs a Warp-Silk item if held, or costs -5 HP from Warp-sting)",
+            "consequence_a": "Success: The companion animates\u2014briefly, incompletely\u2014long enough to register the elemental's presence and make a small gesture before settling back. The elemental's reaction is complex: something like recognition. The companion cannot sustain, but it was real for a moment. The elemental folds it carefully. (+1 Lore, +3 Rapport)",
+            "choice_b": "Explain (via sock-language) that the companion might not be able to wake up, and offer yourself as a friend instead (Insight + Animal Handling DC 12)",
+            "consequence_b": "Success: This is, strangely, harder than combat. Via carefully arranged socks you communicate: 'This one cannot yet wake. But we know you are here. You are not alone.' The elemental considers this for a long time. Then it gives you a right sock. Correct partner for the orphaned left. (+2 Rapport)",
+            "convergence": "The elemental has reached a decision point. It can keep trying alone\u2014keep stealing socks, keep trying to boost the companion\u2014or it can engage with the world above. You have given it something: the knowledge that someone else knows it is there."
+        },
+        {
+            "turn": 6,
+            "narrative": "The negotiation over what the Sock Elemental DOES now is genuinely novel territory. Dottie Grieve needs her socks back. The elemental has 300 of them and is not obviously willing to give them all up. Rennick suggests a 'sock tax'\u2014keep some, return the rest\u2014which is either the most pragmatic or most absurd negotiation framework you have ever employed. The elemental, when presented with this via sock-language, considers carefully, then holds up eight socks. Its 'toll' would be eight socks per week to continue its companionship project. You count the stolen socks. Eight per week is 24 over three weeks. It has 300. It has been hoarding against future need.",
+            "choice_a": "Accept the sock-tax arrangement (befriend path, Animal Handling DC 11 to formalize)",
+            "consequence_a": "Success: Dottie is presented with this proposal. She stares at you. She stares at the tunnel entrance. She stares at the ceiling. 'Eight socks a week,' she repeats. 'For a sock monster. That lives in our tunnels.' A very long pause. 'It returns all the others?' Yes. 'Fine. FINE. Eight socks a week.' Agreement reached. (+2 Settlement Morale eventually)",
+            "choice_b": "Gently begin unraveling the elemental (disperse path, Fabric-Handling DC 14, slow and respectful)",
+            "consequence_b": "Success: This takes 20 minutes and is surprisingly melancholy. The elemental does not resist\u2014it seems to understand, somehow, that its presence is causing problems. As the last Warp-Static disperses, the socks collapse neatly. 300 left socks, returned. 2 are inexplicably right socks. Rennick pockets these without comment. (+1 Settlement Stability)",
+            "convergence": "Either resolution changes the Laundry Ward. If befriended: the elemental begins living openly in the steam-tunnels, known to regulars as 'Lefty.' If dispersed: the steam-tunnels are quiet in a way they weren't before, and seven sock-shaped Warp-Static echoes linger at the hotspot for weeks."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Warp-Silk pipe fitting still needs to be addressed regardless of the elemental's fate. It is an active Warp-Static source in a residential infrastructure system. Rennick has opinions: 'I can't just leave a Warp-pipe in my tunnels. Do you have any idea how many things I've had to unblock because of fabric misbehavior in the last month? Three hand-towels, a bath mat, and what I can only describe as a sentient mop.' He is absolutely correct. The fitting needs to come out.",
+            "choice_a": "Remove the Warp-Silk fitting carefully, preserving it intact (Fabric-Handling + Athletics DC 13)",
+            "consequence_a": "Success: The fitting unscrews, reluctantly. It is Warp-Silk woven around a copper core\u2014the silk provides mechanical stability to the Warp-Static bleed, which would otherwise just leak randomly. Whoever put this here knew what they were doing. (+1 Lore, Warp-Silk Pipe Fitting obtained as rare item)",
+            "choice_b": "Have Rennick replace the fitting with standard copper while you stabilize the Warp-Static bleed (Arcana DC 12)",
+            "consequence_b": "Success: The Warp-Static dissipates over three hours as you channel it harmlessly into the stone walls where it goes quiet. Standard copper fitting in place. Tunnels return to normal. No more Warp-Static source in the residential plumbing. (+1 Settlement Stability)",
+            "convergence": "If Lefty the Sock Elemental is still present, it watches the fitting be removed with what reads as mild concern\u2014it was its power source. Then it settles back, smaller than before but still coherent. It seems to have internalized enough Warp-Static to sustain independently. Just at a smaller scale. It is now roughly horse-sized instead of cart-horse-sized. Rennick considers this progress."
+        },
+        {
+            "turn": 8,
+            "narrative": "Dottie Grieve receives the returned socks. All 300 of them (minus eight, if Lefty remained), cleaned, matched, and sorted by color, which the elemental apparently did overnight with meticulous care. Dottie spreads them across the sorting tables, finds every owner's mark, and begins the matching process with the right-sock orphans. 'They're all there,' she says, slowly. 'Every single one. Matched.' She pauses. 'It sorted them.' Another pause. 'It's tidier about laundry than my apprentices.' The apprentices, listening from across the room, say nothing.",
+            "choice_a": "Report the Warp-Silk pipe finding to the Mage Guild (major lore path)",
+            "consequence_a": "The Guild analyst examines the fitting with growing alarm: 'This was not installed accidentally. Warp-Silk does not occur in copper fittings naturally. Someone engineered this. Pre-Scourge craftsmanship. Someone ran Warp-Static deliberately through the Laundry Ward's plumbing.' A beat. 'Why?' (+2 Lore, deliberate Warp-Static infrastructure confirmed)",
+            "choice_b": "Return to the Laundry Ward and ask around about the building's construction history",
+            "consequence_b": "An elderly Ward resident, consulted about the building's age: 'Pre-Scourge, all of it. The plumbing hasn't been changed since. The original builders put in something they called Warp-conduit fittings. For what, nobody ever explained.' She shrugs. 'I assumed it was drainage.' (+1 Lore, historical Warp-conduit system confirmed)",
+            "convergence": "Quest Complete. The Sock Elemental was born from Warp-Static bleed in pre-built infrastructure and the accumulated laundry-sympathy of the Ward. It wanted companionship. The pre-Scourge builders put Warp-Static conduit deliberately through the residential plumbing. Nobody knows why. And Lefty, if befriended, is sitting in the steam-tunnels right now, carefully sorting socks by color for no particular reason except that it likes to."
+        }
+    ],
+    "conclusion": "Three hundred stolen left socks were the symptom; a lonely Warp-Static elemental and a deliberately-engineered Warp-Silk plumbing system were the cause. The Laundry Ward has either gained a mascot or returned 300 socks to their owners. Either way, someone pre-Scourge ran Warp-Static conduit through the city's residential plumbing, and nobody has explained why.",
+    "loot_table": [
+        "Warp-Silk Pipe Fitting (rare - pre-Scourge Warp-Static conduit component, connects to broader Laundry lore)",
+        "Lefty's Right-Sock Gift (a single right sock, inexplicably warm, +1 luck on one check per session) [befriend path]",
+        "300 Returned Left Socks (sorted, cleaned, ready for owners - Laundress Guild pays per sock): 150 Gold",
+        "Rennick's Tunnel Key (access to Lower Ward steam-tunnel network for future investigations)",
+        "Laundress Guild Crisis Payment: 250 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Sock Elemental panics and floods the Laundry Ward with 300 socks simultaneously. Steam-tunnel collapses under fabric pressure. -3 Settlement Stability, Laundry Ward closed for 1 session.",
+        "failure_penalty": {
+            "xp_loss": 300
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

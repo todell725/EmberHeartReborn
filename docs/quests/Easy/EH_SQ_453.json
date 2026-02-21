@@ -1,0 +1,80 @@
+{
+    "id": "EH_SQ_453",
+    "title": "The Apothecary's Back Room",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Medical Quarter -> The Grey Apothecary",
+    "district": "Medical Quarter",
+    "thread": "Standalone",
+    "description": "An anonymous tip claims that Grey Apothecary proprietor Blex is selling unlicensed medicines out of her back room \u2014 treatments not cleared by the Medical Quarter and allegedly containing Void-adjacent compounds. Director Sela wants a discreet investigation before making any official move.",
+    "key_npcs": [
+        "Director Sela",
+        "Apothecary Blex",
+        "Regular Customer"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Grey Apothecary front shop is entirely normal \u2014 licensed herbs, standard pain relief, cleaning compounds. Blex is professional and careful. But you notice customers occasionally saying a specific phrase at the counter that causes Blex to pause before serving them.",
+            "choice_a": "Observe the counter phrase pattern and attempt to replicate it",
+            "consequence_a": "After careful listening you identify the phrase: 'I need the strong sort.' Using it earns you a measured look and an invitation to the back room.",
+            "choice_b": "Approach Blex openly as a Med Quarter health inspector",
+            "consequence_b": "Blex is immediately guarded and professional. No back room mention. She has done this before."
+        },
+        {
+            "turn": 2,
+            "narrative": "In the back room you find a range of unlicensed treatments \u2014 including one for chronic pain derived from Void-mushroom extract. The treatments appear to be helping people with conditions the licensed Medical Quarter cannot adequately treat.",
+            "choice_a": "Report Blex to Director Sela with a full account \u2014 including evidence that patients are benefiting",
+            "consequence_a": "Sela is conflicted. She issues a warning rather than an arrest and begins a fast-track evaluation of Blex's formulas.",
+            "choice_b": "Give Blex a week to self-report to the Medical Quarter for a voluntary licensing review",
+            "consequence_b": "Blex, to her credit, appears the next morning and submits everything voluntarily. The review is fair and detailed."
+        },
+        {
+            "turn": 3,
+            "narrative": "Three of Blex's formulas pass the licensing review. Two do not.",
+            "choice_a": "Help Blex reformat the failed formulas to remove the problematic Void compound",
+            "consequence_a": "With Alchemist Rynn's help, two of the formulas are reformulated without Void components and re-submitted.",
+            "choice_b": "Document the failed formulas for academic research to improve future treatment options",
+            "consequence_b": "Two formulas are transferred to the Academic Quarter for continued development under controlled conditions."
+        }
+    ],
+    "branching_outcomes": {
+        "formulas_licensed": {
+            "description": "Three Blex formulas licensed. Two reformulated and re-submitted.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Medical Quarter Licence Certificate",
+                "reputation_change": {
+                    "Medical Quarter": 16
+                }
+            }
+        },
+        "research_transferred": {
+            "description": "Failed formulas transferred to Academic Quarter for development.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Blex's Formula Notes",
+                "reputation_change": {
+                    "Medical Quarter": 12,
+                    "Academic Quarter": 8
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Medical Quarter Licence Certificate",
+        "Blex's Formula Notes",
+        "180x Gold Coins"
+    ],
+    "conclusion": "Three Blex formulas licensed. Two reformulated and re-submitted."
+}

@@ -1,0 +1,72 @@
+{
+    "id": "SQ-240",
+    "title": "The Washout",
+    "difficulty": "Epic",
+    "xp_reward": 1500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-239"
+        ]
+    },
+    "location": "Laundry Ward -> The Main Valves",
+    "district": "Laundry Ward",
+    "thread": "Laundry",
+    "description": "With the leadership dead, rogue assassins are attempting to vent the Deep Wash's toxic chemicals into the city's main drainage system out of spite.",
+    "key_npcs": [
+        "Rogue Assassins"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Three highly trained assassins are defending the main release valves. The valves take exactly two minutes to open.",
+            "choice_a": "Engage all three in open combat",
+            "consequence_a": "A master-level duel. You defeat them, but take multiple serious wounds.",
+            "choice_b": "Use the environmental steam vents to blind them",
+            "consequence_b": "You use the steam to separate them, assassinating the assassins one by one seamlessly."
+        },
+        {
+            "turn": 2,
+            "narrative": "The valves are jammed halfway open. Highly toxic gas is filling the room.",
+            "choice_a": "Use pure Strength to winch them shut",
+            "consequence_a": "Your muscles tear, but the valves slam shut. The city is safe.",
+            "choice_b": "Weld them shut with a fire spell",
+            "consequence_b": "The metallic seal is perfect. The gas stops, but the mechanism is permanently fused."
+        }
+    ],
+    "branching_outcomes": {
+        "valves_winched": {
+            "description": "You shut the valves cleanly. The Laundry threat is ended.",
+            "unlocks": [
+                "SQ-257"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "All Districts": 15
+                }
+            }
+        },
+        "valves_welded": {
+            "description": "You permanently sealed the chemical vats.",
+            "unlocks": [
+                "SQ-257"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Laundry Ward": 30
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Assassin's Master-Blade",
+        "500x Gold Coins"
+    ],
+    "conclusion": "You shut the valves cleanly. The Laundry threat is ended.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,149 @@
+{
+    "id": "SQ-117",
+    "title": "The Oily Footprint",
+    "difficulty": "Easy",
+    "xp_reward": 160,
+    "prerequisites": "None",
+    "description": "A trail of black oil leads to a secret in the baker's cellar...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The baker\u2019s cellar is cool and smells of yeast, but a single, shimmering footprint of black oil staining the stone floor.",
+            "choice_a": "Track the footprint",
+            "consequence_a": "Success.",
+            "choice_b": "Sample the oil",
+            "consequence_b": "Success.",
+            "convergence": "The footprint leads to a wall that shouldn't be hollow, but echoes with a rhythmic thrumming."
+        },
+        {
+            "turn": 2,
+            "narrative": "The oil is warm and smells of old wine and burnt rubber. It\u2019s moving slightly, the edges of the print reaching for your boots.",
+            "choice_a": "Wipe the oil away",
+            "consequence_a": "Success.",
+            "choice_b": "Follow the trail into the wall",
+            "consequence_b": "Success.",
+            "convergence": "A secret door swings open on hinges of bone, leading into a sub-basement filled with 'Void-Barrels'."
+        },
+        {
+            "turn": 3,
+            "narrative": "The barrels are weeping the same black oil. Inside, you hear the sound of a thousand tiny hearts beating in unison.",
+            "choice_a": "Open a barrel",
+            "consequence_a": "Success.",
+            "choice_b": "Check the labels",
+            "consequence_b": "Success.",
+            "convergence": "The labels are written in a script that shifts when you look away\u2014they say 'Sustenance for the Silent'."
+        },
+        {
+            "turn": 4,
+            "narrative": "A 'Shadow-Rat'\u2014the size of a dog, its fur made of black smoke\u2014leaps from the rafters, its teeth sparking with violet electricity.",
+            "choice_a": "Dodge the pounce",
+            "consequence_a": "Success.",
+            "choice_b": "Bind the rat with flour",
+            "consequence_b": "Success.",
+            "convergence": "The flour sticks to the smoke-fur, revealing the rat's physical core\u2014a heart made of a glowing 'Void-Seed'."
+        },
+        {
+            "turn": 5,
+            "narrative": "The baker enters, his face streaked with soot. He\u2019s not angry; he\u2019s terrified. 'The rats... they brought the oil to keep us warm,' he whimpers.",
+            "choice_a": "Question the baker's loyalty",
+            "consequence_a": "Success.",
+            "choice_b": "Help him seal the leaks",
+            "consequence_b": "Success.",
+            "convergence": "The oil begins to pool around his feet, forming a 'Shadow-Anchor' that pins him to the spot."
+        },
+        {
+            "turn": 6,
+            "narrative": "The shadow-mire is rising. You must sever the connection between the baker and the Void-Seed. The air is cold and smells of wet earth.",
+            "choice_a": "Cut the Shadow-Anchor",
+            "consequence_a": "Success.",
+            "choice_b": "Pour holy-water into the oil",
+            "consequence_b": "Success.",
+            "convergence": "The anchor snaps, and the oil retreats back into the barrels with a sound like a heavy sigh."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Shadow-Rat dissolves into a puddle of 'Liquid-Ink'. The baker gives you a 'Sourdough-Starter' that never dies.",
+            "choice_a": "Accept the starter",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Void-Seed",
+            "consequence_b": "Success.",
+            "convergence": "The starter is warm to the touch and smells of a summer field. It's a 'Living-Food' item."
+        },
+        {
+            "turn": 8,
+            "narrative": "The 'Oily Footprint' is gone, but the cellar walls remain stained purple. The baker promises to report any more 'gifts' from the dark.",
+            "choice_a": "Seal the bone-door",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The sun peeks through the cellar window, turning the dust motes into tiny, golden sparks."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, the smell of fresh bread from the floor above is the best thing you've smelled all day.",
+            "choice_a": "Buy a loaf",
+            "consequence_a": "Success.",
+            "choice_b": "Report to the Council",
+            "consequence_b": "Success.",
+            "convergence": "The bread is warm and perfectly crusty. It provides +1 Luck for 1 hour."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Bakery. The cellar is clean, and the oven is hot.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Finish",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Oily Footprint' is complete. Quest Complete.",
+    "loot_table": [
+        "Eternal Sourdough-Starter",
+        "15 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The shadow-mire consumes the bakery and your legs. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Baker reports oily footprints appearing overnight in cellar",
+        "flags": []
+    },
+    "location": "Baker's Cellar \u2014 Lower Ward",
+    "district": "Lower Ward",
+    "thread": "Void",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Baker Oryn",
+        "Shadow-Rat (creature)"
+    ],
+    "mechanics_featured": [
+        "Investigation (tracking)",
+        "Combat (shadow creature)",
+        "Social (council report)"
+    ],
+    "permanent_effects": {
+        "settlement": "Sub-basement sealed; Void-Barrels discovered and flagged",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Sourdough-Starter",
+            "result": "Living-Food item (permanent meal supply)"
+        },
+        {
+            "path": "Take Void-Seed",
+            "result": "+1 Secret (dangerous artifact)"
+        }
+    ]
+}

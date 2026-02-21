@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_445",
+    "title": "The Quiet Axe",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "High Forest -> The Protected Grove",
+    "district": "High Forest",
+    "thread": "Standalone",
+    "description": "Forest Keeper Vael has discovered evidence of illegal logging in the Protected Grove \u2014 over a dozen mature trees have been taken in the past month. The trees are irreplaceable medicinal specimens. You must identify the loggers before more trees are taken.",
+    "key_npcs": [
+        "Forest Keeper Vael",
+        "Timber Merchant Gos"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The stumps are clean cuts \u2014 professional equipment, not scavenging. Vael shows you the sawdust analysis: it contains a specific teak oil finish consistent with commercially maintained heavy saw blades. The operation is organised.",
+            "choice_a": "Stakeout the grove overnight to catch the loggers in the act",
+            "consequence_a": "A four-man crew arrives at midnight with professional equipment. You observe the operation completely before stepping out.",
+            "choice_b": "Trace the specific saw equipment by checking timber merchant licensing records",
+            "consequence_b": "Three licences for heavy forest equipment in the Ward match the saw profile. One \u2014 Timber Merchant Gos \u2014 has no documented work orders for this month but still has active saw crews."
+        },
+        {
+            "turn": 2,
+            "narrative": "Timber Merchant Gos, when confronted, initially claims licenses permit some forest use. But the Protected Grove has an absolute prohibition \u2014 a status Gos was legally required to know.",
+            "choice_a": "Report Gos to the Ward Authority with the evidence for immediate prosecution",
+            "consequence_a": "Gos is arrested and faces a substantial fine plus mandatory replanting orders.",
+            "choice_b": "Negotiate directly with Gos for a replanting agreement as a condition of not prosecuting",
+            "consequence_b": "Gos agrees. He funds the replanting of twenty-four Grove-appropriate saplings under Vael's supervision."
+        },
+        {
+            "turn": 3,
+            "narrative": "The grove needs immediate assessment and protection going forward.",
+            "choice_a": "Help Vael install basic perimeter monitoring \u2014 trip-line alerts on the three access paths",
+            "consequence_a": "Trip-lines are set. Any future entry triggers a Ward alert beacon.",
+            "choice_b": "Recommend the Ward Authority post a rotating night warden to the grove",
+            "consequence_b": "A paid night warden position is created. The grove gets its first dedicated guard."
+        }
+    ],
+    "branching_outcomes": {
+        "gos_prosecuted": {
+            "description": "Gos arrested. Replanting ordered by court.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Protected Grove Survey Map",
+                "reputation_change": {
+                    "High Forest": 16
+                }
+            }
+        },
+        "gos_replanted": {
+            "description": "Replanting negotiated privately. 24 saplings funded.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Protected Grove Sapling Certificate",
+                "reputation_change": {
+                    "High Forest": 14
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Protected Grove Survey Map",
+        "Protected Grove Sapling Certificate",
+        "190x Gold Coins"
+    ],
+    "conclusion": "Gos arrested. Replanting ordered by court."
+}

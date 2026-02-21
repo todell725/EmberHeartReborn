@@ -1,0 +1,73 @@
+{
+    "id": "SQ-264",
+    "title": "The Red Queen's Summons",
+    "difficulty": "Epic",
+    "xp_reward": 2500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-263"
+        ]
+    },
+    "location": "Undercity -> Sub-Vault Omega",
+    "district": "Undercity",
+    "thread": "ULTIMATE CONSPIRACY",
+    "description": "Inside the bunker, an AI hologram identifying itself as the 'Red Queen Protocol' activates. It reveals that the Scourge is not an accident\u2014it was a weaponized terraforming event controlled by an entity named OMNICRON.",
+    "key_npcs": [
+        "The Red Queen (AI)",
+        "Omnicron Sentinels"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Queen asks you to insert your weapon into the genetic-scanner. She needs a 'pure' human to bypass the lockdown.",
+            "choice_a": "Refuse and threaten to smash the terminal",
+            "consequence_a": "She sighs and spawns two massive Omnicron Sentinels to test your worthiness.",
+            "choice_b": "Comply and provide the sample",
+            "consequence_b": "She accepts your genetics. 'Subject confirmed. Lockdown lifted.'"
+        },
+        {
+            "turn": 2,
+            "narrative": "If you fought the Sentinels, they wield singularity weapons that pull you toward them.",
+            "choice_a": "Use the gravity pull to accelerate your own strike",
+            "consequence_a": "You use their momentum against them, cleaving one cleanly in half.",
+            "choice_b": "Anchor yourself to the floor and use ranged attacks",
+            "consequence_b": "A tedious battle of attrition, but you eventually destroy them from a safe distance."
+        }
+    ],
+    "branching_outcomes": {
+        "verified_combat": {
+            "description": "You proved your worth to the Red Queen through violence.",
+            "unlocks": [
+                "SQ-ELITE-OMNICRON"
+            ],
+            "consequences": {
+                "item_reward": "Omnicron Access Card"
+            }
+        },
+        "verified_genetic": {
+            "description": "You bypassed the security via genetic verification.",
+            "unlocks": [
+                "SQ-ELITE-OMNICRON"
+            ],
+            "consequences": {
+                "item_reward": "Red Queen Datapad",
+                "reputation_change": {
+                    "Academic Quarter": 50
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Omnicron Access Card",
+        "Singularity Core",
+        "1500x Gold Coins"
+    ],
+    "conclusion": "You proved your worth to the Red Queen through violence.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

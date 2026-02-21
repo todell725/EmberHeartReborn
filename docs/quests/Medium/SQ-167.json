@@ -1,0 +1,204 @@
+{
+    "id": "SQ-167",
+    "title": "The Echo-Chamber",
+    "difficulty": "Medium",
+    "xp_reward": 1150,
+    "thread": "Chronos",
+    "district": "Academic Quarter",
+    "estimated_duration": "2-3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-165"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete EH_SQ_065 (The Frozen Moment)",
+    "location": "Academic Quarter \u2014 the Archive of Deep Records and its sub-vaults",
+    "npcs": [
+        {
+            "name": "Archivist Pren Dolm",
+            "role": "Ally NPC",
+            "description": "Head archivist of the Archive of Deep Records. Methodical, careful, deeply protective of the archive's integrity. Contacted the party because something in the sub-vaults is disturbing the archive's older records \u2014 physically altering documents."
+        },
+        {
+            "name": "The Memory Echo",
+            "role": "Boss",
+            "description": "A temporal echo of an entire building's recorded history \u2014 a localized field anomaly that formed in the sub-vault when an old Concordat chronal stabilizer failed. It replays historical moments from the archive's records at random intervals. At peak intensity, it becomes a coherent hostile force defending the 'original timeline' of every document in the vault."
+        },
+        {
+            "name": "Scholar Kaven Briss",
+            "role": "Complication",
+            "description": "A junior archivist who has been secretly spending nights in the sub-vault trying to use the Echo phenomenon to access historical records that were otherwise lost. He has made progress and does not want the party to end the Echo before he extracts what he needs."
+        }
+    ],
+    "description": "The Archive of Deep Records' sub-vaults have been experiencing temporal replay events \u2014 historical moments from the archive's past playing out physically in the stacks. Old scholars, long dead, appear briefly in the aisles, going about tasks from decades past. Documents from sealed collections appear on reading tables and vanish when touched. More dangerously, physical alterations are beginning: pages from active records are being replaced by older versions, erasing recent scholarship. The Memory Echo is a temporal field anomaly in a Concordat chronal stabilizer that failed after 200 years of operation. It must be resolved before the archive loses irreplaceable modern scholarship \u2014 but Scholar Briss has been extracting lost historical data from the Echo and wants the party to buy him time.",
+    "mechanics": [
+        "Arcana (identify the Memory Echo's mechanism; interact with its replay events)",
+        "History (navigate the archive's temporal replays accurately \u2014 recognizing historical figures and events prevents misdirection)",
+        "Persuasion (negotiate with Scholar Briss over the Echo's timeline; convince Dolm to permit unconventional methods)",
+        "Investigation (locate the failed Concordat stabilizer in the sub-vault)",
+        "Combat (Memory Echo at peak intensity \u2014 Medium encounter, illusion-adjacent battlefield)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Echo resolved before archive is significantly damaged",
+            "effect": "settlement_stability +2; Academic Quarter reputation improved; archive's modern records preserved"
+        },
+        {
+            "trigger": "Briss's extraction completed before Echo resolved",
+            "effect": "settlement_morale +1; lost historical data recovered; archive damage is moderate (some modern records lost)"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Archivist Dolm's message is four lines: sub-vault malfunction, historical replays, documents physically altering, party needed immediately. The Archive of Deep Records is the Academic Quarter's primary historical institution \u2014 six floors, the bottom three sealed to general access. When the party arrives, Dolm is in the lobby with an expression that says he has been awake for 30 hours. He takes them immediately to the sub-vault access stair and briefs descending: the Concordat-era sub-vaults were built with chronal stabilizers, designed to preserve document integrity. One has failed. The replay events began four days ago. Initially harmless \u2014 startling, yes, but not damaging. Two days ago, the alterations began. Modern records are being overwritten by older versions. Scholarship from the last 30 years is at risk.",
+            "choice_a": "Ask Dolm for a map of the sub-vault and the Concordat stabilizer locations",
+            "consequence_a": "Dolm provides both. Four stabilizer housings in the sub-vault, each marked on the original construction schematic (Dolm has had this document for 20 years and never needed it until now). The failed one can be identified by Arcana DC 12.",
+            "choice_b": "Descend immediately and begin Investigation",
+            "consequence_b": "Investigation DC 13 to locate the failed stabilizer without the schematic. The descend reveals Scholar Briss in the sub-vault before Dolm expected \u2014 he is currently sitting near a replay event in progress, taking notes.",
+            "convergence": "Sub-vault level three. The Memory Echo is active \u2014 a shimmer in the air at the far end of the stack, replaying a research session from approximately 60 years ago. A scholar-image is reading at a table, the words visible over her shoulder. Briss looks up when the party arrives. He does not look caught. He looks like someone who has been expecting this."
+        },
+        {
+            "turn": 2,
+            "narrative": "Briss's position, stated clearly: he has been using the replay events to access the Concordat-era records that were sealed in the 'damage event' 85 years ago \u2014 a fire that destroyed an entire collection of Concordat administrative and research documents. The originals are gone but the Memory Echo is replaying the sub-vault as it existed before the fire. The scholars visible in the replays are reading documents that no longer physically exist. He has been transcribing what he can see over their shoulders. He is close to completing a full transcription of the Concordat Biological Division's central administrative index \u2014 a document that would tell the party (and him) exactly what every project in the Biological Division was, who ran it, and where the records were stored. He needs four more hours.",
+            "choice_a": "Give Briss four hours \u2014 manage the Echo to slow the document alteration rate while he works",
+            "consequence_a": "Arcana DC 14 to stabilize the Echo's alteration radius temporarily. Success: the alteration rate slows significantly. Briss has time. The Biological Division index will be transcribed. Modern records: moderate damage (about 12% of the open-access modern collection is overwritten).",
+            "choice_b": "Shut the Echo down immediately \u2014 the archive damage is not acceptable",
+            "consequence_b": "Briss argues, then concedes. The Biological Division index transcription is incomplete \u2014 partial data only. Archive preserved. Briss is resentful but professional.",
+            "convergence": "The decision shapes what data is recovered and at what cost to the archive."
+        },
+        {
+            "turn": 3,
+            "narrative": "Locating the failed stabilizer: the Concordat chronal stabilizer housing for sub-vault sector C is behind a concealed panel in shelf row 7, identifiable by the same geometric lock notation from maintenance hatches. Arcana DC 12 (with schematic) or DC 15 (without) to confirm this is the failed unit. It is a palm-sized device of Concordat copper-silver construction, visually similar to the Loop-Breaker Pendant's source but designed for a different purpose \u2014 this one maintains a localized temporal stasis field around documents, preventing degradation. The failure mode has inverted its function: instead of stasis, it is applying temporal regression, pulling the immediate area back toward earlier states. The longer it runs, the further back the regression reaches.",
+            "choice_a": "Deactivate the stabilizer immediately",
+            "consequence_a": "The Memory Echo collapses. All replay events stop. Document alteration ceases. The failed stabilizer is recoverable as an artifact for study.",
+            "choice_b": "Attempt to recalibrate rather than deactivate \u2014 preserve the stabilizer's original protective function",
+            "consequence_b": "Arcana DC 17. On success: the stabilizer returns to stasis mode, document alteration stops, and the replay events become controlled rather than random \u2014 the party can trigger specific replay events deliberately for a brief window. On failure: the stabilizer overloads and the Echo intensifies briefly before collapsing (Memory Echo combat triggers).",
+            "convergence": "The stabilizer's fate determines the final form of the resolution and whether combat occurs."
+        },
+        {
+            "turn": 4,
+            "narrative": "If combat: the Memory Echo at peak intensity manifests as a semi-coherent temporal field entity \u2014 not a creature but a field effect with directional behavior. It fills the sub-vault with overlapping replay events simultaneously, making the battlefield difficult terrain (disadvantage on attacks against non-Echo targets due to visual interference from historical figures moving through the space) and using Temporal Displacement attacks: a target must succeed on DC 13 Wisdom save or perceive their current turn as happening '60 years ago,' treating modern allies as historical strangers (cannot take actions against the Memory Echo for one round). The Echo has effective HP 45, AC 14 (as a field), and is immune to non-magical physical attacks. It is vulnerable to Arcana disruption (counts as magical damage) and dispelled by light damage equivalent as well.",
+            "choice_a": "Use History skill as a free action to orient against the displacement attacks",
+            "consequence_a": "History DC 13 as a bonus action: advantage on the Wisdom save against Temporal Displacement this round. A character who knows the historical period being replayed can contextualize the interference.",
+            "choice_b": "Target the Echo with concentrated Arcana disruption",
+            "consequence_b": "Each successful Arcana attack (treat as spell attack, DC 14) deals 2d8 force damage to the field and reduces the replay interference radius by 5 feet. Three successful attacks reduce the battlefield to normal terrain.",
+            "convergence": "The Memory Echo is dispersed. The sub-vault returns to silence. The replay events stop."
+        },
+        {
+            "turn": 5,
+            "narrative": "Post-resolution: Dolm's damage assessment. The document alteration has affected approximately 8-15% of the open-access modern collection (depending on whether Briss was given four hours). The affected documents have been physically overwritten by older versions from the archive's own collection \u2014 no data is entirely lost (the older versions are themselves authentic historical records) but 30 years of modern scholarship annotation and commentary is gone. Dolm is professionally devastated but not angry at the party. He understands the situation was not of their making. His concern: the other three Concordat stabilizers in the sub-vault. If one failed, the others might. Can the party check them before they go?",
+            "choice_a": "Check and service all three remaining stabilizers",
+            "consequence_a": "Engineering/Arcana DC 12 for each. All three are functional but show the same wear pattern as the failed unit. They will last approximately 2-5 more years without intervention. Dolm now has a maintenance timeline. Settlement stability +1 from the proactive management.",
+            "choice_b": "Provide Dolm with the diagnostic parameters; his team can monitor them",
+            "consequence_b": "Dolm has enough information to track the stabilizers' status. No immediate servicing. The 2-5 year window is noted.",
+            "convergence": "The archive's temporal stability situation is accounted for."
+        },
+        {
+            "turn": 6,
+            "narrative": "Briss's transcription \u2014 complete or partial. If complete: the Concordat Biological Division's central administrative index is an extraordinary document. It lists 23 active projects at the time of the Scourge, including: Project COPPER-TAIL (augmented vermin relay network), Project CHRONAL-HOLD (temporal stabilization infrastructure), Project EMBER-PRESERVE (an unspecified preservation initiative), Project LAST-WORD (archived communications protocol), and 19 others. The index includes the names of division heads. The Biological Division head at the time of the Scourge: one Vane Aris. Not 'V.A.' Not an abbreviated signature. A full name. Vane Aris, Director, Concordat Biological Division. The person who has been operating as 'V.A.' for 200 years was the research director of the Concordat institution. The copper-tail relay network is his project, personally.",
+            "choice_a": "Share the transcription with Investigator Yan immediately",
+            "consequence_a": "Yan receives the name. Her reaction is long, quiet, and then precise: 'He wasn't trying to restart the Concordat's work. He is the Concordat's work. He never stopped.' Her investigation now has a named subject.",
+            "choice_b": "Hold the transcription as intelligence controlled to the party",
+            "consequence_b": "The party knows Vane's full name and institutional role before the investigation framework does. Strategic advantage in the Vane investigation's final stages.",
+            "convergence": "Vane Aris, Director of the Concordat Biological Division, is now a named and contextualized figure in the investigation."
+        },
+        {
+            "turn": 7,
+            "narrative": "The other 19 projects in the Biological Division index: Briss, with the party's permission, continues analysis. Several are straightforward Concordat welfare infrastructure (water purification biological systems, disease monitoring networks). But one project is of immediate relevance: Project EMBER-PRESERVE. The index entry is brief: 'Long-duration biological stasis and neural maintenance protocol \u2014 for the preservation of essential personnel through extended temporal disruption events.' The scope note: '1 subject.' This was not a mass-survival protocol. This was designed for one person to survive a very long time. The subject field is listed only as 'Director.' Briss and the party reach the same conclusion simultaneously.",
+            "choice_a": "Ask Briss if the EMBER-PRESERVE protocol details are in the transcription",
+            "consequence_a": "Partial details \u2014 enough to understand that it involves cyclic biological stasis using the copper-tail relay network's mana-grid as a life-support infrastructure. Vane has been kept alive by his own project. The relay network is not just a sensor grid \u2014 it is his life support.",
+            "choice_b": "Focus on the COPPER-TAIL and CHRONAL-HOLD project details instead",
+            "consequence_b": "The technical infrastructure knowledge is more immediately actionable for the investigation. EMBER-PRESERVE is flagged for later analysis.",
+            "convergence": "Project EMBER-PRESERVE is the Chronos thread's most significant single revelation: Vane Aris has been alive for 200 years because his own project is keeping him that way."
+        },
+        {
+            "turn": 8,
+            "narrative": "Archivist Dolm, once briefed on the Concordat Biological Division index's relevance, makes a request: the archive has collection gaps from the 85-year-ago fire. The documents Briss has transcribed, if properly formatted, can fill those gaps permanently. He asks Briss to complete the transcription properly and donate it to the archive's collection. Briss agrees \u2014 it is the right thing to do and Dolm has protected his access to the sub-vault. The transcription will be a formal archive acquisition. It will be publicly accessible to any Scholar who visits the Archive of Deep Records. Information that has been sealed for 85 years will be available again. The party must decide whether any portion of the transcription should be withheld from public archive access.",
+            "choice_a": "Allow full public access \u2014 the information should be available",
+            "consequence_a": "The complete Biological Division index becomes a public archive record within two weeks. Academic Quarter scholars begin researching the Concordat projects seriously. This generates positive academic energy and some public awareness of the Concordat's scope.",
+            "choice_b": "Request Dolm seal Project EMBER-PRESERVE details specifically",
+            "consequence_b": "Dolm complies with a sealed collection designation for the EMBER-PRESERVE section. The rest of the index is public. The party controls when and whether EMBER-PRESERVE becomes known.",
+            "convergence": "The transcription's public availability is managed."
+        },
+        {
+            "turn": 9,
+            "narrative": "The failed Concordat stabilizer, recovered from the sub-vault, is examined by Yan with Briss's assistance. Its failure mechanism: after 200 years of operation without maintenance, the temporal field calibration drifted below its lower threshold and inverted. This is the same failure pattern Yan has been seeing across the Chronos Division's infrastructure \u2014 it is not unique to this stabilizer. Every Concordat temporal stabilizer in the city is on the same degradation curve. The North Ward's mana-junction stabilizer (addressed or not in EH_SQ_065 and EH_SQ_066) is one example. The archive's stabilizer is another. Yan's projection: over the next two years, three to five additional Concordat temporal stabilizers will fail across the city, each producing localized temporal anomalies similar to what the party has already encountered.",
+            "choice_a": "Commission Yan and Briss to produce a city-wide temporal stabilizer inventory",
+            "consequence_a": "Two weeks of collaborative research using the Chronal Ledger and the Concordat Biological Division index. The inventory identifies 11 additional stabilizers across the city with projected failure dates. Settlement stability +2 from the proactive framework.",
+            "choice_b": "Proceed case by case \u2014 respond to failures as they occur",
+            "consequence_b": "The reactive approach. The party is well-equipped to handle future stabilizer failures. No long-term planning overhead.",
+            "convergence": "The temporal stabilizer failure cascade is either managed proactively or accepted as a reactive challenge."
+        },
+        {
+            "turn": 10,
+            "narrative": "Briss, after the resolution, mentions one more thing he observed in the replay events before the Echo dispersed: a brief sequence not from a research session but from what appeared to be an administrative meeting \u2014 200 years old, from immediately before the Scourge. Four people at a table. One of them identifiable by the administrative index as Vane Aris, Director. The others: a Chronos Division Director named Salern, a third figure with their back turned, and a fourth who was writing rapidly. The meeting's subject, from the fragments Briss caught: 'what to preserve.' Not 'what to save.' 'What to preserve.' A deliberate distinction. Vane was in this meeting. He was deciding what would survive.",
+            "choice_a": "Ask Briss to reconstruct as much of the meeting fragment as possible from his notes",
+            "consequence_a": "Briss reconstructs: the meeting established that the Biological Division would operate the EMBER-PRESERVE protocol and COPPER-TAIL continuously. The Chronos Division would maintain CHRONAL-HOLD independently. The two divisions would outlast the institution even if the institution fell. They were building the successor state before the Concordat collapsed. Vane and whoever his Chronos Division counterpart was agreed to simply... keep working.",
+            "choice_b": "The reconstruction is fragmentary and could be misleading \u2014 wait for more direct evidence",
+            "consequence_b": "Briss's notes are filed. The meeting is documented as a significant artifact for future analysis.",
+            "convergence": "The possibility of a Chronos Division counterpart \u2014 still operating, as Vane has been \u2014 is raised."
+        },
+        {
+            "turn": 11,
+            "narrative": "The Concordat Chronos Division Director at the time of the Scourge: Salern. No family name in the index \u2014 Chronos Division records used single-name designations for senior personnel, a privacy protocol. Investigator Yan's name, however, is Soli Yan. Yan. An abbreviation? A legacy name? She is asked, directly or indirectly. Her response, after a pause that lasts too long: 'Salern is my ancestor. I have known that since I was twelve. It was not a coincidence that I went into temporal investigation.' She did not lie. She did not mention it. She is the institutional successor of the Chronos Division's last Director. She has been investigating Vane's work from the same institutional lineage that partnered with him two centuries ago.",
+            "choice_a": "Ask Yan if she is still maintaining any Chronos Division infrastructure herself",
+            "consequence_a": "Yan is quiet for a long time. 'There are two stabilizers I maintain personally. I have maintained them since I was trained by my mother, who maintained them before me. I thought of it as family practice. I know now it is institutional continuity.' She has been one half of the Concordat's post-Scourge maintenance operation without knowing what the other half was.",
+            "choice_b": "Accept Yan's heritage without pressing further \u2014 the relevance is clear",
+            "consequence_b": "The institutional symmetry is noted: Vane (Biological) and the Yan lineage (Chronos) have both been maintaining their respective systems for 200 years. They are the last operators of a dead institution.",
+            "convergence": "Investigator Yan's role in the Chronos thread is now fully revealed: she is not just an ally. She is Vane's institutional counterpart \u2014 the successor of the Director he sat across from in Briss's recovered meeting fragment."
+        },
+        {
+            "turn": 12,
+            "narrative": "The Archive of Deep Records is quieter in the weeks following. The modern scholarship damage is catalogued, grieved professionally, and some of it reconstructed from scholars' personal notes \u2014 the academic community responds with unexpected solidarity. Briss's transcription is formally acquired and opened to research. The Concordat Biological Division index generates three new academic papers within a month, all citing it as a primary source, all completely unaware of its real-world implications. Dolm sends a formal letter of thanks. He adds a personal note at the bottom: 'I have worked in archives for 40 years. The most important documents are always the ones that change what the earlier documents mean. This is one of those.' He is correct. The investigation of a single memory echo in a Concordat-era archive has produced the name of the subject, the nature of his survival, the name of his institutional counterpart, and the shape of the remaining Concordat operation. Two people have been keeping an institution alive for 200 years because they said they would. The party is now the third party who knows.",
+            "choice_a": "Brief the full party on the complete picture: Vane Aris, Yan's heritage, EMBER-PRESERVE, the agreed continuity plan",
+            "consequence_a": "Full party alignment on what the Chronos-Vermin convergence represents. The investigation enters its final phase with a complete framework: find Vane, understand the Reactivation Protocol's final objective, and decide what happens to infrastructure that has been running alone for 200 years.",
+            "choice_b": "Be selective \u2014 not all of this needs to be shared with everyone yet",
+            "consequence_b": "Information controlled. Specific party members hold specific pieces. The mosaic is complete to the party leadership; distribution is strategic.",
+            "convergence": "Quest complete. The Echo-Chamber has resolved the archive crisis, recovered the Concordat Biological Division index, identified Vane Aris by full name and role, established Project EMBER-PRESERVE (his life support), revealed Yan's heritage, and confirmed that Vane and the Yan lineage have been the two-person continuation of the Concordat operation for two centuries."
+        }
+    ],
+    "conclusion": "The Echo-Chamber is the Chronos thread's central revelation quest. The Memory Echo, a nuisance threat in a Concordat-era archive, produces the most important intelligence in the entire thread: Vane Aris is the Concordat's Biological Division Director, kept alive by his own project for 200 years, and Investigator Yan is the institutional successor of his Chronos Division counterpart. The two of them \u2014 one living, one a generational inheritance \u2014 have been the last operators of a dead institution, each maintaining their half without knowing the other half still existed.",
+    "loot_table": [
+        "Concordat Biological Division Index (Briss's transcription; lists all 23 active projects including COPPER-TAIL, CHRONAL-HOLD, EMBER-PRESERVE, LAST-WORD; names Vane Aris as Director; most important single intelligence document in the Chronos-Vermin convergence)",
+        "Failed Chronos Stabilizer (recovered from Archive sub-vault; allows analysis of the degradation mechanism; used by Yan to project the city-wide stabilizer failure cascade; restorable to function by Concordat-trained operator)",
+        "Briss's Meeting Fragment Notes (reconstructed fragment of a pre-Scourge Concordat administrative meeting; establishes that the Biological and Chronos Divisions deliberately continued operation post-Scourge under a mutual agreement)",
+        "Archive Research Access (Dolm grants the party permanent research access to the Archive of Deep Records' sealed collections \u2014 Category 3 clearance; significant future resource for any Concordat research)",
+        "925 gold (Academic Quarter District Authority resolution payment; Dolm's personal contribution from archive emergency funds)"
+    ],
+    "branching_outcomes": {
+        "briss_given_time": {
+            "description": "Briss given four hours; complete Biological Division index transcribed; archive takes moderate damage",
+            "effects": {
+                "settlement_morale": 1,
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Complete EMBER-PRESERVE details available; 12% of modern records overwritten; Briss becomes an active research ally for the Chronos thread"
+            }
+        },
+        "immediate_shutdown": {
+            "description": "Echo shut down immediately; partial transcription only; archive preserved",
+            "effects": {
+                "settlement_morale": 0,
+                "settlement_stability": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "EMBER-PRESERVE only partially understood; archive fully preserved; Briss cooperates but less enthusiastically; Vane's life-support mechanism requires additional investigation"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The Memory Echo intensifies beyond the party's ability to stabilize \u2014 the document alteration rate accelerates and reaches 40% of the archive collection before the Echo is dispersed or defeated. 40 years of modern scholarship is lost. Settlement morale -2 from the Academic Quarter's loss. Dolm is professionally devastated. The Biological Division index is also partially overwritten in the chaos \u2014 key EMBER-PRESERVE details are illegible.",
+        "failure_penalty": {
+            "xp_loss": 40
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

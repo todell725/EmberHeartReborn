@@ -1,0 +1,81 @@
+{
+    "id": "EH_SQ_411",
+    "title": "The Wine Runner",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_410"
+        ],
+        "items_required": []
+    },
+    "location": "Lower Ward -> The Canal Docks",
+    "district": "Lower Ward",
+    "thread": "Void-Wine",
+    "description": "Following up on the Velvet Flagon investigation, you've identified a supply runner named Moll who ferries small Void-Wine barrels from the docks to various establishments. Warden Astrid wants her intercepted and questioned.",
+    "key_npcs": [
+        "Warden Astrid",
+        "Runner Moll",
+        "Dock Foreman Hal"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The canal docks are busy at dawn with legitimate cargo. Moll is described as a small, fast woman with a red kerchief who operates alone. Dock Foreman Hal knows her \u2014 she rents a locker at the eastern pier under a false name.",
+            "choice_a": "Watch the eastern pier locker and wait for Moll",
+            "consequence_a": "Moll arrives at dawn. She sees you before you can move, but she doesn't run \u2014 she simply stares at you with calm, calculating eyes.",
+            "choice_b": "Ask Hal to tip her off that someone is watching \u2014 to see how she reacts",
+            "consequence_b": "Hal reluctantly warns her. Moll's reaction is to move her pickup quickly, revealing her exit route."
+        },
+        {
+            "turn": 2,
+            "narrative": "Moll is intercepted. She is more articulate than expected and refuses to name her supplier but explains her operation: she serves sick and grieving citizens who cannot afford legitimate alchemical treatments. The Void-Wine, at the dilutions she supplies, genuinely helps them function.",
+            "choice_a": "Arrest Moll and let the legal system sort out intent versus impact",
+            "consequence_a": "Moll is arrested but gives nothing up about the supply chain. Your case remains incomplete.",
+            "choice_b": "Offer Moll leniency in exchange for testimony about her supplier",
+            "consequence_b": "Moll names a warehouse in the Transit Corridor where a larger operation is staged."
+        },
+        {
+            "turn": 3,
+            "narrative": "Based on Moll's testimony or your arrest, you update Warden Astrid.",
+            "choice_a": "Bring Astrid directly to the Transit Corridor warehouse immediately",
+            "consequence_a": "The warehouse is raided. Four barrels of Void-Wine and a supplier ledger are seized.",
+            "choice_b": "Document Moll's testimony formally and plan a careful sting",
+            "consequence_b": "A properly documented sting catches the warehouse operator red-handed."
+        }
+    ],
+    "branching_outcomes": {
+        "warehouse_raided": {
+            "description": "Transit Corridor warehouse raided.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 10,
+                    "Market Ward": 12
+                }
+            }
+        },
+        "sting_executed": {
+            "description": "Warehouse operator caught via sting.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Void-Wine Supplier Ledger",
+                "reputation_change": {
+                    "Lower Ward": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Void-Wine Supplier Ledger",
+        "Canal Dock Pass",
+        "200x Gold Coins"
+    ],
+    "conclusion": "Transit Corridor warehouse raided."
+}

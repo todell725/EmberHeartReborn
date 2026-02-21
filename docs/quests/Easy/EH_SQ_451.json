@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_451",
+    "title": "The Miracle on Alley Nine",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Temple District -> The Temple of the Old Light",
+    "district": "Temple District",
+    "thread": "Standalone",
+    "description": "A beggar woman in Alley Nine claims to have been cured of her chronic leg ailment after touching a crumbling Temple wall. Within twenty-four hours, twenty more citizens are touching the wall, and the Temple priests are split between genuine faith and suspicion of a hoax.",
+    "key_npcs": [
+        "Cured Beggar Mirra",
+        "Sceptical Priest Brother Daan",
+        "Faithful Priest Sister Enne"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Mirra is walking without a stick for the first time she can clearly remember. Brother Daan examines her leg with a physician's eye and cannot find anything obviously fake. Sister Enne is joyful and certain this is divine. Twenty citizens are kneeling at the wall.",
+            "choice_a": "Ask Alchemist Rynn to examine the wall's stone composition for any non-spiritual explanation",
+            "consequence_a": "The wall contains trace amounts of Thermic Clay \u2014 a geothermally-formed mineral with mild analgesic and muscle-relaxing properties when warm.",
+            "choice_b": "Find and interview anyone who saw what happened to Mirra at the moment of healing",
+            "consequence_b": "A market boy saw Mirra sit and lean against the warm wall for nearly three hours before she stood and walked. Duration of thermic contact, not miracle."
+        },
+        {
+            "turn": 2,
+            "narrative": "The scientific explanation is plausible but does not definitively rule out a miraculous component. And Mirra is genuinely healed \u2014 whatever the cause.",
+            "choice_a": "Present the Thermic Clay explanation to both priests and let them integrate it into their theology as they see fit",
+            "consequence_a": "Sister Enne declares it 'the Lord's grace expressed through good stone.' Brother Daan is satisfied with the science. Both are content.",
+            "choice_b": "Recommend keeping the explanation private to avoid undermining citizens' faith",
+            "consequence_b": "Only the Temple priests know the full picture. The miracle narrative continues publicly."
+        },
+        {
+            "turn": 3,
+            "narrative": "The wall is now a pilgrimage point. Its thermic properties need to be managed safely.",
+            "choice_a": "Advise the Temple to allow controlled short-term contact sessions and monitor medical outcomes",
+            "consequence_a": "The Temple runs evening contact sessions. Two more citizens with chronic pain report meaningful relief.",
+            "choice_b": "Recommend the wall simply remains accessible as it was \u2014 people will regulate themselves",
+            "consequence_b": "The unofficial pilgrimage continues. The Temple accepts donations and the alley becomes a minor landmark."
+        }
+    ],
+    "branching_outcomes": {
+        "sessions_organised": {
+            "description": "Controlled thermic contact sessions organised. Two more citizens helped.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Thermic Clay Sample",
+                "reputation_change": {
+                    "Temple District": 16
+                }
+            }
+        },
+        "access_remains": {
+            "description": "Wall remains publicly accessible. Minor pilgrimage site established.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 12
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Thermic Clay Sample",
+        "Temple of the Old Light Prayer Token",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Controlled thermic contact sessions organised. Two more citizens helped."
+}

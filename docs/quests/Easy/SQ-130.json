@@ -1,0 +1,150 @@
+{
+    "id": "SQ-130",
+    "title": "The Echoing Well",
+    "difficulty": "Easy",
+    "xp_reward": 250,
+    "prerequisites": "None",
+    "description": "The town well is talking, and the water is becoming too heavy to lift...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The town well is 'Echoing' with voices of people who are still alive. They\u2019re talking about their 'Future-Dreams'.",
+            "choice_a": "Listen to the well",
+            "consequence_a": "Success.",
+            "choice_b": "Drop a coin in",
+            "consequence_b": "Success.",
+            "convergence": "The well doesn't reflect your face; it reflects a 'Golden-City' that might be. The smell is of mountain-water and old stone."
+        },
+        {
+            "turn": 2,
+            "narrative": "A 'Water-Wraith'\u2014a spirit of liquid silver\u2014emerges from the bucket, holding a 'Scroll of the Future'.",
+            "choice_a": "Take the scroll",
+            "consequence_a": "Success.",
+            "choice_b": "Ask the spirit its name",
+            "consequence_b": "Success.",
+            "convergence": "The spirit is a 'Reflection-of-Hope' that has been 'Tainted' by the Scourge's despair."
+        },
+        {
+            "turn": 3,
+            "narrative": "The well-water is turning into 'Liquid-Lead'. It\u2019s becoming too heavy to drink and is 'Crushing' the local pipes.",
+            "choice_a": "Purify the well with 'Materia-Salt'",
+            "consequence_a": "Success.",
+            "choice_b": "Reverse the well's flow (Tech DC 13)",
+            "consequence_b": "Success.",
+            "convergence": "The water boils and then turns into 'Crystal-Flow'\u2014an eternal, cold supply of pure mana-water."
+        },
+        {
+            "turn": 4,
+            "narrative": "The 'Wellminder'\u2014an old man in a blue robe\u2014reveals the well is a 'Fountain of Probability'.",
+            "choice_a": "Learn the 'Probability-Law' (Int DC 14)",
+            "consequence_a": "Success.",
+            "choice_b": "Question the well's origin",
+            "consequence_b": "Success.",
+            "convergence": "Every coin tossed in changes the destiny of a single citizen. Choose your toss wisely."
+        },
+        {
+            "turn": 5,
+            "narrative": "A 'Gloom-Fish'\u2014a creature of shadow-fins and jagged teeth\u2014lunges from the water, seeking to eat the 'Coins of Destiny'.",
+            "choice_a": "Strike the fish",
+            "consequence_a": "Success.",
+            "choice_b": "Distract it with 'False-Gold'",
+            "consequence_b": "Success.",
+            "convergence": "The fish explodes into a thousand 'Silver-Bubbles'. Each bubble contains a happy memory of the town. (+100 XP)"
+        },
+        {
+            "turn": 6,
+            "narrative": "The Wellminder gives you a 'Well-Bucket of Holding'\u2014it can carry ten tons of water without weighing a pound.",
+            "choice_a": "Accept the bucket",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Future-Scroll",
+            "consequence_b": "Success.",
+            "convergence": "The bucket is made of oak and bound in 'Mana-Silver'. It\u2019s a 'Legendary-Tool' for settlers."
+        },
+        {
+            "turn": 7,
+            "narrative": "The 'Echoing Well' is quiet now, the voices gone. It reflects the sun in a single, brilliant blue eye.",
+            "choice_a": "Log the prophecy",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The townspeople gather to drink the new 'Crystal-Flow'. Their 'Morale' rises to a high point (+20 Morale)."
+        },
+        {
+            "turn": 8,
+            "narrative": "As you leave, you feel like 'Everything is Possible'. You see a vision of a 'Prosperous-Ridge' in the clouds.",
+            "choice_a": "Point out the vision",
+            "consequence_a": "Success.",
+            "choice_b": "Keep it to yourself",
+            "consequence_b": "Success.",
+            "convergence": "The vision is a 'Beacon' for the weary. You gain a permanent +2 to 'Charisma'."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Wellminder promises to 'Guard the Dreams' of the town. He offers you a 'Well-Token' which entitles you to one 'Re-roll' per week.",
+            "choice_a": "Accept the token",
+            "consequence_a": "Success.",
+            "choice_b": "Decline reward",
+            "consequence_b": "Success.",
+            "convergence": "The sun sets, its light hits the well-water in a corona of liquid diamonds."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends at the Well. The 'Echoing Well' is a source of hope tonight.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Final",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Echoing Well' is complete. Quest Complete.",
+    "loot_table": [
+        "Well-Bucket of Holding",
+        "Well-Token"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The well swallows you and you become an echoing voice of despair. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Town well begins echoing living voices and water becomes too heavy to lift",
+        "flags": []
+    },
+    "location": "Town Well \u2014 Market Square",
+    "district": "Market Ward",
+    "thread": "Weaver",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Wellminder Edras (blue robe)",
+        "Water-Wraith (liquid silver spirit)"
+    ],
+    "mechanics_featured": [
+        "Insight (probability reading)",
+        "Social (wraith negotiation)",
+        "Strength (lead-water)",
+        "Investigation (Fountain of Probability)"
+    ],
+    "permanent_effects": {
+        "settlement": "Well restored; Fountain of Probability catalogued as settlement asset",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Well-Bucket of Holding",
+            "result": "Infinite-weight container utility item"
+        },
+        {
+            "path": "Take Well-Token",
+            "result": "+1 Luck (permanent, first use only)"
+        }
+    ]
+}

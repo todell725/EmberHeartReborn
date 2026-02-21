@@ -1,0 +1,73 @@
+{
+    "id": "SQ-227",
+    "title": "Reclaiming the Armory",
+    "difficulty": "Epic",
+    "xp_reward": 1000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-226"
+        ]
+    },
+    "location": "Ruins District -> Armory Vault 3",
+    "district": "Ruins District",
+    "thread": "Sovereignty & Order",
+    "description": "The Warden-Commander has seen your map. If they are bringing armored Behemoths, the militia needs heavy ballistae. You are tasked with clearing out Armory Vault 3 to recover them.",
+    "key_npcs": [
+        "Vault Warden (Corrupted AI)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The armory is sealed beneath thirty feet of rubble. You must use mining charges to clear the entrance.",
+            "choice_a": "Set a rapid sequential detonation",
+            "consequence_a": "The entrance is cleared quickly, but the loud noise attracts Scourge stragglers you must kill.",
+            "choice_b": "Use alchemical acid to melt the rock silently",
+            "consequence_b": "It takes an hour, but you enter the vault without attracting attention."
+        },
+        {
+            "turn": 2,
+            "narrative": "Inside, the Vault Warden AI believes the Scourge War is still ongoing from 300 years ago. It demands the proper 16-digit officer clearance code.",
+            "choice_a": "Attempt to slice the mainframe logically",
+            "consequence_a": "You fail the complex hack. The AI activates the automated defenses.",
+            "choice_b": "Present the 'Tuned Radio Receiver' to broadcast an override",
+            "consequence_b": "The old military frequency confuses the AI into a reboot, unlocking the armory."
+        }
+    ],
+    "branching_outcomes": {
+        "armory_secured": {
+            "description": "You secured the ballistae for the walls.",
+            "unlocks": [
+                "SQ-228"
+            ],
+            "consequences": {
+                "item_reward": "Heavy Ballista Crank",
+                "reputation_change": {
+                    "Sovereignty & Order": 30
+                }
+            }
+        },
+        "armory_damaged": {
+            "description": "You fought the defenses, damaging some ballistae, but securing the rest.",
+            "unlocks": [
+                "SQ-228"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 15
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Heavy Ballista Crank",
+        "250x Gold Coins"
+    ],
+    "conclusion": "You secured the ballistae for the walls.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_449",
+    "title": "The Stolen Saint",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Temple District -> The Shrine of St. Ova",
+    "district": "Temple District",
+    "thread": "Concordat",
+    "description": "A small but beloved icon from the Shrine of St. Ova has been stolen \u2014 a hand-carved figure of the patron saint of travellers, more than one hundred years old. The shrine's keeper, Brother Avel, is distraught. The icon has no monetary value but profound spiritual significance to the district's residents.",
+    "key_npcs": [
+        "Brother Avel",
+        "Art Fence Nirl",
+        "Student Donor"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The icon was the size of a hand, carved from a single piece of dark amber wood and worn smooth by a century of devotional touching. Brother Avel says only two people had keys to the shrine's inner sanctum: himself and a twice-weekly student volunteer. The student, he notes, stopped showing up last week.",
+            "choice_a": "Track down the student volunteer immediately",
+            "consequence_a": "The student \u2014 a young woman named Cela \u2014 is found at her dormitory, tearful and clearly guilty. She didn't steal it for money. She took it to save it, she says, from another student who planned to sell it.",
+            "choice_b": "Visit known art fences in the Market Ward to see if the icon has surfaced",
+            "consequence_b": "Fence Nirl has been approached about a 'small amber religious figure' but hasn't bought it yet. He can tell you who approached him."
+        },
+        {
+            "turn": 2,
+            "narrative": "Both paths lead to the same revelation: a well-connected student named Orris planned to sell the icon to a private High Ward collector. Cela took it first to prevent this. She has the icon hidden in her room, intact.",
+            "choice_a": "Retrieve the icon from Cela and return it to Brother Avel",
+            "consequence_a": "The icon is returned intact. Brother Avel weeps. Cela is thanked for her twisted but genuine act of protection.",
+            "choice_b": "Expose Orris's plans to the Temple Authority before returning the icon",
+            "consequence_b": "Orris is publicly reprimanded by the Temple Authority. Cela is praised for her intent if not her method."
+        },
+        {
+            "turn": 3,
+            "narrative": "Brother Avel wants better security for the icon going forward.",
+            "choice_a": "Help Brother Avel install a simple lock-box display case that is still visually accessible to worshippers",
+            "consequence_a": "A beautiful glass-fronted lock-box is commissioned from a local craftsman. The icon is safe but visible.",
+            "choice_b": "Recommend the icon be officially registered with the Ward Heritage Office for legal protection",
+            "consequence_b": "The Heritage Office registers the icon as a protected cultural artefact. Future theft carries serious legal consequences."
+        }
+    ],
+    "branching_outcomes": {
+        "icon_returned_quietly": {
+            "description": "Icon returned. Cela thanked. Orris unexposed.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Brother Avel's Blessing",
+                "reputation_change": {
+                    "Temple District": 12
+                }
+            }
+        },
+        "orris_exposed": {
+            "description": "Orris publicly reprimanded. Icon returned. Improved security installed.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Temple Heritage Certificate",
+                "reputation_change": {
+                    "Temple District": 18
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Brother Avel's Blessing",
+        "Temple Heritage Certificate",
+        "150x Gold Coins"
+    ],
+    "conclusion": "Icon returned. Cela thanked. Orris unexposed."
+}

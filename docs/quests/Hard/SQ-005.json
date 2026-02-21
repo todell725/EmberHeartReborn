@@ -1,0 +1,153 @@
+{
+    "id": "SQ-005",
+    "title": "The Silent Smithy",
+    "xp_reward": 1200,
+    "prerequisites": "None",
+    "description": "The Great Forges of Warden-Keep have gone cold. The Master Smith\u2019s main bellows-core has been sabotaged.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The forge is usually the heart of the settlement\u2014a place of heat and noise. Today, it is as cold as a tomb. Master Smith Korgun sits by the silent anvils, his face buried in soot-stained hands.",
+            "choice_a": "Examine the Bellows-Core for signs of oil (Investigation DC 12)",
+            "consequence_a": "Success: You find a trace of 'Night-Shade Oil', a substance used by the High Ward assassins. (+1 Clue)",
+            "choice_b": "Rally the exhausted smiths (Persuasion DC 13)",
+            "consequence_b": "Success: They reveal that a hooded figure was seen leaving through the coal-chute. (+1 Morale)",
+            "convergence": "The sabotage was precise, designed to paralyze the settlement\u2019s weapon production."
+        },
+        {
+            "turn": 2,
+            "narrative": "A trail of coal-dust leads from the smithy toward the Trade District. You find a dropped pouch\u2014it contains coins from the rival city-state of Oakhaven.",
+            "choice_a": "Track the dust-prints (Survival DC 13)",
+            "consequence_a": "Success: You trace the culprit to the back alley of 'Iron-Tooth\u2019s Imports'. (+1 Clue)",
+            "choice_b": "Question the coal merchants",
+            "consequence_b": "Success: They describe a man named Silas, a disgruntled former apprentice. (+1 Intel)",
+            "convergence": "The trail of sabotage is leading toward a corporate rivalry that has turned lethal."
+        },
+        {
+            "turn": 3,
+            "narrative": "Iron-Tooth\u2019s shop is a facade for a smuggling ring. Two guards in unmarked leather stand by the door, their hands resting on the pommels of their shortswords.",
+            "choice_a": "Bribe your way in (25 Gold)",
+            "consequence_a": "Success: They pocket the coin and look the other way. (+1 Progress)",
+            "choice_b": "Infiltrate via the roof-vent (Stealth DC 14)",
+            "consequence_b": "Success: You drop into the rafters, unseen by the thugs below. (+1 Tactical Adv)",
+            "convergence": "Inside, you see Silas delivering a crate of stolen blueprints to a man in a velvet mask."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Velvet-Masked Man is 'The Merchant Lord'. He is examining the blueprints for Warden-Keep\u2019s new 'Siege-Buster' ballistae.",
+            "choice_a": "Confront them from the shadows (Intimidation DC 14)",
+            "consequence_a": "Success: Silas panics, knocking over a stack of crates and creating an opening. (+1 Tactical Adv)",
+            "choice_b": "Assassinate Silas before he speaks",
+            "consequence_b": "Success: You remove the liability, but the Merchant Lord calls for his personal guard. (Combat Initiated)",
+            "convergence": "Four heavy guards in Oakhaven plate encircle your position."
+        },
+        {
+            "turn": 5,
+            "narrative": "The guards move as a unit, their shields overlapping. These aren't common thugs; they are disciplined specialists.",
+            "choice_a": "Target the shield-gaps (Dex DC 14)",
+            "consequence_a": "Success: You find the openings, staggering their line. (+100 XP)",
+            "choice_b": "Use a 'Thunder-Clap' spell/item to break the formation",
+            "consequence_b": "Success: The guards are sent flying, their heavy armor their own undoing. (+1 Progress)",
+            "convergence": "The Merchant Lord tries to flee with the blueprints through a secret bookshelf-door."
+        },
+        {
+            "turn": 6,
+            "narrative": "The blueprints are more than just designs; they contain the frequency-codes for the settlement\u2019s shields.",
+            "choice_a": "Tackle the Merchant Lord (Athletics DC 13)",
+            "consequence_a": "Success: You pin him to the floor, the documents spilling across the rug. (+1 Item)",
+            "choice_b": "Ignite the blueprints from range",
+            "consequence_b": "Success: You destroy the secrets so they can't be used, but lose the evidence. (+1 Morale)",
+            "convergence": "With the guards defeated and the Lord captured, you retrieve the stolen Bellows-Core."
+        },
+        {
+            "turn": 7,
+            "narrative": "You return to the forge with the core, but the City Watch blocks your path\u2014they claim they have orders to seize 'illegal artifacts'.",
+            "choice_a": "Show the Master Smith\u2019s seal (Persuasion DC 14)",
+            "consequence_a": "Success: The Watch realizes they were following a corrupt officer\u2019s orders. (+1 Influence)",
+            "choice_b": "Bluff your way through (Deception DC 13)",
+            "consequence_b": "Success: You convince them you are delivering 'urgent medical supplies'.",
+            "convergence": "You reach Korgun just as the final ember in the forge is about to die."
+        },
+        {
+            "turn": 8,
+            "narrative": "Installing the bellows-core is an act of engineering as much as strength. The metal is still superheated from the oil.",
+            "choice_a": "Assist in the install (Dexterity DC 12)",
+            "consequence_a": "Success: You guide the core into place perfectly. The first blast of air makes the fire roar. (+1 Progress)",
+            "choice_b": "Pour 'Cool-Water' on the joints",
+            "consequence_b": "Failure: The sudden temperature shift cracks the casing. (-1 Resource)",
+            "convergence": "The forge returns to life, the rhythm of the hammers starting like a heartbeat."
+        },
+        {
+            "turn": 9,
+            "narrative": "Master Smith Korgun is overjoyed. He offers you a choice of the finest steel currently cooling in the rack.",
+            "choice_a": "Take the 'Dusk-Iron' Shortsword (+1)",
+            "consequence_a": "Success: You gain a masterwork weapon of exceptional balance. (+1 Rare Gear)",
+            "choice_b": "Ask for the 'Smith's Secret' technique",
+            "consequence_b": "Success: You learn how to maintain your gear in the field. (+1 Permanent Skill)",
+            "convergence": "The settlement's defense production is back on schedule."
+        },
+        {
+            "turn": 10,
+            "narrative": "The Merchant Lord awaits trial. His connections could be useful, or his silence could be justice.",
+            "choice_a": "Turn him over for public execution",
+            "consequence_a": "Success: Your reputation for justice is cemented. (+5 Reputation)",
+            "choice_b": "Exile him in exchange for a 'Shadow-Tithes' agreement",
+            "consequence_b": "Success: You gain a steady stream of Oakhaven intel and gold. (+Gold/Turn, +1 Intel)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Silent Smithy speaks once more. The plot to sell Warden-Keep's shield frequencies has been thwarted, but Oakhaven's interest in the settlement is now undeniable.",
+    "loot_table": [
+        "Dusk-Iron Shortsword (+1)",
+        "Smithy Bellows-Core",
+        "180 Gold",
+        "Merchant Lord's Velvet Mask"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The forge remains silent. -3 Settlement Production and -5% to all Military defense scores until fixed.",
+        "failure_penalty": {
+            "xp_loss": 3
+        },
+        "critical_failure": "The attempt failed with significant consequences."
+    },
+    "difficulty": "Hard",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Tavern rumors about missing livestock",
+        "flags": [
+            "livestock_disappear"
+        ]
+    },
+    "location": "The Boar-Pen Farmsteads \u2014 Northern Gate",
+    "district": "High Ward",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Farmer Cedric",
+        "Pack-Mother Wolf (creature)"
+    ],
+    "mechanics_featured": [
+        "Nature checks",
+        "Animal handling",
+        "Tracking"
+    ],
+    "permanent_effects": {
+        "settlement": "+2 Food resources if herd protected",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Protect and Drive Off",
+            "result": "+5 Morale, herd intact"
+        },
+        {
+            "path": "Exterminate",
+            "result": "Herd safe, -2 Ecology (long-term consequence)"
+        }
+    ]
+}

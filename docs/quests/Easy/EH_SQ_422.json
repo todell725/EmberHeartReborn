@@ -1,0 +1,81 @@
+{
+    "id": "EH_SQ_422",
+    "title": "Heat Debt",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_421"
+        ],
+        "items_required": []
+    },
+    "location": "Ridge -> The Distribution Junction",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "The geothermal heat feed to Lower Ward housing has been inexplicably diverted and three blocks of low-income housing are cold at night. Meanwhile Ridge-Lord Fenn's private estate enjoys triple the normal heat allocation.",
+    "key_npcs": [
+        "Ridge Authority Overseer Kell",
+        "Ridge-Lord Fenn",
+        "Cold Residents"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You visit three blocks of Lower Ward housing. Children are sleeping in their coats. Residents confirm the heat cut began six days ago with no explanation from the Authority. At the Distribution Junction you find the flow manually rerouted via a handwritten authority slip signed by Ridge-Lord Fenn.",
+            "choice_a": "Confront Ridge-Lord Fenn directly with the evidence",
+            "consequence_a": "Fenn is dismissive at first \u2014 'administrative inefficiency' \u2014 but crumbles when you cite the handwritten slip.",
+            "choice_b": "Bring the evidence to Overseer Kell and request she issue a formal correction order",
+            "consequence_b": "Kell is furious. She issues an immediate correction and flags Fenn for a conduct review."
+        },
+        {
+            "turn": 2,
+            "narrative": "Fenn claims he diverted the heat because his guests were visiting and 'required appropriate comfort.' He offers to pay compensation to the cold residents if the matter is kept quiet.",
+            "choice_a": "Accept Fenn's compensation offer on behalf of the residents",
+            "consequence_a": "Each household receives 50 gold \u2014 a meaningful sum. The matter is officially closed.",
+            "choice_b": "Reject the quiet settlement and push for a formal accountability report",
+            "consequence_b": "The conduct report goes public. Fenn is fined by the Authority and the distribution manipulation authority is removed from Ridge-Lord powers."
+        },
+        {
+            "turn": 3,
+            "narrative": "With the heat restored, residents want to ensure this cannot happen again.",
+            "choice_a": "Help draft a basic resources charter for Lower Ward housing protection from Ridge-Lords",
+            "consequence_a": "The charter gains enough signatures to be submitted to the Ward Council.",
+            "choice_b": "Simply confirm the heat flow is permanently restored and let the legal process run its course",
+            "consequence_b": "The heat stays restored. Kell's ongoing conduct review acts as sufficient deterrent."
+        }
+    ],
+    "branching_outcomes": {
+        "charter_drafted": {
+            "description": "Lower Ward resources charter drafted and submitted.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Ward Resources Charter Draft",
+                "reputation_change": {
+                    "Ridge": 18,
+                    "Lower Ward": 14
+                }
+            }
+        },
+        "heat_restored": {
+            "description": "Heat restored. Conduct review ongoing.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 12
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Ward Resources Charter Draft",
+        "Fenn's Compensation Receipt",
+        "190x Gold Coins"
+    ],
+    "conclusion": "Lower Ward resources charter drafted and submitted."
+}

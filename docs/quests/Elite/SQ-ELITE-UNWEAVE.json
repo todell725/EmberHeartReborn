@@ -1,0 +1,200 @@
+{
+    "id": "SQ-ELITE-UNWEAVE",
+    "title": "The Unweaving",
+    "difficulty": "Elite",
+    "xp_reward": 4800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-EPIC-GLASS",
+            "SQ-ELITE-VOIDWINE"
+        ],
+        "items_required": [
+            "Weaver's Final Thread",
+            "Shard of True-Memory",
+            "Cup of Infinite Summers"
+        ]
+    },
+    "location": "Market Ward -> Ley-Line Nexus -> The Great Loom",
+    "thread": "Weaver/Chronos/Void-Wine (Cross-Thread)",
+    "estimated_duration": "4 hours",
+    "mechanics_featured": [
+        "Unweaving Zones (Physics Breakdown)",
+        "Alternate Timeline Visions",
+        "3 Boss Encounters",
+        "23-Turn Progression"
+    ],
+    "branching_outcomes": {
+        "allow_unweaving": {
+            "description": "Allowed the Unweaving of the Scourge.",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Scourge removed from history. All humans become emotionless automatons. Perfect city stability, empty existence.",
+                "item_reward": "Unlock 'Emotionless' ending."
+            }
+        },
+        "defend_weave": {
+            "description": "Defended the Weave, keeping the Scourge in history.",
+            "effects": {
+                "settlement_morale": 100
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Humanity keeps emotions, both good and bad. 'Acceptance' philosophical path unlocked.",
+                "item_reward": "None"
+            }
+        },
+        "selective_unweaving": {
+            "description": "Removed only the worst Scourge trauma, preserving positive emotions.",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Balanced outcome. Reduced trauma, preserved humanity. World becomes slightly brighter.",
+                "item_reward": "None"
+            }
+        },
+        "become_threadkeeper": {
+            "description": "Took control of The Great Loom to become the new Threadkeeper.",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Gained power to 'edit' reality's fabric. Can alter quest outcomes retroactively. Weaver cult serves you.",
+                "item_reward": "None"
+            }
+        }
+    },
+    "loot_table": [
+        "Weaver's Crown (Artifact - rewrite one narrative event per session)",
+        "Reality Scissors (Legendary weapon - can 'cut' magic effects)",
+        "Thread of Infinite Possibilities (can create minor items from nothing)",
+        "Threadkeeper's Robes (Legendary armor - immunity to reality manipulation)",
+        "6000 Gold",
+        "Thread-Master Artifact: Weave"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: The Ripping Pattern",
+            "narrative": "It starts with a visual glitch. A baker in the Market Ward drops a loaf of bread, but it hangs in mid-air for three seconds. Then, a building nearby flickers out of existence, replaced by open fields, then snaps back. The Weaver Cult's endgame has commenced."
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: The Ripping Pattern",
+            "narrative": "You realize what you learned during 'The Vintner's Ascension': The Scourge wasn't a physical blast, it was a psychic shockwave of grief that froze civilization. If the Weavers 'unweave' the Scourge from reality, they are literally attempting to unweave human emotion from existence."
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: The Ripping Pattern",
+            "narrative": "You track the reality-glitches to the Ley-Line Nexus beneath the city center. Here, the Weaver Cult has established an 'Unweaving Zone.' Physics are suggestions. Gravity periodically reverses. You must navigate jumping up to the ceiling and back down to progress."
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: The Ripping Pattern",
+            "narrative": "Cultists in the zone aren't attacking you physically; they are trying to snip your history. If a cultist strikes you with their Reality Shears, your character forgets a skill temporarily. You must fight them carefully from a distance."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 1: The Ripping Pattern",
+            "narrative": "You reach the Nexus epicenter. A massive tear in the fabric of space hangs in the air, glowing with threads of brilliant white memory. The Cultists throw themselves into it willingly, sacrificing their souls to widen the gap. You step through."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 2: The Space Between",
+            "narrative": "You emerge into the dimensional space between reality layers. There is no floor, only a massive web of glowing timelines. Dozens of shadowy figures stitched together from disparate moments fall upon you."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 2: The Space Between",
+            "narrative": "BOSS 1: Stitch-Wraith Legion. Twenty wraiths attack simultaneously. They are connected by invisible threads. If you attack one randomly, it absorbs little damage. You must find the 'Anchor Wraith' (the one pulling the strings) and kill it to instantly destroy five at once."
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: The Space Between",
+            "narrative": "You systematically sever the Anchor Wraiths. The entire legion bursts into loose threads. The path forward across the timeline web is clear, though stepping on certain threads shows you visions of alternate Emberhearts where different factions won."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: The Space Between",
+            "narrative": "You arrive at the edge of 'The Great Loom.' It is an unfathomably colossal machine of golden light, weaving and unweaving the strands of the universe. Standing at its controls is the Threadkeeper, the true leader of the cult."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 2: The Space Between",
+            "narrative": "The Threadkeeper speaks: 'Look what you've survived. Look at the trauma. Look at the grief woven into this city's foundation. We can cut it out. A painless world. A perfect geometric existence. Join me in the great unraveling!'"
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 2: The Space Between",
+            "narrative": "You refuse, revealing that erasing grief erases love, joy, and humanity itself. The Threadkeeper sneers. 'You cling to your pain like a sick dog to its bone. I will cut it out of you personally!'"
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 3: The Threadkeeper",
+            "narrative": "BOSS 2: The Threadkeeper. He is highly evasive, teleporting along the threads. More dangerously, he attacks your character sheet directly. His 'Unweave' ability can temporarily disable one of your equipped items or passive skills mid-fight."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 3: The Threadkeeper",
+            "narrative": "You adapt to fighting without your disabled gear, closing the distance on the Threadkeeper. You must use the Shard of True-Memory to 'harden' reality around him, preventing his teleportation."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 3: The Threadkeeper",
+            "narrative": "Pinned down by the Shard, the Threadkeeper fights desperately. He summons localized time-loops to force you to repeat your misses. You break through the loops using the Cup of Infinite Summers to retain your combat momentum."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 3: The Threadkeeper",
+            "narrative": "You deliver a fatal strike. The Threadkeeper falls back into the gears of The Great Loom. 'It's too late,' he gurgles as he is crushed by his own machine. 'The Unweaving program is locked in. The machine will do it automatically.'"
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 4: The Great Loom",
+            "narrative": "The Great Loom shudders. The entire pocket dimension begins to vibrate. Massive spools of white, glowing thread\u2014the Scourge trauma\u2014begin to unravel from the main tapestry of human history. The machine is sentient, and it is executing its final command."
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 4: The Great Loom",
+            "narrative": "BOSS 3: The Great Loom Itself. It is a puzzle boss. The machine attacks with massive environmental hazards: sweeping loom-arms that crush everything in their path, and reality-shears that instantly kill if they close around you."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 4: The Great Loom",
+            "narrative": "You must navigate the hazardous moving parts of the machine to reach the three primary control spindles. Each spindle is guarded by an elemental manifestation of 'Apathy'\u2014the emotionless state the machine seeks to create."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 4: The Great Loom",
+            "narrative": "You defeat the Apathy elementals and lock the three spindles using your Weaver's Final Thread item. The Loom grinds to a halt. The unweaving process pauses halfway. The unraveled threads hang in the air."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 4: The Great Loom",
+            "narrative": "You approach the central command pedestal. The interface is intuitive, connecting directly to your consciousness. You feel the weight of every human emotion, past, present, and future, resting on your decision."
+        },
+        {
+            "turn": 21,
+            "phase": "Phase 4: The Great Loom",
+            "narrative": "You must make your choice (Allow Unweaving, Defend the Weave, Selective Unweaving, Become Threadkeeper). The Loom awaits your final input. If you choose selectively, you must pass intense Arcana checks to avoid catastrophic error."
+        },
+        {
+            "turn": 22,
+            "phase": "Phase 4: The Great Loom",
+            "narrative": "You input the command. The Great Loom groans. The threads of reality either snap violently, glowing brightly in their repair, or shift into a new, permanent pattern under your control. The pocket dimension begins to dissolve as the new reality solidifies."
+        },
+        {
+            "turn": 23,
+            "phase": "Phase 4: The Great Loom",
+            "narrative": "You reappear in the Market Ward. The visual glitches are gone. People are either laughing and crying as they should, staring blankly with cold eyes, or moving with a new lightness of being. You hold the shears of reality in your hands."
+        }
+    ],
+    "description": "The Weaver Cult has initiated the Unweaving Protocol, attempting to surgically remove human emotion from reality to end the suffering caused by the Scourge.",
+    "conclusion": "Allowed the Unweaving of the Scourge.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_405",
+    "title": "The Yeast Thief",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Culinary College Cellar",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "The Culinary College's century-old sourdough starter has been stolen from the locked vault. Head Chef Voss demands it returned before morning lecture. A dropped ID badge points to groundskeeper Morren, who sold it to fence merchant Brinn.",
+    "key_npcs": [
+        "Head Chef Voss",
+        "Groundskeeper Morren",
+        "Fence Brinn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The vault door is intact \u2014 someone used a key. The re-applied wax seal drips the wrong way. A dropped College ID badge near the door belongs to groundskeeper Morren, not the suspected student.",
+            "choice_a": "Track down Morren immediately",
+            "consequence_a": "You find Morren at a canal-side tavern, nervous and evasive.",
+            "choice_b": "Inspect the vault interior for further evidence",
+            "consequence_b": "Wide-axle wagon wheel grooves in the floor don't match standard delivery carts."
+        },
+        {
+            "turn": 2,
+            "narrative": "Morren confesses to selling the starter to fence Brinn, who acquires culinary novelties for wealthy collectors.",
+            "choice_a": "Approach Brinn diplomatically \u2014 offer to buy the crock back",
+            "consequence_a": "Brinn returns it for 200 gold to avoid legal trouble.",
+            "choice_b": "Threaten to report Brinn to the Trade Authority",
+            "consequence_b": "Brinn returns the crock for free rather than face criminal charges, but is furious."
+        },
+        {
+            "turn": 3,
+            "narrative": "The crock is retrieved and Morren is exposed. Voss must decide Morren's fate.",
+            "choice_a": "Recommend Voss press formal charges",
+            "consequence_a": "Morren is given community service and a fine.",
+            "choice_b": "Recommend Voss handle it privately to avoid scandal",
+            "consequence_b": "Morren is dismissed quietly with a small severance."
+        }
+    ],
+    "branching_outcomes": {
+        "morren_charged": {
+            "description": "Morren formally charged. Starter restored.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 10
+                }
+            }
+        },
+        "morren_dismissed": {
+            "description": "Morren let go quietly. Starter restored.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Century Bread Starter Voucher",
+                "reputation_change": {
+                    "Market Ward": 14
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Century Bread Starter Voucher",
+        "Culinary College Entry Pass",
+        "180x Gold Coins"
+    ],
+    "conclusion": "Morren formally charged. Starter restored."
+}

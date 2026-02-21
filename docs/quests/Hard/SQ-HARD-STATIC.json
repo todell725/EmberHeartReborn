@@ -1,0 +1,249 @@
+{
+    "id": "SQ-HARD-STATIC",
+    "title": "The Battery-Men Uprising",
+    "difficulty": "Hard",
+    "xp_reward": 2500,
+    "thread": "Static",
+    "district": "Ridge",
+    "estimated_duration": "3-4 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-122",
+            "SQ-119"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete EH_SQ_042 and EH_SQ_019",
+    "location": "Ridge mines (opening), then advancing through service corridors toward Warden-Keep (midgame), then Ridge-Lord command bunker (climax)",
+    "npcs": [
+        {
+            "name": "Ridge-Lord Commandant Sera Veth",
+            "role": "Boss",
+            "description": "The senior Ridge-Lord military commander who approved and oversaw the Battery-Men project. She is not ideologically committed to the Scourge -- she is committed to the Ridge-Lords' political survival. The Battery-Men are a tool. She created them because she believed an overwhelming force would prevent an all-out conflict. She was wrong about both the 'overwhelming' part and the 'prevent' part. In combat she is a disciplined, clinical fighter who uses the Elite Battery-Men as a 3-person shield and only closes to melee when she has an advantage."
+        },
+        {
+            "name": "Captain Drall Tonn",
+            "role": "Allied city militia commander",
+            "description": "Warden-Keep's field commander for the Battery-Men response. He has 80 militia members and one goal: protect the path from Ridge mines to Warden-Keep. He needs the party for the command bunker infiltration -- his people are not equipped for that type of operation and he knows it. He is good at large-formation combat and not afraid to say when something is outside his competence."
+        },
+        {
+            "name": "Former Battery-Man Hett Ollan",
+            "role": "Intelligence NPC",
+            "description": "A decommissioned city worker who was arrested for vagrancy six months ago and woke up with a Scourge-Battery in his chest. He escaped during a malfunction event and reached Captain Tonn's militia perimeter. His intelligence on the Battery-Men's command frequency, the Commandant's bunker location, and the self-destruct mechanism embedded in each battery is the party's primary operational asset. He is exhausted, in pain, and very angry."
+        }
+    ],
+    "description": "The Ridge-Lords have deployed their answer to the Warden-Keep's increased police presence: an army of corpse-soldiers with Scourge-Batteries implanted in their chests. The Battery-Men are not undead in the traditional sense -- they are electrically-reanimated corpses, continuous discharge keeping the musculature active and the basic motor-command structure functional. They do not think. They receive commands through a central frequency broadcast from the Ridge-Lord command bunker and execute them with single-minded persistence. There are 140 Battery-Men currently active, organized into 14 groups, each with its own sub-frequency. Three Elite Battery-Men serve as the Commandant's personal guard -- these are different from the standard models: former soldiers whose neural architecture was preserved to allow for tactical adaptation. The Elite Battery-Men can think, within limits, and they remember who they were.",
+    "mechanics": [
+        "Army battle management (command city militia in holding actions while party executes infiltration; Leadership DC varies by stage; militia has 80 members, sufficient to hold but not advance against 140 Battery-Men)",
+        "Engineering/Arcana (Battery-Men use a Scourge-Battery power source; overloading a Battery-Man causes a chain-explosion with 15-foot radius; useful tactically but must be managed to avoid militia casualties; Arcana DC 13 to trigger controlled overload)",
+        "Stealth/Athletics (command bunker infiltration through Ridge-mine service corridors; Scourge-Battery detection arrays in corridors, Stealth DC 15 to avoid triggering)",
+        "Insight/Persuasion (Elite Battery-Men retain partial cognition and can be reasoned with; DC 17 Persuasion -- high but possible; success turns them against the Commandant in the final encounter)",
+        "Combat: Standard Battery-Men (AC 11, HP 42, immune to charm/fear, deliver 2d8 lightning damage on hit, chain-explosion on death if in charge-state; groups of 8-10 acting in lockstep)",
+        "Combat: Elite Battery-Men (AC 15, HP 88, retain tactical awareness, use weapons in addition to shock-delivery; partial memory of former life creates exploitable moment of hesitation -- targeted Insight DC 14 during combat)",
+        "Combat: Commandant Veth (AC 17, HP 160, command aura that boosts nearby Elite Battery-Men; Tactical Discharge ability -- redirects one Elite Battery-Man's full charge through her as a ranged attack, 4d10 lightning, 60 feet)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Battery-Men army destroyed; Ridge-Lords escape",
+            "effect": "settlement_stability +2; settlement_morale +1; Warden-Keep path secured; Battery technology schematics found in bunker; Ridge-Lords become a reduced-capacity persistent threat; the 140 deceased individuals are now identifiable from Ollan's intelligence -- families notified"
+        },
+        {
+            "trigger": "Ridge-Lords captured; Battery-Men self-destruct",
+            "effect": "settlement_stability +3; settlement_morale +3; Ridge-Lord political structure dismantled; trial becomes major civic event; Battery-Men casualties acknowledged formally by city; Ollan receives official recognition; settlement_justice_score +2"
+        },
+        {
+            "trigger": "Battery technology stolen; Ridge-Lords become permanent enemy",
+            "effect": "settlement_stability +1; settlement_morale -1; party gains Scourge-Heart Battery and EMP Generator; Ridge-Lords formally declare party as targets of violence; a long-term enemy faction is now active; the stolen technology creates ethical complications for the party"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Ollan's briefing is delivered in a militia safehouse at the Ridge perimeter. He pulls his shirt aside to show the party the Scourge-Battery entry scar -- a 4-inch incision over his sternum, imperfectly healed because no physician will touch it without understanding what is in there. He is calm while showing it, which is somehow worse than if he were upset. The Battery-Men army is moving in a holding pattern around the Ridge mines, which the Ridge-Lords control, and the three main service corridors leading toward Warden-Keep. The Commandant's bunker is 600 meters into the mine complex. Ollan has drawn a detailed map from memory. Captain Tonn spreads it on the table. 'The militia can hold the service corridors,' he says, 'if the party can get to the bunker and break the command frequency before they push.'",
+            "choice_a": "Accept Tonn's operational division -- militia holds the corridors while the party infiltrates the bunker",
+            "consequence_a": "The party's infiltration path is through the Ridge mine's maintenance route (Stealth DC 15 for the detection-array sections; 3 arrays in the 600-meter route). Tonn's militia deploys across all three corridor-holds. Ollan accompanies the party -- he knows the route and the arrays' timing. He says: 'The timing between sweeps is 90 seconds. Don't get caught in the dead zone.'",
+            "choice_b": "Modify the plan -- hit one Battery-Men group visibly to draw attention before the infiltration",
+            "consequence_b": "A visible engagement on the mine perimeter draws the Battery-Men's eastern group toward the party, reducing the detection-array coverage on the main infiltration route (Stealth DC reduced to 12 for the first array). The eastern militia hold is weakened for the duration. Leadership DC 14 to keep the militia's line intact during the decoy engagement.",
+            "convergence": "The operational plan is set. Tonn's militia moves to position. The party begins the infiltration route."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Ridge mine's service corridor is lit by Scourge-Battery power -- a cold, blue-white light that makes everything look like it was preserved in ice. The detection arrays are passive electrostatic sensors: any significant metal movement or arcane signature triggers them. Ollan moves in front, timing each pass through the dead zones with the focused attention of someone who has spent six months memorizing involuntary electrical patterns. He does not talk during the corridor traversal. The first array passage comes at 40 meters in: a 10-foot section of corridor lit more intensely than the rest, where the sensor nodes are visible in the ceiling as small brass hemispheres. Stealth DC 15. If the party has taken the bunker schematic from Ollan's briefing, they can identify that the detection array here has a physical bypass -- a service hatch in the left wall that routes under the detection field.",
+            "choice_a": "Use the service hatch bypass -- avoid the detection array entirely",
+            "consequence_a": "Investigation DC 12 to find and open the service hatch (it is not locked, just unused). The 30-second passage through the hatch bypasses the first array entirely. No Stealth check required. Ollan approves: 'Veth's engineers put those in for maintenance access. She never thought anyone would know about them.'",
+            "choice_b": "Pass the array on timing -- use Ollan's 90-second window",
+            "consequence_b": "Stealth DC 15 for each party member in the array zone. The 90-second window is real but the passage requires full party commitment in a 10-foot zone simultaneously. On group success: through. On one failure: the array triggers a sub-threshold alarm (it detected something but not enough to identify). The Commandant does not dispatch Battery-Men but the next array's sweep interval shortens to 60 seconds.",
+            "convergence": "First array cleared. 560 meters to the bunker. Two more arrays."
+        },
+        {
+            "turn": 3,
+            "narrative": "Militia status update from Tonn via signal-mirror relay: the western corridor is under sustained Battery-Men pressure -- 18 Battery-Men pushing against a 20-person militia hold position. The militia is holding but taking losses (3 casualties, none fatal). Tonn's assessment: 'We can hold for 4 hours. After that the western position fails.' The signal mirror also carries one additional piece of information: the eastern Battery-Men group that was drawn by the decoy (if that option was chosen) has stopped. It is standing still. All 14 Battery-Men in the group, standing in the corridor, not moving. Ollan's interpretation: 'The command frequency changed. Something in the bunker changed frequency. They're waiting for reassignment.' The Commandant knows something is off in her system. She has not yet identified the infiltration but she is adjusting.",
+            "choice_a": "Accelerate the infiltration route -- reach the bunker before the Commandant's systems can fully recalibrate",
+            "consequence_a": "The party moves at double speed (Athletics DC 12 to maintain stealth at increased pace). Second array is approached with reduced window time (Stealth DC 16 instead of 15 due to increased movement). If passed: in position at the third array with 20 minutes before the militia western hold begins to fail structurally.",
+            "choice_b": "Pause and monitor the frequency change -- understanding what changed may give tactical information",
+            "consequence_b": "Arcana DC 14 to analyze the frequency shift from the ambient Scourge-Battery radiation in the corridor. Success: the party identifies that the Commandant has activated the Elite Battery-Men's autonomous mode -- they are no longer receiving formation commands, instead operating on tactical judgment. This information is critical for the final encounter (advantage on the Insight checks to exploit the Elite Battery-Men's partial cognition).",
+            "convergence": "The infiltration continues. The Commandant is now actively preparing her final position."
+        },
+        {
+            "turn": 4,
+            "narrative": "Second array cleared. The corridor is 200 meters from the bunker now and the Scourge-Battery lighting has intensified -- the Ridge-Lords have put heavy power distribution in the final approach. Ollan stops the party at a junction and points at something the party might not have noticed: a person. Standing in an alcove 30 meters ahead. Not moving. A Battery-Man, but not in formation -- it is standing alone, facing a wall, and Ollan's expression is complicated. He says quietly: 'That's Merin. She worked transport on this level. She was arrested four months ago.' The Battery-Man's back is to the party. It has not detected them. Ollan says: 'She's in standby mode. The command frequency tells them to hold position when there's no active tasking.' He does not say anything else. The party must decide what to do with this information before proceeding.",
+            "choice_a": "Attempt to make contact with the Battery-Man in standby mode -- she may retain cognitive function like Ollan did",
+            "consequence_a": "Insight DC 14 to assess whether this individual is in the cognitive accessibility range (some Battery-Men retain partial awareness during standby vs. total blackout). On success: she is partially accessible -- her eyes move when addressed by name (Ollan provides it). A medicine check DC 15 reveals that her battery has a secondary frequency receiver that is currently inactive; activating it would let her receive direct commands rather than the central frequency. Persuasion DC 17 modified by Insight success: she can be given a command to stand down and not alert the Commandant. This does not free her but it removes an obstacle.",
+            "choice_b": "Pass the alcove without engaging -- do not risk the mission for one person",
+            "consequence_b": "The standby Battery-Man does not detect the party (Stealth DC 13 to pass). The party reaches the third array without incident. Ollan says nothing about passing without attempting contact. He does not need to.",
+            "convergence": "200 meters to the bunker. Third array. The Commandant's position is now audible -- the sound of the bunker's Scourge-Battery systems vibrates through the rock."
+        },
+        {
+            "turn": 5,
+            "narrative": "Third and final detection array: this one is different. It is not a passive sensor -- it is an active scanning system, cycling every 30 seconds rather than 90, and it has a physical component: two guards. Human guards. Ridge-Lord militia. Two people sitting at a checkpoint with a battery-powered alarm connected directly to the bunker. They are bored, professional, and armed. Ollan's assessment: 'Veth put humans here because she knows machines can be bypassed. She trusts people more than her own systems at the perimeter.' Bypassing this requires either dealing with the two guards (non-lethal or lethal) or finding a route around the checkpoint (which adds 20 minutes through a parallel maintenance shaft, Stealth DC 18, very tight).",
+            "choice_a": "Non-lethally incapacitate the guards -- secure them without raising an alarm",
+            "consequence_a": "Stealth DC 15 to approach within incapacitation range. One party member handles each guard simultaneously (requiring a coordinated surprise action). On success: both guards secured without alarm. They are not Ridge-Lord ideologues -- they are paid workers. They will be tied and left. They will be released after the event. Their names are on the Ridge's regular workforce roster.",
+            "choice_b": "Persuade the guards to stand down -- they are workers, not true believers",
+            "consequence_b": "Persuasion DC 16 (the guards have direct orders and fear the Commandant more than they sympathize with the party's cause). Success requires either a significant offer (financial, 200 gold each) or addressing their specific fear (Insight DC 13 first: they are afraid of being implanted; the party can confirm that captured Ridge-Lord collaborators have not been implanted in Tonn's custody, providing credible safety assurance). On success: they stand down peacefully and provide additional bunker layout details.",
+            "convergence": "Third array and checkpoint cleared. The bunker is 30 meters ahead. The party can hear the Commandant's voice giving orders inside."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Ridge-Lord command bunker: a repurposed mine supervisor's office expanded into a genuine military command site. Scourge-Battery racks along all walls, a command console broadcasting the central frequency to the Battery-Men army, and Commandant Veth herself -- plus the three Elite Battery-Men serving as her guard. The Elite Battery-Men are immediately visible as different from the standard models: they are standing in individual postures rather than formation-lockstep, they have weapons drawn, and one of them -- the largest -- is looking slightly to the left of the party's entry point with the expression of someone listening for something he expects to hear. He was a soldier. He is still processing combat-awareness. Veth does not turn around immediately when the party enters. She finishes the command she is delivering through the console, cancels the frequency burst, turns, and says: 'You took longer than I expected. Sit down.' She gestures at three chairs. She is not surrendering. She wants to negotiate.",
+            "choice_a": "Agree to hear Veth out -- understand her offer before combat",
+            "consequence_a": "Veth's offer: the Battery-Men army stand down, all 140, if the Warden-Keep agrees to formally recognize the Ridge-Lords' administrative authority over the mine district. She will give the party the army's shutdown code. She believes this is a reasonable political settlement and is genuinely confused that the party has treated it as a military emergency. Her framing of the Battery-Men: 'A deterrent. A failed one, apparently, but a deterrent.'",
+            "choice_b": "Immediately target the command console -- disable the frequency broadcast before combat",
+            "consequence_b": "Arcana DC 14 or Athletics DC 15 to reach and disable the console before the Elite Battery-Men intercept. On success: the Battery-Men army loses their central command frequency and enters standby mode throughout the mine complex -- this immediately relieves pressure on Tonn's militia positions. The three Elite Battery-Men in the bunker are now fully autonomous (they retain tactical judgment and continue defending Veth). Combat begins.",
+            "convergence": "The encounter's terms are set -- negotiation-adjacent or combat-initiated. The Elite Battery-Men's response will depend on how the opening played out."
+        },
+        {
+            "turn": 7,
+            "narrative": "Engaging the Elite Battery-Men (if in combat): the three Elite models fight as a coordinated team with genuine tactical cognition. They spread the party's attention, cover each other's flanks, and use the bunker's terrain -- the battery racks provide cover, the console area is a choke point. Their personal combat styles are distinct because they are individuals: the largest (former soldier) presses aggressively, the second (apparently a former tactical coordinator) hangs back and directs the others, and the third has not attacked yet. It is moving along the wall, watching. Its behavior is the one the Insight check flags as accessible: Insight DC 14 to recognize that the third Elite Battery-Man is not fighting because it is choosing not to. It is waiting for something.",
+            "choice_a": "Address the hesitant Elite Battery-Man directly -- speak to it as the person it was",
+            "consequence_a": "Persuasion DC 17 (very high, but Insight success from the observation reduces this to DC 14). The party must address the Battery-Man by what it was -- not what it is now. Ollan, if present, can identify the individual from the Ridge-Lord deployment records (the third Elite Battery-Man is a former Warden-Keep guard who was 'lost' eight months ago). Using their name: DC reduces to 12. On success: the third Elite Battery-Man stops fighting. It stands against the wall. It does not attack. It will not attack the party for the remainder of the encounter.",
+            "choice_b": "Focus combat resources on the two active Elite Battery-Men -- deal with the hesitant one later",
+            "consequence_b": "Two Elite Battery-Men combat (AC 15, HP 88 each). The hesitant third remains in its corner. It will not engage unless Veth directly orders it (she will, if reduced to 50 HP). When ordered: the hesitation breaks, the Elite Battery-Man attacks, but its attacks miss the party by deliberate margin. It is not complying fully. The partial-compliance information is available on Insight DC 13.",
+            "convergence": "The Elite Battery-Man encounter is at partial resolution. Commandant Veth is now in direct combat range."
+        },
+        {
+            "turn": 8,
+            "narrative": "Combat with Commandant Veth: she is not a frontline fighter by preference. She uses the Elite Battery-Men's positions to control distance and her Tactical Discharge ability to redirect accumulated electrical charge through herself as a ranged weapon. Up close, she fights with a Scourge-Battery-powered weapon (a shock-baton that delivers 3d8 lightning on hit). At 80 HP she makes a pronouncement, clearly pre-planned: 'You know what you're fighting for. A Warden-Keep that has never once acknowledged that the Ridge exists as a community with rights. You're willing to die for that institution.' She is not wrong, exactly. She is framing what she has done as resistance. She used people as battery casings. She is still framing it as resistance. At 40 HP: she stops, puts down her weapon, and says: 'I will give you the shutdown code. In exchange: I testify at my own trial that the Ridge-Lords acted alone. None of the mine workers are implicated.'",
+            "choice_a": "Accept the conditional surrender -- take the shutdown code and the trial testimony",
+            "consequence_a": "Veth provides the shutdown code (all 140 Battery-Men enter permanent standby immediately; Tonn's militia positions are instantly relieved). She will testify as agreed. She expects to be imprisoned. She is correct. The trial testimony protects 300+ Ridge mine workers from potential collaboration charges. This is a significant legal protection she is providing in exchange for capture rather than combat death.",
+            "choice_b": "Reject the conditional surrender -- she does not get to negotiate her way out of accountability",
+            "consequence_b": "Combat continues. Veth fights to 10 HP then collapses (she is not suicidal; she yields at that threshold). The shutdown code is found on her person (Investigation DC 11) or obtained from Ollan's intelligence (he knew the format; Arcana DC 14 to use Ollan's partial knowledge to reconstruct it). The trial testimony offer is off the table but she will testify under legal compulsion anyway (Warden-Keep legal authority is sufficient).",
+            "convergence": "Commandant Veth is down. The shutdown code is available. The Battery-Men army can be halted."
+        },
+        {
+            "turn": 9,
+            "narrative": "Shutdown code deployment: Arcana DC 13 to correctly input the shutdown code through the command console. On success: every Battery-Man in the Ridge mine complex enters immediate permanent standby -- a cessation of the electrical charge that has been maintaining their reanimation. The standard Battery-Men collapse where they stand. The Elite Battery-Men remain standing, their eyes open, their charge depleted to minimal survival threshold. The one who was hesitant throughout the encounter -- if still standing -- sits down on the floor of the bunker, very slowly, and either looks at the party or at the wall, depending on what the Persuasion encounter with it produced. Ollan is in the corridor. He can hear the systematic shutdown happening through the mine's electrical infrastructure. He does not say anything for 30 seconds. Then: 'That's all of them?'",
+            "choice_a": "Confirm the shutdown for Ollan -- all 140 Battery-Men are down",
+            "consequence_a": "Ollan processes this information in the way of someone who has been waiting to hear it for months. He does not celebrate. He asks: 'Can they be recovered?' Medicine DC 15 (or Arcana DC 14): the standard Battery-Men are dead -- the Scourge-Battery reanimation was the only thing maintaining their motor function and removing it is permanent cessation. The Elite Battery-Men are in a marginal state -- they were partially preserved, and Medicine DC 17 indicates that with sustained care and the battery's gradual discharge rather than sudden cut-off, some of the Elite Battery-Men may have survivable physiology.",
+            "choice_b": "Immediately report the shutdown to Captain Tonn -- the militia needs to know the engagement is over",
+            "consequence_b": "Tonn's signal-mirror relay receives the shutdown confirmation. His militia begins standing down from combat positions across the three corridors. His message back: '22 casualties. None fatal. Your timing was close.' He does not elaborate on what 'close' means in quantitative terms.",
+            "convergence": "The Battery-Men army is shutdown. The immediate military crisis is resolved. What comes next is the long accounting."
+        },
+        {
+            "turn": 10,
+            "narrative": "The accounting of the dead: 140 Battery-Men were formerly-living people. Ollan's intelligence, combined with the Ridge-Lord command records that are now accessible from Veth's console, allows the identification of 128 of the 140. They are Ridge mine workers, Ridge district residents, and six former Warden-Keep guards who disappeared in the same period. The identification process takes 4 hours. Tonn's militia personnel assist. Several of the militia members recognize names from the list. Three of the militia members recognize names of people they knew personally. The formal identification and family-notification process will take weeks. The party has a choice about how this information is released and who controls the narrative.",
+            "choice_a": "Release the full identification list publicly through the city's official record-keeping",
+            "consequence_a": "The full list becomes a public document. 128 families receive official notification. The Ridge-Lords' actions are formally documented as crimes against specific named individuals. The trial will reference the list. This creates 128 pieces of evidence, each with a name and a family. settlement_justice_score +2. settlement_morale -1 in the short term (grief is not the same as satisfaction) then +2 after six months as acknowledgment of the dead becomes civic identity.",
+            "choice_b": "Release the list privately to families first, before public announcement",
+            "consequence_b": "Families are notified in person by Tonn's militia, before the list becomes a public record. This is more human but also more costly in time and personnel. The families have 48 hours before the list goes public. Several families request the list not be publicized (they do not want the stigma of the Battery-Man association publicly tied to their relative's name). The partial-public list honors these requests but reduces the trial evidence by approximately 20%. A complex negotiation between justice and dignity.",
+            "convergence": "The identification process has a determined course. The families' grief is real and ongoing. The trial is being prepared."
+        },
+        {
+            "turn": 11,
+            "narrative": "Commandant Veth in custody: she is in Warden-Keep holding, awaiting transfer to the city's formal legal process. She made three requests upon arrival in custody (all three were granted, as they were not unreasonable): a clean change of clothes from her personal effects, access to writing materials, and a meeting with her second-in-command to secure the hand-off of the Ridge-Lord administrative operations that do not relate to the Battery-Men project. The second-in-command arrived. The handoff took 40 minutes. What Veth is writing, with the writing materials, is visible to the guard but she has not been told she cannot write. She is writing letters. The guard reports she wrote 140 letters in the first 24 hours. One letter per Battery-Man. The guard does not read them. He notes the count.",
+            "choice_a": "Ask what Veth wants done with the letters",
+            "consequence_a": "Veth's response (in person, if the party visits, or through Tonn if not): 'Delivered to the families. Along with the identification confirmation.' She is not asking for credit. She is completing administrative accountability in the only medium she still has access to. The letters go with the identification notifications. What they say is between Veth and 140 families.",
+            "choice_b": "Let the Warden-Keep process handle Veth's custody routine",
+            "consequence_b": "The routine process: Veth's letters are reviewed (protocol), cleared (legally irrelevant), and distributed with the identification notices. The party does not interact with this process unless they choose to.",
+            "convergence": "Veth's custody situation is settled. The trial preparation is underway."
+        },
+        {
+            "turn": 12,
+            "narrative": "The battery technology question: Veth's command bunker contained not just the shutdown code but the full engineering specifications for the Scourge-Battery implantation process. This is now in Warden-Keep custody. The city's engineering council wants to destroy it -- the specifications represent the ability to create Battery-Men, and no one wants that capability existing in documented form. The Ridge-Lord political faction that Veth was operating for has not been fully dismantled -- there are Ridge-Lord community leaders who were not part of the Battery-Men project and are now in a complicated position, defending their district's political rights while distancing from the Battery-Men's existence. One of them approaches the party with a question: can the battery technology be repurposed? The Scourge-Battery as an implant is monstrous. But the Scourge-Battery as a power source (Ollan has one still functioning in his chest, powering his life) has applications that the Ridge's engineers have been speculating about for two years.",
+            "choice_a": "Support the repurposing research -- the technology is not inherently criminal",
+            "consequence_a": "The party advocates for the specifications to be held by the city's engineering council under strict access controls, with a separate research program to develop the battery as a voluntary power source rather than a coercive weapon. Arcana/Engineering DC 15 to identify viable repurposing applications. Ollan, who has been living with one for eight months, is the most credible voice in this conversation and his position -- whether he supports or opposes the research -- carries the most weight.",
+            "choice_b": "Advocate for destruction -- the specifications should not exist in any form",
+            "consequence_b": "Persuasion DC 13 with the engineering council (they are half-convinced of this already). The specifications are destroyed in a documented process with Veth's confirmation that the original designs were in the bunker and are now gone. Ridge-Lord community leaders are disappointed but accept the decision. Ollan's opinion on this: 'Good.' He does not elaborate.",
+            "convergence": "The battery technology's future is determined. The Ridge's political situation is being reshaped."
+        },
+        {
+            "turn": 13,
+            "narrative": "The Ridge-Lord political aftermath: the Battery-Men project was the Ridge-Lords' leadership's decision, not the Ridge community's. This distinction matters to everyone in the Ridge: the 300+ mine workers who were on the same workforce registry as the Battery-Men victims, and the community leaders who are now trying to rebuild the Ridge's relationship with Warden-Keep without the criminal leadership's shadow. Captain Tonn's report to Warden-Keep administration includes a specific recommendation: the Ridge district's community leaders should be given direct representational access to the city's administrative body, which the Ridge-Lord structure had been mediating (and distorting) for years. The party's position on this recommendation shapes the Ridge's political trajectory.",
+            "choice_a": "Advocate for Tonn's recommendation -- Ridge needs direct representation, not Ridge-Lord mediation",
+            "consequence_a": "Persuasion DC 14 with the relevant city administrative bodies. On success: the Ridge district gains direct community representation. The Ridge mine workers elect three representatives (a process that takes four months and is surprisingly functional). The Ridge-Lord political structure as a formal institution is dissolved. settlement_stability +1; Ridge district formally integrated into city governance for the first time in its history.",
+            "choice_b": "Let the political restructuring happen through the city's existing processes without party advocacy",
+            "consequence_b": "The restructuring happens more slowly and with worse terms for Ridge's community representation -- the city's default is to replace the Ridge-Lords with a Warden-Keep-appointed administrator, which is better than the Ridge-Lords but still not community representation. Tonn notes, neutrally: 'It's better. It's not what I recommended.' The Ridge achieves partial political integration; full integration will require a future political quest.",
+            "convergence": "The Ridge's political trajectory is set. The Static Thread's consequences are being institutionalized."
+        },
+        {
+            "turn": 14,
+            "narrative": "Hett Ollan's battery: he has had a functioning Scourge-Battery in his chest for eight months. It is powering him in the literal sense -- if it fails, he is dead. The city's medical establishment has now studied the specifications and can confirm: removal is possible, with a mortality risk of 30%. The alternative is leaving it in place indefinitely, with the battery maintaining his life at the cost of the continuous mild electrical interference it generates (he cannot wear metal jewelry; his handshake sometimes sparks; he sleeps poorly). Ollan's decision is his own. He asks the party what they think, not to have them decide, but because they are the people who know both the technology and him.",
+            "choice_a": "Counsel Ollan toward the removal surgery -- 30% mortality risk is worth reclaiming a normal life",
+            "consequence_a": "If Ollan follows this advice: the surgery is performed. He survives (70% probability as stated, and as DM-arbiter this may be resolved narratively rather than mechanically -- the DM should not kill Ollan randomly). Recovery takes 6 weeks. He returns to work in the Ridge community as the most credible voice on battery-related policy and is instrumental in the repurposing research vs. destruction debate. If the removal does not survive (reserved for narratively appropriate moments): he becomes a martyr figure for the accountability movement and Tonn names a militia training room after him.",
+            "choice_b": "Counsel Ollan to keep the battery -- the risk is not worth a marginal quality-of-life improvement",
+            "consequence_b": "Ollan keeps the battery. He adjusts to its permanent presence the way people adjust to chronic conditions: not accepting it, not denying it, living with it. He becomes the face of the Battery-Men victims' advocacy, specifically because he is alive and walking around and the battery in his chest is a permanent argument that this happened. His testimony at Veth's trial is the most impactful single element of the prosecution's case.",
+            "convergence": "Ollan's fate is determined. His ongoing presence in EmberHeart's civic life is established."
+        },
+        {
+            "turn": 15,
+            "narrative": "The long resolution: six months after the Battery-Men Uprising, the Ridge mine complex is operational under community management, Commandant Veth's trial has produced a 15-year sentence with an additional 5 years contingent on cooperation with the battery-technology research (or destruction verification), the 140 identified Battery-Men have been formally listed on the city's civic memorial (a first for victims of non-combat crime), and Ollan has been asked to organize the first Ridge community-elected representative selection. He picks up the organizing work with the same focused attention he used to memorize the detection-array timing in the service corridor. The final moment of the Static Thread: Ollan is standing in the ridge community hall, looking at the electoral roll he's assembled. The hall is old and the walls are Ridge-dark stone and there are 300 workers' names on the roll. He looks at it for a long time before calling the first name to confirm registration. He says the name correctly, the first time, without hesitation. He did not bring notes.",
+            "choice_a": "Attend the Ridge electoral assembly -- be present for the formal community empowerment",
+            "consequence_a": "The party is present. Ollan introduces them: 'These are the people who shut down the mine.' Not heroes. The people who did the specific thing that made the specific difference. Three hundred people look at the party with that specific form of gratitude that is not admiration but acknowledgment. The first Ridge community representative is elected that afternoon. Her name is Merin -- the same name as the Battery-Man the party found in alcove standby in turn 4. If the party made contact with her: Merin Ollan's wife survived (the Battery-Man designation was a different Merin). It is coincidence. Or not. The DM may determine which at their discretion.",
+            "choice_b": "Let Ollan run the Ridge assembly without the party's presence -- this is his work, not theirs",
+            "consequence_b": "Ollan runs the assembly without the party. He sends a brief written report afterward: the assembly was successful, three representatives elected, the Ridge is transitioning to full community governance on a 90-day timeline. He signs it 'H. Ollan, Community Register, Ridge District.' He has given himself a job title that did not exist before this quest. It will not be the last.",
+            "convergence": "Quest complete. Static Thread resolved. The Battery-Men Uprising has produced one of EmberHeart's largest structural political changes: the Ridge community's direct representation. Commandant Veth has been tried. The Battery-Men victims have been named. Ollan is standing in a room full of workers deciding who represents them in the city that once used them as batteries. The thread is closed."
+        }
+    ],
+    "conclusion": "The Battery-Men Uprising is structurally the most political of the five Hard quests. The combat is real and demanding but the central questions are institutional: who represents the Ridge, what happens to the specifications, what accountability means for a commander who believed she was protecting her people by turning other people into weapons. The Elite Battery-Men's partial cognition is the quest's emotional core -- particularly the hesitant third Elite Battery-Man, who may be reached through Persuasion and who serves as the individual face on the mass-atrocity premise. Ollan is the party's reference point throughout: someone who survived what the 140 others did not, who carries the battery's literal weight in his chest, and who ends the thread running a community electoral assembly.",
+    "loot_table": [
+        "Scourge-Heart Battery (Legendary power source; the most advanced Scourge-Battery recovered from the Elite Battery-Man complement; can be configured as a permanent power source for any arcane device, reducing attunement requirements; alternatively, can be used as a single-use explosive device (12d10 lightning, 20-foot radius, DC 17 DEX for half); the ethical weight of this item's origin is canon and not mechanical)",
+        "Ridge-Lord Command Seal (the formal credential of the Ridge-Lord administrative authority; usable as leverage in any political interaction involving the Ridge district; grants advantage on Persuasion checks with Ridge community members; the seal's future as a collector's piece or destroyed artifact is the party's decision)",
+        "EMP Generator (portable Engineering device; emits a pulse that disrupts all Scourge-Battery-powered devices within 30 feet for 1 minute; 3 charges, rechargeable at any Arcane workshop for 100 gold; does not affect creatures whose survival depends on the battery power)",
+        "Community Recognition (the Ridge district's elected representatives establish a formal honorary status for the party -- not financial, but social capital; the party can call on Ridge community aid in any future situation involving Ridge workers, mine access, or geothermal resources)",
+        "3500 gold (Warden-Keep formal engagement payment; city administrative resolution fund; Ridge community voluntary contribution from the electoral assembly's first meeting budget)"
+    ],
+    "branching_outcomes": {
+        "army_destroyed_lords_escape": {
+            "description": "Battery-Men army shutdown; Ridge-Lords escape before capture",
+            "effects": {
+                "settlement_stability": 2,
+                "settlement_morale": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Battery-Men identified and listed; Veth and senior Ridge-Lords fled (they become a long-term antagonist faction based elsewhere); trial does not occur; Veth's letters were not written since she was not in custody; the battery specifications are recovered and become a political debate; Ridge community restructuring begins without Veth's testimony; Ridge-Lords faction declares ongoing opposition to city governance"
+            }
+        },
+        "lords_captured_army_self_destructs": {
+            "description": "Ridge-Lords captured; shutdown code triggers Battery-Men self-destruct sequence",
+            "effects": {
+                "settlement_stability": 3,
+                "settlement_morale": 3
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Battery-Men are destroyed rather than shutdown (explosion sequence; Tonn's militia sustains 12 additional casualties from proximity; all 140 Battery-Men are gone; trial convicts Veth and 4 senior Ridge-Lords; Ollan's advocacy is centered on destruction-level accountability; the community electoral process is faster because the Ridge-Lord structure is completely dismantled at once; settlement justice score highest of all outcomes"
+            }
+        },
+        "technology_stolen": {
+            "description": "Party takes the battery specifications rather than turning them over",
+            "effects": {
+                "settlement_stability": 1,
+                "settlement_morale": -1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "The city's engineering council learns the specifications were taken and not destroyed or properly secured; city administration files a formal compliance notice against the party; the specifications can be used to develop the EMP Generator independently (Arcana DC 16 to construct) or sold for 2000 gold to interested (morally-complicated) buyers; Ridge-Lords formally designate the party as targets; Ollan is very quiet about this outcome and does not endorse it"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "The third detection array is triggered during infiltration, alerting the Commandant. She initiates the Battery-Men advance order -- all 140 move on Warden-Keep simultaneously. Tonn's militia positions collapse within 20 minutes. The party must fight their way to the bunker through an active Battery-Men combat zone (open terrain, no stealth advantage; encounters with Battery-Men groups en route). The bunker confrontation occurs while the Battery-Men are in full advance mode -- Veth has access to a physical override that accelerates their advance and makes them resistant to the shutdown code (Arcana DC 18 to overcome the override). Ollan takes a battery discharge wound during the advance combat: not fatal but permanent, adding a second battery-scar to his collection. settlement_stability -1 from the damage to the Warden-Keep corridor structures during the advance. The trial proceeds regardless; Veth's defense becomes 'I was forced into it by Warden-Keep aggression.'",
+        "failure_penalty": {
+            "xp_loss": 140
+        },
+        "critical_failure": "The attempt failed with significant consequences."
+    }
+}

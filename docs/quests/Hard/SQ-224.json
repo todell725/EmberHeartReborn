@@ -1,0 +1,83 @@
+{
+    "id": "SQ-224",
+    "title": "Forward Observation Post",
+    "difficulty": "Hard",
+    "xp_reward": 600,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-223"
+        ]
+    },
+    "location": "Ruins District -> Post 9",
+    "district": "Ruins District",
+    "thread": "Sovereignty & Order",
+    "description": "Post 9, deep in the Ruins District, has gone dark. You must slip past Scourge patrols to investigate the silence.",
+    "key_npcs": [
+        "Scout-Sergeant Kael (Deceased)",
+        "Scourge Prowlers"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Ruins are crawling with agile Scourge Prowlers. The Post is at the top of a ruined skyscraper.",
+            "choice_a": "Use a silenced weapon to pick off the Prowlers",
+            "consequence_a": "You clear the street efficiently and enter the skyscraper uncontested.",
+            "choice_b": "Sprint past them into the building",
+            "consequence_b": "They chase you in. You have to barricade the doors while they claw at the wood, losing your element of surprise."
+        },
+        {
+            "turn": 2,
+            "narrative": "You reach the observation deck. Sergeant Kael is dead, his telescope knocked over. His logbook indicates a 'Massive horde movement' toward the West Gate.",
+            "choice_a": "Light the signal fire to instantly warn the city",
+            "consequence_a": "The fire warns the city, but draws the Prowlers straight to the roof. You are surrounded.",
+            "choice_b": "Take the logbook and sneak back down",
+            "consequence_b": "You escape quietly, but the warning might arrive too late."
+        },
+        {
+            "turn": 3,
+            "narrative": "If surrounded on the roof, you must fight your way to a zip-line extraction point.",
+            "choice_a": "Hold the line with heavy weapons",
+            "consequence_a": "You kill dozens of Prowlers, exhausting yourself but surviving to take the zip-line.",
+            "choice_b": "Blind them with a flash-flare and jump",
+            "consequence_b": "You blind them just enough to grab the line, escaping without exhausting your stamina."
+        }
+    ],
+    "branching_outcomes": {
+        "signal_lit_survived": {
+            "description": "You warned the city immediately via the signal fire and escaped.",
+            "unlocks": [
+                "SQ-225"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 30
+                }
+            }
+        },
+        "sneaked_out": {
+            "description": "You carried the logbook back, but the delay cost lives.",
+            "unlocks": [
+                "SQ-225"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 10
+                },
+                "item_reward": "Scout's Telescope"
+            }
+        }
+    },
+    "loot_table": [
+        "Scout's Telescope",
+        "Prowler Claws",
+        "150x Gold Coins"
+    ],
+    "conclusion": "You warned the city immediately via the signal fire and escaped.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

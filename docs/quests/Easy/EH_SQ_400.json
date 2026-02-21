@@ -1,0 +1,82 @@
+{
+    "id": "EH_SQ_400",
+    "title": "The Bread That Smiles Back",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> Petra's Golden Crust Bakery",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "Three customers at Petra's bakery have been found weeping uncontrollably after eating her honey loaves. Petra begs someone to investigate before word spreads.",
+    "key_npcs": [
+        "Petra the Baker",
+        "Weeping Customer Donal",
+        "Herb Merchant Lucius"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You arrive at Petra's flour-dusted shop. A man named Donal still weeps softly, hours after eating. The bread looks golden and normal, but Donal has not stopped crying since the first bite.",
+            "choice_a": "Taste a small piece yourself",
+            "consequence_a": "A profound bittersweet sadness washes over you, fading after thirty minutes.",
+            "choice_b": "Examine the loaf without eating it",
+            "consequence_b": "You notice faint blue-grey striations through the crumb interior that shouldn't exist in normal bread."
+        },
+        {
+            "turn": 2,
+            "narrative": "The effect traces back to 'Blue Fen Honey' Petra purchased from a new supplier named Lucius \u2014 a merchant who appeared at the gate last week selling honey at half price.",
+            "choice_a": "Confront Lucius directly",
+            "consequence_a": "Lucius admits the honey was harvested near a Void-seep in the Southern Fen \u2014 he didn't know it was dangerous.",
+            "choice_b": "Examine the honey jar for his stamp before confronting him",
+            "consequence_b": "You find a fox stamp in the wax seal. Armed with proof, Lucius pays damages voluntarily."
+        },
+        {
+            "turn": 3,
+            "narrative": "With Lucius identified and tainted honey removed, you help Petra document Lucius's supply route for the Ward Warden.",
+            "choice_a": "File a formal report with the Ward Warden",
+            "consequence_a": "Lucius is fined and the Fen marked as a contaminated zone.",
+            "choice_b": "Let Lucius go with a stern warning",
+            "consequence_b": "Lucius leaves the city and switches to legitimate dry goods."
+        }
+    ],
+    "branching_outcomes": {
+        "lucius_reported": {
+            "description": "Lucius fined, Fen route closed.",
+            "unlocks": [
+                "EH_SQ_401"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 12
+                }
+            }
+        },
+        "lucius_warned": {
+            "description": "Lucius left peacefully.",
+            "unlocks": [
+                "EH_SQ_401"
+            ],
+            "consequences": {
+                "item_reward": "Fox-Stamped Wax Seal",
+                "reputation_change": {
+                    "Market Ward": 6
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Fox-Stamped Wax Seal",
+        "Tainted Honey Sample",
+        "180x Gold Coins"
+    ],
+    "conclusion": "Lucius fined, Fen route closed."
+}

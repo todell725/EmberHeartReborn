@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_432",
+    "title": "The Embedded Circuit",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Industrial Quarter -> The Reclamation Yard",
+    "district": "Industrial Quarter",
+    "thread": "Concordat",
+    "description": "Workers at the Reclamation Yard, who process salvaged Scourge debris, have recovered a metal panel with a functioning circuit array unlike anything in current use. Ward Technician Vera believes it may be Concordat communication infrastructure that somehow survived the Scourge event.",
+    "key_npcs": [
+        "Technician Vera",
+        "Yard Supervisor Orso"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The panel is roughly A-metre square, made of an alloy no one at the yard recognises, still faintly warm to the touch despite having been buried for decades. When Vera applies a small charge, a soft amber light pulses from embedded nodes.",
+            "choice_a": "Apply a larger charge to see if the full circuit activates",
+            "consequence_a": "The circuit activates. A short burst of encoded data transmits outward. Vera's instruments detect a responding signal from somewhere in the Undercity.",
+            "choice_b": "Have Vera analyse the alloy and node structure carefully before applying any power",
+            "consequence_b": "Vera confirms the alloy is Concordat-grade composite \u2014 used in their long-range relay infrastructure."
+        },
+        {
+            "turn": 2,
+            "narrative": "The responding signal from the Undercity is alarming. Something down there is active and receiving.",
+            "choice_a": "Report the active Undercity signal to the Academic Quarter for immediate investigation",
+            "consequence_a": "Researchers confirm the Undercity signal matches several known Concordat relay frequencies.",
+            "choice_b": "Block the circuit's transmission capability before reporting \u2014 prevent further signals",
+            "consequence_b": "Vera modifies the panel to receive-only. The responding signal continues but nothing else is transmitted."
+        },
+        {
+            "turn": 3,
+            "narrative": "The panel itself is valuable \u2014 it still functions and is made of materials not currently producible.",
+            "choice_a": "Secure the panel for the Academic Quarter as a research specimen",
+            "consequence_a": "The Academic Quarter accepts the panel gratefully. Vera is invited to join the research team.",
+            "choice_b": "Leave the panel with the Reclamation Yard under a research agreement",
+            "consequence_b": "The Yard retains custody but grants academic access. Vera oversees the arrangement."
+        }
+    ],
+    "branching_outcomes": {
+        "panel_secured": {
+            "description": "Panel secured by the Academic Quarter. Vera joins research team.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Concordat Circuit Panel Fragment",
+                "reputation_change": {
+                    "Industrial Quarter": 12,
+                    "Academic Quarter": 10
+                }
+            }
+        },
+        "yard_retained": {
+            "description": "Panel stays at the Yard under research agreement.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Industrial Quarter": 14
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Concordat Circuit Panel Fragment",
+        "Unidentified Alloy Sample",
+        "180x Gold Coins"
+    ],
+    "conclusion": "Panel secured by the Academic Quarter. Vera joins research team."
+}

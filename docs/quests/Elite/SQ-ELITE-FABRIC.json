@@ -1,0 +1,186 @@
+{
+    "id": "SQ-ELITE-FABRIC",
+    "title": "The Tapestry of Screams",
+    "difficulty": "Elite",
+    "xp_reward": 4200,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-HARD-FABRIC",
+            "SQ-127"
+        ],
+        "items_required": [
+            "Cloak of Living Threads",
+            "Warp-Loom"
+        ]
+    },
+    "location": "Laundry Ward -> Catacombs -> The Loomworks (pocket dimension)",
+    "thread": "Living Fabric (Finale)",
+    "estimated_duration": "3 hours",
+    "mechanics_featured": [
+        "NPC Sacrifice Mechanic",
+        "Environment shifting (Pocket Dimension)",
+        "20-Turn Progression"
+    ],
+    "branching_outcomes": {
+        "sacrifice_self": {
+            "description": "Sacrificed yourself to complete the tapestry.",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Player becomes an undead fabric-form (Echo). Lose 50% max HP permanently. Gain Tapestry Guardian abilities. Laundry Ward becomes 'The Woven District' safe zone.",
+                "item_reward": "Immortality (narrative)"
+            }
+        },
+        "sacrifice_ally": {
+            "description": "Sacrificed a beloved NPC companion.",
+            "effects": {
+                "player_charisma": -2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Chosen NPC becomes a permanent ghost ally. Shrines appear honoring the sacrifice.",
+                "item_reward": "Ghost Ally"
+            }
+        },
+        "trick_elemental": {
+            "description": "Tricked the Thread-Elemental into sacrificing itself.",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "All animated fabrics in Emberheart become neutral/helpful.",
+                "item_reward": "The Living Tapestry (Artifact)"
+            }
+        },
+        "destroy_tapestry": {
+            "description": "Destroyed the tapestry and The Loomworks entirely.",
+            "effects": {
+                "settlement_stability": 20
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Fabric-based magic banned and eliminated from Emberheart. All enchanted clothing becomes mundane.",
+                "item_reward": "None"
+            }
+        }
+    },
+    "loot_table": [
+        "The Living Tapestry (Artifact - summon fabric constructs)",
+        "Shroud of the Eternal (Legendary armor - auto-resurrect once per day)",
+        "Thread of Fate (Artifact item - rewrite one past event)",
+        "Seamstress's Needle (Legendary weapon - pierce any armor)",
+        "4500 Gold",
+        "Thread-Master Artifact: Void",
+        "Thread-Master Artifact: Fabric"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: The Laundry Ward Uprising",
+            "narrative": "A scream echoes from the Laundry Ward, loud enough to be heard in the high districts. You arrive to find absolute chaos. Every piece of clothing left on the lines has animated, not as playful helpers, but with murderous intent. Citizens are being strangled by their own garments."
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: The Laundry Ward Uprising",
+            "narrative": "You carve your way through the animated linens toward the Grand Washhouse. The water in the vats has turned blood-red. The Thread-Elemental you supposedly bound has not only reformed but evolved. It is weaving the dead into 'The Screaming Weave'."
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: The Laundry Ward Uprising",
+            "narrative": "A survivor, the old Guildmaster Tailor, clutches your arm. 'It's the Loomworks,' he coughs, pointing to a dimensional tear hidden behind the main boilers. 'It wove a door. It's pulling the dead from the catacombs and wrapping them in shrouds.'"
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: The Laundry Ward Uprising",
+            "narrative": "You step through the tear into the Catacombs. The smell of dust and ancient bone is overpowered by the scent of fresh cotton and ozone. The crypts are open. Skeletons and fresh corpses alike are being wrapped in animated threads, pulled toward a glowing portal deeper in."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 1: The Laundry Ward Uprising",
+            "narrative": "BOSS 1: The Shroud-Walkers Army. A horde of fifty fabric-wrapped revenants blocks the tunnel. They are individually weak but swarm like insects. You must use area-of-effect spells or fire (which is highly effective against the fabric) to push through the choke point."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 1: The Laundry Ward Uprising",
+            "narrative": "The Shroud-Walkers try to entangle you, wrapping their excess fabric around your limbs to drag you down into the horde. You command your companions to clear a path while you focus on burning the central tether-threads controlling the swarm."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 1: The Laundry Ward Uprising",
+            "narrative": "With the tether-threads severed, the remaining Shroud-Walkers collapse into piles of mundane bones and burnt cloth. You step over them and enter the glowing portal into The Loomworks\u2014a pocket dimension made entirely of interwoven reality."
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: The Loomworks",
+            "narrative": "The Loomworks defies geometry. Staircases woven from spider-silk lead to upside-down platforms of hardened wool. At the center of the dimensional space is a tapestry the size of a cathedral, depicting every death in Emberheart's 200-year history. It is horrifyingly detailed."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: The Loomworks",
+            "narrative": "The tapestry is humming. It requires life force to complete its edges. As you approach, you see faces in the fabric\u2014souls trapped in the weave, silently screaming. The Cloak of Living Threads on your back tightens, recognizing its creator."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 2: The Loomworks",
+            "narrative": "A figure steps from the tapestry. The Seamstress of Sorrow, a spirit composed of mourning-veils and grave-shrouds. She wields a needle the size of a javelin. 'You wear our kin,' she hisses, pointing at your cloak. 'Now you will join the Weave.'"
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 2: The Loomworks",
+            "narrative": "BOSS 2: The Seamstress of Sorrow. She attacks with blinding speed, attempting to 'stitch' your shadows to the floor to paralyze you. You must keep moving, dodging the massive needle strikes while striking at her veil-body."
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 2: The Loomworks",
+            "narrative": "The Seamstress begins summoning 'Grief-Stitches'\u2014invisible tripwires that deal necrotic damage. You use your Warp-Loom item to counter-weave her magic, unraveling her defenses so your companions can land devastating physical blows."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 2: The Loomworks",
+            "narrative": "With a final coordinated strike, the Seamstress unravels, her veils falling to the floor like autumn leaves. But her death feeds the tapestry. The cathedral-sized weave groans, the threads glowing with terrible, blinding light. The creator has arrived."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 3: The Thread-Elemental Reborn",
+            "narrative": "The Thread-Elemental pulls itself out of the tapestry. It is no longer a simple golem of cloth; it is a force of reality-manipulation, composed of the very threads of space and time. It speaks directly into your mind: 'THE PATTERN REQUIRES ONE MORE ANCHOR. A WILLING SOUL.'"
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 3: The Thread-Elemental Reborn",
+            "narrative": "It explains that without a final, powerful soul to cap the weave, the tapestry will unravel out of control, flooding Emberheart with millions of revenants. It cannot just take a soul; the soul must be offered to complete the geometric perfection."
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 3: The Thread-Elemental Reborn",
+            "narrative": "You refuse to submit. The Elemental attacks. BOSS 3: Thread-Elemental Reborn. It alters the battleground geometry, turning the floor into a vertical wall, then soft quicksand. You fight in a kaleidoscope of shifting reality."
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 3: The Thread-Elemental Reborn",
+            "narrative": "The Elemental's core is protected by layers of dimensional fabric. You use everything you have\u2014fire, magic, brute force\u2014to tear through the layers. Every time you pierce its core, reality shudders, and you glimpse alternate versions of Emberheart."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 3: The Thread-Elemental Reborn",
+            "narrative": "The Elemental is badly wounded but stabilizing. It prepares to detonate the tapestry. You realize it was telling the truth: you cannot kill it without causing the tapestry to violently unravel into the real world. You must make the ultimate choice."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 3: The Thread-Elemental Reborn",
+            "narrative": "You enact your choice: Sacrifice yourself, Sacrifice an ally, Trick it, or Destroy everything. The Loomworks reacts violently to your decision, the magical threads snapping or reforming based on the path you committed to."
+        },
+        {
+            "turn": 20,
+            "phase": "Epilogue",
+            "narrative": "The Loomworks collapses/stabilizes. You or your surviving allies return to the Laundry Ward. The animated linens drop to the floor, lifeless. The consequences of your choice ripple outward. The Tapestry of Screams is finished, one way or another."
+        }
+    ],
+    "description": "The Thread-Elemental has evolved, creating a pocket dimension called The Loomworks where it intends to weave the souls of Emberheart's dead into a Tapestry of Screams.",
+    "conclusion": "Sacrificed yourself to complete the tapestry.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "id": "SQ-232",
+    "title": "The Titan's Bones",
+    "difficulty": "Epic",
+    "xp_reward": 2000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-231"
+        ]
+    },
+    "location": "Scourge-Fringe -> The Titan's Grave",
+    "district": "Scourge-Fringe",
+    "thread": "Sovereignty & Order",
+    "description": "To definitively stop the vanguard's momentum, you must collapse the 'Titan's Bones'\u2014a massive overarching pre-Scourge bridge the horde uses as their primary highway into the district.",
+    "key_npcs": [
+        "Bridge Defenders",
+        "Horde Commander"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You reach the pillars of the Titan's Bones. It spans a massive gorge. The pillars are guarded by a Scourge Horde Commander.",
+            "choice_a": "Duel the Commander (High AC)",
+            "consequence_a": "A grueling duel against a heavily armored foe. You strike true, taking his head.",
+            "choice_b": "Use the environment to crush him",
+            "consequence_b": "You knock a massive chunk of bridge debris onto him, flattening him without drawing your blade."
+        },
+        {
+            "turn": 2,
+            "narrative": "You must place shaped alchemical charges on the main tension cables of the bridge.",
+            "choice_a": "Climb the slick cables to hit the weak points (Acrobatics)",
+            "consequence_a": "You reach the top and plant the charges perfectly.",
+            "choice_b": "Blast the base pillars randomly (Strength/Explosives)",
+            "consequence_b": "You place them quickly. The explosion is massive but less efficient, taking longer to drop the bridge."
+        },
+        {
+            "turn": 3,
+            "narrative": "The bridge groans and begins to fall into the gorge. You must escape the collapsing structure.",
+            "choice_a": "Leap to the safety of the cliff edge",
+            "consequence_a": "You land perfectly, watching the horde's highway plummet into the abyss.",
+            "choice_b": "Ride a falling piece of debris down to a lower ledge",
+            "consequence_b": "A terrifying descent. You survive, but twist your ankle and lose a potion from your pack."
+        }
+    ],
+    "branching_outcomes": {
+        "bridge_dropped_clean": {
+            "description": "You flawlessly collapsed the Titan's Bones.",
+            "unlocks": [
+                "SQ-233"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "All Districts": 40
+                }
+            }
+        },
+        "bridge_dropped_messy": {
+            "description": "You dropped the bridge, barely escaping with your life.",
+            "unlocks": [
+                "SQ-233"
+            ],
+            "consequences": {
+                "item_reward": "Titan Cable Fragment"
+            }
+        }
+    },
+    "loot_table": [
+        "Titan Cable Fragment",
+        "Commander's Plate"
+    ],
+    "conclusion": "You flawlessly collapsed the Titan's Bones.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

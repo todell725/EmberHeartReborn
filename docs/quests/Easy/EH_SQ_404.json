@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_404",
+    "title": "Phantom Loaves",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Charity Bread Queue",
+    "district": "Market Ward",
+    "thread": "Bakery",
+    "description": "The charity bread program is being gamed. Merchant Prell uses proxy children to collect dozens of loaves and resells them at inflated prices. Sister Adda is heartbroken and asks you to stop it.",
+    "key_npcs": [
+        "Sister Adda",
+        "Hoarder Merchant Prell"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Sister Adda runs out by the seventh family. You observe a heavyset man in a trader's cloak collecting loaves from multiple children standing in as proxies.",
+            "choice_a": "Tail the man discreetly",
+            "consequence_a": "He resells loaves three blocks away for eight times their value to desperate Lower Ward families.",
+            "choice_b": "Confront him in the queue directly",
+            "consequence_b": "He denies it loudly then attempts to bribe you with a silver coin."
+        },
+        {
+            "turn": 2,
+            "narrative": "Prell uses hungry children as proxies, paying them one copper each. They are participating willingly but are genuinely hungry themselves.",
+            "choice_a": "Report Prell to the Ward Warden",
+            "consequence_a": "Prell is fined and banned from the charity queue permanently.",
+            "choice_b": "Offer the proxy children legitimate work so they stop working for Prell",
+            "consequence_b": "Adda employs them as distribution helpers. Prell loses his network."
+        },
+        {
+            "turn": 3,
+            "narrative": "With Prell neutralised, Sister Adda wants safeguards to prevent recurrence.",
+            "choice_a": "Design a queue token system \u2014 one stamped token per family per day",
+            "consequence_a": "Adda implements tokens immediately.",
+            "choice_b": "Recommend a household registration list",
+            "consequence_b": "Adda compiles the list over a week. It becomes the Ward standard."
+        }
+    ],
+    "branching_outcomes": {
+        "prell_reported": {
+            "description": "Prell fined and queue protected.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 12,
+                    "Lower Ward": 8
+                }
+            }
+        },
+        "children_employed": {
+            "description": "Children found legitimate work.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Sister Adda's Blessing Token",
+                "reputation_change": {
+                    "Market Ward": 18
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Sister Adda's Blessing Token",
+        "Charity Queue Ledger",
+        "150x Gold Coins"
+    ],
+    "conclusion": "Prell fined and queue protected."
+}

@@ -1,0 +1,82 @@
+{
+    "id": "EH_SQ_410",
+    "title": "The Midnight Cellar",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Market Ward -> The Velvet Flagon Tavern",
+    "district": "Market Ward",
+    "thread": "Void-Wine",
+    "description": "The Velvet Flagon Tavern has started opening a secret back room after midnight for a select clientele. The Ward Warden suspects it's an unlicensed Void-Wine operation and asks you to confirm the rumours before she can act officially.",
+    "key_npcs": [
+        "Warden Astrid",
+        "Tavern Keeper Brel",
+        "Regulars"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You visit the Velvet Flagon at normal hours. It seems entirely ordinary \u2014 good ale, a card game in the corner, a young bard playing quietly. But you notice the barmaid tapping a specific rhythm on the counter when certain customers arrive, who then disappear through a curtained alcove.",
+            "choice_a": "Attempt to follow a customer through the curtain",
+            "consequence_a": "A large man blocks your way politely but firmly. You are not one of the regulars.",
+            "choice_b": "Approach the barmaid and ask what's behind the curtain",
+            "consequence_b": "She tenses immediately and claims it's the owner's private office. Her pulse is visible at her throat."
+        },
+        {
+            "turn": 2,
+            "narrative": "You need a way in. The back-room regulars seem to be upper-middle-class citizens \u2014 merchants, junior officials, a physician. None of them look like addicts. They look... hopeful.",
+            "choice_a": "Dress up as a merchant and ask Brel directly, dropping hints you've heard about his 'special cellar'",
+            "consequence_a": "Brel looks you over carefully for thirty seconds, then nods slowly and lets you in.",
+            "choice_b": "Stake out the alley behind the tavern and follow a customer when they leave",
+            "consequence_b": "A woman exits via the alley two hours later. She is glassy-eyed and serene. You search her bag and find a receipt for 'V.W. \u2014 Half Measure.'"
+        },
+        {
+            "turn": 3,
+            "narrative": "Inside the back room you find a small, tasteful lounge where a man measures Void-Wine in tiny gilded cups, explaining it relieves grief and chronic pain. No one appears in immediate danger, but the operation is unlicensed and the wine's source is unknown.",
+            "choice_a": "Arrest Brel and shut the back room immediately",
+            "consequence_a": "Brel is arrested. His customers are deeply unhappy. Warden Astrid is satisfied.",
+            "choice_b": "Report your findings first and let Astrid plan a coordinated investigation of the supply chain",
+            "consequence_b": "Astrid chooses a controlled sting operation rather than a hasty arrest. Better intelligence is gathered."
+        }
+    ],
+    "branching_outcomes": {
+        "brel_arrested": {
+            "description": "Tavern back-room shut down immediately.",
+            "unlocks": [
+                "EH_SQ_411"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": 10
+                }
+            }
+        },
+        "supply_investigated": {
+            "description": "Supply chain sting operation launched.",
+            "unlocks": [
+                "EH_SQ_411"
+            ],
+            "consequences": {
+                "item_reward": "Gilded Void-Wine Cup",
+                "reputation_change": {
+                    "Market Ward": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Gilded Void-Wine Cup",
+        "Velvet Flagon Ledger",
+        "180x Gold Coins"
+    ],
+    "conclusion": "Tavern back-room shut down immediately."
+}

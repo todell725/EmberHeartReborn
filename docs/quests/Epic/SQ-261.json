@@ -1,0 +1,73 @@
+{
+    "id": "SQ-261",
+    "title": "Crisis of Faith",
+    "difficulty": "Epic",
+    "xp_reward": 1800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-257"
+        ]
+    },
+    "location": "Temple District -> The Grand Cathedral",
+    "district": "Temple District",
+    "thread": "Concordat",
+    "description": "With the Archbishop gone, the Concordat has fractured. A militant zealot faction has seized the Grand Cathedral, taking the moderate priests hostage. You must break the siege.",
+    "key_npcs": [
+        "Zealot Commander",
+        "Hostage Priests"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Cathedral doors are barred. Zealot archers are firing from the bell towers.",
+            "choice_a": "Blow the main doors with high explosives",
+            "consequence_a": "The doors shatter, killing the archers in the blast radius, but damaging the historic stonework permanently.",
+            "choice_b": "Scale the walls and infiltrate the bell tower",
+            "consequence_b": "A dangerous climb under fire. You eliminate the archers silently and open the side doors for the Warden militia."
+        },
+        {
+            "turn": 2,
+            "narrative": "Inside, the Zealot Commander has lined up the hostages before the altar.",
+            "choice_a": "Challenge him to single combat",
+            "consequence_a": "He accepts. A brutal fight before the terrified priests. You slay him, breaking the zealots' morale instantly.",
+            "choice_b": "Command your militia to fire a volley into the zealots",
+            "consequence_b": "A chaotic skirmish. The zealots are killed, but several priests die in the crossfire."
+        }
+    ],
+    "branching_outcomes": {
+        "hostages_saved_duel": {
+            "description": "You saved the priests via honorable duel.",
+            "unlocks": [
+                "SQ-262"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": 50
+                }
+            }
+        },
+        "hostages_killed_volley": {
+            "description": "You broke the zealots, but priests died in the volley.",
+            "unlocks": [
+                "SQ-262"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Temple District": -20
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Commander's Greatsword",
+        "1000x Gold Coins"
+    ],
+    "conclusion": "You saved the priests via honorable duel.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

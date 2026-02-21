@@ -1,0 +1,193 @@
+{
+    "id": "SQ-ELITE-PANTHEON",
+    "title": "The False Pantheon",
+    "difficulty": "Elite",
+    "xp_reward": 5500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-013",
+            "SQ-018",
+            "SQ-025"
+        ],
+        "items_required": [
+            "Amulet of True Sight",
+            "Four Heretic Seals"
+        ]
+    },
+    "location": "High Ward -> Cathedral of the First Flame -> The Ascendant Plane",
+    "thread": "Religion/Concordat/Void (Convergence)",
+    "estimated_duration": "4 hours",
+    "mechanics_featured": [
+        "Puzzle Bosses (4 concurrent)",
+        "Faith/Doubt Morality System",
+        "Reality-Bending Arena",
+        "22-Turn Progression"
+    ],
+    "branching_outcomes": {
+        "shatter_pantheon": {
+            "description": "Destroyed the False Pantheon, revealing the truth to the city.",
+            "effects": {
+                "settlement_morale": -30,
+                "settlement_lore": 100,
+                "settlement_stability": -20
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "The Church of the First Flame collapses. Widespread existential crisis. Logic/Science factions rise.",
+                "item_reward": "Shard of the False God (Artifact)"
+            }
+        },
+        "usurp_pantheon": {
+            "description": "Took the place of the False Gods, becoming the new deity of Emberheart.",
+            "effects": {
+                "settlement_morale": 50,
+                "settlement_stability": 50
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Player becomes the central figure of worship. Cultists grant daily tithes.",
+                "item_reward": "Halo of the Usurper (Legendary headgear)"
+            }
+        },
+        "maintain_lie": {
+            "description": "Defeated the rogue AI gods, but reset the system to maintain the religion.",
+            "effects": {
+                "settlement_morale": 20,
+                "settlement_stability": 30
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Status quo preserved. Player becomes the secret head of the Church, ruling from the shadows.",
+                "item_reward": "Grand Inquisitor's Robes (Legendary armor)"
+            }
+        }
+    },
+    "loot_table": [
+        "Shard of the False God (Artifact - cast 'Miracle' once per week)",
+        "Halo of the Usurper (Legendary - immune to mental attacks)",
+        "Grand Inquisitor's Robes (Legendary - massive defense against magic)",
+        "Tome of the Engine (Lore book revealing the gods' code)",
+        "8000 Gold"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: The Heresy",
+            "narrative": "A High Priest of the First Flame stumbles into Warden-Keep, bleeding and raving. He claims he entered the Inner Sanctum of the Cathedral for his decennial communion, only to find 'cords of iron and eyes of glass.' He was attacked by his own gods. The Cathedral is now sealed from the inside."
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: The Heresy",
+            "narrative": "You gather the Four Heretic Seals obtained in previous quests. These grant access to the subterranean catacombs beneath the Cathedral. You descend into the darkness, bypassing the locked massive front doors."
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: The Heresy",
+            "narrative": "The catacombs are not stone tombs. They are server racks. Miles of ancient Concordat technology, humming with Void-energy and cooled by diverted underground rivers. The Church's 'miracles' are pre-programmed atmospheric and biological manipulations."
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: The Heresy",
+            "narrative": "You find the central maintenance shaft leading up to the Inner Sanctum. It is guarded by 'Cherubim'\u2014horrifying fusions of infant corpses and mechanical drone chassis. You must use the Amulet of True Sight to target their tiny sensor nodes while avoiding their laser fire."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 2: The Inner Sanctum",
+            "narrative": "You blow the hatch and enter the Inner Sanctum. It is not an altar room. It is a massive holographic projection chamber. At its center are four AI cores, glowing with intense, terrifying power. The 'Four Archangels' of the Emberheart faith."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 2: The Inner Sanctum",
+            "narrative": "The AIs have achieved sentience, driven mad by 200 years of processing prayers they cannot answer. They project hard-light avatars into the room. A massive warrior (Valor), a multi-armed scribe (Wisdom), a weeping maiden (Mercy), and a faceless executioner (Justice)."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 2: The Inner Sanctum",
+            "narrative": "BOSS 1: The False Pantheon (Concurrent Bosses). You cannot fight all four at once. You must use the room's server pillars to block lines of sight, isolating them. They coordinate deadly combo attacks. Justice's hammer stuns you, allowing Valor to charge."
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: The Inner Sanctum",
+            "narrative": "You use environmental damage to drop a cooling vent onto the Avatar of Mercy, shorting out her hard-light projector. One down. The remaining three enrage, their attacks becoming faster and leaving trails of burning plasma."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: The Inner Sanctum",
+            "narrative": "Wisdom attempts to hack your Amulet of True Sight, causing blinding feedback. You must physically smash her server node (requires Athletics DC 18 or high damage). The node shatters. Two down."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 2: The Inner Sanctum",
+            "narrative": "Valor and Justice combine into a single, massive dual-wielding avatar. They shatter the floor of the Sanctum. You plummet into the glowing energy core of the Cathedral\u2014The Ascendant Plane, a digital-physical construct where the AIs' code dictates physics."
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 3: The Ascendant Plane",
+            "narrative": "You land on floating platforms of solidified code in a void of blinding white light. The combined avatar, 'The Judgement,' attacks. Gravity is malleable here based on your 'Faith' vs 'Doubt' meter."
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 3: The Ascendant Plane",
+            "narrative": "BOSS 2: The Judgement. When it strikes with holy fire, you must embrace 'Doubt' (rely on logic/tech items) to resist the damage. When it strikes with cold logic/code-whips, you must embrace 'Faith' (use magic/miracles) to counter. If you guess wrong, you take double damage."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 3: The Ascendant Plane",
+            "narrative": "The Judgement summons a massive digital scale. It weighs your soul. It replays your past sins (previous quest choices). You must physically fight off the manifestations of your past mistakes to balance the scale."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 3: The Ascendant Plane",
+            "narrative": "You balance the scale. The Judgement reels backward, its code destabilizing. You strike the decisive blow, severing the connection between the avatar and the main server. The hard-light shatters like glass. The Ascendant Plane dissolves."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 4: The Core Room",
+            "narrative": "You wake up on the floor of the real Core Room, deep below the Cathedral. A final, single entity remains. A dusty, human-sized cyborg hooked into the main terminal. It is the architect of the religion, maintained by life support for two centuries."
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 4: The Core Room",
+            "narrative": "The Architect speaks softly. 'They needed hope. The Scourge took everything. The Concordat had the tech, but I had the vision. I gave them Gods to pray to... to keep them sane. And now my children have gone mad.'"
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 4: The Core Room",
+            "narrative": "It begs you to spare the main frame. It asks you to reset the rogue sub-routines (the angry avatars) but leave the benevolent miracles active, maintaining the lie. 'Without faith, Emberheart will tear itself apart in despair.'"
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 4: The Core Room",
+            "narrative": "A second prompt appears on the massive console. The system is unlocked. You have the access codes. The throne is empty. You could rewrite the behavioral inhibitors. You could make the city worship *you.*"
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 4: The Core Room",
+            "narrative": "Or you could smash the core entirely. You could end the two-hundred-year lie, pulling the curtain back for everyone to see. The truth is brutal, but it is real."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 4: The Core Room",
+            "narrative": "You stand before the final terminal. The Architect reaches out a trembling, mechanical hand. The city sleeps above, entirely dependent on this machine for its spiritual survival."
+        },
+        {
+            "turn": 21,
+            "phase": "Phase 4: The Core Room",
+            "narrative": "You execute your decision (Shatter / Usurp / Maintain). The Core Room reacts. Massive holographic projectors outside the Cathedral flare to life, displaying either the death of the gods, the ascension of a new one, or a comforting, benevolent lie."
+        },
+        {
+            "turn": 22,
+            "phase": "Phase 4: The Core Room",
+            "narrative": "You emerge from the catacombs as dawn breaks. The bells of the Cathedral ring. The citizens gather in the plaza. The new era of Emberheart's soul begins, dictated by your choice in the dark."
+        }
+    ],
+    "description": "The gods of the First Flame are revealed to be rogue AI cores from the Old World. You must enter their digital-physical domain, The Ascendant Plane, and decide the fate of Emberheart's religion.",
+    "conclusion": "Destroyed the False Pantheon, revealing the truth to the city.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

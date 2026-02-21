@@ -1,0 +1,205 @@
+{
+    "id": "SQ-175",
+    "title": "The Vermin-Tongue",
+    "difficulty": "Medium",
+    "xp_reward": 1100,
+    "thread": "Vermin",
+    "district": "Lower Ward",
+    "estimated_duration": "2-3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-002"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete SQ-02 (The Overgrown Silo)",
+    "location": "Lower Ward slums \u2014 Skitter-Jack's tenement, the Gnaw-Market, the Underpipe tunnels",
+    "npcs": [
+        {
+            "name": "Skitter-Jack (Jakker Ulme)",
+            "role": "Quest-giver and interpreter",
+            "description": "Third-generation rat-handler who speaks Rat-chitter fluently. Not magic \u2014 the rats simply trust him. Thin, 40s, permanently smells of musk and grain."
+        },
+        {
+            "name": "The Rat Council / The Duchess",
+            "role": "Primary intelligence source",
+            "description": "Seven elder rats led by a large grey female. Highly intelligent, cautious, unwilling to share without equivalent exchange."
+        },
+        {
+            "name": "Foreman Dag Henris",
+            "role": "Antagonist (unwitting)",
+            "description": "Lower Ward construction foreman poisoning rat colonies near his site without knowing they are an organized political body."
+        }
+    ],
+    "description": "Skitter-Jack warns the party that copper-tail augmentations are spreading laterally through physical contact\u2014wild rats are being aggressively involuntarily converted by the augmented ones, violating known Concordat engineering parameters. The elusive 'Rat Council' requests a clandestine meeting, claiming to know the exact release-point of these rogue biomechanical vectors. The party must navigate a tense diplomatic encounter with heavily augmented vermin, secure the release-point coordinates, and prevent the viral spread of mechanical corruption.",
+    "mechanics": [
+        "Animal Handling (rat-chitter via Skitter-Jack)",
+        "Investigation (trace poisonings to Henris)",
+        "Persuasion (negotiate Council conditions)",
+        "Stealth (navigate copper-tail sentinel zones)",
+        "Medicine (treat Council members poisoned by Henris)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Rat Council trust gained",
+            "effect": "settlement_morale +2; Rat Council agrees to share copper-tail spread map"
+        },
+        {
+            "trigger": "Henris stopped",
+            "effect": "Lower Ward construction site ceases; no further Council site poisonings"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Skitter-Jack urgently finds you at the pale crack of dawn, heavily tunnel-mud-stained and deeply rehearsed, nervously clutching a rusted iron pipe. He speaks frantically: the rats have been aggressively coordinating complex communication for eleven straight days. Worse, the terrifying copper-tail augmentations are actively spreading laterally through raw physical contact\u2014wild, mundane rats are being aggressively, involuntarily converted by the augmented ones through violently inflicted bite wounds. 'This is absolutely not correct Concordat engineering,' he insists, his eyes wild. 'The remaining uncorrupted Rat Council wants a clandestine meeting immediately. They desperately claim to have the exact release-point location.' He points to a deeply scratched message roughly carved on his own wooden door this morning, reading his translation aloud: 'Bring the heavy ones who violently stopped the Silo. Come quickly before the next massive poisoning.'",
+            "choice_a": "Go immediately to the Gnaw-Market entry point the Council specified",
+            "consequence_a": "You deliberately arrive at the flooded cistern armed with your heaviest weaponry, projecting overwhelming, lethal capability. The massive, scarred members of the Rat Council are deeply intimidated into immediate submission, immediately surrendering the heavily chewed map showing the exact release-point coordinates.",
+            "choice_b": "Delay 40 minutes to investigate the poisoning pattern first",
+            "consequence_b": "You perfectly raise a tight, glowing blue mana-shield to definitively prevent any physical 'conversion' contact while brilliantly avoiding explicit aggression. The Council genuinely respects your terrifying arcane caution, delivering the precious coordinates while completely maintaining their uneasy, fragile independence.",
+            "convergence": "As the profoundly tense exchange concludes and you finally secure the heavily guarded coordinates, a violently spasming, newly 'converted' wild rat suddenly drops aggressively from the ceiling grate, its tail violently erupting into thick, sparking copper wire."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Underpipe is Concordat-era \u2014 stone blocks cut wider than modern standards, ventilation grooves at regular intervals no longer connected to anything. Skitter-Jack navigates by scent-marks the rats have left in oil. He explains: the Rat Council has existed for approximately forty years, with institutional memory carried in behavior patterns extending back to the Scourge-era. The Duchess, the grey elder female, inherited this memory from her predecessor. The Council knows the facility. There are terms. Ahead, the junction chamber \u2014 a Concordat room with four empty pipe-mounts and the Rat Council arranged on the floor in a circle of gnawed wood and pressed cloth.",
+            "choice_a": "Ask Skitter-Jack what the Council will likely demand so you can prepare",
+            "consequence_a": "He outlines three probable conditions: stop the poisoning, relocate the Prospect Lane colony, promise the facility will be closed not taken over.",
+            "choice_b": "Arrive with no foreknowledge and improvise",
+            "consequence_b": "The Council respects directness. Persuasion check DC reduced by 2 for the third condition.",
+            "convergence": "The Rat Council is assembled. The Duchess watches the party with the stillness of ongoing assessment."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Duchess opens negotiations through Skitter-Jack: the party smells like the Silo event, which counts as a credential. The copper-tail infection wave originated from a specific underpipe tributary northeast \u2014 she has tracked it in a spread pattern implying a single release point. She will provide a clay-marked map for three conditions, named one at a time without urgency. First: stop the entity poisoning Council meeting sites. Second: move the Prospect Lane colony before their building fails. Third: the facility, when found, is closed, not co-opted. A previous group was given directions and did not honor that promise.",
+            "choice_a": "Accept all three conditions before hearing them fully \u2014 show trust",
+            "consequence_a": "The Duchess pauses for genuine reassessment. She names the conditions anyway. Persuasion advantage on condition three.",
+            "choice_b": "Hear all three before agreeing to any",
+            "consequence_b": "Standard negotiation. All three conditions are achievable. Duchess registers the caution as sensible.",
+            "convergence": "The Duchess provides a clay token: 'the Council sent them.' It prevents copper-tail sentinel aggression in northeast underpipes."
+        },
+        {
+            "turn": 4,
+            "narrative": "Tracing the construction-equipment poison containers leads to Foreman Dag Henris's worksite on Prospect Lane \u2014 the same building whose foundation threatens the colony the Duchess wants relocated. Henris has been rotating poison deployments for weeks, furious about rat interference with his cables and drainage pipes. He has no idea the rats near his site have political organization. He is afraid and defensive when confronted, but not malicious \u2014 he has a genuine infestation problem and a genuinely insufficient solution.",
+            "choice_a": "Confront Henris and explain the situation; ask him to stop",
+            "consequence_a": "Investigation check to show evidence. On success he stops and agrees to give advance warning before future work. On failure he escalates to the Ward Authority.",
+            "choice_b": "Gather evidence of his building safety violations first as leverage",
+            "consequence_b": "You find three code violations. Confrontation begins on your terms; Henris agrees to stop and to fund the colony relocation from his site budget.",
+            "convergence": "Henris stops the poisoning. Condition one is met."
+        },
+        {
+            "turn": 5,
+            "narrative": "Forty-seven rats \u2014 including juveniles \u2014 live in the Prospect Lane subfoundation. The building will fail in eight to fourteen months. Skitter-Jack knows a viable relocation site: unused underpipe two sectors east, dry, ventilated, near a grain point. The path crosses three copper-tail sentinel patrol zones. The Council's clay token prevents aggression but not presence \u2014 the sentinels will observe and report.",
+            "choice_a": "Escort the colony actively through the sentinel zones",
+            "consequence_a": "Copper-tail sentinels observe the token and withdraw. Colony moves safely in four hours. You find a Concordat supply cache in the underpipe corridor \u2014 200 years old.",
+            "choice_b": "Clear the sentinel zones first, then send the colony unescorted",
+            "consequence_b": "Sentinel zones neutralized. Colony moves quickly. Two freed sentinel units follow you to the surface, patrol directive apparently ended.",
+            "convergence": "The colony is established in the new location. The Duchess acknowledges: 'The debt for Prospect Lane will outlast debt for the information.'"
+        },
+        {
+            "turn": 6,
+            "narrative": "Condition three: close the facility, not appropriate it. The Duchess explains that twenty-two years ago, another group received directions from the Council and did not honor them. The facility was used rather than closed. Three years later, the copper-tail program expanded significantly. She is not accusing the party. She is establishing that her trust has a prior event. She asks if there is something more binding than a verbal assurance.",
+            "choice_a": "Offer a formal commitment: if the party takes over the facility instead of closing it, the Rat Council can provide evidence to the City Watch",
+            "consequence_a": "The Duchess accepts. The commitment has enforcement mechanics. Credibility established.",
+            "choice_b": "Tell the truth: intent can be promised, outcome cannot \u2014 city authority may supersede the party",
+            "consequence_b": "The Duchess is still for a long moment. Skitter-Jack whispers this is respect. She provides the map. 'Honesty costs more than promises. You chose to pay it.'",
+            "convergence": "All three conditions met or honestly negotiated. The Duchess produces a clay map of the northeast underpipes with a marked coordinate: the copper-tail contact-infection release point."
+        },
+        {
+            "turn": 7,
+            "narrative": "The clay map leads to a Concordat maintenance hatch using a geometric lock: spatial lever inputs forming a shape visible in every Concordat junction room \u2014 the same ventilation-groove pattern in the underpipe walls. The rats have watched the copper-tail weekly maintenance circuit perform the input sequence forty-seven times. They know it.",
+            "choice_a": "Have Skitter-Jack relay the lock sequence from the Rat Council observation",
+            "consequence_a": "The lock opens first attempt. You enter a Concordat maintenance corridor. Next copper-tail maintenance circuit is 3 hours away.",
+            "choice_b": "Derive the sequence from Concordat engineering logic independently",
+            "consequence_b": "Arcana/Investigation DC 15. Success opens the lock with bonus insight for future Concordat locks. Failure triggers a silent contact-alarm; maintenance circuit comes 45 minutes early.",
+            "convergence": "The hatch opens. An access corridor ends in a heavy door, unlocked and slightly ajar. Beyond it: the controlled hum of something that has been running for a very long time."
+        },
+        {
+            "turn": 8,
+            "narrative": "The chamber is not an assembly line \u2014 it is a Concordat breeding record station. Glass columns with active rat cultures, twelve operational, six with copper-wire threading visible through the biological material \u2014 the contact-transmission agent. An automated release system opens micro-valves on a seven-day pulse to release the infection vector into the underpipe ventilation. It has been doing this for nineteen days, matching the Duchess's intelligence exactly. The pulse schedule timing was updated within the last month. Someone has been here recently.",
+            "choice_a": "Disable the release mechanism immediately",
+            "consequence_a": "Engineering or Arcana DC 14. Success stops the spread. Failure triggers an immediate local release into the nearest underpipe section.",
+            "choice_b": "Document everything first, then disable",
+            "consequence_b": "You find initials on the pulse-schedule update: 'V.A.' with a date eight weeks ago. You disable the system with time to spare. The initials are the most important find of the session.",
+            "convergence": "The release system is offline. The copper-tail contact infection stops spreading as of this cycle."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Rat Council's third condition applies now. The room holds twelve biological cultures, six dangerous, a Concordat record system that may be irreplaceable, and evidence of recent modification by V.A. Closing it means destroying the release mechanism. The Duchess knew from twenty-two years ago that people rationalize keeping Concordat assets 'for intelligence.' She predicted this moment in her condition.",
+            "choice_a": "Destroy the release mechanism and seal all six infected columns; preserve the other six non-infected cultures for research",
+            "consequence_a": "The threat is neutralized. Partial preservation is defensible under the original promise. The Duchess's reaction: 'That is acceptable. It is what we would have done.'",
+            "choice_b": "Seal and mark the facility; notify the City Watch; submit documentation",
+            "consequence_b": "Full institutional oversight. Watch response in 3-5 days. The Duchess gets the closure she wanted in form and substance.",
+            "convergence": "The release mechanism is destroyed. The room is no longer an active threat."
+        },
+        {
+            "turn": 10,
+            "narrative": "The Duchess appears in the junction chamber \u2014 unannounced, unexpected. She has come to verify. Skitter-Jack says the scent of a recently shut-down Concordat system is specific enough for her to confirm without asking. She makes a sound he identifies as 'satisfaction without celebration.' The Council has maintained their side: a second piece of marked clay is given to Skitter-Jack. A formal recognition token. In Lower Ward rat colony network: the bearer has performed a reciprocal action and is understood as non-threat. Copper-tail sentinels in Council-influenced zones will exhibit withdrawal rather than aggression in the party's presence.",
+            "choice_a": "Ask the Duchess if there is anything else the Council wants to share",
+            "consequence_a": "She says one thing: the initials V.A. appear in Concordat maintenance logs predating the Scourge across multiple systems. Either a persistent title or a persistent individual. She finds both possibilities unpleasant.",
+            "choice_b": "Accept the token and take your leave",
+            "consequence_b": "Respectful withdrawal. Future Council contacts available through Skitter-Jack with less preamble.",
+            "convergence": "Skitter-Jack walks you to the surface. At the exit: 'They liked you. That doesn't happen much.'"
+        },
+        {
+            "turn": 11,
+            "narrative": "The implications of V.A. settle above ground. The initials appear in Concordat systems predating the Scourge. The Squeaker-Box transmissions were signed 'V.' The Rat-Prophet's visions included 'the old engineer, young once, very long ago.' If V stands for Vane \u2014 the bio-engineering name from Concordat Division Seven records \u2014 then A is a surname initial in two-hundred-year-old logs. The pulse-schedule update was made in fresh notation eight weeks ago. Not copied. Written. Someone is physically present in EmberHeart with pre-Scourge Concordat authorship.",
+            "choice_a": "File a formal intelligence report with the City Watch, flagging V.A. as a person of interest",
+            "consequence_a": "The Watch logs the report. Investigator Soli Yan is cross-referenced. A formal connection between Vermin and Chronos threads is documented.",
+            "choice_b": "Keep the V.A. intelligence private; follow it independently",
+            "consequence_b": "Independent intelligence advantage maintained. Institutional warning not issued.",
+            "convergence": "Skitter-Jack's parting note, delivered three days later: the Rat Council's name for V.A. in chitter translates approximately as 'the one who remembers everything.'"
+        },
+        {
+            "turn": 12,
+            "narrative": "The mornings after are quieter. Not silent \u2014 the Lower Ward never is \u2014 but the specific quality of tension that has lived in it since the copper-tail reports started has reduced by a notch. The Gnaw-Market stallholders note fewer overnight disruptions. Three Prospect Lane colonists who had appeared at street level return to the underpipes. The copper-tail contact infection, without its release mechanism, will not produce new cases. Existing augmented wild rats will not spontaneously deaugment \u2014 that limit could not be changed \u2014 but the spread has stopped. Skitter-Jack sends a note three days after: the Duchess has added the party's names to what he translates, with difficulty, as 'the list of people the Council is waiting to owe.' In the history of the Lower Ward, it has been given to eleven individuals. Three of them were rats.",
+            "choice_a": "Seek Skitter-Jack to establish an ongoing communication channel",
+            "consequence_a": "Regular arrangement made. Skitter-Jack becomes a recurring contact. Advantage on Vermin-thread investigation checks where rat-colony intelligence applies.",
+            "choice_b": "Leave the relationship as a clean exchange \u2014 not an ongoing obligation",
+            "consequence_b": "Skitter-Jack understands. 'That's also a very rat way of thinking.' Recognition token remains valid.",
+            "convergence": "Quest complete. Copper-tail spread stopped. V.A. identified as a recurring active presence with 200-year-old Concordat authorization. The Rat Council owes the party a debt they will collect someday, in their own time."
+        }
+    ],
+    "conclusion": "The clandestine meeting concludes successfully, securing the exact coordinates of the biomechanical release-point from the terrified Rat Council. The discovery that the copper-tail augmentations can aggressively self-replicate through physical contact elevates the vermin threat from a maintenance issue to an active, city-wide biological crisis.",
+    "loot_table": [
+        "Rat-Tongue Amulet (Animal Handling +2 with rodents; rats exhibit reduced anxiety near the wearer; accelerates Skitter-Jack translation checks)",
+        "Rat Council Recognition Token (copper-embossed clay; copper-tail sentinels in Council zones exhibit withdrawal behavior rather than aggression)",
+        "Concordat Breeding Station Log \u2014 Partial (pre-Scourge biological notation; Intelligence/Arcana research value; contains V.A. initialed update fragment)",
+        "6x Wild Rat Culture Samples (non-infected; laboratory or alchemical research value; relevant to EH_SQ_078 antidote work)",
+        "900 gold (salvage from Concordat-era material in the underpipe access corridor)"
+    ],
+    "branching_outcomes": {
+        "facility_closed_fully": {
+            "description": "Release mechanism destroyed; all columns sealed; City Watch notified",
+            "effects": {
+                "settlement_stability": 2,
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Copper-tail spread stopped; City Watch opens Vane investigation file",
+                "ambient_change": "Lower Ward copper-tail sentinel density decreases 30% over 2 weeks"
+            }
+        },
+        "facility_partially_preserved": {
+            "description": "Release mechanism destroyed; six clean cultures preserved for research",
+            "effects": {
+                "settlement_stability": 2,
+                "settlement_morale": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Copper-tail spread stopped; research cultures provide 20% XP bonus on future Vermin bio-research checks"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Henris escalates to the Ward Authority; party barred from Underpipe access for 1 week; release mechanism fires one additional cycle, extending the infection spread",
+        "failure_penalty": {
+            "xp_loss": 1
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

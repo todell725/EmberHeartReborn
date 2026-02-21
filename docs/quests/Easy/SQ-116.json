@@ -1,0 +1,155 @@
+{
+    "id": "SQ-116",
+    "title": "The Clocksmith's Hiccup",
+    "difficulty": "Easy",
+    "xp_reward": 200,
+    "prerequisites": "None",
+    "description": "Time itself is skipping in the North-Ward...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Master Valerius\u2019s clock-shop is a cacophony of rhythmic ticking, but the main tower-clock has developed a stutter.",
+            "choice_a": "Listen to the tick",
+            "consequence_a": "Success.",
+            "choice_b": "Examine the mainspring",
+            "consequence_b": "Success.",
+            "convergence": "Every third second, time seems to 'skip' in the room, making your heart miss a beat."
+        },
+        {
+            "turn": 2,
+            "narrative": "The smell of stale grease and ozone fills the air. The clock-hand is twitching at exactly 12:00:03 like a nervous finger.",
+            "choice_a": "Apply pressure to the hand",
+            "consequence_a": "Success.",
+            "choice_b": "Oil the escapement",
+            "consequence_b": "Success.",
+            "convergence": "The skip intensifies, and suddenly you are standing on the ceiling, gravity reversed in the blink of an eye."
+        },
+        {
+            "turn": 3,
+            "narrative": "From your new vantage point, you see a 'Time-Mite'\u2014a creature of gear-teeth and silver shadow\u2014chewing on the second hand.",
+            "choice_a": "Strike the Mite",
+            "consequence_a": "Success.",
+            "choice_b": "Lure it with a copper coin",
+            "consequence_b": "Success.",
+            "convergence": "The Mite chitters and vanishes, appearing three seconds in the future across the room."
+        },
+        {
+            "turn": 4,
+            "narrative": "You have to anticipate its next 'jump'. The clock-face is now glowing with a frantic, shifting violet light.",
+            "choice_a": "Wait for the 6-second mark",
+            "consequence_a": "Success.",
+            "choice_b": "Scan for chronons",
+            "consequence_b": "Success.",
+            "convergence": "You catch the Mite as it materializes, its body cold as a winter's night."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Mite isn't a pest; it's a 'Chronal-Leak' shaped by the clocksmith's grief. He\u2019s trying to rewind the day his daughter left.",
+            "choice_a": "Talk to Valerius",
+            "consequence_a": "Success.",
+            "choice_b": "Smash the clock-core",
+            "consequence_b": "Success.",
+            "convergence": "Valerius weeps, and the clock-room returns to normal gravity, though the skip remains in the air."
+        },
+        {
+            "turn": 6,
+            "narrative": "He gives you a 'Stop-Watch'\u2014a device that can pause a single falling drop of water. 'For the gaps in time,' he says.",
+            "choice_a": "Accept the watch",
+            "consequence_a": "Success.",
+            "choice_b": "Help him rebuild",
+            "consequence_b": "Success.",
+            "convergence": "The ticking returns to a steady, comforting rhythm. The Mite has become a silver-stain on the floor."
+        },
+        {
+            "turn": 7,
+            "narrative": "The tower-clock chimes four, the sound deep and resonating throughout the North-Ward. It sounds like a heart beating again.",
+            "choice_a": "Synchronize your watches",
+            "consequence_a": "Success.",
+            "choice_b": "Check the gears one last time",
+            "consequence_b": "Success.",
+            "convergence": "You find a 'Silver-Sprocket' in the dust, etched with a name: 'Elara'."
+        },
+        {
+            "turn": 8,
+            "narrative": "Valerius smiles at the sprocket. 'She was the best clocksmith I ever knew.' The air in the shop feels lighter now.",
+            "choice_a": "Pat him on the shoulder",
+            "consequence_a": "Success.",
+            "choice_b": "Inquire about Elara",
+            "consequence_b": "Success.",
+            "convergence": "The sun sets, its light coloring the brass gears in shades of deep copper and rose."
+        },
+        {
+            "turn": 9,
+            "narrative": "You step out into the evening, the 'stutter' in your step finally gone. The North-Ward feels more solid, more present.",
+            "choice_a": "Walk the perimeter",
+            "consequence_a": "Success.",
+            "choice_b": "Accept your pay",
+            "consequence_b": "Success.",
+            "convergence": "The clock towers chime in unison, a perfect, logical harmony."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends at theRidge. Time flows forward, steady and true.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Continue",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Clocksmith's Hiccup' is complete. Quest Complete.",
+    "loot_table": [
+        "Stop-Watch",
+        "Silver-Sprocket"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are stuck in a 3-second loop forever. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 3
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "North-Ward clock tower develops audible stutter",
+        "flags": []
+    },
+    "location": "Valerius Clock-Shop \u2014 North Ward",
+    "district": "North Ward",
+    "thread": "Chronos",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Master Clocksmith Valerius",
+        "Time-Mite (creature)",
+        "Elara (deceased daughter)"
+    ],
+    "mechanics_featured": [
+        "Perception (temporal)",
+        "Dex (catching Mite)",
+        "Social (grief counseling)",
+        "Repair"
+    ],
+    "permanent_effects": {
+        "settlement": "Tower clock stable; North-Ward time reliable again",
+        "world": "Elara silver-sprocket becomes recurring motif",
+        "additional": [
+            "North-Ward gains Chronal-Leak status",
+            "Time-skip phenomenon active"
+        ]
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Stop-Watch",
+            "result": "One-shot time-pause item gained"
+        },
+        {
+            "path": "Help rebuild",
+            "result": "+1 Reputation with Valerius, Silver-Sprocket clue"
+        }
+    ]
+}

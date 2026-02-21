@@ -1,0 +1,148 @@
+{
+    "id": "SQ-114",
+    "title": "The Whispering Drain",
+    "difficulty": "Easy",
+    "xp_reward": 150,
+    "prerequisites": "None",
+    "description": "A pungent rot wafts from the storm drain...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Thick fog curls around your boots as you peer into the storm drain outside the 'Damp-Rat' tavern. A sound like wet sandpaper dragging on stone drifts up.",
+            "choice_a": "Light a torch",
+            "consequence_a": "Success.",
+            "choice_b": "Listen closely",
+            "consequence_b": "Success.",
+            "convergence": "Regardless of your approach, a rhythmic chittering echoes up from the iron grate."
+        },
+        {
+            "turn": 2,
+            "narrative": "The grate is slick with a violet, oily residue that smells of old jasmine and rot. It's vibrating at a pitch that makes your teeth ache.",
+            "choice_a": "Wrench the grate open",
+            "consequence_a": "Success.",
+            "choice_b": "Pour salt down the drain",
+            "consequence_b": "Success.",
+            "convergence": "The iron groans as it gives way, revealing a vertical drop into a world of damp velvet and steam."
+        },
+        {
+            "turn": 3,
+            "narrative": "Descending the ladder, the air grows heavy and sweet. Tiny, bioluminescent fungi cling to the brickwork like frozen sparks.",
+            "choice_a": "Scrape a sample of the fungus",
+            "consequence_a": "Success.",
+            "choice_b": "Keep descending",
+            "consequence_b": "Success.",
+            "convergence": "The chittering stops, replaced by the sound of something large moving through the sludge below."
+        },
+        {
+            "turn": 4,
+            "narrative": "You reach the bottom. A pool of black, iridescent liquid swirls in the center of the chamber, reflecting your lantern light in jagged rainbows.",
+            "choice_a": "Probe the pool with a stick",
+            "consequence_a": "Success.",
+            "choice_b": "Toss a stone across",
+            "consequence_b": "Success.",
+            "convergence": "The liquid ripples, and a cluster of 'Drain-Spiders'\u2014glassy, translucent arachnids\u2014scuttle toward the light."
+        },
+        {
+            "turn": 5,
+            "narrative": "The spiders move with a clicking sound like dry fingers on a desk. They aren't attacking yet, just watching with twenty red eyes.",
+            "choice_a": "Wave your torch aggressively",
+            "consequence_a": "Success.",
+            "choice_b": "Stand perfectly still",
+            "consequence_b": "Success.",
+            "convergence": "A section of the sewer wall slides away, revealing a hidden, brass-lined workshop filled with ticking gears."
+        },
+        {
+            "turn": 6,
+            "narrative": "Inside the workshop, the smell of ozone is overwhelming. A lanky man with clockwork goggles is frantically turning a steam-valve.",
+            "choice_a": "Help him with the valve",
+            "consequence_a": "Success.",
+            "choice_b": "Demand an explanation",
+            "consequence_b": "Success.",
+            "convergence": "The valve hisses and clicks into place, and the violet vibration throughout the sewer instantly dies down."
+        },
+        {
+            "turn": 7,
+            "narrative": "The man looks at you with eyes that reflect the bioluminescent fungus. 'The vents... they were breathing the wrong air,' he gasps.",
+            "choice_a": "Check the ventilation logs",
+            "consequence_a": "Success.",
+            "choice_b": "Inspect the steam-pipes",
+            "consequence_b": "Success.",
+            "convergence": "You find that the pipes were clogged with a mesh of silver-wire and dried 'Void-Petals'."
+        },
+        {
+            "turn": 8,
+            "narrative": "The 'Void-Petals' begin to glow as they are removed, releasing a gas that makes the room look like it's made of liquid silver.",
+            "choice_a": "Don a respirator",
+            "consequence_a": "Success.",
+            "choice_b": "Vent the room",
+            "consequence_b": "Success.",
+            "convergence": "The air clears, and you see a small, mechanical 'Vapor-Bird' perched on the man's shoulder, its eyes missing."
+        },
+        {
+            "turn": 9,
+            "narrative": "The bird nuzzles the man's neck. 'She was my only anchor in the dark,' he whispers, handing you a rusted key.",
+            "choice_a": "Accept the key",
+            "consequence_a": "Success.",
+            "choice_b": "Ask about the anchor",
+            "consequence_b": "Success.",
+            "convergence": "The man dissolves into a cloud of violet steam, leaving only a scent of jasmine behind."
+        },
+        {
+            "turn": 10,
+            "narrative": "You climb back to the surface, the 'Whispering Drain' now silent. The night air of the Ridge feels sharp and clean against your skin.",
+            "choice_a": "Lock the grate",
+            "consequence_a": "Success.",
+            "choice_b": "Log the discovery",
+            "consequence_b": "Success.",
+            "convergence": "The night remains still, but you hear a single, distant whistle from below."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Whispering Drain' is complete. The night remains still, but you hear a single, distant whistle from below.",
+    "loot_table": [
+        "Rusted Iron Ring",
+        "10 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You retreat, coughing from the fumes. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Foul smell reported near Damp-Rat Tavern drain",
+        "flags": []
+    },
+    "location": "Storm Drain \u2014 Outside Damp-Rat Tavern",
+    "district": "Lower Ward",
+    "thread": "Community & Survival",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Unnamed Clockwork Hermit"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Stealth (sneaking down drain)",
+        "Con saves (fumes)"
+    ],
+    "permanent_effects": {
+        "settlement": "Drain cleared; street odor resolved",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept rusted key",
+            "result": "Key opens mystery lock (future hook)"
+        },
+        {
+            "path": "Ask about anchor",
+            "result": "+1 Lore (hermit backstory)"
+        }
+    ]
+}

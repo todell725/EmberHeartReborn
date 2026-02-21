@@ -1,0 +1,155 @@
+{
+    "id": "SQ-024",
+    "title": "The Glass-Walker's Path",
+    "xp_reward": 850,
+    "prerequisites": "None",
+    "description": "A 'Glass-Walker'\u2014a traveler who can walk on any surface\u2014is stuck in a 'Mirror-Loop' in the North-Ward.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Mirror-Loop is a zone where every window and puddle acts as a portal. The Glass-Walker is a man in a coat of silver-scales, frantically jumping from his reflection in a baker's shop to a reflection in a rain-barrel. He's trapped in a ten-second loop of his own panic.",
+            "choice_a": "Break the primary mirror (Str DC 12)",
+            "consequence_a": "Success: You shatter the baker's window, and the Walker falls into the real world. (+1 Progress)",
+            "choice_b": "Stabilize the loop with 'Void-Glue' (Tech DC 13)",
+            "consequence_b": "Success: You slow the transitions, giving him time to breathe. (+1 Progress)",
+            "convergence": "The Walker's reflections begin to detach and walk on the walls of the street."
+        },
+        {
+            "turn": 2,
+            "narrative": "There are now six Glass-Walkers, all screaming in synchronized harmony. They are trying to 'Pull the World into the Glass'.",
+            "choice_a": "Identify the 'Original' Walker (Insight DC 14)",
+            "consequence_a": "Success: You spot the one whose scales are slightly tarnished. (+1 Progress)",
+            "choice_b": "Blaze the area with light",
+            "consequence_b": "Success: The reflections are blinded and retreat into the shadows. (+100 XP)",
+            "convergence": "The street begins to turn into a material as fragile as glass\u2014with every step, you hear a crack beneath your boots."
+        },
+        {
+            "turn": 3,
+            "narrative": "A 'Refraction-Horror'\u2014a entity made of thousand-faceted diamonds\u2014emerges from a puddle. It's beautiful and sharp, its movements a light-show of lethal intensity.",
+            "choice_a": "Strike the facets (Atk DC 15)",
+            "consequence_a": "Success: You chip away its symmetry. (+1 Progress)",
+            "choice_b": "Use a mirror to reflect its own beam (Dex DC 15)",
+            "consequence_b": "Success: The Horror is blinded by its own light. (+1 Progress)",
+            "convergence": "The Glass-Walker hands you his 'Silver-Sandal'. 'Step where I step!' he cries."
+        },
+        {
+            "turn": 4,
+            "narrative": "With the Silver-Sandal, the 'Glass-World' becomes visible. You are walking on a bridge of light over an abyss of 'Raw-Data'.",
+            "choice_a": "Cross the bridge (Dex DC 14)",
+            "consequence_a": "Success: You reach the 'Mirror-Core'\u2014a floating, hexagonal prism. (+1 Progress)",
+            "choice_b": "Look into the 'Raw-Data' (Int DC 15)",
+            "consequence_b": "Success: You see the 'Code' of the city's foundation. (+1 Lore)",
+            "convergence": "A 'Reflection-Stalker'\u2014a shadow made of broken glass\u2014appears behind you."
+        },
+        {
+            "turn": 5,
+            "narrative": "The Stalkers are trying to trip you into the abyss. Their touch is cold and leaves 'Glass-Splinters' in your mind.",
+            "choice_a": "Reinforce your 'Self-Image' (Wis Save DC 14)",
+            "consequence_a": "Success: You resist the identity-drain. (+100 XP)",
+            "choice_b": "Shatter the bridge behind you",
+            "consequence_b": "Success: You cut off their pursuit. (+1 Progress)",
+            "convergence": "You reach the Mirror-Core. It's humming with the sound of a thousand people talking at once."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Core is a 'Logic-Vault'\u2014it's storing the memories of the North-Ward. It's been 'Corrupted' by a 'Void-Worm'.",
+            "choice_a": "Extract the Void-Worm (Dex DC 15)",
+            "consequence_a": "Success: You pull the purple parasite from the clockwork. (+1 Loot)",
+            "choice_b": "Purify the Core with 'Holy-Water'",
+            "consequence_b": "Success: The memories return to their owners. (+10 Morale)",
+            "convergence": "The Mirror-Loop collapses. You and the Walker fall back onto the cobblestones of the North-Ward."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Glass-Walker is unconscious, his coat of scales now dull and gray. He's clutching a 'Mirror-Compass'.",
+            "choice_a": "Take the Compass",
+            "consequence_a": "Success: You gain a tool that points to the nearest rift. (+1 Gear)",
+            "choice_b": "Revive the Walker (Medic DC 13)",
+            "consequence_b": "Success: He thanks you and offers to be your 'Scout'. (+5 Reputation)",
+            "convergence": "A 'Glass-Sanitizer' squad from the High-Ward arrives, carrying steam-hoses and iron-hammers."
+        },
+        {
+            "turn": 8,
+            "narrative": "They want to 'Shatter' the whole street to ensure the loop is truly gone.",
+            "choice_a": "Interpose yourself (Str DC 14)",
+            "consequence_a": "Success: You protect the residents' property. (+5 Morale)",
+            "choice_b": "Negotiate a 'Precision-Clean' (Persuasion DC 14)",
+            "consequence_b": "Success: They only break the necessary windows. (+1 Progress)",
+            "convergence": "You find a 'Shard of True-Memory' in the debris."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Shard shows you a vision of a 'Glass-City' beneath the ice of the North-Pass.",
+            "choice_a": "Note the location (Int DC 14)",
+            "consequence_a": "Success: You have a new destination. (+1 Lore)",
+            "choice_b": "Give the Shard to the Chronicle Weaver",
+            "consequence_b": "Success: He gives you 'The Weaver's Glass-Eye'. (+1 Rare Item)",
+            "convergence": "The North-Ward is safe for now, the windows once again reflecting only the sky."
+        },
+        {
+            "turn": 10,
+            "narrative": "You walk away from the street. Every time you pass a mirror, you check to see if your reflection is still following. So far, it is.",
+            "choice_a": "Accept a bag of silver coins",
+            "consequence_a": "Success: You are paid 850 gold. (+850 Gold)",
+            "choice_b": "Rest at the Tavern",
+            "consequence_b": "Success: You dream of a world made of diamonds. (+1 Luck)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Glass-Walker's Path was a leak from the 'Mirror-Plane'. The loop is closed, but the 'Refraction-Horror' suggests a larger geometry is at work.",
+    "loot_table": [
+        "Mirror-Compass",
+        "Void-Worm Jar",
+        "Silver-Sandal",
+        "850 Gold",
+        "Doctor Vane's Personnel File"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Street becomes 'Fragile'. -2 Defense and a permanent risk of 'Glass-Cuts' (-5 Health) for anyone walking here.",
+        "failure_penalty": {
+            "xp_loss": 2
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "North-Ward reports windows acting as portals",
+        "flags": [
+            "mirror_loop_active"
+        ]
+    },
+    "location": "The Mirror-Loop \u2014 North-Ward Streets",
+    "district": "North Ward",
+    "thread": "Void",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "The Glass-Walker (Edvar)",
+        "North-Ward Glass-Sanitizer Squad"
+    ],
+    "mechanics_featured": [
+        "Insight (identify original)",
+        "Dex (Glass-World traversal)",
+        "Tech (core purification)",
+        "Wis saves"
+    ],
+    "permanent_effects": {
+        "settlement": "North-Ward mirror loop closed",
+        "world": "Glass-City beneath North-Pass hinted"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Revive Walker (medic)",
+            "result": "+5 Reputation, Walker becomes scout"
+        },
+        {
+            "path": "Take Mirror-Compass",
+            "result": "Nearest rift detection tool acquired"
+        }
+    ]
+}

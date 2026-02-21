@@ -1,0 +1,75 @@
+{
+    "id": "SQ-210",
+    "title": "Fractured Gates",
+    "difficulty": "Epic",
+    "xp_reward": 2500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-209"
+        ]
+    },
+    "location": "North Ward -> The Grand Gates",
+    "district": "North Ward",
+    "thread": "Political Intrigue",
+    "description": "The political coup has decimated the city's command structure. Intelligence arrives that four massive armies approach Warden-Keep. Because of the civil war, the gates are completely undefended. You must rally whatever forces are left.",
+    "key_npcs": [
+        "Loyalist Captains",
+        "Mercenary Guilders"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The warning bells ring across Emberheart. The Silken Hand conspiracy has left the military scattered. You have 12 hours to man the outer walls.",
+            "choice_a": "Spend your own vast wealth to hire mercenaries",
+            "consequence_a": "You lose 2000 Gold, but secure a massive mercenary company to man the West Gate.",
+            "choice_b": "Rally the civilian militias",
+            "consequence_b": "You inspire the common folk to take up arms. Morale is high, but their gear is weak."
+        },
+        {
+            "turn": 2,
+            "narrative": "The gate mechanisms have been sabotaged by the last few loyalists of the traitor General. They must be manually cranked shut.",
+            "choice_a": "Lead a strike team to secure the winch rooms",
+            "consequence_a": "You fight off the saboteurs in close quarters. The gates close just as the first enemy scouts appear.",
+            "choice_b": "Use earth magic to seal the gates permanently",
+            "consequence_b": "You crush the gates closed with rock. It holds, but trade is now permanently cut off."
+        }
+    ],
+    "branching_outcomes": {
+        "gates_secured": {
+            "description": "The gates are shut. The city braces for the ultimate siege.",
+            "unlocks": [
+                "SQ-ELITE-SIEGE"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "All Districts": 20
+                },
+                "permanent_world_change": "Emberheart is now under martial law in preparation for the siege."
+            }
+        },
+        "gates_sealed_shut": {
+            "description": "The gates are permanently sealed with rock.",
+            "unlocks": [
+                "SQ-ELITE-SIEGE"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Market Ward": -30
+                },
+                "permanent_world_change": "Trade halts entirely. Economic crash, but maximum defense."
+            }
+        }
+    },
+    "loot_table": [
+        "Medal of the Vanguard",
+        "1000x Gold Coins"
+    ],
+    "conclusion": "The gates are shut. The city braces for the ultimate siege.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,183 @@
+{
+    "id": "SQ-125",
+    "title": "The Weaver's Needle",
+    "difficulty": "Easy",
+    "xp_reward": 650,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-115"
+        ],
+        "items_required": [
+            "Saffron-Thread"
+        ],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Tailor found stitched to loom in Market Ward"
+    },
+    "location": "Market Ward - Tailor's Shop and surrounding district",
+    "district": "Market Ward",
+    "thread": "Weaver",
+    "estimated_duration": "60-75 minutes",
+    "key_npcs": [
+        "Master Threadwell (victim)",
+        "Stitch-Wraith (enemy)",
+        "Threadkeeper (mentioned)",
+        "Weaver Cultists"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Arcana checks",
+        "Combat",
+        "Reality manipulation",
+        "Timed crisis resolution"
+    ],
+    "permanent_effects": [
+        "Weaver's Needle obtained",
+        "Market Ward seams repaired",
+        "Weaver cult awareness increased"
+    ],
+    "branching_outcomes": {
+        "perfect_save": {
+            "description": "Saved tailor with Needle, stitched all seams personally",
+            "effects": {
+                "settlement_morale": 5,
+                "settlement_stability": 3,
+                "reputation_change": {
+                    "Market Ward Citizens": 10,
+                    "Warden Council": 5
+                }
+            },
+            "unlocks": [
+                "SQ-021"
+            ],
+            "consequences": {}
+        },
+        "partial_save": {
+            "description": "Saved tailor but delegated seam-stitching",
+            "effects": {
+                "settlement_morale": 3,
+                "settlement_stability": 2,
+                "reputation_change": {
+                    "Market Ward Citizens": 5
+                }
+            },
+            "unlocks": [
+                "SQ-021"
+            ],
+            "consequences": {
+                "ambient_hazard": "Minor reality fluctuations persist in Market Ward"
+            }
+        }
+    },
+    "description": "A tailor in the Market Ward has been found with their hands stitched to their loom. The thread used is Saffron-colored and won't cut.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The City Guard summons you to Master Threadwell's tailor shop. The scene is nightmarish: the elderly tailor slumps at his loom, hands literally sewn into the fabric with golden thread that pulses with soft, sickly light. His eyes are vacant but wet with tears. The air smells of ozone and silk.",
+            "choice_a": "Use your Saffron-Thread to sense the ritual pattern (Investigation DC 12)",
+            "consequence_a": "Success: The thread in your pocket vibrates in sympathetic harmony with the cursed stitches. You see the geometric pattern\u2014it's a map, coordinates to seven locations across the ward. (+1 Clue)",
+            "choice_b": "Attempt to cut the golden thread with your blade",
+            "consequence_b": "Failure: Your blade bounces off as if the thread were forged steel. The tailor screams in agony, his body convulsing. (-5 HP to Tailor)",
+            "convergence": "The stitching pattern is a map\u2014seven anchor points forming a ritual circle around the Market Ward."
+        },
+        {
+            "turn": 2,
+            "narrative": "Following the map's first coordinate, you find yourself in a narrow alley between a bakery and a cobbler's shop. The cobblestones here are etched with symbols that glow faintly violet\u2014Void-Glass script.",
+            "choice_a": "Trace the symbols with your Saffron-Thread (Arcana DC 13)",
+            "consequence_a": "Success: As the thread touches each symbol, they flare bright violet. You understand now\u2014these are 'seam markers,' places where reality's fabric has been deliberately weakened. (+1 Lore)",
+            "choice_b": "Destroy the etchings with a hammer",
+            "consequence_b": "Success: The symbols shatter into violet dust. Back at the shop, the tailor screams\u2014his left index finger tears free from the loom, bleeding golden ichor. (+1 Progress, Tailor takes damage)",
+            "convergence": "You face a choice: destroy all seven anchors (causing the tailor immense pain) or find another way to break the ritual."
+        },
+        {
+            "turn": 3,
+            "narrative": "The second anchor point is inside the grain silo at the ward's edge. When you enter, dozens of rats with glowing golden eyes surround the etched symbols, chittering defensively.",
+            "choice_a": "Offer the rats a strand of Saffron-Thread (Animal Handling DC 14)",
+            "consequence_a": "Success: The largest rat approaches, sniffs the thread, and takes it gently in its mouth. The swarm parts, allowing you access to the anchor. (+1 Progress)",
+            "choice_b": "Fight through the rat swarm",
+            "consequence_b": "Combat Success: You clear the room with steel and determination, but the noise alerts someone\u2014or something\u2014outside. (+1 Progress, -Stealth)",
+            "convergence": "Beneath a pile of grain near the anchor, you find a Weaver cult robe, golden-threaded and still warm."
+        },
+        {
+            "turn": 4,
+            "narrative": "The robe fits you perfectly, as if tailored for your exact measurements. You could wear this to infiltrate the cult, or continue hunting anchors from the shadows.",
+            "choice_a": "Don the robe and walk openly through the Market Ward (Deception DC 15)",
+            "consequence_a": "Success: Within minutes, a hooded figure approaches you. 'Brother/Sister,' they whisper, 'the Threadkeeper awaits your presence at the Seventh Seam. The Needle must be consecrated.' (+1 Intel, location revealed)",
+            "choice_b": "Track the cultist from the shadows (Stealth DC 13)",
+            "consequence_b": "Success: You follow the cultist to an underground chapel accessed through a hidden door beneath the Market Ward fountain. (+1 Progress)",
+            "convergence": "The Seventh Seam\u2014the ritual's epicenter\u2014is beneath the Market Ward fountain."
+        },
+        {
+            "turn": 5,
+            "narrative": "The underground chapel is a chamber of silk. Every wall is draped in tapestries depicting the 'unweaving' of cities, the fall of empires into dimensional rifts. In the center: a pedestal of bone holding a needle that looks like crystallized starlight.",
+            "choice_a": "Grab the Weaver's Needle immediately",
+            "consequence_a": "Hazard: Your fingers close around the needle\u2014and the tapestries RIP free from the walls, coalescing into a humanoid shape. The Stitch-Wraith is born. (Combat initiated)",
+            "choice_b": "Study the tapestries for clues (Insight DC 14)",
+            "consequence_b": "Success: You find the deactivation sequence woven into the leftmost tapestry\u2014a pattern of stitches. You memorize it. (+1 Tactical Advantage when combat begins)",
+            "convergence": "The Stitch-Wraith attacks regardless\u2014an eight-foot construct of animated silk and golden thread, faceless except for a void where its head should be."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Stitch-Wraith moves with unnatural fluidity, its 'arms' long strips of silk that crack like whips. The golden thread binding it glows with malevolent purpose.",
+            "choice_a": "Target the binding thread with precision strikes (Dexterity attack DC 15)",
+            "consequence_a": "Success: You sever three major threads. The wraith's left arm unravels, collapsing into loose silk. It staggers. (+Damage, wraith weakened)",
+            "choice_b": "Attempt to burn it with alchemist's fire",
+            "consequence_b": "Success: The silk smolders and blackens, but the golden thread is fireproof. Partial damage only. The wraith shrieks like tearing fabric. (+Partial damage)",
+            "convergence": "You realize the wraith's core IS the golden thread\u2014you must unravel it completely."
+        },
+        {
+            "turn": 7,
+            "narrative": "You spot a loose end of thread trailing from the wraith's torso. If you can grab it and pull...",
+            "choice_a": "Pull the thread steadily while dodging its attacks (Strength + Dex saves DC 13)",
+            "consequence_a": "Success: You grip the thread and haul with all your might. Ten feet of golden thread comes free, and the wraith shrinks visibly, shrieking. (+100 XP, wraith nearly defeated)",
+            "choice_b": "Tie the thread to the pedestal and sprint away (Athletics DC 14)",
+            "consequence_b": "Success: You loop the thread around the bone pedestal and run for the exit. The wraith is yanked backward, tearing itself apart trying to follow. Clever! (+150 XP, wraith destroyed)",
+            "convergence": "The Stitch-Wraith collapses into a pile of inert silk and cooling thread. The Weaver's Needle sits on its pedestal, humming softly."
+        },
+        {
+            "turn": 8,
+            "narrative": "You lift the Weaver's Needle. It's impossibly light, warm like living skin, and vibrates with potential energy. Your Saffron-Thread coils around it affectionately, as if greeting an old friend.",
+            "choice_a": "Test the Needle on a small tear in your cloak (Dexterity DC 10)",
+            "consequence_a": "Success: You make a single stitch. The tear doesn't just close\u2014it vanishes, the fabric becoming stronger than before. This Needle can mend REALITY. (+1 Lore)",
+            "choice_b": "Pocket the Needle and leave immediately",
+            "consequence_b": "Success: You hear footsteps approaching the chapel. You escape through the fountain door before cult reinforcements arrive. (+1 Progress)",
+            "convergence": "You sprint back to the tailor's shop, Needle in hand."
+        },
+        {
+            "turn": 9,
+            "narrative": "Master Threadwell is barely conscious. Six of his ten fingers have torn free from the loom, leaving golden ichor pooling beneath his hands. His breathing is shallow.",
+            "choice_a": "Use the Weaver's Needle to reverse the stitching ritual (Arcana DC 16)",
+            "consequence_a": "Success: You thread the Needle with your Saffron-Thread and work in reverse, un-stitching the curse without harming the flesh. The tailor's hands come free, whole and healed. He weeps with relief. (+5 Reputation, Tailor saved perfectly)",
+            "choice_b": "Cut the loom apart to free him conventionally (Strength DC 13)",
+            "consequence_b": "Success: You hack through the wooden frame, freeing the tailor. His hands are scarred with golden lines\u2014he'll live, but never tailor again. (+2 Reputation, Tailor disabled)",
+            "convergence": "Suddenly, the ground shakes. The seven seam markers across Market Ward are pulsing violently\u2014reality itself is tearing."
+        },
+        {
+            "turn": 10,
+            "narrative": "You have minutes. Seven dimensional rifts are opening across the Market Ward\u2014shimmering tears in the air that leak violet light and the smell of Non-Space.",
+            "choice_a": "Sprint across the ward, stitching all seven seams personally (Marathon Dex check DC 17)",
+            "consequence_a": "Success: You become a blur of motion, the Needle flashing as you stitch reality back together. Citizens cheer as tears seal in your wake. HERO. (+200 XP, +5 Market Ward Stability, +10 Reputation)",
+            "choice_b": "Teach the City Guard to use Saffron-Thread to hold seams temporarily (Leadership DC 15)",
+            "consequence_b": "Success: You show them the technique. Guards spread across the ward, stabilizing rifts with makeshift thread-work until the Weavers Guild can make permanent repairs. (+3 Morale, +Leadership skill)",
+            "convergence": "Quest Complete. The Market Ward is saved. The Weaver's Needle is yours, and with it, the power to stitch reality itself."
+        }
+    ],
+    "conclusion": "The Weaver cult's ritual has been thwarted. Seven reality-seams have been repaired, Master Threadwell has been freed (alive or scarred), and you now possess the legendary Weaver's Needle\u2014an artifact capable of mending tears in dimensional fabric. But the cult's Threadkeeper remains at large, and their ultimate goal\u2014the 'Great Unweaving'\u2014is still a mystery.",
+    "loot_table": [
+        "Weaver's Needle (Artifact - Can stitch reality tears, +2 to Arcana checks involving dimensional magic)",
+        "Gilded-Thimble (Armor +1 to hands, protects from curse-threading)",
+        "Cursed Thread Spool (50 feet of golden thread, can be used as binding material or sold)",
+        "Stitch-Wraith Silk (Crafting material, 10 yards)",
+        "400 Gold (reward from grateful Market Ward merchants)"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Tailor dies from ritual completion. All 7 seams tear fully open. Market Ward becomes 'Rift Zone' with permanent dimensional instability. -10 Settlement Stability, -5 Morale.",
+        "failure_penalty": {
+            "xp_loss": 7
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

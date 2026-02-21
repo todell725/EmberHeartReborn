@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_425",
+    "title": "The Labour Draft",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Ridge -> The Ridge-Lord's Muster Hall",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "Ridge-Lord Fenn is conscripting workers from the Lower Ward for extended Ridge maintenance shifts \u2014 technically legal but the workers are paid below Ward minimum and working in dangerous conditions without protective gear. Three workers have been hurt this week.",
+    "key_npcs": [
+        "Ridge-Lord Fenn",
+        "Injured Worker Tomas",
+        "Labour Advocate Renia"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Labour Advocate Renia meets you at the muster hall entrance with a folder of incident reports. Three men have been burned by steam vents, working without the leather protective suits that are standard in the upper mine. Fenn's agent claims the suits are 'on order.'",
+            "choice_a": "Inspect the Ridge-Lord's supply storage for evidence the suits are already there",
+            "consequence_a": "You find a locked storage room containing twenty protective suits. Fenn has them \u2014 he simply hasn't issued them.",
+            "choice_b": "Interview the injured workers directly for first-hand testimony",
+            "consequence_b": "Tomas shows you his burn scars and confirms he asked for protective gear on the first day and was told there was none."
+        },
+        {
+            "turn": 2,
+            "narrative": "Fenn's withholding of safety equipment is clearly deliberate. He argues costs but this is a legal minimum violation.",
+            "choice_a": "Threaten Fenn with a formal safety violation report unless he issues the suits immediately",
+            "consequence_a": "Fenn backs down the moment legal language is invoked. Suits are issued within the hour.",
+            "choice_b": "File the safety violation formally with the Ridge Authority without giving Fenn advance warning",
+            "consequence_b": "The Authority issues a stop-work order on Fenn's muster operation. Workers are sent home with full pay."
+        },
+        {
+            "turn": 3,
+            "narrative": "Workers are now safer but Renia wants back-pay for the below-minimum wages.",
+            "choice_a": "Negotiate a back-pay settlement with Fenn directly on behalf of all workers",
+            "consequence_a": "Fenn reluctantly agrees to 80% back-pay for all affected workers.",
+            "choice_b": "Document the wage violation for a formal Ward Council complaint",
+            "consequence_b": "The complaint goes through channels slowly but results in a full back-pay order twelve weeks later."
+        }
+    ],
+    "branching_outcomes": {
+        "settled_directly": {
+            "description": "80% back-pay negotiated directly with Fenn.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Renia's Labour Certificate",
+                "reputation_change": {
+                    "Ridge": 16,
+                    "Lower Ward": 12
+                }
+            }
+        },
+        "formal_complaint": {
+            "description": "Formal complaint lodged. Full back-pay ordered in 12 weeks.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Renia's Labour Certificate",
+        "Ridge Safety Violation Report",
+        "190x Gold Coins"
+    ],
+    "conclusion": "80% back-pay negotiated directly with Fenn."
+}

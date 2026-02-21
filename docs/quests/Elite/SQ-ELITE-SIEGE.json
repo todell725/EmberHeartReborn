@@ -1,0 +1,233 @@
+{
+    "id": "SQ-ELITE-SIEGE",
+    "title": "The Siege of Warden-Keep",
+    "difficulty": "Elite",
+    "xp_reward": 5200,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-001",
+            "SQ-002",
+            "SQ-003",
+            "SQ-004",
+            "SQ-005"
+        ],
+        "district_reputation": {
+            "All Districts": 30
+        },
+        "settlement_stability": 50
+    },
+    "location": "All districts of Emberheart (city-wide event)",
+    "thread": "Settlement Crisis",
+    "estimated_duration": "4-5 hours",
+    "mechanics_featured": [
+        "Resource/Troop Management",
+        "Multi-Front War",
+        "5 Boss Encounters",
+        "25-Turn Progression"
+    ],
+    "branching_outcomes": {
+        "save_all_districts": {
+            "description": "Saved 4/4 districts: 'Perfect Defense' ending.",
+            "effects": {
+                "settlement_morale": 100,
+                "settlement_stability": 100
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Player becomes legendary hero. Emberheart prospers.",
+                "item_reward": "Defender's Medal (Legendary)"
+            }
+        },
+        "save_three_districts": {
+            "description": "Saved 3/4 districts: 'Pyrrhic Victory' ending.",
+            "effects": {
+                "settlement_morale": 20,
+                "settlement_stability": 10
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Lost district becomes permanent ruins. City survives.",
+                "item_reward": "8000 Gold"
+            }
+        },
+        "save_two_districts": {
+            "description": "Saved 2/4 districts: 'Survival' ending.",
+            "effects": {
+                "settlement_morale": -20,
+                "settlement_stability": -20
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "City crippled but alive. Reconstruction takes years.",
+                "item_reward": "5000 Gold"
+            }
+        },
+        "save_one_district": {
+            "description": "Saved 1/4 districts: 'Last Stand' ending.",
+            "effects": {
+                "settlement_morale": -50,
+                "settlement_stability": -50
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Emberheart becomes a fortress-town. Constant siege state.",
+                "item_reward": "3000 Gold"
+            }
+        },
+        "save_zero_districts": {
+            "description": "Saved 0/4 districts: 'Exile' ending.",
+            "effects": {
+                "settlement_morale": -100,
+                "settlement_stability": -100
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Emberheart falls. Evacuate survivors to a new location. New Game+ setting.",
+                "item_reward": "None"
+            }
+        }
+    },
+    "loot_table": [
+        "Defender's Medal (Legendary - worn by greatest hero)",
+        "Siege-Breaker Maul (Legendary weapon)",
+        "City Charter (Artifact - grants governmental authority)",
+        "War-Torn Banner (Legendary - boosts all allied forces)",
+        "3000-8000 Gold (based on districts saved)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: Warning Signs",
+            "narrative": "A raven lands in the war room of Warden-Keep, exhausted, carrying a bloodied map. Spies confirm what the tremors felt yesterday meant: four massive armies are marching on Emberheart simultaneously. The Ridge-Lords, the Oakhaven army, a Scourge-tide from the Fringe, and internal saboteurs are coordinating."
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: Warning Signs",
+            "narrative": "You convene an emergency council. The city's resources are tallied. You have 10,000 troops, limited rations, and four fronts to defend: The North Gate (Ridge-Lords), East Wall (Oakhaven), South Fringe-Barrier (Scourge), and the internal Lower Ward (Saboteurs)."
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: Warning Signs",
+            "narrative": "You must allocate your troops. Every 2,500 troops holding a gate extends its durability by 5 turns. You can stack defenders or spread them evenly. Civilians are panicking in the streets. You deploy your companions to direct the evacuation to the Catacombs."
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: Warning Signs",
+            "narrative": "The warning bells toll across all districts. The sky darkens with smoke from burning perimeter farms. The Ridge-Lord artillery begins firing, shattering the silence with massive concussive booms. The siege has begun."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 1: Warning Signs",
+            "narrative": "A massive explosion rocks the Lower Ward. The internal saboteurs (Silk-Hand, cultists) have blown a hole in the aqueduct. You must dispatch a team immediately, weakening a primary defense gate by withdrawing 1,000 troops to secure the city's water supply."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "The North Gate shudders under the Ridge-Lord barrage. You take personal command of the wall defenses here. You must dodge incoming Battery-Men (suicide bombers filled with Scourge-energy) while commanding archers to return fire."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "Word arrives from the East Wall: Oakhaven's professional army has brought siege towers. You face a choice: Abondon the Lower Ward to reinforce the High Ward (saving nobles but sacrificing the poor) or hold the line. Your troops look to you."
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "You choose to hold the line at the Lower Ward. The Silk-Hand assassins emerge from the sewers, ambushing your defenders. You must fight a brutal close-quarters skirmish in burning alleyways to secure the civilian refuge entrances."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "Meanwhile, the South Fringe-Barrier is overwhelmed. The Scourge-tide\u2014thousands of corrupted beasts\u2014is climbing the walls using the bodies of their dead as ramps. You use area-of-effect fire magic to cleanse the wall."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "BOSS 1: The Ridge-Lord General strikes the North Gate on a mechanical steed. He is heavily armored and immune to physical attacks from the front. You must coordinate with your archers to flank him and destroy the energy-shield generator on his back."
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "With the General dead, the North assault falters momentarily. But the East Wall is breached. Oakhaven soldiers pour into the Market Ward. You mount up and ride cross-city through burning streets to rally the routing defenders."
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "The Warden Council begs you to authorize the use of the Scourge-Battery Superweapon. It will instantly vaporize the Oakhaven forces but permanently irradiate the Market Ward. You must decide whether to use it and sacrifice a district, or fight them hand-to-hand."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "You refuse the superweapon. You meet the Oakhaven forces head-on in the Market square. BOSS 2: The Oakhaven Champion. A master duelist wielding a legendary rapier. He challenges you to single combat while the armies watch."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "You severely wound the Champion, forcing Oakhaven to retreat from the Market Ward. But the respite is short-lived. The South Wall finally collapses under the weight of the Scourge-tide. The beasts flood into the Lower Ward."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 2: Active Siege",
+            "narrative": "You rush south. The streets are a bloodbath. BOSS 3: Call of the Scourge-Behemoth. A monstrosity the size of a tavern tears through buildings. You must collapse two surrounding guard-towers onto it using timed explosives to crush it."
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 3: Breaches",
+            "narrative": "The Behemoth falls, crushing hundreds of lesser beasts beneath it. But the defenses are stretched to the breaking point. The inner rings of Warden-Keep are breached by saboteurs. You fight your way up the grand staircases of the citadel itself."
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 3: Breaches",
+            "narrative": "The Master Saboteur corners the Warden Council in their chambers, demanding unconditional surrender. You arrive just in time to interrupt the execution. You must negotiate or attack. A failed negotiation severely dampens remaining troop morale."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 3: Breaches",
+            "narrative": "You attack. BOSS 4: The Master Saboteur. A fight relying entirely on stealth detection and counter-strikes. The Saboteur vanishes into the shadows of the council chamber. You use environmental cues (dust, blood drips) to track and impale him."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 3: Breaches",
+            "narrative": "The Council is safe, but the city is burning. The remaining leaders of the four factions have united in the center of Emberheart, at the Grand Plaza, preparing to execute a combined final push against Warden-Keep."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 3: Breaches",
+            "narrative": "Your troops are exhausted and losing hope. You step out onto the Keep's balcony. You face a choice: Give a rallying speech (Leadership DC 20) or sacrifice yourself/an ally by jumping into the enemy lines to buy time and inspire them with a martyr's charge."
+        },
+        {
+            "turn": 21,
+            "phase": "Phase 4: Final Push",
+            "narrative": "You choose the rallying speech. The words carry over the din of battle. The remaining defenders roar, banging swords against shields. Morale is restored for the final push. You lead the charge down from the Keep into the Plaza."
+        },
+        {
+            "turn": 22,
+            "phase": "Phase 4: Final Push",
+            "narrative": "The clash in the Grand Plaza is apocalyptic. Magic and steel collide. You carve a path directly toward the Coalition Leaders Council, the surviving commanders of the enemy armies, who await you."
+        },
+        {
+            "turn": 23,
+            "phase": "Phase 4: Final Push",
+            "narrative": "BOSS 5: The Coalition Leaders Council. A combined fight against the surviving leaders. You must use the environment, isolating them from one another, breaking their coordinated attacks. It is the hardest fight of your life."
+        },
+        {
+            "turn": 24,
+            "phase": "Phase 4: Final Push",
+            "narrative": "The last leader falls. The remaining enemy troops witness the defeat and break. A chaotic retreat begins. Your defenders pursue them to the city gates, securing the walls once more. The siege is broken."
+        },
+        {
+            "turn": 25,
+            "phase": "Phase 4: Final Push",
+            "narrative": "Dawn breaks over a ruined, smoldering Emberheart. You assess the damage. Tallying the districts saved versus lost. The people emerge from the Catacombs. Whether as a prospering hero or the lord of ashes, you have survived."
+        }
+    ],
+    "description": "Four massive armies converge on Emberheart simultaneously. You must manage troops, resources, and lead the defense of all four major districts in a desperate fight for survival.",
+    "conclusion": "Saved 4/4 districts: 'Perfect Defense' ending.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

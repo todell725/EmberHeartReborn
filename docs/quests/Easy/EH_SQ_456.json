@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_456",
+    "title": "The Rare Bloom",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Green Quarter -> The Botanical Preserve",
+    "district": "Green Quarter",
+    "thread": "Standalone",
+    "description": "The Green Quarter's Botanical Preserve has lost its only specimen of the Silver Moth Orchid \u2014 a plant that blooms once every four years and is the last known cultivated example of the species. The plant was found missing this morning, pot and all. Curator Phas is inconsolable.",
+    "key_npcs": [
+        "Curator Phas",
+        "Research Buyer Ness"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Silver Moth Orchid was a fragile, distinctive plant with silver-veined petals and a faint sweet odour. The pot was ceramic with an institute mark on the base. The Botanical Preserve had one visitor yesterday afternoon: a woman who signed in as 'Ward Research Liaison Ness.'",
+            "choice_a": "Visit the Ward Research Office to verify if Ness is a legitimate liaison",
+            "consequence_a": "There is no Ward Research Liaison named Ness. The name is fake.",
+            "choice_b": "Track Ness's departure route using the Guard Station's access log",
+            "consequence_b": "The access log shows she exited via the south gate at 14:40 and took a hired carriage toward the Academic Quarter."
+        },
+        {
+            "turn": 2,
+            "narrative": "Tracking the false identity leads you to a private collector who paid Ness to acquire the plant for their private conservatory. Ness is a professional who takes specialist botanical acquisition commissions.",
+            "choice_a": "Confront Ness directly while she still has the orchid",
+            "consequence_a": "Ness tells you she will return the plant for 400 gold \u2014 her commission fee \u2014 to avoid the complication of a formal case.",
+            "choice_b": "Report the situation to the Ward Authority and let them recover the plant officially",
+            "consequence_b": "The Ward Authority issues a recovery order. The plant is retrieved from the collector within two days."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Silver Moth Orchid is recovered intact. Curator Phas is overwhelmed with relief.",
+            "choice_a": "Help Phas implement a visiting researcher registration system requiring proof of affiliation",
+            "consequence_a": "A proper visitor registration system is implemented. ID verification becomes mandatory.",
+            "choice_b": "Help Phas apply for Heritage Object status for the orchid \u2014 making future theft a prosecutable heritage crime",
+            "consequence_b": "The Heritage Office registers the orchid. Any future theft carries significantly elevated legal consequences."
+        }
+    ],
+    "branching_outcomes": {
+        "registration_implemented": {
+            "description": "Visitor registration system with ID verification implemented.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Botanical Preserve Access Medal",
+                "reputation_change": {
+                    "Green Quarter": 14
+                }
+            }
+        },
+        "heritage_status": {
+            "description": "Silver Moth Orchid registered as Heritage Object.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Heritage Object Registration Copy",
+                "reputation_change": {
+                    "Green Quarter": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Botanical Preserve Access Medal",
+        "Heritage Object Registration Copy",
+        "Silver Moth Orchid Pressing",
+        "200x Gold Coins"
+    ],
+    "conclusion": "Visitor registration system with ID verification implemented."
+}

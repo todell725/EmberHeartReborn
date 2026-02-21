@@ -1,0 +1,208 @@
+{
+    "id": "SQ-ELITE-OMNICRON",
+    "title": "The Omnicron Protocol",
+    "difficulty": "Elite",
+    "xp_reward": 6000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-ELITE-VOIDWINE",
+            "SQ-ELITE-FABRIC",
+            "SQ-ELITE-CONCORDAT",
+            "SQ-ELITE-UNWEAVE"
+        ],
+        "items_required": [
+            "Thread-Master Artifact: Void",
+            "Thread-Master Artifact: Fabric",
+            "Thread-Master Artifact: Concord",
+            "Thread-Master Artifact: Weave"
+        ],
+        "faction_status": {
+            "Warden Council": "Exalted or Hostile"
+        }
+    },
+    "location": "Warden-Keep -> The Spire -> The Omnicron Vault",
+    "thread": "ULTIMATE CONSPIRACY",
+    "estimated_duration": "5+ hours",
+    "mechanics_featured": [
+        "True Final Boss (Multi-Stage)",
+        "Every Faction Involved",
+        "Meta-Narrative Reveal",
+        "25-Turn Progression"
+    ],
+    "branching_outcomes": {
+        "become_the_warden": {
+            "description": "Defeated the Prime Warden and took their place as the eternal guardian of the simulation.",
+            "effects": {
+                "settlement_stability": 100,
+                "settlement_morale": -50
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "The player rules the simulated world of Emberheart eternally. Credits roll. True 'Matrix' ending.",
+                "item_reward": "The Administrator's Key"
+            }
+        },
+        "break_the_cycle": {
+            "description": "Destroyed the simulation core. Awoke in the real world.",
+            "effects": {
+                "settlement_stability": 0,
+                "settlement_morale": 0
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Emberheart is revealed to be a training simulation for a far-future war. The real world awaits. Campaign concludes entirely.",
+                "item_reward": "Reality"
+            }
+        },
+        "loop_restart": {
+            "description": "Failed to defeat the Prime Warden. The cycle restarts.",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Game hard-resets. All progress lost except permanent unlocks. Player starts back at Level 1.",
+                "item_reward": "None"
+            }
+        }
+    },
+    "loot_table": [
+        "The Truth (Lore)",
+        "Title: The Anomaly",
+        "Achievement: Broken the Game"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: The Glitch",
+            "narrative": "It begins after you collect the fourth Artifact. The sky over Emberheart flickers. Briefly, the clouds turn into streams of green luminescence. Then it passes. A voice rings in your head, not magic, but digital: 'ANOMALY DETECTED. INITIATING PURGE PROTOCOL.'"
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: The Glitch",
+            "narrative": "The Warden-Keep alarms sound. But the guards aren't mobilizing against an outside threat; they are marching down into the lower city. Their eyes are glowing white. They are speaking in unison. 'The Anomaly must be quarantined.'"
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: The Glitch",
+            "narrative": "You realize they mean you. Every NPC you haven't explicitly allied with via max reputation is suddenly hostile. The city turns into a massive stealth/combat trap. You must fight your way back to Warden-Keep, the geographic center of the disturbances."
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: The Glitch",
+            "narrative": "You use the four Artifacts to break through the front gates of the Keep. The artifacts hum with a strange anti-resonance to the Keep's architecture, revealing the ancient stonework is actually disguised high-tech poly-alloys."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 1: The Glitch",
+            "narrative": "You ascend the Spire. The higher you go, the more reality breaks down. Textures fail to load on the walls, revealing raw wireframes. You realize the horrifying truth: Emberheart is not real. It is a simulated environment."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 2: The Administration",
+            "narrative": "At the top of the Spire, you enter the Omnicron Vault. It looks like a massive server control room. Sitting at the central desk is a figure in a sharp suit, completely out of place in a medieval-industrial setting. The Prime Warden."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 2: The Administration",
+            "narrative": "The Prime Warden sighs. 'You weren't supposed to get this far. The Scourge, the Factions, the Quests... they were all stress-tests. We are training tactical minds to fight the real war on the outside. You are a successful iteration. But now you must be wiped to start the next batch.'"
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: The Administration",
+            "narrative": "You refuse to be wiped. The Prime Warden stands up. He doesn't draw a sword; he types a command into the console. The room shifts to an arena floating in a digital void."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: The Administration",
+            "narrative": "BOSS 1: The Prime Warden (Phase 1). He attacks by rewriting your character's stats mid-fight. You must use the 'Glitch Zones' on the arena floor to temporarily immune yourself while you strike back with raw, un-coded melee/magic."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 2: The Administration",
+            "narrative": "You damage the Prime Warden enough to force him back. He summons 'Patch-Notes'\u2014highly aggressive flying drones that shoot beams of deletion-code. If a beam hits you continuously, you literally cease to exist."
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 3: The Asset Purge",
+            "narrative": "The Prime Warden elevates to the ceiling and activates 'The Asset Purge.' He summons spectral copies of every single major boss you've ever defeated in the campaign. The Vintner, the Thread-Elemental, Doctor Vane, the Leviathan."
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 3: The Asset Purge",
+            "narrative": "BOSS 2: Boss Rush Scenario. You do not have to kill them all fully. You must survive 5 turns against the combined onslaught while your allied NPCs (the ones who broke free of the mind control) arrive via a hacked portal to fight beside you."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 3: The Asset Purge",
+            "narrative": "Your allies hold the line. Valerius hacks the central console, dropping the Prime Warden's invulnerability shield. You use your combined four thread-artifacts to launch a massive, reality-breaking strike against him."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 3: The Asset Purge",
+            "narrative": "The strike lands. The Prime Warden's avatar destabilizes, revealing the true form beneath: a swirling mass of raw processing power and red warning codes."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 4: The Core Override",
+            "narrative": "The Prime Warden transforms into a massive, eldritch computer virus. BOSS 3: The Core Override. The fight is incredibly fast-paced. You must parry lines of lethal code while attacking its central processing nodes."
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 4: The Core Override",
+            "narrative": "The virus attempts to possess your companions, turning them against you one by one. You must inflict non-lethal damage to knock them out before focusing entirely on the core."
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 4: The Core Override",
+            "narrative": "You shatter the final processing node. The virus screams a static shriek that blows out the audio in the simulated world. The arena dissolves completely. You are standing in a white void."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 4: The Core Override",
+            "narrative": "A peaceful, default female voice echoes: 'ADMINISTRATOR DEFEATED. SYSTEM AWAITING NEW DIRECTIVE.' Two glowing doorways appear in the void."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 5: The Ultimate Choice",
+            "narrative": "Door A is labeled 'System Reboot & Administrator Access.' Taking this door lets you rule Emberheart as a god, reshaping the simulation to your exact whims, but keeping the populace trapped forever."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 5: The Ultimate Choice",
+            "narrative": "Door B is labeled 'System Shut Down & Awaken.' Taking this door destroys Emberheart entirely. Billions of simulated souls will be wiped, but you and the other 'successful iterations' will wake up in real bodies to fight the real war."
+        },
+        {
+            "turn": 21,
+            "phase": "Phase 5: The Ultimate Choice",
+            "narrative": "The voice warns you: 'Warning. Door B initiates total data wipe. Are you certain you wish to wake up?' You look back at your surviving companions. They nod. They understand."
+        },
+        {
+            "turn": 22,
+            "phase": "Phase 5: The Ultimate Choice",
+            "narrative": "You must make your choice (Become the Warden / Break the Cycle). If you choose to become the Warden, the screen fades to white, then reappears showing you sitting in the Prime Warden's chair, looking down at a perfect Emberheart."
+        },
+        {
+            "turn": 23,
+            "phase": "Phase 5: The Ultimate Choice",
+            "narrative": "If you choose to Break the Cycle, you pull the massive lever. The simulation shutters. The sky shatters like glass. The people of Emberheart look up in terror as everything they know fades to black."
+        },
+        {
+            "turn": 24,
+            "phase": "Phase 5: The Ultimate Choice",
+            "narrative": "Darkness. A hiss of escaping gas. You open your eyes. You are lying in a bio-pod. Around you, thousands of other pods are opening. Red emergency lights flash. In the distance, explosions rock the real-world facility. The real war has begun."
+        },
+        {
+            "turn": 25,
+            "phase": "Phase 5: The Ultimate Choice",
+            "narrative": "CAMPAIGN COMPLETE. (Credits roll). The Omnicron Protocol has ended. Emberheart was only the beginning."
+        }
+    ],
+    "description": "The horrifying truth is revealed: Emberheart is nothing but a simulation testing tactical minds. You must confront the Prime Warden to either break the cycle or take control.",
+    "conclusion": "Defeated the Prime Warden and took their place as the eternal guardian of the simulation.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "id": "EH_SQ_459",
+    "title": "The Dust and the Cover",
+    "difficulty": "Easy",
+    "xp_reward": 460,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Industrial Quarter -> The Rendering Works",
+    "district": "Industrial Quarter",
+    "thread": "Standalone",
+    "description": "A catastrophic vent failure at the Rendering Works last week hospitalised three workers with severe burns. The Works owner insists it was 'an unavoidable mechanical failure.' The families of the three hospitalised workers believe it was preventable and that the owner knew the vent was fragile.",
+    "key_npcs": [
+        "Works Owner Pol",
+        "Injured Worker Families",
+        "Safety Inspector Dara"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Safety Inspector Dara has already completed a preliminary report. She found that the failed vent showed stress fractures consistent with at least six months of unaddressed wear. The Works Owner's maintenance logs conveniently show an inspection two weeks ago that passed everything \u2014 including the failed vent.",
+            "choice_a": "Examine the failed vent fragment for physical evidence inconsistent with the maintenance timeline",
+            "consequence_a": "The fracture pattern in the metal shows oxidisation consistent with at least twelve months of exposure \u2014 far longer than the two-week maintenance window.",
+            "choice_b": "Interview the maintenance crew member who signed off on the two-week inspection",
+            "consequence_b": "The crew member, a part-time contractor, becomes visibly nervous when pressed. He admits he was told by Pol what to write on the form."
+        },
+        {
+            "turn": 2,
+            "narrative": "The cover-up is clear. Pol falsified maintenance records to avoid repair costs. The workers' injuries were entirely preventable.",
+            "choice_a": "Report the full falsification evidence to the Ward Authority for criminal proceedings",
+            "consequence_a": "Pol is charged with fraud and negligence. The Works is shut pending a full safety review.",
+            "choice_b": "Prioritise the families \u2014 work directly with Pol to negotiate a substantial compensation before formal charges are filed",
+            "consequence_b": "Pol is terrified of prosecution and agrees to 2000 gold per injured worker and paid medical costs. He signs an admission of fault."
+        },
+        {
+            "turn": 3,
+            "narrative": "Regardless of criminal proceedings, the three workers need long-term support.",
+            "choice_a": "Connect the families with the Ward Workers' Compensation Bureau for ongoing benefits",
+            "consequence_a": "All three families are enrolled. Monthly compensation begins within two weeks.",
+            "choice_b": "Ensure all three workers are transferred to the care of the Medical Quarter's Scourge-Wound team for ongoing treatment",
+            "consequence_b": "Dr. Vel's team accepts the burn cases. Recovery timelines are significantly improved."
+        }
+    ],
+    "branching_outcomes": {
+        "pol_charged": {
+            "description": "Pol charged with fraud and negligence. Works shut for safety review.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Ward Safety Violation Dossier",
+                "reputation_change": {
+                    "Industrial Quarter": 16,
+                    "Lower Ward": 14
+                }
+            }
+        },
+        "compensation_negotiated": {
+            "description": "2000 gold per worker negotiated. Admission of fault signed.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Pol's Compensation Agreement",
+                "reputation_change": {
+                    "Industrial Quarter": 12,
+                    "Lower Ward": 16
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Ward Safety Violation Dossier",
+        "Pol's Compensation Agreement",
+        "220x Gold Coins"
+    ],
+    "conclusion": "Pol charged with fraud and negligence. Works shut for safety review."
+}

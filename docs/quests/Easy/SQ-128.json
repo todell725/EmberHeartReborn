@@ -1,0 +1,151 @@
+{
+    "id": "SQ-128",
+    "title": "The Whispering Page",
+    "difficulty": "Easy",
+    "xp_reward": 230,
+    "prerequisites": "None",
+    "description": "A book in the library is actively rewriting itself and the person reading it...",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The settlement library is haunted by a 'Whispering-Page'\u2014a sheet of paper that reads itself out loud in a voice of paper-cuts.",
+            "choice_a": "Listen to the book",
+            "consequence_a": "Success.",
+            "choice_b": "Close the book",
+            "consequence_b": "Success.",
+            "convergence": "The book is a 'History of the Scourge' that is 'Correcting' itself in real-time. The smell is of old parchment and ink."
+        },
+        {
+            "turn": 2,
+            "narrative": "The ink is 'Living-Script'\u2014it\u2019s crawling off the page and trying to write a 'New-Story' on your own skin.",
+            "choice_a": "Wipe the ink away",
+            "consequence_a": "Success.",
+            "choice_b": "Allow the script to finish (Wis DC 14)",
+            "consequence_b": "Success.",
+            "convergence": "The script reveals a 'Secret-Passage' behind the 'Law-Section'."
+        },
+        {
+            "turn": 3,
+            "narrative": "A 'Book-Wyrm'\u2014a creature of paper-scales and leather-wings\u2014is eating the 'Forgotten-Lore' in the restricted section.",
+            "choice_a": "Slash the Wyrm",
+            "consequence_a": "Success.",
+            "choice_b": "Feed the Wyrm a 'Blank-Book'",
+            "consequence_b": "Success.",
+            "convergence": "The Wyrm burps a 'Cinder-Shard' and vanishes into the vents. You find a 'Lost-Page' on the floor."
+        },
+        {
+            "turn": 4,
+            "narrative": "The 'Librarian'\u2014a woman in glasses made of 'Void-Glass'\u2014is frantic. 'The books... they\u2019re rewriting the laws of gravity!' she cries.",
+            "choice_a": "Anchor the bookshelves",
+            "consequence_a": "Success.",
+            "choice_b": "Consult the 'Master-Tome'",
+            "consequence_b": "Success.",
+            "convergence": "The books begin to float, forming a 'Spiral-Staircase' of knowledge into the ceiling-void."
+        },
+        {
+            "turn": 5,
+            "narrative": "A 'Script-Geist'\u2014a spirit made of floating letters\u2014appears, trying to 'Edit' you out of reality using a 'Eraser-Staff'.",
+            "choice_a": "Parry the staff",
+            "consequence_a": "Success.",
+            "choice_b": "Negotiate with the Geist (Int DC 15)",
+            "consequence_b": "Success.",
+            "convergence": "The Geist reveals he\u2019s the 'Spirit of Truth' who has been 'Censored' by the Council. (+1 Secret)"
+        },
+        {
+            "turn": 6,
+            "narrative": "You must decide: 'Submit' to the edit or 'Rewrite' the spirit. The air is thick with the smell of wet ink and old dust.",
+            "choice_a": "Rewrite the spirit (Int DC 14)",
+            "consequence_a": "Success.",
+            "choice_b": "Burn the 'Censored' pages",
+            "consequence_b": "Success.",
+            "convergence": "The Geist dissolves into a cloud of 'Ink-Dust'. The library returns to a state of 'Stable-Gravity'."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Librarian gives you a 'Bookmark of Holding'\u2014it can save your place in any dimension.",
+            "choice_a": "Accept the bookmark",
+            "consequence_a": "Success.",
+            "choice_b": "Take the Lost-Page",
+            "consequence_b": "Success.",
+            "convergence": "The bookmark is made of red silk and never frays. It\u2019s a 'Logic-Anchor'."
+        },
+        {
+            "turn": 8,
+            "narrative": "The 'Whispering Page' is quiet, but it\u2019s now a 'Talking-Book'. It offers you advice on 'Forbidden-Lore' (+2 Intel).",
+            "choice_a": "Take the book home",
+            "consequence_a": "Success.",
+            "choice_b": "Accept the gold",
+            "consequence_b": "Success.",
+            "convergence": "The sun sets, its light coloring the library's dust in shades of sepia and gold."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, you feel like you've 'Read the Future'. You know a secret about a Council member\u2019s past.",
+            "choice_a": "Log the secret",
+            "consequence_a": "Success.",
+            "choice_b": "Forget it",
+            "consequence_b": "Success.",
+            "convergence": "The knowledge is heavy, but it grants you a +1 to 'Politics' permanently."
+        },
+        {
+            "turn": 10,
+            "narrative": "Quest ends in the Library. The 'Whispering Page' is a story of hope tonight.",
+            "choice_a": "Rest",
+            "consequence_a": "Success.",
+            "choice_b": "Final",
+            "consequence_b": "Success.",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The mission regarding 'The Whispering Page' is complete. Quest Complete.",
+    "loot_table": [
+        "Bookmark of Holding",
+        "Lost-Page"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "You are deleted from the story and your name is forgotten. (Quest Failed)",
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Settlement library reports a book actively rewriting itself overnight",
+        "flags": []
+    },
+    "location": "Settlement Library \u2014 Archive Wing",
+    "district": "Academic Quarter",
+    "thread": "Weaver",
+    "estimated_duration": "1\u20132 hours",
+    "key_npcs": [
+        "Librarian Sev (Void-Glass glasses)",
+        "Book-Wyrm (creature)",
+        "Living-Script (phenomenon)"
+    ],
+    "mechanics_featured": [
+        "Investigation (script analysis)",
+        "Dex (catching wyrm)",
+        "Social (librarian aid)",
+        "Arcana (seal)"
+    ],
+    "permanent_effects": {
+        "settlement": "Library secured; Lost-Page archived as rare Lore item",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Seal the book with Void-Ink",
+            "result": "Bookmark of Holding gained; wyrm contained"
+        },
+        {
+            "path": "Let the wyrm escape",
+            "result": "Lost-Page recovered; wyrm becomes recurring threat"
+        }
+    ]
+}

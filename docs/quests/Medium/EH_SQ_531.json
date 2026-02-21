@@ -1,0 +1,164 @@
+{
+    "id": "EH_SQ_531",
+    "title": "The Refugee Crisis",
+    "difficulty": "Medium",
+    "xp_reward": 960,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_440",
+            "EH_SQ_441"
+        ],
+        "items_required": []
+    },
+    "location": "Agricultural Zone -> Lower Ward -> Service District",
+    "district": "Agricultural Zone",
+    "thread": "Community & Survival",
+    "description": "Three settlements in the Agricultural Zone's outer ring have been abandoned following a Scourge Fringe boundary expansion \u2014 the Fringe moved forty metres in a single week, consuming fields, outbuildings, and two hamlets that did not evacuate in time. Approximately 340 residents are now displaced, many arriving at the Lower Ward's entry points with only what they could carry. Ward emergency systems are not designed for this scale of sudden displacement. The Ward Council has declared a temporary emergency but has no coherent plan. You are asked to coordinate the immediate response across three districts.",
+    "key_npcs": [
+        "Ward Councillor Dain",
+        "Agronomist Liss",
+        "Labour Advocate Renia",
+        "Displacement Community Leader Maren"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "340 people are moving through the Lower Ward's southern gate in clusters, carrying children and tool kits and seeds saved from their fields. Community Leader Maren \u2014 a weathered woman in her fifties \u2014 is organising her community with impressive calm. She has a list of names, a medical needs summary, and a housing requirement projection. She has done crisis management before. What she needs now is a system that can receive her community and someone with Ward access to open the right doors.",
+            "choice_a": "Work with Maren directly to organise the immediate intake and establish triage priorities",
+            "consequence_a": "Together you establish three intake points staffed by community volunteers. Medical needs are identified within three hours. Emergency accommodation requests are logged with specifics.",
+            "choice_b": "Go immediately to Councillor Dain and the Ward emergency system to unlock official resources before the community fully arrives",
+            "consequence_b": "Dain authorises emergency use of the Service District Resource House plus three unused Ward buildings within ninety minutes. Resources are available before most of the community arrives."
+        },
+        {
+            "turn": 2,
+            "narrative": "The immediate housing crisis is addressable \u2014 empty Ward buildings exist. The harder problem is emerging: 340 people who survived by farming cannot afford indefinite Ward housing on emergency stipends. Within two weeks they will need either return options (the Fringe has moved \u2014 there are none) or pathway to productive employment or resettlement that reestablishes self-sufficiency rather than charity dependency.",
+            "choice_a": "Begin mapping the community's skills against existing city-wide vacancies and labour needs",
+            "consequence_a": "The community contains twenty-two skilled farmers, fourteen craftspeople, eight teachers, two healers, and specialist knowledge in water management and seed genetics. The city needs all of these.",
+            "choice_b": "Coordinate with Agronomist Liss to determine if any Agricultural Zone land \u2014 further from the Fringe expansion boundary \u2014 can be made available for resettlement",
+            "consequence_b": "Liss identifies two potential resettlement zones in the Agricultural Zone's northwest section, currently fallow due to owner departure. Liss is willing to manage the interim licencing."
+        },
+        {
+            "turn": 3,
+            "narrative": "The skills mapping or resettlement land assessment produces several immediate opportunities. But the community itself has a strong voice. Maren convenes her people in the Service District Resource House courtyard and asks what they want. The answer is complex: some want to return to farming as soon as land is available; some want to use displacement as a forced opportunity to access urban trades they couldn't learn in the outer settlements; some \u2014 especially older residents \u2014 want nothing more than a house near their former home and to not have to change everything they know.",
+            "choice_a": "Design a tiered response: resettlement land for farming families, urban integration pathways for trade-seekers, protected housing priority for elder residents",
+            "consequence_a": "Maren endorses the tiered approach immediately. Implementation requires three separate institutional connections but Maren helps manage each one directly.",
+            "choice_b": "Let the community self-organise its preferences and focus on removing institutional barriers to whichever options people choose",
+            "consequence_b": "Self-organisation works remarkably well. Maren delegates to sub-leaders for each group's needs. Your role becomes removing specific blockers as they appear."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Ward's bureaucratic systems are not built for rapid integration at this scale. Three specific blockers emerge: first, Ward residency permits require a three-month waiting period before unlocking full service access; second, agricultural land transfers require a formal licence hearing that takes six weeks; third, urban trade apprenticeships require existing guild membership that new entrants cannot easily obtain. You must systematically address each blocker.",
+            "choice_a": "Petition the Ward Council for an emergency residency waiver for all 340 displaced residents",
+            "consequence_a": "Councillor Dain supports the petition. After three days of debate, an emergency waiver is granted \u2014 three-month wait waived for Fringe-displacement events.",
+            "choice_b": "Work around each blocker individually using existing emergency provision clauses that apply in Fringe-expansion events",
+            "consequence_b": "Emergency provision clauses exist for each blocker but have never been invoked simultaneously. Each requires separate authorisation from three different ward officials."
+        },
+        {
+            "turn": 5,
+            "narrative": "The immediate bureaucratic barriers are resolved \u2014 through the Council waiver or emergency provisions. Sixty farming families are licensed for the northwest Agricultural Zone resettlement. Forty trade-seekers are connected with Labour Advocate Renia, who coordinates apprenticeship placements through the Baker's Council (if formed) and the Foundry Settlement agreement's worker-access provisions. Forty elder residents are placed in priority Service District housing blocks. The remaining 200 are in mixed integration pathways.",
+            "choice_a": "Focus specifically on the 200 in mixed pathways \u2014 they are the most vulnerable to falling through gaps",
+            "consequence_a": "A tracking system is established for the 200, with weekly check-ins and specific case workers assigned. Three acute crisis cases are identified early and receive targeted support.",
+            "choice_b": "Focus on the sixty farming families in the northwest resettlement \u2014 establishing a functional farming operation quickly will create stability and produce food the city genuinely needs",
+            "consequence_b": "The northwest settlement is producing food within six weeks. Their produce enters the cooperative supply network (if established in EH_SQ_530) at fair pricing."
+        },
+        {
+            "turn": 6,
+            "narrative": "A political complication arrives. Ward residents in the Lower Ward's south section \u2014 which has been absorbing most of the displaced community's temporary presence \u2014 formally petition Councillor Dain about 'resource competition' from the new arrivals. The petition is not overtly hostile but it expresses genuine concerns about access to shared ward services. Dain asks you to mediate a ward community forum before the petition generates political momentum that could undermine the emergency response.",
+            "choice_a": "Organise a joint forum between long-term Lower Ward residents and displaced community members",
+            "consequence_a": "The forum is initially tense. Two displaced community members speak about what they lost. Three Lower Ward residents speak about their service access concerns. By the end, both groups are negotiating rather than complaining.",
+            "choice_b": "Address the specific service access concerns directly by increasing emergency Ward service capacity in the south section",
+            "consequence_b": "Additional capacity in three shared facilities is approved and operational within a week. The service competition concern is resolved practically rather than politically."
+        },
+        {
+            "turn": 7,
+            "narrative": "Maren approaches you with a request that goes beyond immediate crisis management: she says displaced agricultural communities are a recurring Scourge Fringe problem \u2014 three times in ten years. Each time, the Ward has no system and improvises. She wants to work with you to design a permanent Fringe-Displacement Protocol that provides both early warning and structured response for future expansion events.",
+            "choice_a": "Support Maren's protocol proposal and help design it formally",
+            "consequence_a": "A joint Agricultural Zone / Ward Authority / Medical Quarter protocol is designed over four weeks. It includes trigger criteria, resource pre-positioning, and community-led intake management.",
+            "choice_b": "Recommend Maren lead the protocol design independently with institutional support \u2014 she is more qualified than anyone to design it",
+            "consequence_b": "Maren chairs the design process. The resulting protocol reflects deep community experience rather than institutional assumptions."
+        },
+        {
+            "turn": 8,
+            "narrative": "Engineer Pyra's atmospheric sensors have been tracking the Fringe boundary expansion. She delivers a significant finding: the expansion was not a sudden geological event. It was gradual \u2014 her three-year sensor archive shows the boundary moving incrementally for eighteen months before the forty-metre lurch that displaced the settlements. Earlier warning would have allowed orderly managed evacuation rather than emergency displacement. The monitoring system existed. No one was watching its Fringe boundary output.",
+            "choice_a": "Recommend integrating Pyra's sensor data into an automated Fringe-movement early warning system",
+            "consequence_a": "A City Fringe Monitoring System is established using Pyra's sensor network and the Ridge communication station's signal capacity. Any boundary movement above a threshold triggers an automatic community alert.",
+            "choice_b": "Document the monitoring failure and recommend a formal inquiry into why the sensor data was not being reviewed",
+            "consequence_b": "The inquiry finds a documentation hand-off failure between two Ward Authority departments. Administrative responsibility is clarified. Review protocols are updated."
+        },
+        {
+            "turn": 9,
+            "narrative": "Sixty farming families have begun planting in the northwest Agricultural Zone. The first community meeting of new and existing Agricultural Zone residents is held. Liss chairs it. It is awkward and productive in equal measure: the displaced farmers bring seed genetics the existing zone has never had access to, and the zone's existing infrastructure provides the drainage and irrigation systems the displaced community never had. There is genuine mutual benefit here waiting to emerge.",
+            "choice_a": "Facilitate a formal knowledge-sharing programme between the established and newly settled farming communities",
+            "consequence_a": "A monthly cross-settlement farming forum is established. Within two growing seasons, the northwest settlement is farming more efficiently than any existing zone section.",
+            "choice_b": "Let the communities find their own relationship without formal structure",
+            "consequence_b": "An informal apprenticeship culture develops naturally. Experienced zone farmers take on northwest settlement apprentices. No formal structure needed."
+        },
+        {
+            "turn": 10,
+            "narrative": "The forty elder residents in Service District priority housing are struggling with social isolation. They are physically housed and financially supported but cut off from the community rhythms they built over decades. Their former neighbours are scattered across three districts. Pross's Community Hall grief programme offers one avenue, but the specific need is community reconnection rather than grief processing.",
+            "choice_a": "Help establish a regular social programme specifically for elder displaced residents at the Service District Resource House",
+            "consequence_a": "A weekly gathering is established. Within a month, several elder residents are actively mentoring younger displaced community members in traditional agricultural crafts.",
+            "choice_b": "Connect the elder residents with the Memory Keeper Archive project \u2014 their knowledge of the outer settlements' history is irreplaceable",
+            "consequence_b": "Archive Researcher Winn conducts formal oral history sessions with eleven elder residents. Their accounts of the outer settlements and the Fringe boundary over decades become a significant historical record."
+        },
+        {
+            "turn": 11,
+            "narrative": "Maren's Fringe-Displacement Protocol is completed and presented to the Ward Council. It is the most comprehensive emergency response framework the Ward has ever seen \u2014 built from lived experience rather than bureaucratic theory. Councillor Dain endorses it publicly. Ward Warden Astrid calls it 'the most useful document produced this year.' Maren receives a formal Ward Civic Recognition \u2014 the equivalent of the Council's highest civilian honour. At the ceremony, she says: 'We didn't want recognition. We wanted a home. We found ways to make several.'",
+            "choice_a": "Attend the ceremony and publicly acknowledge Maren's community's journey",
+            "consequence_a": "Your attendance visibly means something to Maren's community. Several people find you afterward to say thank you personally.",
+            "choice_b": "Send formal congratulations and remain at the northwest settlement helping with the spring planting",
+            "consequence_b": "The planting is more important today than the ceremony. Maren sends a note later: 'Good call.'"
+        },
+        {
+            "turn": 12,
+            "narrative": "The northwest settlement is planted. The elder residents have weekly community rhythms. The trade apprentices are six weeks into their programmes. The farming families produced their first Market Ward sale \u2014 thirty bushels of seed wheat at fair cooperative pricing. 340 people who arrived through the Lower Ward's southern gate with only what they could carry have become a contributing part of the city's fabric in four months. None of it was easy. Most of it was unglamorous. All of it mattered. Maren will chair the Fringe-Displacement Protocol Committee for five years. The next expansion event will be managed rather than suffered. That is the whole point.",
+            "choice_a": "Formally maintain your involvement with the northwest settlement as an ongoing adviser",
+            "consequence_a": "Maren makes you an Honorary Agricultural Zone Community Liaison. Future agricultural events may connect through this relationship.",
+            "choice_b": "Consider the crisis complete and step back \u2014 the community has everything it needs to continue without you",
+            "consequence_b": "Maren walks with you to the settlement boundary. 'Come back for harvest,' she says. You probably will."
+        }
+    ],
+    "branching_outcomes": {
+        "protocol_designed": {
+            "description": "340 residents integrated. Fringe-Displacement Protocol established. Early warning system live.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Agricultural Zone": 35,
+                    "Lower Ward": 25,
+                    "Service District": 20
+                },
+                "item_reward": "Fringe-Displacement Protocol Document"
+            }
+        },
+        "community_settled": {
+            "description": "340 residents integrated across three districts. Northwest settlement productive. Elder archive completed.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Agricultural Zone": 28,
+                    "Lower Ward": 22
+                },
+                "item_reward": "Northwest Settlement Founding Charter"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 220,
+            "reputation_change": {
+                "Agricultural Zone": -20,
+                "Lower Ward": -25
+            }
+        },
+        "critical_failure": "Political backlash prevents proper integration. 80 displaced residents remain in limbo for over a year."
+    },
+    "loot_table": [
+        "Fringe-Displacement Protocol Document",
+        "Northwest Settlement Founding Charter",
+        "Maren's Community Survey",
+        "Fringe Sensor Early Warning Map",
+        "960x Gold Coins"
+    ],
+    "conclusion": "340 residents integrated. Fringe-Displacement Protocol established. Early warning system live."
+}

@@ -1,0 +1,72 @@
+{
+    "id": "SQ-228",
+    "title": "Supply Drop Alpha",
+    "difficulty": "Epic",
+    "xp_reward": 1200,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-227"
+        ]
+    },
+    "location": "Transit Corridor -> The Sky-Tram Lines",
+    "district": "Transit Corridor",
+    "thread": "Sovereignty & Order",
+    "description": "The ballistae are too heavy to carry through the streets. You must escort an aerial drop utilizing the broken Sky-Tram lines suspended over the city.",
+    "key_npcs": [
+        "Sky-Tram Engineer",
+        "Fliers"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You are riding the flatbed Sky-Tram as it slowly ferries the ballistae toward the West Gate. A flock of corrupted Fliers (bat-like Scourge) attacks.",
+            "choice_a": "Use an anti-air repeating crossbow",
+            "consequence_a": "You shred the flock efficiently from a distance. The ballistae take no damage.",
+            "choice_b": "Fight them in melee as they land on the tram",
+            "consequence_b": "A dangerous brawl on a moving platform. One of the Fliers damages a ballista aiming gear before you kill it."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Tram approaches a broken section of track. The engineer needs 3 minutes to bypass the safety relays and jump the gap using the emergency thrusters.",
+            "choice_a": "Manually hotwire the engine to give him more power",
+            "consequence_a": "The engine roars. The tram leaps the gap perfectly, landing safely on the other side.",
+            "choice_b": "Defend him from a second wave of Fliers",
+            "consequence_b": "You keep the skies clear. The jump is bumpy and almost fails, but you make it."
+        }
+    ],
+    "branching_outcomes": {
+        "tram_perfect": {
+            "description": "You delivered the ballistae in perfect condition.",
+            "unlocks": [
+                "SQ-229"
+            ],
+            "consequences": {
+                "item_reward": "Sky-Tram Access Key"
+            }
+        },
+        "tram_damaged": {
+            "description": "The ballistae were delivered, but require minor repairs.",
+            "unlocks": [
+                "SQ-229"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 10
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Sky-Tram Access Key",
+        "Flier Wings",
+        "300x Gold Coins"
+    ],
+    "conclusion": "You delivered the ballistae in perfect condition.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

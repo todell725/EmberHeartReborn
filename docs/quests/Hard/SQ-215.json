@@ -1,0 +1,81 @@
+{
+    "id": "SQ-215",
+    "title": "Ghosts in the Machine",
+    "difficulty": "Hard",
+    "xp_reward": 800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-214"
+        ]
+    },
+    "location": "Core District -> The Data-Crypt",
+    "district": "Core District",
+    "thread": "Static",
+    "description": "Blinded by the loss of its nodes, the Harbinger attempts to permanently upload its consciousness into the city's ancient Data-Crypts in the Core District. Stop the upload.",
+    "key_npcs": [
+        "Project Lead 'Ghost' (AI Construct)",
+        "Synthetics"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You enter the Data-Crypt. The Harbinger's tendrils have breached the walls, physically plugging into the mainframe servers.",
+            "choice_a": "Hack the terminal to lock out the upload (Intelligence)",
+            "consequence_a": "You initiate a firewall, slowing the upload to 50%. The system spawns hostile Synthetics to stop you.",
+            "choice_b": "Take an axe to the servers",
+            "consequence_b": "You destroy a server rack. The upload slows, but you irreversibly destroy pre-Scourge historical data."
+        },
+        {
+            "turn": 2,
+            "narrative": "A holographic projection of the original Project Lead appears. 'Let it upload. It can foresee the end of the Scourge. It just needs a larger brain.'",
+            "choice_a": "Argue that it's too dangerous",
+            "consequence_a": "The Ghost overrides the safety protocols and commands the Synthetics to kill you.",
+            "choice_b": "Ignore the Ghost and destroy the main neural link",
+            "consequence_b": "You sever the physical connection. The Ghost shrieks as the upload is aborted entirely."
+        },
+        {
+            "turn": 3,
+            "narrative": "With the upload aborted, the tendrils violently whip around the room in a dying spasm.",
+            "choice_a": "Take cover behind the ruined servers",
+            "consequence_a": "You avoid the damage and wait for it to die down.",
+            "choice_b": "Charge through the whipping tendrils to grab the AI Core",
+            "consequence_b": "You take massive physical damage, but secure the incredibly rare Ghost AI Core before the room collapses."
+        }
+    ],
+    "branching_outcomes": {
+        "upload_stopped_data_safe": {
+            "description": "You stopped the upload and preserved the Data-Crypt.",
+            "unlocks": [
+                "SQ-216"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Academic Quarter": 20
+                },
+                "item_reward": "Data-Crypt Access Key"
+            }
+        },
+        "upload_stopped_ai_looted": {
+            "description": "You stopped the upload and looted the valuable Ghost AI Core.",
+            "unlocks": [
+                "SQ-216"
+            ],
+            "consequences": {
+                "item_reward": "Ghost AI Core"
+            }
+        }
+    },
+    "loot_table": [
+        "Ghost AI Core",
+        "Data-Crypt Access Key",
+        "300x Gold Coins"
+    ],
+    "conclusion": "You stopped the upload and preserved the Data-Crypt.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

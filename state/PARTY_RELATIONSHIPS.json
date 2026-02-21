@@ -1,0 +1,116 @@
+{
+    "version": "1.0",
+    "schema": "PARTY_RELATIONSHIPS.json",
+    "relationships": [
+        {
+            "pair": [
+                "PC-01",
+                "PC-02"
+            ],
+            "affection": 75,
+            "trust": 100,
+            "tension": 0,
+            "public_perception": 15,
+            "intimacy": 20
+        },
+        {
+            "pair": [
+                "PC-01",
+                "PC-03"
+            ],
+            "affection": 75,
+            "trust": 100,
+            "tension": 0,
+            "public_perception": 15,
+            "intimacy": 20
+        },
+        {
+            "pair": [
+                "PC-01",
+                "PC-04"
+            ],
+            "affection": 75,
+            "trust": 100,
+            "tension": 0,
+            "public_perception": 15,
+            "intimacy": 20
+        },
+        {
+            "pair": [
+                "PC-01",
+                "PC-05"
+            ],
+            "affection": 75,
+            "trust": 100,
+            "tension": 0,
+            "public_perception": 20,
+            "intimacy": 20
+        },
+        {
+            "pair": [
+                "PC-02",
+                "PC-03"
+            ],
+            "affection": 30,
+            "trust": 40,
+            "tension": 10,
+            "public_perception": 5,
+            "intimacy": 10
+        },
+        {
+            "pair": [
+                "PC-02",
+                "PC-04"
+            ],
+            "affection": 35,
+            "trust": 45,
+            "tension": 5,
+            "public_perception": 5,
+            "intimacy": 10
+        },
+        {
+            "pair": [
+                "PC-02",
+                "PC-05"
+            ],
+            "affection": 30,
+            "trust": 37,
+            "tension": 8,
+            "public_perception": 5,
+            "intimacy": 10
+        },
+        {
+            "pair": [
+                "PC-03",
+                "PC-04"
+            ],
+            "affection": 22,
+            "trust": 30,
+            "tension": 18,
+            "public_perception": 5,
+            "intimacy": 10
+        },
+        {
+            "pair": [
+                "PC-03",
+                "PC-05"
+            ],
+            "affection": 26,
+            "trust": 32,
+            "tension": 12,
+            "public_perception": 5,
+            "intimacy": 10
+        },
+        {
+            "pair": [
+                "PC-04",
+                "PC-05"
+            ],
+            "affection": 24,
+            "trust": 38,
+            "tension": 9,
+            "public_perception": 5,
+            "intimacy": 10
+        }
+    ]
+}

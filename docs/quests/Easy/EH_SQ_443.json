@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_443",
+    "title": "Path Not Taken",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "High Forest -> The Eastern Trailhead",
+    "district": "High Forest",
+    "thread": "Standalone",
+    "description": "A family of four went hiking in the High Forest three days ago and has not returned. The trails are not particularly dangerous in daylight but the forest has been unusually foggy this week. The family's eldest child, a boy named Finn, is eight years old.",
+    "key_npcs": [
+        "Anxious Father Dare",
+        "Ranger Nara",
+        "Lost Family"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Ranger Nara joins you at the trailhead. The fog is thick enough that you can barely see thirty feet ahead. She gives you a whistle and says the family was heading for the Amber View overlook \u2014 a three-hour walk that should have been straightforward.",
+            "choice_a": "Follow the main trail at pace, calling out regularly",
+            "consequence_a": "Two hours in you hear a child's voice responding to your call \u2014 faint but clear. The family is about four hundred metres off-trail.",
+            "choice_b": "Use a systematic grid search covering the first-hour trail sections where fog is thickest",
+            "consequence_b": "Methodical work. You find the family's camp marker at the second grid intersection \u2014 they stopped and sheltered when the fog came in."
+        },
+        {
+            "turn": 2,
+            "narrative": "The family is physically fine but emotionally exhausted. The mother has a minor ankle sprain from stepping off the path in the fog. Finn is entirely composed \u2014 he found edible berries and kept everyone's spirits up.",
+            "choice_a": "Carry the mother out on an improvised stretcher with the father's help",
+            "consequence_a": "A steady two-hour carry. Everyone makes it back to the trailhead safely.",
+            "choice_b": "Splint the ankle and have the family walk out slowly with Nara's support",
+            "consequence_b": "Slower but achievable. The family makes it out under their own power."
+        },
+        {
+            "turn": 3,
+            "narrative": "Back at the trailhead, Dare asks if you can recommend better trail marking for the foggy forest sections.",
+            "choice_a": "Volunteer to help Nara place reflective trail markers on the High Forest routes",
+            "consequence_a": "You spend a half-day placing markers along the three primary trails. Future hikers will be significantly safer.",
+            "choice_b": "Draft a formal petition to the Ward Authority requesting funded trail improvements",
+            "consequence_b": "The petition is accepted. Funded trail improvements are scheduled."
+        }
+    ],
+    "branching_outcomes": {
+        "markers_placed": {
+            "description": "Reflective trail markers placed on all primary routes.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Ranger Nara's Trail Map",
+                "reputation_change": {
+                    "High Forest": 14
+                }
+            }
+        },
+        "petition_submitted": {
+            "description": "Funded trail improvement petition accepted.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "High Forest": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Ranger Nara's Trail Map",
+        "Amber View Overlook Pass",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Reflective trail markers placed on all primary routes."
+}

@@ -1,0 +1,78 @@
+{
+    "id": "EH_SQ_424",
+    "title": "The Relic in the Rock",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Ridge -> The East Fault Excavation",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "A mining excavation triggered a small controlled collapse that exposed a sealed chamber deep in the ridge. Inside is what appears to be a Pre-Scourge workshop \u2014 tools, half-finished devices, and a sealed metal trunk that hums faintly.",
+    "key_npcs": [
+        "Excavation Lead Darro",
+        "Archive Researcher Winn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The chamber is perfectly preserved \u2014 a pocket of ancient air sealed when the Scourge reshaped the rock. Work benches hold intricate instruments no one recognises. The humming trunk sits in the corner, sealed with a combination lock mechanism that still works.",
+            "choice_a": "Try to open the trunk immediately using trial combinations",
+            "consequence_a": "After twenty attempts you find the right sequence \u2014 three clicks, a quarter turn, two clicks. The trunk is open.",
+            "choice_b": "Have Winn photograph and document the full chamber before anyone touches anything",
+            "consequence_b": "Winn spends an hour documenting. Her photographs eventually become the basis of a significant academic paper."
+        },
+        {
+            "turn": 2,
+            "narrative": "The trunk contains a set of small brass instruments with etched labels in Pre-Scourge script, along with a personal journal written by someone named Artificer Ollen. Ollen's notes suggest these instruments mapped 'the resonance of the deep' \u2014 whatever was beneath the city before the Scourge.",
+            "choice_a": "Immediately bring Ollen's journal and instruments to the Deep Archive for translation",
+            "consequence_a": "Archive translators identify three references to structures under Emberheart that match nothing in existing maps.",
+            "choice_b": "Secure the trunk and all contents for the Ridge Authority to distribute as they see fit",
+            "consequence_b": "The Authority catalogues the find and loans pieces to the Academic Quarter for study."
+        },
+        {
+            "turn": 3,
+            "narrative": "Excavation Lead Darro wants to resume digging in the chamber.",
+            "choice_a": "Advise Darro to stop digging and let researchers finish before any further excavation",
+            "consequence_a": "An agreement is reached. Researchers get four weeks before mining resumes.",
+            "choice_b": "Support Darro's decision to continue excavation under researcher supervision",
+            "consequence_b": "Digging continues carefully. Three more artefacts are found in the chamber walls."
+        }
+    ],
+    "branching_outcomes": {
+        "journal_translated": {
+            "description": "Ollen's journal translated. Three unknown subterranean structures identified.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Artificer Ollen's Journal",
+                "reputation_change": {
+                    "Ridge": 14,
+                    "Academic Quarter": 12
+                }
+            }
+        },
+        "authority_catalogued": {
+            "description": "Finds catalogued by the Ridge Authority.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Ridge": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Artificer Ollen's Journal",
+        "Pre-Scourge Brass Instrument",
+        "200x Gold Coins"
+    ],
+    "conclusion": "Ollen's journal translated. Three unknown subterranean structures identified."
+}

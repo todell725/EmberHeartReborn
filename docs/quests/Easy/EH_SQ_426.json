@@ -1,0 +1,80 @@
+{
+    "id": "EH_SQ_426",
+    "title": "Steam and Stars",
+    "difficulty": "Easy",
+    "xp_reward": 460,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Ridge -> The Summit Observation Post",
+    "district": "Ridge",
+    "thread": "Ridge",
+    "description": "A junior Ridge engineer named Pyra has been quietly spending her private hours modifying the summit observation post's old geothermal sensors into a long-range atmospheric scanner. She has detected a repeating signal from somewhere in the Red Wastes and wants help determining if it is natural or artificial.",
+    "key_npcs": [
+        "Engineer Pyra",
+        "Station Commander Vrex"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Pyra's modified equipment fills the observation post. She shows you a readout \u2014 a clean, rhythmic pulse repeating every ninety seconds with machine-like regularity. Station Commander Vrex is suspicious of what Pyra has built and wants the unauthorised equipment removed.",
+            "choice_a": "Advocate for Pyra to Vrex \u2014 the signal deserves investigation",
+            "consequence_a": "Vrex is reluctant but agrees to a one-week provisional window to document the signal properly.",
+            "choice_b": "Study the equipment and signal independently, bypassing Vrex for now",
+            "consequence_b": "You analyse the signal and confirm it cannot be geothermal in origin \u2014 it's directional and encoded."
+        },
+        {
+            "turn": 2,
+            "narrative": "The signal appears to originate from a fixed point approximately sixty kilometres into the Red Wastes \u2014 near the site of the old city of Crestfall which was consumed in the initial Scourge event.",
+            "choice_a": "Recommend an official Expedition survey of the Crestfall coordinates",
+            "consequence_a": "Vrex, now intrigued, forwards the recommendation. An Expedition planning document is started.",
+            "choice_b": "Recommend Pyra document everything and submit a research proposal to the Academic Quarter",
+            "consequence_b": "Pyra's proposal gets academic backing. Funding is approved for a small recon drone mission."
+        },
+        {
+            "turn": 3,
+            "narrative": "Regardless of next steps, Pyra's sensor array has produced something valuable.",
+            "choice_a": "Help Pyra formally patent her modified sensor design through the Authority",
+            "consequence_a": "The design is patented. Pyra receives a modest stipend and recognition.",
+            "choice_b": "Simply thank Pyra and let her continue her work informally",
+            "consequence_b": "Pyra continues monitoring quietly. The signal remains active and consistent."
+        }
+    ],
+    "branching_outcomes": {
+        "expedition_recommended": {
+            "description": "Official Expedition survey of Crestfall coordinates recommended.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Pyra's Sensor Schematic",
+                "reputation_change": {
+                    "Ridge": 14,
+                    "Expedition": 10
+                }
+            }
+        },
+        "academic_proposal": {
+            "description": "Academic funding approved for recon drone mission.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Crestfall Signal Readout",
+                "reputation_change": {
+                    "Ridge": 12,
+                    "Academic Quarter": 8
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Pyra's Sensor Schematic",
+        "Crestfall Signal Readout",
+        "210x Gold Coins"
+    ],
+    "conclusion": "Official Expedition survey of Crestfall coordinates recommended."
+}

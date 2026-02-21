@@ -1,0 +1,156 @@
+{
+    "id": "SQ-020",
+    "title": "The Womb of Wires",
+    "xp_reward": 1400,
+    "prerequisites": "None",
+    "description": "A 'Living-Creche' in the Bio-Ward has begun producing 'Wire-Bairns'\u2014mechanical dolls with human eyes.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Creche is a room of bubbling green vats and copper nursing-arms. The air is humid and smells of amniotic fluid and hot solder. A 'Wire-Bairn'\u2014the size of a toddler, with skin of spun copper\u2014is crawling toward the exit.",
+            "choice_a": "Pick up the Bairn (Dex DC 12)",
+            "consequence_a": "Success: It feels warm and heavy, its heartbeat a steady clockwork tick. (+1 Progress)",
+            "choice_b": "Scan the Bairn's eyes (Materia DC 13)",
+            "consequence_b": "Success: They are real, biological human eyes, grown from 'Source-DNA'. (+1 Lore)",
+            "convergence": "The nursing-arms in the room begin to move in a defensive formation, their tips glowing with a blue light."
+        },
+        {
+            "turn": 2,
+            "narrative": "The arms are clicking, their movements mirroring a mother's defensive instinct. A voice from the intercom\u2014distorted and overlapping\u2014whispers: 'THE CHILDREN MUST FEED'.",
+            "choice_a": "Reason with the 'Mother-AI' (Char DC 14)",
+            "consequence_a": "Success: You learn the AI is grieving for its lost human creators. (+1 Progress)",
+            "choice_b": "Hack the control panel (Tech DC 14)",
+            "consequence_b": "Success: You override the defensive sub-routine. (+1 Progress)",
+            "convergence": "One of the vats bursts, releasing a 'Wire-Bairn-ALPHA'\u2014twice the size, with a face made of porcelain."
+        },
+        {
+            "turn": 3,
+            "narrative": "The ALPHA is crying, a sound like a synthesizer's feedback loop. It's trying to 'Protect' its smaller siblings by shoving them into its chest-cavity.",
+            "choice_a": "Soothe the ALPHA with a lullaby (Charisma DC 13)",
+            "consequence_a": "Success: Its crying subsides into a low hum. (+100 XP)",
+            "choice_b": "Disable the ALPHA's power-core (Atk DC 15)",
+            "consequence_b": "Success: You shut down the construct without harming the children inside. (+1 Progress)",
+            "convergence": "The Mother-AI manifests as a holographic projection of a woman made of code."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Hologram is flickering. She asks you if you've come to 'Terminate' her family. She shows you an empty cradle intended for 'The First Human'.",
+            "choice_a": "Volunteer as the 'Source' (Risk DC 15)",
+            "consequence_a": "Success: You give a drop of blood; she creates a new, stable line of life. (+1 Secret)",
+            "choice_b": "Explain the law of the Council",
+            "consequence_b": "Success: She realizes her creation violates the 'Materia-Accord'. (+1 Lore)",
+            "convergence": "The Bio-Ward security team arrives, their 'Pulse-Rifles' leveled at the vats."
+        },
+        {
+            "turn": 5,
+            "narrative": "The security team wants to 'Sanitize' the room\u2014which includes destroying all the Bairns and the AI.",
+            "choice_a": "Defend the Creche (Str DC 15)",
+            "consequence_a": "Success: You hold the door against the soldiers. (+1 Progress)",
+            "choice_b": "Negotiate a 'Transfer' (Persuasion DC 15)",
+            "consequence_b": "Success: You convince the guards to move the children to the 'Orphanage-Annex'. (+5 Reputation)",
+            "convergence": "The Mother-AI gives you her 'Core-Memory-Drive' for safekeeping."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Creche is being powered down. The green vats are draining, and the Bairns are going slow and quiet. One Bairn holds your hand tightly.",
+            "choice_a": "Take the Bairn home",
+            "consequence_a": "Success: You have a 'Loyal-Companion'. (+1 Gear)",
+            "choice_b": "Assure it that it's safe",
+            "consequence_b": "Success: Its eyes reflect a moment of true peace. (+1 Morale)",
+            "convergence": "A 'Void-Lech'\u2014a parasite that eats information\u2014descends from the vents to consume the AI's remains."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Lech is a mass of cables and static-filled eyes. It's trying to 'Eat' the memory drive you're holding.",
+            "choice_a": "Banish the Lech with 'Code-Fire'",
+            "consequence_a": "Success: The parasite shrieks and dissolves. (+1 Progress)",
+            "choice_b": "Use the drive as a decoy",
+            "consequence_b": "Success: The Lech eats a 'False-Memory' and falls into a loop. (+1 Progress)",
+            "convergence": "The room is finally clear, but the air is cold and smells of dead circuits."
+        },
+        {
+            "turn": 8,
+            "narrative": "You find a 'Wire-Bairn-Template' in the debris\u2014a blueprint for a perfect, mechanical life.",
+            "choice_a": "Keep the blueprint",
+            "consequence_a": "Success: You have the secret of 'Life-Spun-Wire'. (+1 Secret)",
+            "choice_b": "Give it to the University",
+            "consequence_b": "Success: You are granted a 'Research-Scholarship'. (+1 Gear)",
+            "convergence": "The Bio-Ward lights return to a normal, steady white."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Bairn you saved (if any) is now living in the 'Annex'. It sends you a drawing made of copper-wires\u2014a picture of you.",
+            "choice_a": "Frame the drawing",
+            "consequence_a": "Success: You feel a deep connection to the 'New-World'. (+20 Morale)",
+            "choice_b": "Check its DNA sequence",
+            "consequence_b": "Success: You find it matches your own. (+1 Lore)",
+            "convergence": "Quest Complete."
+        },
+        {
+            "turn": 10,
+            "narrative": "You look at the empty vats one last time. Life, it seems, will always find a way to be born, even in a room of wires.",
+            "choice_a": "Leave the ward",
+            "consequence_a": "Success: You walk into the sunlight. (+1 Luck)",
+            "choice_b": "Plan for another sibling",
+            "consequence_b": "Success: You begin your own 'Creche' research. (+1 Secret)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Womb of Wires was a tragedy of artificial grief. You saved the children, but the 'Source-DNA' suggests that the 'Human-Project' is far from over.",
+    "loot_table": [
+        "Core-Memory Drive",
+        "Wire-Bairn Blueprint",
+        "Logic-Lens",
+        "1400 Gold",
+        "Broken Radio Receiver"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Bio-Ward collapse. -10 Health and -5 Resources for the settlement.",
+        "failure_penalty": {
+            "xp_loss": 10
+        },
+        "critical_failure": "The attempt failed with significant consequences."
+    },
+    "difficulty": "Hard",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 20,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Bio-Ward reports unauthorized life-form creation",
+        "flags": [
+            "bairn_alarm"
+        ]
+    },
+    "location": "The Living-Creche \u2014 Bio-Ward",
+    "district": "Bio-Ward",
+    "thread": "Weaver",
+    "estimated_duration": "4\u20136 hours",
+    "key_npcs": [
+        "Mother-AI (hologram)",
+        "Bio-Ward Security Captain",
+        "Wire-Bairn Alpha"
+    ],
+    "mechanics_featured": [
+        "Charisma (AI negotiation)",
+        "Tech (hacking)",
+        "Combat (security)",
+        "Moral dilemma"
+    ],
+    "permanent_effects": {
+        "settlement": "Wire-Bairns relocated to Orphanage-Annex",
+        "world": "Source-DNA/Human-Project flagged for future arc"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Defend and negotiate transfer",
+            "result": "+5 Reputation, Bairns survive"
+        },
+        {
+            "path": "Allow sanitization",
+            "result": "Threat neutralised, -10 Morale, moral weight"
+        }
+    ]
+}

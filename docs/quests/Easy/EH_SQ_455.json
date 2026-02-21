@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_455",
+    "title": "The Root Invaders",
+    "difficulty": "Easy",
+    "xp_reward": 410,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Green Quarter -> The Central Gardens",
+    "district": "Green Quarter",
+    "thread": "Standalone",
+    "description": "A species of fast-growing root vine is consuming the Green Quarter's Central Gardens \u2014 choking slower-growing rare plants. Head Gardener Bessa identifies it as Deeproot Vine, a Scourge-adjacent invasive species. She needs it removed before it spreads to the medicinal plant section.",
+    "key_npcs": [
+        "Head Gardener Bessa",
+        "Alchemist Rynn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Deeproot Vine is aggressive \u2014 it grows noticeably as you watch. Its tendrils are pale and slightly luminescent at the tips, suggesting Void-adjacent origin. Bessa says mechanical removal doesn't work: it grows back from the root system in forty-eight hours.",
+            "choice_a": "Ask Alchemist Rynn if a chemical suppressant could halt the root system",
+            "consequence_a": "Rynn provides a salt-based soil compound that inhibits Void-adjacent root growth. She estimates two applications to fully suppress the current patch.",
+            "choice_b": "Attempt manual removal of as much of the root system as you can access",
+            "consequence_b": "Manual removal takes three hours and clears seventy percent of the accessible root system. Combined with other treatment this is a good start."
+        },
+        {
+            "turn": 2,
+            "narrative": "Rynn's assessment is that the vine was carried in via a compost amendment from the Agricultural Zone \u2014 the same batch causing problems elsewhere. The vine's root system goes down about two metres.",
+            "choice_a": "Apply Rynn's soil compound treatment to the entire affected area",
+            "consequence_a": "Two applications over two days. The vine shows visible decline by day three.",
+            "choice_b": "Use controlled shallow burning of the soil surface to kill the above-ground vine before applying the compound",
+            "consequence_b": "The burn plus compound combination works faster. The vine is effectively neutralised in a single day."
+        },
+        {
+            "turn": 3,
+            "narrative": "Bessa wants to prevent future invasive species introductions.",
+            "choice_a": "Recommend a compost quarantine protocol for any new soil amendments entering the Green Quarter",
+            "consequence_a": "Bessa implements the protocol. All incoming compost is held for a two-week observation period.",
+            "choice_b": "Help Bessa plant aggressive ground-cover species in the cleared area that will naturally compete against future vine invasions",
+            "consequence_b": "Fast-growing competitive low-native plants are installed. The cleared area is defended naturally."
+        }
+    ],
+    "branching_outcomes": {
+        "quarantine_protocol": {
+            "description": "Compost quarantine protocol implemented.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Garden Keeper's Token",
+                "reputation_change": {
+                    "Green Quarter": 14
+                }
+            }
+        },
+        "ground_cover_planted": {
+            "description": "Competitive ground cover planted. Future invasions deterred.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Rare Garden Seed Packet",
+                "reputation_change": {
+                    "Green Quarter": 12
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Garden Keeper's Token",
+        "Rare Garden Seed Packet",
+        "Deeproot Vine Sample",
+        "150x Gold Coins"
+    ],
+    "conclusion": "Compost quarantine protocol implemented."
+}

@@ -1,0 +1,74 @@
+{
+    "id": "SQ-246",
+    "title": "The Warrens' Cry",
+    "difficulty": "Hard",
+    "xp_reward": 600,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-019"
+        ]
+    },
+    "location": "Lower Ward -> The Sinkhole",
+    "district": "Lower Ward",
+    "thread": "Vermin",
+    "description": "The Sinkhole descends violently into absolute blackness. The sheer stone walls are slick with a horrific biological rat-sludge, and the smell of ancient decay is utterly overwhelming. As you descend, multiple Dire-Rats the size of starved timber wolves aggressively burst from the shadowed crevices to defend their deeply contested subterranean territory.",
+    "key_npcs": [
+        "Surviving Merchants",
+        "Dire-Rats"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You securely tie off a heavy hemp rope and begin the terrifying descent directly into the yawning blackness of the Sinkhole. The sheer, violently cracked stone walls are completely slick with an unimaginably foul, thick biological rat-sludge that makes finding any solid handhold nearly impossible. The smell of absolute, ancient decay and concentrated ammonia is utterly overwhelming, burning your exposed throat with every ragged breath. Before you are even halfway down, multiple horrific Dire-Rats\u2014monstrosities easily the size of fully starved timber wolves\u2014aggressively burst screeching from the deeply shadowed crevices to violently defend their deeply contested, stinking subterranean territory.",
+            "choice_a": "Drop a flash-charge into the pit (Arcana DC 12)",
+            "consequence_a": "You brilliantly release a perfectly timed arcana-charge that violently detonates directly below you in a blinding flash of perfect white light. The massive beasts shriek in absolute agony, entirely blinded and completely falling heavily past you into the crushing depths.",
+            "choice_b": "Engage them mid-climb with a short-blade (Athletics DC 13)",
+            "consequence_b": "You desperately wrap your legs tightly around the hemp rope, violently slashing outward with your bloody short-blade. You brutally sever completely the grasping claws of the heaviest attacker, sending it crashing violently into its ferocious pack-mates below.",
+            "convergence": "Surviving the brutal descent ambush, your heavy leather boots finally slam aggressively into the thick, terrifyingly squelching biological muck that completely covers the absolute bottom of the Sinkhole floor."
+        },
+        {
+            "turn": 2,
+            "narrative": "The absolute bottom of the Sinkhole is a terrifyingly open, completely flooded cavern completely choked with deeply rotting debris and incredibly massive, half-eaten industrial pipes. A significantly larger, deeply scarred Alpha Dire-Rat, its thick fur heavily mated with thick copper wiring and heavily dried blood, steps aggressively out from entirely behind a rusted boiler, violently barring your solitary path forward into the deeper Undercity tunnels.",
+            "choice_a": "Sever the copper wiring on its spine (Sleight of Hand DC 13)",
+            "consequence_a": "You violently dive incredibly cleanly under its massive, sweeping razor-sharp claws, perfectly slicing securely through the thick control-wiring fused violently to its spine. The massive beast instantly violently collapses, its deeply unnatural aggressive coordination completely brutally severed instantly.",
+            "choice_b": "Crush it with heavy structural debris (Strength DC 13)",
+            "consequence_b": "You completely ignore the beast entirely, violently kicking a perfectly positioned, incredibly heavy rusted iron pipe securely directly entirely out from exactly under a massively heavy pile of dangerously loose structural rubble, violently burying the massive creature completely in heavy stone.",
+            "convergence": "With the horrific Alpha decisively violently neutralized, the rusted, heavily dented iron access door to the deeper Spire is finally completely unobstructed and violently ripped cleanly open entirely."
+        }
+    ],
+    "branching_outcomes": {
+        "sinkhole_exploded": {
+            "description": "You caved in the sinkhole with explosives.",
+            "unlocks": [
+                "SQ-247"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 10
+                }
+            }
+        },
+        "sinkhole_burned": {
+            "description": "You burned out the tunnel, leaving it permanently scorched.",
+            "unlocks": [
+                "SQ-247"
+            ],
+            "consequences": {
+                "item_reward": "Charred Dire-Rat Fang"
+            }
+        }
+    },
+    "loot_table": [
+        "Dire-Rat Pelt",
+        "Charred Dire-Rat Fang",
+        "150x Gold Coins"
+    ],
+    "conclusion": "The Sinkhole is secured, clearing the initial brutal descent into the Undercity. The horrific discovery of wolf-sized, violently territorial Dire-Rats confirms the Vermin threat goes far deeper and is far more physically monstrous than the Ward Council could ever have anticipated.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 500,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with significant consequences to the district and involved factions."
+    }
+}

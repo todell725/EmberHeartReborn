@@ -1,0 +1,80 @@
+{
+    "id": "EH_SQ_457",
+    "title": "The Silent Hammers",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Industrial Quarter -> The Foundry District",
+    "district": "Industrial Quarter",
+    "thread": "Standalone",
+    "description": "Two hundred foundry workers have stopped work without announcement or explanation. They are sitting at the factory gates in complete silence \u2014 no shouting, no banners, just quiet presence. Factory Owner Gerst is panicking. Ward Labour Advocate Renia is watching from a distance. You are asked to understand what the workers want.",
+    "key_npcs": [
+        "Factory Owner Gerst",
+        "Worker Representative Aldra",
+        "Advocate Renia"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The silence is eerie. Two hundred people, all sitting cross-legged on the cobblestones, some with eyes closed. There are no leaders visible. You approach the nearest worker group and simply sit down beside them.",
+            "choice_a": "Simply sit with them quietly and wait to be spoken to",
+            "consequence_a": "After ten minutes, a woman named Aldra sits beside you and speaks quietly. 'We filed a grievance six months ago. No one answered it.'",
+            "choice_b": "Ask politely to speak with whoever represents the group",
+            "consequence_b": "Three people stand \u2014 Aldra, an older man named Bert, and a teenager named Mira. A delegation."
+        },
+        {
+            "turn": 2,
+            "narrative": "The grievance: three workers were injured over the past four months by a specific press mechanism that has been repeatedly flagged as misaligned, and repeatedly left unrepaired. The workers want the mechanism fixed and the three injured colleagues compensated before they will return to work.",
+            "choice_a": "Inspect the press mechanism immediately to verify the workers' account",
+            "consequence_a": "The misalignment is immediately visible to you. This should have been fixed within a day of its first report.",
+            "choice_b": "Retrieve the six-month-old grievance filing to show Gerst the documented history",
+            "consequence_b": "The filing is on record \u2014 signed, timestamped, and completely unaddressed."
+        },
+        {
+            "turn": 3,
+            "narrative": "Gerst is caught. The mechanism is documentiered as defective, the grievance is documented as ignored. He accepts he has no basis to fight this.",
+            "choice_a": "Negotiate a settlement: fix the mechanism within 24 hours and agree to a compensation framework for the three injured workers",
+            "consequence_a": "Gerst agrees. Workers return the next morning. Renia witnesses the settlement agreement.",
+            "choice_b": "Recommend the Labour Authority take over negotiations formally given Gerst's six-month non-response",
+            "consequence_b": "The Authority takes over. A formal enforceable settlement is issued within three days."
+        }
+    ],
+    "branching_outcomes": {
+        "direct_settlement": {
+            "description": "Settlement negotiated directly. Workers returned next morning.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Foundry Settlement Agreement",
+                "reputation_change": {
+                    "Industrial Quarter": 18,
+                    "Lower Ward": 10
+                }
+            }
+        },
+        "authority_settlement": {
+            "description": "Labour Authority settlement formally issued.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Labour Authority Enforcement Order",
+                "reputation_change": {
+                    "Industrial Quarter": 14
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Foundry Settlement Agreement",
+        "Labour Authority Enforcement Order",
+        "200x Gold Coins"
+    ],
+    "conclusion": "Settlement negotiated directly. Workers returned next morning."
+}

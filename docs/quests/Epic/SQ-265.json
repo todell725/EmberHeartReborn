@@ -1,0 +1,75 @@
+{
+    "id": "SQ-265",
+    "title": "The First Seal",
+    "difficulty": "Epic",
+    "xp_reward": 2000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-020"
+        ]
+    },
+    "location": "Undercity -> The Drowned Sector",
+    "district": "Undercity",
+    "thread": "ULTIMATE CONSPIRACY",
+    "description": "Earthquakes have plagued the Lower Ward. Investigation into the deep, flooded sectors of the Undercity reveals massive, ancient chains anchoring something impossibly large to the bedrock. One of the three main seals is breaking.",
+    "key_npcs": [
+        "Deep-Water Scourge",
+        "The Breaking Seal"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You dive into the freezing, totally dark waters of the Drowned Sector. You must navigate using only a magical lumen-stone.",
+            "choice_a": "Swim quickly to conserve breath",
+            "consequence_a": "You reach the bottom fast, but attract the attention of several blind, aquatic Scourge-eels.",
+            "choice_b": "Swim slowly and silently along the walls",
+            "consequence_b": "You avoid the eels, but your lungs are burning horribly by the time you reach the air pocket near the seal."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Seal is a massive, rune-covered stone block. It is cracking. You must repair it using a rare alchemical compound.",
+            "choice_a": "Patch it perfectly using your Alchemy skill",
+            "consequence_a": "The seal glows bright blue, stabilizing completely. You stop the earthquake safely.",
+            "choice_b": "Attempt an improvised patch with common clay and Scourge-blood",
+            "consequence_b": "It holds, barely. The seal will eventually break, but you bought the city a few days of peace."
+        }
+    ],
+    "branching_outcomes": {
+        "seal_perfected": {
+            "description": "You repaired the First Seal perfectly.",
+            "unlocks": [
+                "SQ-266"
+            ],
+            "consequences": {
+                "item_reward": "Perfect Rune Shard",
+                "reputation_change": {
+                    "Lower Ward": 30
+                }
+            }
+        },
+        "seal_improvised": {
+            "description": "You patched the seal temporarily.",
+            "unlocks": [
+                "SQ-266"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Lower Ward": 10
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Ancient Rune Dust",
+        "Eel Scales",
+        "500x Gold Coins"
+    ],
+    "conclusion": "You repaired the First Seal perfectly.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

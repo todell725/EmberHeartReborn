@@ -1,0 +1,80 @@
+{
+    "id": "EH_SQ_433",
+    "title": "The Face in the Archive",
+    "difficulty": "Easy",
+    "xp_reward": 430,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Deep Archive -> The Portrait Gallery",
+    "district": "Deep Archive",
+    "thread": "Concordat",
+    "description": "A Deep Archive librarian realises that a portrait in the gallery's Pre-Scourge collection perfectly matches a woman seen regularly in the Market Ward \u2014 despite the portrait being painted over a hundred years ago. She wants someone to investigate without causing panic.",
+    "key_npcs": [
+        "Librarian Ossa",
+        "The Living Portrait Woman",
+        "Elder Survivor Ora"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The portrait shows a Concordat official named Senna in formal ceremonial robes. The resemblance to a Market Ward fixture \u2014 a quiet, observant woman who tends a tea stall \u2014 is genuinely extraordinary. Same bone structure, same unusual light grey eyes.",
+            "choice_a": "Go directly to the Market Ward tea stall and speak with the woman",
+            "consequence_a": "The woman is startled but not frightened when you describe the portrait. She says her name is Senna, and she has been waiting for someone to find it.",
+            "choice_b": "Research the portrait's background through the Archive's records first",
+            "consequence_b": "Records show Senna was a senior Concordat Archivist who specialised in Cognitive Preservation \u2014 a now-lost branch of Concordat science."
+        },
+        {
+            "turn": 2,
+            "narrative": "Senna \u2014 whether descended from or somehow the same person as the portrait subject \u2014 has a perfectly clear and detailed memory of the Pre-Scourge Concordat and the events leading to the Scourge. She is entirely cooperative but matter-of-fact about her nature.",
+            "choice_a": "Bring Elder Survivor Ora to meet Senna to verify her Pre-Scourge memories",
+            "consequence_a": "Ora is astounded. She confirms details from Senna that only someone who was actually there could know.",
+            "choice_b": "Ask Senna to document her memories in writing for the Archive",
+            "consequence_b": "Senna spends three days writing. The Archive receives its most complete Pre-Scourge first-hand account."
+        },
+        {
+            "turn": 3,
+            "narrative": "Senna says the Concordat used Cognitive Preservation technology to ensure that institutional memory survived the Scourge \u2014 and she is one of only three such preserved individuals.",
+            "choice_a": "Recommend Senna be introduced to the Ward Council as a Living Archive resource",
+            "consequence_a": "The Council is deeply interested. Senna agrees to serve as a formal historical adviser.",
+            "choice_b": "Keep Senna's existence quiet and let her continue as she was",
+            "consequence_b": "Senna thanks you genuinely. She continues her quiet life, now with someone who knows her secret."
+        }
+    ],
+    "branching_outcomes": {
+        "senna_introduced": {
+            "description": "Senna introduced to the Ward Council as a Living Archive resource.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Senna's Pre-Scourge Account",
+                "reputation_change": {
+                    "Deep Archive": 18,
+                    "Temple District": 10
+                }
+            }
+        },
+        "senna_hidden": {
+            "description": "Senna's identity kept private.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Senna's Portrait Rubbing",
+                "reputation_change": {
+                    "Deep Archive": 12
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Senna's Pre-Scourge Account",
+        "Senna's Portrait Rubbing",
+        "170x Gold Coins"
+    ],
+    "conclusion": "Senna introduced to the Ward Council as a Living Archive resource."
+}

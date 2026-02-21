@@ -1,0 +1,156 @@
+{
+    "id": "SQ-015",
+    "title": "The Glass-Lung Sickness",
+    "xp_reward": 700,
+    "prerequisites": "None",
+    "description": "Refugees working the 'Silica-Vents' are breathing in microscopic glass shards. Something is turning the sand into razors.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Silica-Vents are beautiful and deadly, filled with a fine, silver dust that hangs in the air like frozen fog. The workers cough into blood-stained rags, their lungs wheezing like old organs.",
+            "choice_a": "Examine the filter systems (Repair DC 12)",
+            "consequence_a": "Success: You find the filters have been precisely slit by a laser-like cut. (+1 Intel)",
+            "choice_b": "Heal a suffering worker (Medic DC 13)",
+            "consequence_b": "Success: You extract a perfect, jagged cube of glass from their throat. (+1 Lore)",
+            "convergence": "A rhythmic 'clinking' sound comes from the main ventilation shaft, like glass chimes in a storm."
+        },
+        {
+            "turn": 2,
+            "narrative": "The clinking is coming from a 'Sand-Sifter'\u2014a small, crab-like construct made of fused obsidian. It's actively grinding rocks into the lethal dust.",
+            "choice_a": "Disable the Sifter (Tech DC 13)",
+            "consequence_a": "Success: You snap its grinding-pincers. (+1 Progress)",
+            "choice_b": "Trace its power source (Perc DC 14)",
+            "consequence_b": "Success: It's being powered by an illegal 'Warp-Battery'. (+1 Secret)",
+            "convergence": "The Sifter explodes into a cloud of glass-shrapnel that threatens to shred your cloak."
+        },
+        {
+            "turn": 3,
+            "narrative": "The shrapnel is everywhere. You see the dust beginning to swirl and coalesce into a 'Dust-Demon'\u2014a vortex of grinding silica.",
+            "choice_a": "Dampen the air with water-vials",
+            "consequence_a": "Success: The dust becomes heavy and falls to the floor. (+1 Progress)",
+            "choice_b": "Shield the workers with your body (Con DC 14)",
+            "consequence_b": "Success: You take the hits, protecting the innocent. (+100 XP)",
+            "convergence": "The Dust-Demon dissipates, but the air remains thick with the smell of scorched minerals."
+        },
+        {
+            "turn": 4,
+            "narrative": "You reach the 'Vent-Control' room. The screens are flickering with images of the 'Glass-Widow'\u2014a mythical figure from the Low-Wastes.",
+            "choice_a": "Access the core logs (Int DC 15)",
+            "consequence_a": "Success: You learn the sabotage was ordered by a rogue faction. (+1 Lore)",
+            "choice_b": "Lock down the ventilation (Tech DC 13)",
+            "consequence_b": "Success: You stop the spread of the dust. (+1 Progress)",
+            "convergence": "A hidden door opens, revealing a chamber filled with 'Lungs of Glass'\u2014preserved human organs transformed into crystal."
+        },
+        {
+            "turn": 5,
+            "narrative": "The crystal lungs are pulsing with a rhythmic light. They're being used as 'Bios-Processors' for an unknown calculation.",
+            "choice_a": "Destroy the processors (Atk DC 14)",
+            "consequence_a": "Success: You end the horrific experiment. (+1 Progress)",
+            "choice_b": "Extract the data-cores (Int DC 14)",
+            "consequence_b": "Success: You gain a 'Glass-Memory Crystal'. (+1 Loot)",
+            "convergence": "The facility begins to self-destruct, the glass walls cracking and howling."
+        },
+        {
+            "turn": 6,
+            "narrative": "A 'Glass-Sentinel'\u2014a humanoid made of mirrors\u2014steps out from the reflections. It mimics your every move exactly.",
+            "choice_a": "Close your eyes and fight by sound (Perc DC 15)",
+            "consequence_a": "Success: You shatter the illusion. (+1 Progress)",
+            "choice_b": "Strike your own reflection (Str DC 14)",
+            "consequence_b": "Success: The Sentinel cracks in sympathy with your blow. (+1 Progress)",
+            "convergence": "The Sentinel shatters into a million pieces, revealing a path to the surface."
+        },
+        {
+            "turn": 7,
+            "narrative": "The exit is blocked by a wall of solidified silica. It's too thick to break with standard tools.",
+            "choice_a": "Use a 'Thermal-Charge' (Tech DC 14)",
+            "consequence_a": "Success: You melt a hole through the wall. (+1 Progress)",
+            "choice_b": "Find a bypass through the vents (Dex DC 13)",
+            "consequence_b": "Success: You crawl through the narrow, glass-lined ducts. (+100 XP)",
+            "convergence": "You emerge into the cool night air, but your skin is glowing with a faint, silver sheen."
+        },
+        {
+            "turn": 8,
+            "narrative": "A medical team meets you. They're terrified of the 'Glass-Sheen'\u2014it's the first stage of the transformation.",
+            "choice_a": "Undergo a 'Pulse-Purge' (Con Save DC 15)",
+            "consequence_a": "Success: You burn the silica from your pores. (+100 XP)",
+            "choice_b": "Seek help from the Alchemists",
+            "consequence_b": "Success: They provide a 'Silica-Dampener'. (+1 Gear)",
+            "convergence": "The vents are quiet. The silica dust has settled."
+        },
+        {
+            "turn": 9,
+            "narrative": "The worker you saved offers you a 'Shard-Knife'. He says it's a family heirloom, used to cut through the hardest truths.",
+            "choice_a": "Accept the knife",
+            "consequence_a": "Success: You gain a weapon that ignores armor. (+1 Gear)",
+            "choice_b": "Decline and buy him medical supplies",
+            "consequence_b": "Success: Your reputation for kindness grows. (+5 Rep)",
+            "convergence": "The Council declares the Silica-Vents a 'Restricted Zone'."
+        },
+        {
+            "turn": 10,
+            "narrative": "You look at the vents from the safety of the Ridge. They look like a field of diamonds in the moonlight\u2014a beautiful, silent graveyard.",
+            "choice_a": "Write a warning for the miners",
+            "consequence_a": "Success: You save future lives. (+10 Morale)",
+            "choice_b": "Keep a vial of the dust (Secret DC 14)",
+            "consequence_b": "Success: You have a lethal, invisible weapon. (+1 Secret)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Glass-Lung Sickness was a test of biological processing. You stopped the experiment, but the 'Glass-Widow' knows your face.",
+    "loot_table": [
+        "Shard-Knife",
+        "Glass-Memory Crystal",
+        "Silica-Dampener",
+        "700 Gold",
+        "Survival Gear",
+        "Scourge-Resistant Rations"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Outbreak spreads. -5 Health for all workers and increased cost of medical supplies.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Workers report respiratory illness at Silica-Vents",
+        "flags": [
+            "silica_illness"
+        ]
+    },
+    "location": "The Silica-Vents \u2014 Industrial Outskirts",
+    "district": "Industrial Quarter",
+    "thread": "Sovereignty & Order",
+    "estimated_duration": "3\u20134 hours",
+    "key_npcs": [
+        "Glass-Widow (antagonist, unseen)",
+        "Vent Foreman Lass"
+    ],
+    "mechanics_featured": [
+        "Medicine",
+        "Technical investigation",
+        "Combat (construct/elemental)",
+        "Con saves"
+    ],
+    "permanent_effects": {
+        "settlement": "Silica-Vents declared restricted zone",
+        "world": "Glass-Widow becomes recurring villain"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Destroy processors",
+            "result": "Experiment ended; +10 Morale"
+        },
+        {
+            "path": "Extract data-cores",
+            "result": "Glass-Memory Crystal gained; moral cost"
+        }
+    ]
+}

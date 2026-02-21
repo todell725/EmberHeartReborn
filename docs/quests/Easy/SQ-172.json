@@ -1,0 +1,147 @@
+{
+    "id": "SQ-172",
+    "title": "The Squeaker-Box",
+    "difficulty": "Easy",
+    "xp_reward": 525,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "Inventor Caldwell Voss announces his 'Rodent Vocalization Translator' at a High Ward gathering"
+    },
+    "location": "High Ward - Voss Workshop and surrounding district",
+    "district": "High Ward",
+    "thread": "Vermin",
+    "estimated_duration": "50 minutes",
+    "key_npcs": [
+        "Caldwell Voss (eccentric inventor, quest-giver unwittingly)",
+        "The rats (translated voices, horrifying content)",
+        "Doctor Vane (first named mention, in rat transmissions)"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Arcana checks",
+        "NPC persuasion",
+        "Combat (Guard-Rats + Gloom-Rats)",
+        "Lore discovery via translation"
+    ],
+    "permanent_effects": [
+        "First direct mention of Doctor Vane by name",
+        "Squeaker-Box device obtained (can translate rat chitters for future quests)",
+        "Player learns Gloom-Rats carry Star-Ivy spore payload"
+    ],
+    "branching_outcomes": {
+        "publicize_translations": {
+            "description": "Voss presents the translated rat communications to the public",
+            "effects": {
+                "settlement_morale": -2
+            },
+            "unlocks": [],
+            "consequences": {
+                "ambient_hazard": "Mass paranoia about rats. Citizens begin exterminating all vermin indiscriminately, disrupting Concordat intelligence network (minor)",
+                "lore_gain": "City-wide awareness that rats are communicating raises the threat rating of all Vermin encounters"
+            }
+        },
+        "suppress_translations": {
+            "description": "Keep the translations private, use them as intelligence",
+            "effects": {},
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Confidential Concordat intelligence advantage: player can 'listen' to rat chitters via Squeaker-Box for tactical data before encounters"
+            }
+        }
+    },
+    "description": "Inventor Caldwell Voss has successfully captured a heavily augmented warehouse rat and integrated it into a 'Squeaker-Box', a massive contraption of mana-crystal resonators designed to translate the vermin's neural signals. The translated output reveals the rat is receiving operational commands designating locations in Sector 9. The party must defend Voss's exposed laboratory, extract the full list of automated targets, and trace the origin point of the mechanical voice directing the city's vermin.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Caldwell Voss is a terrifyingly delighted man. His massive, chaotic workshop is a veritable hurricane of rusted copper tubes, glowing glass chambers, and heavy tools. The 'Squeaker-Box' firmly sits at the exact center of it all: a magnificent, terrifying contraption of raw mana-crystal resonators and vibrating acoustic membranes, roughly the size of a heavy iron safe, with a small brass trumpet functioning as its primary output over a wire cage. His captured test subject, an unusually large warehouse rat whose spine is woven with thick copper, furiously paces inside. Voss aggressively cranks a heavy iron handle. The device hums with a sickening pitch. The rat suddenly goes entirely still, its eyes rolling back, and the brass trumpet announces in a perfectly flat, completely mechanical voice: 'Sector 9. Designated node completely inactive. Replacement sequence officially scheduled.' Voss blinks rapidly in utter shock. 'I thoroughly expected something significantly more... animal,' he admits quietly.",
+            "choice_a": "Ask Voss to translate more of the rat's speech immediately (Investigation DC 10)",
+            "consequence_a": "You notice the heavily augmented rat violently throwing itself against the thin wire. You quickly and seamlessly reinforce the cage's delicate latch mechanism with a strong iron pin, wholly preventing the desperate creature from escaping its forced translation.",
+            "choice_b": "Examine the Squeaker-Box machinery itself (Arcana DC 12)",
+            "consequence_b": "You completely ignore Voss's shock and frantically copy down the exact, precise mechanical coordinates the brass trumpet is mechanically repeating into your leather journal. You successfully capture the highly sensitive target location perfectly before the machine overheats.",
+            "convergence": "Overloading under the immense strain of the translation, a primary glass resonator violently shatters. The loud explosion attracts a heavily armed, deeply corrupted patrol of Ward Guards who incredibly seem to have been frantically searching for this exact signal."
+        },
+        {
+            "turn": 2,
+            "narrative": "Voss has attracted attention. Three High Ward nobles, hearing rumors of the 'talking rat,' have arrived at the workshop to witness the demonstration. They find it charming, then unsettling, then actively frightening as the rat's translations grow more specific: 'Noble household Target-7, mana-wiring vulnerability confirmed, infection vector available.' One of the nobles goes pale\u2014that is her household number, she realizes. She has a rat problem.",
+            "choice_a": "Convince the nobles to stay quiet about the device (Persuasion DC 14)",
+            "consequence_a": "Success: They agree, nervously. The Squeaker-Box remains a secret intelligence asset rather than a public spectacle. (+1 Progress, suppression path opens)",
+            "choice_b": "Use this moment to build a coalition\u2014nobles with resources can accelerate the investigation (Leadership DC 13)",
+            "consequence_b": "Success: Noble Lady Orvaine pledges her household guard and access to the High Ward's private mana-wiring schematics. The investigation gains significant resources. (+1 Progress, Noble ally gained)",
+            "convergence": "The rat says one more thing before its translation cycle ends: 'Doctor Vane sends regards.' Then it simply stops talking, sits down, and begins grooming itself like a perfectly ordinary rat."
+        },
+        {
+            "turn": 3,
+            "narrative": "The name 'Doctor Vane' hangs in the workshop air. Voss writes it down immediately\u2014he is a documenter by nature. None of the nobles recognize it. But when you mention it to Voss's assistant, a young researcher named Tilda who has clearly been eavesdropping, she goes white. 'Vane is in the Concordat records,' she whispers. 'I saw the name once, in the restricted archive. Pre-Scourge. Division Seven, listed as Chief Bio-Engineer.' She swallows. 'But Division Seven records are sealed. Have been since the Scourge.' You ask her the obvious question. 'Yes,' she says. 'Vane could be a historical name. Or it could be a title, passed down.' She pauses. 'Or he could still be alive.'",
+            "choice_a": "Ask Tilda to help search restricted Concordat records for Vane's full dossier (Research, DC 14, Tilda needed)",
+            "consequence_a": "Success: After two hours of searching, she finds a partial file: 'Vane, Aldric. Born pre-Scourge. Architect of Vermin Vectors program. Status: UNKNOWN. Last sighting: immediately post-Scourge.' Unknown means not confirmed dead. (+2 Lore, Vane codex entry established)",
+            "choice_b": "Test the Squeaker-Box on every rat in the neighborhood (sweep approach, Investigation DC 11)",
+            "consequence_b": "Success: Seven rats in the surrounding three blocks, each one transmitting. Five are standard logistics reports. One is a structural report on a mana-pipe junction. One, disturbingly, is transmitting: 'Squeaker-Box threat confirmed. Neutralization team en route.' (+1 Intel, you have 30 minutes before Guard-Rats arrive)",
+            "convergence": "Voss is writing with manic speed, capturing every translated fragment. He is thrilled. He has no idea how much danger his workshop is in."
+        },
+        {
+            "turn": 4,
+            "narrative": "Three Gloom-Rats have entered the workshop through a gap between the floorboards and the foundation wall. They are moving toward the Squeaker-Box with purpose: not the random exploration of normal rodents but the targeted approach of units on assignment. Gloom-Rats are the largest vermin type\u2014the size of a small dog, their fur a deep wet grey, their bodies slightly swollen with the Star-Ivy spore sacs visible as pulsing blue nodes beneath the skin. If those spore sacs rupture indoors, the workshop becomes a Star-Ivy incubation chamber.",
+            "choice_a": "Contain the Gloom-Rats before they reach the Squeaker-Box (Combat DC 12, avoid rupturing spore sacs)",
+            "consequence_a": "Success: The trick is force control\u2014enough to stop them, not enough to rupture. You pin two with furnishings, stun the third. Voss helps, wielding a copper tube with surprising effectiveness. All three captured without spore release. (+1 Progress)",
+            "choice_b": "Get Voss and the device out while drawing the Gloom-Rats away (Dexterity + Persuasion DC 13)",
+            "consequence_b": "Success: You shout at Voss to run, then make yourself the most interesting thing in the room. Three Gloom-Rats chase you through the workshop. You lead them into an empty storage room and lock the door. (+1 Progress, workshop evacuation successful)",
+            "convergence": "The Gloom-Rats sent to neutralize the Squeaker-Box have failed. But they sent a report before they arrived. Whatever 'Doctor Vane' is, it knows the device exists. The next response will be more substantial."
+        },
+        {
+            "turn": 5,
+            "narrative": "Voss, safe in a borrowed neighboring workshop, is still translating. He cannot stop\u2014the Squeaker-Box is his life's work and the rats keep talking. Among the mundane logistics, a fragment surfaces that Voss reads aloud in a quieter voice than usual: 'Star-Ivy deployment targets, Phase 2: (1) High Ward water cistern. (2) Market Ward grain storage. (3) Lower Ward bread distribution.' These are not random targets. They are the city's food and water infrastructure. The rats are not sabotaging mana-wiring for fun. They are softening the city for something.",
+            "choice_a": "Immediately warn city infrastructure authorities (Leadership DC 12)",
+            "consequence_a": "Success: City Watch and the Water Authority are alerted within the hour. Inspections of all three target sites begin. Two Guard-Rat nests found in the cistern tunnels before deployment can occur. (+2 Settlement Stability, attack prevented)",
+            "choice_b": "Use the Squeaker-Box to intercept and decode the activation signal before acting (Arcana DC 15)",
+            "consequence_b": "Success: You identify the signal pattern that would trigger spore deployment. It hasn't been sent yet. You have the ability to detect when it IS sent\u2014giving you 10 minutes of advance warning. (+2 Intel, deployment detection ability gained)",
+            "convergence": "Voss holds up one more translation. It is different from all the others\u2014not logistics, not status, not coordination. It is a name. A single human name, repeated four times. Yours."
+        },
+        {
+            "turn": 6,
+            "narrative": "The rats know your name. They've been tracking you since at least the Market Ward\u2014possibly earlier. The translation renders it in the flat mechanical voice of the Squeaker-Box: your name, followed by 'Threat classification: Elevated. Behavioral pattern: Pattern-recognition, threat-assessment, escalating interference. Disposition recommendation: Isolate and study.' Voss reads this and slowly looks at you. 'I built a machine to talk to rats,' he says. 'And it turns out they've been talking about you for weeks.' He is quiet for a moment. 'How long do you think they've been watching us?'",
+            "choice_a": "Use your name being known as a leverage point\u2014transmit a deliberate message to the network via Squeaker-Box (Arcana DC 15, bold)",
+            "consequence_a": "Success: You instruct Voss to calibrate the Box as a transmitter rather than receiver. You say: 'Tell Doctor Vane we're coming.' The Box broadcasts it in Concordat chitter-code on the network frequency. The rats in the room go silent for 30 full seconds. Then resume as normal. (+1 Lore, Doctor Vane is notified you know his name)",
+            "choice_b": "Feed false information into the network to mislead the Concordat AI (Deception + Arcana DC 16)",
+            "consequence_b": "Success: You have Voss transmit false reports: 'Squeaker-Box destroyed. Investigator neutralized. Operations nominal.' The surveillance rating on you drops for several sessions. (+2 Tactical advantage, reduced Concordat attention for 3 sessions)",
+            "convergence": "Either choice, the Squeaker-Box has changed the equation. The rats are not just running a network\u2014they are being managed by something that adapts. It heard your message, or it believed your deception. Either way: it responded."
+        },
+        {
+            "turn": 7,
+            "narrative": "A 12-rat coordinated strike hits the workshop that evening\u2014Guard-Rats and Gloom-Rats in coordinated teams, the first full mixed-unit assault you've faced. They enter from three directions: the window, the drain, and somehow through the chimney. The goal is clearly the Squeaker-Box. Voss has it in his arms and is backing toward the wall, eyes wide. This is the Concordat network's full tactical response: not a threesome of Gloom-Rats but a proper unit acting in concert.",
+            "choice_a": "Defend the Squeaker-Box\u2014hold position and fight the full unit (Combat DC 14, multiple waves)",
+            "consequence_a": "Success: It is punishing. You take hits. The workshop sustains damage. But 12 rats, fought methodically by someone who has been learning their patterns, are not 12 uncountable enemies. All repelled. Squeaker-Box intact. (+1 Progress, hard combat)",
+            "choice_b": "Retreat with Squeaker-Box to Voss's secondary location across the Ward (Athletics + Stealth DC 13)",
+            "consequence_b": "Success: A running retreat through alleys, Voss clutching the Box, you clearing the path. The rats pursue for four blocks then stop\u2014their mission was to destroy the device in the workshop, and you've left their operational radius. (+1 Progress, cleaner outcome, device safe)",
+            "convergence": "The device is safe. The network has spent significant resources trying to recover it and failed. In the aftermath, Voss plays one more translation: a final message, broadcast on a new frequency the Box almost missed. It is a direction, not a report. It says, in perfectly clear Concordat code: 'Enough. Let them have the machine. -V.'"
+        },
+        {
+            "turn": 8,
+            "narrative": "Doctor Vane stood down the assault. That single decision reveals something extraordinary: whatever the Concordat network is\u2014whether it's an AI, a 200-year-old man, or a title passed to a successor\u2014it is making strategic concessions. It let you keep the Squeaker-Box. Either it has calculated that the device is not a long-term threat, or it has decided you are more useful as an informed investigator than a blundering one. The question is which. Voss seals the Squeaker-Box in a leather case and hands it to you. 'I built it to understand nature,' he says. 'Nature, it turns out, is listening back.'",
+            "choice_a": "Bring Voss's translations to the Warden Council for immediate public disclosure (publicize path)",
+            "consequence_a": "The Council debates for two days. In the end, they announce: 'The rat population has been confirmed to carry foreign biological components.' Mass rat culls begin. Concordat network disrupted (moderate). Settlement morale -2 from public fear, but public awareness raised. (+1 Lore to all citizens effectively)",
+            "choice_b": "Classify the translations as intelligence and work with the Watch covertly (suppress path)",
+            "consequence_b": "A small Watch team is briefed. The Squeaker-Box is used in weekly sweeps. Over the next month, 6 planned Concordat operations are identified and intercepted before execution. No mass panic. (+2 Settlement Stability over time)",
+            "convergence": "Quest Complete. The Squeaker-Box is yours. It can translate Concordat chitter-code\u2014a tool of immense value in every subsequent Vermin thread quest. Doctor Vane is real, named, and strategic. The rats are not just watching. They are being watched over."
+        }
+    ],
+    "conclusion": "Voss's laboratory is violently secured and the Squeaker-Box successfully extracts the full target list before shutting down. The mechanical voice commanding the augmented rats to specific nodes mathematically confirms the vermin are operating as an organized, city-wide maintenance and espionage network.",
+    "loot_table": [
+        "Squeaker-Box Translator (unique device - translates rat chitters in-scene, permanent quest tool)",
+        "Gloom-Rat Spore Sac x3 (dangerous crafting material - Star-Ivy spore, handle with care)",
+        "Concordat Transmission Logs (20 pages of translated rat reports, rich lore document)",
+        "Voss Workshop Repair Fund (donated by nobles): 325 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Gloom-Rats rupture spore sacs inside workshop. Star-Ivy incubation begins. High Ward quarantined. -5 Settlement Stability, -3 Settlement Morale.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "id": "EH_SQ_408",
+    "title": "The Empty Granary",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Agricultural Zone -> The Northern Granary",
+    "district": "Agricultural Zone",
+    "thread": "Bakery",
+    "description": "The Northern Granary supplying twelve bakeries shows dramatically lower stock. Grain Inspector Horta suspects organised theft. A midnight wagon and a nervous bin-keeper named Fen point to a Market Ward merchant cornering the flour supply.",
+    "key_npcs": [
+        "Inspector Horta",
+        "Worker Fen",
+        "Driver Cott"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Bin Two's seal was re-applied sloppily \u2014 wax drips the wrong way. Horta points this out with grim satisfaction. Either someone panicked or was working quickly in the dark.",
+            "choice_a": "Question all granary workers about the seal discrepancy",
+            "consequence_a": "Bin-keeper Fen becomes uncomfortable and admits he saw a wagon arrive at night, not on the schedule.",
+            "choice_b": "Examine the bin's interior for physical evidence",
+            "consequence_b": "Wide-axle wagon wheel grooves in the floor don't match standard narrow delivery carts."
+        },
+        {
+            "turn": 2,
+            "narrative": "The off-schedule wagon is traced to driver Cott, who has been making paid midnight runs for a merchant consolidating grain to corner the flour market.",
+            "choice_a": "Follow the grain trail to the merchant immediately",
+            "consequence_a": "The merchant's warehouse is packed with unsold grain. You have enough evidence to act.",
+            "choice_b": "Use Cott as an informant under promise of leniency",
+            "consequence_b": "Cott agrees and identifies three additional warehouse locations."
+        },
+        {
+            "turn": 3,
+            "narrative": "With evidence gathered you move to end the smuggling operation.",
+            "choice_a": "Report the full network to Horta and Ward Authority",
+            "consequence_a": "All grain is seized and returned. The merchant is arrested.",
+            "choice_b": "Give Cott time to flee before reporting, honouring your promise",
+            "consequence_b": "Cott disappears. The merchant is arrested alone. Horta approves."
+        }
+    ],
+    "branching_outcomes": {
+        "merchant_arrested": {
+            "description": "Smuggling merchant arrested, grain returned.",
+            "unlocks": [],
+            "consequences": {
+                "reputation_change": {
+                    "Agricultural Zone": 15,
+                    "Market Ward": 10
+                }
+            }
+        },
+        "cott_spared": {
+            "description": "Cott was allowed to flee. Case still resolved.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Grain Inspector's Commendation",
+                "reputation_change": {
+                    "Agricultural Zone": 20
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Grain Inspector's Commendation",
+        "Smuggler's Manifest",
+        "200x Gold Coins"
+    ],
+    "conclusion": "Smuggling merchant arrested, grain returned."
+}

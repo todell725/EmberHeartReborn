@@ -1,0 +1,69 @@
+{
+    "id": "SQ-262",
+    "title": "The Blind Seer",
+    "difficulty": "Epic",
+    "xp_reward": 2000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-261"
+        ]
+    },
+    "location": "Deep Archive -> The Forbidden Stacks",
+    "district": "Deep Archive",
+    "thread": "Concordat",
+    "description": "A surviving moderate priest tells you the zealots were planning to awaken a \"Sleeping God\" in the city's depths. You must consult the Blind Seer in the Deep Archive to understand this threat.",
+    "key_npcs": [
+        "The Blind Seer",
+        "Rogue Constructs"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Deep Archive's automated guardians have been corrupted by the zealots' magic. They attack you in the stacks.",
+            "choice_a": "Use electricity to short them out",
+            "consequence_a": "They freeze instantly, but the sparks ignite several ancient, irreplaceable tomes.",
+            "choice_b": "Disable them gracefully using Thieves Tools",
+            "consequence_b": "You dismantle them core by core, preserving the historical knowledge."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Blind Seer is ancient, reading raised runes with withered fingers. She reveals the Concordat's true nature\u2014they worship an ancient entity trapped beneath Emberheart.",
+            "choice_a": "Demand the entity's exact location",
+            "consequence_a": "She gives you the coordinates but demands you swear an unavoidable geas to kill it. You accept the magical binding.",
+            "choice_b": "Threaten her to get the information without binding",
+            "consequence_b": "She gives you the coordinates but curses your weapons, causing them to deal 10% less damage for the next week."
+        }
+    ],
+    "branching_outcomes": {
+        "geas_sworn": {
+            "description": "You swore to kill the Concordat's God, unlocking the path.",
+            "unlocks": [
+                "SQ-ELITE-CONCORDAT"
+            ],
+            "consequences": {
+                "item_reward": "Seer's Blessing"
+            }
+        },
+        "cursed_intel": {
+            "description": "You coerced the Seer, gaining the intel but suffering a curse.",
+            "unlocks": [
+                "SQ-ELITE-CONCORDAT"
+            ],
+            "consequences": {
+                "item_reward": "Cursed Coordinates"
+            }
+        }
+    },
+    "loot_table": [
+        "1000x Gold Coins",
+        "Ancient Library Pass"
+    ],
+    "conclusion": "You swore to kill the Concordat's God, unlocking the path.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

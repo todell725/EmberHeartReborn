@@ -1,0 +1,80 @@
+{
+    "id": "EH_SQ_448",
+    "title": "The Hidden Corridor",
+    "difficulty": "Easy",
+    "xp_reward": 450,
+    "prerequisites": {
+        "quests_completed": [],
+        "items_required": []
+    },
+    "location": "Service District -> Below House Renn",
+    "district": "Service District",
+    "thread": "Standalone",
+    "description": "During a routine Service District utility inspection, a worker discovers a sealed passage beneath a noble house's service corridor. The passage extends for at least a hundred metres and ends in a locked iron door. The Ward Authority asks you to determine where the passage leads and whether it poses a security risk.",
+    "key_npcs": [
+        "Utility Inspector Holm",
+        "Noble Owner Representative"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The passage is clean and dry \u2014 not a sewer tunnel. The brickwork is Pre-Scourge quality and the passage has been maintained: no cobwebs, no dust, a faint smell of lantern oil. The locked iron door at the end bears the seal of the old Concordat Civil Service.",
+            "choice_a": "Force the door open to investigate what lies beyond",
+            "consequence_a": "Behind the door is a small chamber containing a map table and several sealed wooden boxes. The map shows a network of service passages beneath the entire noble quarter.",
+            "choice_b": "Return with Archive Researcher Winn before opening anything",
+            "consequence_b": "Winn identifies the door seal as belonging to the Pre-Scourge urban planning division. The passage is a legitimate infrastructure route."
+        },
+        {
+            "turn": 2,
+            "narrative": "The boxes contain Pre-Scourge urban administrative records \u2014 property deeds, utility maps, and population surveys. Also included: a list of fifteen noble house lots that were never legally transferred from Concordat civil ownership, technically making them currently unowned under existing law.",
+            "choice_a": "Bring the ownership list to the Ward Legal Authority immediately",
+            "consequence_a": "A significant legal review is triggered. Several noble families receive letters questioning their property title.",
+            "choice_b": "Secure the documents in the Archive and let the legal question be handled through proper channels over time",
+            "consequence_b": "The documents are archived. The legal question exists but has no immediate urgency."
+        },
+        {
+            "turn": 3,
+            "narrative": "The service passage network itself has significant practical uses for utility maintenance.",
+            "choice_a": "Recommend the passage network be mapped and formally incorporated into Service District infrastructure",
+            "consequence_a": "A mapping project begins. Several utility teams are already planning how to use the passages.",
+            "choice_b": "Recommend the passages remain sealed pending a security assessment",
+            "consequence_b": "The passages are re-sealed. The security assessment is scheduled."
+        }
+    ],
+    "branching_outcomes": {
+        "legal_triggered": {
+            "description": "Ward Legal Authority reviewing noble property ownership.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Pre-Scourge Property Deed",
+                "reputation_change": {
+                    "Service District": 14,
+                    "High Ward": -6
+                }
+            }
+        },
+        "documents_archived": {
+            "description": "Documents secured. Legal question deferred.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Pre-Scourge Urban Map",
+                "reputation_change": {
+                    "Service District": 10
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Pre-Scourge Property Deed",
+        "Pre-Scourge Urban Map",
+        "Service Passage Key",
+        "200x Gold Coins"
+    ],
+    "conclusion": "Ward Legal Authority reviewing noble property ownership."
+}

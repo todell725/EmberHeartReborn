@@ -1,0 +1,154 @@
+{
+    "id": "SQ-016",
+    "title": "The Wailing Pipe",
+    "xp_reward": 550,
+    "prerequisites": "None",
+    "description": "The 'High-Steampunk' district is being plagued by a sound that drives people to madness. It's coming from the Sewer-Main-09.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Sewer-Main-09 is a cavern of dripping brass and green slime. The 'Wail' is a high-pitched, metallic shriek that makes your nose bleed. It sounds like a woman screaming through a flute of rusted iron.",
+            "choice_a": "Block the resonance (Repair DC 12)",
+            "consequence_a": "Success: You stuff rags into the vibrating joints. (+1 Progress)",
+            "choice_b": "Analyze the sound's pattern (Perc DC 13)",
+            "consequence_b": "Success: It's not a random noise; it's a 'Data-Stream' in audio form. (+1 Lore)",
+            "convergence": "A thick, black oil is oozing from the pipe joints, forming patterns on the walls."
+        },
+        {
+            "turn": 2,
+            "narrative": "The oil is forming words in an ancient tongue. It says: 'THE GATES ARE OPEN'. A 'Pipe-Stalker'\u2014a lanky humanoid made of copper tubing\u2014unfolds from the ceiling.",
+            "choice_a": "Defend yourself (Atk DC 13)",
+            "consequence_a": "Success: You strike the tubing, sending sparks into the dark. (+1 Progress)",
+            "choice_b": "Disassemble the Stalker (Tech DC 14)",
+            "consequence_b": "Success: You find its 'Voice-Box' is a stolen music box from the High-Ward. (+1 Secret)",
+            "convergence": "The Stalker retreats deeper into the pipes, leaving a trail of the black oil."
+        },
+        {
+            "turn": 3,
+            "narrative": "The wailing is intensifying. You find a 'Pressure-Valve' that is vibrating so hard it's glowing a dull red. It's about to burst.",
+            "choice_a": "Vent the pressure (Str DC 14)",
+            "consequence_a": "Success: You release a spray of superheated steam. (+100 XP)",
+            "choice_b": "Cool the valve with a 'Frost-Gem'",
+            "consequence_b": "Success: You stabilize the metal. (+1 Progress)",
+            "convergence": "The steam clears, revealing a 'Void-Larva'\u2014a pulsing, purple grub\u2014attached to the valve stem."
+        },
+        {
+            "turn": 4,
+            "narrative": "The Larva is the source of the sound. It's 'screaming' as it drinks the mana from the steam system.",
+            "choice_a": "Extract the Larva (Dex DC 14)",
+            "consequence_a": "Success: You capture it in a lead jar. (+1 Loot)",
+            "choice_b": "Crush the Larva",
+            "consequence_b": "Success: The sound stops instantly, replaced by a haunting silence. (+1 Progress)",
+            "convergence": "The pipe walls begin to cave in\u2014the Larva was the only thing holding the pressure back."
+        },
+        {
+            "turn": 5,
+            "narrative": "You're in a race against the flood. The black oil is rising, and the smell of ozone is overwhelming.",
+            "choice_a": "Sprint for the exit (Athletics DC 13)",
+            "consequence_a": "Success: You outrun the collapse. (+100 XP)",
+            "choice_b": "Seal the breach with 'Forge-Glue' (Tech DC 15)",
+            "consequence_b": "Success: You save the district from flooding. (+5 Morale)",
+            "convergence": "You reach a safe-room, but the door is jammed from the outside."
+        },
+        {
+            "turn": 6,
+            "narrative": "Through the door's porthole, you see a 'Gate-Keeper'\u2014a robot with a megaphone for a head. It's broadcasting the Wail to the upper city.",
+            "choice_a": "Disable the broadcaster (Atk DC 14)",
+            "consequence_a": "Success: You silence the megaphone. (+1 Progress)",
+            "choice_b": "Reason with the machine-spirit (Arcana DC 14)",
+            "consequence_b": "Success: You learn it was programmed to 'Warn the World'. (+1 Intel)",
+            "convergence": "The Gate-Keeper powers down, its megaphone head drooping like a wilted flower."
+        },
+        {
+            "turn": 7,
+            "narrative": "The 'Wail' has been silenced, but the black oil is now glowing with a faint, violet light. It's 'Living Ink'.",
+            "choice_a": "Collect the ink (Int DC 13)",
+            "consequence_a": "Success: You gain a 'Vial of Living Ink'. (+1 Loot)",
+            "choice_b": "Analyze the ink's composition",
+            "consequence_b": "Success: It's made of 'Script-Mana'\u2014the code of the world. (+1 Lore)",
+            "convergence": "The Sewer-Main door opens, revealing the City Engineer, his face white with fear."
+        },
+        {
+            "turn": 8,
+            "narrative": "The Engineer offers you a 'Master-Key' to the sewers if you keep the 'Living Ink' a secret.",
+            "choice_a": "Accept the Key",
+            "consequence_a": "Success: You can now travel the city's depths with ease. (+1 Gear)",
+            "choice_b": "Report the incident to the Council",
+            "consequence_b": "Success: Your reputation for honesty rises. (+5 Reputation)",
+            "convergence": "The 'Wailing Pipe' is replaced with a standard iron conduit."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you walk home, you hear a faint echo of the wail from your own pocket. The Larva (if you took it) is still screaming.",
+            "choice_a": "Feed the Larva a sugar-cube",
+            "consequence_a": "Success: It purrs, a sound like a distant cello. (+1 Luck)",
+            "choice_b": "Give it to the University",
+            "consequence_b": "Success: They reward you with a 'Scholar's Purse'. (+1 Gear)",
+            "convergence": "The High-Steampunk district is quiet once more."
+        },
+        {
+            "turn": 10,
+            "narrative": "The night air is clear. You look at the stars, and for a second, you think they're vibrating in the same frequency as the pipe.",
+            "choice_a": "Go to sleep",
+            "consequence_a": "Success: No nightmares tonight. (+1 Luck)",
+            "choice_b": "Check the other sewer mains",
+            "consequence_b": "Success: You find nothing, but you feel the 'Wail' is still out there. (+1 Lore)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Wailing Pipe was a warning. The 'Living Ink' suggests that someone is rewrite the script of the city from below.",
+    "loot_table": [
+        "Vial of Living Ink",
+        "Sewer Master-Key",
+        "Lead Larva Jar",
+        "550 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "District evacuated. -2 Morale and -5 Local Resources.",
+        "failure_penalty": {
+            "xp_loss": 2
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "High-Steampunk district reports mass madness events",
+        "flags": [
+            "sound_madness"
+        ]
+    },
+    "location": "Sewer-Main-09 \u2014 High-Steampunk District Underbelly",
+    "district": "High-Steampunk District",
+    "thread": "Void",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "City Engineer Orvus",
+        "Gate-Keeper (robot)"
+    ],
+    "mechanics_featured": [
+        "Repair checks",
+        "Perception (sound analysis)",
+        "Combat (construct)",
+        "Stealth"
+    ],
+    "permanent_effects": {
+        "settlement": "Wailing Pipe silenced; Living Ink becomes state secret",
+        "world": "Gate-Keeper's warning logged"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Accept Master-Key",
+            "result": "Sewer network freely traversable"
+        },
+        {
+            "path": "Report incident",
+            "result": "+5 Reputation, transparency bonus"
+        }
+    ]
+}

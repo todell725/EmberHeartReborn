@@ -1,0 +1,73 @@
+{
+    "id": "SQ-216",
+    "title": "The Neural Tap",
+    "difficulty": "Epic",
+    "xp_reward": 1000,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-215"
+        ]
+    },
+    "location": "Academic Quarter -> The Restricted Server-Farm",
+    "district": "Academic Quarter",
+    "thread": "Static",
+    "description": "The Harbinger failed to upload itself, but it managed to back-hack the Academic Quarter's server farms. Scholars are going mad, drawing complex bio-mechanical blueprints in their own blood.",
+    "key_npcs": [
+        "Mad Scholars",
+        "The Whisperer Construct"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Server-Farm is on lockdown. Mad scholars are furiously maintaining a massive receiver dish cobbled together from server parts and bone.",
+            "choice_a": "Stun the scholars non-lethally",
+            "consequence_a": "It takes immense effort and precision. You manage to knock them out, but a massive construct of wire and flesh drops from the ceiling.",
+            "choice_b": "Kill the scholars to secure the room quickly",
+            "consequence_b": "You clear the room brutally. The construct drops down to fight you, but lacks the cultists to heal it."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Whisperer Construct is made of screaming server racks grafted with human lungs. It emits sonic attacks that shatter magic wards.",
+            "choice_a": "Target the servers (Physical damage)",
+            "consequence_a": "You smash the racks, reducing its health but leaving its horrific bio-weapons intact.",
+            "choice_b": "Target the flesh grafts (Fire/Acid damage)",
+            "consequence_b": "You melt away the lungs. The construct loses its sonic attacks, making the fight an easy brawl."
+        }
+    ],
+    "branching_outcomes": {
+        "scholars_saved": {
+            "description": "You defeated the construct without executing the scholars.",
+            "unlocks": [
+                "SQ-217"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Academic Quarter": 30
+                }
+            }
+        },
+        "scholars_killed": {
+            "description": "You cleared the room, leaving the Academic Quarter mourning their loss.",
+            "unlocks": [
+                "SQ-217"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Academic Quarter": -15
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Sonic Ward Breaker",
+        "Advanced Server Parts"
+    ],
+    "conclusion": "You defeated the construct without executing the scholars.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

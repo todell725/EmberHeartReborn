@@ -1,0 +1,162 @@
+{
+    "id": "SQ-174",
+    "title": "The Copper-Plague",
+    "difficulty": "Easy",
+    "xp_reward": 550,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-002"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": {
+        "event_trigger": "City lights begin failing across Market Ward at irregular intervals; mana-engineers find copper corrosion of unknown origin in the primary trunk-lines"
+    },
+    "location": "Market Ward - Mana-Infrastructure Junction Network",
+    "district": "Market Ward",
+    "thread": "Vermin",
+    "estimated_duration": "55 minutes",
+    "key_npcs": [
+        "Chief Engineer Sana Verl (mana-infrastructure, quest-giver)",
+        "Copper-Tails (enemies and subjects of investigation)",
+        "Doctor Vane (confirmed active - a Copper-Tail transmits direct orders from Vane in Turn 6)"
+    ],
+    "mechanics_featured": [
+        "Investigation",
+        "Engineering/Arcana checks",
+        "Combat (Copper-Tails)",
+        "Triage decision-making (multiple failing systems)",
+        "Direct communication with Concordat network"
+    ],
+    "permanent_effects": [
+        "Doctor Vane confirmed as active, real, and directly commanding Concordat operations",
+        "Mana-virus sample obtained (Copper-Plague pathogen, major crafting/research item)",
+        "Market Ward mana-infrastructure damage (+1 or -1 to stability depending on outcome)"
+    ],
+    "branching_outcomes": {
+        "purge_virus": {
+            "description": "Develop and deploy mana-antiviral to cleanse infected lines",
+            "effects": {
+                "settlement_stability": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "lore_gain": "Mana-antiviral formula obtained for future use against Concordat bio-attacks",
+                "permanent_effect": "Market Ward mana-grid fully restored"
+            }
+        },
+        "isolate_sections": {
+            "description": "Cut infected sections from the grid to prevent spread (partial loss, full containment)",
+            "effects": {
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "ambient_hazard": "Three Market Ward blocks permanently on reduced mana (lower lighting, slower equipment). Contained but scarred.",
+                "lore_gain": "Isolated mana-sections become ideal Concordat monitoring points - Shadow-Rats move in within 2 sessions"
+            }
+        }
+    },
+    "description": "Chief Engineer Sana Verl confronts the party with a massive crisis: the Market Ward's primary mana-trunk tower is failing due to an unnatural, corrosive blue medium spreading through the lines. The corrosion is organic\u2014a deliberately engineered mixture of copper flecks and biological slime introduced by heavily augmented vermin. The party must purge the primary mana-trunk, neutralize the vermin injecting the toxin, and secure the city's power grid from this biological sabotage.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Chief Engineer Sana Verl desperately meets you directly at the heavy, reinforced iron base of the primary mana-trunk tower deep in the bustling Market Ward. Her scarred, capable hands are deeply stained with a thick, violent copper corrosion she aggressively cannot wash off. The normally perfectly steady, brilliantly blue glow of the massive city mana-grid is violently stuttering violently above you\u2014three completely different districts rapidly going in and completely out like a dying, suffocating fire. 'It started exactly six hours ago,' she says, her voice intensely tight and frighteningly precise. 'The heavy corrosion is aggressively spreading rapidly through the deep trunk lines. It is absolutely not a mechanical failure. Mechanical failure fundamentally does not spread like a living disease. Something highly intelligent is deliberately putting this perfectly into the deeper lines.' She forcefully shoves a small, heavy glass vial directly into your hand: inside, thick, metallic flecks of raw copper float violently in a highly viscous, sickeningly bright blue medium. It strongly smells like hot, burnt metal and incredibly rotting organic tissue. It is profoundly wrong.",
+            "choice_a": "Analyze the corrosion sample immediately (Arcana DC 12)",
+            "consequence_a": "You carefully hold the thick glass vial directly to the unstable light, thoroughly identifying the complex biological markers hidden deeply within the sludge. It is heavily weaponized, deliberately engineered copper-infused rat saliva utterly designed to violently break down magical barriers entirely.",
+            "choice_b": "Inspect the nearest affected section of mana-trunk to find the source (Investigation DC 11)",
+            "consequence_b": "You flawlessly track the heaviest, thickest trails of the deeply glowing blue slime rapidly down the side of the massive mana-trunk tower perfectly into a deeply hidden, completely corroded maintenance grate violently forced open from the inside out.",
+            "convergence": "As the erratic power violently surges overhead, three terrifying, heavily augmented 'Slime-Rats' suddenly burst aggressively from the heavy trunk's maintenance panel, their heavily modified, copper-lined jaws dripping violently with the incredibly destructive, brightly glowing blue acid."
+        },
+        {
+            "turn": 2,
+            "narrative": "The mana-grid is a tree: a central trunk network branches into district lines, which branch into block lines, which branch into building lines. The Copper-Tails introduced the virus at the trunk level\u2014so it spreads with the mana-current, downstream and upstream simultaneously, following the current in both directions. Verl's team is trying to manually isolate sections but they are not fast enough. There are 14 active entry points. You can help trace and cut off the spread, but it requires moving fast across the Ward.",
+            "choice_a": "Run point on the 4 most critical trunks, letting Verl's team handle the rest (Athletics + Arcana DC 13)",
+            "consequence_a": "Success: You identify the 4 highest-velocity spread points and cut them off\u2014physically pulling the mana-fuse arrays to isolate those sections. Grid degradation slows. You buy 3 extra hours. (+1 Progress)",
+            "choice_b": "Focus on understanding the virus's exact spread pattern to get ahead of it (Investigation DC 14)",
+            "consequence_b": "Success: The virus doesn't spread randomly\u2014it follows the highest-current pathways. You map it: it will reach the central distribution node in exactly 3 hours and 40 minutes, regardless of branch-cutting. The center must be defended directly. (+1 Lore, critical path identified)",
+            "convergence": "Three Copper-Tails are caught in the act at Trunk 7\u2014actively biting new entry points, introducing more virus. They do not stop when you approach. They are mid-task and have been instructed not to stop for anything short of physical incapacitation."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Trunk 7 Copper-Tails fight with the single-minded ferocity of units executing a critical mission. They are faster than the Junction 7 rats\u2014these appear to be a more recent or upgraded model, their copper-tail apparatus more densely interwoven with the body's musculature. When the first one bites your gauntlet, you feel the piezoelectric discharge\u2014a serious jolt, not just a nip. These are combat-capable saboteurs. And they continue to introduce virus material even as they fight, managing two objectives simultaneously with disturbing efficiency.",
+            "choice_a": "Neutralize all three rapidly and seal the Trunk 7 entry points (Combat DC 13)",
+            "consequence_a": "Success: Brutal efficiency required. You take the jolt risk and prioritize speed\u2014two Copper-Tails incapacitated in the first pass, third cornered. Trunk 7 sealed with emergency foam from your kit. Virus introduction stopped at this node. (+1 Progress)",
+            "choice_b": "Pin one Copper-Tail alive for live analysis while driving off the other two (Combat DC 14, precision)",
+            "consequence_b": "Success: The live specimen is extraordinary\u2014pinned under a containment case, it continues its virus-introduction behavior even against the case floor, unable to stop its mission protocol. Under observation, you see the virus delivery system: a gland behind the upper incisor, synthesizing the catalyst in real time. (+1 Lore, Copper-Tail bio-mechanism documented, live specimen obtained)",
+            "convergence": "Trunk 7 is sealed, but Verl's tablet is buzzing constantly now: Trunk 11 critical, Trunk 3 approaching critical, two block-lines down entirely. The Ward's western half is on emergency minimal mana. Businesses are closing. Citizens are worried. The lights keep going out."
+        },
+        {
+            "turn": 4,
+            "narrative": "With Verl's data and your Trunk investigation, a partial antiviral approach presents itself: the mana-virus reacts with the current to spread, but in dead sections\u2014mana-off\u2014it becomes inert. If you can pulse the infected sections to zero mana rapidly, the virus stops spreading in those sections while remaining in the conductor material. It won't cure the existing damage, but it will stop new spread. The catch: dropping mana to zero in a city district, even partially, means lights-out for everyone in that area.",
+            "choice_a": "Execute controlled mana-blackout of affected sections (blocks 3, 7, 11, 14) to freeze virus spread",
+            "consequence_a": "Success: You coordinate with Verl. Four blocks go dark for 12 hours. Citizens are warned, candles distributed, Watch patrols doubled. Virus contained in those sections\u2014no further spread. Damage: 4 blocks temporarily without power. (+1 Progress, containment achieved, minimal long-term damage)",
+            "choice_b": "Attempt to develop an in-line antiviral using Arcana and available materials (Arcana DC 16, ambitious)",
+            "consequence_b": "Success: You synthesize a counter-catalyst from reverse-engineered Concordat chemistry (ironically using notes from the Squeaker-Box translations if available). Introduce it to the main flow: virus neutralized on contact. No blackout required. (+2 Progress, Mana-Antiviral Formula obtained. Failure: blackout becomes necessary anyway, lose 1 hour)",
+            "convergence": "Either path buys time. The central distribution node is now the critical point. Verl confirms: if that node falls, the cascade is total and irreversible. And standing at the base of the central node tower, you both see them: a line of 20 Copper-Tails, organized in a column, moving toward the node access hatch. This is the main assault."
+        },
+        {
+            "turn": 5,
+            "narrative": "Twenty Copper-Tails in a coordinated column is not a pest problem. It is a military operation. They move in staggered pairs, with two larger, armored units at the front acting as point. Their target is the central node access hatch\u2014a small maintenance entry at the base of the distribution tower. If they gain the node interior, they can introduce virus directly into the city's primary mana-heart. Even a partial introduction at that level could crash the entire Market Ward grid within minutes. Behind you, Verl has a fire-suppressant foam unit. You have your weapons. You have 90 seconds before the column reaches the hatch.",
+            "choice_a": "Hold the hatch with a defensive formation\u2014don't let a single Copper-Tail through (Combat DC 15, sustained defense)",
+            "consequence_a": "Success: You and Verl hold the hatch for 8 grueling minutes. The Copper-Tails probe every opening in your defense. 12 units defeated or driven off, 8 simply wait at the edge of your reach. A stalemate that favors you\u2014they won't breach, but you can't pursue. (+1 Progress, node protected)",
+            "choice_b": "Lure the column into the adjacent drainage basin and seal the grating (Tactics DC 14, Environmental use)",
+            "consequence_b": "Success: Verl activates the drainage flow and you drive the column toward the basin with fire-suppressant foam. The leading units go in, the rest follow rather than break formation. Grating sealed. 20 Copper-Tails contained in a drainage basin 10 feet below street level. Elegant. (+1 Progress, clean containment)",
+            "convergence": "The column is dealt with. The node is safe\u2014for now. But as the last Copper-Tail reaches the basin, it transmits a single signal. Short, sharp, coded. Not a report to the network. A request. Addressed to a specific recipient. The recipient's identifier, when you decode it via Squeaker-Box or Arcana DC 14: 'V.'"
+        },
+        {
+            "turn": 6,
+            "narrative": "Three minutes after the signal, the Squeaker-Box in your bag (or a nearby rat-receiver, if you don't have the Box yet) broadcasts a response. It is not in chitter-code. It is in spoken Common\u2014accented, precise, and old, in a way that makes it sound like someone who learned the language before it changed. 'You have been more capable than projected. I had allocated a 94% probability of full cascade by hour 12. You are at hour 9 and holding.' A pause. 'I am not displeased. Competent resistance improves the data quality considerably. The Copper-Plague was a systems test. You have passed. The next phase will not be a test.' The signal cuts. Doctor Vane has made direct contact.",
+            "choice_a": "Attempt to trace and respond to the signal (Arcana DC 16, extremely difficult)",
+            "consequence_a": "Success: You get a partial bearing: the signal originated from below the city\u2014significantly below, at a depth consistent with the Concordat maintenance tunnel network's deepest levels. Not the Archive. Something deeper. You transmit: 'What is the next phase?' The response: 'Something beautiful.' Then silence. (+2 Lore, Vane depth-location partially triangulated)",
+            "choice_b": "Record the transmission verbatim and bring it to the Warden Council immediately",
+            "consequence_b": "The Council listens to the recording. The old accent analysis by the city linguist: 'Pre-Scourge Upper Ward dialect. Not an imitation\u2014the speaker GREW UP speaking this. Either born over 200 years ago, or raised in isolation by pre-Scourge recordings.' Warden Council threat level for Vermin thread: elevated to CRITICAL. (+2 Lore, official escalation)",
+            "convergence": "Vane called it a systems test. The Copper-Plague was not an attack\u2014it was a capability assessment, probing your response time, resource deployment, and tactical creativity. He is cataloguing you with the same clinical rigor he used to design his rats. And he has decided you are interesting enough to keep watching."
+        },
+        {
+            "turn": 7,
+            "narrative": "With the main assault repelled and Vane's call received, the immediate crisis is over. Verl begins repair triage on the mana-infrastructure. The work will take 4-6 days. Three blocks remain on reduced mana. The virus in contained sections will take skilled workers weeks to fully clear. The Market Ward will recover\u2014damaged but functional. But the Copper-Plague itself, the virus formula, has not been addressed. Somewhere in the city's mana-infrastructure, traces of the catalyst remain. And if Copper-Tails introduce a second batch, the response will be faster but the damage will compound on existing weakness.",
+            "choice_a": "Commission a mana-antiviral and have it pre-deployed in all trunk lines as a standing countermeasure",
+            "consequence_a": "Verl calculates the cost: 800 Gold to fully pre-treat the Market Ward trunk network. Expensive, but the grid will automatically neutralize any future virus introduction. Concordat Copper-Plague attack via mana-current: permanently prevented in Market Ward. (+2 Settlement Stability long-term)",
+            "choice_b": "Establish a Copper-Tail rapid response team in the Watch, trained specifically for mana-grid defense (Leadership DC 13)",
+            "consequence_b": "A 6-person Watch unit is trained within the week, with Copper-Tail behavior profiles and containment equipment. Future Copper-Plague events: response time cut by 60%. Human cost: Watch unit's time. (+1 Settlement Stability, ongoing defensive capability)",
+            "convergence": "Either way, the Market Ward's lights stabilize by morning. Citizens step out to find things working again, and most never know how close the grid came to full failure. The Watch officer on duty at the central node overnight files a report: 'No further Copper-Tail activity. However. Significant increase in Shadow-Rat sightings. They appear to be measuring something.'"
+        },
+        {
+            "turn": 8,
+            "narrative": "Final report to Verl. The Copper-Plague was a systems test by an entity that has been active for over 200 years, coordinating bio-mechanical vermin across the city in a multi-phase infrastructure attack. Phase 3 (per CT-2847's record) appears to be mana-redirection to an unknown central point. The Copper-Plague accelerated the timeline\u2014testing your capacity to respond before committing to the real Phase 3 escalation. You have perhaps bought weeks. Verl hands you a sealed mana-virus sample in a hardened case. 'For analysis. Or leverage. Or some alchemist who wants to give someone a very bad day.' She manages something close to dark humor.",
+            "choice_a": "Submit the Mana-Virus Sample and Vane's transmission to the Mage Guild's Concordat Response Division",
+            "consequence_a": "The Guild opens a formal Concordat Research Desk within three days. A dedicated team of 6 scholars is assigned. They will cross-reference every known Concordat document for Vane's name and the Reactivation Protocol. In two weeks they will have a partial answer. (+3 Lore, institutional response established)",
+            "choice_b": "Keep the Mana-Virus Sample and your intelligence close, working privately with the Watch",
+            "consequence_b": "Smaller team, faster action. Less bureaucracy, more control. Working privately with Watch Captain Rhon, you establish a covert Concordat response unit\u2014no public awareness, no panic, faster decisions. (+2 Settlement Stability, covert threat-response infrastructure established)",
+            "convergence": "Quest Complete. The Copper-Plague has been contained. Doctor Vane has made direct contact. The next phase\u2014whatever 'something beautiful' means\u2014is coming. Somewhere far below the city, in the deepest parts of the Concordat maintenance network, something very old is waking up, one mana-wire at a time, 200 years in the making."
+        },
+        {
+            "turn": 9,
+            "narrative": "Walking back through the Market Ward, the lights are steady. The stall-holders are open. A child drops a coin and picks it up. Everything is ordinary. And you are carrying a vial of engineered mana-virus, a recording of a pre-Scourge voice, and the knowledge that somewhere below your feet, an architect of bio-mechanical weapons has been patiently watching this city for two centuries, studying it, testing it, redrawing its infrastructure wire by wire toward an endpoint none of you can name. The rats scatter from your footsteps. You watch them go. One pauses, looks back at you. Its eyes are blue.",
+            "choice_a": "File a formal emergency threat assessment with the Warden Council: Concordat Reactivation Protocol is real and imminent",
+            "consequence_a": "The Council convenes within 24 hours. This is the first formal recognition of the Concordat threat at the government level. Resources are mobilized. The Vermin thread is now a city-level emergency. (+3 Settlement Stability from coordinated response, but Doctor Vane will know the Council is aware\u2014he will adapt)",
+            "choice_b": "Continue working the intelligence quietly\u2014file a standard pest report, let the real investigation run below the surface",
+            "consequence_b": "Vane assumes you have not fully understood what you found. This is an advantage. Working below his awareness, you can continue investigating without triggering whatever adaptation Protocol he will enact upon official escalation. (+2 Intelligence advantage for next 4 Vermin quests)",
+            "convergence": "The final Concordat transmission of the day, picked up by a passing Shadow-Rat and translated by a worn Squeaker-Box: 'Subjects performing at 92nd percentile. Recommend: accelerate timeline. Initiate Phase 4 preparation.' Somewhere, a mechanism that has been patient for 200 years just decided to stop being patient."
+        }
+    ],
+    "conclusion": "The biological corrosion is thoroughly purged from the mana-trunk, successfully restoring the Market Ward's power grid. The discovery that the vermin are capable of weaponizing a specific biological copper-slime confirms they are actively conducting highly organized sabotage against the city's core infrastructure.",
+    "loot_table": [
+        "Mana-Virus Sample (Concordat Copper-Plague pathogen, sealed - crafting/research item)",
+        "Mana-Antiviral Formula (if developed in Turn 4 - protects mana-infrastructure from Copper-Plague permanently)",
+        "Doctor Vane Transmission Recording (rare evidence, aged pre-Scourge voice, key lore artifact)",
+        "Copper-Tail Live Specimen (if captured in Turn 3 - research subject, yields ongoing Concordat biotech intel)",
+        "Market Ward Emergency Response Stipend: 400 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Mana-cascade total. Market Ward grid fails completely. Settlement at -5 to Stability, -4 to Morale. Market Ward non-functional for 2 sessions. Doctor Vane rates you at 40th percentile and accelerates Phase 4 immediately.",
+        "failure_penalty": {
+            "xp_loss": 5
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    }
+}

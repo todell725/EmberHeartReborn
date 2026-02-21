@@ -1,0 +1,80 @@
+{
+    "id": "SQ-234",
+    "title": "The Warlord's Challenge",
+    "difficulty": "Epic",
+    "xp_reward": 2500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-233"
+        ]
+    },
+    "location": "Scourge-Fringe -> The Bloodied Courtyard",
+    "district": "Scourge-Fringe",
+    "thread": "Sovereignty & Order",
+    "description": "The Vanguard is broken. Their leader, a massive Scourge Warlord named 'Gore-Maw', steps into the courtyard, slamming his axe into the cobblestone. He demands single combat.",
+    "key_npcs": [
+        "Gore-Maw the Warlord (Boss)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Gore-Maw is ten feet tall, wearing pre-Scourge tank armor as plating. He charges with terrifying speed for his size.",
+            "choice_a": "Parry the charge (Extreme Strength check)",
+            "consequence_a": "You miraculously stop his momentum, putting him off balance for a massive counter-attack.",
+            "choice_b": "Evade and strike his exposed back",
+            "consequence_b": "You slip past his swing and gouge a deep wound in his unarmored spine."
+        },
+        {
+            "turn": 2,
+            "narrative": "Enraged, Gore-Maw begins violently spinning his massive axe, creating a localized tornado of death.",
+            "choice_a": "Throw a spear into the hurricane directly at his chest",
+            "consequence_a": "The spear hits a gap in his armor, stunning him and stopping the spin instantly.",
+            "choice_b": "Back away and focus on defensive magic",
+            "consequence_b": "You survive the onslaught, but the sheer force of the wind drains your stamina significantly."
+        },
+        {
+            "turn": 3,
+            "narrative": "Gore-Maw drops to one knee, coughing black blood. The surviving horde watches in dead silence.",
+            "choice_a": "Execute him mercilessly",
+            "consequence_a": "His head rolls. The horde breaks and flees entirely. The vanguard is defeated.",
+            "choice_b": "Show him honor and walk away",
+            "consequence_b": "You leave him to bleed out. The horde is demoralized and scatters. You gain legendary status among the Wardens."
+        }
+    ],
+    "branching_outcomes": {
+        "warlord_executed": {
+            "description": "You executed Gore-Maw in front of his horde.",
+            "unlocks": [
+                "SQ-235"
+            ],
+            "consequences": {
+                "item_reward": "Gore-Maw's Cleaver"
+            }
+        },
+        "warlord_shamed": {
+            "description": "You defeated Gore-Maw and let him die slowly, building your legend.",
+            "unlocks": [
+                "SQ-235"
+            ],
+            "consequences": {
+                "item_reward": "Legendary Warden Cloak",
+                "reputation_change": {
+                    "All Districts": 50
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Gore-Maw's Cleaver",
+        "Legendary Warden Cloak",
+        "2000x Gold Coins"
+    ],
+    "conclusion": "You executed Gore-Maw in front of his horde.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

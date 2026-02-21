@@ -1,0 +1,499 @@
+{
+    "version": "1.0",
+    "schema": "NPC_RELATIONSHIP_MATRIX.json",
+    "notes": [
+        "Sparse graph. Only meaningful edges are listed.",
+        "Weights are directed and range [-100..+100].",
+        "If an edge is missing, assume weight = 0.",
+        "PC edges represent first-impression baselines on Day 1 arrival."
+    ],
+    "entities": {
+        "pcs": [
+            "PC-01",
+            "PC-02",
+            "PC-03",
+            "PC-04"
+        ],
+        "npcs": [
+            "EH-01",
+            "EH-02",
+            "EH-03",
+            "EH-04",
+            "EH-05",
+            "EH-06",
+            "EH-07",
+            "EH-08",
+            "EH-09",
+            "EH-10",
+            "EH-11",
+            "EH-12",
+            "EH-13",
+            "EH-14",
+            "EH-15",
+            "EH-16",
+            "EH-17",
+            "EH-18",
+            "EH-19",
+            "EH-20",
+            "EH-21",
+            "EH-22",
+            "EH-23",
+            "EH-24",
+            "EH-25",
+            "EH-26",
+            "EH-27",
+            "EH-28",
+            "EH-29",
+            "EH-30",
+            "EH-31",
+            "EH-32",
+            "EH-33",
+            "EH-34",
+            "EH-35",
+            "EH-36",
+            "EH-37",
+            "EH-38",
+            "EH-39",
+            "EH-40",
+            "EH-41",
+            "EH-42",
+            "EH-43",
+            "EH-44",
+            "EH-45",
+            "EH-46",
+            "EH-47"
+        ]
+    },
+    "edges": [
+        {
+            "from": "EH-01",
+            "to": "EH-02",
+            "weight": 15
+        },
+        {
+            "from": "EH-01",
+            "to": "EH-03",
+            "weight": 10
+        },
+        {
+            "from": "EH-01",
+            "to": "EH-04",
+            "weight": 5
+        },
+        {
+            "from": "EH-01",
+            "to": "EH-05",
+            "weight": 30
+        },
+        {
+            "from": "EH-02",
+            "to": "EH-01",
+            "weight": 12
+        },
+        {
+            "from": "EH-02",
+            "to": "EH-05",
+            "weight": 40
+        },
+        {
+            "from": "EH-05",
+            "to": "EH-02",
+            "weight": 45
+        },
+        {
+            "from": "EH-03",
+            "to": "EH-01",
+            "weight": 18
+        },
+        {
+            "from": "EH-03",
+            "to": "EH-21",
+            "weight": 15
+        },
+        {
+            "from": "EH-21",
+            "to": "EH-03",
+            "weight": 10
+        },
+        {
+            "from": "EH-03",
+            "to": "EH-04",
+            "weight": -20
+        },
+        {
+            "from": "EH-04",
+            "to": "EH-22",
+            "weight": 55
+        },
+        {
+            "from": "EH-04",
+            "to": "EH-23",
+            "weight": -10
+        },
+        {
+            "from": "EH-04",
+            "to": "EH-24",
+            "weight": 35
+        },
+        {
+            "from": "EH-04",
+            "to": "EH-25",
+            "weight": 25
+        },
+        {
+            "from": "EH-04",
+            "to": "EH-26",
+            "weight": 45
+        },
+        {
+            "from": "EH-04",
+            "to": "EH-27",
+            "weight": 40
+        },
+        {
+            "from": "EH-22",
+            "to": "EH-04",
+            "weight": 60
+        },
+        {
+            "from": "EH-23",
+            "to": "EH-04",
+            "weight": 15
+        },
+        {
+            "from": "EH-24",
+            "to": "EH-04",
+            "weight": 40
+        },
+        {
+            "from": "EH-25",
+            "to": "EH-04",
+            "weight": 30
+        },
+        {
+            "from": "EH-26",
+            "to": "EH-04",
+            "weight": 55
+        },
+        {
+            "from": "EH-27",
+            "to": "EH-04",
+            "weight": 45
+        },
+        {
+            "from": "EH-23",
+            "to": "EH-28",
+            "weight": -35
+        },
+        {
+            "from": "EH-23",
+            "to": "EH-29",
+            "weight": -20
+        },
+        {
+            "from": "EH-23",
+            "to": "EH-30",
+            "weight": -40
+        },
+        {
+            "from": "EH-23",
+            "to": "EH-31",
+            "weight": -25
+        },
+        {
+            "from": "EH-23",
+            "to": "EH-32",
+            "weight": -15
+        },
+        {
+            "from": "EH-28",
+            "to": "EH-01",
+            "weight": 10
+        },
+        {
+            "from": "EH-28",
+            "to": "EH-04",
+            "weight": -5
+        },
+        {
+            "from": "EH-28",
+            "to": "EH-32",
+            "weight": 20
+        },
+        {
+            "from": "EH-32",
+            "to": "EH-21",
+            "weight": 35
+        },
+        {
+            "from": "EH-21",
+            "to": "EH-32",
+            "weight": 25
+        },
+        {
+            "from": "EH-02",
+            "to": "EH-06",
+            "weight": 35
+        },
+        {
+            "from": "EH-02",
+            "to": "EH-08",
+            "weight": 25
+        },
+        {
+            "from": "EH-02",
+            "to": "EH-09",
+            "weight": 30
+        },
+        {
+            "from": "EH-05",
+            "to": "EH-20",
+            "weight": 30
+        },
+        {
+            "from": "EH-20",
+            "to": "EH-05",
+            "weight": 20
+        },
+        {
+            "from": "EH-20",
+            "to": "EH-02",
+            "weight": 25
+        },
+        {
+            "from": "EH-02",
+            "to": "EH-20",
+            "weight": 35
+        },
+        {
+            "from": "EH-17",
+            "to": "EH-19",
+            "weight": 40
+        },
+        {
+            "from": "EH-19",
+            "to": "EH-17",
+            "weight": 30
+        },
+        {
+            "from": "EH-18",
+            "to": "EH-17",
+            "weight": 20
+        },
+        {
+            "from": "EH-17",
+            "to": "EH-18",
+            "weight": 15
+        },
+        {
+            "from": "EH-44",
+            "to": "EH-02",
+            "weight": 35
+        },
+        {
+            "from": "EH-47",
+            "to": "EH-04",
+            "weight": 25
+        },
+        {
+            "from": "EH-47",
+            "to": "EH-01",
+            "weight": 15
+        },
+        {
+            "from": "EH-43",
+            "to": "EH-03",
+            "weight": 10
+        },
+        {
+            "from": "EH-39",
+            "to": "EH-04",
+            "weight": -15
+        },
+        {
+            "from": "EH-39",
+            "to": "EH-01",
+            "weight": -10
+        },
+        {
+            "from": "EH-01",
+            "to": "PC-01",
+            "weight": 15
+        },
+        {
+            "from": "EH-01",
+            "to": "PC-02",
+            "weight": 10
+        },
+        {
+            "from": "EH-01",
+            "to": "PC-03",
+            "weight": 5
+        },
+        {
+            "from": "EH-01",
+            "to": "PC-04",
+            "weight": 10
+        },
+        {
+            "from": "EH-02",
+            "to": "PC-01",
+            "weight": 25
+        },
+        {
+            "from": "EH-02",
+            "to": "PC-02",
+            "weight": 5
+        },
+        {
+            "from": "EH-02",
+            "to": "PC-03",
+            "weight": 0
+        },
+        {
+            "from": "EH-02",
+            "to": "PC-04",
+            "weight": 10
+        },
+        {
+            "from": "EH-03",
+            "to": "PC-01",
+            "weight": 0
+        },
+        {
+            "from": "EH-03",
+            "to": "PC-02",
+            "weight": 5
+        },
+        {
+            "from": "EH-03",
+            "to": "PC-03",
+            "weight": -5
+        },
+        {
+            "from": "EH-03",
+            "to": "PC-04",
+            "weight": 5
+        },
+        {
+            "from": "EH-04",
+            "to": "PC-01",
+            "weight": 5
+        },
+        {
+            "from": "EH-04",
+            "to": "PC-02",
+            "weight": 10
+        },
+        {
+            "from": "EH-04",
+            "to": "PC-03",
+            "weight": 0
+        },
+        {
+            "from": "EH-04",
+            "to": "PC-04",
+            "weight": 10
+        },
+        {
+            "from": "EH-05",
+            "to": "PC-01",
+            "weight": 10
+        },
+        {
+            "from": "EH-05",
+            "to": "PC-02",
+            "weight": 10
+        },
+        {
+            "from": "EH-05",
+            "to": "PC-03",
+            "weight": 5
+        },
+        {
+            "from": "EH-05",
+            "to": "PC-04",
+            "weight": 10
+        },
+        {
+            "from": "EH-17",
+            "to": "PC-02",
+            "weight": 20
+        },
+        {
+            "from": "EH-21",
+            "to": "PC-03",
+            "weight": 10
+        },
+        {
+            "from": "EH-22",
+            "to": "PC-04",
+            "weight": 15
+        },
+        {
+            "from": "EH-23",
+            "to": "PC-04",
+            "weight": -10
+        },
+        {
+            "from": "EH-28",
+            "to": "PC-03",
+            "weight": 15
+        },
+        {
+            "from": "EH-29",
+            "to": "PC-02",
+            "weight": 10
+        },
+        {
+            "from": "EH-30",
+            "to": "PC-03",
+            "weight": 10
+        },
+        {
+            "from": "PC-01",
+            "to": "EH-02",
+            "weight": 20
+        },
+        {
+            "from": "PC-01",
+            "to": "EH-05",
+            "weight": 10
+        },
+        {
+            "from": "PC-01",
+            "to": "EH-04",
+            "weight": 5
+        },
+        {
+            "from": "PC-02",
+            "to": "EH-17",
+            "weight": 20
+        },
+        {
+            "from": "PC-02",
+            "to": "EH-01",
+            "weight": 5
+        },
+        {
+            "from": "PC-03",
+            "to": "EH-01",
+            "weight": 10
+        },
+        {
+            "from": "PC-03",
+            "to": "EH-03",
+            "weight": 5
+        },
+        {
+            "from": "PC-04",
+            "to": "EH-04",
+            "weight": 5
+        },
+        {
+            "from": "PC-04",
+            "to": "EH-01",
+            "weight": 5
+        }
+    ]
+}

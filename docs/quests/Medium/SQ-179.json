@@ -1,0 +1,204 @@
+{
+    "id": "SQ-179",
+    "title": "The Rat-Mask Cult",
+    "difficulty": "Medium",
+    "xp_reward": 1100,
+    "thread": "Vermin",
+    "district": "Lower Ward",
+    "estimated_duration": "2-3 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-004"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete SQ-04 (The Rat King's Crown) \u2014 quest works regardless of how the Rat King encounter resolved",
+    "location": "Lower Ward \u2014 Catacomb access points, the Underpipe Cathedrals, the Gnaw-Market perimeter",
+    "npcs": [
+        {
+            "name": "High Priest Dorren Vex",
+            "role": "Boss",
+            "description": "Former Lower Ward city administrator who became obsessed with the Rat King assassination/mercy event and organized the cult from its aftermath. Augmented with copper-tail wiring that he installed himself, imperfectly. He is intelligent, charismatic, and completely convinced that the Rat King was a god whose death or departure was a divine punishment for humanity's failures. He genuinely believes."
+        },
+        {
+            "name": "Sister Nara (Nara Fent)",
+            "role": "Inside contact",
+            "description": "A cult member who reached out to Skitter-Jack privately. She joined the cult six months ago when her family lost their Lower Ward tenement. She wants out but is afraid of Vex. She will cooperate with the party if they guarantee her safety."
+        },
+        {
+            "name": "The Rat Council / The Duchess",
+            "role": "Interested party",
+            "description": "The Rat Council is watching the cult with wariness. The worship of the Rat King as a deity is not something they endorse \u2014 they knew the Rat King personally, and he was not a god. But the cult has been valuable to copper-tail units in the Lower Ward, providing shelter and protection. The Duchess's position: the cult is complicated."
+        }
+    ],
+    "description": "Sister Nara brings deeply disturbing intelligence regarding the 'Rat-Mask Cult', a desperate religious movement formed in the Lower Ward by displaced citizens following the Rat King events. The cult's leader, Vex, is actively planning a horrific 'Communion' ceremony to surgically install scavenged copper-tail neural-lattice components directly into the skulls of willing congregation members. The party must infiltrate the catacomb antechambers, aggressively interrupt Vex's lethal surgical ritual, and prevent the horrific mass-conversion of desperate citizens.",
+    "mechanics": [
+        "Persuasion (convert leadership or key members; negotiate with Vex directly)",
+        "Deception (infiltrate the cult with false devotion)",
+        "Investigation (map cult size, leadership structure, and Communion plan timeline)",
+        "Combat (High Priest Vex if confronted directly \u2014 Medium encounter, imperfect copper-tail augmentation giving him enhanced physicality at the cost of pain and instability)",
+        "Medicine (assess the Communion procedure's lethality; potentially propose a safe alternative)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Cult converted to legitimate organization",
+            "effect": "settlement_morale +3; new Lower Ward community mutual-aid network established; copper-tail units in Lower Ward become less aggressive toward cult territory"
+        },
+        {
+            "trigger": "Cult dismantled",
+            "effect": "settlement_stability +2; settlement_morale -1 (community services lost); Vex imprisoned or fled"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Skitter-Jack brings terrifying word from Sister Nara: the fanatic 'Rat-Mask Cult' has been violently organizing in the shadows since the Rat King was deposed. Under the charismatic leadership of an unhinged man named Vex, the cult has established genuine community services in the ancient catacomb antechambers, filling a desperate gap the Ward Council ignores. Nara's terror, however, is specific: Vex has announced a 'Communion' ceremony in twelve days. He plans to surgically install crude, corroded copper-tail neural-lattice components\u2014salvaged from dead augmented rats\u2014directly into the skulls of willing cult members. She fears they don't understand what 'willing' truly means, and she is positive they won't survive the procedure.",
+            "choice_a": "Meet with Sister Nara immediately and gather full intelligence on the cult's structure",
+            "consequence_a": "You powerfully step directly before the utterly desperate, deeply misguided congregation and beautifully aggressively expose Vex's horrifying, violently lethal technological delusion. Your deeply genuine, powerfully impassioned plea utterly breaks his incredibly fragile charismatic hold, causing the absolutely terrified cult members to completely violently abandon him immediately.",
+            "choice_b": "Observe the cult's public activities first before making contact with Nara",
+            "consequence_b": "You slip completely unnoticed into his highly guarded back room. You deploy a small, concentrated acidic charge that silently melts the salvaged copper-tail components into utterly useless, harmless slag.",
+            "convergence": "Vex realizes his Communion is violently ruined. He draws a jagged, heavily rusted blade, his eyes flashing with absolute, terrifying madness as he screams for his congregation to kill the intruders."
+        },
+        {
+            "turn": 2,
+            "narrative": "The Rat Council's position, communicated through Skitter-Jack: the Duchess knew the Rat King. He was large, clever, and in significant pain from the copper-tail augmentation that had been done to him. He was not a god. He was a rat who had been modified beyond his biology's tolerance and was managing it with exceptional will. The cult's worship implies a divinity that the Duchess finds factually incorrect, not theologically offensive. She is more concerned about the copper-tail units the cult has been sheltering and feeding. In exchange for this hospitality, the copper-tail units have been providing the cult with 'security patrols' \u2014 early warning of Watch incursions. The cult and the copper-tail network have a symbiotic relationship the Duchess did not arrange and does not entirely approve of. She asks the party: 'If you dismantle the cult, what happens to the sixty humans who currently have food?'",
+            "choice_a": "Tell the Duchess you intend to convert the cult, not destroy it \u2014 the community services will survive",
+            "consequence_a": "The Duchess's position shifts slightly: if the cult's community function is preserved under different leadership or mandate, she will instruct copper-tail units in the territory to maintain their current non-aggressive stance during the party's intervention.",
+            "choice_b": "Tell the Duchess you'll assess and decide \u2014 no prior commitment",
+            "consequence_b": "The Duchess accepts. The copper-tail units remain neuter \u2014 not hostile but not helpful. The party's options are fully open.",
+            "convergence": "The party's approach to Vex and the cult begins taking shape."
+        },
+        {
+            "turn": 3,
+            "narrative": "The Communion plan, assessed medically with Dr. Solt's consultation (if she is a contact) or Medicine DC 15 from party knowledge: salvaged copper-tail neural-lattice components installed surgically by a non-surgeon into human skull tissue. The neural-lattice is designed for rat neurology \u2014 the synaptic bridging compounds are calibrated for mammals but not human-scale neural density. At rat scale: manageable with the Mana-Filter Implant. At human scale: catastrophic inflammatory response. Vex's Communion ceremony will kill between 70% and 90% of participants within 48 hours of implantation. The survivors, if any, will not be enhanced \u2014 they will be in permanent neural distress, like the Alpha rat in EH_SQ_078. He genuinely does not know this. He believes the Rat King's augmentation gave him strength; he is designing a ceremony to share that strength with his congregation.",
+            "choice_a": "Tell Vex the procedure will kill his congregation",
+            "consequence_a": "Meeting with Vex required. This is the conversion path's hinge point. Persuasion DC 17 (he deeply believes the procedure will work; his faith is sincere; he will not accept criticism easily). With medical documentation (Solt's notes, the Alpha's case) DC reduces to 13. Success opens negotiation about what the cult becomes instead.",
+            "choice_b": "Prevent the Communion without telling Vex \u2014 remove the materials, destroy the procedure space",
+            "consequence_b": "Covert sabotage. Deception or Stealth DCs required to enter the catacomb Communion chamber and remove or destroy the salvaged neural-lattice components. This delays the ceremony but does not resolve the cult's leadership problem.",
+            "convergence": "The party must ultimately decide whether to engage Vex or work around him."
+        },
+        {
+            "turn": 4,
+            "narrative": "Vex in person: he meets in the catacomb antechamber wearing his High Priest regalia \u2014 a full rat-skull mask, copper wire wrapped around his forearms and calves in patterns that mirror (imperfectly) the copper-tail augmentation routing. The wiring is installed under his skin in sections. It is clearly painful; he holds himself carefully to avoid flexing his wrists. He is in his 50s, previously well-dressed, still articulate. He believes completely that the Rat King was a manifestation of something greater than an ordinary creature \u2014 something the city threw away, something that suffered for what EmberHeart failed to protect in its underclass. His sermon, delivered without prompting, is not delusional. It is a very coherent theology of urban neglect. The Communion, he says, is not surgery. It is sacrament.",
+            "choice_a": "Engage with his theology before presenting the medical reality \u2014 meet him where he is",
+            "consequence_a": "Insight check DC 12: Vex wants to be heard more than he wants to be right. He has had this faith for eight months and has not had a single conversation with someone who took it seriously enough to argue with. Spending twenty minutes on his theological framework before introducing the medical problem reduces Persuasion DC to 11.",
+            "choice_b": "Present the medical evidence directly and clearly \u2014 he is a former administrator, he respects documentation",
+            "consequence_b": "His administrative instincts engage alongside his faith. He asks technical questions about the neural-lattice scale-calibration issue. He is harder to persuade emotionally but easier to persuade logically. Persuasion DC 15, but with advantage if the Mana-Filter Implant case is presented.",
+            "convergence": "Vex is either opened to conversation or beginning to entrench. The next several turns determine whether the conversion path succeeds."
+        },
+        {
+            "turn": 5,
+            "narrative": "The conversion path, if succeeding: Vex's breaking point is not the mortality statistics. It is the Alpha's case \u2014 the photograph of an animal in pain from the same augmentation he is proposing to give his congregation. He looks at this (if presented) for a very long time. Then: 'He was suffering.' A statement, not a question. 'For months.' He sits down. The theology does not break \u2014 he finds the Alpha's suffering consistent with his belief that the Rat King's augmentation was a form of sacrifice. But the Communion procedure, he concedes, would not give his congregation the Rat King's strength. It would give them the Alpha's pain. Those are not the same thing. He does not disband the cult. He asks: can there be a Communion without this procedure. The party has twelve days to answer.",
+            "choice_a": "Propose the interface compound from EH_SQ_078 as a controlled, temporary Communion alternative",
+            "consequence_a": "With Dr. Solt's involvement: a Communion ritual using a controlled safe dose of the mana-interface compound could give participants a brief genuine connection to the copper-tail relay network. This is closer to theological authenticity than Vex's procedure. He is stunned. He agrees to delay the Communion to consider this.",
+            "choice_b": "Propose converting the cult to a secular community organization \u2014 drop the theological frame entirely",
+            "consequence_b": "Persuasion DC 17 \u2014 this requires Vex to abandon his faith, which is also his identity since SQ-04. On success: a very painful concession that he makes because the community services matter more to him than the sacrament. On failure he agrees to delay but not abandon the theology.",
+            "convergence": "The Communion ceremony is either replaced with a safer alternative, postponed indefinitely, or dismantled. The cult's community services continue in some form."
+        },
+        {
+            "turn": 6,
+            "narrative": "Sister Nara's exit: regardless of how the Vex negotiation goes, Nara and the three members she identified want to leave. They have families outside the cult, lives they returned to only partially. None of them were coerced in the classic sense \u2014 they joined willingly, desperately, and now want out with equal desperation. The exit requires navigating out of the catacomb district without the more zealous cult members noticing. Vex, depending on his current disposition (converted or still resistant), either facilitates this quietly or does not oppose it. He has never prevented anyone from leaving. That is, unexpectedly, true.",
+            "choice_a": "Escort Nara and the three others out personally",
+            "consequence_a": "The extraction goes cleanly. No confrontation. Nara provides one final piece of intelligence: the copper wire in the catacomb walls \u2014 decorative, she thought \u2014 is actually connected to the copper-tail units outside. Vex has been using them as an alarm system for months. He knew the party was coming before they arrived.",
+            "choice_b": "Arrange the extraction through a third party \u2014 Skitter-Jack or Fen Moss",
+            "consequence_b": "Extraction completed safely through intermediaries. The party is not seen leaving with the defectors. Vex cannot formally acknowledge knowing.",
+            "convergence": "Nara and the three members are safely extracted. Vex knew they were leaving. He did not stop them. Whatever his theology, this is not a coercive organization."
+        },
+        {
+            "turn": 7,
+            "narrative": "The combat path, if the Vex negotiation has failed or the party chose disruption over diplomacy: Vex in combat is a Medium encounter defined by his imperfect augmentation. His copper-wire installation is causing him constant base-level pain; in combat it becomes an active liability. He has enhanced strength (the copper-wire provides genuine if crude augmentation) and surprising speed, but every high-exertion movement causes him visible agony. He fights with a long copper-bound staff and will attempt to use the catacomb's geography \u2014 tight, low corridors \u2014 to limit area-effect attacks. At half HP, the copper-wire installation begins arcing across his forearms, dealing 1d4 lightning damage to anyone adjacent. He does not flee. He believes in this cause enough to die for it. A successful Persuasion DC 14 mid-combat can stop the fight.",
+            "choice_a": "Subdue Vex without killing him \u2014 he should face justice, not martyrdom",
+            "consequence_a": "Vex is captured. Presented to the City Watch. The cult fractures without his leadership. The community services collapse but may be reassembled under Nara or another member in 2-4 weeks.",
+            "choice_b": "Defeat Vex decisively",
+            "consequence_b": "Vex is killed. He becomes a martyr. The cult fragment-survives under three competing successor figures, none with his charisma. It diminishes but does not disappear. The community services collapse temporarily.",
+            "convergence": "The cult's leadership question is resolved one way or another."
+        },
+        {
+            "turn": 8,
+            "narrative": "The cult's sixty members: regardless of how Vex's situation resolved, these are sixty Lower Ward residents who had food, shelter, and community and now are uncertain whether they still do. The community services \u2014 food distribution, skills exchange, nighttime shelter \u2014 require someone to operate them. The physical resources exist: the catacomb antechambers are structurally sound, the supply chain Vex established is real. If the cult converts to a secular organization, the transition is managed. If the cult is dismantled, the sixty members scatter. If the cult continues under new leadership, the services continue under new management. The Duchess's question from Turn 2 receives its answer now.",
+            "choice_a": "Work with Nara to establish a civilian community organization from the cult's infrastructure",
+            "consequence_a": "2-3 weeks of organizational work (off-screen). Nara becomes the organization's director. The Lower Ward Mutual Aid Society is formally registered with the Ward Authority. Settlement morale +3. The catacomb antechambers are repurposed as a legitimate community space.",
+            "choice_b": "Refer the sixty members to existing city services and let the infrastructure disperse",
+            "consequence_b": "Existing city services absorb approximately 40 of the 60 members adequately. 20 fall through gaps the city services don't reach. Settlement morale -1 for this shortfall. Some will re-form around a new informal organization within 2 months.",
+            "convergence": "The Lower Ward's community services question is resolved in a form that will persist."
+        },
+        {
+            "turn": 9,
+            "narrative": "The copper wire and rat masks: the cult's aesthetics have been collected, modified, and produced by its members over eight months. The rat masks, in particular, are works of craft \u2014 detailed, expressive, individually made. Some of them are very good. The cult's artisan members, following the disruption, are sitting on a collection of genuinely skilled objects that have no obvious use for a secular community organization. A Market Ward collector approaches Skitter-Jack (who approaches the party) with an unlikely offer: there is a market for these masks. The aesthetic of 'vermin devotion' is, inexplicably, fashionable in at least three ward districts. The artisan members of the former cult could fund the mutual-aid organization's first year through mask sales. The irony is not lost on anyone.",
+            "choice_a": "Facilitate the mask-sale arrangement",
+            "consequence_a": "The artisan members form a small cooperative. The mutual-aid organization is funded for 14 months from sales revenue. Settlement morale +1. The Rat-Mask aesthetic spreads through the city in diluted form.",
+            "choice_b": "Decline \u2014 the cult's iconography should not be capitalized on",
+            "consequence_b": "The masks are distributed to members as personal items or destroyed per individual choice. The funding problem is solved another way (community donations, ward grant).",
+            "convergence": "The financial sustainability of whatever organization emerged from the cult is addressed."
+        },
+        {
+            "turn": 10,
+            "narrative": "The Rat Council's response: the Duchess, through Skitter-Jack, sends a formal acknowledgment. The cult's worship of the Rat King as a deity is theologically inaccurate but the Duchess concedes it is, in an odd way, a form of testimony \u2014 sixty humans affected enough by the Rat King's existence to organize their lives around it. She does not endorse the theology. She endorses the outcome: sixty humans who were hungry are less hungry. The copper-tail units who had been sheltering in the cult's territory can continue if the new organization permits it. The Duchess offers a token of ongoing relationship: the Rat Council will maintain awareness of the new organization and provide early warning of any Lower Ward structural emergencies via Skitter-Jack. An informal civil defense arrangement.",
+            "choice_a": "Accept the Rat Council's civil defense arrangement formally",
+            "consequence_a": "The arrangement is established. The Rat Council becomes an informal infrastructure partner for the Lower Ward Mutual Aid Society. Future Lower Ward emergency response gets early warning through Skitter-Jack.",
+            "choice_b": "Decline formal arrangement; maintain the Council relationship separately from the community organization",
+            "consequence_b": "The Council's offer is noted and deferred. The relationship remains personal to the party rather than institutional.",
+            "convergence": "The Rat Council relationship has deepened through this quest regardless of the formal arrangement decision."
+        },
+        {
+            "turn": 11,
+            "narrative": "Vex's theology, in retrospect: the Rat King, as he experienced it from SQ-04 reports and the cult's collected testimonies, was a mass of augmentation distress and adaptive intelligence surviving it. Vex interpreted that as divinity. The party and the Duchess know the copper-tail program's actual history: Concordat welfare infrastructure, 200 years of automated operation, V.A./Vane's maintenance work. The Rat King was an animal that suffered through two centuries of augmentation without dying. That is not divinity. But the Duchess's comment in Turn 2 lingers: the Rat King persisted through conditions that should have ended him, and then \u2014 depending on SQ-04's resolution \u2014 either died or did not. If he did not die, where is he? The cult's belief that the Rat King 'departed' rather than died is either mystical thinking or information the Duchess doesn't have.",
+            "choice_a": "Ask the Duchess directly: is the Rat King alive?",
+            "consequence_a": "The Duchess is still for a long time. 'I do not know. He stopped being in the network eleven weeks after your encounter. Whether that means death or displacement or something else \u2014 I cannot tell you. The network does not record absences. It records presences.' He may be gone. He may be somewhere the relay network doesn't reach.",
+            "choice_b": "Don't pursue the question \u2014 the cult's belief doesn't need to be adjudicated",
+            "consequence_b": "The Rat King's fate remains a deliberate ambiguity. His theological status in the cult, unresolved by the party, allows the community organization to maintain some narrative continuity with its origin story.",
+            "convergence": "The Rat King's fate is either investigated or left ambiguous. Either has narrative implications for the Vermin thread's conclusion."
+        },
+        {
+            "turn": 12,
+            "narrative": "One month after the resolution, the Lower Ward is measurably different from a community metrics standpoint regardless of approach. The catacomb antechambers are occupied with purpose. Sixty people know each other's names and skills and have a place to be in the evening. Skitter-Jack reports that the copper-tail units in the Lower Ward's informal territory the cult managed have shifted into what he describes as 'ambient cooperative' mode \u2014 not directed, not patrol-pattern, just present in a way that feels chosen rather than programmed. The Duchess's early-warning arrangement, if established, has already flagged one structural concern in a block adjacent to the Prospect Lane colony's old building. The Lower Ward is not better by the city's administrative metrics. But it is better by other measuring systems. The quest ends not with a dramatic resolution but with the quieter fact of sixty people who have enough.",
+            "choice_a": "Check in on Sister Nara and the new organization one month later",
+            "consequence_a": "Nara is exhausted, effective, and more herself than she was in the cult. She has retained one element of the cult's ritual: a weekly assembly where members share one thing they're grateful for. She de-theologized it. 'It turns out gratitude doesn't require a rat god,' she says. 'Just somewhere to say it.'",
+            "choice_b": "Move forward; the Lower Ward's situation has been addressed sufficiently",
+            "consequence_b": "Future Lower Ward investigation checks have advantage as a general consequence of the improved community relationships and Rat Council cooperation.",
+            "convergence": "Quest complete. The Rat-Mask Cult is resolved \u2014 converted, dismantled, or transformed. The Lower Ward has a functioning community organization of some form. The Rat King's fate remains a meaningful open question."
+        }
+    ],
+    "conclusion": "The horrific Communion ceremony is violently interrupted, decisively putting an end to Vex's lethal obsession and ultimately saving the deeply desperate congregation from horrific neurological mutilation. The horrifying revelation that scavenged Concordat biocontroller components can be crudely grafted onto human subjects underscores the extreme danger of the city's unchecked, highly unregulated technological scavenging.",
+    "loot_table": [
+        "Rat-Mask of the Faithful (masterwork example of Vex's personal mask; elaborate copper-wire chasing and carved bone; grants Advantage on Persuasion checks with Lower Ward residents who associate the mask with the mutual-aid organization; Disadvantage on the same checks with Watch personnel in Market Ward)",
+        "Cultist Robes (six sets; copper-wire-threaded cloth; well-made; useful as disguise in cult-adjacent social situations; could be sold to the collector for 80 gold each)",
+        "High Priest Vex's Augmentation Notes (his personal research into copper-tail neural-lattice installation in human subjects; medically useful documentation of what not to do and why; Dr. Solt will want this for safety research)",
+        "Catacomb Infrastructure Survey (Nara's mental map of the catacomb antechamber network formalized; structural assessment; useful for Lower Ward emergency response)",
+        "900 gold (combination of Watch civic resolution payment and community contribution from the sixty members \u2014 they insisted)"
+    ],
+    "branching_outcomes": {
+        "cult_converted": {
+            "description": "Vex accepts the medical reality; Communion replaced with safe alternative; cult transitions to Lower Ward Mutual Aid Society",
+            "effects": {
+                "settlement_morale": 3,
+                "settlement_stability": 1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Lower Ward Mutual Aid Society established; Nara becomes recurring NPC director; Rat Council civil defense arrangement active"
+            }
+        },
+        "cult_dismantled": {
+            "description": "Vex defeated or arrested; cult disbanded; community services collapsed then partially rebuilt",
+            "effects": {
+                "settlement_morale": -1,
+                "settlement_stability": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Vex imprisoned or dead; cult fragments but does not disappear entirely; settlement morale -1 for lost services before replacement is established"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "The Communion ceremony proceeds before the party can intervene. Forty-two of the sixty participants die during or within 48 hours of the procedure. Vex, horrified, flees the city. The cult collapses entirely. The Lower Ward loses both its community services and 42 residents simultaneously \u2014 a catastrophic morale event. Settlement morale -4. The Watch investigates as a mass casualty incident.",
+        "failure_penalty": {
+            "xp_loss": 48
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    }
+}

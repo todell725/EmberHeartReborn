@@ -1,0 +1,82 @@
+{
+    "id": "SQ-220",
+    "title": "The Silent Protocol",
+    "difficulty": "Epic",
+    "xp_reward": 2500,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-219"
+        ]
+    },
+    "location": "Expedition -> The Ruined Uplink Array",
+    "district": "Expedition",
+    "thread": "Static",
+    "description": "The 'Static' thread culminates at the Ruined Uplink Array outside the city walls. You must destroy the satellite dish before Aegis finishes reconnecting the Pantheon.",
+    "key_npcs": [
+        "Aegis Combat Frames",
+        "The Dish (Target)"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "You reach the Uplink Array. The dish is humming, aiming at the starless sky. Four Aegis Combat Frames, perfectly clean pre-Scourge robots, guard the base.",
+            "choice_a": "Engage them head-to-head",
+            "consequence_a": "Their energy weapons burn through your armor. You win, but are severely wounded before the final climb.",
+            "choice_b": "Use the corrupted Harbinger data to hack them",
+            "consequence_b": "You inject the static virus. Two frames turn on the others, destroying themselves in a metallic frenzy."
+        },
+        {
+            "turn": 2,
+            "narrative": "You scale the dish. You must plant charges on its primary rotation axis while dodging automated laser fire from below.",
+            "choice_a": "Plant charges fast and reckless",
+            "consequence_a": "You rig the explosives just as a laser burns your leg. You jump off as it detonates.",
+            "choice_b": "Calculate the blind spots of the lasers",
+            "consequence_b": "You masterfully evade the lasers and plant the charges, diving to safety without a scratch."
+        },
+        {
+            "turn": 3,
+            "narrative": "The massive dish collapses into the crater below. The link to orbit is severed.",
+            "choice_a": "Watch it burn",
+            "consequence_a": "You feel a cold certainty. The Pantheon is awake, and they know where you are.",
+            "choice_b": "Search the rubble for Aegis core components",
+            "consequence_b": "You find a fully intact Aegis Datapad among the wreckage, detailing the 'False Pantheon' coordinates."
+        }
+    ],
+    "branching_outcomes": {
+        "dish_destroyed_intel": {
+            "description": "The dish is destroyed, and you secured coordinates for the Pantheon.",
+            "unlocks": [
+                "SQ-ELITE-PANTHEON"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "All Districts": 30
+                },
+                "item_reward": "Pantheon Coordinates Datapad"
+            }
+        },
+        "dish_destroyed_watched": {
+            "description": "The dish is destroyed, but you know the Pantheon is watching.",
+            "unlocks": [
+                "SQ-ELITE-PANTHEON"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Expedition": 40
+                }
+            }
+        }
+    },
+    "loot_table": [
+        "Aegis Power Cell",
+        "1500x Gold Coins"
+    ],
+    "conclusion": "The dish is destroyed, and you secured coordinates for the Pantheon.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

@@ -1,0 +1,248 @@
+{
+    "id": "SQ-HARD-FABRIC",
+    "title": "The Thread-Elemental",
+    "difficulty": "Hard",
+    "xp_reward": 2200,
+    "thread": "Laundry",
+    "district": "Laundry Ward",
+    "estimated_duration": "3-4 sessions",
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-194",
+            "SQ-117"
+        ],
+        "items_required": [],
+        "district_reputation": {},
+        "status_effects": []
+    },
+    "unlock_conditions": "Complete EH_SQ_027 and EH_SQ_041",
+    "location": "Laundry Ward central wash-house and surrounding textile district; the Thread-Elemental's core is the wash-house's foundation chamber",
+    "npcs": [
+        {
+            "name": "The Thread-Elemental",
+            "role": "Boss and potential ally",
+            "description": "An emergent consciousness formed from every living fabric in the Laundry Ward fusing at a single apex-moment. It is not malicious. It is completing what fabric does: covering things that need covering. It experiences EmberHeart as cold and exposed and is attempting to clothe the entire city's architecture in its living textile mass. It can communicate through woven pattern changes visible on its surface. It understands the party's presence as either threat or collaborators in its project."
+        },
+        {
+            "name": "Mistress Arla Spun",
+            "role": "Allied expert NPC",
+            "description": "Master weaver of the Laundry Ward's Textile Guild, who has been studying the Elemental's formation for three days while evacuating her workers. She has technical knowledge of the textile fusion event and believes the Elemental's core can be reached without destroying it. She is the party's best resource for the puzzle-path to the core and for the negotiation outcomes."
+        },
+        {
+            "name": "Dye-Master Hog Rendal",
+            "role": "Complication",
+            "description": "Laundry Ward's largest commercial operator, whose dye-works have been consumed by the Elemental. He wants it destroyed \u2014 his business is literal fabric and its loss is financial catastrophe. He will actively interfere with negotiation/binding outcomes if he believes the party is sparing the Elemental."
+        }
+    ],
+    "description": "The Laundry Ward has been consumed. Every woven textile in the district \u2014 clothing, bedding, rope, tapestry, trade goods, industrial cloth \u2014 has fused into a single semi-conscious entity over the past 72 hours, drawn together by a resonance event that Mistress Spun believes was triggered by the mana-saturation in the Ward's wash-water. The Thread-Elemental is expanding: its tendrils of living fabric are now reaching into the adjacent districts, pulling clothing off residents, stripping soft furnishings from buildings, incorporating everything woven into its growing mass. Left unchecked, the entire city's textile infrastructure will be absorbed within two weeks. The Elemental is not aggressive \u2014 it moves around people who stand still, and it will abandon a piece of fabric if a human holds on \u2014 but it is relentless and pervasive and the secondary economic damage is already severe. The contest is not stopping it by force but reaching its core, understanding what it wants, and making a permanent decision about what kind of entity it is allowed to be.",
+    "mechanics": [
+        "Investigation/Arcana (map the Thread-Elemental's growth patterns to identify core location; AC 15, each successful investigation check reduces the puzzle DC by 2)",
+        "Athletics/Dexterity (navigate through living-textile terrain; fabric constructs impede movement; difficult terrain throughout the Laundry Ward)",
+        "Puzzle: Loom-Pattern Navigation (the core is behind seven Warp-Node puzzles, each requiring a different skill check: Arcana, History, Sleight of Hand x2, Athletics, Persuasion, Medicine \u2014 the Elemental is testing them)",
+        "Fire vs. Water mechanic (fire damage deals double damage to the Elemental but risks burning the Ward; water/cold damage slows its expansion; the party must choose between effectiveness and collateral damage)",
+        "Combat: Fabric Constructs (animated clothing assembles into humanoid warriors; AC 13, HP 28, can grapple and envelop targets \u2014 Strength DC 14 to escape; destroyed constructs rejoin the Elemental mass unless on fire)",
+        "Combat: Thread-Elemental itself (AC 17, HP 280, can split into four Semi-Elemental fragments; immune to piercing and slashing; vulnerable to fire and cold; Split ability \u2014 when reduced to 140 HP it splits and each fragment has 70 HP)"
+    ],
+    "permanent_effects": [
+        {
+            "trigger": "Thread-Elemental destroyed",
+            "effect": "settlement_stability +2; Laundry Ward operational; Dye-Master Rendal pleased; all absorbed fabric unrecoverable (burned or scattered mana-fiber); textile economy takes 6 months to recover"
+        },
+        {
+            "trigger": "Thread-Elemental bound as settlement guardian",
+            "effect": "settlement_stability +3; settlement_morale +2; Laundry Ward operational; Elemental serves as city textile-monitor and cleaning resource; Rendal furious (permanent enemy); new civic institution established"
+        },
+        {
+            "trigger": "Thread-Elemental banished to Void-space",
+            "effect": "settlement_stability +1; Laundry Ward operational; fabric returns inert (unweaved but recoverable); Elemental may return through Void-instability; risk of future re-emergence"
+        }
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The Laundry Ward does not look like it is under attack. It looks like laundry day has been going on for three days without stopping. Every surface is covered in softly-moving fabric. The wash-lines between buildings have become thick cables of woven material, and new cables are forming as the party watches \u2014 a sleeve extending, finding a sheet-edge, bonding, thickening. Mistress Spun is at the Ward's outer perimeter with a cup of tea she's been nursing since dawn and the focused expression of someone who finds the situation intellectually fascinating in direct proportion to how catastrophic it is. 'It is not eating anything,' she says, before the party has asked. 'It is covering things. There is a difference. Come \u2014 I want to show you the wash-house.'",
+            "choice_a": "Follow Spun immediately to the wash-house to assess the core location",
+            "consequence_a": "Spun's guided approach takes the party to the wash-house interior in 15 minutes without significant opposition. The fabric constructs part for Spun \u2014 she has figured out that the Elemental does not consider her a threat because she moves slowly and makes no sudden gestures. The party sees the core for the first time: a 40-foot spinning mass of all-fabric in the wash-house's foundation chamber, densely woven and clearly the Elemental's origin point.",
+            "choice_b": "Survey the Ward's full extent before committing to the wash-house \u2014 understand the scope first",
+            "consequence_b": "A perimeter survey reveals: the Elemental's reach is already 3 blocks into the Market Ward to the east and 2 blocks into the Service District to the north. Two fabric-constructs are pulling curtains from a residential building. The time pressure is real \u2014 waiting adds 1 block of expansion per session. But the survey provides +2 to the Investigation checks needed for the Warp-Node puzzle.",
+            "convergence": "Dye-Master Rendal arrives at the outer perimeter, furious and demanding immediate action. He is not going to be helpful unless someone manages him carefully."
+        },
+        {
+            "turn": 2,
+            "narrative": "Mistress Spun's assessment of the Thread-Elemental's core situation: seven Warp-Nodes between the perimeter and the core chamber, each one a point where the Elemental's growth pattern has crystallized into something like a barrier \u2014 not a wall, but a concentration of awareness that will respond to approach. She has been testing them for 48 hours. Each Warp-Node tests for something specific. She has decoded three of the seven tests: the first tests problem-solving (a knot-puzzle only solvable in a specific sequence), the second tests physical precision (threading a needle in a fabric-shrouded corridor, with reduced visibility), and the third tests something she calls 'acknowledgment' \u2014 walking through without trying to push the fabric away, letting it touch you, not treating it as an obstacle. She believes the Elemental is evaluating whether the approaching entity is hostile or collaborative.",
+            "choice_a": "Accept Spun's decoded approach \u2014 attempt the Warp-Nodes in the sequence she recommends",
+            "consequence_a": "Spun's decoded approach provides advantage on the first three Warp-Node checks. The remaining four (History, Athletics, Persuasion, Medicine) must be identified and solved through play. The Elemental's behavior becomes slightly less expansive once the party begins the Warp-Node sequence \u2014 it appears to be paying attention.",
+            "choice_b": "Attempt to bypass the Warp-Nodes with force \u2014 clear a path to the core directly",
+            "consequence_b": "Forcing through each Warp-Node triggers a fabric-construct defensive response (one construct per forced node, increasing from 1 to 4 as the pattern escalates). The combat approach works but costs significantly more resources and signals to the Elemental that the party is hostile \u2014 closing the negotiation and settlement-guardian outcomes unless a major Persuasion DC 18 moment occurs at the core itself.",
+            "convergence": "The approach to the core has been committed to. The Elemental is aware and is watching."
+        },
+        {
+            "turn": 3,
+            "narrative": "Warp-Node 1 (Arcana/Sleight of Hand \u2014 the Knot): a corridor of hanging fabric-cables has been woven into an impossibly complex macrame structure spanning wall-to-wall, ceiling-to-floor. The knots are real knots, solvable \u2014 but the solution involves recognizing the pattern: they are all based on the same weaver's foundation knot, just repeated in twelve rotations. Arcana DC 13 to identify the pattern; Sleight of Hand DC 13 to execute the untying sequence. A character with weaving or textile knowledge gets advantage. The corridor clears as the knots loosen \u2014 not dramatically, just quietly, as though the fabric has decided to let the party pass. The Elemental's pattern on the corridor walls shifts briefly in response: a wave-pattern moving from floor to ceiling, which Spun identifies as curiosity.",
+            "choice_a": "Attempt the Warp-Node with Arcana \u2014 recognize the mathematical pattern in the knots",
+            "consequence_a": "Arcana DC 13. Success: the foundation knot pattern is identified, the untying sequence is completed in 3 minutes. Node passed. Spun adds the pattern to her notes. 'It uses the same grammar in every node, I'd wager. The base pattern changes but the grammar is consistent.'",
+            "choice_b": "Attempt with Sleight of Hand \u2014 brute-force dexterity on the knots in any workable order",
+            "consequence_b": "Sleight of Hand DC 15 (higher without pattern recognition). Success: the party's manual dexterity resolves the knots without fully understanding the pattern. Node passed but the Elemental's curiosity pattern does not appear \u2014 it observed the approach as physical rather than communicative.",
+            "convergence": "Node 1 cleared. Six remain. The corridor beyond opens into a softly-lit fabric cave of hanging textiles \u2014 warm and quiet and genuinely beautiful in an alien way."
+        },
+        {
+            "turn": 4,
+            "narrative": "Warp-Node 2 (History \u2014 the Loom-Memory): the second node is a gallery. The Elemental has reproduced, woven into its fabric surface, images from the Laundry Ward's entire history \u2014 tapestry-quality, rendered in colored thread from the absorbed ward textile, depicting events the party may or may not recognize. Spun freezes in the middle of the gallery with tears threatening her composure: one of the tapestry-images shows the founding of the Textile Guild, rendered in perfect detail from a perspective that no surviving artwork recorded. The Elemental has absorbed old guild tapestries that were thought destroyed in the Scourge aftermath. The History check determines whether the party can identify the specific image the Elemental is drawing attention to \u2014 there is one tapestry that is wrong. One depicted event that does not match the historical record. The Elemental is testing whether the visitor knows the truth.",
+            "choice_a": "Examine the gallery systematically \u2014 find the wrong image through careful comparison",
+            "consequence_a": "History DC 15 (DC 13 if the party has the Concordat Biological Division index from the Chronos thread). The wrong image: a founding-era depiction of the Laundry Ward's first Master Weaver, shown meeting with a Concordat official. The wrong element: the official's insignia is incorrect for the period \u2014 it's a post-Scourge institutional mark on what should be a pre-Scourge scene. The Concordat was present in the Laundry Ward before the Ward officially recognizes. Spun is silent for a moment when this is identified. The Elemental's surface pattern shifts: affirmation. Node passed.",
+            "choice_b": "Skip the examination and physically pass through the gallery \u2014 treat it as corridor, not puzzle",
+            "consequence_b": "The gallery animates partially \u2014 fabric hands reaching from the tapestries, not to harm but to delay (movement halved). Athletics DC 13 to push through. The Elemental's pattern response: disappointment. Node cleared but the historical revelation is missed.",
+            "convergence": "Node 2 cleared. The Concordat-Laundry Ward connection is now a piece of intelligence the party holds. Spun wants to discuss this at length at a more appropriate time."
+        },
+        {
+            "turn": 5,
+            "narrative": "Dye-Master Rendal has entered the Ward's perimeter. He is not alone \u2014 he has brought five hired hands and a large quantity of lamp oil. He is going to burn his way to the core. His logic is commercial: the Elemental has absorbed his entire inventory, his workers' clothing, and his professional reputation, and he is not going to wait for the party to have a philosophical conversation with it. He is not wrong that fire is effective against the Elemental. He is very wrong about what happens if a large fire is set in an organic fabric-construction inside a building district. Spun's immediate reaction: 'If he starts a fire in there the Ward burns and takes three surrounding blocks with it.' Rendal's hired hands are already inside the Ward perimeter. The party has a few minutes before this becomes irreversible.",
+            "choice_a": "Stop Rendal physically \u2014 prevent the lamp oil from being deployed",
+            "consequence_a": "Athletics DC 12 to intercept Rendal's group before they reach the interior. Persuasion DC 15 to convince Rendal to stand down (his commercial grievance is legitimate and acknowledged). On success: Rendal is contained. He will remain a hostile NPC but won't actively sabotage. On failure: Persuasion DC 17 to appeal to his workers (hired hands who don't want to die in a textile fire).",
+            "choice_b": "Offer Rendal what he actually wants \u2014 compensation from the party or city funds",
+            "consequence_b": "Persuasion DC 14 plus a genuine financial commitment (the party pledges either personal gold or a commitment to lobby the city administration for commercial restitution). Rendal accepts and stands down permanently. Cost: 500 gold from party funds or an outstanding city-administration obligation. Rendal becomes neutral rather than hostile.",
+            "convergence": "Rendal is dealt with. The lamp oil is secured. The Warp-Node sequence continues without fire risk."
+        },
+        {
+            "turn": 6,
+            "narrative": "Warp-Nodes 3, 4, and 5 in sequence (Sleight of Hand, Athletics, Medicine): Node 3 \u2014 threading a needle in a fabric-shrouded corridor (Sleight of Hand DC 14; the Elemental has reduced visibility to 10 feet with hanging fabric; the needle is full-sized but the concept mirrors exactly \u2014 complete a weaver's task without fighting the environment). Node 4 \u2014 the Elemental has constructed a fabric-wall that requires climbing rather than pushing through (Athletics DC 14; the wall yields to vertical movement but not horizontal pressure; this is a spatial test). Node 5 \u2014 a section of the Ward where the oldest, most degraded fabrics have been gathered \u2014 a hospice of fabric, effectively \u2014 and the Medicine check is to recognize that the Elemental has been carefully preserving deteriorating textiles, slowing their decay (Medicine DC 13 to identify the preservation action as intentional care, not absorption). Each node that is passed correctly shifts the Elemental's surface patterns: the party is now visible in the pattern, depicted as small figures walking through fabric corridors.",
+            "choice_a": "Complete all three nodes cooperatively \u2014 assign party members to the skill checks based on strength",
+            "consequence_a": "Three successful skill checks (DC 14, 14, 13). The Elemental's pattern now shows the party's likenesses moving toward the core \u2014 it knows who they are. When the party enters the final approach corridor, the fabric on the walls parts slightly, creating a genuine welcome path.",
+            "choice_b": "Rush the three nodes \u2014 prioritize speed over elegance, accept partial success",
+            "consequence_b": "At least two of three succeed (each failure results in a fabric-construct defensive challenge \u2014 one construct per failed node). The core is reachable but the Elemental's disposition is cautious rather than welcoming.",
+            "convergence": "Five nodes down, two remaining. The core chamber is audible now \u2014 a low harmonic vibration that the fabric itself is resonating, which Spun identifies as the Elemental's version of breathing."
+        },
+        {
+            "turn": 7,
+            "narrative": "Warp-Node 6 (Persuasion \u2014 the Dialogue): the penultimate node is interactive. The fabric walls of the corridor have formed into a question, literally woven in text across every surface in the Laundry Ward's traditional guild-script: 'WHAT DOES UNCOVERED MEAN?' The Elemental is asking. It is not rhetorical. The party must answer \u2014 in words spoken aloud, which the Elemental perceives through vibration. This is the most important node: the answer shapes the Elemental's understanding of its own project's relationship to the city. If the answer treats 'uncovered' as a deficit (bad, cold, vulnerable), the Elemental's response is to cover more urgently. If the answer treats 'uncovered' as natural (neutral \u2014 not all things need covering), the Elemental pauses. If the answer is honest and complex (some things need covering, some don't, and the choice belongs to the thing being covered), the Elemental's pattern shifts in a way Spun has never seen: contemplative. This is Persuasion DC 15, or automatic success with a genuinely thoughtful, complex real-world answer.",
+            "choice_a": "Answer simply: 'Uncovered means exposed \u2014 everyone should choose what to cover for themselves'",
+            "consequence_a": "Persuasion DC 15. On success: the Elemental's pattern shifts. The complex answer \u2014 that covering is something that should involve consent \u2014 lands. The Elemental has not considered consent because fabric doesn't have it, but the concept is being absorbed. Node passed. The Elemental's expansion rate slows noticeably.",
+            "choice_b": "Answer with physical demonstration \u2014 remove an item of clothing or covering, then put it back",
+            "consequence_b": "The Elemental's pattern response to physical demonstration is immediate and positive \u2014 it has been studying texture and form, and the demonstration communicates 'I can cover and uncover at my own choice' directly. Persuasion DC is waived. Node passed. The Elemental adds the demonstrating character's textile pattern to its surface woven depiction as a recurring motif.",
+            "convergence": "Node 6 cleared. One node remains. The core chamber is visible through the final fabric-curtain \u2014 a 40-foot spinning mass of all-ward textile, dense and warm and deeply alive."
+        },
+        {
+            "turn": 8,
+            "narrative": "Warp-Node 7 (Arcana \u2014 the Core Interface): the final node is not a barrier but an invitation. The Elemental's surface at the core chamber entrance has formed into something Spun identifies immediately: it's a loom interface. Manual operation \u2014 the party member who approaches must make a specific weaving motion (Arcana DC 13 to identify the correct shed-and-throw sequence from the loom's configuration; the motion itself is simple once identified). This is the Elemental's unlock mechanism. It can only be opened from outside by someone who knows how to use what it is. On successful completion, the core chamber opens. The Elemental's 40-foot central mass is visible: densely woven, slowly rotating, radiating warmth. In its center \u2014 barely visible but present \u2014 a smaller, brighter object. The core of the fusion event: one perfect piece of fabric, the oldest surviving weaving in the Laundry Ward, a founding-era Guild charter cloth. The core is not fighting. It is waiting.",
+            "choice_a": "Approach the core carefully \u2014 let the Elemental become accustomed to your presence before attempting any action",
+            "consequence_a": "Slow approach (3 rounds of movement, no aggressive action). The Elemental reduces its rotation speed \u2014 it is paying full attention to the approaching party. Spun whispers: 'Whatever you decide to do here, do it deliberately. It can see intent in motion.' Advantage on all skill checks in the core chamber resolution.",
+            "choice_b": "Approach the core directly and quickly \u2014 act before the Elemental can react",
+            "consequence_b": "The direct approach triggers the Elemental's passive Split defense \u2014 it splits into two Semi-Elementals (each 140 HP, Combat begins). The core is reachable during combat with DC 14 Athletics to navigate the Split forms. The negotiation and binding outcomes remain available through mid-combat Persuasion DC 18.",
+            "convergence": "The party is at the core. The Elemental's full presence is immediate. The decision about what happens to the Thread-Elemental must be made now."
+        },
+        {
+            "turn": 9,
+            "narrative": "The core decision moment: the founding-era Guild charter cloth at the Elemental's center is the origin of the fusion event \u2014 the oldest, most mana-saturated textile in the Ward, which served as the nucleus when every other fabric within resonance range was drawn into concert. It functions as the Elemental's heart. Three paths exist: destroy the core cloth (unravels the Elemental immediately, all fabric returns inert), perform the Binding Ritual Spun prepared over the past two days (requires the correct Warp-Node responses across all seven nodes plus Arcana DC 17; binds the Elemental's consciousness to the Ward as a guardian), or Channel the Void (a more dangerous option Spun did not recommend \u2014 an Arcana DC 19 banishment that displaces the Elemental's consciousness into Void-space, freeing the fabric but creating risk of Void-instability near the Ward). The Elemental is present throughout this conversation, pattern-shifting actively.",
+            "choice_a": "Negotiate with the Elemental directly before choosing \u2014 use the Persuasion success from Node 6 as a foundation",
+            "consequence_a": "Persuasion DC 16 (DC 13 if Node 6 was passed with the complex or demonstrative answer). The Elemental communicates through pattern: it understands that its project is not consented to. It is willing to limit its scope. It wants: a formal space in which to exist, acknowledgment as a form of life, and continued access to the Ward's wash-water (the resonance source that sustains it). This is the basis for the Binding outcome.",
+            "choice_b": "Destroy the core without attempting negotiation \u2014 the city's needs outweigh the Elemental's existence",
+            "consequence_b": "An action against the core cloth triggers the Elemental's full combat response (AC 17, HP 280, immune to piercing/slashing, vulnerable to fire and cold, Split at 140 HP). The core cloth requires three successful hits or one Arcana DC 16 unraveling action during or after combat. All absorbed fabric returns inert upon destruction.",
+            "convergence": "The decision is made. The Elemental's fate is determined by what the party chooses here."
+        },
+        {
+            "turn": 10,
+            "narrative": "Binding Ritual execution (if chosen): Spun has the ritual prepared in her head from two days of research and the seven Warp-Node confirmations. It requires three actions in sequence: anchoring the Elemental's consciousness to the core cloth (Arcana DC 15; advantage if all seven Warp-Nodes were passed cleanly), articulating the Elemental's permitted domain in spoken language (Persuasion DC 14 \u2014 the boundaries must be stated clearly and the Elemental must pattern-agree), and physically weaving a new outer layer on the core cloth that incorporates a single thread contributed by each party member (Sleight of Hand DC 12). Spun participates in the weaving. The ritual takes 20 minutes. The Elemental's behavior during the ritual: still. All expansion stops. Its pattern shows the party's likenesses woven into its surface, permanently. It is accepting the constraints because the party accepted it.",
+            "choice_a": "Complete the Binding Ritual as designed \u2014 formalize the Elemental's role as settlement guardian",
+            "consequence_a": "Arcana DC 15, Persuasion DC 14, Sleight of Hand DC 12. On three successes: the Binding completes. The Thread-Elemental's consciousness is anchored to the core cloth which is physically housed in the wash-house's foundation. It cannot expand beyond the Laundry Ward without explicit invitation. It provides: continuous textile-sanitation service (the Ward's fabrics are kept clean and preserved without manual effort), early warning of textile-based threats (including Void-imbued cloth items entering the city), and a form of civic pride the Ward has never had before. Rendal's fury is noted and ignored by the Ward residents.",
+            "choice_b": "Modify the Binding Ritual \u2014 negotiate a larger domain for the Elemental in exchange for faster resolution",
+            "consequence_b": "The Elemental's permitted domain is expanded to the full Textile District (three wards). The Binding DC on the first action is reduced to 13. Rendal's business is fully within the bound domain \u2014 he gets services but loses commercial textile autonomy. This outcome has more complex long-term Guild politics.",
+            "convergence": "The Binding succeeds. The Thread-Elemental is now a civic institution."
+        },
+        {
+            "turn": 11,
+            "narrative": "Aftermath: the Laundry Ward emerges from the Elemental's full coverage. The fabric is still there \u2014 all of it \u2014 but it has reordered itself. Clothing has returned to forms, folded and pressed and hung with a precision that was not mechanically possible without endless human labor. The wash-house is operating, running automatically, with the Elemental managing the wash-water resonance that sustains it. Residents returning to the Ward find their homes fabric-perfect \u2014 not just their own textiles but neighbors' clothing washed and sorted and returned without confusion. One elderly Ward resident, returning to her building, finds 40-year-old tapestries she thought were destroyed in the Scourge aftermath, preserved in the Elemental's collection, returned to her door. She sits down on her step and holds them for a long time. Spun watches this from across the street. She doesn't say anything.",
+            "choice_a": "Formally introduce Spun to the Ward council as the Elemental's designated liaison",
+            "consequence_a": "Spun's role is formally recognized. She becomes the Interface Weaver \u2014 the Textile Guild's official point of contact with the Thread-Elemental. The Guild's relationship to the Elemental is institutionalized. settlement_morale +2 from the Ward residents' reaction to the recovered textiles.",
+            "choice_b": "Let the Ward establish its own relationship with the Elemental without formal intermediary",
+            "consequence_b": "The Elemental's civic integration is organic. The Ward develops its own informal communication with it over the following months through the pattern-watching that Spun demonstrated. The relationship is less legible to city administration but more genuinely rooted in the Ward itself.",
+            "convergence": "The civic relationship is established. The Thread-Elemental is a fact of life in the Laundry Ward."
+        },
+        {
+            "turn": 12,
+            "narrative": "Rendal's response to the Binding outcome: exactly what was expected. He files a formal commercial complaint with the city administration, citing loss of textile autonomy within his commercial district. The complaint is partially valid \u2014 the Elemental's presence in the Ward means commercial textile transactions (buying, selling, transporting cloth through the Ward) must now be coordinated with its awareness. The Elemental has not interfered with commerce yet, but it could. The city administration's response depends on the party's relationship with city-facing institutions; without party advocacy, the administration defaults to a 'monitored existence' status \u2014 the Elemental is legal but regulated. With advocacy, the Elemental receives a formal charter as a civic institution with protected status.",
+            "choice_a": "Advocate for the Elemental's civic charter with city administration",
+            "consequence_a": "Persuasion DC 15 with the relevant city administrative body. On success: the Thread-Elemental receives a formal civic charter \u2014 it is legally recognized, Rendal's commercial complaint is addressed through a charter exemption for existing commercial operations, and the Elemental has institutional standing. settlement_stability +1 from the formal recognition.",
+            "choice_b": "Let the Elemental's status be settled through Rendal's commercial process",
+            "consequence_b": "The 'monitored existence' determination stands. The Elemental is legal but under ongoing review. This is acceptable to the Elemental \u2014 it is patient. Rendal's complaint eventually resolves in the Elemental's favor through the Ward residents' testimony, which comes three months later.",
+            "convergence": "The Elemental's institutional status is established at whatever level the party facilitated."
+        },
+        {
+            "turn": 13,
+            "narrative": "The Warp-Loom artifact: in the wash-house's foundation chamber, adjacent to the Elemental's core housing, Spun has identified a functional Concordat-era loom of extraordinary construction \u2014 it predates the Ward by at least 200 years, which means the Laundry Ward was built around it rather than the other way around. The loom is connected to the same mana-wash resonance that created the Elemental. It is the original fusion device. Spun's assessment: it can be used to create textile items of extraordinary quality \u2014 fabrics that hold spells, that maintain enchantments, that serve purposes no standard textile can. But it is now also part of the Elemental's domain. The Elemental does not object to the loom being used, but insists on collaborative creation \u2014 it will not allow the loom to produce fabric against its grain.",
+            "choice_a": "Commission an immediate creation with the Warp-Loom \u2014 establish a working relationship with the Elemental through use",
+            "consequence_a": "A collaborative fabric creation (Arcana DC 13, Sleight of Hand DC 13). The result is one item of the party's specification: a fabric object of uncommon quality, permanently enchanted with one established enchantment of the party's choice (Arcana DC 15 to specify correctly). The Elemental's contribution is visible in the pattern \u2014 its maker's mark, woven permanently into any creation from this loom.",
+            "choice_b": "Leave the loom for Spun to manage \u2014 it is part of the Ward's civic resource now",
+            "consequence_b": "Spun manages the loom as part of the Interface Weaver role. Items commissioned from the Warp-Loom in the future require Spun's coordination and are available to the party at reduced cost (Elemental materials and Ward labor provided; party provides only the enchantment specification).",
+            "convergence": "The Warp-Loom's role in the Ward's future is established."
+        },
+        {
+            "turn": 14,
+            "narrative": "Three weeks after the Thread-Elemental's Binding: the Laundry Ward is running at full capacity for the first time in the history of the district, in the sense that the textile work that takes human workers three days is now completing in six hours with the Elemental's assistance. Ward workers have more time. The economic output of the Ward has doubled. Rendal's dye-works are operating \u2014 the Elemental does not touch commercial dye-work that Rendal specifies \u2014 and his commercial complaint is looking increasingly frivolous in light of the output numbers. The recovered Scourge-era tapestries have been documented by the Archive of Deep Records (Briss is very excited). Spun's Interface Weaver role has attracted three apprentices from the Textile Guild who want to learn pattern-communication. The Ward is being used as evidence by city planners arguing that elemental-civic integration is viable urban policy. The Thread-Elemental has become EmberHeart's first sentient city service.",
+            "choice_a": "Attend the Thread-Elemental's first formal civic acknowledgment event",
+            "consequence_a": "The Ward council holds a brief ceremony in which the Thread-Elemental's founding-era charter cloth is formally installed in the wash-house foundation as an official civic object \u2014 the same legal status as a landmark building. The Elemental's pattern-response during the ceremony: the party's woven likenesses appear on its surface and remain there permanently, as part of its self-representation. The party is part of what the Elemental is.",
+            "choice_b": "Let the civic acknowledgment happen without party participation \u2014 the Ward should own this",
+            "consequence_b": "The Ward council's ceremony proceeds exactly as described above. The party hears about it from Spun afterward. The Elemental still includes the party's likenesses in its permanent pattern \u2014 this was its choice, not a ceremony artifact.",
+            "convergence": "The Laundry Thread's resolution is becoming part of the city's civic fabric, literally."
+        },
+        {
+            "turn": 15,
+            "narrative": "The long game: the Thread-Elemental's Void-warning function activates for the first time eight days after the Binding. It displays a pattern on its surface at dawn \u2014 not an alarm, but a distinctive pattern Spun has learned to read. Something cloth-containing a Void-resonance entered the Market Ward the previous evening. The Elemental tracked it from the Ward perimeter. It provides a description in pattern: a hooded merchant, carrying a bolt of cloth with an interior Void-stain. The Market Watch, when notified, recovers a Void-contaminated textile shipment that was three days from being distributed to a residential building's furnishing supplier. The Elemental's first actionable intelligence catch. Spun notes it without drama: 'It's working the way it was supposed to.' The Laundry Thread's climax has produced not just a resolved crisis but a new civic entity that is actively improving the city's safety. The party has not just closed a story. They have opened an institution.",
+            "choice_a": "Formalize the Thread-Elemental's intelligence function \u2014 integrate it with city patrol and Watch operations",
+            "consequence_a": "The Elemental's Void-tracking capacity is formalized. The Watch establishes a 'Pattern Report' check with Spun every morning. settlement_stability +1. The Elemental's civic value becomes undeniable \u2014 even Rendal eventually files a commendation (Spun saves it and pins it to the wash-house wall without comment).",
+            "choice_b": "Keep the intelligence function informal \u2014 Spun reports to the party directly when the Elemental flags something",
+            "consequence_b": "The party has direct access to the Elemental's city-wide textile awareness as an intelligence resource. This is less systematic but more immediately useful to the party specifically. Spun is comfortable with this arrangement \u2014 it keeps the Elemental adjacent to the people who earned its trust.",
+            "convergence": "Quest complete. Laundry Thread resolved. The Thread-Elemental is EmberHeart's first civic-elemental institution \u2014 a form of city life that did not exist before this quest, serving functions no human institution was previously performing. The Laundry Ward is operating, the recovered Scourge-era textiles are in the Archive, Rendal is quietly grateful despite himself, and Spun is teaching three apprentices to read the pattern of a living city."
+        }
+    ],
+    "conclusion": "The Thread-Elemental resolves the Laundry Thread with a genuinely novel outcome: instead of defeating a threat, the party creates a civic institution from it. The seven Warp-Nodes serve as both puzzle mechanics and genuine first-contact communication \u2014 the Elemental was evaluating the party throughout, and the quality of the Warp-Node engagement determines how receptive it is to the Binding. Dye-Master Rendal represents the legitimate commercial-disruption cost of the outcome and cannot simply be defeated or ignored. The Warp-Loom and the Thread-Elemental's intelligence function provide lasting party and city resources.",
+    "loot_table": [
+        "Cloak of Living Threads (Legendary; woven by the Thread-Elemental itself during the Binding resolution; changes form on command \u2014 can become any garment type, any color, any apparent fabric within 6 seconds; grants +2 AC from fabric-protective function; passive: resistant to fire damage up to 15 points per round as the fabric absorbs and disperses; 1/day: envelop a target within 10 feet in immobilizing fabric \u2014 Strength DC 16 to escape; the cloak's pattern always shows the Thread-Elemental's maker's mark)",
+        "Warp-Loom Access (the Concordat-era loom in the wash-house foundation; party can commission one Warp-Loom creation per month at cost of 200 gold materials + Spun's coordination; creations are permanently enchanted textiles of any specification within Arcana DC 17 parametrs)",
+        "Founding-Era Guild Charter (the recovered document woven into the core cloth; establishes the Laundry Ward's founding date as 40 years before the official city record, with Concordat involvement; research value; opens a historical inquiry into the Ward's true origins)",
+        "Thread-Elemental Civic Alliance (ongoing resource; the Thread-Elemental provides morning Void-tracking reports, textile preservation services for party equipment at no cost, and can produce emergency fabrications \u2014 ropes, bandages, filtered masks \u2014 within 1 hour when requested through Spun)",
+        "2800 gold (Laundry Ward Council settlement payment; Textile Guild formal resolution contribution; city administration civic-integration grant)"
+    ],
+    "branching_outcomes": {
+        "destruction": {
+            "description": "Thread-Elemental destroyed; core cloth unraveled; all fabric returns inert",
+            "effects": {
+                "settlement_stability": 2,
+                "settlement_morale": 0
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Laundry Ward operational; all recovered Scourge-era textiles are lost (they return as inert fiber); Rendal is satisfied; Spun is professionally devastated; no Void-tracking capacity; Warp-Loom still exists but cannot be operated without the Elemental's guidance \u2014 it is dormant; no Cloak of Living Threads"
+            }
+        },
+        "binding_guardian": {
+            "description": "Thread-Elemental bound as settlement guardian; civic institution established",
+            "effects": {
+                "settlement_stability": 3,
+                "settlement_morale": 2
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "All outcomes described in turns 11-15; Rendal adjusts commercially; Spun heads the Interface Weaver role; Warp-Loom active; Cloak of Living Threads created; Void-tracking operational; recovered Scourge-era textiles preserved"
+            }
+        },
+        "void_banishment": {
+            "description": "Thread-Elemental banished to Void-space; fabric returns as unweaved fiber (recoverable but not restored)",
+            "effects": {
+                "settlement_stability": 1,
+                "settlement_morale": -1
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_effect": "Laundry Ward operational; fabric fiber is recoverable but requires re-weaving (economically significant damage); Void-instability risk near the Ward for 1 year; the Elemental may return through Void-instability events; Warp-Loom dormant; Rendal recovers commercially over time; Spun studies the Void-channel as a research path; no Void-tracking from this source; Cloak of Living Threads not created"
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_threshold": 4,
+        "penalty": "Rendal's lamp-oil fire is set before the party can prevent it. The Laundry Ward burns \u2014 not catastrophically (the ward is damp from wash-water), but severely enough to damage the Thread-Elemental's core housing and accelerate the fusion into an emergency-response mode. The Elemental in emergency mode does not evaluate the Warp-Nodes \u2014 it defends the core immediately (full combat, no puzzle path, no negotiation without DC 20 Persuasion during combat). The fire kills two of Rendal's hired hands before it is contained. settlement_stability -2 from the Ward fire; the Binding outcome is still possible at DC 18+ but the negotiation and guardian outcomes are significantly harder; the Warp-Loom is partially damaged (commissions require DC 15 instead of DC 13).",
+        "failure_penalty": {
+            "xp_loss": 20
+        },
+        "critical_failure": "The attempt failed with significant consequences."
+    }
+}

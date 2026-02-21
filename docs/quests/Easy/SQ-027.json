@@ -1,0 +1,153 @@
+{
+    "id": "SQ-027",
+    "title": "The Silent Nursery",
+    "xp_reward": 600,
+    "prerequisites": "None",
+    "description": "The settlement's botanical garden has gone eerily silent. A patch of 'Singing Moss' is draining the mana from nearby crops.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The air in the garden is heavy and still. The moss is a vibrant, moving emerald that seems to 'shiver' when you approach.",
+            "choice_a": "Listen to the moss (Perc DC 12)",
+            "consequence_a": "Success: You realize the moss is mimicking a child's lullaby. (+1 Lore)",
+            "choice_b": "Approach with a flame",
+            "consequence_b": "Success: The moss retreats from the heat. (+1 Progress)",
+            "convergence": "The soil beneath your feet feels strangely hollow and dry."
+        },
+        {
+            "turn": 2,
+            "narrative": "A row of medicinal herbs has withered into gray ash. The moss is concentrated around the roots of a 'Star-Tree' sapling.",
+            "choice_a": "Uproot the moss (Athletics DC 13)",
+            "consequence_a": "Success: You tear away a large patch, but it feels like pulling at skin. (+1 Progress)",
+            "choice_b": "Apply mana-water",
+            "consequence_b": "Success: You distract the moss with a richer source of energy. (+1 Progress)",
+            "convergence": "The moss begins to hum, a sound that makes your teeth ache."
+        },
+        {
+            "turn": 3,
+            "narrative": "The hum is rising in pitch. Small pebbles and dry leaves begin to vibrate and dance around the Star-Tree.",
+            "choice_a": "Block the sound (Con DC 12)",
+            "consequence_a": "Success: You maintain your focus through the sonic pressure. (+100 XP)",
+            "choice_b": "Sing a counter-melody (Charisma DC 14)",
+            "consequence_b": "Success: The moss's frequency breaks. (+1 Progress)",
+            "convergence": "A central node of the moss\u2014looking like a pulsing, green eye\u2014opens in the dirt."
+        },
+        {
+            "turn": 4,
+            "narrative": "The moss-eye is watching you. It isn't a plant; it's a sensory organ for something much larger beneath the surface.",
+            "choice_a": "Strike the eye (Atk DC 14)",
+            "consequence_a": "Success: The mass screams, a sound like tearing silk. (+1 Progress)",
+            "choice_b": "Examine the eye (Nature DC 13)",
+            "consequence_b": "Success: You find it's connected to a network of 'Void-Vines'. (+1 Lore)",
+            "convergence": "The garden's irrigation pipes begin to spray a dark, nutrient-rich liquid."
+        },
+        {
+            "turn": 5,
+            "narrative": "The liquid is black as ink and smells of old wine. The moss drinks it greedily, growing several inches in seconds.",
+            "choice_a": "Seal the pipes (Repair DC 13)",
+            "consequence_a": "Success: You cut off the supply. (+1 Progress)",
+            "choice_b": "Burn the moss",
+            "consequence_b": "Success: The fire spreads quickly, consuming the growth. (+1 Progress)",
+            "convergence": "The Star-Tree sapling begins to glow with a frantic, pulsing white light."
+        },
+        {
+            "turn": 6,
+            "narrative": "The sapling is being used as a conduit. Either the moss goes or the tree is consumed. The gardener is watching from the gate, weeping.",
+            "choice_a": "Save the Tree (DEX DC 15)",
+            "consequence_a": "Success: You delicately separate the life-lines. (+1 Progress)",
+            "choice_b": "Sacrifice the sapling for the Garden",
+            "consequence_b": "Success: You kill the host to end the infection. (+1 Progress)",
+            "convergence": "The earth heaves as a 'Moss-Horror'\u2014a clump of roots and emerald fur\u2014rises up."
+        },
+        {
+            "turn": 7,
+            "narrative": "The Moss-Horror lunges, its limbs made of flexible, razor-sharp briars.",
+            "choice_a": "Dodge and weave (Dex DC 14)",
+            "consequence_a": "Success: You avoid the thorns. (+100 XP)",
+            "choice_b": "Cut through the mass (Str DC 14)",
+            "consequence_b": "Success: You lop off a vine-limb. (+1 Progress)",
+            "convergence": "The Horror collapses back into the dirt, its emerald glow fading to a dull brown."
+        },
+        {
+            "turn": 8,
+            "narrative": "The nursery is quiet once more. The air smells of charred earth and damp vegetation.",
+            "choice_a": "Re-plant the medicinal herbs (Nature DC 12)",
+            "consequence_a": "Success: The garden is set on a path to recovery. (+5 Morale)",
+            "choice_b": "Harvest the Moss-Horror's core",
+            "consequence_b": "Success: You gain an 'Emerald Seed-Core'. (+1 Loot)",
+            "convergence": "The Gardener enters, offering a single, rare blossom as thanks."
+        },
+        {
+            "turn": 9,
+            "narrative": "As you leave, you notice the remaining moss is no longer shivering. It feels like a normal plant again.",
+            "choice_a": "Note the occurrence in the log",
+            "consequence_a": "Success: You build the settlement's knowledge base. (+1 Lore)",
+            "choice_b": "Keep a sample for yourself",
+            "consequence_b": "Success: You have a sleeping, green secret. (+1 Secret)",
+            "convergence": "The gate to the garden closes with a click."
+        },
+        {
+            "turn": 10,
+            "narrative": "The sun sets over the garden, the lavender sky reflecting in the now-clear irrigation water.",
+            "choice_a": "Accept the reward",
+            "consequence_a": "Success: You are paid in rare herbs and gold. (+1 Gear)",
+            "choice_b": "Decline payment",
+            "consequence_b": "Success: Your reputation for selflessness grows. (+1 Rep)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "The Silent Nursery was a parasitic intrusion from the Void's fringe. The garden is saved, but the earth remembers the lullaby.",
+    "loot_table": [
+        "Emerald Seed-Core",
+        "Bundle of Star-Leaf Herbs",
+        "600 Gold"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Garden consumed. -2 Local Resources and no herbal healing for a week.",
+        "failure_penalty": {
+            "xp_loss": 2
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "difficulty": "Easy",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 0,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Botanist reports garden gone silent overnight",
+        "flags": [
+            "garden_silence"
+        ]
+    },
+    "location": "The Botanical Garden \u2014 Settlement Interior",
+    "district": "Green Quarter",
+    "thread": "Community & Survival",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "Head Botanist Reva",
+        "Moss-Horror (creature)"
+    ],
+    "mechanics_featured": [
+        "Nature checks",
+        "Charisma (counter-melody)",
+        "Perception",
+        "Combat (plant horror)"
+    ],
+    "permanent_effects": {
+        "settlement": "Garden restored; +2 Local Resources",
+        "world": "Void-Vine network noted in soil"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Save the Star-Tree",
+            "result": "Tree survives; rare wood resource later"
+        },
+        {
+            "path": "Sacrifice sapling",
+            "result": "Garden cleared faster; tree lost"
+        }
+    ]
+}

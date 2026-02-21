@@ -1,0 +1,153 @@
+{
+    "id": "SQ-003",
+    "title": "The Missing Courier",
+    "xp_reward": 900,
+    "prerequisites": "None",
+    "description": "An iron-bound messenger from the Lower Ward mines has vanished in the 'Dusty Mile' canyon.",
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The 'Dusty Mile' is a jagged scar in the Ridge, where the wind screams like a banshee through the narrow gaps. Footprints in the silt are partially obscured by fresh sand.",
+            "choice_a": "Follow the boot-scuffs (Survival DC 13)",
+            "consequence_a": "Success: You find signs of a struggle\u2014drag marks leading behind a massive boulder. (+1 Clue)",
+            "choice_b": "Shout the courier's name into the wind",
+            "consequence_b": "Failure: The echo alerts the vultures above\u2014and the men who hunt with them. (-1 Stealth)",
+            "convergence": "You find the courier's leather satchel, sliced open and bleeding loose parchment."
+        },
+        {
+            "turn": 2,
+            "narrative": "The sand here is stained a deep, rusty red. The missing reports were about 'The Iron-Tongue Merchants'.",
+            "choice_a": "Quick-read the scattered reports (Investigation DC 11)",
+            "consequence_a": "Success: You find a list of pay-offs to the Wardens. Corruption runs deep. (+1 Intel)",
+            "choice_b": "Secures the loose mail immediately",
+            "consequence_b": "Success: You gather the evidence before the wind can claim it. (+1 Item)",
+            "convergence": "A whistling sound\u2014an arrow thuds into the sand inches from your boot."
+        },
+        {
+            "turn": 3,
+            "narrative": "Iron-Tongue Mercenaries line the canyon rim. They wear the colors of the Trade Guild, but their eyes are the cold gray of professional killers.",
+            "choice_a": "Demand their surrender (Intimidation DC 14)",
+            "consequence_a": "Success: They hesitate, unnerved by your steel. (+1 Morale)",
+            "choice_b": "Roll for the shade of a rock shelf (Stealth DC 12)",
+            "consequence_b": "Success: You disappear into the shadows, making them waste their next volley.",
+            "convergence": "Their leader, a scarred veteran with a notched axe, shouts: 'Give up the satchel and walk, or stay and rot!'"
+        },
+        {
+            "turn": 4,
+            "narrative": "The mercenaries have closed the exits. You are pinned in the canyon floor while they prepare to charge.",
+            "choice_a": "Return fire with your ranged weapon (AC 13)",
+            "consequence_a": "Success: You take down a lookout, causing the others to shift cover. (+1 Tactical Adv)",
+            "choice_b": "Hunker behind your shield and advance (Str DC 13)",
+            "consequence_b": "Success: You cross the kill-zone, the arrows clattering harmlessly off your guard. (+1 Progress)",
+            "convergence": "You reach the base of the canyon wall where the trail leads up to their camp."
+        },
+        {
+            "turn": 5,
+            "narrative": "The path up is steep and slick with loose shale. The mercenaries are rolling boulders down to crush you.",
+            "choice_a": "Scale the vertical flank (Athletics DC 14)",
+            "consequence_a": "Success: You ascend the impossible wall, emerging behind their line. (+Combat Advantage)",
+            "choice_b": "Sunder the boulders with magic or steel",
+            "consequence_b": "Success: You shatter the rocks into gravel, clearing your path. (+1 Morale)",
+            "convergence": "You crest the ridge. The camp is set in a cave mouth, where the courier is chained to an ore-grinder."
+        },
+        {
+            "turn": 6,
+            "narrative": "The Scarred Leader lunges, his notched axe swinging in a wide, decapitating arc.",
+            "choice_a": "Disarm him mid-swing (Str Save vs DC 15)",
+            "consequence_a": "Success: You catch his handle and twist; the axe clatters into the abyss below. (+100 XP)",
+            "choice_b": "Lethal riposte (Attack AC 15)",
+            "consequence_b": "Success: Your blade finds a gap in his plate. He stumbles back, clutching his side.",
+            "convergence": "The mercenaries retreat as their leader falls. The courier, a young man named Elian, gasps for air."
+        },
+        {
+            "turn": 7,
+            "narrative": "Elian's legs are crushed by the grinder. He tries to point to the cave's inner depths.",
+            "choice_a": "Free Elian immediately",
+            "consequence_a": "Success: You break the chains. Elian is safe, but his legs are useless. (+1 Rep)",
+            "choice_b": "Interrogate the dying Leader (Insight DC 13)",
+            "consequence_b": "Success: He coughs up a name: 'The Silent Merchant' in the High Ward. (+1 Intel)",
+            "convergence": "You have the courier and the documents, but the canyon is filling with a desert storm."
+        },
+        {
+            "turn": 8,
+            "narrative": "The sandstorm reduces visibility to three feet. You must navigate the 'Dusty Mile' with a wounded man on your back.",
+            "choice_a": "Apply a 'Quick-Heal' or Medicine (DC 14)",
+            "consequence_a": "Success: Elian's pain recedes enough for him to help guide you. (+1 Progress)",
+            "choice_b": "Brute-force the carry (Strength DC 15)",
+            "consequence_b": "Success: You trudge through the biting sand, your muscles burning. (+1 Progress)",
+            "convergence": "You reach the canyon mouth as the militia arrives with torches and steel."
+        },
+        {
+            "turn": 9,
+            "narrative": "The Captain of the Guard looks at the bloody satchel. He knows what's inside.",
+            "choice_a": "Hand over the satchel to the Militia",
+            "consequence_a": "Success: You choose justice. The Iron-Tongue merchants are arrested by morning. (+2 Rep)",
+            "choice_b": "Demand a 'delivery fee' before relinquishing the logs",
+            "consequence_b": "Success: The Captain scowls but pays. You gain gold, but lose his trust. (+75 Gold)",
+            "convergence": "The courier is taken to the apothecary. The reports are processed."
+        },
+        {
+            "turn": 10,
+            "narrative": "The Iron-Tongue plot involved sabotaging the mines to drive down prices. You are given a choice in the final deposition.",
+            "choice_a": "Testify against the Merchant Guild",
+            "consequence_a": "Success: The merchants are stripped of their licenses. (+3 Influence)",
+            "choice_b": "Take a bribe to 'misplace' certain names",
+            "consequence_b": "Success: You gain a massive payout, but the corruption continues. (+250 Gold, -5 Morale)",
+            "convergence": "Quest Complete."
+        }
+    ],
+    "conclusion": "Elian will never walk again, but his life was spared, and the Iron-Tongue conspiracy has been hamstrung\u2014for now.",
+    "loot_table": [
+        "Mercenary Leader's Notched Axe",
+        "Iron-Tongue Pay-off List",
+        "200 Gold",
+        "Fine Silk Scarf"
+    ],
+    "risk_matrix": {
+        "failure_threshold": 3,
+        "penalty": "Courier dies. -1 Settlement Stability and a 'Bribe' of 50 Gold is taken from the treasury to keep the incident quiet.",
+        "failure_penalty": {
+            "xp_loss": 1
+        },
+        "critical_failure": "The attempt failed with minor consequences."
+    },
+    "difficulty": "Medium",
+    "prerequisites_complex": {
+        "quests_required": [],
+        "reputation_min": 5,
+        "items_required": []
+    },
+    "unlock_conditions": {
+        "trigger": "Council reports missing supply convoy",
+        "flags": [
+            "convoy_missing"
+        ]
+    },
+    "location": "The Ridgeback Trade Road",
+    "district": "Market Ward",
+    "thread": "Political Intrigue",
+    "estimated_duration": "2\u20133 hours",
+    "key_npcs": [
+        "Trade Envoy Cassiel",
+        "Supply Master Deren"
+    ],
+    "mechanics_featured": [
+        "Stealth",
+        "Investigation",
+        "Tracking (Survival)"
+    ],
+    "permanent_effects": {
+        "settlement": "Trade road secured; +10 Gold/month",
+        "world": "None"
+    },
+    "branching_outcomes": [
+        {
+            "path": "Return Cargo",
+            "result": "+150 Gold, +5 Reputation"
+        },
+        {
+            "path": "Keep Cargo",
+            "result": "+150 Gold, -10 Reputation"
+        }
+    ]
+}

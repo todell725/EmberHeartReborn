@@ -1,0 +1,188 @@
+{
+    "id": "SQ-ELITE-LEVIATHAN",
+    "title": "The Leviathan's Wake",
+    "difficulty": "Elite",
+    "xp_reward": 4900,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-009"
+        ],
+        "items_required": [
+            "Submersible Prototype",
+            "Deep-Water Breather"
+        ]
+    },
+    "location": "The Sunken Coast -> Titan Trench -> Bioluminescent Caves",
+    "thread": "Expedition (Beyond City)",
+    "estimated_duration": "4.5 hours",
+    "mechanics_featured": [
+        "Underwater Combat (3D movement)",
+        "Submarine Management (hull integrity, oxygen)",
+        "Massive Boss Scale (Shadow of the Colossus style)",
+        "22-Turn Progression"
+    ],
+    "branching_outcomes": {
+        "slay_leviathan": {
+            "description": "Killed the Leviathan and harvested its core.",
+            "effects": {
+                "settlement_wealth": 50
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "The Sunken Coast becomes safe for fishing. Massive economic boom.",
+                "item_reward": "Leviathan Core (Artifact)"
+            }
+        },
+        "tame_leviathan": {
+            "description": "Used the Control Rod to enslave the Leviathan.",
+            "effects": {
+                "settlement_morale": -10,
+                "settlement_military": 100
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Emberheart gains a colossal beast-navy. You can summon it in coastal combat.",
+                "item_reward": "Leviathan Call-Horn"
+            }
+        },
+        "let_it_sleep": {
+            "description": "Put the Leviathan back into deep hibernation.",
+            "effects": {
+                "settlement_lore": 30
+            },
+            "unlocks": [],
+            "consequences": {
+                "permanent_world_change": "Coast remains dangerous. Druidic factions respect you.",
+                "item_reward": "Abyssal Pearl (Legendary)"
+            }
+        }
+    },
+    "loot_table": [
+        "Leviathan Core (Artifact - endless power source)",
+        "Depth-Strider Boots (Legendary - immune to pressure, walk on water)",
+        "Harpoon of the First Fleet (Legendary weapon - returns when thrown)",
+        "Abyssal Pearl (Artifact - summon deep-sea creatures)",
+        "6500 Gold"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "phase": "Phase 1: The Launch",
+            "narrative": "For weeks, massive tsunamis have battered the Sunken Coast, destroying the fishing fleets. The cause is not weather, but a Scourge-mutated Leviathan awakening in the Titan Trench. You board the 'Iron Fin,' an experimental submersible built by the Engineers Guild."
+        },
+        {
+            "turn": 2,
+            "phase": "Phase 1: The Launch",
+            "narrative": "The Iron Fin descends into the black water. The pressure gauge ticks upward. You manage a crew of four NPCs. Hull integrity is at 100%. Oxygen reserves are at 8 hours. The deeper you go, the thicker the Scourge-taint becomes in the water."
+        },
+        {
+            "turn": 3,
+            "phase": "Phase 1: The Launch",
+            "narrative": "At 2,000 feet, you encounter a school of Scourge-Sharks. They ram the submersible, damaging the outer plating. You man the harpoon turrets to drive them off. Hull integrity drops to 85%."
+        },
+        {
+            "turn": 4,
+            "phase": "Phase 1: The Launch",
+            "narrative": "The descent continues. You reach the edge of the Titan Trench at 5,000 feet. The water is freezing, and the only light comes from bioluminescent flora that glows a sickly purple. A massive, serpent-like shadow passes over the submersible. It is two miles long."
+        },
+        {
+            "turn": 5,
+            "phase": "Phase 2: The Hunt",
+            "narrative": "The Leviathan produces an electromagnetic pulse. The Iron Fin's engines die. You are dead in the water, slowly sinking past crush-depth. Valerius scrambles to reboot the core. You must suit up in the heavy diving rig and exit the sub to manually restart the external rotors."
+        },
+        {
+            "turn": 6,
+            "phase": "Phase 2: The Hunt",
+            "narrative": "Outside the sub, the pressure is immense. You fight against deep-sea currents while fending off abyssal scavengers trying to pry open the hatch. You rip the fouled kelp off the rotors and manually crank the starter. The engine roars to life. You get back inside safely."
+        },
+        {
+            "turn": 7,
+            "phase": "Phase 2: The Hunt",
+            "narrative": "Following the creature's sonar trail, you enter the Bioluminescent Caves\u2014a massive underwater cavern system. The Leviathan is resting here, absorbing Scourge-energy from volcanic vents. It detects the sub and attacks."
+        },
+        {
+            "turn": 8,
+            "phase": "Phase 2: The Hunt",
+            "narrative": "BOSS 1: The Leviathan's Tail. The creature itself is too large to fight conventionally. It swipes its massive tail through the cavern. You must pilot the Iron Fin through a high-speed chase, dodging stalactites and the crushing tail strikes."
+        },
+        {
+            "turn": 9,
+            "phase": "Phase 2: The Hunt",
+            "narrative": "You manage to land two explosive harpoons in the tail section. The beast roars, a sound that vibrates through the hull and shatters the internal glass gauges. It flees deeper into the trench. You pursue."
+        },
+        {
+            "turn": 10,
+            "phase": "Phase 3: The Ascent",
+            "narrative": "The Leviathan realizes it cannot shake you. It changes tactics. It swims straight up toward the surface at impossible speed, dragging the Iron Fin along in its slipstream. The rapid ascent threatens to decompress the submarine to pieces."
+        },
+        {
+            "turn": 11,
+            "phase": "Phase 3: The Ascent",
+            "narrative": "You must continuously adjust the pressure baffles to match the ascent rate, while dealing with 'pressure-wraiths'\u2014Scourge entities formed from rapidly expanding gases inside the hull. Close-quarters combat while the room spins."
+        },
+        {
+            "turn": 12,
+            "phase": "Phase 3: The Ascent",
+            "narrative": "The Leviathan breaches the surface, launching itself a hundred feet into the air before crashing back down into the Sunken Coast bay. The resulting tidal wave threatens to wipe out an entire coastal village."
+        },
+        {
+            "turn": 13,
+            "phase": "Phase 3: The Ascent",
+            "narrative": "You force the Iron Fin to ram the beast, creating a shockwave that cancels out the tsunami. The submarine runs aground on a reef. The hull breaches. You abandon ship, engaging the Leviathan on the rocky shoals of the coast."
+        },
+        {
+            "turn": 14,
+            "phase": "Phase 3: The Ascent",
+            "narrative": "BOSS 2: The Leviathan (Head). The fight takes place in waist-deep water on the reefs. The beast hurls massive boulders and unleashes blasts of superheated water. You must use the wrecked fishing ships as cover."
+        },
+        {
+            "turn": 15,
+            "phase": "Phase 4: Entering the Beast",
+            "narrative": "Weapons are not piercing its thick armored scales. You realize the only way to kill it or control it is from within. As it inhales to unleash a massive blast, you allow yourself to be swallowed."
+        },
+        {
+            "turn": 16,
+            "phase": "Phase 4: Entering the Beast",
+            "narrative": "You slide down the massive throat into the beast's stomach chamber, which resembles a fleshy cave filled with half-digested ships and glowing Scourge-acid pools. The air is toxic. You have limited time before your suit's filters fail."
+        },
+        {
+            "turn": 17,
+            "phase": "Phase 4: Entering the Beast",
+            "narrative": "You must fight your way through the beast's internal defense mechanisms\u2014massive white blood cells mutated by the Scourge into aggressive slime-monsters."
+        },
+        {
+            "turn": 18,
+            "phase": "Phase 4: Entering the Beast",
+            "narrative": "You reach the creature's core, an organic heart the size of a carriage, wrapped in pulsating violet Scourge-veins. The core is guarded by an avatar of the beast's consciousness, formed from pure energy."
+        },
+        {
+            "turn": 19,
+            "phase": "Phase 4: Entering the Beast",
+            "narrative": "BOSS 3: The Leviathan's Soul. A purely magical duel inside the belly of the beast. The avatar attempts to crush your mind using the sheer weight of the ocean's depth. You must sever its connections to the core valves to weaken it."
+        },
+        {
+            "turn": 20,
+            "phase": "Phase 4: Entering the Beast",
+            "narrative": "You shatter the avatar. The heart lays exposed before you. You have three tools: Explosives to kill it, a Control Rod to enslave its nervous system, or a Somatic-Alchemical dart to force it back into a centuries-long slumber."
+        },
+        {
+            "turn": 21,
+            "phase": "Phase 4: Entering the Beast",
+            "narrative": "You make your final choice (Slay / Tame / Sleep). The beast reacts. If slain, the heart stops, and you must rapidly escape before the massive corpse collapses on you. If tamed or put to sleep, the beast gently returns to the sea."
+        },
+        {
+            "turn": 22,
+            "phase": "Phase 4: Entering the Beast",
+            "narrative": "You wash up on the shore of the Sunken Coast. The threat is handled. The villagers cheer, or stare in awe as the Leviathan sinks beneath the waves under your command. The expedition is a harrowing success."
+        }
+    ],
+    "description": "A colossal Scourge-mutated Leviathan threatens the Sunken Coast. You must pilot an experimental submersible into the deep trench and battle the beast from the inside out.",
+    "conclusion": "Killed the Leviathan and harvested its core.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 800,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed catastrophically. City-wide consequences will be felt for weeks."
+    }
+}

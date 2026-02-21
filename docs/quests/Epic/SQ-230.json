@@ -1,0 +1,80 @@
+{
+    "id": "SQ-230",
+    "title": "Hold the Line",
+    "difficulty": "Epic",
+    "xp_reward": 1800,
+    "prerequisites": {
+        "quests_completed": [
+            "SQ-229"
+        ]
+    },
+    "location": "Scourge-Fringe -> The Western Barricade",
+    "district": "Scourge-Fringe",
+    "thread": "Sovereignty & Order",
+    "description": "The vanguard of the staging ground attacks the barricade in a massive night-assault. You must hold the line until dawn.",
+    "key_npcs": [
+        "Warden Militia",
+        "The Horde Vanguard"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "The night sky is black with arrows and fire. The Behemoths you mapped are charging the walls. You must quickly man a heavy ballista.",
+            "choice_a": "Aim for the Behemoth's unarmored legs",
+            "consequence_a": "The massive beast trips, crushing dozens of smaller Scourge under its weight. A massive tactical victory.",
+            "choice_b": "Aim center-mass to guarantee a hit",
+            "consequence_b": "The scrap-armor absorbs most of the impact. The Behemoth crashes into the wall, dealing moderate structural damage."
+        },
+        {
+            "turn": 2,
+            "narrative": "The wall is breached. Thralls are pouring into the courtyard. You must seal the breach with magic or rubble.",
+            "choice_a": "Collapse a nearby guard tower into the breach",
+            "consequence_a": "The tower falls perfectly, sealing the gap with impenetrable stone and timber.",
+            "choice_b": "Hold the chokepoint personally with a melee weapon",
+            "consequence_b": "You fight like a god of war, but take immense exhaustion and physical damage holding them back."
+        },
+        {
+            "turn": 3,
+            "narrative": "Dawn breaks. The horde retreats, but leaves behind a warning. They were just drawing out the city's ammunition.",
+            "choice_a": "Rally the exhausted troops",
+            "consequence_a": "Your words steel their hearts. They know the true siege is yet to come.",
+            "choice_b": "Loot the battlefield immediately",
+            "consequence_b": "You secure valuable scrap, but the troops view you as a vulture."
+        }
+    ],
+    "branching_outcomes": {
+        "line_held_inspired": {
+            "description": "You held the breach and inspired the militia.",
+            "unlocks": [
+                "SQ-231"
+            ],
+            "consequences": {
+                "reputation_change": {
+                    "Sovereignty & Order": 50
+                }
+            }
+        },
+        "line_held_looted": {
+            "description": "You held the breach and claimed the spoils of war.",
+            "unlocks": [
+                "SQ-231"
+            ],
+            "consequences": {
+                "item_reward": "Behemoth Plating"
+            }
+        }
+    },
+    "loot_table": [
+        "Behemoth Plating",
+        "400x Gold Coins",
+        "Medal of Valor"
+    ],
+    "conclusion": "You held the breach and inspired the militia.",
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 100,
+            "reputation_change": {}
+        },
+        "critical_failure": "The attempt failed with minor lasting consequences. The thread remains open."
+    }
+}

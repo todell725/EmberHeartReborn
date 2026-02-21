@@ -1,0 +1,81 @@
+{
+    "id": "EH_SQ_431",
+    "title": "The Memory Keeper",
+    "difficulty": "Easy",
+    "xp_reward": 440,
+    "prerequisites": {
+        "quests_completed": [
+            "EH_SQ_430"
+        ],
+        "items_required": []
+    },
+    "location": "Temple District -> The Quiet House",
+    "district": "Temple District",
+    "thread": "Concordat",
+    "description": "Following up on the graffiti group, you're introduced to an elderly woman named Ora who was a child during the final years before the Scourge. She has detailed personal memories of Pre-Scourge Emberheart that historians believe to be priceless. But she is ill and her memories may not last much longer.",
+    "key_npcs": [
+        "Elder Survivor Ora",
+        "Archive Researcher Winn"
+    ],
+    "turns": [
+        {
+            "turn": 1,
+            "narrative": "Ora is sharp-minded but physically frail, housed in a modest home in the Temple District. She can describe the Pre-Scourge city block by block \u2014 the colours, the sounds, the people, the routines. She is not afraid to speak but has never been asked formally.",
+            "choice_a": "Arrange for Archive Researcher Winn to conduct proper oral history sessions with Ora immediately",
+            "consequence_a": "Winn arrives the next day with recording equipment. Ora speaks for three hours on the first session alone.",
+            "choice_b": "Simply listen to Ora yourself and take detailed personal notes",
+            "consequence_b": "You spend a full afternoon with Ora. Your notes capture twelve pages of vivid Pre-Scourge city life detail."
+        },
+        {
+            "turn": 2,
+            "narrative": "Ora's memories include specific details about the Concordat's role in the city \u2014 temples, officials, beliefs, and critically, a building she calls 'the Listening House' which she says stood where the current Scourge-Fringe begins.",
+            "choice_a": "Investigate whether the Listening House location matches any existing Fringe maps",
+            "consequence_a": "Cross-referencing with Artificer Ollen's journal (if known) or standard maps shows a sealed Fringe structure that matches Ora's description perfectly.",
+            "choice_b": "Add the Listening House information to Ora's archive records for future research",
+            "consequence_b": "The detail is formally documented. It joins a growing body of 'Memory Keeper Archive' records."
+        },
+        {
+            "turn": 3,
+            "narrative": "Ora wants to visit one specific location from her memories \u2014 the garden that used to stand where the Transit Corridor market now operates.",
+            "choice_a": "Escort Ora to the Transit Corridor and help her share her memory of the garden with those present",
+            "consequence_a": "A small crowd gathers. Ora describes the garden with such clarity several people begin crying.",
+            "choice_b": "Advise Ora that the journey may be too taxing given her health",
+            "consequence_b": "Ora agrees but asks that someone plant a single flower where the garden once stood. You do."
+        }
+    ],
+    "branching_outcomes": {
+        "ora_escorted": {
+            "description": "Ora visited the old garden site. Community memory moment created.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Ora's Memory Map",
+                "reputation_change": {
+                    "Temple District": 16,
+                    "Transit Corridor": 8
+                }
+            }
+        },
+        "flower_planted": {
+            "description": "A flower planted where the garden once stood.",
+            "unlocks": [],
+            "consequences": {
+                "item_reward": "Pre-Scourge Garden Seed",
+                "reputation_change": {
+                    "Temple District": 12
+                }
+            }
+        }
+    },
+    "risk_matrix": {
+        "failure_penalty": {
+            "xp_loss": 0
+        },
+        "critical_failure": "The attempt failed quietly. The situation remains unresolved."
+    },
+    "loot_table": [
+        "Ora's Memory Map",
+        "Pre-Scourge Garden Seed",
+        "160x Gold Coins"
+    ],
+    "conclusion": "Ora visited the old garden site. Community memory moment created."
+}
