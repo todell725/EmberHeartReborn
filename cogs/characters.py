@@ -14,27 +14,15 @@ class CharactersCog(commands.Cog):
         self.bot = bot
         from core.transport import transport
         self.transport = transport
-        self.npc_path = DB_DIR / "NPC_STATE_FULL.json"
-        self.party_path = DB_DIR / "PARTY_STATE.json"
 
     @commands.command()
     @require_channel("npc-gallery")
     async def npc(self, ctx, *, name: str):
         """Lookup an NPC or Party Member character card."""
         channel = getattr(ctx, "target_channel", ctx.channel)
-        search_pool = []
         try:
-            if self.npc_path.exists():
-                data = json.loads(self.npc_path.read_text(encoding='utf-8'))
-                search_pool.extend([n for n in data.get("npcs", []) if isinstance(n, dict)])
-            if self.party_path.exists():
-                data = json.loads(self.party_path.read_text(encoding='utf-8'))
-                search_pool.extend([p for p in data.get("party", []) if isinstance(p, dict)])
-
-            search_query = name.lower()
-            match = next((n for n in search_pool if 
-                          search_query in n.get('name', '').lower() or 
-                          search_query == n.get('id', '').lower()), None)
+            from core.storage import resolve_character
+            match = resolve_character(name)
             
             if not match:
                 await self.transport.send(channel, f"🔍 No Character found matching '{name}'")
@@ -332,25 +320,8 @@ class CharactersCog(commands.Cog):
     async def dm(self, ctx, char_name: str, *, message: str):
         """Send a secret message to an NPC/Party member to start a DM thread."""
         try:
-            # Gather character pool
-            search_pool = []
-            if self.npc_path.exists():
-                data = json.loads(self.npc_path.read_text(encoding='utf-8'))
-                search_pool.extend([n for n in data.get("npcs", []) if isinstance(n, dict)])
-            if self.party_path.exists():
-                data = json.loads(self.party_path.read_text(encoding='utf-8'))
-                search_pool.extend([p for p in data.get("party", []) if isinstance(p, dict)])
-
-            # Find target
-            search_query = char_name.lower()
-            match = None
-            
-            # 1. Try exact matches first (ID or Name)
-            match = next((n for n in search_pool if search_query == n.get('name', '').lower() or search_query == n.get('id', '').lower()), None)
-            
-            # 2. Try partial if no exact
-            if not match:
-                match = next((n for n in search_pool if search_query in n.get('name', '').lower()), None)
+            from core.storage import resolve_character
+            match = resolve_character(char_name)
             
             if not match:
                 await self.transport.send(ctx.channel, f"🔍 Hmm. The Chronicle has no record of '{char_name}'.")

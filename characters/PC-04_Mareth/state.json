@@ -1,0 +1,90 @@
+{
+  "level": 20,
+  "experience_points": 527225,
+  "combat_profile": {
+    "hp": 42,
+    "ac": 18,
+    "speed": 30,
+    "initiative_bonus": 1,
+    "proficiency_bonus": 3
+  },
+  "ability_scores": {
+    "str": 18,
+    "dex": 12,
+    "con": 15,
+    "int": 10,
+    "wis": 13,
+    "cha": 11
+  },
+  "enforced_skills": {
+    "mining": 9,
+    "smithing": 8,
+    "farming": 10,
+    "timbercraft": 6,
+    "stonecraft": 7,
+    "herbalism": 3,
+    "survival": 15,
+    "tradecraft": 4,
+    "influence": 15
+  },
+  "simulation_overlay": {
+    "influence_rating": 6,
+    "visibility": 4,
+    "legitimacy_gain_multiplier": 1.15,
+    "corruption_susceptibility": 0.8,
+    "fatigue_threshold": 7,
+    "injury_resilience_modifier": 1.3
+  },
+  "status": {
+    "injured": false,
+    "fatigue_level": 0,
+    "cult_marked": false,
+    "dreamfire_active": true,
+    "equipment": {
+      "head": "Knight's Helm",
+      "body": "Splint Mail (+1)",
+      "main_hand": "Greatsword (Dragon-Bane)",
+      "off_hand": "None",
+      "accessory": "Belt of Hill Giant Strength (Fragment)"
+    },
+    "inventory": [
+      "Feline Fang",
+      "Displacer Hide Scrap",
+      "Displacer Hide Scrap",
+      "Feline Fang",
+      "Feline Fang",
+      "Displacer Hide Scrap",
+      "Blink-Dust",
+      "Feline Fang",
+      "Void-Scent Gland",
+      "Displacer Hide Scrap",
+      "Blink-Dust",
+      "Void-Scent Gland",
+      "Feline Fang",
+      "Displacer Hide Scrap",
+      "Feline Fang",
+      "Displacer Hide Scrap",
+      "Displacer Hide Scrap",
+      "Displacer Hide Scrap",
+      "Displacer Hide Scrap",
+      "Blink-Dust",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Cracked Rib-Bone",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw",
+      "Greatclaw"
+    ]
+  }
+}

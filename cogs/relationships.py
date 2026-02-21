@@ -15,27 +15,13 @@ class RelationshipsCog(commands.Cog):
         
         self.transport = transport
         self.rm = relationship_manager
-        
-        self.npc_path = DB_DIR / "NPC_STATE_FULL.json"
-        self.party_path = DB_DIR / "PARTY_STATE.json"
 
     def _resolve_character(self, name: str):
         if name.lower() in ["kaelrath", "kh-01", "king"]:
             return {"id": "KH-01", "name": "King Kaelrath"}
             
-        search_pool = []
-        if self.npc_path.exists():
-            data = json.loads(self.npc_path.read_text(encoding='utf-8'))
-            search_pool.extend([n for n in data.get("npcs", []) if isinstance(n, dict)])
-        if self.party_path.exists():
-            data = json.loads(self.party_path.read_text(encoding='utf-8'))
-            search_pool.extend([p for p in data.get("party", []) if isinstance(p, dict)])
-
-        search_query = name.lower()
-        match = next((n for n in search_pool if 
-                      search_query in n.get('name', '').lower() or 
-                      search_query == n.get('id', '').lower()), None)
-        return match
+        from core.storage import resolve_character
+        return resolve_character(name)
 
     @commands.group(invoke_without_command=True)
     async def relationship(self, ctx):

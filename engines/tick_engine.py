@@ -17,30 +17,43 @@ class TickEngine:
     def run_tick(self) -> str:
         """Executes the weekly logic. Returns a dictionary of changes for the Proclamation."""
         try:
+            from core.storage import load_all_character_states, save_character_state, save_json
             settlement = json.loads(self.settlement_path.read_text(encoding='utf-8'))
-            npcs_data = json.loads(self.npc_path.read_text(encoding='utf-8'))
+            all_characters = load_all_character_states()
             
             summary = []
             
-            # --- 1. Resource Balance (Adapt for Infinite) ---
+            # --- 1. Resource Balance ---
             stock = settlement['settlement']['stockpiles']
             calendar = settlement['settlement']['calendar']
             core = settlement['settlement']['core_status']
             
-            # We don't deduct food if it's INFINITE
             food_status = "✨ Abundant (Infinite)" if stock.get('food_stock_fu') == "INFINITE" else f"📦 {stock.get('food_stock_fu', 0)} FU"
             summary.append(f"🍞 **Food Supply**: {food_status}")
 
             # --- 2. Cult Spread ---
             corruption_index = core.get('corruption_index', 0)
             exposed = []
-            for npc in npcs_data.get('npcs', []):
-                if npc.get('cult_allegiance', 0) > 0: continue
+            for char_data in all_characters:
+                # NPCs only for cult spread usually, but we check allegiance
+                if char_data.get('cult_allegiance', 0) > 0: continue
                 
                 chance = corruption_index * 2
                 if random.randint(1, 100) <= chance:
-                    npc['corruption_exposure'] = npc.get('corruption_exposure', 0) + random.randint(10, 20)
-                    exposed.append(npc.get('name', 'Unknown citizen'))
+                    # Update exposure
+                    new_exposure = char_data.get('corruption_exposure', 0) + random.randint(10, 20)
+                    
+                    # Atomic save for this character
+                    # We only save the fields that belong in state.json
+                    from scripts.migrate_npcs import STATE_FIELDS
+                    char_state = {k: v for k, v in char_data.items() if k in STATE_FIELDS or k == 'corruption_exposure'}
+                    char_state['corruption_exposure'] = new_exposure
+                    
+                    try:
+                        save_character_state(char_data['id'], char_state)
+                        exposed.append(char_data.get('name', 'Unknown citizen'))
+                    except Exception as e:
+                        logger.error(f"Failed to save state for {char_data.get('id')}: {e}")
             
             if exposed:
                 summary.append(f"👁️ **Cult Activity**: Dark rumors surround {len(exposed)} individuals.")
@@ -51,24 +64,20 @@ class TickEngine:
             if self.relationship_path.exists():
                 try:
                     rels = json.loads(self.relationship_path.read_text(encoding='utf-8'))
-                    # Simplified drift for automation
                     for rel in rels.get('relationships', []):
                         if rel.get('tension', 0) > 10:
-                            rel['tension'] -= 1 # Natural resolution over time
-                    self.relationship_path.write_text(json.dumps(rels, indent=4), encoding='utf-8')
+                            rel['tension'] -= 1 
+                    save_json("RELATIONSHIPS.json", rels)
                 except Exception as e:
                     logger.warning(f"Could not drift relationships: {e}")
 
             # --- 4. Calendar & Income ---
-            # Add income to Kingdom Treasury
             income = core.get('weekly_income_gold', 0)
             if income > 0:
-                # Add to stockpiles if it exists, otherwise core_status
                 if "gold" in stock:
                     stock["gold"] += income
                 else:
                     core["gold"] = core.get("gold", 0) + income
-                logger.info(f"[SOVEREIGN TICK] Banked {income} Weekly Gold in Kingdom Treasury.")
             
             summary.append(f"💰 **Treasury**: +{income:,} Gold deposited to the Royal Vault.")
 
@@ -77,9 +86,8 @@ class TickEngine:
                  calendar['week_index'] += 1
                  summary.append(f"📅 **Calendar**: It is now Week {calendar['week_index']} of the {calendar.get('season', 'Unknown Season')}.")
 
-            # Save
-            self.settlement_path.write_text(json.dumps(settlement, indent=4), encoding='utf-8')
-            self.npc_path.write_text(json.dumps(npcs_data, indent=4), encoding='utf-8')
+            # Save Settlement
+            save_json("SETTLEMENT_STATE.json", settlement)
             
             return "\n".join([f"> {s}" for s in summary])
         except Exception as e:

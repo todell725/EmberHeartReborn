@@ -7,6 +7,7 @@ logger = logging.getLogger("EH_Core")
 # Standardized Paths
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 DB_DIR = ROOT_DIR / "EmberHeartReborn" / "state"
+CHARACTERS_DIR = ROOT_DIR / "EmberHeartReborn" / "characters"
 
 # D&D 5E XP Thresholds
 XP_THRESHOLDS = {
@@ -24,20 +25,29 @@ IDENTITIES = {
 }
 
 def load_npc_identities():
-    """Populates IDENTITIES with data from NPC_STATE_FULL.json."""
-    npc_file = DB_DIR / "NPC_STATE_FULL.json"
-    if not npc_file.exists():
-        logger.warning(f"NPC State file not found: {npc_file}")
+    """Populates IDENTITIES with data from the individual character profile files."""
+    if not CHARACTERS_DIR.exists():
+        logger.warning(f"Characters directory not found: {CHARACTERS_DIR}")
         return
 
     try:
-        with open(npc_file, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            for npc in data.get("npcs", []):
-                # Map by ID and by Name for easy lookup
-                entry = {"name": npc["name"], "avatar": npc.get("avatar_url")}
-                IDENTITIES[npc["id"]] = entry
-                IDENTITIES[npc["name"]] = entry
+        # Scan characters directory for ID_Name folders
+        for char_dir in CHARACTERS_DIR.iterdir():
+            if not char_dir.is_dir(): continue
+            
+            profile_path = char_dir / "profile.json"
+            if not profile_path.exists(): continue
+            
+            with open(profile_path, 'r', encoding='utf-8') as f:
+                npc = json.load(f)
+                char_id = npc.get("id")
+                char_name = npc.get("name")
+                
+                if char_id and char_name:
+                    entry = {"name": char_name, "avatar": npc.get("avatar_url")}
+                    IDENTITIES[char_id] = entry
+                    IDENTITIES[char_name] = entry
+                    
     except Exception as e:
         logger.error(f"Failed to load NPC identities: {e}")
 

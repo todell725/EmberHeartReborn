@@ -1,0 +1,11 @@
+{
+  "id": "EH-16",
+  "name": "Talric Voss",
+  "race": "Human",
+  "role": "Irrigation Overseer",
+  "avatar_url": "https://cdn.discordapp.com/attachments/1473540819146244218/1474265997333499904/image0.jpg?ex=699938b4&is=6997e734&hm=f2f41fcde508d40ab8b143fa811753b3e64e8fe689e9564b501242f2cb08780d&",
+  "description": "A wiry human man with intense, calculating eyes and a face covered in old steam-burns. He wears complex, brass-rimmed pressure-goggles pushed up on his forehead and a heavy leather tool-belt filled with wrenches and frequency-meters. He is draped in a suit of reinforced, waterproof canvas. He carries a long arcanotech rod used for testing valve-resonance. He exudes a sense of constant, pressurized stress.",
+  "bio": "Talric is responsible for the massive steam-irrigation system that keeps the colony's farms alive. It is a high-pressure, zero-error job that has left him with a paranoid streak. He is convinced that the fluctuations in Line 4's steam pressure are deliberate sabotage, designed to starve the Sovereignty.",
+  "motivation": "Maintaining the 'Fluid-Logic' of the mountain until he can identify the source of the pressure spikes.",
+  "secret": "Steam pressure rising; suspects sabotage from Line 4."
+}

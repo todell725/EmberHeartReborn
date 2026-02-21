@@ -11,18 +11,22 @@ class WorldContextManager:
         self.eh_dir = eh_dir
         self.docs_dir = eh_dir / "docs"
         self.state_dir = eh_dir / "state"
+        from core.config import CHARACTERS_DIR
+        self.characters_dir = CHARACTERS_DIR
         
-        raw_npc_data = self._load_json(self.state_dir / "NPC_STATE_FULL.json")
-        self.npc_data = raw_npc_data.get("npcs", []) if isinstance(raw_npc_data, dict) else raw_npc_data
-        
-        self.party_data = self._load_json(self.state_dir / "PARTY_STATE.json")
+        # Load settlement stats (still monolithic for now)
         self.settlement_data = self._load_json(self.state_dir / "SETTLEMENT_STATE.json")
         
-        # Build keywords for faster matching
-        self.npc_names = {n.get("name", "").lower(): n for n in self.npc_data if isinstance(n, dict) and n.get("name")}
+        # Build keyword map from directory names instead of loading full JSON
+        self.char_map = {} # ID -> Profile path
+        if self.characters_dir.exists():
+            for d in self.characters_dir.iterdir():
+                if d.is_dir() and "_" in d.name:
+                    char_id = d.name.split("_")[0]
+                    self.char_map[char_id] = d / "profile.json"
+        
         self.world_keys = ["stats", "kingdom", "settlement", "morale", "food", "quest", "deeds", "accomplishments"]
         self.party_keys = ["party", "inventory", "gear", "health", "hp", "worn"]
-        
         # Reference Index
         self.ref_index = self._load_json(self.docs_dir / "DND_REFERENCE_INDEX.json")
         
@@ -65,27 +69,35 @@ class WorldContextManager:
         message_low = message.lower()
         context_snippets = []
 
-        party_list = self.party_data.get("party", []) if isinstance(self.party_data, dict) else self.party_data
-        all_chars = self.npc_data + (party_list if isinstance(party_list, list) else [])
-        
-        # 1. Check for Characters (Name Match OR Bio/Connection Match)
-        for n in all_chars:
-            if not isinstance(n, dict): continue
-            name = n.get("name", "").lower()
-            bio = n.get("bio", "").lower()
-            conn = n.get("connection", "").lower()
+        # 1. Check for Characters (On-demand loading)
+        for char_id, profile_path in self.char_map.items():
+            # Check for name/ID in message before loading full JSON
+            # This is a bit tricky since we don't have names yet, but we can check the folder names from char_map
+            # or just load the profile once per message (max 60 loads isn't huge, but let's be smarter)
             
-            if name and name in message_low or (bio and any(word in message_low for word in name.split())) or (conn and any(word in message_low for word in name.split())):
-                # If specific NPC name is mentioned, or words from its name appear in context
-                npc_id = n.get('id', '??')
-                
-                # Check Relationships
-                from core.relationships import relationship_manager
-                rel_data = relationship_manager.get_relationship("KH-01", npc_id)
-                rel_labels = relationship_manager.get_status_labels(rel_data)
-                rel_text = ", ".join(rel_labels) if rel_labels else "Neutral"
-                
-                context_snippets.append(f"### Character Sketch: {n.get('name')}\nRole: {n.get('role', n.get('class'))}\nRelationship to You (Kaelrath): {rel_text}\nMotivation: {n.get('motivation', 'Unknown')}\nBio: {n.get('bio', bio[:200])}")
+            # Extract name from profile path/dir for quick check
+            char_folder_name = profile_path.parent.name
+            # folder is "ID_Name_Parts", let's split
+            parts = char_folder_name.lower().split("_")
+            
+            if any(p in message_low for p in parts if len(p) > 2):
+                # Load full profile for verification and sketch building
+                try:
+                    n = json.loads(profile_path.read_text(encoding='utf-8'))
+                    name = n.get("name", "").lower()
+                    
+                    # More flexible match: check if name OR parts of name are in message
+                    name_words = re.findall(r'\w+', name)
+                    if any(w in message_low for w in name_words if len(w) > 2) or char_id.lower() in message_low:
+                        # Check Relationships
+                        from core.relationships import relationship_manager
+                        rel_data = relationship_manager.get_relationship("KH-01", char_id)
+                        rel_labels = relationship_manager.get_status_labels(rel_data)
+                        rel_text = ", ".join(rel_labels) if rel_labels else "Neutral"
+                        
+                        context_snippets.append(f"### Character Sketch: {n.get('name')}\nRole: {n.get('role', n.get('class'))}\nRelationship to You (Kaelrath): {rel_text}\nMotivation: {n.get('motivation', 'Unknown')}\nBio: {n.get('bio', 'Unknown')}")
+                except Exception as e:
+                    logger.error(f"Error loading profile for {char_id}: {e}")
 
         IGNORED_RAG_FILES = {
             "ADULT_RELATIONSHIP_CALIBRATION",
@@ -121,8 +133,22 @@ class WorldContextManager:
 
         # 4. Check for Party
         if any(k in message_low for k in self.party_keys):
-            party_sum = ", ".join([f"{p.get('name')} (HP: {p.get('hp_current', 'Full')})" for p in self.party_data if isinstance(p, dict)])
-            context_snippets.append(f"PARTY STATUS: {party_sum}")
+            party_summaries = []
+            for char_id, profile_path in self.char_map.items():
+                if char_id.startswith("PC-"):
+                    try:
+                        # Load profile for name, state for HP
+                        profile = json.loads(profile_path.read_text(encoding='utf-8'))
+                        state_path = profile_path.parent / "state.json"
+                        hp = "Full"
+                        if state_path.exists():
+                            st = json.loads(state_path.read_text(encoding='utf-8'))
+                            hp = st.get('hp_current', 'Full')
+                        party_summaries.append(f"{profile.get('name')} (HP: {hp})")
+                    except:
+                        pass
+            if party_summaries:
+                context_snippets.append(f"PARTY STATUS: {', '.join(party_summaries)}")
 
         # 5. Check for D&D Reference Matches (Spells/Items)
         # Using a simple keyword match for item/spell names
