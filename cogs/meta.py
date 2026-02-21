@@ -22,7 +22,7 @@ class MetaCog(commands.Cog):
         logger.info(f"Connected to Discord! Logged in as: {self.bot.user.name}")
         await self.bot.change_presence(activity=discord.Game(name="Watching over Warden-Keep"))
 
-    @tasks.loop(minutes=20)
+    @tasks.loop(seconds=1200)
     async def rotation_loop(self):
         """Background loop to rotate the shop inventory."""
         await self.bot.wait_until_ready()
