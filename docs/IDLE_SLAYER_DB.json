@@ -1,0 +1,682 @@
+[
+    {
+        "task_id": "SLAYER_001",
+        "monster_name": "Kobold",
+        "dnd_source_cr": "1/8",
+        "difficulty": "Easy",
+        "description": "Scrawny, reptilian humanoids that rely on numbers and traps.",
+        "requirements": {
+            "min_level": 1,
+            "slayer_skill_level": 1
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 30,
+            "xp_per_kill": 25,
+            "max_drops_per_kill": 2
+        },
+        "drop_table": [
+            {
+                "item": "Cracked Kobold Tail",
+                "type": "Junk",
+                "chance": 0.45
+            },
+            {
+                "item": "Rusty Dagger",
+                "type": "Weapon",
+                "chance": 0.10
+            },
+            {
+                "item": "Small Bag of Shiny Stones",
+                "type": "Junk",
+                "chance": 0.20
+            },
+            {
+                "item": "Lizard Scale",
+                "type": "Crafting",
+                "chance": 0.30
+            },
+            {
+                "item": "Candle Stub",
+                "type": "Junk",
+                "chance": 0.15
+            },
+            {
+                "item": "Copper Coin",
+                "type": "Currency",
+                "chance": 0.60
+            },
+            {
+                "item": "Kobold Horn",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Sling Bullets (5)",
+                "type": "Ammo",
+                "chance": 0.10
+            },
+            {
+                "item": "Leather Scrap",
+                "type": "Crafting",
+                "chance": 0.25
+            },
+            {
+                "item": "Kobold Trapmaster's Tool",
+                "type": "Rare",
+                "chance": 0.01
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_002",
+        "monster_name": "Goblin",
+        "dnd_source_cr": "1/4",
+        "difficulty": "Easy",
+        "description": "Mischievous and cruel humanoids found in caves and ruins.",
+        "requirements": {
+            "min_level": 1,
+            "slayer_skill_level": 1
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 45,
+            "xp_per_kill": 50,
+            "max_drops_per_kill": 2
+        },
+        "drop_table": [
+            {
+                "item": "Broken Scimitar",
+                "type": "Junk",
+                "chance": 0.40
+            },
+            {
+                "item": "Goblin Ear",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Stolen Silver Spoon",
+                "type": "Junk",
+                "chance": 0.05
+            },
+            {
+                "item": "Crude Shortbow",
+                "type": "Weapon",
+                "chance": 0.08
+            },
+            {
+                "item": "Goblin Finger-Bone",
+                "type": "Crafting",
+                "chance": 0.20
+            },
+            {
+                "item": "Dog Slicer",
+                "type": "Weapon",
+                "chance": 0.05
+            },
+            {
+                "item": "Half-Eaten Rat",
+                "type": "Junk",
+                "chance": 0.25
+            },
+            {
+                "item": "Ragged Leather Tunic",
+                "type": "Armor",
+                "chance": 0.12
+            },
+            {
+                "item": "Rough Whetstone",
+                "type": "Crafting",
+                "chance": 0.15
+            },
+            {
+                "item": "Chieftain's War-Paint",
+                "type": "Rare",
+                "chance": 0.02
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_003",
+        "monster_name": "Skeleton",
+        "dnd_source_cr": "1/4",
+        "difficulty": "Easy",
+        "description": "Animated remains of the dead, driven by dark magic.",
+        "requirements": {
+            "min_level": 2,
+            "slayer_skill_level": 2
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 60,
+            "xp_per_kill": 50,
+            "max_drops_per_kill": 2
+        },
+        "drop_table": [
+            {
+                "item": "Bone Dust",
+                "type": "Crafting",
+                "chance": 0.50
+            },
+            {
+                "item": "Fractured Rib",
+                "type": "Junk",
+                "chance": 0.40
+            },
+            {
+                "item": "Rusted Shortsword",
+                "type": "Weapon",
+                "chance": 0.10
+            },
+            {
+                "item": "Shattered Shield Shard",
+                "type": "Junk",
+                "chance": 0.20
+            },
+            {
+                "item": "Ancient Iron Key",
+                "type": "Junk",
+                "chance": 0.05
+            },
+            {
+                "item": "Skull",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Tattered Burial Shroud",
+                "type": "Crafting",
+                "chance": 0.15
+            },
+            {
+                "item": "Iron Arrowhead",
+                "type": "Crafting",
+                "chance": 0.20
+            },
+            {
+                "item": "Silver Ring (Faded)",
+                "type": "Value",
+                "chance": 0.03
+            },
+            {
+                "item": "Necrotic Bone Marrow",
+                "type": "Rare",
+                "chance": 0.01
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_004",
+        "monster_name": "Gelatinous Cube",
+        "dnd_source_cr": "2",
+        "difficulty": "Medium",
+        "description": "A transparent cube of ooze that dissolves organics.",
+        "requirements": {
+            "min_level": 10,
+            "slayer_skill_level": 5
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 450,
+            "xp_per_kill": 450,
+            "max_drops_per_kill": 3
+        },
+        "drop_table": [
+            {
+                "item": "Corrosive Acid Vial",
+                "type": "Crafting",
+                "chance": 0.40
+            },
+            {
+                "item": "Dissolved Metal Slag",
+                "type": "Junk",
+                "chance": 0.50
+            },
+            {
+                "item": "Engulfed Copper Shield",
+                "type": "Armor",
+                "chance": 0.05
+            },
+            {
+                "item": "Undissolved Skull",
+                "type": "Trophy",
+                "chance": 0.20
+            },
+            {
+                "item": "Ooze Membrane",
+                "type": "Crafting",
+                "chance": 0.30
+            },
+            {
+                "item": "Loose Silver Coins (10)",
+                "type": "Currency",
+                "chance": 0.25
+            },
+            {
+                "item": "Gelatinous Glob",
+                "type": "Crafting",
+                "chance": 0.35
+            },
+            {
+                "item": "Rusty Plate Mitten",
+                "type": "Junk",
+                "chance": 0.15
+            },
+            {
+                "item": "Potion of Acid Resistance",
+                "type": "Potion",
+                "chance": 0.05
+            },
+            {
+                "item": "Cube's Heart-Nucleus",
+                "type": "Rare",
+                "chance": 0.02
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_005",
+        "monster_name": "Owlbear",
+        "dnd_source_cr": "3",
+        "difficulty": "Medium",
+        "description": "A legendary monstrosity with the head of an owl and body of a bear.",
+        "requirements": {
+            "min_level": 12,
+            "slayer_skill_level": 7
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 300,
+            "xp_per_kill": 700,
+            "max_drops_per_kill": 2
+        },
+        "drop_table": [
+            {
+                "item": "Owlbear Feather",
+                "type": "Crafting",
+                "chance": 0.60
+            },
+            {
+                "item": "Tuft of Coarse Fur",
+                "type": "Crafting",
+                "chance": 0.50
+            },
+            {
+                "item": "Greatclaw",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Shattered Beak Piece",
+                "type": "Junk",
+                "chance": 0.30
+            },
+            {
+                "item": "Owlbear Musk",
+                "type": "Crafting",
+                "chance": 0.15
+            },
+            {
+                "item": "Raw Game Meat",
+                "type": "Consumable",
+                "chance": 0.40
+            },
+            {
+                "item": "Cracked Rib-Bone",
+                "type": "Junk",
+                "chance": 0.20
+            },
+            {
+                "item": "Stolen Hunter's Cloak",
+                "type": "Armor",
+                "chance": 0.08
+            },
+            {
+                "item": "Vial of Owlbear Gall",
+                "type": "Crafting",
+                "chance": 0.10
+            },
+            {
+                "item": "Alpha-Owlbear Eye",
+                "type": "Rare",
+                "chance": 0.02
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_006",
+        "monster_name": "Displacer Beast",
+        "dnd_source_cr": "3",
+        "difficulty": "Medium",
+        "description": "A six-legged feline predator with light-bending tentacles.",
+        "requirements": {
+            "min_level": 15,
+            "slayer_skill_level": 10
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 400,
+            "xp_per_kill": 700,
+            "max_drops_per_kill": 2
+        },
+        "drop_table": [
+            {
+                "item": "Displacer Hide Scrap",
+                "type": "Crafting",
+                "chance": 0.35
+            },
+            {
+                "item": "Serrated Tentacle Shard",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Blink-Dust",
+                "type": "Crafting",
+                "chance": 0.20
+            },
+            {
+                "item": "Shimmering Whisker",
+                "type": "Junk",
+                "chance": 0.40
+            },
+            {
+                "item": "Feline Fang",
+                "type": "Crafting",
+                "chance": 0.30
+            },
+            {
+                "item": "Sinewy Muscle Rope",
+                "type": "Crafting",
+                "chance": 0.15
+            },
+            {
+                "item": "Glow-Eye Lens",
+                "type": "Crafting",
+                "chance": 0.10
+            },
+            {
+                "item": "Tattered Shadow-Cloak",
+                "type": "Armor",
+                "chance": 0.05
+            },
+            {
+                "item": "Void-Scent Gland",
+                "type": "Crafting",
+                "chance": 0.12
+            },
+            {
+                "item": "Displacer Beast Heart",
+                "type": "Rare",
+                "chance": 0.03
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_007",
+        "monster_name": "Mind Flayer",
+        "dnd_source_cr": "7",
+        "difficulty": "Hard",
+        "description": "Psionic tyrants that feed on the brains of sentient beings.",
+        "requirements": {
+            "min_level": 25,
+            "slayer_skill_level": 20
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 900,
+            "xp_per_kill": 2900,
+            "max_drops_per_kill": 3
+        },
+        "drop_table": [
+            {
+                "item": "Illithid Tentacle",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Psionic Brain-Stem",
+                "type": "Crafting",
+                "chance": 0.25
+            },
+            {
+                "item": "Strange Purple Robe",
+                "type": "Armor",
+                "chance": 0.10
+            },
+            {
+                "item": "Shattered Control Circlet",
+                "type": "Junk",
+                "chance": 0.30
+            },
+            {
+                "item": "Vial of Cerebral Fluid",
+                "type": "Crafting",
+                "chance": 0.20
+            },
+            {
+                "item": "Telepathic Resonance Crystal",
+                "type": "Rare",
+                "chance": 0.05
+            },
+            {
+                "item": "Warped Silver Dagger",
+                "type": "Weapon",
+                "chance": 0.08
+            },
+            {
+                "item": "Alien Skin Membrane",
+                "type": "Crafting",
+                "chance": 0.15
+            },
+            {
+                "item": "Grimoire Shard (Deep Speech)",
+                "type": "Lore",
+                "chance": 0.03
+            },
+            {
+                "item": "Elder Brain Fragment",
+                "type": "Legendary",
+                "chance": 0.01
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_008",
+        "monster_name": "Fire Giant",
+        "dnd_source_cr": "9",
+        "difficulty": "Hard",
+        "description": "Master smiths and tacticians from the volcanic depths.",
+        "requirements": {
+            "min_level": 35,
+            "slayer_skill_level": 25
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 1500,
+            "xp_per_kill": 5000,
+            "max_drops_per_kill": 4
+        },
+        "drop_table": [
+            {
+                "item": "Molten Iron Ingots (2)",
+                "type": "Crafting",
+                "chance": 0.40
+            },
+            {
+                "item": "Fire Giant Tooth",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Greatsword Hilt",
+                "type": "Junk",
+                "chance": 0.35
+            },
+            {
+                "item": "Soot-Covered Belt",
+                "type": "Armor",
+                "chance": 0.15
+            },
+            {
+                "item": "Obsidian Shard (Carved)",
+                "type": "Value",
+                "chance": 0.10
+            },
+            {
+                "item": "Giant's Coal-Stone",
+                "type": "Crafting",
+                "chance": 0.25
+            },
+            {
+                "item": "Quenched Lava Core",
+                "type": "Rare",
+                "chance": 0.05
+            },
+            {
+                "item": "Hammer of the Forge-Bane",
+                "type": "Weapon",
+                "chance": 0.02
+            },
+            {
+                "item": "Heavy Brass Buckle",
+                "type": "Junk",
+                "chance": 0.20
+            },
+            {
+                "item": "Fire-Forged Plate Scrap",
+                "type": "Crafting",
+                "chance": 0.18
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_009",
+        "monster_name": "Beholder",
+        "dnd_source_cr": "13",
+        "difficulty": "Hard",
+        "description": "A floating orb of eyes, driven by madness and paranoia.",
+        "requirements": {
+            "min_level": 50,
+            "slayer_skill_level": 40
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 2400,
+            "xp_per_kill": 10000,
+            "max_drops_per_kill": 5
+        },
+        "drop_table": [
+            {
+                "item": "Beholder Eyestalk",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Petrification Eye-Lens",
+                "type": "Rare",
+                "chance": 0.08
+            },
+            {
+                "item": "Disintegration Dust",
+                "type": "Crafting",
+                "chance": 0.12
+            },
+            {
+                "item": "Floating Air Sac",
+                "type": "Junk",
+                "chance": 0.30
+            },
+            {
+                "item": "Beholder hide (Chitinous)",
+                "type": "Crafting",
+                "chance": 0.20
+            },
+            {
+                "item": "Vial of Antimagic-Fluid",
+                "type": "Rare",
+                "chance": 0.05
+            },
+            {
+                "item": "Central Eye Nebula",
+                "type": "Legendary",
+                "chance": 0.01
+            },
+            {
+                "item": "Ichor of Paranoia",
+                "type": "Crafting",
+                "chance": 0.15
+            },
+            {
+                "item": "Madman's Dream Notebook",
+                "type": "Lore",
+                "chance": 0.10
+            },
+            {
+                "item": "Telekinetic Tendril (Severed)",
+                "type": "Junk",
+                "chance": 0.25
+            }
+        ]
+    },
+    {
+        "task_id": "SLAYER_010",
+        "monster_name": "Tarrasque",
+        "dnd_source_cr": "30",
+        "difficulty": "Grandmaster",
+        "description": "The ultimate engine of destruction, a titan of myth.",
+        "requirements": {
+            "min_level": 90,
+            "slayer_skill_level": 99
+        },
+        "idle_mechanics": {
+            "time_to_kill_sec": 7200,
+            "xp_per_kill": 155000,
+            "max_drops_per_kill": 10
+        },
+        "drop_table": [
+            {
+                "item": "Tarrasque Carapace Piece",
+                "type": "Legendary",
+                "chance": 0.05
+            },
+            {
+                "item": "Mountain-Smasher Tooth",
+                "type": "Trophy",
+                "chance": 1.00
+            },
+            {
+                "item": "Blood of the World-Eater",
+                "type": "Epic",
+                "chance": 0.02
+            },
+            {
+                "item": "Indestructible Claw Shard",
+                "type": "Legendary",
+                "chance": 0.04
+            },
+            {
+                "item": "Void-Tainted Sinew",
+                "type": "Crafting",
+                "chance": 0.20
+            },
+            {
+                "item": "Ancient Gold Pile (5000)",
+                "type": "Currency",
+                "chance": 1.00
+            },
+            {
+                "item": "Titan's Gastric Stone",
+                "type": "Junk",
+                "chance": 0.50
+            },
+            {
+                "item": "Sovereign Essence of Earth",
+                "type": "Legendary",
+                "chance": 0.01
+            },
+            {
+                "item": "Dread-Armor Fragment",
+                "type": "Epic",
+                "chance": 0.08
+            },
+            {
+                "item": "Heart of the Unstoppable",
+                "type": "Unique",
+                "chance": 0.001
+            }
+        ]
+    }
+]

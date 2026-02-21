@@ -9,7 +9,7 @@ logger = logging.getLogger("EH_QuestEngine")
 
 class QuestEngine:
     def __init__(self):
-        self.db_path = DB_DIR / "SIDE_QUESTS_DB.json"
+        self.db_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "SIDE_QUESTS_DB.json"
         self.completion_path = DB_DIR / "QUEST_COMPLETION.json"
         self.loot_path = DB_DIR / "PARTY_EQUIPMENT.json"
         self.deeds_path = DB_DIR / "QUEST_DEEDS.md"

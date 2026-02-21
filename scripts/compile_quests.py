@@ -12,9 +12,8 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("QuestCompiler")
 
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 SOURCE_DIR = ROOT_DIR / "EmberHeartReborn" / "docs" / "quests"
-OUTPUT_DB = ROOT_DIR / "EmberHeartReborn" / "state" / "SIDE_QUESTS_DB.json"
+OUTPUT_DB = ROOT_DIR / "EmberHeartReborn" / "docs" / "SIDE_QUESTS_DB.json"
 
 def run():
     if not SOURCE_DIR.exists():
