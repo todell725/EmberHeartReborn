@@ -14,7 +14,8 @@ class ForgeCog(commands.Cog):
         self.bot = bot
         self.forge_engine = ForgeEngine()
         self.quest_engine = QuestEngine()
-        self.transport = TransportAPI(bot)
+        from core.transport import transport
+        self.transport = transport
 
     @commands.group(name="forge", invoke_without_command=True)
     @require_channel("the-forge")

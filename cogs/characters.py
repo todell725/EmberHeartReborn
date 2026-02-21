@@ -12,7 +12,8 @@ logger = logging.getLogger("Cog_Characters")
 class CharactersCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.transport = TransportAPI(bot)
+        from core.transport import transport
+        self.transport = transport
         self.npc_path = DB_DIR / "NPC_STATE_FULL.json"
         self.party_path = DB_DIR / "PARTY_STATE.json"
 
@@ -326,6 +327,111 @@ class CharactersCog(commands.Cog):
                 
         except Exception as e:
             await self.transport.send(ctx.channel, f"❌ Error updating HP: {e}")
+
+    @commands.command(name='dm')
+    async def dm(self, ctx, char_name: str, *, message: str):
+        """Send a secret message to an NPC/Party member to start a DM thread."""
+        try:
+            # Gather character pool
+            search_pool = []
+            if self.npc_path.exists():
+                data = json.loads(self.npc_path.read_text(encoding='utf-8'))
+                search_pool.extend([n for n in data.get("npcs", []) if isinstance(n, dict)])
+            if self.party_path.exists():
+                data = json.loads(self.party_path.read_text(encoding='utf-8'))
+                search_pool.extend([p for p in data.get("party", []) if isinstance(p, dict)])
+
+            # Find target
+            search_query = char_name.lower()
+            match = None
+            
+            # 1. Try exact matches first (ID or Name)
+            match = next((n for n in search_pool if search_query == n.get('name', '').lower() or search_query == n.get('id', '').lower()), None)
+            
+            # 2. Try partial if no exact
+            if not match:
+                match = next((n for n in search_pool if search_query in n.get('name', '').lower()), None)
+            
+            if not match:
+                await self.transport.send(ctx.channel, f"🔍 Hmm. The Chronicle has no record of '{char_name}'.")
+                return
+
+            char_display_name = match.get('name')
+            char_id = match.get('id', 'NPC')
+            char_topic = f"{char_display_name} [{char_id}]"
+            
+            # Send the message to a private server channel
+            try:
+                guild = ctx.guild
+                if not guild:
+                    await self.transport.send(ctx.channel, "❌ You must use this command inside the server, not in a DM.")
+                    return
+
+                # Create a clean channel name: dm-npcname-username
+                user_clean = "".join(c for c in ctx.author.name if c.isalnum()).lower()
+                char_clean = "".join(c for c in char_name if c.isalnum()).lower()
+                channel_name = f"dm-{char_clean}-{user_clean}"
+
+                # Check if it already exists
+                dm_channel = discord.utils.get(guild.text_channels, name=channel_name)
+                
+                if dm_channel:
+                     await ctx.message.add_reaction("✉️")
+                     # Update topic just in case it was created by an older version
+                     if dm_channel.topic != char_topic:
+                         await dm_channel.edit(topic=char_topic)
+                     await self.transport.send(ctx.channel, f"➡️ Thread resumed in {dm_channel.mention}!")
+                else:
+                     # Create the private channel
+                     overwrites = {
+                         guild.default_role: discord.PermissionOverwrite(read_messages=False),
+                         ctx.author: discord.PermissionOverwrite(read_messages=True, send_messages=True),
+                         guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=True, manage_webhooks=True)
+                     }
+                     
+                     # Check for a 'DMs' category, optional
+                     category = discord.utils.get(guild.categories, name="DMs")
+                     dm_channel = await guild.create_text_channel(
+                         name=channel_name, 
+                         overwrites=overwrites, 
+                         category=category,
+                         topic=char_topic
+                     )
+                     await self.transport.send(ctx.channel, f"✉️ Private comms established: {dm_channel.mention}")
+                
+                # Mock the interaction by sending the user's message to the new channel 
+                await self.transport.send(
+                    dm_channel,
+                    f"*You secretly reached out to {char_display_name}:*\n> {message}",
+                    username="DM System"
+                )
+                
+                # Trigger the AI to respond in the channel
+                from cogs.brain import IDENTITIES, parse_speaker_blocks
+                client = self.bot.get_cog("BrainCog").brain_manager.get_client(dm_channel.id, npc_name=char_display_name)
+                response_text = await asyncio.to_thread(
+                    client.chat, 
+                    f"{ctx.author.display_name} (To {char_name}): {message}"
+                )
+                
+                blocks = parse_speaker_blocks(response_text, IDENTITIES, [])
+                for idx, block in enumerate(blocks):
+                    speaker = block["speaker"]
+                    identity = dict(match) if char_name.lower() in speaker.lower() else block["identity"]
+                    content = block["content"]
+                    wait = (idx < len(blocks) - 1)
+                    
+                    if identity:
+                        await self.transport.send(dm_channel, content, username=identity.get("name", speaker), wait=wait)
+                    else:
+                        await self.transport.send(dm_channel, content, username=speaker, wait=wait)
+                        
+            except discord.Forbidden:
+                await self.transport.send(ctx.channel, f"❌ I don't have permission to create channels, {ctx.author.mention}!")
+                
+        except Exception as e:
+            logger.error(f"DM Error: {e}", exc_info=True)
+            await self.transport.send(ctx.channel, f"❌ A temporal anomaly disrupts the message... ({e})")
 
 async def setup(bot):
     await bot.add_cog(CharactersCog(bot))

@@ -18,3 +18,18 @@ backups/
 # IDE files
 .vscode/
 .idea/
+
+# Gamebooks and Converted Content
+docs/reference/gamebooks/
+docs/reference/gamebooks_md/
+docs/reference/RAW_DND/
+
+# State and Logs
+state/CONVERSATIONS.json
+state/CONVERSATIONS.corrupt.bak
+state/*.bak
+debug/
+*.log
+prompt_test.txt
+tests/scrub_conversations.py
+tests/verify_npc_scaling.py

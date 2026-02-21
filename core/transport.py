@@ -47,17 +47,24 @@ class TransportAPI:
              identity = IDENTITIES.get(identity_key, IDENTITIES["DM"])
              final_name = username or identity["name"]
              final_avatar = avatar_url or identity["avatar"]
+             
+             # Robust Fallback: If we have a username but the avatar is the Weaver or missing, 
+             # try to find a better avatar from the registry using the name.
+             if final_name and (not final_avatar or final_avatar == IDENTITIES["DM"]["avatar"]):
+                 match = next((k for k in IDENTITIES if isinstance(k, str) and k.lower() == final_name.lower()), None)
+                 if match and IDENTITIES[match].get("avatar"):
+                     final_avatar = IDENTITIES[match]["avatar"]
 
              if not webhook:
                  # Fallback: Can't use webhooks here (e.g. DM channels or lacking permissions)
-                 return await self._send_chunked_standard(channel, content)
+                 return await self._send_chunked_standard(channel, content, final_name)
 
              try:
-                 logger.debug(f"[WEBHOOK] Routing to {channel.name} as {final_name}")
+                 logger.debug(f"[WEBHOOK] Routing to {getattr(channel, 'name', 'DM')} as {final_name}")
                  return await self._send_chunked_webhook(webhook, content, final_name, final_avatar, wait)
              except Exception as e:
                  logger.error(f"Webhook send failed: {e}. Falling back to standard send.")
-                 return await self._send_chunked_standard(channel, content)
+                 return await self._send_chunked_standard(channel, content, final_name)
 
     async def _send_chunked_webhook(self, webhook, content, username, avatar_url, wait):
         """Helper to handle webhook limits."""
@@ -73,8 +80,11 @@ class TransportAPI:
                  await asyncio.sleep(0.5) # Prevent ratelimits
         return last_msg
 
-    async def _send_chunked_standard(self, channel, content):
-        """Helper to handle standard message limits."""
+    async def _send_chunked_standard(self, channel, content, username=None):
+        """Helper to handle standard message limits. Prepends character name for DMs."""
+        if isinstance(channel, discord.DMChannel) and username and username != "DM":
+             content = f"**{username}:**\n{content}"
+
         MAX_LENGTH = 1900
         if len(content) <= MAX_LENGTH:
             return await channel.send(content)

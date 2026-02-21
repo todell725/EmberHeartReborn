@@ -111,6 +111,28 @@
             "tension": 9,
             "public_perception": 5,
             "intimacy": 10
+        },
+        {
+            "pair": [
+                "KH-01",
+                "PC-02"
+            ],
+            "affection": 95,
+            "trust": 100,
+            "tension": 10,
+            "public_perception": 5,
+            "intimacy": 85
+        },
+        {
+            "pair": [
+                "KH-01",
+                "EH-29"
+            ],
+            "affection": 50,
+            "trust": 40,
+            "tension": 10,
+            "public_perception": 5,
+            "intimacy": 20
         }
     ]
 }

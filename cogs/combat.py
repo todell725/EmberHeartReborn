@@ -14,7 +14,8 @@ class CombatCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.battle_tracker = CombatTracker()
-        self.transport = TransportAPI(bot)
+        from core.transport import transport
+        self.transport = transport
         self.party_path = DB_DIR / "PARTY_STATE.json"
 
     @commands.group(invoke_without_command=True)

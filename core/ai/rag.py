@@ -50,7 +50,7 @@ class WorldContextManager:
                 briefing.append(f"### RECENT ACCOMPLISHMENTS:\n{recent_deeds}")
 
         if not briefing: return ""
-        return "\n## SOVEREIGN BRIEFING (Core Awareness):\n" + "\n".join(briefing)
+        return "\n## RECENT CHRONICLE RECORDS:\n" + "\n".join(briefing)
 
     def _load_json(self, path: Path):
         if path.exists():
@@ -65,8 +65,11 @@ class WorldContextManager:
         message_low = message.lower()
         context_snippets = []
 
-        # 1. Check for NPCs (Name Match OR Bio/Connection Match)
-        for n in self.npc_data:
+        party_list = self.party_data.get("party", []) if isinstance(self.party_data, dict) else self.party_data
+        all_chars = self.npc_data + (party_list if isinstance(party_list, list) else [])
+        
+        # 1. Check for Characters (Name Match OR Bio/Connection Match)
+        for n in all_chars:
             if not isinstance(n, dict): continue
             name = n.get("name", "").lower()
             bio = n.get("bio", "").lower()
@@ -75,15 +78,39 @@ class WorldContextManager:
             if name and name in message_low or (bio and any(word in message_low for word in name.split())) or (conn and any(word in message_low for word in name.split())):
                 # If specific NPC name is mentioned, or words from its name appear in context
                 npc_id = n.get('id', '??')
-                context_snippets.append(f"NAME: {n.get('name')} [ID: {npc_id}] | ROLE: {n.get('role', n.get('class'))} | MOTIVATION: {n.get('motivation', 'Unknown')}\nBIO: {n.get('bio', bio[:200])}")
+                
+                # Check Relationships
+                from core.relationships import relationship_manager
+                rel_data = relationship_manager.get_relationship("KH-01", npc_id)
+                rel_labels = relationship_manager.get_status_labels(rel_data)
+                rel_text = ", ".join(rel_labels) if rel_labels else "Neutral"
+                
+                context_snippets.append(f"### Character Sketch: {n.get('name')}\nRole: {n.get('role', n.get('class'))}\nRelationship to You (Kaelrath): {rel_text}\nMotivation: {n.get('motivation', 'Unknown')}\nBio: {n.get('bio', bio[:200])}")
 
-        # 2. Check for File Matches (e.g., KAELRATH_PROFILE_PATCH.md)
+        IGNORED_RAG_FILES = {
+            "ADULT_RELATIONSHIP_CALIBRATION",
+            "PARTY_RELATIONSHIP_ENGINE",
+            "RELATIONSHIP_GRAPH_SPEC",
+            "DM_RULES",
+            "CULT_CORRUPTION_ENGINE",
+            "EVENT_RULES",
+            "FACTION_RULES",
+            "PARTY_MECHANICS",
+            "BOT_EXPANSION_PLAN",
+            "VALIDATION_CHECKLIST",
+            "PROMPT_INTERFACE",
+            "NPC_AGENT_MODEL"
+        }
+
         for path in self.docs_dir.glob("*"):
             if path.is_file() and any(word in path.name.lower() for word in message_low.split()):
+                if path.stem in IGNORED_RAG_FILES: continue
+                
                 if len(context_snippets) < 5: # Limit to avoid bloat
                     try:
                         content = path.read_text(encoding='utf-8')
-                        context_snippets.append(f"FILE ({path.name}): {content[:500]}")
+                        clean_name = path.stem.replace('_', ' ').title()
+                        context_snippets.append(f"### Historical Record: {clean_name}\n{content[:500]}")
                     except Exception as e:
                         logger.error(f"Error reading context file {path.name}: {e}")
 
@@ -119,4 +146,4 @@ class WorldContextManager:
         if not context_snippets:
             return ""
 
-        return "\n## NEW WORLD KNOWLEDGE (Injected Context):\n" + "\n".join(context_snippets)
+        return "\n## ADDITIONAL WORLD INSIGHTS:\n" + "\n".join(context_snippets)

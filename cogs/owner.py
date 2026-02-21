@@ -20,7 +20,8 @@ class OwnerCog(commands.Cog):
         self.slayer_engine = SlayerEngine()
         self.tick_engine = TickEngine()
         self.quest_engine = QuestEngine()
-        self.transport = TransportAPI(bot)
+        from core.transport import transport
+        self.transport = transport
 
     @commands.group(name="owner", invoke_without_command=True)
     async def owner(self, ctx):

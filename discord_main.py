@@ -47,5 +47,13 @@ if __name__ == "__main__":
         logger.error("DISCORD_BOT_TOKEN not found in .env")
         exit(1)
         
+    import urllib.request
+    ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+    try:
+        urllib.request.urlopen(f"{ollama_url.replace('/v1', '')}/api/tags", timeout=3)
+        logger.info("✅ Ollama is running and reachable.")
+    except Exception:
+        logger.warning("⚠️  Ollama not detected at localhost:11434. Cloud fallbacks will be used.")
+
     bot = EmberHeartBot()
     bot.run(TOKEN)

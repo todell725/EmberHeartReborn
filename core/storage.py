@@ -23,16 +23,54 @@ def save_json(filename: str, data: dict | list):
     DB_DIR.mkdir(parents=True, exist_ok=True)
     
     path = DB_DIR / filename
-    temp_path = path.with_suffix('.tmp')
+    # Use UUID in temp file to ensure thread-safety during concurrent writes
+    import uuid
+    temp_path = path.with_suffix(f'.{uuid.uuid4()}.tmp')
     
     with open(temp_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4)
         
-    # Atomic replace
-    if path.exists():
-        os.replace(temp_path, path)
-    else:
-        os.rename(temp_path, path)
+    # Atomic replace with retry for Windows file locking
+    max_retries = 5
+    retry_delay = 0.2  # seconds
+    
+    for i in range(max_retries):
+        try:
+            if path.exists():
+                os.replace(temp_path, path)
+            else:
+                os.rename(temp_path, path)
+            break
+        except PermissionError as e:
+            if i == max_retries - 1:
+                print(f"❌ Final attempt failed to save {filename}: {e}")
+                raise
+            time.sleep(retry_delay)
+            # exponential backoff
+            retry_delay *= 2
+
+def load_conversations() -> dict:
+    """Loads all active conversation histories with corruption protection."""
+    path = DB_DIR / "CONVERSATIONS.json"
+    if not path.exists():
+        return {}
+        
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"⚠️ Corruption detected in CONVERSATIONS.json: {e}")
+        backup_path = path.with_suffix('.corrupt.bak')
+        try:
+            os.replace(path, backup_path)
+            print(f"🔄 Corrupted file moved to {backup_path}. Starting fresh.")
+        except Exception as e2:
+            print(f"❌ Failed to move corrupted file: {e2}")
+        return {}
+
+def save_conversations(data: dict):
+    """Saves conversation histories."""
+    save_json("CONVERSATIONS.json", data)
 
 def backup_state():
     """Creates a timestamped backup of strict runtime state files."""
@@ -54,7 +92,8 @@ def backup_state():
         "LOOT_LEDGER.json",
         "FORGE_ACTIVE.json",
         "SLAYER_ACTIVE.json",
-        "PARTY_EQUIPMENT.json"
+        "PARTY_EQUIPMENT.json",
+        "CONVERSATIONS.json"
     ]
 
     backed_up = 0

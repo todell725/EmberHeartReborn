@@ -14,7 +14,8 @@ class WorldCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.forge_engine = ForgeEngine()
-        self.transport = TransportAPI(bot)
+        from core.transport import transport
+        self.transport = transport
 
     @commands.command()
     async def stats(self, ctx):

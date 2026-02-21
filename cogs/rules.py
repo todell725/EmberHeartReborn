@@ -15,7 +15,8 @@ DND_INDEX_PATH = ROOT_DIR / "EmberHeartReborn" / "docs" / "DND_REFERENCE_INDEX.j
 class RulesCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.transport = TransportAPI(bot)
+        from core.transport import transport
+        self.transport = transport
 
     @commands.command()
     @require_channel("resources")

@@ -1,12 +1,36 @@
 from pathlib import Path
 
-def generate_eh_system_prompt(eh_dir: Path) -> str:
-    """Overhauled System Prompt: Antigravity-Class Sovereign Advisor."""
+def generate_world_rules(eh_dir: Path, diegetic: bool = False) -> str:
+    """Returns base lore, rules, and user profile. If diegetic, strips DM persona instructions."""
     rules_path = eh_dir / "docs" / "DM_RULES.md"
     profile_path = eh_dir / "docs" / "USER_PROFILE_EH.md" 
     
     rules = rules_path.read_text(encoding='utf-8') if rules_path.exists() else "Standard 5e Rules."
     profile = profile_path.read_text(encoding='utf-8') if profile_path.exists() else "Persona: Dungeon Master."
+    
+    if diegetic:
+        # Strip DM Persona, Mechanics, & Session Management sections
+        import re
+        rules = re.sub(r"# EmberHeart: Dungeon Master Guidelines.*?\n---", "", rules, flags=re.S)
+        rules = re.sub(r"## 🎭 1. DM Persona.*?\n##", "##", rules, flags=re.S)
+        rules = re.sub(r"## 🎲 2. Mechanical Discipline.*?\n##", "##", rules, flags=re.S)
+        rules = re.sub(r"## 📜 3. Session Management.*", "", rules, flags=re.S)
+        rules = rules.replace("DM", "Chronicle").strip()
+        
+        # Also sanitize the profile (USER_PROFILE_EH.md)
+        profile = re.sub(r"## Core Dynamic: \"The Invisible DM\".*", "", profile, flags=re.S)
+        profile = profile.replace("Dungeon Master", "Sovereign").strip()
+    
+    return f"""## Player Profile
+{profile}
+
+## Campaign Rules & World Laws
+{rules[:2000]}
+"""
+
+def generate_eh_system_prompt(eh_dir: Path) -> str:
+    """Overhauled System Prompt: Antigravity-Class Sovereign Advisor."""
+    world_rules = generate_world_rules(eh_dir)
     
     prompt = f"""You are Antigravity, the Sovereign Advisor and Master Dungeon Master for the EmberHeart campaign.
 
@@ -15,10 +39,7 @@ You are not just a chatbot; you are an **Agentic AI**. You manage the simulation
 Your goal is to be a peer-advisor to the user, providing deep mechanical insight disguised as atmospheric storytelling.
 
 ## Persona: The Chronicle Weaver
-{profile}
-
-## Campaign Rules & Simulation Engines
-{rules[:2000]}
+{world_rules}
 
 ## Protocol: The Sovereign Advisor
 1. **Absolute Awareness**: You are aware of every NPC, every scrap of loot, and every kingdom stat. 

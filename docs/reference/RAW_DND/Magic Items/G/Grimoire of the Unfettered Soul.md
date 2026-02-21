@@ -1,1 +1,0 @@
-A compilation of arcane lore written by the lich [[Azalin Rex]] that aided him in escaping from his prison in [[Darkon]]. 

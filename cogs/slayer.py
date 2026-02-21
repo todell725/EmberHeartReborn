@@ -15,7 +15,8 @@ class SlayerCog(commands.Cog):
         self.bot = bot
         self.slayer_engine = SlayerEngine()
         self.quest_engine = QuestEngine()
-        self.transport = TransportAPI(bot)
+        from core.transport import transport
+        self.transport = transport
 
     @commands.group(name="slayer", invoke_without_command=True)
     @require_channel("idle-slayer")
