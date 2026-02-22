@@ -46,10 +46,8 @@ class OwnerCog(commands.Cog):
 
     @owner.command(name="skip")
     async def owner_skip(self, ctx, hours: float):
-        """Skip time on the current slayer hunt OR forge project (Max 12h)."""
-        if hours > 12:
-            await self.transport.send(ctx.channel, "⚠️ **Sovereign Limit:** You can only bend time by up to 12 hours.")
-            hours = 12
+        """Skip time on the current slayer hunt OR forge project. NO LIMIT."""
+        # Unrestricted chronal manipulation
             
         slayer_skipped = self.slayer_engine.skip_time(ctx.channel.id, hours)
         
@@ -112,7 +110,8 @@ class OwnerCog(commands.Cog):
             ("images", "Captured visions and NPC portraits."),
             ("resources", "Rules reference and kingdom statistics."),
             ("combat", "Combat tracking and initiative order."),
-            ("idle-slayer", "The eternal grind of the Ridge.")
+            ("idle-slayer", "The eternal grind of the Ridge."),
+            ("weaver-archives", "META-CHANNEL: Direct system access and meta-cognitive archives. Sovereign only.")
         ]
         
         category_name = "🏰 EMBERHEART"
@@ -127,9 +126,17 @@ class OwnerCog(commands.Cog):
         for name, desc in channels_to_create:
             existing = discord.utils.get(guild.channels, name=name)
             if not existing:
-                await guild.create_text_channel(name, category=category, topic=desc)
+                overwrites = None
+                if name == "weaver-archives":
+                    # Private: Sovereign (Owner) and Bot only
+                    overwrites = {
+                        guild.default_role: discord.PermissionOverwrite(read_messages=False),
+                        guild.owner: discord.PermissionOverwrite(read_messages=True, send_messages=True),
+                        guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=True)
+                    }
+                await guild.create_text_channel(name, category=category, topic=desc, overwrites=overwrites)
                 channel_count += 1
-                await self.transport.send(ctx.channel, f"✅ Created Channel: `#{name}`")
+                await self.transport.send(ctx.channel, f"✅ Created Channel: `#{name}`{' (PRIVATE)' if overwrites else ''}")
             else:
                 if existing.category != category:
                     await existing.edit(category=category)

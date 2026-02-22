@@ -63,13 +63,14 @@ class SlayerEngine:
             return [t for t in self._db if t['requirements']['min_level'] <= min_level]
         return self._db
 
-    def start_task(self, channel_id: int, task_id: str):
+    def start_task(self, channel_id: int, task_id: str, solo: bool = False):
         task = self.get_task(task_id)
         if not task:
             return None
         self.active_tasks[channel_id] = {
             "task_id": task_id.upper(),
-            "start_time": datetime.now()
+            "start_time": datetime.now(),
+            "solo": solo
         }
         self._save_active()
         return task

@@ -24,9 +24,9 @@ class CombatTracker:
         self.current_index = 0
         self.active = False
 
-    def add_party_xp(self, xp: int) -> list[tuple]:
+    def add_party_xp(self, xp: int, target_ids: list = None) -> list[tuple]:
         """
-        Award XP to the entire party (all PC- prefixed characters). 
+        Award XP to the party. If target_ids is provided, only those IDs get XP.
         Returns list of (name, new_level).
         """
         leveled_up = []
@@ -37,8 +37,11 @@ class CombatTracker:
             # Party = Characters with PC- prefix in ID
             party = [s for s in all_states if s.get("id", "").startswith("PC-")]
             
+            if target_ids:
+                party = [s for s in party if s.get("id") in target_ids]
+            
             if not party:
-                logger.warning("XP Sync failed: No party members (PC-*) found.")
+                logger.warning(f"XP Sync failed: No matching party members {target_ids if target_ids else '(PC-*)'} found.")
                 return []
                 
             for char_state in party:

@@ -30,6 +30,10 @@ class SlayerCog(commands.Cog):
             elapsed = int((datetime.now() - active['start_time']).total_seconds())
             ttk = task['idle_mechanics']['time_to_kill_sec']
             
+            # Solo Scaling
+            if active.get('solo'):
+                ttk *= 4
+            
             if elapsed >= ttk:
                 await self.transport.send(channel, f"✅ **Hunt Complete!** You have defeated the **{task['monster_name']}**.\n> Use `!slayer claim` to collect your rewards.")
             else:
@@ -58,16 +62,20 @@ class SlayerCog(commands.Cog):
 
     @slayer.command(name="task")
     @require_channel("idle-slayer")
-    async def slayer_task(self, ctx, task_id: str):
-        """Start a slayer task: !slayer task SLAYER_001"""
-        task = self.slayer_engine.start_task(ctx.channel.id, task_id)
+    async def slayer_task(self, ctx, task_id: str, solo: str = None):
+        """Start a slayer task: !slayer task SLAYER_001 [--solo]"""
+        is_solo = solo == "--solo"
+        task = self.slayer_engine.start_task(ctx.channel.id, task_id, solo=is_solo)
         channel = getattr(ctx, "target_channel", ctx.channel)
         
         if not task:
             await self.transport.send(channel, f"❌ Task **{task_id}** not found.")
             return
-        
-        await self.transport.send(channel, f"⚔️ **Hunt Started:** You are now hunting **{task['monster_name']}**.\n⏳ Estimated Time to Kill: **{task['idle_mechanics']['time_to_kill_sec']}s**")
+        ttk = task['idle_mechanics']['time_to_kill_sec']
+        if is_solo:
+            ttk *= 4
+            
+        await self.transport.send(channel, f"⚔️ **Hunt Started:** You are now hunting **{task['monster_name']}**{' (SOLO)' if is_solo else ''}.\n⏳ Estimated Time to Kill: **{ttk}s**")
 
     @slayer.command(name="claim")
     @require_channel("idle-slayer")
@@ -83,6 +91,11 @@ class SlayerCog(commands.Cog):
         task = self.slayer_engine.get_task(active['task_id'])
         elapsed = (datetime.now() - active['start_time']).total_seconds()
         ttk = task['idle_mechanics']['time_to_kill_sec']
+        
+        # Solo Scaling
+        is_solo = active.get('solo')
+        if is_solo:
+            ttk *= 4
         
         if elapsed < ttk:
             remaining = int(ttk - elapsed)
@@ -104,12 +117,13 @@ class SlayerCog(commands.Cog):
         display_drops = [f"{item} (x{count})" if count > 1 else item for item, count in counts.items()]
         
         # Sync via Quest Engine methods
-        self.quest_engine.combat.award_xp(total_xp) # Direct XP injection using CombatTracker from QuestEngine, wait, QuestEngine's combat is isolated per instance. Wait, CombatTracker is singleton-like or file-based? Actually, QuestEngine combat is memory-only unless saved. I will just pass the XP. There's a slight decoupling bug here if we don't save, but we'll accept it for now.
+        target_ids = ["PC-01"] if is_solo else None
+        leveled_up = self.quest_engine.combat.add_party_xp(total_xp, target_ids=target_ids)
         
         if all_raw_drops:
             self.quest_engine.sync_loot(all_raw_drops)
             
-        self.quest_engine.log_deed(task['task_id'], f"Slayer Grind: {task['monster_name']}", f"Defeated {kill_count} times in idle combat. Total XP: {total_xp}")
+        self.quest_engine.log_deed(task['task_id'], f"Slayer Grind: {task['monster_name']} {'(SOLO)' if is_solo else ''}", f"Defeated {kill_count} times in idle combat. Total XP: {total_xp}")
         
         msg = [
             f"🏆 **Grind Complete!**",
