@@ -129,10 +129,14 @@ class OwnerCog(commands.Cog):
                 overwrites = None
                 if name == "weaver-archives":
                     # Private: Sovereign (Owner) and Bot only
+                    # Robust lookup: guild.owner can be None if not cached
+                    owner_target = guild.owner or guild.get_member(guild.owner_id) or ctx.author
+                    bot_target = guild.me or ctx.guild.me
+                    
                     overwrites = {
                         guild.default_role: discord.PermissionOverwrite(read_messages=False),
-                        guild.owner: discord.PermissionOverwrite(read_messages=True, send_messages=True),
-                        guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=True)
+                        owner_target: discord.PermissionOverwrite(read_messages=True, send_messages=True),
+                        bot_target: discord.PermissionOverwrite(read_messages=True, send_messages=True)
                     }
                 await guild.create_text_channel(name, category=category, topic=desc, overwrites=overwrites)
                 channel_count += 1
