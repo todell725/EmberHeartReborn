@@ -165,9 +165,9 @@ class OwnerCog(commands.Cog):
         
         await self.transport.send(ctx.channel, f"✨ **Setup Complete.** {channel_count} Discord channels and {folder_count} filesystem directories established. Glory to the World-Spark.")
 
-    @commands.command()
+    @commands.command(name="purge")
     @commands.has_permissions(manage_messages=True)
-    async def clear(self, ctx):
+    async def purge(self, ctx):
         """Message Purge (Clean channel history)."""
         await ctx.channel.purge(limit=100)
         status = await ctx.send("🧹 **Channel Purged.**")
