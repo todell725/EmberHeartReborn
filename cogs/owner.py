@@ -95,10 +95,15 @@ class OwnerCog(commands.Cog):
 
     @owner.command(name="setup")
     async def owner_setup(self, ctx):
-        """Automatically create necessary channels for EmberHeart features."""
+        """Automatically create necessary channels and folder structure."""
         await self.transport.send(ctx.channel, "🛠️ **Initializing Sovereignty Infrastructure...**")
         
+        # 1. Discord Channel Creation
         channels_to_create = [
+            ("campaign-chat", "The main stage for the Chronicle. Plot-heavy and dramatic."),
+            ("rumors-chat", "Whispers from the Rumor Mill. News, hooks, and localized mystery."),
+            ("off-topic", "Casual roleplay, social downtime, and atmosphere. No plot pressure."),
+            ("party-chat", "In-character banter and coordination between players."),
             ("npc-gallery", "NPC dossiers and party character cards."),
             ("the-forge", "Artifact fabrication and crafting queue."),
             ("world-events", "Weekly Proclamations and world-heartbeat alerts."),
@@ -118,19 +123,40 @@ class OwnerCog(commands.Cog):
             category = await guild.create_category(category_name)
             await self.transport.send(ctx.channel, f"✅ Created Category: **{category_name}**")
 
-        created = 0
+        channel_count = 0
         for name, desc in channels_to_create:
             existing = discord.utils.get(guild.channels, name=name)
             if not existing:
                 await guild.create_text_channel(name, category=category, topic=desc)
-                created += 1
+                channel_count += 1
                 await self.transport.send(ctx.channel, f"✅ Created Channel: `#{name}`")
             else:
                 if existing.category != category:
                     await existing.edit(category=category)
                     await self.transport.send(ctx.channel, f"⚓ Docked `#{name}` to the Sovereignty category.")
 
-        await self.transport.send(ctx.channel, f"✨ **Setup Complete.** {created} new channels established. Glory to the World-Spark.")
+        # 2. Filesystem Initialization
+        from core.config import ROOT_DIR, DB_DIR, CHARACTERS_DIR
+        folders = [
+            DB_DIR,
+            CHARACTERS_DIR,
+            ROOT_DIR / "EmberHeartReborn" / "assets",
+            ROOT_DIR / "EmberHeartReborn" / "docs" / "quests" / "Hard",
+            ROOT_DIR / "EmberHeartReborn" / "docs" / "reference",
+            ROOT_DIR / "EmberHeartReborn" / "session_logs"
+        ]
+        
+        folder_count = 0
+        for folder in folders:
+            if not folder.exists():
+                folder.mkdir(parents=True, exist_ok=True)
+                folder_count += 1
+                # Create .gitkeep if empty
+                gitkeep = folder / ".gitkeep"
+                if not any(folder.iterdir()):
+                    gitkeep.touch()
+        
+        await self.transport.send(ctx.channel, f"✨ **Setup Complete.** {channel_count} Discord channels and {folder_count} filesystem directories established. Glory to the World-Spark.")
 
     @commands.command()
     @commands.has_permissions(manage_messages=True)

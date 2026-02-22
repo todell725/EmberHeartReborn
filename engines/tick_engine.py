@@ -9,8 +9,6 @@ logger = logging.getLogger("EH_Tick")
 class TickEngine:
     def __init__(self):
         self.settlement_path = DB_DIR / "SETTLEMENT_STATE.json"
-        self.npc_path = DB_DIR / "NPC_STATE_FULL.json"
-        self.party_path = DB_DIR / "PARTY_STATE.json"
         self.relationship_path = DB_DIR / "RELATIONSHIPS.json"
         self.deeds_path = DB_DIR / "QUEST_DEEDS.md"
 
@@ -41,16 +39,10 @@ class TickEngine:
                 chance = corruption_index * 2
                 if random.randint(1, 100) <= chance:
                     # Update exposure
-                    new_exposure = char_data.get('corruption_exposure', 0) + random.randint(10, 20)
-                    
-                    # Atomic save for this character
-                    # We only save the fields that belong in state.json
-                    from scripts.migrate_npcs import STATE_FIELDS
-                    char_state = {k: v for k, v in char_data.items() if k in STATE_FIELDS or k == 'corruption_exposure'}
-                    char_state['corruption_exposure'] = new_exposure
+                    char_data['corruption_exposure'] = char_data.get('corruption_exposure', 0) + random.randint(10, 20)
                     
                     try:
-                        save_character_state(char_data['id'], char_state)
+                        save_character_state(char_data['id'], char_data)
                         exposed.append(char_data.get('name', 'Unknown citizen'))
                     except Exception as e:
                         logger.error(f"Failed to save state for {char_data.get('id')}: {e}")

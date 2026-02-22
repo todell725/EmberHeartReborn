@@ -13,7 +13,6 @@ class DynamicShop:
         self.forge_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "FORGE_CATALOG.json" # Static
         self.spells_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "DND_REFERENCE_INDEX.json" # Static
         self.settlement_path = DB_DIR / "SETTLEMENT_STATE.json" # Live State
-        self.party_path = DB_DIR / "PARTY_STATE.json" # Live State
         self.last_rotation = None
         self.current_stock = []
         
@@ -111,17 +110,17 @@ class DynamicShop:
             return False, "Bank error processing funds."
 
         try:
-            party_data = json.loads(self.party_path.read_text(encoding='utf-8'))
-            buyer = next((p for p in party_data['party'] if p['id'] == buyer_id), None)
+            from core.storage import load_character_state, save_character_state
+            char_state = load_character_state(buyer_id)
             
-            if not buyer:
-                return False, "Buyer profile not found."
+            if not char_state:
+                return False, f"Buyer profile for '{buyer_id}' not found in chronicles."
                 
-            buyer.setdefault('status', {}).setdefault('inventory', []).append(target_name)
-            self.party_path.write_text(json.dumps(party_data, indent=4), encoding='utf-8')
+            char_state.setdefault('status', {}).setdefault('inventory', []).append(target_name)
+            save_character_state(buyer_id, char_state)
             
             return True, f"**Transaction Complete:** Purchased **{target_name}** for **{cost_val} OU**. (Treasury: {settlement['settlement']['stockpiles']['ore_stock_ou']} OU)"
             
         except Exception as e:
-            logger.error(f"Transaction Failed (Party): {e}")
+            logger.error(f"Transaction Failed (Character State): {e}", exc_info=True)
             return False, "Inventory update failed."

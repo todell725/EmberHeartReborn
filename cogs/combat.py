@@ -16,7 +16,6 @@ class CombatCog(commands.Cog):
         self.battle_tracker = CombatTracker()
         from core.transport import transport
         self.transport = transport
-        self.party_path = DB_DIR / "PARTY_STATE.json"
 
     @commands.group(invoke_without_command=True)
     @require_channel("combat")
@@ -58,9 +57,15 @@ class CombatCog(commands.Cog):
         """Roll initiative for the party and start combat."""
         channel = getattr(ctx, "target_channel", ctx.channel)
         try:
-            data = json.loads(self.party_path.read_text(encoding='utf-8'))
-            party = data.get("party", [])
+            from core.storage import load_all_character_states
+            all_states = load_all_character_states()
+            # Party = PC- prefixed
+            party = [s for s in all_states if s.get("id", "").startswith("PC-")]
             
+            if not party:
+                await self.transport.send(channel, "🔍 **No party members found.** Combat cancelled.")
+                return
+                
             self.battle_tracker.clear()
             self.battle_tracker.active = True
             

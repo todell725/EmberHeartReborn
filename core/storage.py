@@ -3,6 +3,7 @@ import os
 import shutil
 import time
 from pathlib import Path
+from datetime import datetime
 
 from core.config import DB_DIR, ROOT_DIR, CHARACTERS_DIR
 
@@ -61,7 +62,33 @@ def save_character_state(char_id: str, state: dict):
             break
         except PermissionError:
             if i == max_retries - 1: raise
-            time.sleep(0.2 * (i + 1))
+            time.sleep(0.5 * (i + 1))
+
+def save_character_profile(char_id: str, profile: dict):
+    """Atomically saves static profile data for a specific character."""
+    char_dir = get_character_dir(char_id)
+    if not char_dir:
+        raise FileNotFoundError(f"Character directory for {char_id} not found.")
+    
+    path = char_dir / "profile.json"
+    
+    import uuid
+    temp_path = path.with_suffix(f'.{uuid.uuid4()}.tmp')
+    
+    with open(temp_path, 'w', encoding='utf-8') as f:
+        json.dump(profile, f, indent=4)
+        
+    max_retries = 5
+    for i in range(max_retries):
+        try:
+            if path.exists():
+                os.replace(temp_path, path)
+            else:
+                os.rename(temp_path, path)
+            break
+        except PermissionError:
+            if i == max_retries - 1: raise
+            time.sleep(0.5 * (i + 1))
 
 def load_all_character_profiles() -> list:
     """Utility to load all character profiles from the characters/ directory."""
@@ -126,7 +153,12 @@ def load_json(filename: str):
 def save_json(filename: str, data: dict | list):
     """Atomically saves data to a JSON file in the state directory."""
     # Ensure standard directory structure
-    DB_DIR.mkdir(parents=True, exist_ok=True)
+    try:
+        DB_DIR.mkdir(parents=True, exist_ok=True)
+    except Exception as e:
+        # On network shares, sometimes mkdir fails despite folder existing or permissions being wonky
+        if not DB_DIR.exists():
+            print(f"⚠️ Warning: Failed to create DB_DIR {DB_DIR}: {e}")
     
     path = DB_DIR / filename
     # Use UUID in temp file to ensure thread-safety during concurrent writes
@@ -215,3 +247,41 @@ def backup_state():
     
     print(f"✅ Backed up {backed_up} state files and character directory to {backup_folder}")
     return backup_folder
+
+def log_narrative_event(event_text: str):
+    """Appends a concise narrative event to the global NARRATIVE_LOG.md with pruning."""
+    log_path = DB_DIR / "NARRATIVE_LOG.md"
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+    new_entry = f"- [{timestamp}] {event_text}\n"
+    
+    lines = []
+    if log_path.exists():
+        lines = log_path.read_text(encoding='utf-8').splitlines(keepends=True)
+    
+    # Prune to last 50 events
+    if len(lines) >= 50:
+        lines = lines[-49:]
+        
+    lines.append(new_entry)
+    
+    # Atomic write with retry
+    import uuid
+    temp_path = log_path.with_suffix(f'.{uuid.uuid4()}.tmp')
+    temp_path.write_text("".join(lines), encoding='utf-8')
+    
+    max_retries = 5
+    for i in range(max_retries):
+        try:
+            if log_path.exists():
+                os.replace(temp_path, log_path)
+            else:
+                os.rename(temp_path, log_path)
+            break
+        except PermissionError:
+            if i == max_retries - 1:
+                print(f"FAILED to save Narrative Log: Access Denied")
+                raise
+            time.sleep(0.5 * (i + 1))
+        except Exception as e:
+            print(f"Error saving Narrative Log: {e}")
+            break

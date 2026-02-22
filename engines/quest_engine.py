@@ -11,7 +11,7 @@ class QuestEngine:
     def __init__(self):
         self.db_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "SIDE_QUESTS_DB.json"
         self.completion_path = DB_DIR / "QUEST_COMPLETION.json"
-        self.loot_path = DB_DIR / "PARTY_EQUIPMENT.json"
+        self.loot_path = DB_DIR / "PARTY_EQUIPMENT.json" # Shared bulk storage
         self.deeds_path = DB_DIR / "QUEST_DEEDS.md"
         self.sessions: Dict[int, dict] = {} # channel_id -> session state
         self.completed = self._load_completed()
@@ -149,16 +149,18 @@ class QuestEngine:
         if not loot_list: return
         
         settlement_path = DB_DIR / "SETTLEMENT_STATE.json"
-        party_path = DB_DIR / "PARTY_STATE.json"
         
         MUNDANE_KEYS = ["bone", "pelt", "hide", "scrap", "claw", "dust", "fang", "horn",
                         "gland", "shell", "chunk", "fragment", "nucleus", "membrane"]
         try:
+            from core.storage import load_character_state, save_character_state, load_all_character_states
             equip_data = json.loads(self.loot_path.read_text(encoding='utf-8')) if self.loot_path.exists() else {"party_inventory": []}
             settlement_data = json.loads(settlement_path.read_text(encoding='utf-8'))
-            party_data = json.loads(party_path.read_text(encoding='utf-8'))
-            p_members = party_data.get("party", [])
             
+            # Need a backup list of PC names/IDs for auto-assign
+            all_states = load_all_character_states()
+            pcs = [s for s in all_states if s.get("id", "").startswith("PC-")]
+
             for item in loot_list:
                 item_lower = item.lower()
                 
@@ -173,16 +175,21 @@ class QuestEngine:
                     equip_data.setdefault("party_inventory", []).append(item)
                     logger.info(f"[LOOT] '{item}' -> Party Storage")
                 else:
-                    target = next((m for m in p_members if m['name'] == 'King Kaelrath'), None)
-                    if not target: target = p_members[0] if p_members else None
-                    if target:
-                        target.setdefault('status', {}).setdefault('inventory', []).append(item)
-                        logger.info(f"[LOOT] '{item}' -> {target['name']}'s Inventory")
+                    # Assign to Kaelrath (PC-01) by default, or the first PC
+                    target_id = "PC-01" 
+                    target_state = next((s for s in pcs if s['id'] == target_id), None)
+                    if not target_state and pcs:
+                        target_state = pcs[0]
+                        target_id = target_state['id']
+                    
+                    if target_state:
+                        target_state.setdefault('status', {}).setdefault('inventory', []).append(item)
+                        save_character_state(target_id, target_state)
+                        logger.info(f"[LOOT] '{item}' -> {target_state.get('name', 'Unknown')}'s Inventory")
                         
-            # Save all
+            # Save shared files
             self.loot_path.write_text(json.dumps(equip_data, indent=4), encoding='utf-8')
             settlement_path.write_text(json.dumps(settlement_data, indent=4), encoding='utf-8')
-            party_path.write_text(json.dumps(party_data, indent=4), encoding='utf-8')
             
         except Exception as e:
             logger.error(f"Loot Sync failed: {e}", exc_info=True)

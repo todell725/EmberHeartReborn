@@ -5,6 +5,31 @@ from pathlib import Path
 
 logger = logging.getLogger("EH_Brain")
 
+def scrub_meta_context(text: str) -> str:
+    """
+    Strips technical meta-context (Athena, Antigravity, workflows, etc.) 
+    from retrieved world snippets to maintain immersion.
+    """
+    if not text: return ""
+    
+    # Meta Keywords to scrub (Case-insensitive)
+    meta_keywords = [
+        "Athena", "Antigravity", "managed workflow", "/managed", "/dm", 
+        "simulation", "managed exit", "hibernated", "agent context", 
+        "ingestion", "technical details", "bot", "setup phase", 
+        "inter-galactic", "data pad", "workspace", "corpus",
+        "Triple-Lock", "Triple Sowing", "Cortex", "Scribe", "Antigravity-Class",
+        "Chronicle Weaver"
+    ]
+    
+    for kw in meta_keywords:
+        # Use regex to remove sentence/phrase containing the keyword if possible, 
+        # or just replace the keyword. Here we'll do a simple case-insensitive replacement first.
+        pattern = re.compile(re.escape(kw), re.IGNORECASE)
+        text = pattern.sub("[REDACTED]", text)
+        
+    return text
+
 class WorldContextManager:
     """Manages dynamic context injection from local EmberHeart knowledge."""
     def __init__(self, eh_dir: Path):
@@ -33,6 +58,23 @@ class WorldContextManager:
         # Short-Term Memory Files
         self.journal_path = self.docs_dir / "CAMPAIGN_JOURNAL.md"
         self.deeds_path = self.state_dir / "QUEST_DEEDS.md"
+        self.narrative_log_path = self.eh_dir / "state" / "NARRATIVE_LOG.md"
+
+    def get_narrative_pulse(self) -> str:
+        """Pulls the last 10 events from the global narrative pulse for continuity."""
+        if not self.narrative_log_path.exists():
+            return ""
+            
+        try:
+            lines = self.narrative_log_path.read_text(encoding='utf-8').splitlines()
+            if not lines: return ""
+            
+            # Last 10 lines
+            recent = lines[-10:]
+            return "\n## RECENT GLOBAL EVENTS (Cross-Channel):\n" + "\n".join(recent)
+        except Exception as e:
+            logger.error(f"Error reading narrative log: {e}")
+            return ""
 
     def get_sovereign_briefing(self) -> str:
         """Pulls the most recent history for absolute awareness."""
@@ -54,7 +96,7 @@ class WorldContextManager:
                 briefing.append(f"### RECENT ACCOMPLISHMENTS:\n{recent_deeds}")
 
         if not briefing: return ""
-        return "\n## RECENT CHRONICLE RECORDS:\n" + "\n".join(briefing)
+        return scrub_meta_context("\n## RECENT CHRONICLE RECORDS:\n" + "\n".join(briefing))
 
     def _load_json(self, path: Path):
         if path.exists():
@@ -111,7 +153,13 @@ class WorldContextManager:
             "BOT_EXPANSION_PLAN",
             "VALIDATION_CHECKLIST",
             "PROMPT_INTERFACE",
-            "NPC_AGENT_MODEL"
+            "NPC_AGENT_MODEL",
+            "AUTO_TICK_PROTOCOL",
+            "QUEST_BOTTLENECK_REPORT",
+            "RUNTIME_RULESET",
+            "decisions",
+            "gap_analysis",
+            "github_data_list"
         }
 
         for path in self.docs_dir.glob("*"):
@@ -122,7 +170,7 @@ class WorldContextManager:
                     try:
                         content = path.read_text(encoding='utf-8')
                         clean_name = path.stem.replace('_', ' ').title()
-                        context_snippets.append(f"### Historical Record: {clean_name}\n{content[:500]}")
+                        context_snippets.append(scrub_meta_context(f"### Historical Record: {clean_name}\n{content[:500]}"))
                     except Exception as e:
                         logger.error(f"Error reading context file {path.name}: {e}")
 
@@ -173,4 +221,4 @@ class WorldContextManager:
         if not context_snippets:
             return ""
 
-        return "\n## ADDITIONAL WORLD INSIGHTS:\n" + "\n".join(context_snippets)
+        return scrub_meta_context("\n## ADDITIONAL WORLD INSIGHTS:\n" + "\n".join(context_snippets))

@@ -25,7 +25,8 @@ def test_rag_injection():
     queries = [
         "Tell me about Marta Hale",
         "How is the party doing? Check health.",
-        "What is Silvara's story?"
+        "What is Silvara's story?",
+        "Kaelrath tells Silvy the current state of affairs."
     ]
     
     for q in queries:

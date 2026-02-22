@@ -69,17 +69,19 @@ class RulesCog(commands.Cog):
     async def loot(self, ctx, action: str = "list", *, item: str = None):
         """Party & Kingdom Inventory Management: !loot add/remove/list."""
         channel = getattr(ctx, "target_channel", ctx.channel)
-        party_path = DB_DIR / "PARTY_STATE.json"
         settlement_path = DB_DIR / "SETTLEMENT_STATE.json"
         equip_path = DB_DIR / "PARTY_EQUIPMENT.json"
+        
+        from core.storage import load_all_character_states, load_character_state, save_character_state, resolve_character
         
         if action == "list":
             msg_parts = ["**🏹 Current World Hoard**"]
             
             try:
-                if party_path.exists():
-                    data = json.loads(party_path.read_text(encoding='utf-8'))
-                    party = data.get("party", [])
+                all_states = load_all_character_states()
+                party = [s for s in all_states if s.get("id", "").startswith("PC-")]
+                
+                if party:
                     msg_parts.append("\n**-- Core Inventory --**")
                     for p in party:
                         inv = p.get("status", {}).get("inventory", [])
@@ -88,7 +90,7 @@ class RulesCog(commands.Cog):
                             inv_str = ", ".join([f"`{i} x{c}`" if c > 1 else f"`{i}`" for i, c in counts.items()])
                         else:
                             inv_str = "*Empty*"
-                        msg_parts.append(f"**{p['name']}**: {inv_str}")
+                        msg_parts.append(f"**{p.get('name', 'Unknown')}**: {inv_str}")
             except Exception as e:
                 logger.error(f"Loot Party Error: {e}")
 
@@ -96,7 +98,15 @@ class RulesCog(commands.Cog):
                 if equip_path.exists():
                     data = json.loads(equip_path.read_text(encoding='utf-8'))
                     equip_data = data.get("party_equipment", {})
+                    # Also handle flat list if PARTY_EQUIPMENT is just an inventory list
+                    p_inv = data.get("party_inventory", [])
+                    
                     msg_parts.append("\n**-- Equipment & Quest Loot --**")
+                    if p_inv:
+                         counts = Counter(p_inv)
+                         inv_str = ", ".join([f"`{i} x{c}`" if c > 1 else f"`{i}`" for i, c in counts.items()])
+                         msg_parts.append(f"**Shared Storage**: {inv_str}")
+                         
                     for name, details in equip_data.items():
                         inv = details.get("inventory", [])
                         if inv:
@@ -131,12 +141,10 @@ class RulesCog(commands.Cog):
                 
             target_name, item_name = parts[0], parts[1].strip('"').strip("'")
             is_kingdom = target_name.lower() in ["kingdom", "settlement", "emberheart"]
-            target_path = settlement_path if is_kingdom else party_path
             
             try:
-                data = json.loads(target_path.read_text(encoding='utf-8'))
-                
                 if is_kingdom:
+                    data = json.loads(settlement_path.read_text(encoding='utf-8'))
                     inv = data.get("settlement", {}).get("inventory", [])
                     if action == "add":
                         inv.append(item_name)
@@ -144,22 +152,29 @@ class RulesCog(commands.Cog):
                     else:
                         if item_name in inv: inv.remove(item_name)
                         msg = f"🏰 **Kingdom Treasury Updated:** Removed `{item_name}`"
+                    settlement_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
                 else:
-                    party = data.get("party", [])
-                    char = next((p for p in party if target_name.lower() in p['name'].lower()), None)
-                    if not char:
+                    match = resolve_character(target_name)
+                    if not match:
                         await self.transport.send(channel, f"🔍 Character '{target_name}' not found.")
                         return
                     
-                    inv = char.setdefault("status", {}).setdefault("inventory", [])
+                    char_id = match['id']
+                    char_state = load_character_state(char_id)
+                    if not char_state:
+                        await self.transport.send(channel, f"❌ {match['name']} does not have an active state record.")
+                        return
+                        
+                    inv = char_state.setdefault("status", {}).setdefault("inventory", [])
                     if action == "add":
                         inv.append(item_name)
-                        msg = f"🎒 **Inventory Update: {char['name']}**\nAdded `{item_name}`"
+                        msg = f"🎒 **Inventory Update: {match['name']}**\nAdded `{item_name}`"
                     else:
                         if item_name in inv: inv.remove(item_name)
-                        msg = f"🎒 **Inventory Update: {char['name']}**\nRemoved `{item_name}`"
+                        msg = f"🎒 **Inventory Update: {match['name']}**\nRemoved `{item_name}`"
+                    
+                    save_character_state(char_id, char_state)
                 
-                target_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
                 await self.transport.send(channel, msg)
                 
             except Exception as e:

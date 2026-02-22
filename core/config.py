@@ -21,7 +21,8 @@ IDENTITIES = {
     "DM": {"name": "The Chronicle Weaver", "avatar": "https://cdn.discordapp.com/attachments/1473540819146244218/1473803413988049192/image0.jpg?ex=699789e3&is=69963863&hm=ddcf70043b632ef81457595c1fa2b979128639e6c2aa284a7f882918d134c7d9&"},
     "STEWARD": {"name": "Royal Steward", "avatar": "https://i.imgur.com/4zYf4zD.png"},
     "SHADOW": {"name": "Your Shadow", "avatar": "https://i.imgur.com/u7yH8zW.png"},
-    "NPC": {"name": "NPC", "avatar": "https://i.imgur.com/pYIe6oM.png"}
+    "NPC": {"name": "NPC", "avatar": "https://i.imgur.com/pYIe6oM.png"},
+    "RUMORS": {"name": "The Rumor Mill", "avatar": "https://i.imgur.com/lO1nIOn.png"} # Placeholder or actual URL if available
 }
 
 def load_npc_identities():

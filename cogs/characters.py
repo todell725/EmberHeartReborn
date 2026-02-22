@@ -75,26 +75,29 @@ class CharactersCog(commands.Cog):
         """Show the party's currently equipped gear."""
         channel = getattr(ctx, "target_channel", ctx.channel)
         try:
-            if not self.party_path.exists():
-                await self.transport.send(channel, "❌ Error: Party state file not found.")
+            from core.storage import load_all_character_states
+            all_states = load_all_character_states()
+            
+            # Party = Characters with PC- prefix in ID
+            party = [s for s in all_states if s.get("id", "").startswith("PC-")]
+            
+            if not party:
+                await self.transport.send(channel, "🔍 No party members found in the chronicles.")
                 return
                 
-            data = json.loads(self.party_path.read_text(encoding='utf-8'))
-            party = data.get("party", [])
-            
             msg_parts = ["**🛡️ Worn Equipment: The Royal Guard**"]
             
             for p in party:
                 eq = p.get("status", {}).get("equipment", {})
                 if eq:
-                    msg_parts.append(f"\n**{p['name']} ({p.get('class')})**")
+                    msg_parts.append(f"\n**{p['name']} ({p.get('class', 'Hero')})**")
                     msg_parts.append(f"• **Head**: {eq.get('head', 'None')}")
                     msg_parts.append(f"• **Body**: {eq.get('body', 'None')}")
                     msg_parts.append(f"• **Main Hand**: {eq.get('main_hand', 'None')}")
                     msg_parts.append(f"• **Off Hand**: {eq.get('off_hand', 'None')}")
                     msg_parts.append(f"• **Accessory**: {eq.get('accessory', 'None')}")
                 else:
-                    msg_parts.append(f"\n**{p['name']}**: No equipment data found.")
+                    msg_parts.append(f"\n**{p['name']}**: No equipment data recorded.")
                     
             await self.transport.send(channel, "\n".join(msg_parts))
         except Exception as e:
@@ -108,48 +111,57 @@ class CharactersCog(commands.Cog):
         await self.transport.send(channel, "🔍 **Scanning for character portraits...**")
         
         try:
-            party_data = json.loads(self.party_path.read_text(encoding='utf-8')) if self.party_path.exists() else {"party": []}
-            npc_data = json.loads(self.npc_path.read_text(encoding='utf-8')) if self.npc_path.exists() else {"npcs": []}
+            from core.storage import load_all_character_profiles, save_character_profile
+            all_chars = load_all_character_profiles()
+            updates = {} # char_id: updated_profile
             
-            all_chars = party_data.get("party", []) + npc_data.get("npcs", [])
+            # Speed up lookup by indexing names/tokens
+            char_map = []
+            for char in all_chars:
+                cid = char.get("id")
+                if not cid: continue
+                
+                names_to_check = [char.get("name", "").lower(), cid.lower()]
+                clean_name = char.get("name", "").replace('"', '').replace("'", "").replace('(', '').replace(')', '').lower()
+                names_to_check.extend([t.strip() for t in clean_name.split() if len(t.strip()) > 2])
+                
+                char_map.append({"id": cid, "tags": names_to_check, "profile": char})
+
             updates_found = 0
-            
             async for message in channel.history(limit=None, oldest_first=True):
                 if not message.attachments:
                     continue
                     
                 content_lower = message.content.lower().strip()
-                id_match_char = None
-                for char in all_chars:
-                    char_id = char.get("id", "").lower()
-                    if char_id and char_id in content_lower:
-                        id_match_char = char
+                match_id = None
+                
+                # Check for explicit ID match first
+                for entry in char_map:
+                    if entry["id"].lower() in content_lower:
+                        match_id = entry["id"]
                         break
                 
-                if id_match_char:
-                    for attachment in message.attachments:
-                        img_url = attachment.url
-                        if id_match_char.get("avatar_url") != img_url:
-                            id_match_char["avatar_url"] = img_url
-                            updates_found += 1
-                    continue
-
-                for char in all_chars:
-                    full_name = char.get("name", "").lower()
-                    clean_name = full_name.replace('"', '').replace("'", "").replace('(', '').replace(')', '')
-                    tokens = [t.strip() for t in clean_name.split() if len(t.strip()) > 2]
-                    
-                    if full_name in content_lower or any(t in content_lower for t in tokens):
+                # If no ID, check tokens
+                if not match_id:
+                    for entry in char_map:
+                        if any(tag in content_lower for tag in entry["tags"]):
+                            match_id = entry["id"]
+                            break
+                            
+                if match_id:
+                    char_profile = next((c for c in all_chars if c.get("id") == match_id), None)
+                    if char_profile:
                         for attachment in message.attachments:
                             img_url = attachment.url
-                            if char.get("avatar_url") != img_url:
-                                char["avatar_url"] = img_url
+                            if char_profile.get("avatar_url") != img_url:
+                                char_profile["avatar_url"] = img_url
+                                updates[match_id] = char_profile
                                 updates_found += 1
-                                break 
+                                break # One image per message per character for now
 
-            if updates_found > 0:
-                self.party_path.write_text(json.dumps(party_data, indent=4), encoding='utf-8')
-                self.npc_path.write_text(json.dumps(npc_data, indent=4), encoding='utf-8')
+            # Commit updates
+            for cid, profile in updates.items():
+                save_character_profile(cid, profile)
                 
             total_chars = len(all_chars)
             with_visuals = len([c for c in all_chars if c.get("avatar_url") or c.get("description")])
@@ -162,13 +174,11 @@ class CharactersCog(commands.Cog):
                 f"*Self-destructing text tags in 5 seconds...*"
             )
             
-            deleted_count = 0
             async for message in channel.history(limit=None):
                 if message.id == summary_msg.id: continue
                 if not message.attachments:
                     try:
                         await message.delete()
-                        deleted_count += 1
                         await asyncio.sleep(1.25)
                     except: pass
             
@@ -176,6 +186,7 @@ class CharactersCog(commands.Cog):
             await summary_msg.delete()
 
         except Exception as e:
+            logger.error(f"Capture error: {e}", exc_info=True)
             await self.transport.send(channel, f"❌ Error during capture: {e}")
 
     @commands.command()
@@ -207,17 +218,11 @@ class CharactersCog(commands.Cog):
         """Cheat Code: Output character cards. Use '!list missing' for an avatar audit."""
         channel = getattr(ctx, "target_channel", ctx.channel)
         is_audit = (mode and mode.lower() in ["missing", "audit", "check"])
-
+        
         try:
-            characters = []
-            if self.party_path.exists():
-                party_data = json.loads(self.party_path.read_text(encoding='utf-8'))
-                characters.extend(party_data.get("party", []))
+            from core.storage import load_all_character_states
+            characters = load_all_character_states()
             
-            if self.npc_path.exists():
-                npc_data = json.loads(self.npc_path.read_text(encoding='utf-8'))
-                characters.extend(npc_data.get("npcs", []))
-                
             if is_audit:
                 notable = [c for c in characters if not c.get("avatar_url")]
                 header_text = f"🕵️ **Avatar Audit: {len(notable)} characters missing images.** (Grouped by 5)"
@@ -232,7 +237,7 @@ class CharactersCog(commands.Cog):
             await self.transport.send(channel, header_text)
             
             if is_audit: notable = notable[:5]
-
+            
             for char in notable:
                 name = char.get('name', 'Unknown')
                 role = char.get('role', f"Level {char.get('level', '?')} {char.get('class', 'Hero')}")
@@ -243,16 +248,16 @@ class CharactersCog(commands.Cog):
                 motivation = char.get('motivation', 'Unknown')
                 description = char.get('description', 'No visual data provided.')
                 
-                is_party = 'combat_profile' in char
+                is_party = char.get('id', '').startswith('PC-')
                 if is_party:
                     cp = char.get('combat_profile', {})
                     msg = (f"👤 **Character Card: {name}**\n"
-                           f"*{char.get('race')} {char.get('class')} (Level {char.get('level')})*\n\n"
-                           f"✨ **Background:** {char.get('background')}\n"
+                           f"*{char.get('race', 'Hero')} {char.get('class', '')} (Level {char.get('level', '?')})*\n\n"
+                           f"✨ **Background:** {char.get('background', 'Unknown')}\n"
                            f"🌿 **Visuals:** {description}\n"
                            f"🌱 **Motivation:** {motivation}\n"
                            f"💭 **Bio:** {bio}\n\n"
-                           f"⚔️ **Combat:** AC {cp.get('ac')} | HP {cp.get('hp')} | Init +{cp.get('initiative_bonus')}")
+                           f"⚔️ **Combat:** AC {cp.get('ac', '?')} | HP {cp.get('hp', '?')} | Init +{cp.get('initiative_bonus', '0')}")
                 else:
                     msg = (f"👤 **NPC Card: {name}**\n"
                            f"*{role}*\n\n"
@@ -260,7 +265,7 @@ class CharactersCog(commands.Cog):
                            f"**Visuals:** {description}\n"
                            f"**Motivation:** {motivation}\n"
                            f"**Details:** {bio[:500]}")
-
+                           
                 avatar = char.get('avatar_url')
                 if avatar:
                     await self.transport.send(
@@ -272,9 +277,9 @@ class CharactersCog(commands.Cog):
                     )
                 else:
                     await self.transport.send(channel, msg, identity_key="NPC", username=name)
-                
+                    
                 await asyncio.sleep(1.25)
-
+                
         except Exception as e:
             await self.transport.send(channel, f"❌ Error during batch list: {e}")
 
@@ -282,21 +287,23 @@ class CharactersCog(commands.Cog):
     async def hp(self, ctx, name: str, change: str):
         """Adjust character HP: !hp Kaelrath -10 or !hp Talmarr +5."""
         try:
-            if not self.party_path.exists():
-                await self.transport.send(ctx.channel, "❌ Error: Party state not found.")
-                return
-                
-            data = json.loads(self.party_path.read_text(encoding='utf-8'))
-            party = data.get("party", [])
+            from core.storage import resolve_character, load_character_state, save_character_state
+            match = resolve_character(name)
             
-            char = next((p for p in party if name.lower() in p['name'].lower()), None)
-            if not char:
-                await self.transport.send(ctx.channel, f"🔍 Character '{name}' not found in party.")
+            if not match:
+                await self.transport.send(ctx.channel, f"🔍 Character '{name}' not found.")
                 return
                 
-            cp = char.get("combat_profile")
+            char_id = match.get("id")
+            state = load_character_state(char_id)
+            
+            if not state:
+                await self.transport.send(ctx.channel, f"❌ {match['name']} does not have an active state record.")
+                return
+                
+            cp = state.get("combat_profile")
             if not cp:
-                await self.transport.send(ctx.channel, f"❌ {char['name']} does not have a combat profile.")
+                await self.transport.send(ctx.channel, f"❌ {match['name']} does not have a combat profile.")
                 return
                 
             try:
@@ -305,10 +312,10 @@ class CharactersCog(commands.Cog):
                 new_hp = old_hp + val
                 cp["hp"] = new_hp
                 
-                self.party_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
+                save_character_state(char_id, state)
                 
                 status_emoji = "🩸" if val < 0 else "💖"
-                await self.transport.send(ctx.channel, f"{status_emoji} **HP Update: {char['name']}**\n`{old_hp}` -> `{new_hp}`")
+                await self.transport.send(ctx.channel, f"{status_emoji} **HP Update: {match['name']}**\n`{old_hp}` -> `{new_hp}`")
                 
             except ValueError:
                 await self.transport.send(ctx.channel, "❌ Invalid format. Use: `!hp [name] [+/-amount]` (e.g., `!hp Kaelrath -5`)")

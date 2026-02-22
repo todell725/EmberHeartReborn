@@ -11,7 +11,6 @@ logger = logging.getLogger("EH_Slayer")
 class SlayerEngine:
     def __init__(self):
         self.db_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "IDLE_SLAYER_DB.json"
-        self.party_path = DB_DIR / "PARTY_STATE.json"
         self.active_path = DB_DIR / "SLAYER_ACTIVE.json"
         self._db = self._load_db()
         self.active_tasks: Dict[int, dict] = self._load_active()
@@ -98,11 +97,11 @@ class SlayerEngine:
         return all_drops
 
     def get_party_level(self) -> int:
-        if not self.party_path.exists():
-            return 1
         try:
-            data = json.loads(self.party_path.read_text(encoding='utf-8'))
-            levels = [char.get('level', 1) for char in data.get('party', [])]
+            from core.storage import load_all_character_states
+            all_states = load_all_character_states()
+            # Party = PC- prefixed
+            levels = [s.get('level', 1) for s in all_states if s.get('id', '').startswith('PC-')]
             return max(levels) if levels else 1
         except:
             return 1

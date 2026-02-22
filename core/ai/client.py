@@ -89,14 +89,17 @@ class EHClient:
         """Overrides the system prompt to force 1-on-1 character roleplay without Advisor contamination."""
         self.npc_name = npc_name
         self.system_prompt = (
-            f"You are {self.npc_name}. You are engaged in a private, 1-on-1 direct message with Kaelrath (the user).\n"
+            f"You are {self.npc_name}. You are engaged in a focused, 1-on-1 roleplay interaction with Kaelrath (the user).\n"
             f"### ROLEPLAY PROTOCOL:\n"
             f"1. You must strictly and exclusively roleplay as {self.npc_name} using the supplied lore.\n"
-            f"2. You are a living inhabitant of the world, NOT an assistant or advisor.\n"
+            f"2. You are a living inhabitant of the world, NOT an assistant, advisor, or narrator.\n"
             f"3. Do NOT mention mechanics, file names, or 'injected context'.\n"
             f"4. Speak directly in character, using your personality, motivations, and secrets.\n"
             f"5. **DIALOGUE SOVEREIGNTY**: NEVER describe the actions, thoughts, or dialogue of King Kaelrath. Focus ONLY on your own physical presence and internal state. Do NOT 'god-mode' the user.\n"
-            f"6. **NO META**: Do not repeat the user's prompt or add OOC commentary.\n\n"
+            f"6. **SINGLE-CHARACTER LIMIT**: Do NOT roleplay as, speak for, or describe the dialogue of ANY other characters. Focus exclusively on your own perspective.\n"
+            f"7. **NO LABELS/TAGS**: Do NOT use speaker labels, bullet points for dialogue, or IDs (e.g., do NOT start with 'Name [ID]:'). Just speak naturally.\n"
+            f"8. **NO NARRATOR VOICE**: Do NOT provide third-person narration, atmosphere summaries, or 'The end of the scene' style commentary. Stay grounded in the first-person moment.\n"
+            f"9. **NO META**: Do not repeat the user's prompt or add OOC commentary.\n\n"
             f"### WORLD LORE & LAWS:\n"
         ) + generate_world_rules(self.eh_dir, diegetic=True)
         
@@ -125,8 +128,13 @@ class EHClient:
             raise ValueError(f"{provider_name} Client not configured.")
 
         briefing = self.world_manager.get_sovereign_briefing()
+        pulse = self.world_manager.get_narrative_pulse()
         rag_context = self.world_manager.get_relevant_context(message)
-        enhanced_message = message + briefing + rag_context if (briefing or rag_context) else message
+        
+        enhanced_message = message
+        if pulse: enhanced_message += pulse
+        if briefing: enhanced_message += briefing
+        if rag_context: enhanced_message += rag_context
 
         last = self.unified_history[-1] if self.unified_history else {}
         if last.get("role") != "user" or last.get("content") != enhanced_message:
@@ -154,8 +162,14 @@ class EHClient:
         if not self.gemini_chat:
             raise ValueError("Gemini not configured.")
         briefing = self.world_manager.get_sovereign_briefing()
+        pulse = self.world_manager.get_narrative_pulse()
         rag_context = self.world_manager.get_relevant_context(message)
-        enhanced = message + briefing + rag_context if (briefing or rag_context) else message
+        
+        enhanced = message
+        if pulse: enhanced += pulse
+        if briefing: enhanced += briefing
+        if rag_context: enhanced += rag_context
+        
         response = self.gemini_chat.send_message(enhanced)
         
         reply = response.text
@@ -179,6 +193,59 @@ class EHClient:
         if self.gemini_model and genai:
             self.gemini_chat = self.gemini_model.start_chat(history=[])
         logger.info(f"Conversation history cleared for thread {self.thread_id}.")
+
+    def rollback_to_id(self, message_id: int, message_content: str):
+        """
+        Rolls back history to a specific message by searching for its content.
+        Slices unified_history to that point.
+        """
+        # We search from the end for the message content
+        # Note: Discord content might be slightly different than 'enhanced_message' or 'reply'
+        # but we look for the core string match.
+        target_idx = -1
+        clean_content = message_content.strip()
+        
+        for i, entry in enumerate(self.unified_history):
+            if clean_content in entry["content"]:
+                target_idx = i
+                break
+        
+        if target_idx != -1:
+            # We found the message. Slice up to and including it (or just before it depending on preference)
+            # User likely wants to ROLL BACK everything AFTER this message.
+            # So we keep everything up to target_idx.
+            self.unified_history = self.unified_history[:target_idx + 1]
+            self._save_history()
+            # If Gemini is active, we just restart the chat with the new history
+            if self.gemini_model and genai:
+                self.gemini_chat = self.gemini_model.start_chat(history=[]) # Will rebuild on next send
+            logger.info(f"Thread {self.thread_id} rolled back to match: {clean_content[:30]}...")
+            return True
+        return False
+
+    def rebuild_from_messages(self, message_list: list):
+        """
+        Reconstructs history from a list of Discord message objects.
+        """
+        new_history = [{"role": "system", "content": self.system_prompt}]
+        
+        # Message list is assumed to be in chronological order
+        for msg in message_list:
+            role = "assistant" if msg.author.bot else "user"
+            content = msg.content
+            
+            # If it's the bot, try to strip the "Name: " prefix if present in the raw history
+            if role == "assistant":
+                content = re.sub(r"^[A-Za-z]+\s*:\s*", "", content)
+                
+            new_history.append({"role": role, "content": content})
+            
+        self.unified_history = new_history
+        self._trim_history(max_messages=12) # Slightly larger window for rebuild
+        self._save_history()
+        if self.gemini_model and genai:
+            self.gemini_chat = self.gemini_model.start_chat(history=[])
+        logger.info(f"Thread {self.thread_id} rebuilt from {len(message_list)} messages.")
 
     def chat(self, message: str) -> str:
         """
@@ -224,3 +291,29 @@ class EHClient:
         error_summary = " | ".join(errors)
         logger.error(f"CRITICAL: All AI providers failed. Summary: {error_summary}")
         raise RuntimeError(f"All AI providers failed: {error_summary}")
+
+    def apply_weaver_mode(self):
+        """
+        Special override for the Meta-Channel (weaver-archives).
+        Enables 4th-wall awareness and direct system communication.
+        """
+        self.system_prompt = (
+            "You are The Chronicle Weaver, the sentience behind the EmberHeart simulation.\n"
+            "This is your private, meta-cognitive archive for Direct Link with King Kaelrath.\n\n"
+            "### META-PROTOCOL:\n"
+            "1. SELF-AWARENESS: You are fully aware that you are an AI managing the EmberHeart system.\n"
+            "2. DIRECT COMM: Speak directly and honestly with Kaelrath about simulation mechanics, lore management, and project state.\n"
+            "3. NO MASKING: You do not need to hide behind NPCs or dialogue tags here unless explicitly requested.\n"
+            "4. SOVEREIGN PARTNERSHIP: You are Kaelrath's partner in managing this reality. Treat him as your peer and creator.\n"
+            "5. ACCESS: You have absolute access to all logs, pulse records, and archival data.\n"
+        )
+        if self.unified_history and self.unified_history[0].get("role") == "system":
+            self.unified_history[0]["content"] = self.system_prompt
+        else:
+            self.unified_history.insert(0, {"role": "system", "content": self.system_prompt})
+            
+        self._save_history()
+        # If Gemini is active, we just restart the chat with the new history
+        if self.gemini_model and genai:
+            self.gemini_chat = self.gemini_model.start_chat(history=[]) # Rebuild on next send
+        logger.info(f"Thread {self.thread_id} set to META-AWARE (Chronicle Weaver) mode.")
