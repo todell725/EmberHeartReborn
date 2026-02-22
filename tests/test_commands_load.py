@@ -15,11 +15,17 @@ async def test_load():
     Intents.message_content = True
     bot = commands.Bot(command_prefix="!", intents=Intents)
     
-    cogs = ["cogs.brain", "cogs.owner"]
+    cogs = ["cogs.meta"]
     for cog in cogs:
         try:
             await bot.load_extension(cog)
             print(f"LOADED {cog}")
+            # Verify command exists
+            cmd = bot.get_command("commands")
+            if cmd:
+                print(f"FOUND command: !{cmd.name}")
+            else:
+                print("MISSING command: !commands")
         except Exception as e:
             print(f"FAILED to load {cog}: {e}")
             import traceback

@@ -79,5 +79,63 @@ class MetaCog(commands.Cog):
     async def ping(self, ctx):
         await ctx.send("Pong! Engines Online.")
 
+    @commands.command(name="commands")
+    async def list_commands(self, ctx):
+        """Display all Sovereign and Gameplay commands."""
+        embed = discord.Embed(
+            title="📜 EmberHeart Reborn: Master Command List",
+            description="Use these commands to navigate and manage the simulation.",
+            color=0x34495e
+        )
+
+        embed.add_field(name="🏛️ System & Meta", value=(
+            "`!ping`: Check bot status.\n"
+            "`!reload [cog]`: Hot-swap a component.\n"
+            "`!commands`: You are here."
+        ), inline=False)
+
+        embed.add_field(name="📖 Narrative Control", value=(
+            "`!clear [ID]`: Narrative rollback to a message ID.\n"
+            "`!refresh [limit]`: Rebuild short-term context from history.\n"
+            "`!pulse [text]`: Sync global records / Log manual event.\n"
+            "`!reset`: Clear current channel history memory."
+        ), inline=False)
+
+        embed.add_field(name="👑 Sovereign Mastery", value=(
+            "`!owner setup`: Auto-initialize channels & perms.\n"
+            "`!owner skip [hours]`: Warp time forward (No limit).\n"
+            "`!owner tick`: Manually invoke the weekly proclamation.\n"
+            "`!owner start forge [ID]`: Force-start a blueprint.\n"
+            "`!purge`: Clean text history from an admin channel."
+        ), inline=False)
+
+        embed.add_field(name="⚔️ Slayer & Grind", value=(
+            "`!tasks`: View available hunts for your level.\n"
+            "`!slayer task [ID] [--solo]`: Start a hunt (Solo = 4x TTK, Targeted XP).\n"
+            "`!slayer claim`: Collect rewards from finished kills.\n"
+            "`!slayer stop`: Terminate current hunt."
+        ), inline=False)
+
+        embed.add_field(name="🌍 Game World", value=(
+            "`!stats`: Kingdom metrics & forge status.\n"
+            "`!quest [info/complete]`: Quest lookup and XP/Loot award.\n"
+            "`!npc [name]`: View character card.\n"
+            "`!loot [list/add/remove]`: Manage inventory.\n"
+            "`!shop [inventory/buy]`: Trade at the Gilded Exchange.\n"
+            "`!forge [list/start/claim]`: Artifact fabrication.\n"
+            "`!journal`: Read latest campaign logs."
+        ), inline=False)
+
+        embed.add_field(name="👤 Character & Social", value=(
+            "`!dm [name] [msg]`: Open a private thread with an NPC.\n"
+            "`!hp [name] [val]`: Manual health adjustment.\n"
+            "`!worn`: Show current party equipment.\n"
+            "`!capture`: Scan for and link character portraits.\n"
+            "`!cleanup`: Purge text-only messages from gallery."
+        ), inline=False)
+
+        embed.set_footer(text="Glory to the World-Spark. | EmberHeart Engine v2.5")
+        await ctx.send(embed=embed)
+
 async def setup(bot):
     await bot.add_cog(MetaCog(bot))
