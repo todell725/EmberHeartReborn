@@ -76,6 +76,8 @@ class BrainCog(commands.Cog):
         is_hard_whitelist = str(message.channel.id) == ALLOWED_CHANNEL_ID
         is_mentioned = self.bot.user in message.mentions
 
+        logger.info(f"MSG: #{channel_name} ({message.channel.id}) | Whitelist: {is_named_whitelist} | Hard: {is_hard_whitelist} | Mention: {is_mentioned}")
+
         if not (is_dm or is_named_whitelist or is_hard_whitelist):
             if not is_mentioned:
                 return
@@ -154,6 +156,7 @@ class BrainCog(commands.Cog):
                 
                 # Filter restricted speakers (Sovereignty Check)
                 restricted_speakers = IGNORE_SPEAKERS | {user_name, message.author.display_name}
+                logger.info(f"Raw Blocks: {[b['speaker'] for b in blocks]} | Restricted: {restricted_speakers}")
                 blocks = [b for b in blocks if b['speaker'] not in restricted_speakers]
                 
                 if target_npc:
