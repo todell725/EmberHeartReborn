@@ -68,7 +68,7 @@ class BrainCog(commands.Cog):
             return
 
         # --- Multi-Channel Routing Rules ---
-        allowed_names = ["npc-chat", "party-chat", "game-feed", "campaign-chat", "rumors-chat", "off-topic"]
+        allowed_names = ["npc-chat", "party-chat", "game-feed", "campaign-chat", "rumors-chat", "off-topic", "weaver-archives"]
         channel_name = getattr(message.channel, "name", "").lower()
 
         is_dm = isinstance(message.channel, discord.DMChannel)
