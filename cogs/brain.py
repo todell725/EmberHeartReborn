@@ -104,14 +104,21 @@ class BrainCog(commands.Cog):
         elif "off-topic" in channel_name:
             channel_context = (
                 "[CHANNEL: OFF-TOPIC/CASUAL-RP] Focus on character flavor, social interaction, and atmosphere. "
-                "Do NOT push the main campaign plot. Stay in the moment. "
-                "### DIALOGUE SOVEREIGNTY: NEVER speak for, describe the actions of, or narrate the internal state of King Kaelrath (the user). "
-                "Focus exclusively on the NPCs and the environment."
+                "Do NOT push the main campaign plot. Stay in the moment.\n"
+                "### DIALOGUE SOVEREIGNTY: NEVER speak for, describe the actions of, or narrate the internal state of King Kaelrath (the user).\n"
+                "### FORMATTING: You MUST use the **Name**: \"Dialogue\" format for ALL NPCs and PC companions. Do NOT provide third-person prose summaries or book-style narration describing multiple people at once. Focus on one-at-a-time interaction."
             )
         elif "campaign-chat" in channel_name:
             channel_context = "[CHANNEL: CAMPAIGN-CHAT] Progress the main storyline and provide narrative momentum."
         elif "party-chat" in channel_name:
-            channel_context = "[CHANNEL: PARTY-CHAT] This is the private, internal communication and banter of the core party (King Kaelrath, Talmarr, Silvara, Mareth, and Vaelis Thorne). It is your 'Private Circle' chat. Even if the King addresses an NPC directly, that NPC cannot speak here. You (the PCs) should react to his words or discuss the NPC amongst yourselves. Treat this as a strictly character-to-character RP channel where external NPCs are not present."
+            channel_context = (
+                "[CHANNEL: PARTY-CHAT] This is the private, internal communication and banter of the core party (King Kaelrath, Talmarr, Silvara, Mareth, and Vaelis Thorne). It is your 'Private Circle' chat.\n"
+                "### RULES:\n"
+                "1. NO EXTERNALS: Even if the King addresses an NPC directly, that NPC cannot speak here.\n"
+                "2. NO SUMMARIES: Do NOT provide third-person narration or 'Book-style' prose. You are the characters themselves.\n"
+                "3. MANDATORY FORMATTING: Each party member MUST speak in their own block using the **Name**: \"Dialogue\" format.\n"
+                "4. SOVEREIGNTY: NEVER speak for King Kaelrath. Reaction ONLY."
+            )
         elif "weaver-archives" in channel_name:
             target_npc = "The Chronicle Weaver"
             channel_context = "[META-CHANNEL: WEAVER-ARCHIVES] Direct system access for King Kaelrath. No immersion masking required."
@@ -157,26 +164,32 @@ class BrainCog(commands.Cog):
                 # Filter restricted speakers (Sovereignty Check)
                 restricted_speakers = IGNORE_SPEAKERS | {user_name, message.author.display_name}
                 logger.info(f"Raw Blocks: {[b['speaker'] for b in blocks]} | Restricted: {restricted_speakers}")
-                blocks = [b for b in blocks if b['speaker'] not in restricted_speakers]
+                
+                # SPECIAL CASE: weaver-archives is transparent. We don't filter it.
+                if "weaver-archives" in channel_name:
+                    # Identity for Weaver is enforced later if blocks match, 
+                    # but we allow all blocks to pass here for meta-transparency.
+                    pass 
+                else:
+                    blocks = [b for b in blocks if b['speaker'] not in restricted_speakers]
                 
                 if target_npc:
                     # 1-on-1 ENFORCEMENT:
                     # If we are in a targeted DM, we only want blocks matching the target_npc.
-                    # This prevents the AI from "inviting" other NPCs into a private scene.
                     target_name = re.sub(r'\s*\[[A-Z0-9-]+\]', '', target_npc).strip()
-                    
-                    # Try to find blocks matching the name
                     character_blocks = [b for b in blocks if target_name.lower() in b['speaker'].lower()]
                     
                     if character_blocks:
                         blocks = character_blocks
                     else:
-                        # If no blocks match, the AI likely didn't use tags (as instructed in EHClient prompt).
-                        # We'll treat the entire result (or the primary DM block if it exists) as the character's voice.
-                        if len(blocks) == 1 and (blocks[0]['speaker'] == "DM" or blocks[0]['speaker'] == "Chronicle Weaver"):
+                        # Fallback for Weaver or DM if no specific character blocks found
+                        is_weaver = "weaver-archives" in channel_name
+                        if is_weaver:
+                             # Keep all blocks in Weaver mode
+                             pass
+                        elif len(blocks) == 1 and (blocks[0]['speaker'] == "DM" or blocks[0]['speaker'] == "Chronicle Weaver"):
                             blocks[0]['speaker'] = target_name # Re-assign to target
                         else:
-                            # Fallback: Just take the first block that isn't the DM narrating
                             valid_blocks = [b for b in blocks if b['speaker'] != "DM" and b['speaker'] != "Chronicle Weaver"]
                             if valid_blocks:
                                 blocks = [valid_blocks[0]]
@@ -184,9 +197,15 @@ class BrainCog(commands.Cog):
                     # PC-Only Lockdown for party-chat
                     if "party-chat" in channel_name:
                         allowed_pcs = {"Talmarr", "Silvara", "Mareth", "Vaelis Thorne", "Vaelis"}
-                        blocks = [b for b in blocks if any(pc.lower() in b['speaker'].lower() for pc in allowed_pcs)]
+                        pc_blocks = [b for b in blocks if any(pc.lower() in b['speaker'].lower() for pc in allowed_pcs)]
+                        if pc_blocks:
+                            blocks = pc_blocks
+                        # If no PC blocks, allow DM narration as fallback so the bot isn't silent
+                        else:
+                            blocks = [b for b in blocks if b['speaker'] == "DM"]
                 
                 if not blocks:
+                    logger.warning(f"BLOCK FILTER: No blocks survived for {channel_name}. Response text: {response_text[:100]}...")
                     return # No valid dialogue generated
 
                 # --- Auto-Targeting & Narrator Suppression (Phase 10 Extension) ---

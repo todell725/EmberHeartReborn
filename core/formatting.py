@@ -57,31 +57,75 @@ def strip_god_moding(text: str) -> str:
     result = re.sub(r'\s+', ' ', result).strip()
     return result
 
+def heuristic_prose_split(text: str, identities: dict) -> list:
+    """
+    Attempts to split 'Book-style' prose where multiple characters are narrated
+    in a single block without **Name**: tags.
+    """
+    if not text: return []
+    
+    # 1. Collect all known character names
+    names = sorted([identities[id_].get("name") for id_ in identities if isinstance(identities[id_], dict) and "name" in identities[id_]], key=len, reverse=True)
+    names = list(dict.fromkeys(names))
+    if not names: return [{"speaker": "DM", "identity": identities.get("DM"), "content": text}]
+
+    # 2. Find all indices where a Name starts a sentence
+    name_pattern = "|".join([re.escape(n) for n in names])
+    # Match Start OR (Punctuation/Quotes/Asterisks + Space) followed by a Name
+    # We allow [.!?] followed by optional quotes [\"'”’] or asterisks [*]
+    split_pattern = rf'(?:^|[.!?]["\'”’*]*\s+)({name_pattern})\b'
+    
+    matches = list(re.finditer(split_pattern, text))
+    if not matches:
+        return [{"speaker": "DM", "identity": identities.get("DM"), "content": text}]
+
+    blocks = []
+    
+    # If the text doesn't start with a name, the first part is DM narration
+    if matches[0].start() > 0:
+        blocks.append({
+            "speaker": "DM",
+            "identity": identities.get("DM"),
+            "content": text[:matches[0].start()].strip()
+        })
+
+    for i in range(len(matches)):
+        start_idx = matches[i].start(1) # Start of the name itself
+        end_idx = matches[i+1].start() if i + 1 < len(matches) else len(text)
+        
+        # Adjust start_idx back if the prefix (punctuation) was part of the match
+        # Actually match(1) is exactly the name.
+        
+        speaker_name = matches[i].group(1)
+        content = text[start_idx:end_idx].strip()
+        
+        if content:
+            blocks.append({
+                "speaker": speaker_name,
+                "identity": identities.get(speaker_name, identities.get("DM")),
+                "content": content
+            })
+
+    return blocks
+
 def parse_speaker_blocks(text: str, identities: dict, ignore_headers: set) -> list:
     """
     Parses an AI response string for '**Name**: "Dialogue"' patterns 
     and yields distinct blocks of text assigned to specific identities.
-    
-    Args:
-        text (str): The raw text from the LLM.
-        identities (dict): The loaded identity registry.
-        ignore_headers (set): Set of strings to ignore as headers rather than speakers.
-        
-    Returns:
-        list of dict: [{"speaker": str, "identity": dict or None, "content": str}]
     """
     if not text: return []
 
-    # Regex to find Speaker tags:
-    pattern = r'(\*\*[ \t]*([^\n]*?)[ \t]*\*\*[ \t]*:[ \t]*)'
     text = sanitize_text(text)
+    
+    # Pattern to find Speaker tags:
+    pattern = r'(\*\*[ \t]*([^\n]*?)[ \t]*\*\*[ \t]*:[ \t]*)'
     parts = re.split(pattern, text)
 
-    blocks = []
-    
     if len(parts) == 1:
-        return [{"speaker": "DM", "identity": identities.get("DM"), "content": text}]
+        # No tags found? Try heuristic splitting
+        return heuristic_prose_split(text, identities)
 
+    blocks = []
     current_speaker = "DM"
     buffer_text = ""
     
@@ -97,11 +141,9 @@ def parse_speaker_blocks(text: str, identities: dict, ignore_headers: set) -> li
         
         is_speaker = True
         
-        # ID-Lock Protocol: Extract bracketed ID if present
+        # ID-Lock Protocol
         id_match = re.search(r'\[(EH-\d+|DM-\d+|PC-\d+)\]', raw_name)
         extracted_id = id_match.group(1) if id_match else None
-        
-        # Pre-clean the name for lookup (Strip leading/trailing brackets)
         lookup_name = raw_name.strip("[]").strip()
         
         known_identity = None
@@ -111,10 +153,8 @@ def parse_speaker_blocks(text: str, identities: dict, ignore_headers: set) -> li
             known_identity = identities[lookup_name]
         else:
             temp_name = re.sub(r'\s*\[.*?\]', '', lookup_name).strip()
-            # Try to match parts of the name
             match = next((k for k in identities if k.lower() in temp_name.lower() or temp_name.lower() in k.lower()), None)
-            if match: 
-                known_identity = identities[match]
+            if match: known_identity = identities[match]
 
         if not known_identity:
             preceding_text = parts[i-1]
@@ -137,21 +177,17 @@ def parse_speaker_blocks(text: str, identities: dict, ignore_headers: set) -> li
 
             if is_speaker:
                 clean_content = segment_content.strip()
-                # Allow DM or Chronicle Weaver to narrate without quotes
                 is_narrator = "DM" in lookup_name or "Chronicle" in lookup_name or "Weaver" in lookup_name
                 if not is_narrator and not (clean_content.startswith('"') or clean_content.startswith('“') or clean_content.startswith('*')):
                      is_speaker = False
 
         if is_speaker:
-            # SAVE PREVIOUS BLOCK (If not ignored)
             if buffer_text.strip():
                 if current_speaker not in IGNORE_SPEAKERS:
-                    # Resolve identity for previous speaker before saving block
                     token = identities.get(current_speaker)
                     if not token and current_speaker != "DM":
                         match = next((k for k in identities if k.lower() in current_speaker.lower()), None)
-                        if match: 
-                            token = identities[match]
+                        if match: token = identities[match]
                         else:
                             clean = re.sub(r'\s*\(.*?\)', '', current_speaker).strip()
                             if clean in identities: token = identities[clean]
@@ -164,7 +200,6 @@ def parse_speaker_blocks(text: str, identities: dict, ignore_headers: set) -> li
             display_name = re.sub(r'\s*\[.*?\]', '', lookup_name).strip()
             current_speaker = display_name
             if known_identity: current_speaker = known_identity["name"]
-            
             buffer_text = segment_content
             
         else:
