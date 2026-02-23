@@ -38,9 +38,7 @@ class WorldContextManager:
         self.state_dir = eh_dir / "state"
         from core.config import CHARACTERS_DIR
         self.characters_dir = CHARACTERS_DIR
-        
-        # Load settlement stats (still monolithic for now)
-        self.settlement_data = self._load_json(self.state_dir / "SETTLEMENT_STATE.json")
+        self.settlement_path = self.state_dir / "SETTLEMENT_STATE.json"
         
         # Build keyword map from directory names instead of loading full JSON
         self.char_map = {} # ID -> Profile path
@@ -59,6 +57,11 @@ class WorldContextManager:
         self.journal_path = self.docs_dir / "CAMPAIGN_JOURNAL.md"
         self.deeds_path = self.state_dir / "QUEST_DEEDS.md"
         self.narrative_log_path = self.eh_dir / "state" / "NARRATIVE_LOG.md"
+
+    @property
+    def settlement_data(self) -> dict:
+        """B-23: Reload settlement data on access to ensure freshness."""
+        return self._load_json(self.settlement_path) or {}
 
     def get_narrative_pulse(self) -> str:
         """Pulls the last 10 events from the global narrative pulse for continuity."""
@@ -122,7 +125,8 @@ class WorldContextManager:
             # folder is "ID_Name_Parts", let's split
             parts = char_folder_name.lower().split("_")
             
-            if any(p in message_low for p in parts if len(p) > 2):
+            # B-21: Bump threshold to 4+ chars to avoid false positives on "the", "red", "old", etc.
+            if any(p in message_low for p in parts if len(p) > 4):
                 # Load full profile for verification and sketch building
                 try:
                     n = json.loads(profile_path.read_text(encoding='utf-8'))
@@ -130,7 +134,8 @@ class WorldContextManager:
                     
                     # More flexible match: check if name OR parts of name are in message
                     name_words = re.findall(r'\w+', name)
-                    if any(w in message_low for w in name_words if len(w) > 2) or char_id.lower() in message_low:
+                    # B-21: Bump threshold to 4+ chars
+                    if any(w in message_low for w in name_words if len(w) > 4) or char_id.lower() in message_low:
                         # Check Relationships
                         from core.relationships import relationship_manager
                         rel_data = relationship_manager.get_relationship("PC-01", char_id)

@@ -186,7 +186,13 @@ class EHClient:
         reply = response.text
         # IMMERSION CLEANUP
         reply = re.sub(r"^\(.*?\)\s*", "", reply)
-        reply = re.sub(r"^[A-Za-z]+\s*:\s*", "", reply)
+        # B-16: Identity-aware name stripping (matches _chat_openai_compatible)
+        name_match = re.match(r"^([A-Za-z]+)\s*:\s*", reply)
+        if name_match:
+             potential_name = name_match.group(1)
+             from core.config import IDENTITIES
+             if any(potential_name.lower() in k.lower() for k in IDENTITIES):
+                  reply = reply[name_match.end():]
 
         # Keep our unified memory in sync for the JSON save file
         last = self.unified_history[-1] if self.unified_history else {}

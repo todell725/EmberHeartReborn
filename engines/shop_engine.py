@@ -57,7 +57,8 @@ class DynamicShop:
                 "last_rotation": self.last_rotation.isoformat() if self.last_rotation else None,
                 "items": self.current_stock
             }
-            self.stock_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
+            from core.storage import save_json
+            save_json("SHOP_STOCK.json", data)
         except Exception as e:
             logger.error(f"Failed to save shop stock: {e}")
 
@@ -134,7 +135,9 @@ class DynamicShop:
                 stock['gold'] -= cost_val
             else:
                 stock['ore_stock_ou'] -= cost_val
-            self.settlement_path.write_text(json.dumps(settlement, indent=4), encoding='utf-8')
+            
+            from core.storage import save_json
+            save_json("SETTLEMENT_STATE.json", settlement)
             
         except Exception as e:
             logger.error(f"Transaction Failed (Settlement): {e}")

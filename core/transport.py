@@ -40,11 +40,12 @@ class TransportAPI:
             logger.warning(f"Could not load webhook cache: {e}")
 
     def _save_npc_cache(self):
-        """Persist webhook URL cache to disk."""
+        """Persist webhook URL cache to disk atomically."""
         try:
             _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
             serializable = {"|".join(k): v for k, v in self._npc_cache.items()}
-            _CACHE_PATH.write_text(json.dumps(serializable, indent=2), encoding="utf-8")
+            from core.storage import save_json
+            save_json(_CACHE_PATH.name, serializable)
         except Exception as e:
             logger.warning(f"Could not save webhook cache: {e}")
 

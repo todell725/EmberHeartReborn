@@ -80,20 +80,25 @@ def save_character_profile(char_id: str, profile: dict):
     import uuid
     temp_path = path.with_suffix(f'.{uuid.uuid4()}.tmp')
     
-    with open(temp_path, 'w', encoding='utf-8') as f:
-        json.dump(profile, f, indent=4)
-        
-    max_retries = 5
-    for i in range(max_retries):
-        try:
-            if path.exists():
-                os.replace(temp_path, path)
-            else:
-                os.rename(temp_path, path)
-            break
-        except PermissionError:
-            if i == max_retries - 1: raise
-            time.sleep(0.5 * (i + 1))
+    try:
+        with open(temp_path, 'w', encoding='utf-8') as f:
+            json.dump(profile, f, indent=4)
+            
+        max_retries = 5
+        for i in range(max_retries):
+            try:
+                if path.exists():
+                    os.replace(temp_path, path)
+                else:
+                    os.rename(temp_path, path)
+                break
+            except PermissionError:
+                if i == max_retries - 1: raise
+                time.sleep(0.5 * (i + 1))
+    finally:
+        if temp_path.exists():
+            try: os.remove(temp_path)
+            except: pass
 
 def load_all_character_profiles() -> list:
     """Utility to load all character profiles from the characters/ directory."""
@@ -277,21 +282,27 @@ def log_narrative_event(event_text: str):
     # Atomic write with retry
     import uuid
     temp_path = log_path.with_suffix(f'.{uuid.uuid4()}.tmp')
-    temp_path.write_text("".join(lines), encoding='utf-8')
     
-    max_retries = 5
-    for i in range(max_retries):
-        try:
-            if log_path.exists():
-                os.replace(temp_path, log_path)
-            else:
-                os.rename(temp_path, log_path)
-            break
-        except PermissionError:
-            if i == max_retries - 1:
-                print(f"FAILED to save Narrative Log: Access Denied")
-                raise
-            time.sleep(0.5 * (i + 1))
-        except Exception as e:
-            print(f"Error saving Narrative Log: {e}")
-            break
+    try:
+        temp_path.write_text("".join(lines), encoding='utf-8')
+        
+        max_retries = 5
+        for i in range(max_retries):
+            try:
+                if log_path.exists():
+                    os.replace(temp_path, log_path)
+                else:
+                    os.rename(temp_path, log_path)
+                break
+            except PermissionError:
+                if i == max_retries - 1:
+                    print(f"FAILED to save Narrative Log: Access Denied")
+                    raise
+                time.sleep(0.5 * (i + 1))
+            except Exception as e:
+                print(f"Error saving Narrative Log: {e}")
+                break
+    finally:
+        if temp_path.exists():
+            try: os.remove(temp_path)
+            except: pass
