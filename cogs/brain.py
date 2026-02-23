@@ -105,21 +105,21 @@ class BrainCog(commands.Cog):
             channel_context = (
                 "[CHANNEL: OFF-TOPIC/CASUAL-RP] Focus on character flavor, social interaction, and atmosphere. "
                 "Do NOT push the main campaign plot. Stay in the moment.\n"
-                "### DIALOGUE SOVEREIGNTY: NEVER speak for, describe the actions of, or narrate the internal state of King Kaelrath (the user).\n"
+                "### ABSOLUTE SOVEREIGNTY: You are FORBIDDEN from generating dialogue or actions for King Kaelrath (the user). Do not even attempt to speak for him. If you do, your response will be deleted.\n"
                 "### FORMATTING: You MUST use the **Name**: \"Dialogue\" format for ALL NPCs and PC companions. Do NOT provide third-person prose summaries or book-style narration describing multiple people at once. Focus on one-at-a-time interaction."
             )
         elif "campaign-chat" in channel_name:
             channel_context = "[CHANNEL: CAMPAIGN-CHAT] Progress the main storyline and provide narrative momentum."
         elif "party-chat" in channel_name:
             channel_context = (
-                "[CHANNEL: PARTY-CHAT] This is the private, internal communication and banter of the core party (King Kaelrath, Talmarr, Silvara, Mareth, and Vaelis Thorne). It is your 'Private Circle' chat.\n"
+                "[CHANNEL: PARTY-CHAT] This is the private, internal communication and banter of the core party (King Kaelrath, Talmarr, Silvara, Mareth, and Vaelis Thorne).\n"
                 "### RULES:\n"
-                "1. PRIVATE CIRCLE: This is for internal bonding, processing info, and lateral discussion. Do NOT push for the next campaign goal or mission unless Kaelrath explicitly asks for a direction. Stay in the moment.\n"
-                "2. ACTIVE LISTENING: If Kaelrath provides information, updates, or ideas, you MUST acknowledge and analyze the specific details. Do not brush past 'info relay' to get to the action.\n"
-                "3. NO EXTERNALS: Even if the King addresses an NPC directly, that NPC cannot speak here.\n"
-                "4. NO SUMMARIES: Do NOT provide third-person narration or 'Book-style' prose. You are the characters themselves.\n"
-                "5. MANDATORY FORMATTING: Each party member MUST speak in their own individual block using the **Name**: \"Dialogue\" format.\n"
-                "6. SOVEREIGNTY: NEVER speak for King Kaelrath. Reaction ONLY."
+                "1. PRIVATE CIRCLE: This is for internal bonding, processing info, and lateral discussion. Do NOT push for the next campaign goal or mission unless Kaelrath explicitly asks for a direction.\n"
+                "2. ACTIVE LISTENING: If Kaelrath provides information, updates, or ideas, you MUST acknowledge and analyze the specific details.\n"
+                "3. ABSOLUTE SOVEREIGNTY: NEVER speak for King Kaelrath. Do not generate his dialogue or internal thoughts. If you attempt to, your entire response will be blocked.\n"
+                "4. NO EXTERNALS: Even if the King addresses an NPC directly, that NPC cannot speak here.\n"
+                "5. NO SUMMARIES: Do NOT provide third-person narration or 'Book-style' prose. You are the characters themselves.\n"
+                "6. MANDATORY FORMATTING: Each party member MUST speak in their own block using the **Name**: \"Dialogue\" format."
             )
         elif "weaver-archives" in channel_name:
             target_npc = "The Chronicle Weaver"
@@ -207,8 +207,17 @@ class BrainCog(commands.Cog):
                             blocks = [b for b in blocks if b['speaker'] == "DM"]
                 
                 if not blocks:
-                    logger.warning(f"BLOCK FILTER: No blocks survived for {channel_name}. Response text: {response_text[:100]}...")
-                    return # No valid dialogue generated
+                    logger.warning(f"BLOCK FILTER: No blocks survived for {channel_name}. Attempting DM Fallback.")
+                    # If everything was filtered out, check if the AI at least provided DM narration
+                    # in the original 'response_text' that we can salvage.
+                    salvaged_blocks = parse_speaker_blocks(response_text, IDENTITIES, self.ignore_headers)
+                    dm_fallback = [b for b in salvaged_blocks if b['speaker'] == "DM"]
+                    if dm_fallback:
+                        blocks = dm_fallback
+                        logger.info(f"FALLBACK: Salvaged DM narration for {channel_name}.")
+                    else:
+                        logger.warning(f"BLOCK FILTER: No blocks survived for {channel_name}. Response text: {response_text[:100]}...")
+                        return # No valid dialogue generated
 
                 # --- Auto-Targeting & Narrator Suppression (Phase 10 Extension) ---
                 if not target_npc and "off-topic" in channel_name:
