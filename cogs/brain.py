@@ -377,7 +377,7 @@ class BrainCog(commands.Cog):
 
             log_path = DB_DIR / "NARRATIVE_LOG.md"
             if not log_path.exists():
-                await self.transport.send(channel, "🔍 **Narrative Pulse is silent.** No global events recorded yet.")
+                await transport.send(channel, "🔍 **Narrative Pulse is silent.** No global events recorded yet.", identity_key="DM")
                 return
                 
             lines = log_path.read_text(encoding='utf-8').splitlines()
