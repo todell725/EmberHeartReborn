@@ -139,15 +139,11 @@ class EHClient:
         if rag_context: enhanced_message += rag_context
 
         last = self.unified_history[-1] if self.unified_history else {}
-        if last.get("role") != "user" or last.get("content") != enhanced_message:
-            self.unified_history.append({"role": "user", "content": enhanced_message})
-        elif last.get("role") == "user" and last.get("content") == message:
-             # Dedup against raw message to prevent double turns when provider fails/retries
+        if last.get("role") == "user" and message in last.get("content", ""):
+             # Already have this user turn (possibly with different enhancement), skip
              pass
         else:
-            # If we already have a user turn that matches the raw message but has different enhancement,
-            # we respect it as the current turn.
-            pass
+            self.unified_history.append({"role": "user", "content": enhanced_message})
 
         self._trim_history(max_messages=8)
 

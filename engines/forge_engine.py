@@ -99,10 +99,12 @@ class ForgeEngine:
                         remaining -= 1
                     if remaining <= 0: break
 
-            # 6. Save All Updated States
-            self.settlement_path.write_text(json.dumps(settlement_data, indent=4), encoding='utf-8')
-            self.party_equip_path.write_text(json.dumps(equip_data, indent=4), encoding='utf-8')
-            self.party_state_path.write_text(json.dumps(party_data, indent=4), encoding='utf-8')
+            # 6. Save All Updated States Atomically
+            from core.storage import save_json
+            # Note: save_json takes filename, not full path, but we can use the basename
+            save_json(self.settlement_path.name, settlement_data)
+            save_json(self.party_equip_path.name, equip_data)
+            save_json(self.party_state_path.name, party_data)
 
         # 7. Start Project
         self.active_projects[channel_id] = {
@@ -132,7 +134,8 @@ class ForgeEngine:
         equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8'))
         inventory = equip_data["party_equipment"]["PC-01"]["inventory"]
         inventory.append(proj['name'])
-        self.party_equip_path.write_text(json.dumps(equip_data, indent=4), encoding='utf-8')
+        from core.storage import save_json
+        save_json(self.party_equip_path.name, equip_data)
 
         # Cleanup
         del self.active_projects[channel_id]
