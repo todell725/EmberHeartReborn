@@ -1,4 +1,5 @@
 import logging
+import json
 from pathlib import Path
 
 from .providers import initialize_providers, ROOT_DIR
@@ -15,6 +16,18 @@ import re
 import time
 
 logger = logging.getLogger("EH_Brain")
+
+# JSON schema preamble injected at the TOP of the system prompt for party/group channels
+PARTY_JSON_SCHEMA = """
+### RESPONSE FORMAT (MANDATORY):
+You MUST respond with a valid JSON array and NOTHING ELSE. No prose, no explanation outside the array.
+Schema: [{"speaker": "CharacterName", "content": "Their dialogue or action text"}]
+- Include 1-3 characters who would NATURALLY respond to the message. Not everyone must speak every turn.
+- NEVER include King Kaelrath as a speaker.
+- Keep each character's voice distinct and true to their personality.
+- Actions go inside content as *italicised text*. Dialogue goes as plain text.
+- Example: [{"speaker": "Talmarr", "content": "*glances at the door* Someone's coming."}]
+"""
 
 class EHClient:
     def __init__(self, thread_id="default", npc_name=None, model_gemini="gemini-2.0-flash", model_openai="gpt-4o", model_github="gpt-4o"):
@@ -247,6 +260,55 @@ class EHClient:
             self.gemini_chat = self.gemini_model.start_chat(history=[])
         logger.info(f"Thread {self.thread_id} rebuilt from {len(message_list)} messages.")
 
+    def _chat_ollama_json(self, message: str) -> str:
+        """
+        Calls Ollama with format='json' enforced at the API level.
+        Returns raw text (should be a JSON string).
+        """
+        if not self.ollama_client:
+            raise ValueError("Ollama not configured.")
+        
+        # Build the enhanced message with pulse/briefing context
+        briefing = self.world_manager.get_sovereign_briefing()
+        pulse = self.world_manager.get_narrative_pulse()
+        rag_context = self.world_manager.get_relevant_context(message)
+        enhanced_message = message
+        if pulse: enhanced_message += pulse
+        if briefing: enhanced_message += briefing
+        if rag_context: enhanced_message += rag_context
+
+        last = self.unified_history[-1] if self.unified_history else {}
+        if last.get("role") != "user" or last.get("content") != enhanced_message:
+            self.unified_history.append({"role": "user", "content": enhanced_message})
+        self._trim_history(max_messages=8)
+
+        # Use the raw httpx/requests approach via the openai compat client
+        # Ollama openai-compat doesn't expose format=json, so we call via base URL directly
+        import urllib.request
+        import urllib.error
+        ollama_base = self.providers.get("ollama_base", "http://localhost:11434")
+        payload = json.dumps({
+            "model": self.model_ollama,
+            "messages": self.unified_history,
+            "format": "json",
+            "stream": False,
+            "options": {"temperature": 0.85, "num_predict": 2048}
+        }).encode()
+        req = urllib.request.Request(
+            f"{ollama_base}/api/chat",
+            data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            result = json.loads(resp.read().decode())
+            reply = result["message"]["content"]
+        
+        self.unified_history.append({"role": "assistant", "content": reply})
+        self._save_history()
+        logger.info(f"JSON response received from Ollama ({self.model_ollama})")
+        return reply
+
     def chat(self, message: str) -> str:
         """
         Unified chat with priority fallback:
@@ -291,6 +353,64 @@ class EHClient:
         error_summary = " | ".join(errors)
         logger.error(f"CRITICAL: All AI providers failed. Summary: {error_summary}")
         raise RuntimeError(f"All AI providers failed: {error_summary}")
+
+    def chat_json(self, message: str) -> str:
+        """
+        JSON-mode chat for group/party channels.
+        Tries Ollama native JSON format first, then falls back to standard chat().
+        Always returns raw text (caller uses parse_response() to decode it).
+        """
+        try:
+            return self._chat_ollama_json(message)
+        except Exception as e:
+            logger.warning(f"Ollama JSON mode failed ({e}), falling back to standard chat.")
+            return self.chat(message)
+
+    def parse_response(self, text: str) -> list:
+        """
+        Safely parses an AI response into a list of {speaker, content} dicts.
+        Tries JSON first, falls back to legacy heuristic splitter.
+        Always returns a list (may be empty).
+        """
+        if not text:
+            return []
+        
+        # Step 1: Try to extract a JSON array from the response
+        # Sometimes the model wraps JSON in markdown code fences
+        text_stripped = text.strip()
+        # Strip markdown code fences if present
+        if text_stripped.startswith("```"):
+            lines = text_stripped.split("\n")
+            text_stripped = "\n".join(lines[1:-1]).strip()
+        
+        # Try parsing as JSON
+        try:
+            data = json.loads(text_stripped)
+            if isinstance(data, list):
+                results = []
+                for item in data:
+                    if isinstance(item, dict) and "speaker" in item and "content" in item:
+                        speaker = str(item["speaker"]).strip()
+                        content = str(item["content"]).strip()
+                        if speaker and content:
+                            results.append({"speaker": speaker, "content": content})
+                if results:
+                    logger.info(f"parse_response: JSON decoded {len(results)} block(s).")
+                    return results
+        except (json.JSONDecodeError, ValueError):
+            pass
+        
+        # Step 2: JSON failed — fall back to the legacy heuristic parser
+        logger.warning("parse_response: JSON decode failed. Falling back to heuristic parser.")
+        try:
+            from core.formatting import parse_speaker_blocks
+            from core.config import IDENTITIES
+            raw_blocks = parse_speaker_blocks(text, IDENTITIES, set())
+            return [{"speaker": b["speaker"], "content": b["content"]} for b in raw_blocks]
+        except Exception as e:
+            logger.error(f"parse_response: heuristic fallback also failed: {e}")
+            # Last resort: return as a single DM block
+            return [{"speaker": "DM", "content": text.strip()}]
 
     def apply_weaver_mode(self):
         """

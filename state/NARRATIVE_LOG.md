@@ -1,4 +1,3 @@
-- [2026-02-22 14:16] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 14:21] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 14:27] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 14:28] The Chronicle's local memory of #dm-lyra-lamorte725 was reset.
@@ -48,3 +47,4 @@
 - [2026-02-22 17:51] King Kaelrath and Vaelis Thorne, Talmarr, Mareth, Silvara "Silvy" discussed matters in #party-chat.
 - [2026-02-22 17:57] The Chronicle's local memory of #off-topic was reset.
 - [2026-02-22 17:57] King Kaelrath and Vaelis Thorne discussed matters in #off-topic.
+- [2026-02-22 18:24] King Kaelrath and DM discussed matters in #party-chat.

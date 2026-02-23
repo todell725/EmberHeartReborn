@@ -68,7 +68,8 @@ class BrainCog(commands.Cog):
             return
 
         # --- Multi-Channel Routing Rules ---
-        allowed_names = ["npc-chat", "party-chat", "game-feed", "campaign-chat", "rumors-chat", "off-topic", "weaver-archives"]
+        # NOTE: party-chat, off-topic, and weaver-archives are handled by the Party Bot (discord_party.py)
+        allowed_names = ["npc-chat", "game-feed", "campaign-chat", "rumors-chat"]
         channel_name = getattr(message.channel, "name", "").lower()
 
         is_dm = isinstance(message.channel, discord.DMChannel)
@@ -101,29 +102,8 @@ class BrainCog(commands.Cog):
         if "rumors-chat" in channel_name:
             target_npc = "RUMORS"
             channel_context = "[CHANNEL: RUMORS-CHAT] Provide rumors, hooks, or news. Be atmospheric and mysterious."
-        elif "off-topic" in channel_name:
-            channel_context = (
-                "[CHANNEL: OFF-TOPIC/CASUAL-RP] Focus on character flavor, social interaction, and atmosphere. "
-                "Do NOT push the main campaign plot. Stay in the moment.\n"
-                "### ABSOLUTE SOVEREIGNTY: You are FORBIDDEN from generating dialogue or actions for King Kaelrath (the user). Do not even attempt to speak for him. If you do, your response will be deleted.\n"
-                "### FORMATTING: You MUST use the **Name**: \"Dialogue\" format for ALL NPCs and PC companions. Do NOT provide third-person prose summaries or book-style narration describing multiple people at once. Focus on one-at-a-time interaction."
-            )
         elif "campaign-chat" in channel_name:
             channel_context = "[CHANNEL: CAMPAIGN-CHAT] Progress the main storyline and provide narrative momentum."
-        elif "party-chat" in channel_name:
-            channel_context = (
-                "[CHANNEL: PARTY-CHAT] This is the private, internal communication and banter of the core party (King Kaelrath, Talmarr, Silvara, Mareth, and Vaelis Thorne).\n"
-                "### RULES:\n"
-                "1. PRIVATE CIRCLE: This is for internal bonding, processing info, and lateral discussion. Do NOT push for the next campaign goal or mission unless Kaelrath explicitly asks for a direction.\n"
-                "2. ACTIVE LISTENING: If Kaelrath provides information, updates, or ideas, you MUST acknowledge and analyze the specific details.\n"
-                "3. ABSOLUTE SOVEREIGNTY: NEVER speak for King Kaelrath. Do not generate his dialogue or internal thoughts. If you attempt to, your entire response will be blocked.\n"
-                "4. NO EXTERNALS: Even if the King addresses an NPC directly, that NPC cannot speak here.\n"
-                "5. NO SUMMARIES: Do NOT provide third-person narration or 'Book-style' prose. You are the characters themselves.\n"
-                "6. MANDATORY FORMATTING: Each party member MUST speak in their own block using the **Name**: \"Dialogue\" format."
-            )
-        elif "weaver-archives" in channel_name:
-            target_npc = "The Chronicle Weaver"
-            channel_context = "[META-CHANNEL: WEAVER-ARCHIVES] Direct system access for King Kaelrath. No immersion masking required."
 
         # --- Dynamic DM Context Injection ---
         if channel_name.startswith("dm-"):

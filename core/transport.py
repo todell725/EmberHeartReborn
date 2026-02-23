@@ -1,26 +1,145 @@
 import aiohttp
 import asyncio
+import json
 import logging
+import re
 import discord
 from discord import Webhook
+from pathlib import Path
 from core.config import IDENTITIES
 from core.formatting import sanitize_text
 
 logger = logging.getLogger("EH_Transport")
 
+# Webhook cache persisted to disk so we survive bot restarts
+_CACHE_PATH = Path(__file__).resolve().parent.parent / "state" / "WEBHOOK_CACHE.json"
+
 class TransportAPI:
     """Unified API for sending messages to Discord via Webhooks or standard Fallbacks."""
     
     def __init__(self):
-        self._cache = {}
+        self._cache = {}        # (channel_id) -> general webhook
+        self._npc_cache = {}    # (channel_id, npc_slug) -> webhook URL
+        self._load_npc_cache()
+
+    # ─── NPC Webhook Registry (T3) ───────────────────────────────────────────
+
+    def _npc_slug(self, npc_name: str) -> str:
+        """Normalize NPC name to a safe webhook name slug."""
+        slug = re.sub(r'[^a-zA-Z0-9 ]', '', npc_name).strip()
+        return f"EH-{slug[:24]}"  # Discord webhook names max 80 chars; we keep it short
+
+    def _load_npc_cache(self):
+        """Load persisted webhook URLs from disk."""
+        try:
+            if _CACHE_PATH.exists():
+                data = json.loads(_CACHE_PATH.read_text(encoding="utf-8"))
+                self._npc_cache = {tuple(k.split("|")): v for k, v in data.items()}
+                logger.info(f"Loaded {len(self._npc_cache)} cached NPC webhooks.")
+        except Exception as e:
+            logger.warning(f"Could not load webhook cache: {e}")
+
+    def _save_npc_cache(self):
+        """Persist webhook URL cache to disk."""
+        try:
+            _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            serializable = {"|".join(k): v for k, v in self._npc_cache.items()}
+            _CACHE_PATH.write_text(json.dumps(serializable, indent=2), encoding="utf-8")
+        except Exception as e:
+            logger.warning(f"Could not save webhook cache: {e}")
+
+    async def _get_npc_webhook(self, channel, npc_name: str, session):
+        """Get or create a dedicated webhook for a specific NPC in a channel.
+        
+        Respects Discord's 10-webhook limit by reusing the oldest EH- webhook
+        if the channel is full.
+        """
+        key = (str(channel.id), npc_name)
+        
+        # Check in-memory cache first (URL-based)
+        cached_url = self._npc_cache.get(key)
+        if cached_url:
+            try:
+                wh = Webhook.from_url(cached_url, session=session)
+                return wh
+            except Exception:
+                # URL might be stale; remove from cache and recreate
+                del self._npc_cache[key]
+        
+        slug = self._npc_slug(npc_name)
+        
+        try:
+            existing_hooks = await channel.webhooks()
+            
+            # Check if our named webhook already exists
+            wh = next((w for w in existing_hooks if w.name == slug), None)
+            if wh:
+                self._npc_cache[key] = wh.url
+                self._save_npc_cache()
+                return wh
+            
+            # Guard: if at or near the 10-webhook limit, reuse the oldest EH- hook
+            eh_hooks = [w for w in existing_hooks if w.name and w.name.startswith("EH-")]
+            if len(existing_hooks) >= 8 and eh_hooks:
+                oldest = sorted(eh_hooks, key=lambda w: w.id)[0]
+                await oldest.edit(name=slug, reason=f"NPC slot reused for {npc_name}")
+                wh = oldest
+            else:
+                wh = await channel.create_webhook(name=slug, reason=f"NPC webhook for {npc_name}")
+            
+            self._npc_cache[key] = wh.url
+            self._save_npc_cache()
+            logger.info(f"Created NPC webhook '{slug}' in #{channel.name}")
+            return wh
+            
+        except discord.Forbidden:
+            logger.warning(f"No Manage Webhooks permission in #{channel.name}. NPC webhooks unavailable.")
+            return None
+        except Exception as e:
+            logger.warning(f"Could not get NPC webhook for '{npc_name}' in #{channel.name}: {e}")
+            return None
+
+    async def send_as_npc(self, channel, npc_name: str, content: str, avatar_url: str = None):
+        """Send a message to a channel impersonating a specific NPC.
+        
+        Uses a dedicated per-NPC webhook with their locked name and avatar.
+        Falls back to standard send with bold name prefix if webhooks fail.
+        """
+        content = sanitize_text(content)
+        if not content:
+            return
+        
+        # Resolve avatar from IDENTITIES if not provided
+        if not avatar_url:
+            identity = IDENTITIES.get(npc_name)
+            if not identity:
+                # Try fuzzy match
+                match = next((k for k in IDENTITIES if isinstance(k, str) and k.lower() == npc_name.lower()), None)
+                if match:
+                    identity = IDENTITIES[match]
+            if identity:
+                avatar_url = identity.get("avatar")
+        
+        async with aiohttp.ClientSession() as session:
+            wh = await self._get_npc_webhook(channel, npc_name, session)
+            if wh:
+                try:
+                    await self._send_chunked_webhook(wh, content, npc_name, avatar_url, wait=False)
+                    return
+                except Exception as e:
+                    logger.warning(f"NPC webhook send failed for '{npc_name}': {e}. Using standard fallback.")
+            
+            # Fallback: standard channel send with bold name
+            await self._send_chunked_standard(channel, content, username=npc_name)
+
+    # ─── General Webhook (legacy, used by DM bot) ─────────────────────────────
 
     async def _get_webhook(self, channel, session):
-         """Get or create a webhook for the target channel."""
+         """Get or create a general 'EmberHeart DM' webhook for the target channel."""
          if channel.id in self._cache:
              return self._cache[channel.id]
          
          try:
-             # Look for existing
              whs = await channel.webhooks()
              wh = next((w for w in whs if w.name == "EmberHeart DM"), None)
              
@@ -56,7 +175,6 @@ class TransportAPI:
                      final_avatar = IDENTITIES[match]["avatar"]
 
              if not webhook:
-                 # Fallback: Can't use webhooks here (e.g. DM channels or lacking permissions)
                  return await self._send_chunked_standard(channel, content, final_name)
 
              try:
@@ -65,6 +183,8 @@ class TransportAPI:
              except Exception as e:
                  logger.error(f"Webhook send failed: {e}. Falling back to standard send.")
                  return await self._send_chunked_standard(channel, content, final_name)
+
+    # ─── Helpers ──────────────────────────────────────────────────────────────
 
     async def _send_chunked_webhook(self, webhook, content, username, avatar_url, wait):
         """Helper to handle webhook limits."""
@@ -77,7 +197,7 @@ class TransportAPI:
         for chunk in chunks:
              if chunk:
                  last_msg = await webhook.send(content=chunk, username=username, avatar_url=avatar_url, wait=True)
-                 await asyncio.sleep(0.5) # Prevent ratelimits
+                 await asyncio.sleep(0.5)
         return last_msg
 
     async def _send_chunked_standard(self, channel, content, username=None):
@@ -104,10 +224,9 @@ class TransportAPI:
             if len(text) <= max_len:
                 chunks.append(text)
                 break
-            # Try to split on newline
             split_idx = text.rfind('\n', 0, max_len)
             if split_idx == -1: 
-                 split_idx = max_len # Hard split if no newline
+                 split_idx = max_len
             chunks.append(text[:split_idx].strip())
             text = text[split_idx:].strip()
         return chunks

@@ -39,7 +39,9 @@ def initialize_providers(model_gemini="gemini-2.0-flash", model_openai="gpt-4o",
         "model_ollama": keys["OLLAMA_MODEL"],
         "model_openai": model_openai,
         "model_github": model_github,
-        "model_gemini": model_gemini
+        "model_gemini": model_gemini,
+        # Raw Ollama base URL (no /v1) for native API calls like format=json
+        "ollama_base": keys["OLLAMA_BASE_URL"].rstrip("/v1").rstrip("/")
     }
 
     # 1. Ollama (Local — always try to connect)
