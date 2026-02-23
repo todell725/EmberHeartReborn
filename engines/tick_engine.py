@@ -68,8 +68,10 @@ class TickEngine:
             if income > 0:
                 if "gold" in stock:
                     stock["gold"] += income
+                elif "ore_stock_ou" in stock:
+                    stock["ore_stock_ou"] += income
                 else:
-                    core["gold"] = core.get("gold", 0) + income
+                    stock["gold"] = income
             
             summary.append(f"💰 **Treasury**: +{income:,} Gold deposited to the Royal Vault.")
 

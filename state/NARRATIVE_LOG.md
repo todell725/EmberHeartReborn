@@ -1,6 +1,3 @@
-- [2026-02-22 14:21] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
-- [2026-02-22 14:27] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
-- [2026-02-22 14:28] The Chronicle's local memory of #dm-lyra-lamorte725 was reset.
 - [2026-02-22 14:48] The Chronicle of #dm-lyra-lamorte725 was rolled back to message 1475210774606647497.
 - [2026-02-22 14:49] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 14:50] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
@@ -48,3 +45,6 @@
 - [2026-02-22 17:57] The Chronicle's local memory of #off-topic was reset.
 - [2026-02-22 17:57] King Kaelrath and Vaelis Thorne discussed matters in #off-topic.
 - [2026-02-22 18:24] King Kaelrath and DM discussed matters in #party-chat.
+- [2026-02-22 22:17] King Kaelrath and Vorenus of the Gilded Coast discussed matters in #dm-weaver-lamorte725.
+- [2026-02-22 22:18] King Kaelrath and DM chatted in #off-topic.
+- [2026-02-22 22:18] King Kaelrath and DM chatted in #off-topic.

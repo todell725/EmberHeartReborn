@@ -7,7 +7,7 @@ from datetime import datetime
 
 from core.config import DB_DIR, ROOT_DIR, CHARACTERS_DIR
 
-BACKUP_DIR = ROOT_DIR / "EmberHeartReborn" / "backups"
+BACKUP_DIR = ROOT_DIR / "backups"
 
 def get_character_dir(char_id: str) -> Path | None:
     """Finds the character directory based on ID prefix (EH-XXX or PC-XXX)."""
@@ -137,7 +137,7 @@ def load_all_character_states() -> list:
                     with open(state_path, 'r', encoding='utf-8') as f:
                         data.update(json.load(f))
                 entities.append(data)
-            except:
+            except Exception:
                 pass
     return entities
 

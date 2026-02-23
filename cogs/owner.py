@@ -178,8 +178,9 @@ class OwnerCog(commands.Cog):
         await asyncio.sleep(3)
         try:
             await status.delete()
-        except:
-            pass
+        except Exception as e:
+            logger.error(f"Failed to delete purge status message: {e}")
+            await ctx.send(f"❌ Error deleting status message: {e}")
 
 async def setup(bot):
     await bot.add_cog(OwnerCog(bot))

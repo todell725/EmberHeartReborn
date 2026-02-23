@@ -54,7 +54,9 @@ class TransportAPI:
         Respects Discord's 10-webhook limit by reusing the oldest EH- webhook
         if the channel is full.
         """
-        key = (str(channel.id), npc_name)
+        # Normalize key using slug to prevent casing duplicates (Codex-3)
+        npc_slug = self._npc_slug(npc_name)
+        key = (str(channel.id), npc_slug)
         
         # Check in-memory cache first (URL-based)
         cached_url = self._npc_cache.get(key)
@@ -172,7 +174,7 @@ class TransportAPI:
              dm_avatar_base = IDENTITIES["DM"]["avatar"].split('?')[0]
              current_avatar_base = (final_avatar or "").split('?')[0]
              
-             if final_name and (not final_avatar or current_avatar_base == dm_avatar_base):
+             if final_name and identity_key != "DM" and (not final_avatar or current_avatar_base == dm_avatar_base):
                  match = next((k for k in IDENTITIES if isinstance(k, str) and k.lower() == final_name.lower()), None)
                  if match and IDENTITIES[match].get("avatar"):
                      final_avatar = IDENTITIES[match]["avatar"]

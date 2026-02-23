@@ -53,8 +53,8 @@ class EconomyCog(commands.Cog):
         channel = getattr(ctx, "target_channel", ctx.channel)
         
         # Typically the buyer is the ID of the char. We'll assume the person typing is Kaelrath 
-        # or we could parse Discord User ID if linked. For D&D, Kaelrath is EH-01.
-        buyer_id = "EH-01" 
+        # or we could parse Discord User ID if linked. For D&D, Kaelrath is PC-01.
+        buyer_id = "PC-01" 
         
         success, response_msg = self.shop_engine.purchase_item(buyer_id, item_name)
         

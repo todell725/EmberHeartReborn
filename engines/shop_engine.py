@@ -10,11 +10,12 @@ logger = logging.getLogger("EH_Shop")
 class DynamicShop:
     def __init__(self):
         # We read from static for blueprints, write to live state for stock
-        self.forge_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "FORGE_CATALOG.json" # Static
-        self.spells_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "DND_REFERENCE_INDEX.json" # Static
+        self.forge_path = ROOT_DIR / "docs" / "FORGE_CATALOG.json" # Static
+        self.spells_path = ROOT_DIR / "docs" / "DND_REFERENCE_INDEX.json" # Static
         self.settlement_path = DB_DIR / "SETTLEMENT_STATE.json" # Live State
+        self.stock_path = DB_DIR / "SHOP_STOCK.json"
         self.last_rotation = None
-        self.current_stock = []
+        self._load_current_stock()
         
     def load_data(self):
         """Load static catalog data."""
@@ -35,6 +36,30 @@ class DynamicShop:
                 logger.error(f"Failed to load Spell Index: {e}")
                 
         return forge_items, spells
+
+    def _load_current_stock(self):
+        """Loads stock from disk to ensure shared state between cog and loop."""
+        if self.stock_path.exists():
+            try:
+                data = json.loads(self.stock_path.read_text(encoding='utf-8'))
+                self.current_stock = data.get("items", [])
+                self.last_rotation = datetime.fromisoformat(data["last_rotation"]) if "last_rotation" in data else None
+            except Exception as e:
+                logger.error(f"Failed to load shop stock: {e}")
+                self.current_stock = []
+        else:
+            self.current_stock = []
+
+    def _save_current_stock(self):
+        """Persists stock to disk."""
+        try:
+            data = {
+                "last_rotation": self.last_rotation.isoformat() if self.last_rotation else None,
+                "items": self.current_stock
+            }
+            self.stock_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
+        except Exception as e:
+            logger.error(f"Failed to save shop stock: {e}")
 
     def generate_stock(self):
         """Generate a random 30-item stock (15 Forge, 15 Spells)."""
@@ -74,6 +99,7 @@ class DynamicShop:
         random.shuffle(stock)
         self.current_stock = stock[:30]
         self.last_rotation = datetime.now()
+        self._save_current_stock()
         logger.info(f"Shop Stock Generated: {len(self.current_stock)} items.")
 
     def purchase_item(self, buyer_id: str, item_query: str) -> tuple[bool, str]:
@@ -92,17 +118,22 @@ class DynamicShop:
         
         try:
             cost_val = int(target_item['cost'].split()[0])
-        except:
+        except Exception:
             return False, "Price is invalid or not listed."
 
         try:
             settlement = json.loads(self.settlement_path.read_text(encoding='utf-8'))
-            current_ou = settlement['settlement']['stockpiles'].get('ore_stock_ou', 0)
+            stock = settlement['settlement']['stockpiles']
+            # Gold key normalization
+            current_ou = stock.get('gold', stock.get('ore_stock_ou', 0))
             
             if current_ou < cost_val:
                  return False, f"Treasury insufficient. Need **{cost_val} OU**, but only **{current_ou} OU** available."
             
-            settlement['settlement']['stockpiles']['ore_stock_ou'] -= cost_val
+            if 'gold' in stock:
+                stock['gold'] -= cost_val
+            else:
+                stock['ore_stock_ou'] -= cost_val
             self.settlement_path.write_text(json.dumps(settlement, indent=4), encoding='utf-8')
             
         except Exception as e:

@@ -17,8 +17,8 @@ class RelationshipsCog(commands.Cog):
         self.rm = relationship_manager
 
     def _resolve_character(self, name: str):
-        if name.lower() in ["kaelrath", "kh-01", "king"]:
-            return {"id": "KH-01", "name": "King Kaelrath"}
+        if name.lower() in ["kaelrath", "pc-01", "king"]:
+            return {"id": "PC-01", "name": "King Kaelrath"}
             
         from core.storage import resolve_character
         return resolve_character(name)

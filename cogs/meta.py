@@ -38,7 +38,7 @@ class MetaCog(commands.Cog):
                  
                  # Clean old messages
                  try: await channel.purge(limit=10)
-                 except: pass
+                 except Exception: pass
 
                  embed = discord.Embed(
                      title="⚖️ The Gilded Exchange",

@@ -28,7 +28,7 @@ class ForgeEngine:
             for cid, proj in data.items():
                 proj['start_time'] = datetime.fromisoformat(proj['start_time'])
             return {int(k): v for k, v in data.items()}
-        except: return {}
+        except Exception: return {}
 
     def _save_active(self):
         data = {str(k): {**v, 'start_time': v['start_time'].isoformat()} for k, v in self.active_projects.items()}
@@ -63,9 +63,11 @@ class ForgeEngine:
                 return False, "Insufficient Kingdom resources (Ore/Metal)."
 
             # 2. Extract All Available Material Stacks
-            # Format: (ListRef, DisplayName)
+            # Kaelrath is PC-01
+            buyer_id = "PC-01"
+            pe = equip_data.get("party_equipment", {})
             sources = [
-                (equip_data["party_equipment"]["King Kaelrath"]["inventory"], "King Kaelrath"),
+                (pe.get(buyer_id, {}).get("inventory", []), buyer_id),
                 (settlement_data["settlement"].get("inventory", []), "Kingdom Treasury")
             ]
             for char in party_data.get("party", []):

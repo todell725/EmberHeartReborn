@@ -102,7 +102,7 @@ class WorldContextManager:
         if path.exists():
             try:
                 return json.loads(path.read_text(encoding='utf-8'))
-            except:
+            except Exception:
                 return {}
         return {}
 
@@ -133,7 +133,7 @@ class WorldContextManager:
                     if any(w in message_low for w in name_words if len(w) > 2) or char_id.lower() in message_low:
                         # Check Relationships
                         from core.relationships import relationship_manager
-                        rel_data = relationship_manager.get_relationship("KH-01", char_id)
+                        rel_data = relationship_manager.get_relationship("PC-01", char_id)
                         rel_labels = relationship_manager.get_status_labels(rel_data)
                         rel_text = ", ".join(rel_labels) if rel_labels else "Neutral"
                         
@@ -194,7 +194,7 @@ class WorldContextManager:
                             st = json.loads(state_path.read_text(encoding='utf-8'))
                             hp = st.get('hp_current', 'Full')
                         party_summaries.append(f"{profile.get('name')} (HP: {hp})")
-                    except:
+                    except Exception:
                         pass
             if party_summaries:
                 context_snippets.append(f"PARTY STATUS: {', '.join(party_summaries)}")

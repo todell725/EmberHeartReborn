@@ -9,7 +9,7 @@ logger = logging.getLogger("EH_QuestEngine")
 
 class QuestEngine:
     def __init__(self):
-        self.db_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "SIDE_QUESTS_DB.json"
+        self.db_path = ROOT_DIR / "docs" / "SIDE_QUESTS_DB.json"
         self.completion_path = DB_DIR / "QUEST_COMPLETION.json"
         self.loot_path = DB_DIR / "PARTY_EQUIPMENT.json" # Shared bulk storage
         self.deeds_path = DB_DIR / "QUEST_DEEDS.md"
@@ -101,9 +101,8 @@ class QuestEngine:
         leveled_up = []
         try:
             self.completed.add(qid.upper())
-            items = [str(x) for x in self.completed if isinstance(x, str)]
-            json_str = "[\n " + ",\n ".join([f'"{i}"' for i in items]) + "\n]"
-            self.completion_path.write_text(json_str, encoding='utf-8')
+            items = sorted([str(x) for x in self.completed if isinstance(x, str)])
+            self.completion_path.write_text(json.dumps(items, indent=4), encoding='utf-8')
 
             quest = self.get_quest(qid)
             if not quest:
@@ -168,9 +167,14 @@ class QuestEngine:
                 if "Gold" in item_lower or "OU" in item:
                     try:
                         amt = int(''.join(filter(str.isdigit, item)))
-                        settlement_data['settlement']['stockpiles']['ore_stock_ou'] += amt
-                        logger.info(f"[LOOT] +{amt} OU -> Settlement Treasury")
-                    except: pass
+                        stock = settlement_data['settlement']['stockpiles']
+                        if "gold" in stock:
+                            stock["gold"] += amt
+                        else:
+                            stock["ore_stock_ou"] = stock.get("ore_stock_ou", 0) + amt
+                        logger.info(f"[LOOT] +{amt} Gold/OU -> Settlement Treasury")
+                    except Exception as e:
+                        logger.error(f"Failed to parse OU from item '{item}': {e}")
                 elif any(m in item_lower for m in MUNDANE_KEYS):
                     equip_data.setdefault("party_inventory", []).append(item)
                     logger.info(f"[LOOT] '{item}' -> Party Storage")

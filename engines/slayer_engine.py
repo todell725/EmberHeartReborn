@@ -10,7 +10,7 @@ logger = logging.getLogger("EH_Slayer")
 
 class SlayerEngine:
     def __init__(self):
-        self.db_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "IDLE_SLAYER_DB.json"
+        self.db_path = ROOT_DIR / "docs" / "IDLE_SLAYER_DB.json"
         self.active_path = DB_DIR / "SLAYER_ACTIVE.json"
         self._db = self._load_db()
         self.active_tasks: Dict[int, dict] = self._load_active()
@@ -38,7 +38,8 @@ class SlayerEngine:
                 task['start_time'] = datetime.fromisoformat(task['start_time'])
                 processed[int(cid)] = task
             return processed
-        except:
+        except Exception as e:
+            logger.error(f"Failed to load active slayer tasks: {e}")
             return {}
 
     def _save_active(self):
@@ -104,7 +105,8 @@ class SlayerEngine:
             # Party = PC- prefixed
             levels = [s.get('level', 1) for s in all_states if s.get('id', '').startswith('PC-')]
             return max(levels) if levels else 1
-        except:
+        except Exception as e:
+            logger.error(f"Failed to get party level: {e}")
             return 1
 
     def skip_time(self, channel_id: int, hours: float):

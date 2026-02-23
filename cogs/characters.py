@@ -180,7 +180,7 @@ class CharactersCog(commands.Cog):
                     try:
                         await message.delete()
                         await asyncio.sleep(1.25)
-                    except: pass
+                    except Exception: pass
             
             await asyncio.sleep(5)
             await summary_msg.delete()
@@ -400,7 +400,8 @@ class CharactersCog(commands.Cog):
                     wait = (idx < len(blocks) - 1)
                     
                     if identity:
-                        await self.transport.send(dm_channel, content, username=identity.get("name", speaker), wait=wait)
+                        # Use send_as_npc for high-fidelity NPC threads
+                        await self.transport.send_as_npc(dm_channel, identity.get("name", speaker), content, avatar_url=identity.get("avatar"), wait=wait)
                     else:
                         await self.transport.send(dm_channel, content, username=speaker, wait=wait)
                         
