@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = Path(__file__).resolve().parent
 load_dotenv(ROOT_DIR / ".env")
 
 logging.basicConfig(level=logging.INFO)

@@ -178,7 +178,7 @@ def parse_speaker_blocks(text: str, identities: dict, ignore_headers: set) -> li
             if is_speaker:
                 clean_content = segment_content.strip()
                 is_narrator = "DM" in lookup_name or "Chronicle" in lookup_name or "Weaver" in lookup_name
-                if not is_narrator and not (clean_content.startswith('"') or clean_content.startswith('“') or clean_content.startswith('*')):
+                if not is_narrator and not clean_content:
                      is_speaker = False
 
         if is_speaker:

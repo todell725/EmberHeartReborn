@@ -15,7 +15,7 @@ except ImportError:
 
 logger = logging.getLogger("EH_Brain")
 
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent.parent
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(ROOT_DIR / ".env")
 
 def get_keys():

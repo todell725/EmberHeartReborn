@@ -1,4 +1,5 @@
 import os
+import asyncio
 import re
 import logging
 import discord
@@ -158,8 +159,11 @@ class BrainCog(commands.Cog):
                 if target_npc:
                     # 1-on-1 ENFORCEMENT:
                     # If we are in a targeted DM, we only want blocks matching the target_npc.
-                    target_name = re.sub(r'\s*\[[A-Z0-9-]+\]', '', target_npc).strip()
-                    character_blocks = [b for b in blocks if target_name.lower() in b['speaker'].lower()]
+                    target_name = re.sub(r'\s*\[[A-Z0-9-]+\]', '', target_npc).strip().lower()
+                    character_blocks = [
+                        b for b in blocks 
+                        if target_name in b['speaker'].lower() or b['speaker'].lower() in target_name
+                    ]
                     
                     if character_blocks:
                         blocks = character_blocks
@@ -172,9 +176,9 @@ class BrainCog(commands.Cog):
                         elif len(blocks) == 1 and (blocks[0]['speaker'] == "DM" or blocks[0]['speaker'] == "Chronicle Weaver"):
                             blocks[0]['speaker'] = target_name # Re-assign to target
                         else:
-                            valid_blocks = [b for b in blocks if b['speaker'] != "DM" and b['speaker'] != "Chronicle Weaver"]
+                            valid_blocks = [b for b in blocks if b['speaker'] not in ("DM", "Chronicle Weaver")]
                             if valid_blocks:
-                                blocks = [valid_blocks[0]]
+                                blocks = valid_blocks # Keep all valid NPC blocks
                 else:
                     # PC-Only Lockdown for party-chat
                     if "party-chat" in channel_name:
@@ -241,13 +245,18 @@ class BrainCog(commands.Cog):
                     wait = (idx < len(blocks) - 1)
                     
                     if identity:
-                        await transport.send(
-                            message.channel, content, 
-                            username=identity["name"] if not target_npc else speaker_name, 
-                            avatar_url=identity.get("avatar"), wait=wait
+                        # Use dedicated NPC webhook if identity exists
+                        await transport.send_as_npc(
+                            message.channel,
+                            npc_name=speaker_name,
+                            content=content,
+                            avatar_url=identity.get("avatar"),
+                            wait=wait
                         )
+                        if wait:
+                            await asyncio.sleep(0.75) # Ensure message ordering
                     else:
-                        # Fallback to DM profile
+                        # Fallback to general DM profile
                         await transport.send(message.channel, content, identity_key="DM", wait=wait)
                     
                     # --- Narrative Pulse Logging ---

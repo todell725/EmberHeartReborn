@@ -99,7 +99,7 @@ class TransportAPI:
             logger.warning(f"Could not get NPC webhook for '{npc_name}' in #{channel.name}: {e}")
             return None
 
-    async def send_as_npc(self, channel, npc_name: str, content: str, avatar_url: str = None):
+    async def send_as_npc(self, channel, npc_name: str, content: str, avatar_url: str = None, wait: bool = False):
         """Send a message to a channel impersonating a specific NPC.
         
         Uses a dedicated per-NPC webhook with their locked name and avatar.
@@ -124,7 +124,7 @@ class TransportAPI:
             wh = await self._get_npc_webhook(channel, npc_name, session)
             if wh:
                 try:
-                    await self._send_chunked_webhook(wh, content, npc_name, avatar_url, wait=False)
+                    await self._send_chunked_webhook(wh, content, npc_name, avatar_url, wait=wait)
                     return
                 except Exception as e:
                     logger.warning(f"NPC webhook send failed for '{npc_name}': {e}. Using standard fallback.")
@@ -167,9 +167,12 @@ class TransportAPI:
              final_name = username or identity["name"]
              final_avatar = avatar_url or identity["avatar"]
              
-             # Robust Fallback: If we have a username but the avatar is the Weaver or missing, 
+             # Robust Fallback: If we have a username but the avatar is the Weaver (or missing), 
              # try to find a better avatar from the registry using the name.
-             if final_name and (not final_avatar or final_avatar == IDENTITIES["DM"]["avatar"]):
+             dm_avatar_base = IDENTITIES["DM"]["avatar"].split('?')[0]
+             current_avatar_base = (final_avatar or "").split('?')[0]
+             
+             if final_name and (not final_avatar or current_avatar_base == dm_avatar_base):
                  match = next((k for k in IDENTITIES if isinstance(k, str) and k.lower() == final_name.lower()), None)
                  if match and IDENTITIES[match].get("avatar"):
                      final_avatar = IDENTITIES[match]["avatar"]
@@ -180,8 +183,7 @@ class TransportAPI:
              try:
                  logger.debug(f"[WEBHOOK] Routing to {getattr(channel, 'name', 'DM')} as {final_name}")
                  return await self._send_chunked_webhook(webhook, content, final_name, final_avatar, wait)
-             except Exception as e:
-                 logger.error(f"Webhook send failed: {e}. Falling back to standard send.")
+             except Exception:
                  return await self._send_chunked_standard(channel, content, final_name)
 
     # ─── Helpers ──────────────────────────────────────────────────────────────
