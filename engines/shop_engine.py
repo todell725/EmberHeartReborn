@@ -150,7 +150,8 @@ class DynamicShop:
             char_state.setdefault('status', {}).setdefault('inventory', []).append(target_name)
             save_character_state(buyer_id, char_state)
             
-            return True, f"**Transaction Complete:** Purchased **{target_name}** for **{cost_val} OU**. (Treasury: {settlement['settlement']['stockpiles']['ore_stock_ou']} OU)"
+            gold_left = settlement['settlement']['stockpiles'].get('gold', settlement['settlement']['stockpiles'].get('ore_stock_ou', 0))
+            return True, f"**Transaction Complete:** Purchased **{target_name}** for **{cost_val} OU**. (Treasury: {gold_left} OU)"
             
         except Exception as e:
             logger.error(f"Transaction Failed (Character State): {e}", exc_info=True)

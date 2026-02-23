@@ -63,7 +63,14 @@ class CombatTracker:
                     logger.info(f"✨ [LEVEL UP] {char_state['name']} -> Level {new_level}")
                 
                 # Save individual character state
-                save_character_state(char_id, char_state)
+                # Note: char_state here is a merged dict if it came from load_all_character_states
+                # We should be careful to only save state keys if we use load_all_character_states
+                # or better, load the literal state file before saving.
+                from core.storage import load_character_state
+                actual_state = load_character_state(char_id)
+                actual_state["experience_points"] = new_xp
+                actual_state["level"] = new_level
+                save_character_state(char_id, actual_state)
                     
             return leveled_up
             

@@ -49,20 +49,25 @@ def save_character_state(char_id: str, state: dict):
     import uuid
     temp_path = path.with_suffix(f'.{uuid.uuid4()}.tmp')
     
-    with open(temp_path, 'w', encoding='utf-8') as f:
-        json.dump(state, f, indent=4)
-        
-    max_retries = 5
-    for i in range(max_retries):
-        try:
-            if path.exists():
-                os.replace(temp_path, path)
-            else:
-                os.rename(temp_path, path)
-            break
-        except PermissionError:
-            if i == max_retries - 1: raise
-            time.sleep(0.5 * (i + 1))
+    try:
+        with open(temp_path, 'w', encoding='utf-8') as f:
+            json.dump(state, f, indent=4)
+            
+        max_retries = 5
+        for i in range(max_retries):
+            try:
+                if path.exists():
+                    os.replace(temp_path, path)
+                else:
+                    os.rename(temp_path, path)
+                break
+            except PermissionError:
+                if i == max_retries - 1: raise
+                time.sleep(0.5 * (i + 1))
+    finally:
+        if temp_path.exists():
+            try: os.remove(temp_path)
+            except: pass
 
 def save_character_profile(char_id: str, profile: dict):
     """Atomically saves static profile data for a specific character."""
@@ -102,7 +107,7 @@ def load_all_character_profiles() -> list:
             try:
                 with open(profile_path, 'r', encoding='utf-8') as f:
                     profiles.append(json.load(f))
-            except:
+            except (json.JSONDecodeError, OSError):
                 pass
     return profiles
 
@@ -165,27 +170,32 @@ def save_json(filename: str, data: dict | list):
     import uuid
     temp_path = path.with_suffix(f'.{uuid.uuid4()}.tmp')
     
-    with open(temp_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=4)
+    try:
+        with open(temp_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=4)
+            
+        # Atomic replace with retry for Windows file locking
+        max_retries = 5
+        retry_delay = 0.2  # seconds
         
-    # Atomic replace with retry for Windows file locking
-    max_retries = 5
-    retry_delay = 0.2  # seconds
-    
-    for i in range(max_retries):
-        try:
-            if path.exists():
-                os.replace(temp_path, path)
-            else:
-                os.rename(temp_path, path)
-            break
-        except PermissionError as e:
-            if i == max_retries - 1:
-                print(f"❌ Final attempt failed to save {filename}: {e}")
-                raise
-            time.sleep(retry_delay)
-            # exponential backoff
-            retry_delay *= 2
+        for i in range(max_retries):
+            try:
+                if path.exists():
+                    os.replace(temp_path, path)
+                else:
+                    os.rename(temp_path, path)
+                break
+            except PermissionError as e:
+                if i == max_retries - 1:
+                    print(f"❌ Final attempt failed to save {filename}: {e}")
+                    raise
+                time.sleep(retry_delay)
+                # exponential backoff
+                retry_delay *= 2
+    finally:
+        if temp_path.exists():
+            try: os.remove(temp_path)
+            except: pass
 
 def load_conversations() -> dict:
     """Loads all active conversation histories with corruption protection."""

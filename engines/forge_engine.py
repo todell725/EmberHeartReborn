@@ -9,7 +9,7 @@ logger = logging.getLogger("EH_Forge")
 
 class ForgeEngine:
     def __init__(self):
-        self.catalog_path = ROOT_DIR / "EmberHeartReborn" / "docs" / "FORGE_CATALOG.json"
+        self.catalog_path = ROOT_DIR / "docs" / "FORGE_CATALOG.json"
         self.active_path = DB_DIR / "FORGE_ACTIVE.json"
         self.settlement_path = DB_DIR / "SETTLEMENT_STATE.json"
         self.party_equip_path = DB_DIR / "PARTY_EQUIPMENT.json"
@@ -32,7 +32,8 @@ class ForgeEngine:
 
     def _save_active(self):
         data = {str(k): {**v, 'start_time': v['start_time'].isoformat()} for k, v in self.active_projects.items()}
-        self.active_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
+        from core.storage import save_json
+        save_json("FORGE_ACTIVE.json", data)
 
     def list_blueprints(self) -> List[dict]:
         return self.blueprints
@@ -127,8 +128,9 @@ class ForgeEngine:
             return False, f"The forge is still glowing. Needs **{remaining} more hours**."
 
         # Award Item
+        # Kaelrath is PC-01
         equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8'))
-        inventory = equip_data["party_equipment"]["King Kaelrath"]["inventory"]
+        inventory = equip_data["party_equipment"]["PC-01"]["inventory"]
         inventory.append(proj['name'])
         self.party_equip_path.write_text(json.dumps(equip_data, indent=4), encoding='utf-8')
 

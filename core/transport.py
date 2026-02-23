@@ -128,6 +128,22 @@ class TransportAPI:
                 try:
                     await self._send_chunked_webhook(wh, content, npc_name, avatar_url, wait=wait)
                     return
+                except discord.errors.NotFound: # Webhook deleted
+                    logger.warning(f"NPC webhook {wh.url} for '{npc_name}' not found. Clearing from cache and retrying.")
+                    key = (str(channel.id), self._npc_slug(npc_name))
+                    if key in self._npc_cache:
+                        del self._npc_cache[key]
+                        self._save_npc_cache()
+                    # Try again after clearing cache
+                    wh = await self._get_npc_webhook(channel, npc_name, session)
+                    if wh:
+                        try:
+                            await self._send_chunked_webhook(wh, content, npc_name, avatar_url, wait=wait)
+                            return
+                        except Exception as e:
+                            logger.warning(f"NPC webhook send failed on retry for '{npc_name}': {e}. Using standard fallback.")
+                    else:
+                        logger.warning(f"Could not re-create NPC webhook for '{npc_name}'. Using standard fallback.")
                 except Exception as e:
                     logger.warning(f"NPC webhook send failed for '{npc_name}': {e}. Using standard fallback.")
             
@@ -185,6 +201,20 @@ class TransportAPI:
              try:
                  logger.debug(f"[WEBHOOK] Routing to {getattr(channel, 'name', 'DM')} as {final_name}")
                  return await self._send_chunked_webhook(webhook, content, final_name, final_avatar, wait)
+             except discord.errors.NotFound: # Webhook deleted
+                 logger.warning(f"General Webhook {webhook.url} returned 404. Clearing from cache and retrying.")
+                 if channel.id in self._cache:
+                     del self._cache[channel.id]
+                 # Try again after clearing cache
+                 webhook = await self._get_webhook(channel, session)
+                 if webhook:
+                     try:
+                         return await self._send_chunked_webhook(webhook, content, final_name, final_avatar, wait)
+                     except Exception as e:
+                         logger.warning(f"General Webhook send failed on retry: {e}. Using standard fallback.")
+                 else:
+                     logger.warning(f"Could not re-create General Webhook. Using standard fallback.")
+                 return await self._send_chunked_standard(channel, content, final_name)
              except Exception:
                  return await self._send_chunked_standard(channel, content, final_name)
 

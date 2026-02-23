@@ -33,7 +33,7 @@ class EHClient:
     def __init__(self, thread_id="default", npc_name=None, model_gemini="gemini-2.0-flash", model_openai="gpt-4o", model_github="gpt-4o"):
         self.thread_id = str(thread_id)
         self.npc_name = npc_name
-        self.eh_dir = ROOT_DIR / "EmberHeartReborn"
+        self.eh_dir = ROOT_DIR 
         self.world_manager = WorldContextManager(self.eh_dir)
         self.providers = initialize_providers(model_gemini, model_openai, model_github)
 
@@ -50,10 +50,6 @@ class EHClient:
         if self.npc_name:
             self._apply_npc_override(self.npc_name)
 
-        self.gemini_chat = None
-        self.gemini_model = None
-        self._init_gemini()
-
         # Load unified history
         all_conversations = load_conversations()
         if self.thread_id in all_conversations:
@@ -61,20 +57,13 @@ class EHClient:
         else:
             self.unified_history = [{"role": "system", "content": self.system_prompt}]
             
-        # Ensure the system prompt stays updated across loads (e.g., if NPC override was applied after thread creation)
+        # Ensure the system prompt stays updated across loads
         if self.unified_history and self.unified_history[0].get("role") == "system":
             self.unified_history[0]["content"] = self.system_prompt
-            
-        # Optional sync Gemini's memory if being used
-        if self.gemini_chat and self.keys["GEMINI"]:
-            # Rebuilding internal gemini memory array
-            gemini_hist = []
-            for msg in self.unified_history:
-                 if msg["role"] == "user":
-                      gemini_hist.append({"role": "user", "parts": [msg["content"]]})
-                 elif msg["role"] == "assistant":
-                      gemini_hist.append({"role": "model", "parts": [msg["content"]]})
-            self.gemini_chat.history = gemini_hist
+
+        self.gemini_chat = None
+        self.gemini_model = None
+        self._init_gemini()
 
     def _init_gemini(self):
         """Initializes or re-initializes the Gemini model with the current system prompt."""
@@ -152,6 +141,13 @@ class EHClient:
         last = self.unified_history[-1] if self.unified_history else {}
         if last.get("role") != "user" or last.get("content") != enhanced_message:
             self.unified_history.append({"role": "user", "content": enhanced_message})
+        elif last.get("role") == "user" and last.get("content") == message:
+             # Dedup against raw message to prevent double turns when provider fails/retries
+             pass
+        else:
+            # If we already have a user turn that matches the raw message but has different enhancement,
+            # we respect it as the current turn.
+            pass
 
         self._trim_history(max_messages=8)
 
@@ -164,7 +160,13 @@ class EHClient:
         reply = response.choices[0].message.content
         # IMMERSION CLEANUP: Strip common meta-tags or self-attribution if they leak
         reply = re.sub(r"^\(.*?\)\s*", "", reply) # Strip leading (Name)
-        reply = re.sub(r"^[A-Za-z]+\s*:\s*", "", reply) # Strip leading Name:
+        # Soften regex: only strip Name: if Name is in our identities to prevent dialog amputation
+        name_match = re.match(r"^([A-Za-z]+)\s*:\s*", reply)
+        if name_match:
+             potential_name = name_match.group(1)
+             from core.config import IDENTITIES
+             if any(potential_name.lower() in k.lower() for k in IDENTITIES):
+                  reply = reply[name_match.end():]
         
         self.unified_history.append({"role": "assistant", "content": reply})
         self._save_history()
@@ -218,7 +220,9 @@ class EHClient:
         target_idx = -1
         clean_content = message_content.strip()
         
-        for i, entry in enumerate(self.unified_history):
+        # Search from the end for the message content (B-7)
+        for i in range(len(self.unified_history) - 1, -1, -1):
+            entry = self.unified_history[i]
             if clean_content in entry["content"]:
                 target_idx = i
                 break

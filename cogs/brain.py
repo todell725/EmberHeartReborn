@@ -84,6 +84,11 @@ class BrainCog(commands.Cog):
             if not is_mentioned:
                 return
         
+        # B-10: Specifically defer party/meta channels to Party Bot unless explicitly mentioned
+        reserved_channels = ["party-chat", "off-topic", "weaver-archives"]
+        if any(res in channel_name for res in reserved_channels) and not is_mentioned:
+             return
+        
         user_name = message.author.display_name
         # --- Sovereign Identity Mapping ---
         # Ensure the owner is known by their narrative name in all specialized channels
@@ -258,20 +263,18 @@ class BrainCog(commands.Cog):
                     else:
                         # Fallback to general DM profile
                         await transport.send(message.channel, content, identity_key="DM", wait=wait)
+                
+                # --- Narrative Pulse Logging (B-6) ---
+                # Log ONCE per interaction, outside the block loop
+                if len(response_text) > 50 and "weaver-archives" not in channel_name:
+                    chan_label = f"#{message.channel.name}" if hasattr(message.channel, "name") else "DMs"
+                    summary = f"{user_name} interacted in {chan_label}."
+                    if len(blocks) > 0:
+                        speakers = ", ".join(list(set([b['speaker'] for b in blocks])))
+                        summary = f"{user_name} and {speakers} discussed matters in {chan_label}."
                     
-                    # --- Narrative Pulse Logging ---
-                    # Log a summary of this interaction if it's substantial
-                    # EXCLUSION: weaver-archives is outside the campaign plot.
-                    if len(response_text) > 50 and "weaver-archives" not in channel_name:
-                        chan_label = f"#{message.channel.name}" if hasattr(message.channel, "name") else "DMs"
-                        summary = f"{user_name} interacted in {chan_label}."
-                        # If multi-speaker, mention them
-                        if len(blocks) > 0:
-                            speakers = ", ".join(list(set([b['speaker'] for b in blocks])))
-                            summary = f"{user_name} and {speakers} discussed matters in {chan_label}."
-                        
-                        from core.storage import log_narrative_event
-                        log_narrative_event(summary)
+                    from core.storage import log_narrative_event
+                    log_narrative_event(summary)
                  
             except Exception as e:
                 logger.error(f"AI Generation Failed: {e}", exc_info=True)

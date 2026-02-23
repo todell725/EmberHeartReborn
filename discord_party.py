@@ -31,7 +31,7 @@ class EmberHeartPartyBot(commands.Bot):
     async def setup_hook(self):
         # Load ONLY the party brain cog
         try:
-            await self.load_extension("cogs.brain")
+            await self.load_extension("cogs.brain_party")
             logger.info("Loaded extension: cogs.brain_party")
         except Exception as e:
             logger.error(f"Failed to load party brain: {e}", exc_info=True)

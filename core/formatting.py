@@ -97,7 +97,9 @@ def heuristic_prose_split(text: str, identities: dict) -> list:
         # Actually match(1) is exactly the name.
         
         speaker_name = matches[i].group(1)
-        content = text[start_idx:end_idx].strip()
+        # B-14: Start content after the name to avoid duplication
+        # We find where the name match actually is relative to the start_idx
+        content = text[matches[i].end():end_idx].strip()
         
         if content:
             blocks.append({
