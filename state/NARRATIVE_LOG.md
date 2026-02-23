@@ -1,5 +1,3 @@
-- [2026-02-22 14:48] The Chronicle of #dm-lyra-lamorte725 was rolled back to message 1475210774606647497.
-- [2026-02-22 14:49] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 14:50] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 14:53] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 14:54] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
@@ -48,3 +46,5 @@
 - [2026-02-22 22:17] King Kaelrath and Vorenus of the Gilded Coast discussed matters in #dm-weaver-lamorte725.
 - [2026-02-22 22:18] King Kaelrath and DM chatted in #off-topic.
 - [2026-02-22 22:18] King Kaelrath and DM chatted in #off-topic.
+- [2026-02-23 02:33] King Kaelrath and Silvara, Vaelis Thorne, Mareth chatted in #party-chat.
+- [2026-02-23 04:58] King Kaelrath and Talmarr chatted in #party-chat.

@@ -1,0 +1,215 @@
+{
+    "last_rotation": "2026-02-23T04:55:27.164070",
+    "items": [
+        {
+            "name": "Mask of the Beast",
+            "type": "Wondrous",
+            "cost": "3780 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Mask of the Beast. Rarity: Uncommon."
+        },
+        {
+            "name": "Instrument of Scribing",
+            "type": "Wondrous",
+            "cost": "594 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Instrument of Scribing. Rarity: Common."
+        },
+        {
+            "name": "Scroll of Sovereign Glue",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Wand of Magic Missiles",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Dwarven Boozehound\u2019s Backpack",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Witch Bolt",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Spell"
+        },
+        {
+            "name": "Cloak of Protection",
+            "type": "Wondrous",
+            "cost": "1000 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Cloak of Protection. Rarity: Common."
+        },
+        {
+            "name": "Scroll of Arcane Cannon",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Foxfire Charm",
+            "type": "Wondrous",
+            "cost": "558 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Foxfire Charm. Rarity: Common."
+        },
+        {
+            "name": "Scroll of Forecaster\u2019s Cloak",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Oil of Etherealness",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Broom of Flying",
+            "type": "Wondrous",
+            "cost": "1000 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Broom of Flying. Rarity: Common."
+        },
+        {
+            "name": "Armor of the Fallen",
+            "type": "Armor",
+            "cost": "3911 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Armor of the Fallen. Rarity: Uncommon."
+        },
+        {
+            "name": "Great Owl\u2019s Shroud",
+            "type": "Wondrous",
+            "cost": "3044 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Great Owl\u2019s Shroud. Rarity: Uncommon."
+        },
+        {
+            "name": "Scroll of Horatio\u2019s Impossible Ship in a Bottle",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Lightning Bolt",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Spell"
+        },
+        {
+            "name": "Star-Wood Longbow",
+            "type": "Weapon",
+            "cost": "200 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Made from the resilient wood of old-growth star-oaks."
+        },
+        {
+            "name": "Scroll of Myceliaweave Armor",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Harkon's Bite",
+            "type": "Wondrous",
+            "cost": "3070 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Harkon's Bite. Rarity: Uncommon."
+        },
+        {
+            "name": "Gauntlets of Ogre Power",
+            "type": "Wondrous",
+            "cost": "1000 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Gauntlets of Ogre Power. Rarity: Common."
+        },
+        {
+            "name": "Scroll of Headdress of the Serpent King",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Hat of Disguise",
+            "type": "Wondrous",
+            "cost": "3765 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Hat of Disguise. Rarity: Uncommon."
+        },
+        {
+            "name": "Scroll of Calm Emotions",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Spell"
+        },
+        {
+            "name": "Ball of Wild Earth",
+            "type": "Wondrous",
+            "cost": "582 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Ball of Wild Earth. Rarity: Common."
+        },
+        {
+            "name": "Scroll of Whirling Weapons",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Tome of Clear Thought",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Adamantine Armor",
+            "type": "Armor",
+            "cost": "1000 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Adamantine Armor. Rarity: Common."
+        },
+        {
+            "name": "Scroll of Arista, Wand of the Spire",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Gusting Blowgun",
+            "type": "Weapon",
+            "cost": "3091 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Gusting Blowgun. Rarity: Uncommon."
+        },
+        {
+            "name": "Displacer Shroud",
+            "type": "Cloak",
+            "cost": "5000 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "A cloak that bends light. Grants Displace (1x/day) and Stealth Bonus."
+        }
+    ]
+}

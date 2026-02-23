@@ -41,6 +41,8 @@ class EHClient:
         self.github_client = self.providers["github_client"]
         self.openai_client = self.providers["openai_client"]
         self.model_ollama = self.providers["model_ollama"]
+        self.model_ollama_rp = self.providers.get("model_ollama_rp")
+        self.model_ollama_reasoning = self.providers.get("model_ollama_reasoning")
         self.model_github = self.providers["model_github"]
         self.model_openai = self.providers["model_openai"]
         self.model_gemini = self.providers["model_gemini"]
@@ -315,22 +317,26 @@ class EHClient:
         logger.info(f"JSON response received from Ollama ({self.model_ollama})")
         return reply
 
-    def chat(self, message: str) -> str:
+    def chat(self, message: str, model_type: str = "general") -> str:
         """
-        Unified chat with priority fallback:
-          1. Ollama (local Llama — primary)
-          2. GitHub Models (cloud)
-          3. Gemini (cloud)
-          4. OpenAI (cloud)
+        Unified chat with priority fallback and model_type routing.
+        model_type can be: "general", "rp", "reasoning"
         """
         errors = []
 
         if self.ollama_client:
+            # Determine which Ollama model to use
+            target_model = self.model_ollama
+            if model_type == "rp" and self.model_ollama_rp:
+                target_model = self.model_ollama_rp
+            elif model_type == "reasoning" and self.model_ollama_reasoning:
+                target_model = self.model_ollama_reasoning
+
             try:
-                return self._chat_openai_compatible(self.ollama_client, self.model_ollama, message, "Ollama")
+                return self._chat_openai_compatible(self.ollama_client, target_model, message, "Ollama")
             except Exception as e:
-                errors.append(f"Ollama: {e}")
-                logger.error(f"Ollama failed. Details: {e}", exc_info=True)
+                errors.append(f"Ollama ({target_model}): {e}")
+                logger.error(f"Ollama failed for {target_model}. Details: {e}", exc_info=True)
                 time.sleep(0.5)  # Brief jitter before fallback
 
         if self.github_client:

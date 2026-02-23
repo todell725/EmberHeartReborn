@@ -22,6 +22,8 @@ def get_keys():
     return {
         "OLLAMA_BASE_URL": os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434/v1"),
         "OLLAMA_MODEL": os.environ.get("OLLAMA_MODEL", "llama3.1:8b"),
+        "OLLAMA_MODEL_RP": os.environ.get("OLLAMA_MODEL_RP", "mythomax_13b_rp:latest"),
+        "OLLAMA_MODEL_REASONING": os.environ.get("OLLAMA_MODEL_REASONING", "deepseek-r1:14b"),
         "GEMINI": os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY", ""),
         "OPENAI": os.environ.get("OPENAI_API_KEY", ""),
         "GITHUB": os.environ.get("GITHUB_TOKEN", "")
@@ -37,6 +39,8 @@ def initialize_providers(model_gemini="gemini-2.0-flash", model_openai="gpt-4o",
         "gemini_chat": None,
         "gemini_model": None,
         "model_ollama": keys["OLLAMA_MODEL"],
+        "model_ollama_rp": keys["OLLAMA_MODEL_RP"],
+        "model_ollama_reasoning": keys["OLLAMA_MODEL_REASONING"],
         "model_openai": model_openai,
         "model_github": model_github,
         "model_gemini": model_gemini,

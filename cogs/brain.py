@@ -143,7 +143,12 @@ class BrainCog(commands.Cog):
 
                 full_message = f"{channel_context}\n\n{user_name}: {text}" if channel_context else f"{user_name}: {text}"
                 
-                response_text = client.chat(full_message)
+                # B-17: Route to specialized models (RP for characters, Reasoning for Weaver)
+                m_type = "rp"
+                if "weaver-archives" in channel_name:
+                    m_type = "reasoning"
+
+                response_text = client.chat(full_message, model_type=m_type)
                 
                 # --- Unified Speaker Parsing ---
                 # We always parse speaker blocks to catch "hallucinated" extra NPCs or narrator tags
