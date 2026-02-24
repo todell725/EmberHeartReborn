@@ -1,9 +1,8 @@
 import json
 import logging
 import random
-from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, List
 from core.config import ROOT_DIR, DB_DIR
 
 logger = logging.getLogger("EH_Slayer")
@@ -49,7 +48,8 @@ class SlayerEngine:
                 task_copy = dict(task)
                 task_copy['start_time'] = task_copy['start_time'].isoformat()
                 formatted[str(cid)] = task_copy
-            self.active_path.write_text(json.dumps(formatted, indent=4), encoding='utf-8')
+            from core.storage import save_json
+            save_json("SLAYER_ACTIVE.json", formatted)
         except Exception as e:
             logger.error(f"Failed to save active slayer tasks: {e}")
 

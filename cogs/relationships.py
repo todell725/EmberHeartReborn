@@ -1,9 +1,5 @@
-import discord
 from discord.ext import commands
 import logging
-import json
-from core.config import DB_DIR
-from core.routing import require_channel
 
 logger = logging.getLogger("Cog_Relationships")
 

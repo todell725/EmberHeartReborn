@@ -1,12 +1,8 @@
-import discord
 from discord.ext import commands
 import logging
-import json
 import random
-from core.config import ROOT_DIR, DB_DIR
 from engines.combat_engine import CombatTracker
 from core.routing import require_channel
-from core.transport import TransportAPI
 
 logger = logging.getLogger("Cog_Combat")
 

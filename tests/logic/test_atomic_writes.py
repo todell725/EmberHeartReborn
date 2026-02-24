@@ -1,7 +1,5 @@
 import sys
-import os
 import json
-import time
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
@@ -29,7 +27,7 @@ def test_atomic_writes():
         pass
     
     # 4. Check for leftover .tmp files again (B-4 cleanup check)
-    tmp_files = list(DB_DIR.glob(f"*.tmp"))
+    tmp_files = list(DB_DIR.glob("*.tmp"))
     assert len(tmp_files) == 0, f"Found leaked tmp files after crash: {tmp_files}"
     
     print("Atomic write test PASSED")

@@ -1,6 +1,5 @@
 import json
 import logging
-from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional
 from core.config import ROOT_DIR, DB_DIR
@@ -50,9 +49,11 @@ class ForgeEngine:
             return False, "Forge is already busy in this channel."
         
         # 1. Load All Potential Inventories
+        if not self.settlement_path.exists():
+            return False, "Settlement state not found. Run `!owner setup` first."
         settlement_data = json.loads(self.settlement_path.read_text(encoding='utf-8'))
-        equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8'))
-        party_data = json.loads(self.party_state_path.read_text(encoding='utf-8'))
+        equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8')) if self.party_equip_path.exists() else {"party_equipment": {}}
+        party_data = json.loads(self.party_state_path.read_text(encoding='utf-8')) if self.party_state_path.exists() else {"party": []}
         
         if not force:
             # Check Kingdom Resources (Ore/Metal)
@@ -131,9 +132,12 @@ class ForgeEngine:
 
         # Award Item
         # Kaelrath is PC-01
-        equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8'))
-        inventory = equip_data["party_equipment"]["PC-01"]["inventory"]
+        equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8')) if self.party_equip_path.exists() else {"party_equipment": {}}
+        pe = equip_data.get("party_equipment", {})
+        pc01 = pe.setdefault("PC-01", {})
+        inventory = pc01.setdefault("inventory", [])
         inventory.append(proj['name'])
+        equip_data["party_equipment"] = pe
         from core.storage import save_json
         save_json(self.party_equip_path.name, equip_data)
 

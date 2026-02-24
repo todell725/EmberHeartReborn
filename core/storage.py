@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 from datetime import datetime
 
-from core.config import DB_DIR, ROOT_DIR, CHARACTERS_DIR
+from .config import DB_DIR, ROOT_DIR, CHARACTERS_DIR
 
 BACKUP_DIR = ROOT_DIR / "backups"
 
@@ -67,7 +67,7 @@ def save_character_state(char_id: str, state: dict):
     finally:
         if temp_path.exists():
             try: os.remove(temp_path)
-            except: pass
+            except Exception: pass
 
 def save_character_profile(char_id: str, profile: dict):
     """Atomically saves static profile data for a specific character."""
@@ -98,7 +98,7 @@ def save_character_profile(char_id: str, profile: dict):
     finally:
         if temp_path.exists():
             try: os.remove(temp_path)
-            except: pass
+            except Exception: pass
 
 def load_all_character_profiles() -> list:
     """Utility to load all character profiles from the characters/ directory."""
@@ -168,7 +168,7 @@ def save_json(filename: str, data: dict | list):
     except Exception as e:
         # On network shares, sometimes mkdir fails despite folder existing or permissions being wonky
         if not DB_DIR.exists():
-            print(f"⚠️ Warning: Failed to create DB_DIR {DB_DIR}: {e}")
+            print(f"âš ï¸ Warning: Failed to create DB_DIR {DB_DIR}: {e}")
     
     path = DB_DIR / filename
     # Use UUID in temp file to ensure thread-safety during concurrent writes
@@ -180,8 +180,8 @@ def save_json(filename: str, data: dict | list):
             json.dump(data, f, indent=4)
             
         # Atomic replace with retry for Windows file locking
-        max_retries = 5
-        retry_delay = 0.2  # seconds
+        max_retries = 3
+        retry_delay = 0.02  # B-19 Fix: 20ms delay instead of 200ms exponential
         
         for i in range(max_retries):
             try:
@@ -195,12 +195,10 @@ def save_json(filename: str, data: dict | list):
                     print(f"❌ Final attempt failed to save {filename}: {e}")
                     raise
                 time.sleep(retry_delay)
-                # exponential backoff
-                retry_delay *= 2
     finally:
         if temp_path.exists():
             try: os.remove(temp_path)
-            except: pass
+            except Exception: pass
 
 def load_conversations() -> dict:
     """Loads all active conversation histories with corruption protection."""
@@ -212,13 +210,13 @@ def load_conversations() -> dict:
         with open(path, 'r', encoding='utf-8') as f:
             return json.load(f)
     except json.JSONDecodeError as e:
-        print(f"⚠️ Corruption detected in CONVERSATIONS.json: {e}")
+        print(f"âš ï¸ Corruption detected in CONVERSATIONS.json: {e}")
         backup_path = path.with_suffix('.corrupt.bak')
         try:
             os.replace(path, backup_path)
-            print(f"🔄 Corrupted file moved to {backup_path}. Starting fresh.")
+            print(f"ðŸ”„ Corrupted file moved to {backup_path}. Starting fresh.")
         except Exception as e2:
-            print(f"❌ Failed to move corrupted file: {e2}")
+            print(f"âŒ Failed to move corrupted file: {e2}")
         return {}
 
 def save_conversations(data: dict):
@@ -260,7 +258,7 @@ def backup_state():
             shutil.copy2(src, backup_folder / filename)
             backed_up += 1
     
-    print(f"✅ Backed up {backed_up} state files and character directory to {backup_folder}")
+    print(f"âœ… Backed up {backed_up} state files and character directory to {backup_folder}")
     return backup_folder
 
 def log_narrative_event(event_text: str):
@@ -296,7 +294,7 @@ def log_narrative_event(event_text: str):
                 break
             except PermissionError:
                 if i == max_retries - 1:
-                    print(f"FAILED to save Narrative Log: Access Denied")
+                    print("FAILED to save Narrative Log: Access Denied")
                     raise
                 time.sleep(0.5 * (i + 1))
             except Exception as e:
@@ -305,4 +303,5 @@ def log_narrative_event(event_text: str):
     finally:
         if temp_path.exists():
             try: os.remove(temp_path)
-            except: pass
+            except Exception: pass
+

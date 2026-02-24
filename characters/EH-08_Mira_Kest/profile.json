@@ -3,9 +3,9 @@
   "name": "Mira Kest",
   "race": "Human",
   "role": "Miner",
-  "avatar_url": "https://cdn.discordapp.com/attachments/1473540819146244218/1474255101953703968/image0.jpg?ex=69992e8e&is=6997dd0e&hm=712d98f37ec03209e0bf4ee48082da5445328089f489a7bc383311dc4c4ee028&",
+  "avatar_url": "./Mira Kest.png",
   "description": "A sturdy woman with muscular arms and a face like weathered stone. Her hair is cut into a practical, jagged bob and is always dusted with grey limestone powder. She wears heavy, reinforced boots and a thick leather apron that is stained with thermal-fluid. Her eyes are sharp and suspicious. She carries a heavy sledgehammer and a cluster of arcanotech sensors that pulse with a faint, rhythmic green light.",
-  "bio": "Mira is known for her 'Heat-Sense'—an ability to feel the temperature-shifts in the stone before steam-vents rupture. She is a survivor of three major collapses and has little patience for the inexperienced. She often works alone in the outlier shafts, claiming she 'prefers the silence of the earth to the chatter of the council'.",
+  "bio": "Mira is known for her 'Heat-Sense'\u2014an ability to feel the temperature-shifts in the stone before steam-vents rupture. She is a survivor of three major collapses and has little patience for the inexperienced. She often works alone in the outlier shafts, claiming she 'prefers the silence of the earth to the chatter of the council'.",
   "motivation": "Surviving the day and making sure the ventilation shafts remain clear of 'Shade-Clots'.",
   "secret": "Saw movement in steam vents."
 }

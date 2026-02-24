@@ -1,4 +1,4 @@
-import re
+﻿import re
 
 def sanitize_text(text: str) -> str:
     """Clean up 'smart' characters and common encoding artifacts for logs and Discord."""
@@ -72,8 +72,8 @@ def heuristic_prose_split(text: str, identities: dict) -> list:
     # 2. Find all indices where a Name starts a sentence
     name_pattern = "|".join([re.escape(n) for n in names])
     # Match Start OR (Punctuation/Quotes/Asterisks + Space) followed by a Name
-    # We allow [.!?] followed by optional quotes [\"'”’] or asterisks [*]
-    split_pattern = rf'(?:^|[.!?]["\'”’*]*\s+)({name_pattern})\b'
+    # We allow [.!?] followed by optional quotes [\"'â€â€™] or asterisks [*]
+    split_pattern = rf'(?:^|[.!?]["\'â€â€™*]*\s+)({name_pattern})\b'
     
     matches = list(re.finditer(split_pattern, text))
     if not matches:
@@ -90,7 +90,6 @@ def heuristic_prose_split(text: str, identities: dict) -> list:
         })
 
     for i in range(len(matches)):
-        start_idx = matches[i].start(1) # Start of the name itself
         end_idx = matches[i+1].start() if i + 1 < len(matches) else len(text)
         
         # Adjust start_idx back if the prefix (punctuation) was part of the match
@@ -98,7 +97,7 @@ def heuristic_prose_split(text: str, identities: dict) -> list:
         
         speaker_name = matches[i].group(1)
         # B-14: Start content after the name to avoid duplication
-        # We find where the name match actually is relative to the start_idx
+        # We take content after the speaker tag to avoid name duplication
         content = text[matches[i].end():end_idx].strip()
         
         if content:

@@ -1,4 +1,3 @@
-import pytest
 from engines.slayer_engine import SlayerEngine
 
 def test_slayer_engine_init():

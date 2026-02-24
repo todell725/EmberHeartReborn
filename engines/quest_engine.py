@@ -1,6 +1,5 @@
 import logging
 import json
-from pathlib import Path
 from typing import Dict, List, Optional
 from core.config import ROOT_DIR, DB_DIR
 from engines.combat_engine import CombatTracker
@@ -101,8 +100,6 @@ class QuestEngine:
         leveled_up = []
         try:
             self.completed.add(qid.upper())
-            items = sorted([str(x) for x in self.completed if isinstance(x, str)])
-            self.completion_path.write_text(json.dumps(items, indent=4), encoding='utf-8')
 
             quest = self.get_quest(qid)
             if not quest:
@@ -138,6 +135,11 @@ class QuestEngine:
                     self.log_deed(qid, quest.get('title', qid), f"[WORLD] {effect}")
                     seen.add(effect)
 
+            # Write completion AFTER all rewards are processed (B-11)
+            from core.storage import save_json
+            items = sorted([str(x) for x in self.completed if isinstance(x, str)])
+            save_json("QUEST_COMPLETION.json", items)
+
             return leveled_up
             
         except Exception as e:
@@ -152,7 +154,7 @@ class QuestEngine:
         MUNDANE_KEYS = ["bone", "pelt", "hide", "scrap", "claw", "dust", "fang", "horn",
                         "gland", "shell", "chunk", "fragment", "nucleus", "membrane"]
         try:
-            from core.storage import load_character_state, save_character_state, load_all_character_states
+            from core.storage import save_character_state, load_all_character_states
             equip_data = json.loads(self.loot_path.read_text(encoding='utf-8')) if self.loot_path.exists() else {"party_inventory": []}
             settlement_data = json.loads(settlement_path.read_text(encoding='utf-8'))
             
@@ -164,7 +166,7 @@ class QuestEngine:
                 item_lower = item.lower()
                 
                 # Auto-Assign
-                if "Gold" in item_lower or "OU" in item:
+                if "gold" in item_lower or "ou" in item_lower:
                     try:
                         amt = int(''.join(filter(str.isdigit, item)))
                         stock = settlement_data['settlement']['stockpiles']
@@ -191,9 +193,10 @@ class QuestEngine:
                         save_character_state(target_id, target_state)
                         logger.info(f"[LOOT] '{item}' -> {target_state.get('name', 'Unknown')}'s Inventory")
                         
-            # Save shared files
-            self.loot_path.write_text(json.dumps(equip_data, indent=4), encoding='utf-8')
-            settlement_path.write_text(json.dumps(settlement_data, indent=4), encoding='utf-8')
+            # Save shared files atomically (B-01)
+            from core.storage import save_json
+            save_json(self.loot_path.name, equip_data)
+            save_json(settlement_path.name, settlement_data)
             
         except Exception as e:
             logger.error(f"Loot Sync failed: {e}", exc_info=True)

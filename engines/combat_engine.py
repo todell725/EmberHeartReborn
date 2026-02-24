@@ -1,13 +1,12 @@
 import logging
-import json
-from core.config import XP_THRESHOLDS, ROOT_DIR, DB_DIR
+from core.config import XP_THRESHOLDS
 
 logger = logging.getLogger("EH_Combat")
 
 class CombatTracker:
     def __init__(self):
         self.order = [] # List of {"name": str, "init": int, "hp": int}
-        self.current_index = 0
+        self.current_index = -1  # Start at -1 so first next_turn() advances to 0
         self.active = False
 
     def add_combatant(self, name, roll, hp):
@@ -21,7 +20,7 @@ class CombatTracker:
 
     def clear(self):
         self.order = []
-        self.current_index = 0
+        self.current_index = -1
         self.active = False
 
     def add_party_xp(self, xp: int, target_ids: list = None) -> list[tuple]:

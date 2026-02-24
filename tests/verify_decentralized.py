@@ -1,11 +1,10 @@
 import sys
 from pathlib import Path
-import json
 
 ROOT = Path(r"z:\DnD\EmberHeartReborn")
 sys.path.append(str(ROOT))
 
-from core.storage import resolve_character, load_character_profile, load_character_state
+from core.storage import resolve_character
 from core.ai.rag import WorldContextManager
 
 def test_character_resolution():

@@ -1,6 +1,5 @@
 import json
 from pathlib import Path
-import re
 
 history_path = Path(r"z:\DnD\EmberHeartReborn\state\CONVERSATIONS.json")
 

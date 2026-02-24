@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import logging
 from engines.quest_engine import QuestEngine
-from core.routing import require_channel_strict
 
 logger = logging.getLogger("Cog_Quests")
 

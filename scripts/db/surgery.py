@@ -27,6 +27,6 @@ try:
     engine.completed.add("DIAGNOSTIC_TEST")
     print(f"Dump after add: {json.dumps(list(engine.completed))}")
     
-except Exception as e:
+except Exception:
     import traceback
     traceback.print_exc()

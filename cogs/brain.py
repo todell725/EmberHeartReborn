@@ -1,13 +1,12 @@
 import os
 import asyncio
-import re
 import logging
 import discord
 from discord.ext import commands
 from pathlib import Path
 
 from core.transport import transport
-from core.config import IDENTITIES
+from core.config import IDENTITIES, list_identity_roster, normalize_identity_id, resolve_identity
 from core.formatting import parse_speaker_blocks, IGNORE_SPEAKERS, strip_god_moding
 
 # Import the refactored AI Core we built in Phase 1
@@ -19,6 +18,18 @@ from ai.client import EHClient
 
 logger = logging.getLogger("Cog_Brain")
 ALLOWED_CHANNEL_ID = os.getenv("DISCORD_ALLOWED_CHANNEL_ID")
+AI_CALL_TIMEOUT_SECONDS = float(os.getenv("AI_CALL_TIMEOUT_SECONDS", "130"))
+
+SCENE_JSON_SCHEMA = """
+### RESPONSE FORMAT (MANDATORY):
+You MUST respond with a valid JSON array and NOTHING ELSE.
+Schema: [{"speaker_id": "EH-01", "speaker": "Marta Hale", "content": "Their dialogue or action text"}]
+- Include 1-3 speakers who naturally fit the channel and moment.
+- NEVER include King Kaelrath as a speaker.
+- `speaker_id` is REQUIRED for each block and must come from the allowed roster in context.
+- `speaker` must match the canonical name for that ID.
+- Do NOT invent IDs.
+"""
 
 class MultiChannelBrain:
     def __init__(self):
@@ -54,12 +65,105 @@ class BrainCog(commands.Cog):
             "Population", "Structural Integrity", "Morale"
         }
 
+        # Shared ID-lock roster for non-party multi-speaker channels.
+        self.scene_roster = list_identity_roster(prefixes={"EH", "PC", "DM"}, exclude_ids={"PC-01"})
+        self.scene_roster_text = "\n".join([f"- {r['id']}: {r['name']}" for r in self.scene_roster])
+
+    def _build_scene_id_context(self, channel_name: str, target_npc: str) -> str:
+        """Inject ID roster so AI can emit speaker_id deterministically."""
+        target_token, target_name, target_id = resolve_identity(speaker=target_npc or "", speaker_id="")
+
+        if target_id:
+            return (
+                "[ID LOCK]\n"
+                f"Allowed speaker for this turn:\n- {target_id}: {target_name}\n"
+                "Return exactly 1 block for that speaker_id."
+            )
+
+        # Rumor mill is a synthetic identity without numeric ID. Keep name-lock fallback.
+        if target_token and not target_id:
+            return (
+                "[ID LOCK]\n"
+                f"You are speaking as: {target_name}.\n"
+                "If no numeric ID exists, keep speaker name exact and consistent."
+            )
+
+        roster = self.scene_roster_text
+        if not roster:
+            roster = "- EH-01: Marta Hale"
+
+        return (
+            "[ID LOCK]\n"
+            "Use ONLY speaker_id values from this roster:\n"
+            f"{roster}\n"
+            "Every block must include speaker_id + matching speaker name."
+        )
+
+    def _normalize_json_blocks(self, blocks: list, user_name: str, display_name: str, target_npc: str, channel_name: str) -> list:
+        """Normalize parsed blocks to canonical names/IDs and enforce ID-lock rules."""
+        normalized = []
+        restricted_speakers = {str(s).lower() for s in (IGNORE_SPEAKERS | {user_name, display_name})}
+        sovereign_names = {"kaelrath", "king kaelrath", "the king", "sovereign", "king"}
+
+        target_token, target_name, target_id = resolve_identity(speaker=target_npc or "", speaker_id="")
+        target_name_low = str(target_name or "").strip().lower()
+
+        for raw in blocks:
+            raw_speaker = str(raw.get("speaker", "")).strip()
+            raw_content = str(raw.get("content", "")).strip()
+            if not raw_content:
+                continue
+
+            raw_id = raw.get("speaker_id") or raw.get("identity_id") or raw.get("id") or ""
+            parsed_id = normalize_identity_id(str(raw_id))
+            if not parsed_id:
+                parsed_id = normalize_identity_id(raw_speaker)
+
+            token, canonical_name, canonical_id = resolve_identity(speaker=raw_speaker, speaker_id=parsed_id)
+            speaker = canonical_name or raw_speaker
+            speaker_low = speaker.lower()
+
+            if speaker_low in restricted_speakers or speaker_low in sovereign_names or canonical_id == "PC-01":
+                continue
+
+            # For ID-lock parity, non-weaver multi-speaker output must resolve to a numeric ID.
+            # Synthetic identities (e.g., Rumor Mill) are exempt if explicitly targeted.
+            if not canonical_id:
+                if not (target_token and not target_id and target_name_low and speaker_low == target_name_low):
+                    logger.info("ID-LOCK skip unresolved speaker '%s' in #%s", raw_speaker, channel_name)
+                    continue
+
+            if target_npc:
+                if target_id and canonical_id and canonical_id != target_id:
+                    continue
+                if target_id and not canonical_id:
+                    continue
+                if not target_id and target_name_low and target_name_low != "the character you are speaking to":
+                    if speaker_low != target_name_low and target_name_low not in speaker_low and speaker_low not in target_name_low:
+                        continue
+
+            content = strip_god_moding(raw_content)
+            if not content:
+                continue
+
+            row = {
+                "speaker": speaker,
+                "content": content,
+                "identity": token,
+            }
+            if canonical_id:
+                row["speaker_id"] = canonical_id
+
+            normalized.append(row)
+
+        return normalized
+
     @commands.Cog.listener()
     async def on_message(self, message):
         # Ignore self
         if message.author == self.bot.user:
             return
-            
+
         # Ignore webhooks (so the bot doesn't talk to its own NPC impersonations)
         if message.webhook_id:
             return
@@ -78,212 +182,187 @@ class BrainCog(commands.Cog):
         is_hard_whitelist = str(message.channel.id) == ALLOWED_CHANNEL_ID
         is_mentioned = self.bot.user in message.mentions
 
-        logger.info(f"MSG: #{channel_name} ({message.channel.id}) | Whitelist: {is_named_whitelist} | Hard: {is_hard_whitelist} | Mention: {is_mentioned}")
+        logger.info(
+            f"MSG: #{channel_name} ({message.channel.id}) | Whitelist: {is_named_whitelist} | Hard: {is_hard_whitelist} | Mention: {is_mentioned}"
+        )
 
         if not (is_dm or is_named_whitelist or is_hard_whitelist):
             if not is_mentioned:
                 return
-        
-        # B-10: Specifically defer party/meta channels to Party Bot unless explicitly mentioned
+
+        # Specifically defer party/meta channels to Party Bot unless explicitly mentioned
         reserved_channels = ["party-chat", "off-topic", "weaver-archives"]
         if any(res in channel_name for res in reserved_channels) and not is_mentioned:
-             return
-        
+            return
+
         user_name = message.author.display_name
-        # --- Sovereign Identity Mapping ---
-        # Ensure the owner is known by their narrative name in all specialized channels
         is_owner = message.author.name.lower() in ["lamorte725", "todd"]
         if is_owner:
             user_name = "King Kaelrath"
-            
+
         text = message.clean_content.replace(f"@{self.bot.user.name}", "").strip()
-        
         if not text:
             return
 
-        # --- Specialized Channel Handling ---
         target_npc = None
         channel_context = ""
-        
+
         if "rumors-chat" in channel_name:
             target_npc = "RUMORS"
             channel_context = "[CHANNEL: RUMORS-CHAT] Provide rumors, hooks, or news. Be atmospheric and mysterious."
         elif "campaign-chat" in channel_name:
             channel_context = "[CHANNEL: CAMPAIGN-CHAT] Progress the main storyline and provide narrative momentum."
 
-        # --- Dynamic DM Context Injection ---
         if channel_name.startswith("dm-"):
             target_npc = (getattr(message.channel, "topic", "") or "").strip()
             if not target_npc:
                 target_npc = "the character you are speaking to"
-        
+
         # Mentions in whitelisted channels can also set target_npc for that turn
         if not target_npc and (is_named_whitelist or is_hard_whitelist):
-            # Check for mentions of NPCs in IDENTITIES
             mentioned_npcs = []
             for mention in message.mentions:
-                # Check display name and name
-                if mention.display_name in IDENTITIES or mention.name in IDENTITIES:
-                    mentioned_npcs.append(mention.display_name)
-            
-            if len(mentioned_npcs) == 1:
-                m_name = mentioned_npcs[0]
-                # Try to find the [ID] version for better prompt lookup
-                match = next((k for k in IDENTITIES if isinstance(k, str) and m_name.lower() in k.lower() and "[" in k), None)
-                target_npc = match if match else m_name
+                token, canonical_name, canonical_id = resolve_identity(
+                    speaker=mention.display_name,
+                    speaker_id="",
+                )
+                if not token:
+                    token, canonical_name, canonical_id = resolve_identity(
+                        speaker=mention.name,
+                        speaker_id="",
+                    )
+                if token:
+                    mentioned_npcs.append((canonical_name, canonical_id))
 
-        # Process the chat turn
+            if len(mentioned_npcs) == 1:
+                m_name, m_id = mentioned_npcs[0]
+                target_npc = f"{m_name} [{m_id}]" if m_id else m_name
+
         async with message.channel.typing():
             try:
                 client = self.brain_manager.get_client(message.channel.id, npc_name=target_npc)
-                
-                # Special Case: Weaver Archives Meta-Awareness
-                if "weaver-archives" in channel_name:
+
+                is_weaver = "weaver-archives" in channel_name
+                if is_weaver:
                     client.apply_weaver_mode()
 
-                full_message = f"{channel_context}\n\n{user_name}: {text}" if channel_context else f"{user_name}: {text}"
-                
-                # B-17: Route to specialized models (RP for characters, Reasoning for Weaver)
-                m_type = "rp"
-                if "weaver-archives" in channel_name:
-                    m_type = "reasoning"
+                id_lock_context = "" if is_weaver else self._build_scene_id_context(channel_name, target_npc)
+                schema_context = "" if is_weaver else SCENE_JSON_SCHEMA.strip()
 
-                response_text = client.chat(full_message, model_type=m_type)
-                
-                # --- Unified Speaker Parsing ---
-                # We always parse speaker blocks to catch "hallucinated" extra NPCs or narrator tags
-                blocks = parse_speaker_blocks(response_text, IDENTITIES, self.ignore_headers)
-                
-                # Filter restricted speakers (Sovereignty Check)
-                restricted_speakers = IGNORE_SPEAKERS | {user_name, message.author.display_name}
-                logger.info(f"Raw Blocks: {[b['speaker'] for b in blocks]} | Restricted: {restricted_speakers}")
-                
-                # SPECIAL CASE: weaver-archives is transparent. We don't filter it.
-                if "weaver-archives" in channel_name:
-                    # Identity for Weaver is enforced later if blocks match, 
-                    # but we allow all blocks to pass here for meta-transparency.
-                    pass 
+                parts = [p for p in [channel_context, schema_context, id_lock_context, f"{user_name}: {text}"] if p]
+                full_message = "\n\n".join(parts)
+
+                m_type = "reasoning" if is_weaver else "rp"
+
+                if is_weaver:
+                    response_text = await asyncio.wait_for(
+                        asyncio.to_thread(client.chat, full_message, m_type),
+                        timeout=AI_CALL_TIMEOUT_SECONDS,
+                    )
+                    raw_blocks = parse_speaker_blocks(response_text, IDENTITIES, self.ignore_headers)
+                    blocks = []
+                    for b in raw_blocks:
+                        speaker = str(b.get("speaker", "")).strip()
+                        content = str(b.get("content", "")).strip()
+                        if not speaker or not content:
+                            continue
+                        identity = b.get("identity") if isinstance(b.get("identity"), dict) else None
+                        canonical_id = ""
+                        if identity:
+                            canonical_id = normalize_identity_id(identity.get("id", ""))
+                        if not identity:
+                            identity, canonical_name, canonical_id = resolve_identity(speaker=speaker, speaker_id="")
+                            if canonical_name:
+                                speaker = canonical_name
+                        row = {"speaker": speaker, "content": content, "identity": identity}
+                        if canonical_id:
+                            row["speaker_id"] = canonical_id
+                        blocks.append(row)
                 else:
-                    blocks = [b for b in blocks if b['speaker'] not in restricted_speakers]
-                
-                if target_npc:
-                    # 1-on-1 ENFORCEMENT:
-                    # If we are in a targeted DM, we only want blocks matching the target_npc.
-                    target_name = re.sub(r'\s*\[[A-Z0-9-]+\]', '', target_npc).strip().lower()
-                    character_blocks = [
-                        b for b in blocks 
-                        if target_name in b['speaker'].lower() or b['speaker'].lower() in target_name
-                    ]
-                    
-                    if character_blocks:
-                        blocks = character_blocks
-                    else:
-                        # Fallback for Weaver or DM if no specific character blocks found
-                        is_weaver = "weaver-archives" in channel_name
-                        if is_weaver:
-                             # Keep all blocks in Weaver mode
-                             pass
-                        elif len(blocks) == 1 and (blocks[0]['speaker'] == "DM" or blocks[0]['speaker'] == "Chronicle Weaver"):
-                            blocks[0]['speaker'] = target_name # Re-assign to target
-                        else:
-                            valid_blocks = [b for b in blocks if b['speaker'] not in ("DM", "Chronicle Weaver")]
-                            if valid_blocks:
-                                blocks = valid_blocks # Keep all valid NPC blocks
-                else:
-                    # PC-Only Lockdown for party-chat
-                    if "party-chat" in channel_name:
-                        allowed_pcs = {"Talmarr", "Silvara", "Mareth", "Vaelis Thorne", "Vaelis"}
-                        pc_blocks = [b for b in blocks if any(pc.lower() in b['speaker'].lower() for pc in allowed_pcs)]
-                        if pc_blocks:
-                            blocks = pc_blocks
-                        # If no PC blocks, allow DM narration as fallback so the bot isn't silent
-                        else:
-                            blocks = [b for b in blocks if b['speaker'] == "DM"]
-                
+                    response_text = await asyncio.wait_for(
+                        asyncio.to_thread(client.chat_json, full_message, m_type),
+                        timeout=AI_CALL_TIMEOUT_SECONDS,
+                    )
+                    raw_blocks = client.parse_response(response_text)
+                    blocks = self._normalize_json_blocks(
+                        raw_blocks,
+                        user_name=user_name,
+                        display_name=message.author.display_name,
+                        target_npc=target_npc,
+                        channel_name=channel_name,
+                    )
+
+                    if not blocks:
+                        salvaged = parse_speaker_blocks(response_text, IDENTITIES, self.ignore_headers)
+                        salvage_payload = [
+                            {"speaker": b.get("speaker", ""), "content": b.get("content", "")}
+                            for b in salvaged
+                        ]
+                        blocks = self._normalize_json_blocks(
+                            salvage_payload,
+                            user_name=user_name,
+                            display_name=message.author.display_name,
+                            target_npc=target_npc,
+                            channel_name=channel_name,
+                        )
+
                 if not blocks:
-                    logger.warning(f"BLOCK FILTER: No blocks survived for {channel_name}. Attempting DM Fallback.")
-                    # If everything was filtered out, check if the AI at least provided DM narration
-                    # in the original 'response_text' that we can salvage.
-                    salvaged_blocks = parse_speaker_blocks(response_text, IDENTITIES, self.ignore_headers)
-                    dm_fallback = [b for b in salvaged_blocks if b['speaker'] == "DM"]
-                    if dm_fallback:
-                        blocks = dm_fallback
-                        logger.info(f"FALLBACK: Salvaged DM narration for {channel_name}.")
-                    else:
-                        logger.warning(f"BLOCK FILTER: No blocks survived for {channel_name}. Response text: {response_text[:100]}...")
-                        return # No valid dialogue generated
+                    logger.warning(f"BLOCK FILTER: No blocks survived for {channel_name}. Response text: {response_text[:100]}...")
+                    return
 
-                # --- Auto-Targeting & Narrator Suppression (Phase 10 Extension) ---
-                if not target_npc and "off-topic" in channel_name:
-                    # If we have NPC dialogue + DM narration, drop the narration to stay in character
-                    npc_blocks = [b for b in blocks if not any(x in b['speaker'] for x in ["DM", "Chronicle", "Weaver"])]
-                    if npc_blocks:
-                        # Suppress the narrator if there is actual character dialogue in off-topic
-                        blocks = npc_blocks
-                    
-                    # If only one NPC is left, treat it as a "Soft Target" for display cleaning
-                    if len(blocks) == 1:
-                        target_npc = blocks[0]['speaker']
-                    
                 for idx, block in enumerate(blocks):
-                    speaker_name = block["speaker"]
-                    identity = block["identity"]
-                    content = strip_god_moding(block["content"])
-                    
+                    speaker_name = str(block.get("speaker", "")).strip()
+                    content = strip_god_moding(str(block.get("content", "")).strip())
+                    identity = block.get("identity") if isinstance(block.get("identity"), dict) else None
+
                     if not content:
-                        continue # Entire sentence was god-moding
-                    
-                    # 1-on-1 Mode Override: Force identity if we know who we are talking to
-                    if target_npc:
-                        # Try to resolve identity once for the whole message
-                        id_match = re.search(r'\[([A-Z0-9-]+)\]', target_npc)
-                        token = None
-                        if id_match and id_match.group(1) in IDENTITIES:
-                            token = IDENTITIES[id_match.group(1)]
-                        
-                        if not token:
-                            clean_name = re.sub(r'\s*\[[A-Z0-9-]+\]', '', target_npc).strip()
-                            match_key = next((k for k in IDENTITIES if isinstance(k, str) and k.lower() == clean_name.lower()), None)
-                            token = IDENTITIES[match_key] if match_key else None
-                            
-                        if token:
-                            identity = token
-                            display_name = re.sub(r'\s*\[[A-Z0-9-]+\]', '', token["name"]).strip()
-                            speaker_name = display_name
-                    
-                    # The last block shouldn't 'wait' so the next user msg isn't bottlenecked
-                    wait = (idx < len(blocks) - 1)
-                    
+                        continue
+
+                    if not identity:
+                        identity, canonical_name, canonical_id = resolve_identity(
+                            speaker=speaker_name,
+                            speaker_id=block.get("speaker_id", ""),
+                        )
+                        if canonical_name:
+                            speaker_name = canonical_name
+                        if canonical_id:
+                            block["speaker_id"] = canonical_id
+
+                    wait = idx < len(blocks) - 1
+
                     if identity:
-                        # Use dedicated NPC webhook if identity exists
                         await transport.send_as_npc(
                             message.channel,
                             npc_name=speaker_name,
                             content=content,
                             avatar_url=identity.get("avatar"),
-                            wait=wait
+                            wait=wait,
                         )
                         if wait:
-                            await asyncio.sleep(0.75) # Ensure message ordering
+                            await asyncio.sleep(0.75)
                     else:
-                        # Fallback to general DM profile
                         await transport.send(message.channel, content, identity_key="DM", wait=wait)
-                
-                # --- Narrative Pulse Logging (B-6) ---
-                # Log ONCE per interaction, outside the block loop
+
                 if len(response_text) > 50 and "weaver-archives" not in channel_name:
                     chan_label = f"#{message.channel.name}" if hasattr(message.channel, "name") else "DMs"
                     summary = f"{user_name} interacted in {chan_label}."
                     if len(blocks) > 0:
-                        speakers = ", ".join(list(set([b['speaker'] for b in blocks])))
+                        speakers = ", ".join(list(set([b["speaker"] for b in blocks if b.get("speaker")])))
                         summary = f"{user_name} and {speakers} discussed matters in {chan_label}."
-                    
+
                     from core.storage import log_narrative_event
                     log_narrative_event(summary)
-                 
+
+            except asyncio.TimeoutError:
+                logger.error(
+                    "AI Generation timed out after %.1fs in #%s",
+                    AI_CALL_TIMEOUT_SECONDS,
+                    channel_name,
+                )
+                await message.channel.send("The Chronicle is taking too long to answer. Try again in a moment.")
             except Exception as e:
                 logger.error(f"AI Generation Failed: {e}", exc_info=True)
-                await message.channel.send(f"❌ *A temporal anomaly disrupts the Chronicle...* ({e})")
+                await message.channel.send(f"A temporal anomaly disrupts the Chronicle... ({e})")
 
     @commands.command(name="clear", aliases=["reset"])
     async def clear(self, ctx, message_id: int = None):
@@ -299,7 +378,7 @@ class BrainCog(commands.Cog):
                 try:
                     target_msg = await ctx.channel.fetch_message(message_id)
                 except discord.NotFound:
-                    await transport.send(ctx.channel, f"❌ **Error:** Message `{message_id}` not found in this channel.", identity_key="DM")
+                    await transport.send(ctx.channel, f"**Error:** Message `{message_id}` not found in this channel.", identity_key="DM")
                     return
 
                 # 2. Priority Discord Purge: Delete everything AFTER the target message
@@ -310,10 +389,10 @@ class BrainCog(commands.Cog):
                 # Attempt rollback using content matching
                 success = client.rollback_to_id(message_id, target_msg.content)
                 
-                status_msg = f"⏳ **Chronicle Rolled Back:** Discord history cleared after `{message_id}` ({len(deleted)} messages)."
+                status_msg = f"**Chronicle Rolled Back:** Discord history cleared after `{message_id}` ({len(deleted)} messages)."
                 
                 if success:
-                    status_msg += "\n✅ AI internal memory successfully synced with rollback."
+                    status_msg += "\nAI internal memory successfully synced with rollback."
                 else:
                     # FALLBACK: If rollback failed, rebuild from the remaining history
                     # We fetch last 10 messages (including the target message)
@@ -325,7 +404,7 @@ class BrainCog(commands.Cog):
                     # Reverse to chronological
                     messages.reverse()
                     client.rebuild_from_messages(messages)
-                    status_msg += f"\n🔄 AI memory resynced by rebuilding context from the last {len(messages)} surviving messages."
+                    status_msg += f"\nAI memory resynced by rebuilding context from the last {len(messages)} surviving messages."
                 
                 from core.storage import log_narrative_event
                 log_narrative_event(f"The Chronicle of {channel_label} was rolled back to message {message_id}.")
@@ -336,11 +415,11 @@ class BrainCog(commands.Cog):
                 self.brain_manager.reset_client(channel_id)
                 from core.storage import log_narrative_event
                 log_narrative_event(f"The Chronicle's local memory of {channel_label} was reset.")
-                await transport.send(ctx.channel, f"🧹 **Memory Cleared:** The AI's local context for {channel_label} has been wiped.", identity_key="DM")
+                await transport.send(ctx.channel, f"**Memory Cleared:** The AI's local context for {channel_label} has been wiped.", identity_key="DM")
                 
         except Exception as e:
             logger.error(f"Clear command error: {e}", exc_info=True)
-            await transport.send(ctx.channel, f"❌ Error during clear: {e}")
+            await transport.send(ctx.channel, f"Error during clear: {e}")
 
     @commands.command(name="refresh")
     async def refresh(self, ctx, limit: int = 10):
@@ -365,10 +444,10 @@ class BrainCog(commands.Cog):
                 from core.storage import log_narrative_event
                 log_narrative_event(f"The Chronicle of {channel_label} was refreshed from channel history.")
                 
-                await transport.send(ctx.channel, f"🧘 **Context Refreshed:** History rebuilt from the last {len(messages)} messages.", identity_key="DM")
+                await transport.send(ctx.channel, f"**Context Refreshed:** History rebuilt from the last {len(messages)} messages.", identity_key="DM")
         except Exception as e:
             logger.error(f"Refresh command error: {e}", exc_info=True)
-            await transport.send(ctx.channel, f"❌ Error during refresh: {e}")
+            await transport.send(ctx.channel, f"Error during refresh: {e}")
 
     @commands.command(name="pulse")
     async def pulse(self, ctx, *, manual_event: str = None):
@@ -380,18 +459,18 @@ class BrainCog(commands.Cog):
             if manual_event:
                 log_narrative_event(f"MANUAL: {manual_event}")
                 from core.transport import transport
-                await transport.send(channel, f"📜 **Chronicle Updated:** Recorded manual entry.", identity_key="DM")
+                await transport.send(channel, "**Chronicle Updated:** Recorded manual entry.", identity_key="DM")
                 return
 
             log_path = DB_DIR / "NARRATIVE_LOG.md"
             if not log_path.exists():
-                await transport.send(channel, "🔍 **Narrative Pulse is silent.** No global events recorded yet.", identity_key="DM")
+                await transport.send(channel, "**Narrative Pulse is silent.** No global events recorded yet.", identity_key="DM")
                 return
                 
             lines = log_path.read_text(encoding='utf-8').splitlines()
             recent = lines[-5:]
             
-            msg = ["**📜 Global Narrative Pulse (Latest Events)**"]
+            msg = ["**Global Narrative Pulse (Latest Events)**"]
             msg.extend(recent)
             msg.append("\n*The Chronicle remains synchronized across all channels.*")
             
@@ -399,7 +478,7 @@ class BrainCog(commands.Cog):
             await transport.send(channel, "\n".join(msg), identity_key="DM")
         except Exception as e:
             from core.transport import transport
-            await transport.send(channel, f"❌ Error checking pulse: {e}")
+            await transport.send(channel, f"Error checking pulse: {e}")
 
 async def setup(bot):
     await bot.add_cog(BrainCog(bot))

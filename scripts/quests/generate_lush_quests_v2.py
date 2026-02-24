@@ -1,5 +1,4 @@
 import json
-import sys
 
 # The quest content is effectively the same as previous script
 # [Omitted for brevity in thought, but included in full in the actual tool call]

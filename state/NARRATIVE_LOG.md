@@ -1,11 +1,3 @@
-- [2026-02-22 14:50] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
-- [2026-02-22 14:53] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
-- [2026-02-22 14:54] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
-- [2026-02-22 14:55] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
-- [2026-02-22 14:57] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
-- [2026-02-22 14:58] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
-- [2026-02-22 15:00] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
-- [2026-02-22 15:01] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
 - [2026-02-22 15:02] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
 - [2026-02-22 15:04] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 15:07] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
@@ -48,3 +40,11 @@
 - [2026-02-22 22:18] King Kaelrath and DM chatted in #off-topic.
 - [2026-02-23 02:33] King Kaelrath and Silvara, Vaelis Thorne, Mareth chatted in #party-chat.
 - [2026-02-23 04:58] King Kaelrath and Talmarr chatted in #party-chat.
+- [2026-02-23 05:24] King Kaelrath and Mareth chatted in #party-chat.
+- [2026-02-23 05:29] King Kaelrath and Talmarr, Silvara, Mareth chatted in #party-chat.
+- [2026-02-23 05:29] King Kaelrath and Talmarr, Silvara, Mareth chatted in #party-chat.
+- [2026-02-23 05:36] King Kaelrath and Talmarr [EH-04], Silvara [EH-02], Mareth [EH-05] chatted in #party-chat.
+- [2026-02-23 05:36] King Kaelrath and Talmarr [EH-01], Silvara [EH-02], Mareth [EH-03] chatted in #party-chat.
+- [2026-02-23 05:41] King Kaelrath and ilyra thornveil discussed matters in #dm-lyra-lamorte725.
+- [2026-02-23 15:34] King Kaelrath and Talmarr, Silvara "Silvy", Mareth chatted in #party-chat.
+- [2026-02-23 15:34] King Kaelrath and Talmarr, Silvara "Silvy", Mareth chatted in #party-chat.

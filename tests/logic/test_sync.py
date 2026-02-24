@@ -1,4 +1,4 @@
-import json
+﻿import json
 from pathlib import Path
 
 # Mock ROOT_DIR
@@ -11,7 +11,6 @@ party_path = ROOT_DIR / "EmberHeart" / "docs" / "PARTY_STATE.json"
 
 def test_sync():
     print("--- Testing Reward Sync Logic ---")
-    qid = "SQ-01"
     xp = 750
     loot_list = ["Shard of Void-Glass", "150 Gold"]
     

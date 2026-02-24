@@ -16,7 +16,7 @@ except ImportError:
 logger = logging.getLogger("EH_Brain")
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
-load_dotenv(ROOT_DIR / ".env")
+load_dotenv(ROOT_DIR / ".env", override=True)
 
 def get_keys():
     return {
@@ -48,14 +48,14 @@ def initialize_providers(model_gemini="gemini-2.0-flash", model_openai="gpt-4o",
         "ollama_base": keys["OLLAMA_BASE_URL"].removesuffix("/v1").removesuffix("/")
     }
 
-    # 1. Ollama (Local — always try to connect)
+    # 1. Ollama (Local â€” always try to connect)
     if OpenAI:
         try:
             providers["ollama_client"] = OpenAI(
                 base_url=keys["OLLAMA_BASE_URL"],
                 api_key="ollama"  # Ollama ignores this but the SDK requires a non-empty string
             )
-            logger.info(f"Ollama client initialized: {keys['OLLAMA_BASE_URL']} | Model: {keys['OLLAMA_MODEL']}")
+            logger.info(f"Ollama client initialized: {keys['OLLAMA_BASE_URL']} | Models: general={keys['OLLAMA_MODEL']}, rp={keys['OLLAMA_MODEL_RP']}, reasoning={keys['OLLAMA_MODEL_REASONING']}")
         except Exception as e:
             logger.warning(f"Ollama Client Init Failed: {e}")
 

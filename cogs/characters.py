@@ -1,11 +1,8 @@
 import discord
 from discord.ext import commands
 import logging
-import json
 import asyncio
-from core.config import ROOT_DIR, DB_DIR
 from core.routing import require_channel
-from core.transport import TransportAPI
 
 logger = logging.getLogger("Cog_Characters")
 
@@ -25,10 +22,9 @@ class CharactersCog(commands.Cog):
             match = resolve_character(name)
             
             if not match:
-                await self.transport.send(channel, f"🔍 No Character found matching '{name}'")
+                await self.transport.send(channel, f"ðŸ” No Character found matching '{name}'")
                 return
 
-            role = match.get('role', f"Level {match.get('level', '?')} {match.get('class', 'Hero')}")
             status = match.get('status', match.get('loyalty_status', 'Active'))
             if isinstance(status, dict): status = "Stabilized"
             
@@ -39,15 +35,15 @@ class CharactersCog(commands.Cog):
             is_party = 'combat_profile' in match
             if is_party:
                 cp = match.get('combat_profile', {})
-                msg = (f"👤 **Character Card: {match['name']}**\n"
+                msg = (f"ðŸ‘¤ **Character Card: {match['name']}**\n"
                        f"*{match.get('race')} {match.get('class')} (Level {match.get('level')})*\n\n"
-                       f"✨ **Background:** {match.get('background')}\n"
-                       f"🌿 **Visuals:** {description}\n"
-                       f"🌱 **Motivation:** {motivation}\n"
-                       f"💭 **Bio:** {bio}\n\n"
-                       f"⚔️ **Combat:** AC {cp.get('ac')} | HP {cp.get('hp')} | Init +{cp.get('initiative_bonus')}")
+                       f"âœ¨ **Background:** {match.get('background')}\n"
+                       f"ðŸŒ¿ **Visuals:** {description}\n"
+                       f"ðŸŒ± **Motivation:** {motivation}\n"
+                       f"ðŸ’­ **Bio:** {bio}\n\n"
+                       f"âš”ï¸ **Combat:** AC {cp.get('ac')} | HP {cp.get('hp')} | Init +{cp.get('initiative_bonus')}")
             else:
-                msg = (f"👤 **NPC Card: {match['name']}**\n"
+                msg = (f"ðŸ‘¤ **NPC Card: {match['name']}**\n"
                        f"*{match.get('role', 'Unknown')}*\n\n"
                        f"**Status:** {status}\n"
                        f"**Visuals:** {description}\n"
@@ -67,7 +63,7 @@ class CharactersCog(commands.Cog):
                 avatar_url=target_avatar
             )
         except Exception as e:
-            await self.transport.send(channel, f"❌ Error: {e}")
+            await self.transport.send(channel, f"âŒ Error: {e}")
 
     @commands.command()
     @require_channel("npc-gallery")
@@ -82,33 +78,33 @@ class CharactersCog(commands.Cog):
             party = [s for s in all_states if s.get("id", "").startswith("PC-")]
             
             if not party:
-                await self.transport.send(channel, "🔍 No party members found in the chronicles.")
+                await self.transport.send(channel, "ðŸ” No party members found in the chronicles.")
                 return
                 
-            msg_parts = ["**🛡️ Worn Equipment: The Royal Guard**"]
+            msg_parts = ["**ðŸ›¡ï¸ Worn Equipment: The Royal Guard**"]
             
             for p in party:
                 eq = p.get("status", {}).get("equipment", {})
                 if eq:
                     msg_parts.append(f"\n**{p['name']} ({p.get('class', 'Hero')})**")
-                    msg_parts.append(f"• **Head**: {eq.get('head', 'None')}")
-                    msg_parts.append(f"• **Body**: {eq.get('body', 'None')}")
-                    msg_parts.append(f"• **Main Hand**: {eq.get('main_hand', 'None')}")
-                    msg_parts.append(f"• **Off Hand**: {eq.get('off_hand', 'None')}")
-                    msg_parts.append(f"• **Accessory**: {eq.get('accessory', 'None')}")
+                    msg_parts.append(f"â€¢ **Head**: {eq.get('head', 'None')}")
+                    msg_parts.append(f"â€¢ **Body**: {eq.get('body', 'None')}")
+                    msg_parts.append(f"â€¢ **Main Hand**: {eq.get('main_hand', 'None')}")
+                    msg_parts.append(f"â€¢ **Off Hand**: {eq.get('off_hand', 'None')}")
+                    msg_parts.append(f"â€¢ **Accessory**: {eq.get('accessory', 'None')}")
                 else:
                     msg_parts.append(f"\n**{p['name']}**: No equipment data recorded.")
                     
             await self.transport.send(channel, "\n".join(msg_parts))
         except Exception as e:
-            await self.transport.send(channel, f"❌ Error reading equipment: {e}")
+            await self.transport.send(channel, f"âŒ Error reading equipment: {e}")
 
     @commands.command()
     @require_channel("npc-gallery")
     async def capture(self, ctx):
         """Scan current channel for images and map them to characters in the state files."""
         channel = getattr(ctx, "target_channel", ctx.channel)
-        await self.transport.send(channel, "🔍 **Scanning for character portraits...**")
+        await self.transport.send(channel, "ðŸ” **Scanning for character portraits...**")
         
         try:
             from core.storage import load_all_character_profiles, save_character_profile
@@ -167,10 +163,10 @@ class CharactersCog(commands.Cog):
             with_visuals = len([c for c in all_chars if c.get("avatar_url") or c.get("description")])
             
             summary_msg = await channel.send(
-                f"📊 **Capture Complete!**\n"
-                f"🔄 **New Links Found:** {updates_found}\n"
-                f"🖼️ **Total Portraits Locked:** {len([c for c in all_chars if c.get('avatar_url')])}\n"
-                f"🏮 **Gallery Coverage:** {with_visuals}/{total_chars}\n\n"
+                f"ðŸ“Š **Capture Complete!**\n"
+                f"ðŸ”„ **New Links Found:** {updates_found}\n"
+                f"ðŸ–¼ï¸ **Total Portraits Locked:** {len([c for c in all_chars if c.get('avatar_url')])}\n"
+                f"ðŸ® **Gallery Coverage:** {with_visuals}/{total_chars}\n\n"
                 f"*Self-destructing text tags in 5 seconds...*"
             )
             
@@ -187,7 +183,7 @@ class CharactersCog(commands.Cog):
 
         except Exception as e:
             logger.error(f"Capture error: {e}", exc_info=True)
-            await self.transport.send(channel, f"❌ Error during capture: {e}")
+            await self.transport.send(channel, f"âŒ Error during capture: {e}")
 
     @commands.command()
     @require_channel("npc-gallery")
@@ -196,7 +192,7 @@ class CharactersCog(commands.Cog):
         """Gallery Maintenance: Delete all messages in this channel that do NOT have images."""
         channel = getattr(ctx, "target_channel", ctx.channel)
         try:
-            status_msg = await channel.send("🧹 **Cleanup Initiative Started...**")
+            status_msg = await channel.send("ðŸ§¹ **Cleanup Initiative Started...**")
             deleted_count = 0
             async for message in channel.history(limit=None):
                 if message.id == status_msg.id: continue
@@ -205,12 +201,12 @@ class CharactersCog(commands.Cog):
                         await message.delete()
                         deleted_count += 1
                         await asyncio.sleep(1.25)
-                    except: pass
-            await status_msg.edit(content=f"✨ **Cleanup Complete!** Purged {deleted_count} text-only messages. Leaving gallery in 5 seconds...")
+                    except Exception: pass
+            await status_msg.edit(content=f"âœ¨ **Cleanup Complete!** Purged {deleted_count} text-only messages. Leaving gallery in 5 seconds...")
             await asyncio.sleep(5)
             await status_msg.delete()
         except Exception as e:
-            await self.transport.send(channel, f"❌ Error during cleanup: {e}")
+            await self.transport.send(channel, f"âŒ Error during cleanup: {e}")
 
     @commands.command(name="list")
     @require_channel("npc-gallery")
@@ -225,13 +221,13 @@ class CharactersCog(commands.Cog):
             
             if is_audit:
                 notable = [c for c in characters if not c.get("avatar_url")]
-                header_text = f"🕵️ **Avatar Audit: {len(notable)} characters missing images.** (Grouped by 5)"
+                header_text = f"ðŸ•µï¸ **Avatar Audit: {len(notable)} characters missing images.** (Grouped by 5)"
             else:
                 notable = [c for c in characters if c.get("description")]
-                header_text = f"📜 **Batch Processing {len(notable)} Character Cards...**"
+                header_text = f"ðŸ“œ **Batch Processing {len(notable)} Character Cards...**"
             
             if not notable:
-                await self.transport.send(channel, "🏮 No matching characters found.")
+                await self.transport.send(channel, "ðŸ® No matching characters found.")
                 return
                 
             await self.transport.send(channel, header_text)
@@ -251,15 +247,15 @@ class CharactersCog(commands.Cog):
                 is_party = char.get('id', '').startswith('PC-')
                 if is_party:
                     cp = char.get('combat_profile', {})
-                    msg = (f"👤 **Character Card: {name}**\n"
+                    msg = (f"ðŸ‘¤ **Character Card: {name}**\n"
                            f"*{char.get('race', 'Hero')} {char.get('class', '')} (Level {char.get('level', '?')})*\n\n"
-                           f"✨ **Background:** {char.get('background', 'Unknown')}\n"
-                           f"🌿 **Visuals:** {description}\n"
-                           f"🌱 **Motivation:** {motivation}\n"
-                           f"💭 **Bio:** {bio}\n\n"
-                           f"⚔️ **Combat:** AC {cp.get('ac', '?')} | HP {cp.get('hp', '?')} | Init +{cp.get('initiative_bonus', '0')}")
+                           f"âœ¨ **Background:** {char.get('background', 'Unknown')}\n"
+                           f"ðŸŒ¿ **Visuals:** {description}\n"
+                           f"ðŸŒ± **Motivation:** {motivation}\n"
+                           f"ðŸ’­ **Bio:** {bio}\n\n"
+                           f"âš”ï¸ **Combat:** AC {cp.get('ac', '?')} | HP {cp.get('hp', '?')} | Init +{cp.get('initiative_bonus', '0')}")
                 else:
-                    msg = (f"👤 **NPC Card: {name}**\n"
+                    msg = (f"ðŸ‘¤ **NPC Card: {name}**\n"
                            f"*{role}*\n\n"
                            f"**Status:** {status}\n"
                            f"**Visuals:** {description}\n"
@@ -281,7 +277,7 @@ class CharactersCog(commands.Cog):
                 await asyncio.sleep(1.25)
                 
         except Exception as e:
-            await self.transport.send(channel, f"❌ Error during batch list: {e}")
+            await self.transport.send(channel, f"âŒ Error during batch list: {e}")
 
     @commands.command()
     async def hp(self, ctx, name: str, change: str):
@@ -291,19 +287,19 @@ class CharactersCog(commands.Cog):
             match = resolve_character(name)
             
             if not match:
-                await self.transport.send(ctx.channel, f"🔍 Character '{name}' not found.")
+                await self.transport.send(ctx.channel, f"ðŸ” Character '{name}' not found.")
                 return
                 
             char_id = match.get("id")
             state = load_character_state(char_id)
             
             if not state:
-                await self.transport.send(ctx.channel, f"❌ {match['name']} does not have an active state record.")
+                await self.transport.send(ctx.channel, f"âŒ {match['name']} does not have an active state record.")
                 return
                 
             cp = state.get("combat_profile")
             if not cp:
-                await self.transport.send(ctx.channel, f"❌ {match['name']} does not have a combat profile.")
+                await self.transport.send(ctx.channel, f"âŒ {match['name']} does not have a combat profile.")
                 return
                 
             try:
@@ -314,14 +310,14 @@ class CharactersCog(commands.Cog):
                 
                 save_character_state(char_id, state)
                 
-                status_emoji = "🩸" if val < 0 else "💖"
+                status_emoji = "ðŸ©¸" if val < 0 else "ðŸ’–"
                 await self.transport.send(ctx.channel, f"{status_emoji} **HP Update: {match['name']}**\n`{old_hp}` -> `{new_hp}`")
                 
             except ValueError:
-                await self.transport.send(ctx.channel, "❌ Invalid format. Use: `!hp [name] [+/-amount]` (e.g., `!hp Kaelrath -5`)")
+                await self.transport.send(ctx.channel, "âŒ Invalid format. Use: `!hp [name] [+/-amount]` (e.g., `!hp Kaelrath -5`)")
                 
         except Exception as e:
-            await self.transport.send(ctx.channel, f"❌ Error updating HP: {e}")
+            await self.transport.send(ctx.channel, f"âŒ Error updating HP: {e}")
 
     @commands.command(name='dm')
     async def dm(self, ctx, char_name: str, *, message: str):
@@ -331,7 +327,7 @@ class CharactersCog(commands.Cog):
             match = resolve_character(char_name)
             
             if not match:
-                await self.transport.send(ctx.channel, f"🔍 Hmm. The Chronicle has no record of '{char_name}'.")
+                await self.transport.send(ctx.channel, f"ðŸ” Hmm. The Chronicle has no record of '{char_name}'.")
                 return
 
             char_display_name = match.get('name')
@@ -342,7 +338,7 @@ class CharactersCog(commands.Cog):
             try:
                 guild = ctx.guild
                 if not guild:
-                    await self.transport.send(ctx.channel, "❌ You must use this command inside the server, not in a DM.")
+                    await self.transport.send(ctx.channel, "âŒ You must use this command inside the server, not in a DM.")
                     return
 
                 # Create a clean channel name: dm-npcname-username
@@ -354,11 +350,11 @@ class CharactersCog(commands.Cog):
                 dm_channel = discord.utils.get(guild.text_channels, name=channel_name)
                 
                 if dm_channel:
-                     await ctx.message.add_reaction("✉️")
+                     await ctx.message.add_reaction("âœ‰ï¸")
                      # Update topic just in case it was created by an older version
                      if dm_channel.topic != char_topic:
                          await dm_channel.edit(topic=char_topic)
-                     await self.transport.send(ctx.channel, f"➡️ Thread resumed in {dm_channel.mention}!")
+                     await self.transport.send(ctx.channel, f"âž¡ï¸ Thread resumed in {dm_channel.mention}!")
                 else:
                      # Create the private channel
                      overwrites = {
@@ -375,7 +371,7 @@ class CharactersCog(commands.Cog):
                          category=category,
                          topic=char_topic
                      )
-                     await self.transport.send(ctx.channel, f"✉️ Private comms established: {dm_channel.mention}")
+                     await self.transport.send(ctx.channel, f"âœ‰ï¸ Private comms established: {dm_channel.mention}")
                 
                 # Mock the interaction by sending the user's message to the new channel 
                 await self.transport.send(
@@ -386,13 +382,20 @@ class CharactersCog(commands.Cog):
                 
                 # Trigger the AI to respond in the channel
                 from cogs.brain import IDENTITIES, parse_speaker_blocks
+                # Build ignore_headers matching what BrainCog uses (B-07 fix)
+                DM_IGNORE_HEADERS = {
+                    "Role", "Class", "Specialty", "Current Status", "Mood",
+                    "Location", "Health", "HP", "AC", "Stats", "Loot",
+                    "Quest", "Reward", "Objective", "Summary", "Notes",
+                    "Description", "Abilities", "Analysis", "Recommendation"
+                }
                 client = self.bot.get_cog("BrainCog").brain_manager.get_client(dm_channel.id, npc_name=char_display_name)
                 response_text = await asyncio.to_thread(
                     client.chat, 
                     f"{ctx.author.display_name} (To {char_name}): {message}"
                 )
                 
-                blocks = parse_speaker_blocks(response_text, IDENTITIES, [])
+                blocks = parse_speaker_blocks(response_text, IDENTITIES, DM_IGNORE_HEADERS)
                 for idx, block in enumerate(blocks):
                     speaker = block["speaker"]
                     identity = dict(match) if char_name.lower() in speaker.lower() else block["identity"]
@@ -406,11 +409,12 @@ class CharactersCog(commands.Cog):
                         await self.transport.send(dm_channel, content, username=speaker, wait=wait)
                         
             except discord.Forbidden:
-                await self.transport.send(ctx.channel, f"❌ I don't have permission to create channels, {ctx.author.mention}!")
+                await self.transport.send(ctx.channel, f"âŒ I don't have permission to create channels, {ctx.author.mention}!")
                 
         except Exception as e:
             logger.error(f"DM Error: {e}", exc_info=True)
-            await self.transport.send(ctx.channel, f"❌ A temporal anomaly disrupts the message... ({e})")
+            await self.transport.send(ctx.channel, f"âŒ A temporal anomaly disrupts the message... ({e})")
 
 async def setup(bot):
     await bot.add_cog(CharactersCog(bot))
+

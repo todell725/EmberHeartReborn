@@ -1,4 +1,4 @@
-import discord
+﻿import discord
 from discord.ext import commands
 import logging
 
@@ -17,6 +17,11 @@ def require_channel(channel_name: str):
     async def predicate(ctx):
         # Allow bot owner to bypass strict routing locks if needed during dev
         if await ctx.bot.is_owner(ctx.author) and "bypass" in ctx.message.content.lower():
+             ctx.target_channel = ctx.channel
+             return True
+
+        # DMs have no guild/channel roster; run in-place.
+        if not getattr(ctx, "guild", None):
              ctx.target_channel = ctx.channel
              return True
 
@@ -48,3 +53,4 @@ def require_channel_strict(channel_name: str):
             return True
         raise ChannelRoutingError(f"Command must be used in #{channel_name}.")
     return commands.check(predicate)
+

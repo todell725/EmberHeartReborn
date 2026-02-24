@@ -1,4 +1,4 @@
-import json
+﻿import json
 import re
 import logging
 from pathlib import Path
@@ -109,6 +109,46 @@ class WorldContextManager:
                 return {}
         return {}
 
+    def _resolve_reference_path(self, raw_path: str) -> Path | None:
+        """Resolve indexed reference paths from legacy and reborn layouts."""
+        raw = str(raw_path or "").strip().replace("\\", "/")
+        if not raw:
+            return None
+
+        raw = raw.lstrip("./")
+        candidates = []
+
+        def add(path: Path):
+            if path not in candidates:
+                candidates.append(path)
+
+        add(self.eh_dir / Path(raw))
+
+        trimmed = raw
+        for prefix in ("EmberHeartReborn/", "EmberHeart/"):
+            if trimmed.lower().startswith(prefix.lower()):
+                trimmed = trimmed[len(prefix):]
+                break
+
+        add(self.eh_dir / Path(trimmed))
+
+        low = trimmed.lower()
+        docs_marker = "/docs/"
+        if docs_marker in low:
+            idx = low.find(docs_marker)
+            docs_rel = trimmed[idx + len(docs_marker):]
+            add(self.docs_dir / Path(docs_rel))
+
+        if low.startswith("docs/"):
+            add(self.eh_dir / Path(trimmed))
+
+        add(self.docs_dir / Path(trimmed).name)
+
+        for path in candidates:
+            if path.exists() and path.is_file():
+                return path
+        return None
+
     def get_relevant_context(self, message: str) -> str:
         """Scan message for keywords and return relevant world snippets."""
         message_low = message.lower()
@@ -164,20 +204,53 @@ class WorldContextManager:
             "RUNTIME_RULESET",
             "decisions",
             "gap_analysis",
-            "github_data_list"
+            "github_data_list",
+            "github_data_list_utf8",
+            "kaelrath_profile_patch"
         }
 
+        # Use only meaningful query terms; avoid matching every doc by common short words.
+        stop_terms = {
+            "the", "and", "for", "with", "that", "this", "from", "just", "have", "what",
+            "when", "where", "who", "why", "how", "king", "kaelrath", "chat", "party", "offtopic",
+        }
+        query_terms = [
+            t for t in re.findall(r"[a-z0-9_\-]+", message_low)
+            if len(t) >= 4 and t not in stop_terms
+        ]
+
         for path in self.docs_dir.glob("*"):
-            if path.is_file() and any(word in path.name.lower() for word in message_low.split()):
-                if path.stem in IGNORED_RAG_FILES: continue
-                
-                if len(context_snippets) < 5: # Limit to avoid bloat
-                    try:
-                        content = path.read_text(encoding='utf-8')
-                        clean_name = path.stem.replace('_', ' ').title()
-                        context_snippets.append(scrub_meta_context(f"### Historical Record: {clean_name}\n{content[:500]}"))
-                    except Exception as e:
-                        logger.error(f"Error reading context file {path.name}: {e}")
+            if not path.is_file():
+                continue
+            if path.stem in IGNORED_RAG_FILES:
+                continue
+            if not query_terms:
+                continue
+            if not any(term in path.stem.lower() for term in query_terms):
+                continue
+
+            if len(context_snippets) < 5:  # Limit to avoid bloat
+                try:
+                    content = path.read_text(encoding='utf-8')
+                    low_content = content.lower()
+
+                    # Guard against out-of-world/social-media dump artifacts.
+                    ooc_markers = (
+                        "twitch channel data",
+                        "twitchclient-cdn",
+                        "schema.org",
+                        "\"twitchchannel\"",
+                        "display_name",
+                        "followers",
+                        "subscribers",
+                    )
+                    if any(marker in low_content for marker in ooc_markers):
+                        continue
+
+                    clean_name = path.stem.replace('_', ' ').title()
+                    context_snippets.append(scrub_meta_context(f"### Historical Record: {clean_name}\n{content[:500]}"))
+                except Exception as e:
+                    logger.error(f"Error reading context file {path.name}: {e}")
 
         # 3. Check for World/Settlement Stats
         if any(k in message_low for k in self.world_keys):
@@ -205,25 +278,21 @@ class WorldContextManager:
                 context_snippets.append(f"PARTY STATUS: {', '.join(party_summaries)}")
 
         # 5. Check for D&D Reference Matches (Spells/Items)
-        # Using a simple keyword match for item/spell names
         found_ref = 0
         for ref_key, ref_info in self.ref_index.items():
             if ref_key in message_low:
-                # Update path logic: D&D Reference points relative to original root, so mapped to docs here
-                ref_filename = Path(ref_info['path']).name
-                ref_path = self.docs_dir / ref_filename
-                
-                # Check original if not in reborn docs
-                if not ref_path.exists():
-                     ref_path = self.eh_dir.parent / "EmberHeart" / ref_info['path']
-                     
-                if ref_path.exists():
+                ref_path = self._resolve_reference_path(ref_info.get("path", ""))
+                if ref_path:
                     content = ref_path.read_text(encoding='utf-8')
                     context_snippets.append(f"REFERENCE ({ref_info['title']}): {content[:800]}")
                     found_ref += 1
-                if found_ref >= 3: break # Limit to 3 items to avoid context overflow
+                if found_ref >= 3:
+                    break  # Limit to 3 items to avoid context overflow
 
         if not context_snippets:
             return ""
 
         return scrub_meta_context("\n## ADDITIONAL WORLD INSIGHTS:\n" + "\n".join(context_snippets))
+
+
+

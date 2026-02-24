@@ -1,0 +1,11 @@
+{
+  "id": "EH-55",
+  "name": "Elder Thorne",
+  "race": "Tiefling",
+  "role": "Councilor / Lead Signal Analyst",
+  "status": "Sacredbound",
+  "avatar_url": "./Elder Thorne.png",
+  "description": "An elderly Tiefling with faded blue skin and smooth, worn horns. He wears simple, earthen-toned robes and carries a staff made from a gnarled mountain root.",
+  "motivation": "To decode the cosmic resonance behind the Seekers' tracking signal.",
+  "bio": "A spiritual and technical advisor on the Council. He specializes in tracking and analyzing high-frequency cosmic signals."
+}

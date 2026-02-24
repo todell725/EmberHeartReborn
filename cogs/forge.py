@@ -1,10 +1,8 @@
-import discord
 from discord.ext import commands
 import logging
 from datetime import datetime
 from engines.forge_engine import ForgeEngine
 from core.routing import require_channel
-from core.transport import TransportAPI
 from engines.quest_engine import QuestEngine
 
 logger = logging.getLogger("Cog_Forge")

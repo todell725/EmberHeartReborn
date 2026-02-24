@@ -1,12 +1,11 @@
 import sys
-import os
 from pathlib import Path
 
 # Add project root to sys.path
 project_root = Path(r"z:\DnD\EmberHeartReborn")
 sys.path.append(str(project_root))
 
-from core.formatting import heuristic_prose_split, parse_speaker_blocks
+from core.formatting import parse_speaker_blocks
 
 # Mock Identities
 MOCK_IDENTITIES = {

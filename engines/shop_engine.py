@@ -131,18 +131,11 @@ class DynamicShop:
             if current_ou < cost_val:
                  return False, f"Treasury insufficient. Need **{cost_val} OU**, but only **{current_ou} OU** available."
             
-            if 'gold' in stock:
-                stock['gold'] -= cost_val
-            else:
-                stock['ore_stock_ou'] -= cost_val
-            
-            from core.storage import save_json
-            save_json("SETTLEMENT_STATE.json", settlement)
-            
         except Exception as e:
-            logger.error(f"Transaction Failed (Settlement): {e}")
+            logger.error(f"Transaction Failed (Settlement Read): {e}")
             return False, "Bank error processing funds."
 
+        # Save character state FIRST — if this fails, treasury is untouched (B-13)
         try:
             from core.storage import load_character_state, save_character_state
             char_state = load_character_state(buyer_id)
@@ -153,9 +146,23 @@ class DynamicShop:
             char_state.setdefault('status', {}).setdefault('inventory', []).append(target_name)
             save_character_state(buyer_id, char_state)
             
-            gold_left = settlement['settlement']['stockpiles'].get('gold', settlement['settlement']['stockpiles'].get('ore_stock_ou', 0))
-            return True, f"**Transaction Complete:** Purchased **{target_name}** for **{cost_val} OU**. (Treasury: {gold_left} OU)"
-            
         except Exception as e:
             logger.error(f"Transaction Failed (Character State): {e}", exc_info=True)
             return False, "Inventory update failed."
+
+        # Now deduct gold and save settlement (safe since character already has the item)
+        try:
+            if 'gold' in stock:
+                stock['gold'] -= cost_val
+            else:
+                stock['ore_stock_ou'] -= cost_val
+            
+            from core.storage import save_json
+            save_json("SETTLEMENT_STATE.json", settlement)
+            
+            gold_left = stock.get('gold', stock.get('ore_stock_ou', 0))
+            return True, f"**Transaction Complete:** Purchased **{target_name}** for **{cost_val} OU**. (Treasury: {gold_left} OU)"
+            
+        except Exception as e:
+            logger.error(f"Transaction Failed (Settlement Save): {e}", exc_info=True)
+            return False, "Payment processing failed after item was added. Contact the Sovereign."

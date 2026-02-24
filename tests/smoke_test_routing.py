@@ -1,4 +1,3 @@
-import os
 import sys
 import logging
 from pathlib import Path
@@ -42,9 +41,9 @@ if __name__ == "__main__":
     import asyncio
     try:
         asyncio.run(test_routing())
-    except Exception as e:
+    except Exception:
         # Fallback for environments where loop is already running or client.chat isn't async
-        print(f"Sync Execution Check...")
+        print("Sync Execution Check...")
         # Note: EHClient.chat in the code I modified is SYNC (it uses _chat_openai_compatible which is sync)
         # So I don't actually need asyncio.run here, but it doesn't hurt.
         client = EHClient(thread_id="test_routing_thread_sync")

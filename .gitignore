@@ -1,35 +1,49 @@
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Backups
-backups/
+# Environment Variables
+.env
+*.env
+.venv
+venv/
+ENV/
 
-# IDE files
+# IDEs
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# Gamebooks and Converted Content
+# Project Specific
+logs/
+tmp/
+*.log
+gamebooks/
+gamebooks_md/
 docs/reference/gamebooks/
 docs/reference/gamebooks_md/
-docs/reference/RAW_DND/
+Character Pics/
 
-# State and Logs
-state/CONVERSATIONS.json
-state/CONVERSATIONS.corrupt.bak
-state/*.bak
-debug/
-*.log
-prompt_test.txt
-tests/scrub_conversations.py
-tests/verify_npc_scaling.py
+# System
+Thumbs.db
+Desktop.ini
+.DS_Store

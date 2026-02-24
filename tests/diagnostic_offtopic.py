@@ -1,5 +1,4 @@
 import sys
-import os
 import logging
 from pathlib import Path
 from unittest.mock import MagicMock, AsyncMock
@@ -13,7 +12,6 @@ project_root = Path(r"z:\DnD\EmberHeartReborn")
 sys.path.append(str(project_root))
 
 from cogs.brain import BrainCog
-from core.config import IDENTITIES
 
 async def run_diagnostic():
     print("--- [OFF-TOPIC DIAGNOSTIC START] ---")

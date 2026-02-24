@@ -1,0 +1,6 @@
+﻿[lint]
+ignore = ["E402", "E701"]
+
+[lint.per-file-ignores]
+"scripts/**/*.py" = ["F401"]
+"tests/**/*.py" = ["E721", "E722", "E741", "F841"]

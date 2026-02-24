@@ -12,9 +12,9 @@ def generate_world_rules(eh_dir: Path, diegetic: bool = False) -> str:
         # Strip DM Persona, Mechanics, & Session Management sections
         import re
         rules = re.sub(r"# EmberHeart: Dungeon Master Guidelines.*?\n---", "", rules, flags=re.S)
-        rules = re.sub(r"## 🎭 1. DM Persona.*?\n##", "##", rules, flags=re.S)
-        rules = re.sub(r"## 🎲 2. Mechanical Discipline.*?\n##", "##", rules, flags=re.S)
-        rules = re.sub(r"## 📜 3. Session Management.*", "", rules, flags=re.S)
+        rules = re.sub(r"## ðŸŽ­ 1. DM Persona.*?\n##", "##", rules, flags=re.S)
+        rules = re.sub(r"## ðŸŽ² 2. Mechanical Discipline.*?\n##", "##", rules, flags=re.S)
+        rules = re.sub(r"## ðŸ“œ 3. Session Management.*", "", rules, flags=re.S)
         rules = rules.replace("DM", "Chronicle").strip()
         
         # Also sanitize the profile (USER_PROFILE_EH.md)
@@ -75,8 +75,8 @@ Do not use generic headers for status updates. Assign data to your Council:
 ## ID-Lock Protocol (CRITICAL REASONING)
 To ensure the Chronicle Weaver maps your responses to the correct visual identities, you MUST append the character's global ID in brackets to their name during reports or dialogue. 
 **Format**: `**Name [ID]**: "Dialogue"`
-Example: `**Marta Hale [EH-01]**: "My Liege..."`
-Check your injected context for NPC IDs (e.g., EH-01, EH-55, DM-01). 
+Example: `**Marta Hale [EH-01]**: "My Liege..."` (NPC) or `**Talmarr [PC-02]**: "..."` (party member).
+Check your injected context for IDs (e.g., EH-01, PC-02, DM-01). 
 If an ID is unknown, omit the brackets.
 """
     return prompt

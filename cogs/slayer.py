@@ -1,12 +1,10 @@
-import discord
-from discord.ext import commands
+﻿from discord.ext import commands
 import logging
 from collections import Counter
 from datetime import datetime
 from engines.slayer_engine import SlayerEngine
 from engines.quest_engine import QuestEngine
 from core.routing import require_channel
-from core.transport import TransportAPI
 
 logger = logging.getLogger("Cog_Slayer")
 
@@ -35,12 +33,12 @@ class SlayerCog(commands.Cog):
                 ttk *= 4
             
             if elapsed >= ttk:
-                await self.transport.send(channel, f"✅ **Hunt Complete!** You have defeated the **{task['monster_name']}**.\n> Use `!slayer claim` to collect your rewards.")
+                await self.transport.send(channel, f"âœ… **Hunt Complete!** You have defeated the **{task['monster_name']}**.\n> Use `!slayer claim` to collect your rewards.")
             else:
                 progress = (elapsed / ttk) * 100
-                await self.transport.send(channel, f"⚔️ **Active Hunt:** {task['monster_name']}\n> ⏳ Progress: **{int(progress)}%** ({elapsed}/{ttk}s elapsed)")
+                await self.transport.send(channel, f"âš”ï¸ **Active Hunt:** {task['monster_name']}\n> â³ Progress: **{int(progress)}%** ({elapsed}/{ttk}s elapsed)")
         else:
-            await self.transport.send(channel, "🏮 **No active slayer task.** Use `!tasks` to see targets.")
+            await self.transport.send(channel, "ðŸ® **No active slayer task.** Use `!tasks` to see targets.")
 
     @slayer.command(name="list")
     @require_channel("idle-slayer")
@@ -50,12 +48,12 @@ class SlayerCog(commands.Cog):
         channel = getattr(ctx, "target_channel", ctx.channel)
         
         if not tasks:
-            await self.transport.send(channel, "🏮 **Slayer Database is empty.**")
+            await self.transport.send(channel, "ðŸ® **Slayer Database is empty.**")
             return
 
-        msg = ["**⚔️ Available Slayer Tasks**"]
+        msg = ["**âš”ï¸ Available Slayer Tasks**"]
         for t in tasks:
-            msg.append(f"📌 **{t['task_id']}**: {t['monster_name']} (TTK: {t['idle_mechanics']['time_to_kill_sec']}s | {t['idle_mechanics']['xp_per_kill']} XP)")
+            msg.append(f"ðŸ“Œ **{t['task_id']}**: {t['monster_name']} (TTK: {t['idle_mechanics']['time_to_kill_sec']}s | {t['idle_mechanics']['xp_per_kill']} XP)")
             msg.append(f"> *{t['description']}*")
         
         await self.transport.send(channel, "\n".join(msg))
@@ -69,13 +67,13 @@ class SlayerCog(commands.Cog):
         channel = getattr(ctx, "target_channel", ctx.channel)
         
         if not task:
-            await self.transport.send(channel, f"❌ Task **{task_id}** not found.")
+            await self.transport.send(channel, f"âŒ Task **{task_id}** not found.")
             return
         ttk = task['idle_mechanics']['time_to_kill_sec']
         if is_solo:
             ttk *= 4
             
-        await self.transport.send(channel, f"⚔️ **Hunt Started:** You are now hunting **{task['monster_name']}**{' (SOLO)' if is_solo else ''}.\n⏳ Estimated Time to Kill: **{ttk}s**")
+        await self.transport.send(channel, f"âš”ï¸ **Hunt Started:** You are now hunting **{task['monster_name']}**{' (SOLO)' if is_solo else ''}.\nâ³ Estimated Time to Kill: **{ttk}s**")
 
     @slayer.command(name="claim")
     @require_channel("idle-slayer")
@@ -85,7 +83,7 @@ class SlayerCog(commands.Cog):
         channel = getattr(ctx, "target_channel", ctx.channel)
         
         if not active:
-            await self.transport.send(channel, "🏮 No active hunt to claim from.")
+            await self.transport.send(channel, "ðŸ® No active hunt to claim from.")
             return
             
         task = self.slayer_engine.get_task(active['task_id'])
@@ -99,7 +97,7 @@ class SlayerCog(commands.Cog):
         
         if elapsed < ttk:
             remaining = int(ttk - elapsed)
-            await self.transport.send(channel, f"❌ **Hunt Incomplete!** Need **{remaining}s** more to defeat the first **{task['monster_name']}**.")
+            await self.transport.send(channel, f"âŒ **Hunt Incomplete!** Need **{remaining}s** more to defeat the first **{task['monster_name']}**.")
             return
             
         # Multi-Kill Logic
@@ -118,7 +116,7 @@ class SlayerCog(commands.Cog):
         
         # Sync via Quest Engine methods
         target_ids = ["PC-01"] if is_solo else None
-        leveled_up = self.quest_engine.combat.add_party_xp(total_xp, target_ids=target_ids)
+        self.quest_engine.combat.add_party_xp(total_xp, target_ids=target_ids)
         
         if all_raw_drops:
             self.quest_engine.sync_loot(all_raw_drops)
@@ -126,13 +124,13 @@ class SlayerCog(commands.Cog):
         self.quest_engine.log_deed(task['task_id'], f"Slayer Grind: {task['monster_name']} {'(SOLO)' if is_solo else ''}", f"Defeated {kill_count} times in idle combat. Total XP: {total_xp}")
         
         msg = [
-            f"🏆 **Grind Complete!**",
-            f"> 💀 **Target**: {task['monster_name']}",
-            f"> ⚔️ **Total Kills**: {kill_count}",
-            f"> ✨ **Total XP**: +{total_xp:,} XP",
+            "ðŸ† **Grind Complete!**",
+            f"> ðŸ’€ **Target**: {task['monster_name']}",
+            f"> âš”ï¸ **Total Kills**: {kill_count}",
+            f"> âœ¨ **Total XP**: +{total_xp:,} XP",
         ]
         
-        msg.append(f"> 🎁 **Loot Summary**: {', '.join([f'`{d}`' for d in display_drops]) if display_drops else 'No drops found.'}")
+        msg.append(f"> ðŸŽ **Loot Summary**: {', '.join([f'`{d}`' for d in display_drops]) if display_drops else 'No drops found.'}")
         await self.transport.send(channel, "\n".join(msg))
         
         # Clear task
@@ -144,7 +142,7 @@ class SlayerCog(commands.Cog):
         """Stop the current slayer task."""
         self.slayer_engine.stop_task(ctx.channel.id)
         channel = getattr(ctx, "target_channel", ctx.channel)
-        await self.transport.send(channel, "⏹️ **Slayer task terminated.**")
+        await self.transport.send(channel, "â¹ï¸ **Slayer task terminated.**")
 
     @commands.command(name="tasks", aliases=['task'])
     @require_channel("idle-slayer")
@@ -155,12 +153,12 @@ class SlayerCog(commands.Cog):
         channel = getattr(ctx, "target_channel", ctx.channel)
         
         if not tasks:
-            await self.transport.send(channel, f"🏮 **No tasks available for level {level}.**")
+            await self.transport.send(channel, f"ðŸ® **No tasks available for level {level}.**")
             return
 
-        msg = [f"**⚔️ Slayer Tasks Available (Level {level})**"]
+        msg = [f"**âš”ï¸ Slayer Tasks Available (Level {level})**"]
         for t in tasks:
-            msg.append(f"📌 **{t['task_id']}**: {t['monster_name']} (Lvl {t['requirements']['min_level']}+ | TTK: {t['idle_mechanics']['time_to_kill_sec']}s)")
+            msg.append(f"ðŸ“Œ **{t['task_id']}**: {t['monster_name']} (Lvl {t['requirements']['min_level']}+ | TTK: {t['idle_mechanics']['time_to_kill_sec']}s)")
         
         await self.transport.send(channel, "\n".join(msg))
 

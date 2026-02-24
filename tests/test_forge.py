@@ -1,4 +1,3 @@
-import pytest
 from engines.forge_engine import ForgeEngine
 
 def test_forge_engine_init():

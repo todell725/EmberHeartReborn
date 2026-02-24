@@ -1,15 +1,12 @@
 import sys
-import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, AsyncMock
-import re
 
 # Setup root path
 ROOT = Path(r"z:\DnD\EmberHeartReborn")
 sys.path.append(str(ROOT))
 
 import discord
-from discord.ext import commands
 
 async def diagnostic_on_message():
     print("--- START DIAGNOSTIC ---")

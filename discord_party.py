@@ -7,14 +7,13 @@ Uses JSON-mode AI + per-NPC webhooks (T2+T3 Architecture).
 
 import os
 import logging
-import asyncio
 from pathlib import Path
 from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 
 ROOT_DIR = Path(__file__).resolve().parent
-load_dotenv(ROOT_DIR / ".env")
+load_dotenv(ROOT_DIR / ".env", override=True)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("EH_PartyLauncher")
@@ -37,7 +36,7 @@ class EmberHeartPartyBot(commands.Bot):
             logger.error(f"Failed to load party brain: {e}", exc_info=True)
 
     async def on_ready(self):
-        logger.info(f"✅ EmberHeart Party Bot ready as {self.user} ({self.user.id})")
+        logger.info(f"âœ… EmberHeart Party Bot ready as {self.user} ({self.user.id})")
         await self.change_presence(activity=discord.Activity(
             type=discord.ActivityType.listening,
             name="the party's banter"
@@ -46,16 +45,16 @@ class EmberHeartPartyBot(commands.Bot):
 
 if __name__ == "__main__":
     if not TOKEN:
-        logger.error("DISCORD_PARTY_TOKEN not found in .env — cannot start party bot.")
+        logger.error("DISCORD_PARTY_TOKEN not found in .env â€” cannot start party bot.")
         exit(1)
 
     import urllib.request
     ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
     try:
         urllib.request.urlopen(f"{ollama_url.replace('/v1', '')}/api/tags", timeout=3)
-        logger.info("✅ Ollama is running and reachable.")
+        logger.info("âœ… Ollama is running and reachable.")
     except Exception:
-        logger.warning("⚠️  Ollama not detected. Cloud fallbacks will be used if available.")
+        logger.warning("âš ï¸  Ollama not detected. Cloud fallbacks will be used if available.")
 
     bot = EmberHeartPartyBot()
     bot.run(TOKEN)

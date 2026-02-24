@@ -1,13 +1,13 @@
 """
-cogs/brain_party.py — EmberHeart Party Bot Brain
+cogs/brain_party.py - EmberHeart Party Bot Brain
 Handles ONLY #party-chat and #off-topic channels.
 Uses JSON-mode AI output + per-NPC webhooks (T2+T3 Architecture).
 """
 
 import os
 import re
+import asyncio
 import logging
-import discord
 from discord.ext import commands
 from pathlib import Path
 
@@ -17,91 +17,163 @@ if core_path not in sys.path:
     sys.path.insert(0, core_path)
 
 from core.transport import transport
-from core.config import IDENTITIES
+from core.config import list_identity_roster, normalize_identity_id, resolve_identity
 from core.formatting import strip_god_moding
 from core.storage import log_narrative_event
 from ai.client import EHClient, PARTY_JSON_SCHEMA
 
 logger = logging.getLogger("Cog_PartyBrain")
 
-# ─── Sovereignty: These names can NEVER appear as speakers ───────────────────
+# Sovereignty: these names/IDs can never appear as speakers
 SOVEREIGN_NAMES = {"kaelrath", "king kaelrath", "the king", "sovereign", "king"}
+SOVEREIGN_IDS = {"PC-01"}
 
-# ─── Party roster for #party-chat (strict) ───────────────────────────────────
-PARTY_MEMBERS = {"Talmarr", "Silvara", "Mareth", "Vaelis Thorne", "Vaelis", 'Silvara "Silvy"'}
+# Canonical party roster (all PCs except the Sovereign)
+_PARTY_ROSTER = list_identity_roster(prefixes={"PC"}, exclude_ids=SOVEREIGN_IDS)
+PARTY_ID_TO_NAME = {row["id"]: row["name"] for row in _PARTY_ROSTER}
+PARTY_MEMBER_IDS = set(PARTY_ID_TO_NAME.keys())
 
-# ─── Channel names this cog responds to ─────────────────────────────────────
+# Name aliases for fallback resolution when model misses an ID
+PARTY_CANONICAL = {
+    "talmarr": "Talmarr",
+    "silvara": 'Silvara "Silvy"',
+    "silvy": 'Silvara "Silvy"',
+    'silvara "silvy"': 'Silvara "Silvy"',
+    "mareth": "Mareth",
+    "vaelis": "Vaelis Thorne",
+    "vaelis thorne": "Vaelis Thorne",
+}
+
 PARTY_CHANNELS = ["party-chat", "off-topic"]
+AI_JSON_TIMEOUT_SECONDS = float(os.getenv("AI_JSON_TIMEOUT_SECONDS", os.getenv("AI_CALL_TIMEOUT_SECONDS", "130")))
 
 
 class PartyBrain(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        # One shared EHClient for the party group context
-        # The system prompt includes the JSON schema
         self._client_cache = {}
 
     def _get_client(self, channel_id: int) -> EHClient:
         if channel_id not in self._client_cache:
             client = EHClient(thread_id=f"party_{channel_id}")
-            # Inject JSON schema into the system prompt
+
             if client.unified_history and client.unified_history[0]["role"] == "system":
-                existing = client.unified_history[0]["content"]
-                if "RESPONSE FORMAT" not in existing:
-                    client.unified_history[0]["content"] = PARTY_JSON_SCHEMA.strip() + "\n\n" + existing
+                existing = str(client.unified_history[0].get("content", ""))
+
+                # Strip older response-format preamble so we can inject the latest schema.
+                if existing.startswith("### RESPONSE FORMAT"):
+                    parts = existing.split("\n\n", 1)
+                    existing = parts[1] if len(parts) == 2 else ""
+
+                target_system = f"{PARTY_JSON_SCHEMA.strip()}\n\n{existing}".strip()
+                if client.unified_history[0]["content"] != target_system:
+                    client.unified_history[0]["content"] = target_system
                     client._save_history()
+
             self._client_cache[channel_id] = client
         return self._client_cache[channel_id]
 
+    def _party_roster_context(self) -> str:
+        if not _PARTY_ROSTER:
+            return ""
+        lines = [f"- {row['id']}: {row['name']}" for row in _PARTY_ROSTER]
+        return "\n".join(lines)
+
     def _build_channel_context(self, channel_name: str) -> str:
-        """Build the channel-specific context prefix for the AI prompt."""
+        party_roster = self._party_roster_context()
+
         if "party-chat" in channel_name:
             return (
-                "[CHANNEL: PARTY-CHAT — Private Inner Circle]\n"
-                "You are the core party: Talmarr, Silvara, Mareth, and Vaelis Thorne.\n"
-                "React naturally to what the King just said. 1-3 of you may respond.\n"
+                "[CHANNEL: PARTY-CHAT - Private Inner Circle]\n"
+                "You are the core party responding to King Kaelrath.\n"
+                "React naturally. 1-3 of you may respond.\n"
                 "Stay in the moment. Internal banter, bonding, and reaction only.\n"
-                "Do NOT narrate the King's actions or speak for him."
+                "Do NOT narrate the King's actions or speak for him.\n"
+                "Use ONLY these speaker IDs in speaker_id:\n"
+                f"{party_roster}\n"
+                "Each block MUST include speaker_id + matching speaker name."
             )
-        elif "off-topic" in channel_name:
+
+        if "off-topic" in channel_name:
             return (
-                "[CHANNEL: OFF-TOPIC — Casual World Interaction]\n"
-                "Any character from the EmberHeart world may respond here: party members, tavern patrons, guards, merchants — whoever fits the mood.\n"
+                "[CHANNEL: OFF-TOPIC - Casual World Interaction]\n"
+                "Any character from the EmberHeart world may respond here.\n"
                 "Keep it casual, social, and atmospheric. 1-2 speakers max.\n"
-                "Do NOT narrate the King's actions or speak for him."
+                "Do NOT narrate the King's actions or speak for him.\n"
+                "When possible, include correct speaker_id for each speaker."
             )
+
         return ""
 
-    def _filter_blocks(self, blocks: list, channel_name: str) -> list:
-        """Apply sovereignty + channel-specific filters to parsed JSON blocks."""
-        valid = []
-        for block in blocks:
-            speaker = block.get("speaker", "").strip()
-            content = block.get("content", "").strip()
+    def _extract_speaker_id(self, block: dict) -> str:
+        if not isinstance(block, dict):
+            return ""
+        raw_id = block.get("speaker_id") or block.get("identity_id") or block.get("id") or ""
+        if not raw_id:
+            raw_id = block.get("speaker", "")
+        return normalize_identity_id(str(raw_id))
 
-            # Sovereignty: never allow the King as a speaker
-            if speaker.lower() in SOVEREIGN_NAMES:
-                logger.warning(f"BLOCKED sovereign speaker: '{speaker}'")
+    def _canonical_party_speaker(self, speaker: str, speaker_id: str):
+        """Resolve canonical party speaker name using ID-first identity routing."""
+        token, canonical_name, canonical_id = resolve_identity(speaker=speaker, speaker_id=speaker_id)
+
+        if canonical_id in PARTY_ID_TO_NAME:
+            return PARTY_ID_TO_NAME[canonical_id], canonical_id, token
+
+        # Name fallback for malformed model output
+        clean = re.sub(r"\[[^\]]+\]", "", str(speaker or ""))
+        clean = re.sub(r"\b(?:EH|PC|DM)-?\d+\b", "", clean, flags=re.IGNORECASE)
+        clean = re.sub(r"\s+", " ", clean).strip(" :-\t\n\r")
+        low = clean.lower()
+
+        if low in PARTY_CANONICAL:
+            guessed_name = PARTY_CANONICAL[low]
+            token, canonical_name, canonical_id = resolve_identity(speaker=guessed_name, speaker_id="")
+            if canonical_id in PARTY_ID_TO_NAME:
+                return PARTY_ID_TO_NAME[canonical_id], canonical_id, token
+            return guessed_name, canonical_id, token
+
+        return canonical_name or clean, canonical_id, token
+
+    def _filter_blocks(self, blocks: list, channel_name: str) -> list:
+        valid = []
+
+        for block in blocks:
+            raw_speaker = str(block.get("speaker", "")).strip()
+            raw_id = self._extract_speaker_id(block)
+
+            speaker, speaker_id, identity = self._canonical_party_speaker(raw_speaker, raw_id)
+            content = str(block.get("content", "")).strip()
+
+            if speaker.lower() in SOVEREIGN_NAMES or speaker_id in SOVEREIGN_IDS:
+                logger.warning("BLOCKED sovereign speaker: '%s' (%s)", raw_speaker, speaker_id)
                 continue
 
-            # Party-chat: only known party members allowed
             if "party-chat" in channel_name:
-                is_party = any(pm.lower() in speaker.lower() or speaker.lower() in pm.lower() for pm in PARTY_MEMBERS)
-                if not is_party:
-                    logger.info(f"OFF-ROSTER speaker '{speaker}' skipped in party-chat.")
+                if speaker_id not in PARTY_MEMBER_IDS:
+                    logger.info(
+                        "OFF-ROSTER speaker '%s' id='%s' -> '%s' skipped in party-chat.",
+                        raw_speaker,
+                        raw_id,
+                        speaker,
+                    )
                     continue
 
-            # Clean content
             content = strip_god_moding(content)
             if not content:
                 continue
 
-            valid.append({"speaker": speaker, "content": content})
+            payload = {"speaker": speaker, "content": content}
+            if speaker_id:
+                payload["speaker_id"] = speaker_id
+            if isinstance(identity, dict):
+                payload["identity"] = identity
+            valid.append(payload)
+
         return valid
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        # Ignore self, other bots, webhooks, commands
         if message.author.bot:
             return
         if message.webhook_id:
@@ -110,18 +182,15 @@ class PartyBrain(commands.Cog):
             return
 
         channel_name = getattr(message.channel, "name", "").lower()
-
-        # Only respond in our designated channels
         if not any(name in channel_name for name in PARTY_CHANNELS):
             return
 
-        # Get user name — map owner to Kaelrath
         user_name = message.author.display_name
         is_owner = message.author.name.lower() in ["lamorte725", "todd"]
         if is_owner:
             user_name = "King Kaelrath"
 
-        text = message.clean_content.replace(f"@{self.bot.user.name}", "").strip()
+        text = message.clean_content.replace(f"@{self.bot.user.display_name}", "").strip()
         if not text:
             return
 
@@ -133,49 +202,55 @@ class PartyBrain(commands.Cog):
         async with message.channel.typing():
             try:
                 client = self._get_client(message.channel.id)
-
-                # Use JSON mode
-                response_text = client.chat_json(full_message)
+                response_text = await asyncio.wait_for(
+                    asyncio.to_thread(client.chat_json, full_message),
+                    timeout=AI_JSON_TIMEOUT_SECONDS,
+                )
                 logger.debug(f"[PartyBrain] Raw response: {response_text[:200]}")
 
-                # Parse the JSON response
                 blocks = client.parse_response(response_text)
-
-                # Apply sovereignty + channel filters
                 blocks = self._filter_blocks(blocks, channel_name)
 
                 if not blocks:
                     logger.warning(f"[PartyBrain] No valid blocks after filtering for #{channel_name}. Raw: {response_text[:100]}")
                     return
 
-                # Route each block to its NPC webhook
-                for block in blocks:
+                for idx, block in enumerate(blocks):
                     speaker = block["speaker"]
                     content = block["content"]
 
-                    # Look up avatar
-                    identity = IDENTITIES.get(speaker)
+                    identity = block.get("identity") if isinstance(block.get("identity"), dict) else None
                     if not identity:
-                        match = next((k for k in IDENTITIES if isinstance(k, str) and k.lower() == speaker.lower()), None)
-                        if match:
-                            identity = IDENTITIES[match]
+                        identity, canonical_name, canonical_id = resolve_identity(
+                            speaker=speaker,
+                            speaker_id=block.get("speaker_id", ""),
+                        )
+                        if canonical_name:
+                            speaker = canonical_name
+                        if canonical_id:
+                            block["speaker_id"] = canonical_id
+
                     avatar_url = identity.get("avatar") if identity else None
 
                     await transport.send_as_npc(message.channel, speaker, content, avatar_url)
-                    # Brief pause between multiple speakers for natural pacing
-                    if len(blocks) > 1:
-                        import asyncio
+                    if idx < len(blocks) - 1:
                         await asyncio.sleep(0.8)
 
-                # Log narrative pulse
                 if len(response_text) > 50:
                     chan_label = f"#{message.channel.name}"
                     speakers = ", ".join(list(dict.fromkeys([b["speaker"] for b in blocks])))
                     log_narrative_event(f"{user_name} and {speakers} chatted in {chan_label}.")
 
+            except asyncio.TimeoutError:
+                logger.error(
+                    "[PartyBrain] AI generation timed out after %.1fs in #%s",
+                    AI_JSON_TIMEOUT_SECONDS,
+                    channel_name,
+                )
+                await message.channel.send("[PartyBrain] The party is taking too long to respond. Try again in a moment.")
             except Exception as e:
                 logger.error(f"[PartyBrain] AI Generation Failed: {e}", exc_info=True)
-                await message.channel.send(f"❌ *The party seems distracted...* ({e})")
+                await message.channel.send(f"[PartyBrain] The party seems distracted... ({e})")
 
     @commands.command(name="pclear")
     async def pclear(self, ctx):
@@ -184,7 +259,7 @@ class PartyBrain(commands.Cog):
         if channel_id in self._client_cache:
             self._client_cache[channel_id].clear_history()
             del self._client_cache[channel_id]
-        await transport.send(ctx.channel, "🧹 **Party memory cleared.** Fresh start.", identity_key="DM")
+        await transport.send(ctx.channel, "Party memory cleared. Fresh start.", identity_key="DM")
 
 
 async def setup(bot):
