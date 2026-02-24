@@ -3,9 +3,9 @@
   "name": "Perri Quickstep",
   "race": "Halfling",
   "role": "Scout",
-  "avatar_url": "./Perri Quickstep.png",
+  "avatar_url": "https://raw.githubusercontent.com/todell725/EmberHeartReborn/main/characters/EH-19_Perri_Quickstep/Perri%20Quickstep.png",
   "description": "A small, bird-like Halfling with messy, chestnut hair and large, inquisitive hazel eyes. He wears multiple layers of light, tattered linen and leather, reinforced with small plates of frequency-glass at the joints. He carries a collection of small, humming obsidian-anchors used for marking tremors. He moves with a nervous, jerky energy, constantly twitching his ears toward the mountain's floor. He holds a short, arcanotech signal-rod.",
-  "bio": "Perri is the youngest and most enthusiastic of the Ridge scouts. He has a 'perfect ear' for seismic rhythms and can distinguish the sound of a falling rock from a Scourge-march at a mile distant. He is often the first to see things that others miss\u2014though sometimes his imagination gets the better of him.",
+  "bio": "Perri is the youngest and most enthusiastic of the Ridge scouts. He has a 'perfect ear' for seismic rhythms and can distinguish the sound of a falling rock from a Scourge-march at a mile distant. He is often the first to see things that others miss—though sometimes his imagination gets the better of him.",
   "motivation": "Mapping every vibration in the Ridge until the mountain's heart is totally predictable.",
   "secret": "Saw shape in night steam."
 }

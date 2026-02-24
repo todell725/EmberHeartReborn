@@ -3,9 +3,9 @@
   "name": "Borin Ashmantle",
   "race": "Dwarf",
   "role": "Master Miner (Council)",
-  "avatar_url": "./Borin Ashmantle.png",
+  "avatar_url": "https://raw.githubusercontent.com/todell725/EmberHeartReborn/main/characters/EH-02_Borin_Ashmantle/Borin%20Ashmantle.png",
   "description": "A stout Dwarf with a broad, powerful frame. His magnificent beard is white and singed, held together by iron bands. He wears heavy, oil-stained mining leathers and a belt laden with pneumatic tools. He carries a primitive frequency-lantern that casts a rhythmic, orange-and-blue pulse. His hands are massive and soot-stained, permanently gripping a heavy, arcanotech pickaxe.",
-  "bio": "Borin is a master of 'Deep-Listening'\u2014the art of finding ore through the vibrations of the mountain. He lost three brothers to the first collapse and has since become obsessed with structural stability. He is gruff and pragmatic, often clashing with the more idealistic council members.",
+  "bio": "Borin is a master of 'Deep-Listening'—the art of finding ore through the vibrations of the mountain. He lost three brothers to the first collapse and has since become obsessed with structural stability. He is gruff and pragmatic, often clashing with the more idealistic council members.",
   "motivation": "Digging deep enough to find the geothermal heart of the mountain before the vibrations go silent.",
   "secret": "Heard breathing deep in Shaft 3."
 }

@@ -3,9 +3,9 @@
   "name": "Bruga Stonejaw",
   "race": "Dwarf",
   "role": "Hunter",
-  "avatar_url": "./Bruga Stonejaw.png",
+  "avatar_url": "https://raw.githubusercontent.com/todell725/EmberHeartReborn/main/characters/EH-18_Bruga_Stonejaw/Bruga%20Stonejaw.png",
   "description": "A squat, powerful Dwarf with a jaw as wide as a mountain-base. She wears heavy, reinforced scale-mail of blackened iron and a thick, brown fur-lined hood. Her eyes are small and dark, like coal-shards. She carries a massive, short-handled crossbow that requires a mechanical winch to fire. Her belt is laden with heavy crystal bolts and pouches of pungent sulfur-salve. She smells of smoke and pine.",
-  "bio": "A veteran of the subterranean hunts, Bruga doesn't stalk her prey\u2014she anchors against it. She is an expert in tunnel-combat and close-quarters defense. She joined the Sovereignty after her clan's vault was breached by the Singing Death, and she is the first to volunteer for any excursion into the deeper shafts.",
+  "bio": "A veteran of the subterranean hunts, Bruga doesn't stalk her prey—she anchors against it. She is an expert in tunnel-combat and close-quarters defense. She joined the Sovereignty after her clan's vault was breached by the Singing Death, and she is the first to volunteer for any excursion into the deeper shafts.",
   "motivation": "The absolute extermination of any 'Deep-Thing' that dares enter the light-zones.",
   "secret": "Sulfur scent where none should be."
 }
