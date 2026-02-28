@@ -2,12 +2,34 @@ import json
 import os
 import shutil
 import time
+import logging
 from pathlib import Path
 from datetime import datetime
 
 from .config import DB_DIR, ROOT_DIR, CHARACTERS_DIR
 
 BACKUP_DIR = ROOT_DIR / "backups"
+logger = logging.getLogger("EH_Storage")
+
+
+def _read_json_with_retry(path: Path, retries: int = 3, delay: float = 0.05) -> dict | list:
+    """
+    Read JSON with short retries for transient Windows/network-share file locks.
+    Raises the underlying exception after retries are exhausted.
+    """
+    last_error = None
+    for attempt in range(retries):
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except PermissionError as e:
+            last_error = e
+            if attempt == retries - 1:
+                raise
+            time.sleep(delay * (attempt + 1))
+    if last_error:
+        raise last_error
+    raise FileNotFoundError(path)
 
 def get_character_dir(char_id: str) -> Path | None:
     """Finds the character directory based on ID prefix (EH-XXX or PC-XXX)."""
@@ -24,8 +46,7 @@ def load_character_profile(char_id: str) -> dict:
     if not char_dir: return {}
     path = char_dir / "profile.json"
     if not path.exists(): return {}
-    with open(path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    return _read_json_with_retry(path)
 
 def load_character_state(char_id: str) -> dict:
     """Loads runtime/dynamic state for a specific character."""
@@ -33,8 +54,7 @@ def load_character_state(char_id: str) -> dict:
     if not char_dir: return {}
     path = char_dir / "state.json"
     if not path.exists(): return {}
-    with open(path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    return _read_json_with_retry(path)
 
 def save_character_state(char_id: str, state: dict):
     """Atomically saves dynamic state for a specific character."""
@@ -110,10 +130,13 @@ def load_all_character_profiles() -> list:
         profile_path = char_dir / "profile.json"
         if profile_path.exists():
             try:
-                with open(profile_path, 'r', encoding='utf-8') as f:
-                    profiles.append(json.load(f))
-            except (json.JSONDecodeError, OSError):
-                pass
+                data = _read_json_with_retry(profile_path)
+                if isinstance(data, dict):
+                    profiles.append(data)
+                else:
+                    logger.warning("Skipping profile with non-object JSON: %s", profile_path)
+            except Exception as e:
+                logger.warning("Skipping unreadable profile: %s (%s)", profile_path, e)
     return profiles
 
 def resolve_character(query: str) -> dict | None:
@@ -138,17 +161,31 @@ def load_all_character_states() -> list:
         if not char_dir.is_dir(): continue
         profile_path = char_dir / "profile.json"
         state_path = char_dir / "state.json"
-        
-        if profile_path.exists():
+
+        # Profile is required for an entity; skip only this character on failure.
+        try:
+            data = _read_json_with_retry(profile_path)
+            if not isinstance(data, dict):
+                logger.warning("Skipping profile with non-object JSON: %s", profile_path)
+                continue
+        except FileNotFoundError:
+            continue
+        except Exception as e:
+            logger.warning("Skipping character; failed to read profile %s (%s)", profile_path, e)
+            continue
+
+        # State is optional; keep profile-only entry if state is unreadable.
+        if state_path.exists():
             try:
-                with open(profile_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                if state_path.exists():
-                    with open(state_path, 'r', encoding='utf-8') as f:
-                        data.update(json.load(f))
-                entities.append(data)
-            except Exception:
-                pass
+                state_data = _read_json_with_retry(state_path)
+                if isinstance(state_data, dict):
+                    data.update(state_data)
+                else:
+                    logger.warning("Ignoring state with non-object JSON: %s", state_path)
+            except Exception as e:
+                logger.warning("Ignoring unreadable state %s (%s)", state_path, e)
+
+        entities.append(data)
     return entities
 
 def load_json(filename: str):

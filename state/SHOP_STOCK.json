@@ -1,145 +1,12 @@
 {
-    "last_rotation": "2026-02-23T19:51:46.090564",
+    "last_rotation": "2026-02-24T13:36:09.279219",
     "items": [
         {
-            "name": "Scroll of Gloves of Mimicry",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Magic Item"
-        },
-        {
-            "name": "Scroll of Dream of the Blue Veil",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Spell"
-        },
-        {
-            "name": "Blade of the Beholder",
-            "type": "Weapon",
-            "cost": "25000 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "A longsword that suppresses magic. Target must save vs Antimagic."
-        },
-        {
-            "name": "Amulet of Health",
+            "name": "Boots of False Tracks",
             "type": "Wondrous",
-            "cost": "20000 OU",
+            "cost": "605 OU",
             "rarity": "Forge-Pattern",
-            "desc": "Standard D&D rules apply for Amulet of Health. Rarity: Rare."
-        },
-        {
-            "name": "Scroll of Dust of Deliciousness",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Magic Item"
-        },
-        {
-            "name": "Scroll of Mosshide Troll Belt",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Magic Item"
-        },
-        {
-            "name": "Tarrasque Buckler",
-            "type": "Shield",
-            "cost": "100000 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "Fragment of a Tarrasque carapace. Grant's 'Indestructible' property."
-        },
-        {
-            "name": "Warden's Heart-Plate",
-            "type": "Armor",
-            "cost": "15000 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "Crystalline plate armor powered by a Gelatinous Nucleus. +2 AC, Ooze Resistance."
-        },
-        {
-            "name": "Cloak of Protection",
-            "type": "Wondrous",
-            "cost": "1000 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "Standard D&D rules apply for Cloak of Protection. Rarity: Common."
-        },
-        {
-            "name": "Ball of Wild Earth",
-            "type": "Wondrous",
-            "cost": "582 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "Standard D&D rules apply for Ball of Wild Earth. Rarity: Common."
-        },
-        {
-            "name": "Scroll of Power Word Kill",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Spell"
-        },
-        {
-            "name": "Hat of Disguise",
-            "type": "Wondrous",
-            "cost": "3765 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "Standard D&D rules apply for Hat of Disguise. Rarity: Uncommon."
-        },
-        {
-            "name": "Star-Wood Longbow",
-            "type": "Weapon",
-            "cost": "200 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "Made from the resilient wood of old-growth star-oaks."
-        },
-        {
-            "name": "Whirlpool Dart",
-            "type": "Weapon",
-            "cost": "3225 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "Standard D&D rules apply for Whirlpool Dart. Rarity: Uncommon."
-        },
-        {
-            "name": "Scroll of Incendiary Cloud",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Spell"
-        },
-        {
-            "name": "Scroll of Summon Construct",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Spell"
-        },
-        {
-            "name": "Scroll of Scroll of the Jester",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Magic Item"
-        },
-        {
-            "name": "Ambitious Medic\u2019s Box",
-            "type": "Wondrous",
-            "cost": "3109 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "Standard D&D rules apply for Ambitious Medic\u2019s Box. Rarity: Uncommon."
-        },
-        {
-            "name": "Scroll of Decanter of Endless Water",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Magic Item"
-        },
-        {
-            "name": "Steel Longsword",
-            "type": "Weapon",
-            "cost": "150 OU",
-            "rarity": "Forge-Pattern",
-            "desc": "A finely weighted steel blade. Standard issue for Emberheart Marines."
+            "desc": "Standard D&D rules apply for Boots of False Tracks. Rarity: Common."
         },
         {
             "name": "Foxfire Charm",
@@ -149,39 +16,53 @@
             "desc": "Standard D&D rules apply for Foxfire Charm. Rarity: Common."
         },
         {
-            "name": "Scroll of Rod of Thought Projection",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Magic Item"
-        },
-        {
-            "name": "Scroll of Guiding Bolt",
-            "type": "Scroll",
-            "cost": "500 OU",
-            "rarity": "Common",
-            "desc": "Spell"
-        },
-        {
-            "name": "Boots of False Tracks",
-            "type": "Wondrous",
-            "cost": "605 OU",
+            "name": "Tarrasque Buckler",
+            "type": "Shield",
+            "cost": "100000 OU",
             "rarity": "Forge-Pattern",
-            "desc": "Standard D&D rules apply for Boots of False Tracks. Rarity: Common."
+            "desc": "Fragment of a Tarrasque carapace. Grant's 'Indestructible' property."
         },
         {
-            "name": "Scroll of Dune Cowl",
+            "name": "Scroll of Starmetal Shard Spear",
             "type": "Scroll",
             "cost": "500 OU",
             "rarity": "Common",
             "desc": "Magic Item"
         },
         {
-            "name": "Scroll of Murk Blowgun",
+            "name": "Standard Field Plate",
+            "type": "Armor",
+            "cost": "1500 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Full plate armor for front-line enforcers. 18 AC."
+        },
+        {
+            "name": "Scroll of Cubic Gate",
             "type": "Scroll",
             "cost": "500 OU",
             "rarity": "Common",
             "desc": "Magic Item"
+        },
+        {
+            "name": "Gusting Blowgun",
+            "type": "Weapon",
+            "cost": "3091 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Gusting Blowgun. Rarity: Uncommon."
+        },
+        {
+            "name": "Scroll of Ring of Free Action",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Hat of Disguise",
+            "type": "Wondrous",
+            "cost": "3765 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Hat of Disguise. Rarity: Uncommon."
         },
         {
             "name": "Boots of Elvenkind",
@@ -191,11 +72,81 @@
             "desc": "Standard D&D rules apply for Boots of Elvenkind. Rarity: Common."
         },
         {
-            "name": "Scroll of Ice Knife",
+            "name": "Scroll of Power Word Heal",
             "type": "Scroll",
             "cost": "500 OU",
             "rarity": "Common",
             "desc": "Spell"
+        },
+        {
+            "name": "Scroll of Ambitious Medic\u2019s Box",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Cloak of Protection",
+            "type": "Wondrous",
+            "cost": "1000 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Cloak of Protection. Rarity: Common."
+        },
+        {
+            "name": "Scroll of Shield of Missile Attraction",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Ballista Prosthesis",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Snare",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Spell"
+        },
+        {
+            "name": "Displacer Shroud",
+            "type": "Cloak",
+            "cost": "5000 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "A cloak that bends light. Grants Displace (1x/day) and Stealth Bonus."
+        },
+        {
+            "name": "Great Owl\u2019s Shroud",
+            "type": "Wondrous",
+            "cost": "3044 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Great Owl\u2019s Shroud. Rarity: Uncommon."
+        },
+        {
+            "name": "Scroll of Bag of Tricks",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Whirlpool Dart",
+            "type": "Weapon",
+            "cost": "3225 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Whirlpool Dart. Rarity: Uncommon."
+        },
+        {
+            "name": "Scroll of Bloodrage Greataxe",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
         },
         {
             "name": "Bag of Holding",
@@ -205,7 +156,56 @@
             "desc": "Standard D&D rules apply for Bag of Holding. Rarity: Common."
         },
         {
-            "name": "Scroll of Cape of Enlargement",
+            "name": "Scroll of Wand of Binding",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Scroll of Staff of Frost",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Warden's Heart-Plate",
+            "type": "Armor",
+            "cost": "15000 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Crystalline plate armor powered by a Gelatinous Nucleus. +2 AC, Ooze Resistance."
+        },
+        {
+            "name": "Scroll of Dusk Cleaver",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Magic Item"
+        },
+        {
+            "name": "Immovable Rod",
+            "type": "Wondrous",
+            "cost": "3571 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Immovable Rod. Rarity: Uncommon."
+        },
+        {
+            "name": "Scroll of Gaseous Form",
+            "type": "Scroll",
+            "cost": "500 OU",
+            "rarity": "Common",
+            "desc": "Spell"
+        },
+        {
+            "name": "Mask of the Beast",
+            "type": "Wondrous",
+            "cost": "3780 OU",
+            "rarity": "Forge-Pattern",
+            "desc": "Standard D&D rules apply for Mask of the Beast. Rarity: Uncommon."
+        },
+        {
+            "name": "Scroll of Fists of the Guiding Star",
             "type": "Scroll",
             "cost": "500 OU",
             "rarity": "Common",

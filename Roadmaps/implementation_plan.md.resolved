@@ -1,0 +1,81 @@
+# Unified EmberHeart Reborn Roadmap
+
+This roadmap synthesizes the architectural plans from Claude, Codex, Gemini 3.1, and the original [roadmap.md](file:///z:/DnD/EmberHeartReborn/Roadmaps/roadmap.md) into a single, execution-ready sequence. It prioritizes immediate security hygiene, sets up a robust local-first data engine, and introduces concurrency controls before touching the AI logic. Finally, it uses a measurable gate to decide on dual-bot unification.
+
+## User Review Required
+
+> [!CAUTION]  
+> **Immediate Action Required**: Phase 0 handles active API tokens (OpenAI, Google) which may have been exposed in git history. If they have ever been pushed remotely, they MUST be rotated immediately. Please confirm you are ready to rotate tokens before proceeding.
+
+> [!IMPORTANT]
+> **Avatar Hosting Choice**: We need a permanent solution for the 62 NPC avatars to prevent Discord CDN link expiry. GitHub raw URLs are the simplest, but please confirm if you'd prefer an S3/R2 bucket or a dedicated asset repository.
+
+## Proposed Changes
+
+### Phase 0: Security & Hygiene (Immediate Action)
+These must be completed before any architectural code is written to protect active credentials and prevent brittle breaks.
+
+#### [MODIFY] [z:\DnD\EmberHeartReborn\.env](file:///z:/DnD/EmberHeartReborn/.env)
+Swap with `.env.example`, scrub GitHub history if pushed, and rotate all keys.
+#### [MODIFY] [z:\DnD\EmberHeartReborn\characters\*\profile.json](file:///z:/DnD/EmberHeartReborn/)
+Migrate Discord CDN avatar links to permanent URLs to avoid 48-hour expirations.
+#### [MODIFY] [z:\DnD\EmberHeartReborn\cogs\brain_party.py](file:///z:/DnD/EmberHeartReborn/cogs/brain_party.py)
+Remove `sys.path.insert(0, ...)` hacks; enforce clean absolute/relative imports.
+
+---
+
+### Phase 1: Local-First Data Engine
+Fix race conditions and file lock bottlenecks by establishing JSON as the source of truth with an in-memory SQLite read cache.
+
+#### [NEW] [z:\DnD\EmberHeartReborn\core\models.py](file:///z:/DnD/EmberHeartReborn/core/models.py)
+Introduce Pydantic models (Quest, Character, Inventory) for rigorous type-hinting to catch invisible data bugs at startup.
+#### [NEW] [z:\DnD\EmberHeartReborn\core\state_store.py](file:///z:/DnD/EmberHeartReborn/core/state_store.py)
+Create `StateCoordinator` and `SQLiteReadModel`. Serialize all canonical writes and load JSON state into in-memory SQLite at startup for fast reads.
+#### [MODIFY] [z:\DnD\EmberHeartReborn\core\storage.py](file:///z:/DnD/EmberHeartReborn/core/storage.py)
+Implement Atomic Writes. Write state to `.tmp` files and `os.replace()` upon success to prevent campaign corruption during mid-write crashes.
+
+---
+
+### Phase 2: Concurrency & Narrative Flow
+Stop Discord's event loop from freezing and prevent player actions from racing each other.
+
+#### [NEW] [z:\DnD\EmberHeartReborn\core\engine_queue.py](file:///z:/DnD/EmberHeartReborn/core/engine_queue.py)
+Establish Per-Channel Narrative Queues and an isolated Mutation Queue (for math/stat updates). Messages trigger immediate Discord "acknowledged" state but process strictly in-order.
+#### [MODIFY] [z:\DnD\EmberHeartReborn\cogs\brain.py](file:///z:/DnD/EmberHeartReborn/cogs/brain.py)
+Delegate time-consuming synchronous tasks to the async worker queues. Implement Graceful Shutdown (SIGTERM handling) to drain the queue before exiting.
+
+---
+
+### Phase 3: AI Reliability & The Validation Loop
+Keep context windows fast and responses consistent as lore compounds.
+
+#### [MODIFY] [z:\DnD\EmberHeartReborn\core\ai\client.py](file:///z:/DnD/EmberHeartReborn/core/ai/client.py)
+Implement Conversation Compaction limit (keep 15 turns, summarize oldest 5 into memory block when hitting 20).
+#### [NEW] [z:\DnD\EmberHeartReborn\core\ai\rag.py](file:///z:/DnD/EmberHeartReborn/core/ai/rag.py)
+Build purely Python BM25 semantic retrieval (no ChromaDB bloat) to fetch only relevant lore snippets.
+#### [MODIFY] [z:\DnD\EmberHeartReborn\core\ai\client.py](file:///z:/DnD/EmberHeartReborn/core/ai/client.py)
+Standardize AI calls into the "Validation Loop": Generate -> Validate Pydantic Model -> Repair Attempt -> Graceful Degradation. 
+
+---
+
+### Phase 4: The Unification Gate (Optional)
+Decide on retiring `discord_party.py` and falling back to a unified structured AI response.
+
+#### [NEW] [z:\DnD\EmberHeartReborn\scripts\eval\schema_prose_eval.py](file:///z:/DnD/EmberHeartReborn/scripts/eval/schema_prose_eval.py)
+Run an offline test forcing Ollama to generate strict JSON. 
+#### [DELETE] [z:\DnD\EmberHeartReborn\discord_party.py](file:///z:/DnD/EmberHeartReborn/discord_party.py) (Conditional)
+If JSON prose quality >= 4.0/5 and schema validity >= 98%, merge bots and remove regex parser. If prose is robotic, retain the dual-bot heuristic output.
+
+## Verification Plan
+
+### Automated Tests
+1. **Security Scan**: Run script to check git tracking and `.env` presence.
+2. **Type Validation**: Write `pytest` checks forcing malformed payloads into Pydantic models to ensure they raise clear errors instead of silently passing.
+3. **Queue Integrity**: Synthetic load test generating 100 concurrent AI events to verify strict per-channel ordering and zero file cross-corruption. 
+4. **Validation Loop**: Create `tests/fixtures/ollama_responses` offline tests with intentionally broken JSON to verify the repair/fallback loop logic behaves correctly without calling the live Ollama instance. 
+
+### Manual Verification
+1. Verify token invalidation logs on Discord/OpenAI/Google platforms.
+2. Start the Discord bot and manually click NPC generated avatars to verify the permanent CDN links load properly.
+3. Perform a local simulation crash (Ctrl+C) mid-narrative generation to test that the Graceful Shutdown completely flushes unwritten state. 
+4. Execute the Schema Prose evaluator locally with Ollama/Gemma3 and manually review the narrative density before approving the Phase 4 Unification.

@@ -13,7 +13,7 @@ class TickEngine:
         self.relationship_path = DB_DIR / "PARTY_RELATIONSHIPS.json"
         self.deeds_path = DB_DIR / "QUEST_DEEDS.md"
 
-    def run_tick(self) -> str:
+    async def run_tick(self) -> str:
         """Executes the weekly logic. Returns a dictionary of changes for the Proclamation."""
         try:
             from core.storage import (
@@ -55,7 +55,8 @@ class TickEngine:
                         live_state = load_character_state(char_id) or {}
                         current = live_state.get("corruption_exposure", char_data.get("corruption_exposure", 0))
                         live_state["corruption_exposure"] = current + bump
-                        save_character_state(char_id, live_state)
+                        from core.state_store import coordinator
+                        await coordinator.update_character_state_async(char_id, live_state)
                         exposed.append(char_data.get("name", "Unknown citizen"))
                     except Exception as e:
                         logger.error(f"Failed to save state for {char_id}: {e}")
@@ -72,7 +73,8 @@ class TickEngine:
                     for rel in rels.get("relationships", []):
                         if rel.get("tension", 0) > 10:
                             rel["tension"] -= 1
-                    save_json("PARTY_RELATIONSHIPS.json", rels)
+                    from core.state_store import coordinator
+                    await coordinator.update_global_json_async("PARTY_RELATIONSHIPS.json", lambda _: rels)
                 except Exception as e:
                     logger.warning(f"Could not drift relationships: {e}")
 
@@ -94,7 +96,8 @@ class TickEngine:
                 summary.append(f"📆 **Calendar**: It is now Week {calendar['week_index']} of the {calendar.get('season', 'Unknown Season')}.")
 
             # Save Settlement
-            save_json("SETTLEMENT_STATE.json", settlement)
+            from core.state_store import coordinator
+            await coordinator.update_global_json_async("SETTLEMENT_STATE.json", lambda _: settlement)
 
             return "\n".join([f"> {s}" for s in summary])
         except Exception as e:

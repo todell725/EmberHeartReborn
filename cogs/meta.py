@@ -28,7 +28,7 @@ class MetaCog(commands.Cog):
         """Background loop to rotate the shop inventory."""
         await self.bot.wait_until_ready()
         logger.info("Executing periodic shop rotation...")
-        self.shop_engine.generate_stock()
+        await self.shop_engine.generate_stock()
 
         for guild in self.bot.guilds:
             try:

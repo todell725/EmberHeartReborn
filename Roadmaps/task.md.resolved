@@ -1,0 +1,30 @@
+# Task: Synthesize Roadmap Plans
+
+- [x] Read all 4 roadmaps in `Roadmaps` folder.
+- [x] Analyze differences and core suggestions from each AI model.
+- [x] Propose a unified implementation plan integrating the best ideas.
+- [x] Present the synthesis to the user for review.
+
+### Phase 0: Security & Hygiene (Skipping Keys)
+- [x] Migrate Avatar URLs in `characters/*/profile.json` to permanent host. (Already migrated)
+- [x] Remove `sys.path.insert(0, ...)` hacks in [cogs/brain.py](file:///z:/DnD/EmberHeartReborn/cogs/brain.py) and [cogs/brain_party.py](file:///z:/DnD/EmberHeartReborn/cogs/brain_party.py).
+
+### Phase 1: Local-First Data Engine
+- [x] Create Pydantic domain models in [core/models.py](file:///z:/DnD/EmberHeartReborn/core/models.py) (Quest, Character, Inventory).
+- [x] Create [StateCoordinator](file:///z:/DnD/EmberHeartReborn/core/state_store.py#152-204) and [SQLiteReadModel](file:///z:/DnD/EmberHeartReborn/core/state_store.py#18-150) in [core/state_store.py](file:///z:/DnD/EmberHeartReborn/core/state_store.py).
+- [x] Implement Atomic Writes in [core/storage.py](file:///z:/DnD/EmberHeartReborn/core/storage.py) (write to `.tmp` then replace). (Already implemented)
+- [x] Migrate write callsites in engines to use [StateCoordinator](file:///z:/DnD/EmberHeartReborn/core/state_store.py#152-204).
+
+### Phase 2: Concurrency & Narrative Flow
+- [x] Create [core/engine_queue.py](file:///z:/DnD/EmberHeartReborn/core/engine_queue.py) with Per-Channel Narrative Queues and an isolated Mutation Queue.
+- [x] Modify [cogs/brain.py](file:///z:/DnD/EmberHeartReborn/cogs/brain.py) to delegate time-consuming synchronous tasks to the async worker queues.
+- [x] Implement Graceful Shutdown (SIGTERM handling) in [cogs/brain.py](file:///z:/DnD/EmberHeartReborn/cogs/brain.py) to drain the queue.
+
+### Phase 3: AI Reliability & The Validation Loop
+- [x] Implement Conversation Compaction limit in `core/ai/client.py`.
+- [x] Build Python BM25 semantic retrieval in `core/ai/rag.py`.
+- [x] Standardize AI calls into the "Validation Loop" (Generate -> Validate -> Repair -> Fallback) in `core/ai/client.py`.
+
+### Phase 4: The Unification Gate (Optional)
+- [x] Create offline test `schema_prose_eval.py`.
+- [x] Evaluate JSON prose quality to determine bot unification.

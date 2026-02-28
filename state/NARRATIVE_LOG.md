@@ -1,5 +1,3 @@
-- [2026-02-22 15:02] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
-- [2026-02-22 15:04] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 15:07] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-22 15:08] King Kaelrath and The Chronicle Weaver discussed matters in #dm-weaver-lamorte725.
 - [2026-02-22 15:09] King Kaelrath and Ilyra Thornveil discussed matters in #dm-lyra-lamorte725.
@@ -48,3 +46,5 @@
 - [2026-02-23 05:41] King Kaelrath and ilyra thornveil discussed matters in #dm-lyra-lamorte725.
 - [2026-02-23 15:34] King Kaelrath and Talmarr, Silvara "Silvy", Mareth chatted in #party-chat.
 - [2026-02-23 15:34] King Kaelrath and Talmarr, Silvara "Silvy", Mareth chatted in #party-chat.
+- [2026-02-24 03:46] The Chronicle's local memory of #npc-gallery was reset.
+- [2026-02-24 06:58] King Kaelrath and The Chronicle Weaver, Garric Thorn, Elric Vann chatted in #off-topic.

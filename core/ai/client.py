@@ -10,13 +10,7 @@ try:
 except ImportError:
     from core.storage import load_conversations, save_conversations
 
-try:
-    import google.generativeai as genai
-except ImportError:
-    genai = None
-
 import re
-import time
 
 logger = logging.getLogger("EH_Brain")
 
@@ -41,39 +35,31 @@ def _env_bool(name: str, default: bool) -> bool:
         return default
     return str(raw).strip().lower() in {"1", "true", "yes", "on"}
 
-# JSON schema preamble injected at the TOP of the system prompt for party/group channels
-PARTY_JSON_SCHEMA = """
-### RESPONSE FORMAT (MANDATORY):
-You MUST respond with a valid JSON array and NOTHING ELSE. No prose, no explanation outside the array.
-Schema: [{"speaker_id": "PC-02", "speaker": "Talmarr", "content": "Their dialogue or action text"}]
-- Include 1-3 characters who would NATURALLY respond to the message. Not everyone must speak every turn.
-- NEVER include King Kaelrath as a speaker.
-- `speaker_id` is REQUIRED for each block and must match the roster IDs provided in context.
-- `speaker` should be the canonical character name for that ID.
-- Do NOT invent IDs. If an ID is unknown, choose a different character.
-- Keep each character's voice distinct and true to their personality.
-- Actions go inside content as *italicised text*. Dialogue goes as plain text.
-- Example: [{"speaker_id": "PC-02", "speaker": "Talmarr", "content": "*glances at the door* Someone's coming."}]
-"""
-
 class EHClient:
-    def __init__(self, thread_id="default", npc_name=None, model_gemini="gemini-2.0-flash", model_openai="gpt-4o", model_github="gpt-4o"):
+    _WEAVER_ID_LABEL_RE = re.compile(r"(?i)(The\s+Chronicle\s+Weaver\s*\[)DM-\d+(\])")
+    _HEURISTIC_HEADER_SPEAKERS = {
+        "location",
+        "mood",
+        "observations",
+        "actionable leads",
+        "actionable intelligence",
+        "immediate threats",
+        "recommended action",
+        "why this matters",
+        "tension score",
+        "urgent note",
+        "final insight",
+    }
+
+    def __init__(self, thread_id="default", npc_name=None):
         self.thread_id = str(thread_id)
         self.npc_name = npc_name
         self.eh_dir = ROOT_DIR 
         self.world_manager = WorldContextManager(self.eh_dir)
-        self.providers = initialize_providers(model_gemini, model_openai, model_github)
+        self.providers = initialize_providers()
 
         self.ollama_client = self.providers["ollama_client"]
-        self.github_client = self.providers["github_client"]
-        self.openai_client = self.providers["openai_client"]
         self.model_ollama = self.providers["model_ollama"]
-        self.model_ollama_rp = self.providers.get("model_ollama_rp")
-        self.model_ollama_reasoning = self.providers.get("model_ollama_reasoning")
-        self.model_github = self.providers["model_github"]
-        self.model_openai = self.providers["model_openai"]
-        self.model_gemini = self.providers["model_gemini"]
-        self.keys = self.providers["keys"]
 
         # JSON-mode tuning (used by PartyBrain/group channels)
         self.json_temperature = _env_float("OLLAMA_JSON_TEMPERATURE", 0.55)
@@ -82,6 +68,7 @@ class EHClient:
         self.json_include_pulse = _env_bool("OLLAMA_JSON_INCLUDE_PULSE", True)
         self.json_include_briefing = _env_bool("OLLAMA_JSON_INCLUDE_BRIEFING", True)
         self.json_include_rag = _env_bool("OLLAMA_JSON_INCLUDE_RAG", False)
+        self.max_history_messages = _env_int("CONVERSATION_MAX_MESSAGES", 20)
 
         self.system_prompt = generate_eh_system_prompt(self.eh_dir)
         if self.npc_name:
@@ -101,9 +88,8 @@ class EHClient:
         # Remove any known out-of-world artifact blocks that may have been persisted.
         self._sanitize_history_artifacts()
 
-        self.gemini_chat = None
-        self.gemini_model = None
-        self._init_gemini()
+        # Compact history on startup in case it grew beyond the limit between sessions
+        self._trim_history(max_messages=self.max_history_messages)
 
         logger.info(
             "JSON tuning active: num_predict=%s, temp=%s, history=%s, include_rag=%s",
@@ -134,6 +120,11 @@ class EHClient:
                 cleaned_history.append(msg)
                 continue
 
+            # Drop legacy AI-generated compaction summaries from older builds.
+            if role != "system" and content.strip().startswith("[ARCHIVED MEMORY]"):
+                changed = True
+                continue
+
             new_content = content
             for pat in patterns:
                 new_content = pat.sub("", new_content)
@@ -155,27 +146,6 @@ class EHClient:
             self.unified_history = cleaned_history
             self._save_history()
             logger.info("Sanitized non-diegetic artifacts from conversation history for thread %s", self.thread_id)
-    def _init_gemini(self):
-        """Initializes or re-initializes the Gemini model with the current system prompt."""
-        if self.keys["GEMINI"] and genai:
-            try:
-                self.gemini_model = genai.GenerativeModel(
-                    model_name=self.model_gemini,
-                    system_instruction=self.system_prompt,
-                    generation_config=genai.GenerationConfig(temperature=1.0, max_output_tokens=8192)
-                )
-                self.gemini_chat = self.gemini_model.start_chat(history=[])
-                # Restore history if it exists
-                if hasattr(self, 'unified_history') and len(self.unified_history) > 1:
-                     gemini_hist = []
-                     for msg in self.unified_history[1:]:
-                          if msg["role"] == "user":
-                               gemini_hist.append({"role": "user", "parts": [msg["content"]]})
-                          elif msg["role"] == "assistant":
-                               gemini_hist.append({"role": "model", "parts": [msg["content"]]})
-                     self.gemini_chat.history = gemini_hist
-            except Exception as e:
-                logger.warning(f"Gemini init failed: {e}")
 
     def _apply_npc_override(self, npc_name: str):
         """Overrides the system prompt to force 1-on-1 character roleplay without Advisor contamination."""
@@ -202,9 +172,6 @@ class EHClient:
 
 
             self._save_history()
-        
-        # Re-init Gemini to apply the new system prompt instructions
-        self._init_gemini()
 
 
     def _save_history(self):
@@ -213,10 +180,63 @@ class EHClient:
         all_conversations[self.thread_id] = self.unified_history
         save_conversations(all_conversations)
 
-    def _trim_history(self, max_messages: int = 10):
-        if len(self.unified_history) > max_messages + 1:
-            self.unified_history = [self.unified_history[0]] + self.unified_history[-(max_messages):]
-            self._save_history()
+    _ARCHIVE_MARKER_PATTERN = re.compile(r"^\[ARCHIVED:\s*(\d+)\s+messages omitted\]$")
+
+    def _parse_archive_count(self, content: str) -> int:
+        if not isinstance(content, str):
+            return 0
+        match = self._ARCHIVE_MARKER_PATTERN.match(content.strip())
+        if not match:
+            return 0
+        try:
+            return int(match.group(1))
+        except (TypeError, ValueError):
+            return 0
+
+    def _build_archive_marker(self, count: int) -> dict:
+        return {"role": "user", "content": f"[ARCHIVED: {count} messages omitted]"}
+
+    def _trim_history(self, max_messages: int = 20):
+        # Option A hard trim: preserve latest turns and inject a static archive marker.
+        if max_messages < 1:
+            return
+        if len(self.unified_history) <= max_messages + 1:
+            return
+
+        system_prompt = self.unified_history[0]
+        tail = list(self.unified_history[1:])
+
+        archived_count = 0
+        if tail:
+            archived_count = self._parse_archive_count(tail[0].get("content", ""))
+            if archived_count:
+                tail = tail[1:]
+
+        overflow = len(tail) - max_messages
+        if overflow <= 0:
+            return
+
+        archived_count += overflow
+        kept_tail = tail[overflow:]
+
+        self.unified_history = [system_prompt, self._build_archive_marker(archived_count)] + kept_tail
+        self._save_history()
+
+    def _validate_chat_response(self, reply: str) -> bool:
+        """Returns True if reply is a valid, usable response (not empty or a leaked system directive)."""
+        if not reply or not reply.strip():
+            return False
+        stripped = reply.strip()
+        leak_markers = [
+            "### ROLEPLAY PROTOCOL",
+            "### META-PROTOCOL",
+            "MANDATORY:",
+            "[ARCHIVED:",
+            "[ARCHIVED MEMORY]",
+            '"speaker_id"',
+            "```json",
+        ]
+        return not any(marker in stripped for marker in leak_markers)
 
     def _chat_openai_compatible(self, client, model: str, message: str, provider_name: str) -> str:
         if not client:
@@ -238,7 +258,7 @@ class EHClient:
         else:
             self.unified_history.append({"role": "user", "content": enhanced_message})
 
-        self._trim_history(max_messages=8)
+        self._trim_history(max_messages=self.max_history_messages)
 
         response = client.chat.completions.create(
             model=model,
@@ -256,52 +276,36 @@ class EHClient:
              from ..config import IDENTITIES
              if any(potential_name.lower() in k.lower() for k in IDENTITIES):
                   reply = reply[name_match.end():]
-        
+
+        # Validation Loop: Validate -> Repair -> Fallback
+        if not self._validate_chat_response(reply):
+            logger.warning("Validation Loop: %s (%s) response failed. Attempting repair.", provider_name, model)
+            repair_messages = self.unified_history + [
+                {"role": "user", "content": "[REPAIR] Your last response was empty or invalid. Please provide a natural, in-character continuation."}
+            ]
+            try:
+                repair_resp = client.chat.completions.create(
+                    model=model,
+                    messages=repair_messages,
+                    temperature=0.85,
+                    max_tokens=2048,
+                )
+                reply = repair_resp.choices[0].message.content
+                if not self._validate_chat_response(reply):
+                    raise ValueError("Repair response also failed validation.")
+                logger.info("Validation Loop: Repair successful for %s (%s).", provider_name, model)
+            except Exception as repair_err:
+                logger.error("Validation Loop: Repair failed for %s (%s): %s. Triggering provider fallback.", provider_name, model, repair_err)
+                raise ValueError(f"{provider_name} response failed validation after repair: {repair_err}") from repair_err
+
         self.unified_history.append({"role": "assistant", "content": reply})
         self._save_history()
         logger.info(f"Response received from {provider_name} ({model})")
         return reply
 
-    def _chat_gemini(self, message: str) -> str:
-        if not self.gemini_chat:
-            raise ValueError("Gemini not configured.")
-        briefing = self.world_manager.get_sovereign_briefing()
-        pulse = self.world_manager.get_narrative_pulse()
-        rag_context = self.world_manager.get_relevant_context(message)
-        
-        enhanced = message
-        if pulse: enhanced += pulse
-        if briefing: enhanced += briefing
-        if rag_context: enhanced += rag_context
-        
-        response = self.gemini_chat.send_message(enhanced)
-        
-        reply = response.text
-        # IMMERSION CLEANUP
-        reply = re.sub(r"^\(.*?\)\s*", "", reply)
-        # B-16: Identity-aware name stripping (matches _chat_openai_compatible)
-        name_match = re.match(r"^([A-Za-z]+)\s*:\s*", reply)
-        if name_match:
-             potential_name = name_match.group(1)
-             from ..config import IDENTITIES
-             if any(potential_name.lower() in k.lower() for k in IDENTITIES):
-                  reply = reply[name_match.end():]
-
-        # Keep our unified memory in sync for the JSON save file
-        last = self.unified_history[-1] if self.unified_history else {}
-        if last.get("role") != "user" or last.get("content") != enhanced:
-            self.unified_history.append({"role": "user", "content": enhanced})
-        self.unified_history.append({"role": "assistant", "content": reply})
-        self._trim_history(max_messages=8)
-        self._save_history()
-        logger.info(f"Response received from Gemini ({self.model_gemini})")
-        return reply
-
     def clear_history(self):
         self.unified_history = [{"role": "system", "content": self.system_prompt}]
         self._save_history()
-        if self.gemini_model and genai:
-            self.gemini_chat = self.gemini_model.start_chat(history=[])
         logger.info(f"Conversation history cleared for thread {self.thread_id}.")
 
     def rollback_to_id(self, message_id: int, message_content: str):
@@ -328,9 +332,6 @@ class EHClient:
             # So we keep everything up to target_idx.
             self.unified_history = self.unified_history[:target_idx + 1]
             self._save_history()
-            # If Gemini is active, we just restart the chat with the new history
-            if self.gemini_model and genai:
-                self.gemini_chat = self.gemini_model.start_chat(history=[]) # Will rebuild on next send
             logger.info(f"Thread {self.thread_id} rolled back to match: {clean_content[:30]}...")
             return True
         return False
@@ -353,139 +354,32 @@ class EHClient:
             new_history.append({"role": role, "content": content})
             
         self.unified_history = new_history
-        self._trim_history(max_messages=12) # Slightly larger window for rebuild
+        self._trim_history(max_messages=self.max_history_messages)
         self._save_history()
-        if self.gemini_model and genai:
-            self.gemini_chat = self.gemini_model.start_chat(history=[])
         logger.info(f"Thread {self.thread_id} rebuilt from {len(message_list)} messages.")
-
-    def _chat_ollama_json(self, message: str, model: str = None) -> str:
-        """
-        Calls Ollama with format='json' enforced at the API level.
-        Returns raw text (should be a JSON string).
-        """
-        if not self.ollama_client:
-            raise ValueError("Ollama not configured.")
-
-        # Build the enhanced message with optional context for speed tuning.
-        briefing = self.world_manager.get_sovereign_briefing() if self.json_include_briefing else ""
-        pulse = self.world_manager.get_narrative_pulse() if self.json_include_pulse else ""
-        rag_context = self.world_manager.get_relevant_context(message) if self.json_include_rag else ""
-        enhanced_message = message
-        if pulse:
-            enhanced_message += pulse
-        if briefing:
-            enhanced_message += briefing
-        if rag_context:
-            enhanced_message += rag_context
-
-        last = self.unified_history[-1] if self.unified_history else {}
-        if last.get("role") != "user" or last.get("content") != enhanced_message:
-            self.unified_history.append({"role": "user", "content": enhanced_message})
-        self._trim_history(max_messages=max(2, self.json_history_messages))
-
-        # Ollama openai-compat does not expose format=json, so call native API directly.
-        import urllib.request
-        import urllib.error
-        ollama_base = self.providers.get("ollama_base", "http://localhost:11434")
-        payload = json.dumps({
-            "model": model or self.model_ollama,
-            "messages": self.unified_history,
-            "format": "json",
-            "stream": False,
-            "options": {
-                "temperature": self.json_temperature,
-                "num_predict": max(64, self.json_num_predict),
-            },
-        }).encode()
-        req = urllib.request.Request(
-            f"{ollama_base}/api/chat",
-            data=payload,
-            headers={"Content-Type": "application/json"},
-            method="POST"
-        )
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            result = json.loads(resp.read().decode())
-            reply = result["message"]["content"]
-
-        self.unified_history.append({"role": "assistant", "content": reply})
-        self._save_history()
-        logger.info(
-            "JSON response received from Ollama (%s) [num_predict=%s, temp=%s, rag=%s]",
-            (model or self.model_ollama),
-            self.json_num_predict,
-            self.json_temperature,
-            self.json_include_rag,
-        )
-        return reply
 
     def chat(self, message: str, model_type: str = "general") -> str:
         """
-        Unified chat with priority fallback and model_type routing.
-        model_type can be: "general", "rp", "reasoning"
+        Unified local-only chat.
+        model_type is accepted for backward compatibility but ignored.
         """
-        errors = []
+        if not self.ollama_client:
+            raise RuntimeError("Ollama is not configured.")
 
-        if self.ollama_client:
-            # Determine which Ollama model to use
-            target_model = self.model_ollama
-            if model_type == "rp" and self.model_ollama_rp:
-                target_model = self.model_ollama_rp
-            elif model_type == "reasoning" and self.model_ollama_reasoning:
-                target_model = self.model_ollama_reasoning
+        target_model = self.model_ollama
 
-            try:
-                return self._chat_openai_compatible(self.ollama_client, target_model, message, "Ollama")
-            except Exception as e:
-                errors.append(f"Ollama ({target_model}): {e}")
-                logger.error(f"Ollama failed for {target_model}. Details: {e}", exc_info=True)
-                time.sleep(0.5)  # Brief jitter before fallback
-
-        if self.github_client:
-            try:
-                return self._chat_openai_compatible(self.github_client, self.model_github, message, "GitHub")
-            except Exception as e:
-                errors.append(f"GitHub: {e}")
-                logger.warning(f"GitHub Models failed: {e}")
-                time.sleep(0.5)
-
-        if self.gemini_chat:
-            try:
-                return self._chat_gemini(message)
-            except Exception as e:
-                errors.append(f"Gemini: {e}")
-                logger.warning(f"Gemini failed: {e}")
-                time.sleep(0.5)
-
-        if self.openai_client:
-            try:
-                return self._chat_openai_compatible(self.openai_client, self.model_openai, message, "OpenAI")
-            except Exception as e:
-                errors.append(f"OpenAI: {e}")
-                logger.warning(f"OpenAI failed: {e}")
-
-        error_summary = " | ".join(errors)
-        logger.error(f"CRITICAL: All AI providers failed. Summary: {error_summary}")
-        raise RuntimeError(f"All AI providers failed: {error_summary}")
+        try:
+            return self._chat_openai_compatible(self.ollama_client, target_model, message, "Ollama")
+        except Exception as e:
+            logger.error("Ollama failed for %s. Details: %s", target_model, e, exc_info=True)
+            raise RuntimeError(f"Ollama failed for {target_model}: {e}") from e
 
     def chat_json(self, message: str, model_type: str = "general") -> str:
         """
-        JSON-mode chat for group/party channels.
-        Tries Ollama native JSON format first, then falls back to standard chat().
-        Always returns raw text (caller uses parse_response() to decode it).
-        model_type can be: "general", "rp", "reasoning".
+        Legacy compatibility wrapper for party/group channels.
+        Returns normal prose output and relies on parse_response() for extraction.
         """
-        target_model = self.model_ollama
-        if model_type == "rp" and self.model_ollama_rp:
-            target_model = self.model_ollama_rp
-        elif model_type == "reasoning" and self.model_ollama_reasoning:
-            target_model = self.model_ollama_reasoning
-
-        try:
-            return self._chat_ollama_json(message, model=target_model)
-        except Exception as e:
-            logger.warning(f"Ollama JSON mode failed ({e}), falling back to standard chat.")
-            return self.chat(message, model_type=model_type)
+        return self.chat(message, model_type=model_type)
 
     def parse_response(self, text: str) -> list:
         """
@@ -532,6 +426,8 @@ class EHClient:
             speaker = str(item.get("speaker", "")).strip()
             speaker_id = str(item.get("speaker_id") or item.get("identity_id") or item.get("id") or "").strip()
             content = str(item.get("content", "")).strip()
+            # Canonicalize Weaver labels so non-canonical DM IDs do not leak into output.
+            content = self._WEAVER_ID_LABEL_RE.sub(r"\1DM-00\2", content)
 
             if not content:
                 return None
@@ -567,7 +463,7 @@ class EHClient:
             pass
 
         # Step 2: JSON failed - fall back to legacy heuristic parser
-        logger.warning("parse_response: JSON decode failed. Falling back to heuristic parser.")
+        logger.debug("parse_response: JSON decode failed. Using heuristic parser.")
         try:
             from ..formatting import parse_speaker_blocks
             from ..config import IDENTITIES
@@ -577,11 +473,27 @@ class EHClient:
             for b in raw_blocks:
                 speaker = str(b.get("speaker", "")).strip()
                 content = str(b.get("content", "")).strip()
+                content = self._WEAVER_ID_LABEL_RE.sub(r"\1DM-00\2", content)
                 token = b.get("identity") if isinstance(b.get("identity"), dict) else None
                 speaker_id = str(token.get("id", "")).strip() if token else ""
+                speaker_key = re.sub(r"[:*`\s]+$", "", speaker.strip()).lower()
 
                 if not speaker or not content:
                     continue
+                if speaker_key in self._HEURISTIC_HEADER_SPEAKERS:
+                    continue
+
+                # Canonicalize fallback speaker names/ids just like the JSON path.
+                resolved_token, canonical_name, canonical_id = resolve_identity(
+                    speaker=speaker,
+                    speaker_id=speaker_id,
+                )
+                if canonical_name:
+                    speaker = canonical_name
+                if canonical_id:
+                    speaker_id = canonical_id
+                if resolved_token and isinstance(resolved_token, dict):
+                    token = resolved_token
 
                 row = {"speaker": speaker, "content": content}
                 if speaker_id:
@@ -593,7 +505,7 @@ class EHClient:
             return results
         except Exception as e:
             logger.error(f"parse_response: heuristic fallback also failed: {e}")
-            return [{"speaker": "DM", "content": text.strip()}]
+            return [{"speaker": "The Chronicle Weaver", "speaker_id": "DM-00", "content": text.strip()}]
 
     def apply_weaver_mode(self):
         """
@@ -618,10 +530,4 @@ class EHClient:
             self.unified_history.insert(0, {"role": "system", "content": self.system_prompt})
             
         self._save_history()
-        # If Gemini is active, we just restart the chat with the new history
-        if self.gemini_model and genai:
-            self.gemini_chat = self.gemini_model.start_chat(history=[]) # Rebuild on next send
         logger.info(f"Thread {self.thread_id} set to META-AWARE (Chronicle Weaver) mode.")
-
-
-

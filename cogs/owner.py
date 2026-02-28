@@ -79,7 +79,7 @@ class OwnerCog(commands.Cog):
     async def owner_tick(self, ctx):
         """Manually trigger the Sovereignty Heartbeat (Weekly Tick)."""
         await self.transport.send(ctx.channel, "âš¡ **Invoking the Sovereign Heartbeat...**")
-        proclamation = self.tick_engine.run_tick()
+        proclamation = await self.tick_engine.run_tick()
         msg = [
             "ðŸ”Š **[THE SOVEREIGN PROCLAMATION]**",
             "***The stars have shifted. The kingdom breathes.***",

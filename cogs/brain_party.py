@@ -1,7 +1,7 @@
 """
 cogs/brain_party.py - EmberHeart Party Bot Brain
 Handles ONLY #party-chat and #off-topic channels.
-Uses JSON-mode AI output + per-NPC webhooks (T2+T3 Architecture).
+Uses prose output + per-NPC webhooks (T2+T3 Architecture).
 """
 
 import os
@@ -9,18 +9,12 @@ import re
 import asyncio
 import logging
 from discord.ext import commands
-from pathlib import Path
-
-import sys
-core_path = str(Path(__file__).resolve().parent.parent / "core")
-if core_path not in sys.path:
-    sys.path.insert(0, core_path)
 
 from core.transport import transport
 from core.config import list_identity_roster, normalize_identity_id, resolve_identity
 from core.formatting import strip_god_moding
 from core.storage import log_narrative_event
-from ai.client import EHClient, PARTY_JSON_SCHEMA
+from core.ai.client import EHClient
 
 logger = logging.getLogger("Cog_PartyBrain")
 
@@ -57,19 +51,6 @@ class PartyBrain(commands.Cog):
         if channel_id not in self._client_cache:
             client = EHClient(thread_id=f"party_{channel_id}")
 
-            if client.unified_history and client.unified_history[0]["role"] == "system":
-                existing = str(client.unified_history[0].get("content", ""))
-
-                # Strip older response-format preamble so we can inject the latest schema.
-                if existing.startswith("### RESPONSE FORMAT"):
-                    parts = existing.split("\n\n", 1)
-                    existing = parts[1] if len(parts) == 2 else ""
-
-                target_system = f"{PARTY_JSON_SCHEMA.strip()}\n\n{existing}".strip()
-                if client.unified_history[0]["content"] != target_system:
-                    client.unified_history[0]["content"] = target_system
-                    client._save_history()
-
             self._client_cache[channel_id] = client
         return self._client_cache[channel_id]
 
@@ -89,9 +70,8 @@ class PartyBrain(commands.Cog):
                 "React naturally. 1-3 of you may respond.\n"
                 "Stay in the moment. Internal banter, bonding, and reaction only.\n"
                 "Do NOT narrate the King's actions or speak for him.\n"
-                "Use ONLY these speaker IDs in speaker_id:\n"
-                f"{party_roster}\n"
-                "Each block MUST include speaker_id + matching speaker name."
+                "Format each response block as **Name [ID]**: content.\n"
+                f"Use this roster for valid names/IDs:\n{party_roster}"
             )
 
         if "off-topic" in channel_name:
@@ -100,7 +80,7 @@ class PartyBrain(commands.Cog):
                 "Any character from the EmberHeart world may respond here.\n"
                 "Keep it casual, social, and atmospheric. 1-2 speakers max.\n"
                 "Do NOT narrate the King's actions or speak for him.\n"
-                "When possible, include correct speaker_id for each speaker."
+                "When possible, format as **Name [ID]**: content."
             )
 
         return ""

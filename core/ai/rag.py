@@ -1,6 +1,9 @@
 ﻿import json
 import re
 import logging
+import math
+import time
+from collections import Counter
 from pathlib import Path
 
 logger = logging.getLogger("EH_Brain")
@@ -30,6 +33,107 @@ def scrub_meta_context(text: str) -> str:
         
     return text
 
+_IGNORED_RAG_FILES = frozenset({
+    "ADULT_RELATIONSHIP_CALIBRATION",
+    "PARTY_RELATIONSHIP_ENGINE",
+    "RELATIONSHIP_GRAPH_SPEC",
+    "DM_RULES",
+    "CULT_CORRUPTION_ENGINE",
+    "EVENT_RULES",
+    "FACTION_RULES",
+    "PARTY_MECHANICS",
+    "BOT_EXPANSION_PLAN",
+    "VALIDATION_CHECKLIST",
+    "PROMPT_INTERFACE",
+    "NPC_AGENT_MODEL",
+    "AUTO_TICK_PROTOCOL",
+    "QUEST_BOTTLENECK_REPORT",
+    "RUNTIME_RULESET",
+    "decisions",
+    "gap_analysis",
+    "github_data_list",
+    "github_data_list_utf8",
+    "kaelrath_profile_patch",
+})
+
+_OOC_MARKERS = (
+    "twitch channel data",
+    "twitchclient-cdn",
+    "schema.org",
+    '"twitchchannel"',
+    "display_name",
+    "followers",
+    "subscribers",
+)
+
+_BM25_INDEX_TTL = 300  # seconds; rebuild if older than this
+
+
+class BM25Scorer:
+    """Pure Python BM25 implementation for zero-dependency semantic retrieval."""
+    def __init__(self, k1=1.5, b=0.75):
+        self.k1 = k1
+        self.b = b
+        self.documents = []
+        self.df = Counter()
+        self.doc_len = []
+        self.avgdl = 0
+        self.N = 0
+        self.idf = {}
+
+    def add_document(self, path: Path, content: str):
+        tokens = self.tokenize(content)
+        self.documents.append({'path': path, 'tokens': tokens, 'content': content})
+        self.doc_len.append(len(tokens))
+        for token in set(tokens):
+            self.df[token] += 1
+
+    def tokenize(self, text: str) -> list:
+        return [t for t in re.findall(r'[a-z0-9_\-]+', text.lower()) if len(t) >= 4]
+
+    def build(self):
+        self.N = len(self.documents)
+        if self.N == 0:
+            self.avgdl = 0
+            return
+        self.avgdl = sum(self.doc_len) / self.N
+        for token, df in self.df.items():
+            self.idf[token] = math.log(1 + (self.N - df + 0.5) / (df + 0.5))
+
+    def get_top_n(self, query: str, n=5) -> list:
+        if self.N == 0:
+            return []
+            
+        q_tokens = self.tokenize(query)
+        if not q_tokens:
+            return []
+            
+        scores = []
+        for idx, doc in enumerate(self.documents):
+            score = 0
+            doc_tokens = doc['tokens']
+            doc_len = self.doc_len[idx]
+            term_freqs = Counter(doc_tokens)
+            
+            for token in q_tokens:
+                if token not in self.idf: continue
+                tf = term_freqs[token]
+                num = tf * (self.k1 + 1)
+                den = tf + self.k1 * (1 - self.b + self.b * (doc_len / self.avgdl))
+                score += self.idf[token] * (num / den)
+                
+            # Boost score if query terms appear in the filename
+            filename_tokens = self.tokenize(doc['path'].stem)
+            for token in q_tokens:
+                if token in filename_tokens:
+                    score += self.idf.get(token, 1.5) * 2.0
+                
+            if score > 0:
+                scores.append((score, doc))
+            
+        scores.sort(key=lambda x: x[0], reverse=True)
+        return [doc for score, doc in scores[:n]]
+
 class WorldContextManager:
     """Manages dynamic context injection from local EmberHeart knowledge."""
     def __init__(self, eh_dir: Path):
@@ -57,6 +161,11 @@ class WorldContextManager:
         self.journal_path = self.docs_dir / "CAMPAIGN_JOURNAL.md"
         self.deeds_path = self.state_dir / "QUEST_DEEDS.md"
         self.narrative_log_path = self.eh_dir / "state" / "NARRATIVE_LOG.md"
+
+        # BM25 index (built once at startup, refreshed on TTL)
+        self._bm25: BM25Scorer | None = None
+        self._bm25_built_at: float = 0.0
+        self._build_bm25_index()
 
     @property
     def settlement_data(self) -> dict:
@@ -149,6 +258,33 @@ class WorldContextManager:
                 return path
         return None
 
+    def _build_bm25_index(self) -> None:
+        """Build (or rebuild) the BM25 retrieval index from docs_dir."""
+        bm25 = BM25Scorer()
+        if self.docs_dir.exists():
+            for path in self.docs_dir.glob("*"):
+                if not path.is_file() or path.stem in _IGNORED_RAG_FILES:
+                    continue
+                try:
+                    content = path.read_text(encoding="utf-8")
+                    if not any(m in content.lower() for m in _OOC_MARKERS):
+                        bm25.add_document(path, content)
+                except Exception as e:
+                    logger.error("BM25 index: error reading %s: %s", path.name, e)
+        bm25.build()
+        self._bm25 = bm25
+        self._bm25_built_at = time.time()
+        logger.info("BM25 index built: %d documents indexed.", bm25.N)
+
+    def _build_bm25_index_if_stale(self) -> None:
+        """Rebuild the BM25 index if it is older than _BM25_INDEX_TTL seconds."""
+        if self._bm25 is None or (time.time() - self._bm25_built_at) > _BM25_INDEX_TTL:
+            self._build_bm25_index()
+
+    def refresh_index(self) -> None:
+        """Force an immediate rebuild of the BM25 index. Call after docs change."""
+        self._build_bm25_index()
+
     def get_relevant_context(self, message: str) -> str:
         """Scan message for keywords and return relevant world snippets."""
         message_low = message.lower()
@@ -186,71 +322,12 @@ class WorldContextManager:
                 except Exception as e:
                     logger.error(f"Error loading profile for {char_id}: {e}")
 
-        IGNORED_RAG_FILES = {
-            "ADULT_RELATIONSHIP_CALIBRATION",
-            "PARTY_RELATIONSHIP_ENGINE",
-            "RELATIONSHIP_GRAPH_SPEC",
-            "DM_RULES",
-            "CULT_CORRUPTION_ENGINE",
-            "EVENT_RULES",
-            "FACTION_RULES",
-            "PARTY_MECHANICS",
-            "BOT_EXPANSION_PLAN",
-            "VALIDATION_CHECKLIST",
-            "PROMPT_INTERFACE",
-            "NPC_AGENT_MODEL",
-            "AUTO_TICK_PROTOCOL",
-            "QUEST_BOTTLENECK_REPORT",
-            "RUNTIME_RULESET",
-            "decisions",
-            "gap_analysis",
-            "github_data_list",
-            "github_data_list_utf8",
-            "kaelrath_profile_patch"
-        }
-
-        # Use only meaningful query terms; avoid matching every doc by common short words.
-        stop_terms = {
-            "the", "and", "for", "with", "that", "this", "from", "just", "have", "what",
-            "when", "where", "who", "why", "how", "king", "kaelrath", "chat", "party", "offtopic",
-        }
-        query_terms = [
-            t for t in re.findall(r"[a-z0-9_\-]+", message_low)
-            if len(t) >= 4 and t not in stop_terms
-        ]
-
-        for path in self.docs_dir.glob("*"):
-            if not path.is_file():
-                continue
-            if path.stem in IGNORED_RAG_FILES:
-                continue
-            if not query_terms:
-                continue
-            if not any(term in path.stem.lower() for term in query_terms):
-                continue
-
-            if len(context_snippets) < 5:  # Limit to avoid bloat
-                try:
-                    content = path.read_text(encoding='utf-8')
-                    low_content = content.lower()
-
-                    # Guard against out-of-world/social-media dump artifacts.
-                    ooc_markers = (
-                        "twitch channel data",
-                        "twitchclient-cdn",
-                        "schema.org",
-                        "\"twitchchannel\"",
-                        "display_name",
-                        "followers",
-                        "subscribers",
-                    )
-                    if any(marker in low_content for marker in ooc_markers):
-                        continue
-
-                    clean_name = path.stem.replace('_', ' ').title()
-                    context_snippets.append(scrub_meta_context(f"### Historical Record: {clean_name}\n{content[:500]}"))
-                except Exception as e:
-                    logger.error(f"Error reading context file {path.name}: {e}")
+        # 2. Query cached BM25 Index for Docs
+        self._build_bm25_index_if_stale()
+        top_docs = self._bm25.get_top_n(message_low, n=4)
+        for doc in top_docs:
+            clean_name = doc['path'].stem.replace('_', ' ').title()
+            context_snippets.append(scrub_meta_context(f"### Historical Record: {clean_name}\n{doc['content'][:800]}"))
 
         # 3. Check for World/Settlement Stats
         if any(k in message_low for k in self.world_keys):

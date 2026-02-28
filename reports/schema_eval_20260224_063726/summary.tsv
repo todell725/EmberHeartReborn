@@ -1,0 +1,4 @@
+﻿model	exit_code	recommendation	schema_validity	speaker_diversity	meta_leak_rate	avg_latency_s	json_report	raw_log
+mythomax_13b_rp:latest	1	RETAIN_DUAL_BOT	1.0	0.5	0.0	225.34	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_063726\mythomax_13b_rp_latest.json	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_063726\mythomax_13b_rp_latest.log
+beluga_13b_rp:latest	1	RETAIN_DUAL_BOT	1.0	0.5	0.0	435.4	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_063726\beluga_13b_rp_latest.json	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_063726\beluga_13b_rp_latest.log
+deepseek-r1:14b	1	RETAIN_DUAL_BOT	1.0	0.5	0.0	145.62	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_063726\deepseek-r1_14b.json	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_063726\deepseek-r1_14b.log

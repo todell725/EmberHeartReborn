@@ -77,7 +77,7 @@ class QuestEngine:
         idx = min(int(b_ratio * len(outcomes)), len(outcomes) - 1)
         return outcomes[idx]
 
-    def apply_failure(self, qid: str) -> str:
+    async def apply_failure(self, qid: str) -> str:
         """Apply risk_matrix failure penalties. Returns critical_failure text."""
         quest = self.get_quest(qid)
         if not quest:
@@ -88,14 +88,14 @@ class QuestEngine:
         xp_loss = penalty.get('xp_loss', 0)
         
         if xp_loss > 0:
-            self.combat.add_party_xp(-xp_loss)
+            await self.combat.add_party_xp(-xp_loss)
             logger.info(f"[RISK] Applied -{xp_loss} XP penalty for {qid}")
             
         cf_text = rm.get('critical_failure', 'The quest failed with consequences.')
         self.log_deed(qid, quest.get('title', qid), f"[FAILED] {cf_text}")
         return cf_text
 
-    def mark_completed(self, qid: str, path: list = None) -> List[tuple]:
+    async def mark_completed(self, qid: str, path: list = None) -> List[tuple]:
         """Mark quest finished. Awards XP, loot, logs outcome + permanent effects."""
         leveled_up = []
         try:
@@ -113,14 +113,14 @@ class QuestEngine:
             # 1. XP
             xp = quest.get('xp_reward', 0)
             if xp > 0:
-                leveled_up = self.combat.add_party_xp(xp)
+                leveled_up = await self.combat.add_party_xp(xp)
 
             # 2. Loot
             loot = list(quest.get('loot_table', []))
             item_reward = outcome_data.get('consequences', {}).get('item_reward')
             if item_reward and item_reward not in loot:
                 loot.append(item_reward)
-            self.sync_loot(loot)
+            await self.sync_loot(loot)
 
             # 3. Conclusion & Effects Logging
             conclusion = outcome_data.get('description') or quest.get('conclusion') or 'The quest has concluded.'
@@ -136,9 +136,9 @@ class QuestEngine:
                     seen.add(effect)
 
             # Write completion AFTER all rewards are processed (B-11)
-            from core.storage import save_json
+            from core.state_store import coordinator
             items = sorted([str(x) for x in self.completed if isinstance(x, str)])
-            save_json("QUEST_COMPLETION.json", items)
+            await coordinator.update_global_json_async("QUEST_COMPLETION.json", lambda _: items)
 
             return leveled_up
             
@@ -146,7 +146,7 @@ class QuestEngine:
             logger.error(f"CRITICAL [mark_completed]: {e}", exc_info=True)
             return []
 
-    def sync_loot(self, loot_list: list):
+    async def sync_loot(self, loot_list: list):
         if not loot_list: return
         
         settlement_path = DB_DIR / "SETTLEMENT_STATE.json"
@@ -190,13 +190,14 @@ class QuestEngine:
                     
                     if target_state:
                         target_state.setdefault('status', {}).setdefault('inventory', []).append(item)
-                        save_character_state(target_id, target_state)
+                        from core.state_store import coordinator
+                        await coordinator.update_character_state_async(target_id, target_state)
                         logger.info(f"[LOOT] '{item}' -> {target_state.get('name', 'Unknown')}'s Inventory")
                         
             # Save shared files atomically (B-01)
-            from core.storage import save_json
-            save_json(self.loot_path.name, equip_data)
-            save_json(settlement_path.name, settlement_data)
+            from core.state_store import coordinator
+            await coordinator.update_global_json_async(self.loot_path.name, lambda _: equip_data)
+            await coordinator.update_global_json_async(settlement_path.name, lambda _: settlement_data)
             
         except Exception as e:
             logger.error(f"Loot Sync failed: {e}", exc_info=True)

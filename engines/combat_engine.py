@@ -23,7 +23,7 @@ class CombatTracker:
         self.current_index = -1
         self.active = False
 
-    def add_party_xp(self, xp: int, target_ids: list = None) -> list[tuple]:
+    async def add_party_xp(self, xp: int, target_ids: list = None) -> list[tuple]:
         """
         Award XP to the party. If target_ids is provided, only those IDs get XP.
         Returns list of (name, new_level).
@@ -65,11 +65,8 @@ class CombatTracker:
                 # Note: char_state here is a merged dict if it came from load_all_character_states
                 # We should be careful to only save state keys if we use load_all_character_states
                 # or better, load the literal state file before saving.
-                from core.storage import load_character_state
-                actual_state = load_character_state(char_id)
-                actual_state["experience_points"] = new_xp
-                actual_state["level"] = new_level
-                save_character_state(char_id, actual_state)
+                from core.state_store import coordinator
+                await coordinator.update_character_state_async(char_id, actual_state)
                     
             return leveled_up
             

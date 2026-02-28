@@ -12,10 +12,13 @@ class CharactersCog(commands.Cog):
         from core.transport import transport
         self.transport = transport
 
-    @commands.command()
+    @commands.group(invoke_without_command=True)
     @require_channel("npc-gallery")
-    async def npc(self, ctx, *, name: str):
+    async def npc(self, ctx, *, name: str = None):
         """Lookup an NPC or Party Member character card."""
+        if name is None:
+            await ctx.send("Usage: `!npc <name>` or `!npc show <name>`")
+            return
         channel = getattr(ctx, "target_channel", ctx.channel)
         try:
             from core.storage import resolve_character
@@ -64,6 +67,74 @@ class CharactersCog(commands.Cog):
             )
         except Exception as e:
             await self.transport.send(channel, f"âŒ Error: {e}")
+
+
+    @npc.command(name="show")
+    async def npc_show(self, ctx):
+        """Dump all NPC portrait cards as embeds into #npc-gallery."""
+        try:
+            gallery = discord.utils.get(ctx.guild.text_channels, name="npc-gallery")
+            if not gallery:
+                await ctx.send("No `#npc-gallery` channel found on this server.")
+                return
+
+            from core.storage import load_all_character_states
+            all_chars = load_all_character_states()
+
+            npcs = [c for c in all_chars if not c.get("id", "").startswith("PC-")]
+            if not npcs:
+                await ctx.send("No NPCs found in the chronicles.")
+                return
+
+            status_msg = await ctx.send(f"Pushing {len(npcs)} NPC cards to {gallery.mention}...")
+
+            posted = 0
+            failed = 0
+            for char in npcs:
+                try:
+                    char_name = char.get("name", "Unknown")
+                    avatar_url = char.get("avatar_url")
+                    role = char.get("role", "Unknown")
+
+                    status = char.get("status", char.get("loyalty_status", "Active"))
+                    if isinstance(status, dict):
+                        status = "Stabilized"
+
+                    bio = char.get("bio", char.get("background", char.get("secret", "No further data.")))
+                    motivation = char.get("motivation", "Unknown")
+                    description = char.get("description", "No visual data provided.")
+
+                    embed = discord.Embed(
+                        title=f"👤 {char_name}",
+                        description=f"*{role}*",
+                        color=0x8B6914,
+                    )
+                    embed.add_field(name="Status", value=status, inline=True)
+                    embed.add_field(name="Motivation", value=motivation, inline=True)
+                    embed.add_field(name="Visuals", value=description, inline=False)
+                    embed.add_field(name="Details", value=bio[:500], inline=False)
+
+                    if avatar_url:
+                        embed.set_image(url=avatar_url)
+
+                    embed.set_footer(text="EmberHeart Reborn · Character Registry")
+
+                    await gallery.send(embed=embed)
+                    posted += 1
+                except Exception as send_err:
+                    failed += 1
+                    logger.warning("Failed to post NPC card '%s' (%s): %s", char.get("name", "Unknown"), char.get("id", "NO-ID"), send_err)
+                await asyncio.sleep(1.0)
+
+            if failed:
+                await status_msg.edit(content=f"⚠️ Posted {posted} NPC cards to {gallery.mention}. Failed: {failed}.")
+            else:
+                await status_msg.edit(content=f"✅ Posted {posted} NPC cards to {gallery.mention}.")
+
+        except Exception as e:
+            logger.error(f"npc show error: {e}", exc_info=True)
+            await ctx.send(f"Error: {e}")
+
 
     @commands.command()
     @require_channel("npc-gallery")
@@ -156,8 +227,9 @@ class CharactersCog(commands.Cog):
                                 break # One image per message per character for now
 
             # Commit updates
+            from core.state_store import coordinator
             for cid, profile in updates.items():
-                save_character_profile(cid, profile)
+                await coordinator.update_character_profile_async(cid, profile)
                 
             total_chars = len(all_chars)
             with_visuals = len([c for c in all_chars if c.get("avatar_url") or c.get("description")])
@@ -308,7 +380,8 @@ class CharactersCog(commands.Cog):
                 new_hp = old_hp + val
                 cp["hp"] = new_hp
                 
-                save_character_state(char_id, state)
+                from core.state_store import coordinator
+                await coordinator.update_character_state_async(char_id, state)
                 
                 status_emoji = "ðŸ©¸" if val < 0 else "ðŸ’–"
                 await self.transport.send(ctx.channel, f"{status_emoji} **HP Update: {match['name']}**\n`{old_hp}` -> `{new_hp}`")

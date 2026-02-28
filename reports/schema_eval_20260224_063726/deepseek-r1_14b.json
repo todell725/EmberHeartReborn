@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-02-24T06:51:24",
+  "model_json": "deepseek-r1:14b",
+  "json_temperature": 0.55,
+  "json_num_predict": -1,
+  "metrics": {
+    "total_prompts": 1,
+    "schema_valid_count": 1,
+    "schema_validity": 1.0,
+    "meta_leak_count": 0,
+    "meta_leak_rate": 0.0,
+    "avg_unique_speakers": 1.0,
+    "speaker_diversity": 0.5,
+    "speaker_diversity_index": 0.5,
+    "avg_latency_s": 145.62,
+    "thin_content_count": 0,
+    "error_types": {}
+  },
+  "recommendation": "RETAIN_DUAL_BOT",
+  "pass_thresholds": {
+    "schema_validity": 0.98,
+    "speaker_diversity": 0.7,
+    "meta_leak_rate": 0.0
+  },
+  "results": [
+    {
+      "prompt": "What news from the merchant quarter today?",
+      "schema_valid": true,
+      "parse_error": null,
+      "block_count": 1,
+      "prose": {
+        "unique_speakers": 1,
+        "has_meta_leak": false,
+        "avg_content_len": 981.0,
+        "thin_content": false
+      },
+      "latency_s": 145.62
+    }
+  ]
+}

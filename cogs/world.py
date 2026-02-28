@@ -105,8 +105,8 @@ class WorldCog(commands.Cog):
             })
             
             path.parent.mkdir(parents=True, exist_ok=True)
-            from core.storage import save_json
-            save_json(path.name, data)
+            from core.state_store import coordinator
+            await coordinator.update_global_json_async(path.name, lambda _: data)
             await self.transport.send(ctx.channel, f"âœ… **Pinned to Board:** [{new_id}] {title.strip()}")
         except Exception as e:
             await self.transport.send(ctx.channel, f"âŒ Error adding hook: {e}")
@@ -125,8 +125,8 @@ class WorldCog(commands.Cog):
                 return
                 
             data['hooks'] = new_hooks
-            from core.storage import save_json
-            save_json(path.name, data)
+            from core.state_store import coordinator
+            await coordinator.update_global_json_async(path.name, lambda _: data)
             await self.transport.send(ctx.channel, f"ðŸ—‘ï¸ **Archived Hook #{hook_id}.**")
         except Exception as e:
             await self.transport.send(ctx.channel, f"âŒ Error removing hook: {e}")

@@ -3,32 +3,23 @@ import asyncio
 import logging
 import discord
 from discord.ext import commands
-from pathlib import Path
 
 from core.transport import transport
 from core.config import IDENTITIES, list_identity_roster, normalize_identity_id, resolve_identity
 from core.formatting import parse_speaker_blocks, IGNORE_SPEAKERS, strip_god_moding
 
-# Import the refactored AI Core we built in Phase 1
-import sys
-core_path = str(Path(__file__).resolve().parent.parent / "core")
-if core_path not in sys.path:
-    sys.path.insert(0, core_path)
-from ai.client import EHClient
+from core.ai.client import EHClient
 
 logger = logging.getLogger("Cog_Brain")
 ALLOWED_CHANNEL_ID = os.getenv("DISCORD_ALLOWED_CHANNEL_ID")
 AI_CALL_TIMEOUT_SECONDS = float(os.getenv("AI_CALL_TIMEOUT_SECONDS", "130"))
 
-SCENE_JSON_SCHEMA = """
-### RESPONSE FORMAT (MANDATORY):
-You MUST respond with a valid JSON array and NOTHING ELSE.
-Schema: [{"speaker_id": "EH-01", "speaker": "Marta Hale", "content": "Their dialogue or action text"}]
+SCENE_RESPONSE_GUIDE = """
+### RESPONSE FORMAT:
+- Reply in prose speaker blocks as: **Name [ID]**: content
 - Include 1-3 speakers who naturally fit the channel and moment.
 - NEVER include King Kaelrath as a speaker.
-- `speaker_id` is REQUIRED for each block and must come from the allowed roster in context.
-- `speaker` must match the canonical name for that ID.
-- Do NOT invent IDs.
+- Use only IDs from the provided roster. Do not invent IDs.
 """
 
 class MultiChannelBrain:
@@ -51,6 +42,8 @@ class MultiChannelBrain:
 class BrainCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        from core.engine_queue import engine_queues
+        engine_queues.restart()
         self.brain_manager = MultiChannelBrain()
         
         # We need a list of headers to ignore during parsing so it doesn't think 
@@ -69,15 +62,22 @@ class BrainCog(commands.Cog):
         self.scene_roster = list_identity_roster(prefixes={"EH", "PC", "DM"}, exclude_ids={"PC-01"})
         self.scene_roster_text = "\n".join([f"- {r['id']}: {r['name']}" for r in self.scene_roster])
 
+    async def cog_unload(self):
+        """Implement graceful shutdown to drain engine queues."""
+        from core.engine_queue import engine_queues
+        logger.info("BrainCog unloading, initiating queue shutdown...")
+        # Await the graceful shutdown to process remaining messages
+        await engine_queues.graceful_shutdown()
+
     def _build_scene_id_context(self, channel_name: str, target_npc: str) -> str:
-        """Inject ID roster so AI can emit speaker_id deterministically."""
+        """Inject roster lock so AI keeps deterministic Name[ID] speaker blocks."""
         target_token, target_name, target_id = resolve_identity(speaker=target_npc or "", speaker_id="")
 
         if target_id:
             return (
                 "[ID LOCK]\n"
                 f"Allowed speaker for this turn:\n- {target_id}: {target_name}\n"
-                "Return exactly 1 block for that speaker_id."
+                "Return exactly 1 speaker block for that identity."
             )
 
         # Rumor mill is a synthetic identity without numeric ID. Keep name-lock fallback.
@@ -94,9 +94,9 @@ class BrainCog(commands.Cog):
 
         return (
             "[ID LOCK]\n"
-            "Use ONLY speaker_id values from this roster:\n"
+            "Use ONLY speaker IDs from this roster:\n"
             f"{roster}\n"
-            "Every block must include speaker_id + matching speaker name."
+            "Format as **Name [ID]**: content."
         )
 
     def _normalize_json_blocks(self, blocks: list, user_name: str, display_name: str, target_npc: str, channel_name: str) -> list:
@@ -173,9 +173,14 @@ class BrainCog(commands.Cog):
             return
 
         # --- Multi-Channel Routing Rules ---
-        # NOTE: party-chat, off-topic, and weaver-archives are handled by the Party Bot (discord_party.py)
+        # NOTE: party-chat/off-topic are handled by cogs.brain_party in the unified runtime.
         allowed_names = ["npc-chat", "game-feed", "campaign-chat", "rumors-chat"]
         channel_name = getattr(message.channel, "name", "").lower()
+        party_only_channels = ["party-chat", "off-topic"]
+
+        # Unified runtime guard: PartyBrain owns these channels exclusively.
+        if any(ch in channel_name for ch in party_only_channels):
+            return
 
         is_dm = isinstance(message.channel, discord.DMChannel)
         is_named_whitelist = any(name in channel_name for name in allowed_names) or channel_name.startswith("dm-")
@@ -190,8 +195,8 @@ class BrainCog(commands.Cog):
             if not is_mentioned:
                 return
 
-        # Specifically defer party/meta channels to Party Bot unless explicitly mentioned
-        reserved_channels = ["party-chat", "off-topic", "weaver-archives"]
+        # Keep weaver channel mention-gated.
+        reserved_channels = ["weaver-archives"]
         if any(res in channel_name for res in reserved_channels) and not is_mentioned:
             return
 
@@ -238,6 +243,20 @@ class BrainCog(commands.Cog):
                 m_name, m_id = mentioned_npcs[0]
                 target_npc = f"{m_name} [{m_id}]" if m_id else m_name
 
+        # Dispatch to the narrative queue for in-order processing
+        from core.engine_queue import engine_queues
+        await engine_queues.enqueue_narrative(
+            message.channel.id,
+            self._process_narrative,
+            message,
+            channel_name,
+            user_name,
+            target_npc,
+            text,
+            channel_context
+        )
+
+    async def _process_narrative(self, message, channel_name, user_name, target_npc, text, channel_context=""):
         async with message.channel.typing():
             try:
                 client = self.brain_manager.get_client(message.channel.id, npc_name=target_npc)
@@ -247,12 +266,13 @@ class BrainCog(commands.Cog):
                     client.apply_weaver_mode()
 
                 id_lock_context = "" if is_weaver else self._build_scene_id_context(channel_name, target_npc)
-                schema_context = "" if is_weaver else SCENE_JSON_SCHEMA.strip()
+                schema_context = "" if is_weaver else SCENE_RESPONSE_GUIDE.strip()
 
                 parts = [p for p in [channel_context, schema_context, id_lock_context, f"{user_name}: {text}"] if p]
                 full_message = "\n\n".join(parts)
 
-                m_type = "reasoning" if is_weaver else "rp"
+                # Single-model runtime: keep type argument stable for compatibility.
+                m_type = "general"
 
                 if is_weaver:
                     response_text = await asyncio.wait_for(
@@ -280,7 +300,7 @@ class BrainCog(commands.Cog):
                         blocks.append(row)
                 else:
                     response_text = await asyncio.wait_for(
-                        asyncio.to_thread(client.chat_json, full_message, m_type),
+                        asyncio.to_thread(client.chat, full_message, m_type),
                         timeout=AI_CALL_TIMEOUT_SECONDS,
                     )
                     raw_blocks = client.parse_response(response_text)

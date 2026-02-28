@@ -1,0 +1,5 @@
+﻿model	exit_code	recommendation	schema_validity	speaker_diversity	meta_leak_rate	avg_latency_s	json_report	raw_log
+ministral-3:8b	0	SAFE_FOR_UNIFICATION	1.0	0.8	0.0	33.83	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_060949\ministral-3_8b.json	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_060949\ministral-3_8b.log
+qwen3:8b	0	SAFE_FOR_UNIFICATION	1.0	0.7	0.0	34.98	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_060949\qwen3_8b.json	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_060949\qwen3_8b.log
+llama3.1:8b	0	SAFE_FOR_UNIFICATION	1.0	0.8	0.0	33.78	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_060949\llama3.1_8b.json	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_060949\llama3.1_8b.log
+gemma3:12b	0	SAFE_FOR_UNIFICATION	1.0	0.8	0.0	34.21	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_060949\gemma3_12b.json	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_060949\gemma3_12b.log

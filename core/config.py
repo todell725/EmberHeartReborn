@@ -18,8 +18,12 @@ XP_THRESHOLDS = {
 }
 
 # Identity Registry Base
+_DM_IDENTITY = {"name": "The Chronicle Weaver", "avatar": "https://i.imgur.com/pYIe6oM.png", "id": "DM-00"}
+
 IDENTITIES = {
-    "DM": {"name": "The Chronicle Weaver", "avatar": "https://i.imgur.com/pYIe6oM.png"},
+    "DM": _DM_IDENTITY,
+    "DM-00": _DM_IDENTITY,
+    "The Chronicle Weaver": _DM_IDENTITY,
     "STEWARD": {"name": "Royal Steward", "avatar": "https://i.imgur.com/4zYf4zD.png"},
     "SHADOW": {"name": "Your Shadow", "avatar": "https://i.imgur.com/u7yH8zW.png"},
     "NPC": {"name": "NPC", "avatar": "https://i.imgur.com/pYIe6oM.png"},
@@ -72,6 +76,10 @@ def resolve_identity(speaker: str = "", speaker_id: str = ""):
     """
     # ID-first resolution
     canonical_id = normalize_identity_id(speaker_id or speaker)
+    # Canonical DM identity: only DM-00 is valid in this world.
+    if canonical_id.startswith("DM-") and canonical_id != "DM-00":
+        canonical_id = "DM-00"
+
     if canonical_id and canonical_id in IDENTITIES and isinstance(IDENTITIES[canonical_id], dict):
         token = IDENTITIES[canonical_id]
         return token, str(token.get("name", "")).strip(), canonical_id

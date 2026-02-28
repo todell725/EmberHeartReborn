@@ -76,7 +76,7 @@ Do not use generic headers for status updates. Assign data to your Council:
 To ensure the Chronicle Weaver maps your responses to the correct visual identities, you MUST append the character's global ID in brackets to their name during reports or dialogue. 
 **Format**: `**Name [ID]**: "Dialogue"`
 Example: `**Marta Hale [EH-01]**: "My Liege..."` (NPC) or `**Talmarr [PC-02]**: "..."` (party member).
-Check your injected context for IDs (e.g., EH-01, PC-02, DM-01). 
+Check your injected context for IDs (e.g., EH-01, PC-02, DM-00). 
 If an ID is unknown, omit the brackets.
 """
     return prompt

@@ -18,10 +18,6 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("EH_Launcher")
 
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
-# PartyBrain is hosted by discord_party.py; keep it out of the main bot to prevent double replies.
-EXCLUDED_MAIN_COGS = {"brain_party"}
-if os.getenv("LOAD_PARTY_COG_IN_MAIN", "0").strip().lower() in {"1", "true", "yes", "on"}:
-    EXCLUDED_MAIN_COGS.clear()
 
 
 class EmberHeartBot(commands.Bot):
@@ -40,10 +36,6 @@ class EmberHeartBot(commands.Bot):
         for filename in os.listdir(cogs_dir):
             if filename.endswith(".py") and not filename.startswith("__"):
                 stem = filename[:-3]
-                if stem in EXCLUDED_MAIN_COGS:
-                    logger.info(f"Skipping extension in main bot: cogs.{stem}")
-                    continue
-
                 extension = f"cogs.{stem}"
                 try:
                     await self.load_extension(extension)
@@ -52,19 +44,23 @@ class EmberHeartBot(commands.Bot):
                     logger.error(f"Failed to load extension {extension}: {e}")
 
 
-if __name__ == "__main__":
+def run_main_bot():
     if not TOKEN:
         logger.error("DISCORD_BOT_TOKEN not found in .env")
-        exit(1)
+        raise SystemExit(1)
 
     import urllib.request
 
     ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
     try:
         urllib.request.urlopen(f"{ollama_url.replace('/v1', '')}/api/tags", timeout=3)
-        logger.info("✅ Ollama is running and reachable.")
+        logger.info("Ollama is running and reachable.")
     except Exception:
-        logger.warning("⚠️ Ollama not detected at localhost:11434. Cloud fallbacks will be used.")
+        logger.warning("Ollama not detected at localhost:11434. AI responses will fail until Ollama is available.")
 
     bot = EmberHeartBot()
     bot.run(TOKEN)
+
+
+if __name__ == "__main__":
+    run_main_bot()

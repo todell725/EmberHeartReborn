@@ -1,6 +1,7 @@
-import os
 import logging
+import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 try:
@@ -8,73 +9,44 @@ try:
 except ImportError:
     OpenAI = None
 
-try:
-    import google.generativeai as genai
-except ImportError:
-    genai = None
-
 logger = logging.getLogger("EH_Brain")
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(ROOT_DIR / ".env", override=True)
 
+
 def get_keys():
     return {
         "OLLAMA_BASE_URL": os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434/v1"),
         "OLLAMA_MODEL": os.environ.get("OLLAMA_MODEL", "llama3.1:8b"),
-        "OLLAMA_MODEL_RP": os.environ.get("OLLAMA_MODEL_RP", "mythomax_13b_rp:latest"),
-        "OLLAMA_MODEL_REASONING": os.environ.get("OLLAMA_MODEL_REASONING", "deepseek-r1:14b"),
-        "GEMINI": os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY", ""),
-        "OPENAI": os.environ.get("OPENAI_API_KEY", ""),
-        "GITHUB": os.environ.get("GITHUB_TOKEN", "")
     }
 
-def initialize_providers(model_gemini="gemini-2.0-flash", model_openai="gpt-4o", model_github="gpt-4o"):
+
+def initialize_providers():
     keys = get_keys()
     providers = {
         "keys": keys,
         "ollama_client": None,
-        "github_client": None,
-        "openai_client": None,
-        "gemini_chat": None,
-        "gemini_model": None,
         "model_ollama": keys["OLLAMA_MODEL"],
-        "model_ollama_rp": keys["OLLAMA_MODEL_RP"],
-        "model_ollama_reasoning": keys["OLLAMA_MODEL_REASONING"],
-        "model_openai": model_openai,
-        "model_github": model_github,
-        "model_gemini": model_gemini,
         # Raw Ollama base URL (no /v1) for native API calls like format=json
-        "ollama_base": keys["OLLAMA_BASE_URL"].removesuffix("/v1").removesuffix("/")
+        "ollama_base": keys["OLLAMA_BASE_URL"].removesuffix("/v1").removesuffix("/"),
     }
 
-    # 1. Ollama (Local â€” always try to connect)
-    if OpenAI:
-        try:
-            providers["ollama_client"] = OpenAI(
-                base_url=keys["OLLAMA_BASE_URL"],
-                api_key="ollama"  # Ollama ignores this but the SDK requires a non-empty string
-            )
-            logger.info(f"Ollama client initialized: {keys['OLLAMA_BASE_URL']} | Models: general={keys['OLLAMA_MODEL']}, rp={keys['OLLAMA_MODEL_RP']}, reasoning={keys['OLLAMA_MODEL_REASONING']}")
-        except Exception as e:
-            logger.warning(f"Ollama Client Init Failed: {e}")
+    if not OpenAI:
+        logger.warning("OpenAI SDK unavailable; Ollama client not initialized.")
+        return providers
 
-    # 2. GitHub Models (Cloud fallback)
-    if keys["GITHUB"] and OpenAI:
-        try:
-            providers["github_client"] = OpenAI(
-                base_url="https://models.inference.ai.azure.com",
-                api_key=keys["GITHUB"]
-            )
-        except Exception as e:
-            logger.warning(f"GitHub Client Init Failed: {e}")
-
-    # 3. Gemini (Cloud fallback)
-    if keys["GEMINI"] and genai:
-        genai.configure(api_key=keys["GEMINI"])
-
-    # 4. OpenAI (Cloud fallback)
-    if keys["OPENAI"] and OpenAI:
-        providers["openai_client"] = OpenAI(api_key=keys["OPENAI"])
+    try:
+        providers["ollama_client"] = OpenAI(
+            base_url=keys["OLLAMA_BASE_URL"],
+            api_key="ollama",  # Ollama ignores this but the SDK requires a non-empty string.
+        )
+        logger.info(
+            "Ollama client initialized: %s | Model: %s",
+            keys["OLLAMA_BASE_URL"],
+            keys["OLLAMA_MODEL"],
+        )
+    except Exception as e:
+        logger.warning("Ollama Client Init Failed: %s", e)
 
     return providers

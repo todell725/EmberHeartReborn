@@ -29,10 +29,10 @@ class ForgeEngine:
             return {int(k): v for k, v in data.items()}
         except Exception: return {}
 
-    def _save_active(self):
+    async def _save_active(self):
         data = {str(k): {**v, 'start_time': v['start_time'].isoformat()} for k, v in self.active_projects.items()}
-        from core.storage import save_json
-        save_json("FORGE_ACTIVE.json", data)
+        from core.state_store import coordinator
+        await coordinator.update_global_json_async("FORGE_ACTIVE.json", lambda _: data)
 
     def list_blueprints(self) -> List[dict]:
         return self.blueprints
@@ -40,7 +40,7 @@ class ForgeEngine:
     def get_blueprint(self, bid: str) -> Optional[dict]:
         return next((b for b in self.blueprints if b['id'].upper() == bid.upper()), None)
 
-    def start_crafting(self, channel_id: int, bid: str, force: bool = False) -> tuple:
+    async def start_crafting(self, channel_id: int, bid: str, force: bool = False) -> tuple:
         """Starts crafting. Returns (bool, message). Searching King, Party, and Treasury."""
         bp = self.get_blueprint(bid)
         if not bp: return False, f"Blueprint {bid} not found."
@@ -51,9 +51,13 @@ class ForgeEngine:
         # 1. Load All Potential Inventories
         if not self.settlement_path.exists():
             return False, "Settlement state not found. Run `!owner setup` first."
-        settlement_data = json.loads(self.settlement_path.read_text(encoding='utf-8'))
-        equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8')) if self.party_equip_path.exists() else {"party_equipment": {}}
-        party_data = json.loads(self.party_state_path.read_text(encoding='utf-8')) if self.party_state_path.exists() else {"party": []}
+        try:
+            settlement_data = json.loads(self.settlement_path.read_text(encoding='utf-8'))
+            equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8')) if self.party_equip_path.exists() else {"party_equipment": {}}
+            party_data = json.loads(self.party_state_path.read_text(encoding='utf-8')) if self.party_state_path.exists() else {"party": []}
+        except Exception as e:
+            logger.error(f"Failed to load state files for crafting: {e}")
+            return False, "Failed to read forge state files."
         
         if not force:
             # Check Kingdom Resources (Ore/Metal)
@@ -101,11 +105,10 @@ class ForgeEngine:
                     if remaining <= 0: break
 
             # 6. Save All Updated States Atomically
-            from core.storage import save_json
-            # Note: save_json takes filename, not full path, but we can use the basename
-            save_json(self.settlement_path.name, settlement_data)
-            save_json(self.party_equip_path.name, equip_data)
-            save_json(self.party_state_path.name, party_data)
+            from core.state_store import coordinator
+            await coordinator.update_global_json_async(self.settlement_path.name, lambda _: settlement_data)
+            await coordinator.update_global_json_async(self.party_equip_path.name, lambda _: equip_data)
+            await coordinator.update_global_json_async(self.party_state_path.name, lambda _: party_data)
 
         # 7. Start Project
         self.active_projects[channel_id] = {
@@ -114,13 +117,13 @@ class ForgeEngine:
             "start_time": datetime.now(),
             "duration_hours": bp['craft_time_hours']
         }
-        self._save_active()
+        await self._save_active()
         return True, f"Hammer falls! Construction of **{bp['name']}** has begun using collective party resources."
 
     def get_active(self, channel_id: int):
         return self.active_projects.get(channel_id)
 
-    def claim_artifact(self, channel_id: int) -> tuple:
+    async def claim_artifact(self, channel_id: int) -> tuple:
         """Claims finished artifact. Returns (bool, message)."""
         proj = self.get_active(channel_id)
         if not proj: return False, "No active project."
@@ -132,17 +135,21 @@ class ForgeEngine:
 
         # Award Item
         # Kaelrath is PC-01
-        equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8')) if self.party_equip_path.exists() else {"party_equipment": {}}
+        try:
+            equip_data = json.loads(self.party_equip_path.read_text(encoding='utf-8')) if self.party_equip_path.exists() else {"party_equipment": {}}
+        except Exception as e:
+            logger.error(f"Failed to load equipment data: {e}")
+            return False, "Failed to award artifact: equipment state unreadable."
         pe = equip_data.get("party_equipment", {})
         pc01 = pe.setdefault("PC-01", {})
         inventory = pc01.setdefault("inventory", [])
         inventory.append(proj['name'])
         equip_data["party_equipment"] = pe
-        from core.storage import save_json
-        save_json(self.party_equip_path.name, equip_data)
+        from core.state_store import coordinator
+        await coordinator.update_global_json_async(self.party_equip_path.name, lambda _: equip_data)
 
         # Cleanup
         del self.active_projects[channel_id]
-        self._save_active()
+        await self._save_active()
         
         return True, f"✨ **Artifact Forged!** {proj['name']} has been added to King Kaelrath's inventory."

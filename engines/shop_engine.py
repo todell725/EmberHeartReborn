@@ -50,19 +50,19 @@ class DynamicShop:
         else:
             self.current_stock = []
 
-    def _save_current_stock(self):
+    async def _save_current_stock(self):
         """Persists stock to disk."""
         try:
             data = {
                 "last_rotation": self.last_rotation.isoformat() if self.last_rotation else None,
                 "items": self.current_stock
             }
-            from core.storage import save_json
-            save_json("SHOP_STOCK.json", data)
+            from core.state_store import coordinator
+            await coordinator.update_global_json_async("SHOP_STOCK.json", lambda _: data)
         except Exception as e:
             logger.error(f"Failed to save shop stock: {e}")
 
-    def generate_stock(self):
+    async def generate_stock(self):
         """Generate a random 30-item stock (15 Forge, 15 Spells)."""
         forge_items, spells = self.load_data()
         stock = []
@@ -100,10 +100,10 @@ class DynamicShop:
         random.shuffle(stock)
         self.current_stock = stock[:30]
         self.last_rotation = datetime.now()
-        self._save_current_stock()
+        await self._save_current_stock()
         logger.info(f"Shop Stock Generated: {len(self.current_stock)} items.")
 
-    def purchase_item(self, buyer_id: str, item_query: str) -> tuple[bool, str]:
+    async def purchase_item(self, buyer_id: str, item_query: str) -> tuple[bool, str]:
         """Buy an item from the current stock."""
         if not self.current_stock:
             return False, "The shop shelves are bare..."
@@ -137,14 +137,15 @@ class DynamicShop:
 
         # Save character state FIRST — if this fails, treasury is untouched (B-13)
         try:
-            from core.storage import load_character_state, save_character_state
+            from core.storage import load_character_state
             char_state = load_character_state(buyer_id)
             
             if not char_state:
                 return False, f"Buyer profile for '{buyer_id}' not found in chronicles."
                 
             char_state.setdefault('status', {}).setdefault('inventory', []).append(target_name)
-            save_character_state(buyer_id, char_state)
+            from core.state_store import coordinator
+            await coordinator.update_character_state_async(buyer_id, char_state)
             
         except Exception as e:
             logger.error(f"Transaction Failed (Character State): {e}", exc_info=True)
@@ -157,8 +158,8 @@ class DynamicShop:
             else:
                 stock['ore_stock_ou'] -= cost_val
             
-            from core.storage import save_json
-            save_json("SETTLEMENT_STATE.json", settlement)
+            from core.state_store import coordinator
+            await coordinator.update_global_json_async("SETTLEMENT_STATE.json", lambda _: settlement)
             
             gold_left = stock.get('gold', stock.get('ore_stock_ou', 0))
             return True, f"**Transaction Complete:** Purchased **{target_name}** for **{cost_val} OU**. (Treasury: {gold_left} OU)"

@@ -63,7 +63,7 @@ class SlayerCog(commands.Cog):
     async def slayer_task(self, ctx, task_id: str, solo: str = None):
         """Start a slayer task: !slayer task SLAYER_001 [--solo]"""
         is_solo = solo == "--solo"
-        task = self.slayer_engine.start_task(ctx.channel.id, task_id, solo=is_solo)
+        task = await self.slayer_engine.start_task(ctx.channel.id, task_id, solo=is_solo)
         channel = getattr(ctx, "target_channel", ctx.channel)
         
         if not task:
@@ -116,10 +116,10 @@ class SlayerCog(commands.Cog):
         
         # Sync via Quest Engine methods
         target_ids = ["PC-01"] if is_solo else None
-        self.quest_engine.combat.add_party_xp(total_xp, target_ids=target_ids)
+        await self.quest_engine.combat.add_party_xp(total_xp, target_ids=target_ids)
         
         if all_raw_drops:
-            self.quest_engine.sync_loot(all_raw_drops)
+            await self.quest_engine.sync_loot(all_raw_drops)
             
         self.quest_engine.log_deed(task['task_id'], f"Slayer Grind: {task['monster_name']} {'(SOLO)' if is_solo else ''}", f"Defeated {kill_count} times in idle combat. Total XP: {total_xp}")
         
@@ -134,13 +134,13 @@ class SlayerCog(commands.Cog):
         await self.transport.send(channel, "\n".join(msg))
         
         # Clear task
-        self.slayer_engine.stop_task(ctx.channel.id)
+        await self.slayer_engine.stop_task(ctx.channel.id)
 
     @slayer.command(name="stop")
     @require_channel("idle-slayer")
     async def slayer_stop(self, ctx):
         """Stop the current slayer task."""
-        self.slayer_engine.stop_task(ctx.channel.id)
+        await self.slayer_engine.stop_task(ctx.channel.id)
         channel = getattr(ctx, "target_channel", ctx.channel)
         await self.transport.send(channel, "â¹ï¸ **Slayer task terminated.**")
 

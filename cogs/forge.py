@@ -57,7 +57,7 @@ class ForgeCog(commands.Cog):
     @require_channel("the-forge")
     async def forge_start(self, ctx, blueprint_id: str):
         """Begin crafting an artifact: !forge start ART_001"""
-        success, message = self.forge_engine.start_crafting(ctx.channel.id, blueprint_id)
+        success, message = await self.forge_engine.start_crafting(ctx.channel.id, blueprint_id)
         channel = getattr(ctx, "target_channel", ctx.channel)
         if success:
             await self.transport.send(channel, f"⚒️ {message}", "NPC")
@@ -68,7 +68,7 @@ class ForgeCog(commands.Cog):
     @require_channel("the-forge")
     async def forge_claim(self, ctx):
         """Claim a finished artifact."""
-        success, message = self.forge_engine.claim_artifact(ctx.channel.id)
+        success, message = await self.forge_engine.claim_artifact(ctx.channel.id)
         channel = getattr(ctx, "target_channel", ctx.channel)
         if success:
             self.quest_engine.log_deed("FORGE", "Artifact Forged", message)

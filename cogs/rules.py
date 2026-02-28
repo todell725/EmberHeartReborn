@@ -188,8 +188,8 @@ class RulesCog(commands.Cog):
                         if item_name in inv:
                             inv.remove(item_name)
                         msg = f"🏰 **Kingdom Treasury Updated:** Removed `{item_name}`"
-                    from core.storage import save_json
-                    save_json(settlement_path.name, data)
+                    from core.state_store import coordinator
+                    await coordinator.update_global_json_async(settlement_path.name, lambda _: data)
                 else:
                     match = resolve_character(target_name)
                     if not match:
@@ -211,7 +211,8 @@ class RulesCog(commands.Cog):
                             inv.remove(item_name)
                         msg = f"🎒 **Inventory Update: {match['name']}**\nRemoved `{item_name}`"
 
-                    save_character_state(char_id, char_state)
+                    from core.state_store import coordinator
+                    await coordinator.update_character_state_async(char_id, char_state)
 
                 await self.transport.send(channel, msg)
 

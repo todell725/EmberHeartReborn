@@ -1,0 +1,2 @@
+﻿model	exit_code	recommendation	schema_validity	speaker_diversity	meta_leak_rate	avg_latency_s	json_report	raw_log
+ministral-3:8b	0	SAFE_FOR_UNIFICATION	1.0	1.0	0.0	132.14	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_121323\ministral-3_8b.json	Z:\DnD\EmberHeartReborn\reports\schema_eval_20260224_121323\ministral-3_8b.log

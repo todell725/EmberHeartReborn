@@ -47,7 +47,7 @@ class QuestCog(commands.Cog):
              return await ctx.send(f"❌ Prerequisites not met: Missing {', '.join(missing)}")
              
         path_list = list(path.lower()) if path else []
-        leveled_chars = self.quest_engine.mark_completed(qid, path_list)
+        leveled_chars = await self.quest_engine.mark_completed(qid, path_list)
         
         quest = self.quest_engine.get_quest(qid)
         embed = discord.Embed(title=f"🛡️ Quest Completed: {quest.get('title')}", color=0x2ecc71)

@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-02-24T06:30:00",
+  "model_json": "llama3.1:8b",
+  "json_temperature": 0.55,
+  "json_num_predict": -1,
+  "metrics": {
+    "total_prompts": 5,
+    "schema_valid_count": 5,
+    "schema_validity": 1.0,
+    "meta_leak_count": 0,
+    "meta_leak_rate": 0.0,
+    "avg_unique_speakers": 2.0,
+    "speaker_diversity": 1.0,
+    "speaker_diversity_index": 1.0,
+    "avg_latency_s": 16.74,
+    "thin_content_count": 0,
+    "error_types": {}
+  },
+  "recommendation": "SAFE_FOR_UNIFICATION",
+  "pass_thresholds": {
+    "schema_validity": 0.98,
+    "speaker_diversity": 0.7,
+    "meta_leak_rate": 0.0
+  },
+  "results": [
+    {
+      "prompt": "What news from the merchant quarter today?",
+      "schema_valid": true,
+      "parse_error": null,
+      "block_count": 1,
+      "prose": {
+        "unique_speakers": 1,
+        "has_meta_leak": false,
+        "avg_content_len": 683.0,
+        "thin_content": false
+      },
+      "latency_s": 58.27
+    },
+    {
+      "prompt": "Marta, has the supply shipment arrived from the eastern roads?",
+      "schema_valid": true,
+      "parse_error": null,
+      "block_count": 2,
+      "prose": {
+        "unique_speakers": 1,
+        "has_meta_leak": false,
+        "avg_content_len": 256.0,
+        "thin_content": false
+      },
+      "latency_s": 4.3
+    },
+    {
+      "prompt": "I need to speak with the court advisor about the recent tremors.",
+      "schema_valid": true,
+      "parse_error": null,
+      "block_count": 3,
+      "prose": {
+        "unique_speakers": 3,
+        "has_meta_leak": false,
+        "avg_content_len": 331.3,
+        "thin_content": false
+      },
+      "latency_s": 5.81
+    },
+    {
+      "prompt": "What do the scouts report from the northern pass?",
+      "schema_valid": true,
+      "parse_error": null,
+      "block_count": 4,
+      "prose": {
+        "unique_speakers": 4,
+        "has_meta_leak": false,
+        "avg_content_len": 383.0,
+        "thin_content": false
+      },
+      "latency_s": 8.12
+    },
+    {
+      "prompt": "Is there any word from Veyra about the expedition?",
+      "schema_valid": true,
+      "parse_error": null,
+      "block_count": 1,
+      "prose": {
+        "unique_speakers": 1,
+        "has_meta_leak": false,
+        "avg_content_len": 1369.0,
+        "thin_content": false
+      },
+      "latency_s": 7.2
+    }
+  ]
+}

@@ -41,15 +41,15 @@ class SlayerEngine:
             logger.error(f"Failed to load active slayer tasks: {e}")
             return {}
 
-    def _save_active(self):
+    async def _save_active(self):
         try:
             formatted = {}
             for cid, task in self.active_tasks.items():
                 task_copy = dict(task)
                 task_copy['start_time'] = task_copy['start_time'].isoformat()
                 formatted[str(cid)] = task_copy
-            from core.storage import save_json
-            save_json("SLAYER_ACTIVE.json", formatted)
+            from core.state_store import coordinator
+            await coordinator.update_global_json_async("SLAYER_ACTIVE.json", lambda _: formatted)
         except Exception as e:
             logger.error(f"Failed to save active slayer tasks: {e}")
 
@@ -64,7 +64,7 @@ class SlayerEngine:
             return [t for t in self._db if t['requirements']['min_level'] <= min_level]
         return self._db
 
-    def start_task(self, channel_id: int, task_id: str, solo: bool = False):
+    async def start_task(self, channel_id: int, task_id: str, solo: bool = False):
         task = self.get_task(task_id)
         if not task:
             return None
@@ -73,16 +73,16 @@ class SlayerEngine:
             "start_time": datetime.now(),
             "solo": solo
         }
-        self._save_active()
+        await self._save_active()
         return task
 
     def get_active(self, channel_id: int):
         return self.active_tasks.get(channel_id)
 
-    def stop_task(self, channel_id: int):
+    async def stop_task(self, channel_id: int):
         if channel_id in self.active_tasks:
             del self.active_tasks[channel_id]
-            self._save_active()
+            await self._save_active()
 
     def roll_loot(self, drop_table: list, max_drops: int, kills: int = 1) -> List[str]:
         all_drops = []
@@ -109,10 +109,10 @@ class SlayerEngine:
             logger.error(f"Failed to get party level: {e}")
             return 1
 
-    def skip_time(self, channel_id: int, hours: float):
+    async def skip_time(self, channel_id: int, hours: float):
         if channel_id in self.active_tasks:
             from datetime import timedelta
             self.active_tasks[channel_id]['start_time'] -= timedelta(hours=hours)
-            self._save_active()
+            await self._save_active()
             return True
         return False

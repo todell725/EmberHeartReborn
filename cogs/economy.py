@@ -27,7 +27,7 @@ class EconomyCog(commands.Cog):
         
         # We manually generated it if the background loop hasn't run
         if not self.shop_engine.current_stock:
-             self.shop_engine.generate_stock()
+             await self.shop_engine.generate_stock()
              
         embed = discord.Embed(
             title="⚖️ The Gilded Exchange",
@@ -56,7 +56,7 @@ class EconomyCog(commands.Cog):
         # or we could parse Discord User ID if linked. For D&D, Kaelrath is PC-01.
         buyer_id = "PC-01" 
         
-        success, response_msg = self.shop_engine.purchase_item(buyer_id, item_name)
+        success, response_msg = await self.shop_engine.purchase_item(buyer_id, item_name)
         
         if success:
              await channel.send(f"🪙 {response_msg}")
